@@ -1,0 +1,201 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_actClosureReason",
+    "name": "Причина закрытия акта без согласия жителя",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "1de10690-2038-4582-ac7a-568e2b01c3c8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6d81f788-71c5-47a0-997d-48e61d652c05",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "02fdab0b-43f8-4840-aad8-552680650042",
+          "nickAttr": "name",
+          "value": "Не удалось связаться с жителем",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9d28d867-8700-4a4e-a050-89d15b618265",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "66e83496-6302-4251-b3bc-2ff08c25789b",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2db6041e-7446-4acd-ade4-2876b1b3a145",
+          "nickAttr": "name",
+          "value": "У жителя нет возможности участвовать в комиссионном осмотре",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "37d43060-7f8a-45b5-878f-7e48c52ec9ad",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "60f349a3-d8c7-4c44-a9f3-b8d763b7e5b5",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b2f195e3-a3e0-4d10-aefa-e42c58032fcb",
+          "nickAttr": "name",
+          "value": "Житель не предоставляет доступ в квартиру для проведения комиссионного осмотра",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d6078687-e92b-4a48-b1d4-b6ea1b8c5a51",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e308f23c-2af6-42ef-83e3-cce86baf3134",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a17f4ba2-8141-4fdd-ab15-2a89ab2b5cb5",
+          "nickAttr": "name",
+          "value": "Житель не явился на комиссионный осмотр",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9289ab9a-a9f4-47bf-a85d-818dd96ab620",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "984da8a7-0c3e-49a4-921c-02f658677c68",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "444685dd-bf07-4b3b-a90c-9542e282f936",
+          "nickAttr": "name",
+          "value": "Дефекты устранены жителем самостоятельно",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f826f08e-274a-4408-87ad-7461fa85f04f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "186cca0b-0a12-442f-bf14-2fce7c01d5ea",
+          "nickAttr": "code",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a7c688b2-6d56-4d23-bae5-d43c15a97ed3",
+          "nickAttr": "name",
+          "value": "Житель отказался от квартиры/рассматривает другой вариант квартиры",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "612910d1-4dc8-4886-8d45-71022c5a1a60",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d5c2c3a3-262a-4c72-9e0e-68f6ff73be9a",
+          "nickAttr": "code",
+          "value": "999",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e8e3dfbd-cbbc-441b-80a7-15a52f8895ca",
+          "nickAttr": "name",
+          "value": "Иное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

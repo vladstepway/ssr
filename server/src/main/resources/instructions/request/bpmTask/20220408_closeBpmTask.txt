@@ -1,0 +1,5 @@
+Удалить бизнес процесс:
+1) Открыть https://smart.mos.ru/app/ugd/bpm/swagger-ui.html#/process-instance-resource
+2) Выбрать "deleteProcessInstance" и нажать Try it out
+3) Ввести processInstanceId = 6198687
+4) Нажать Execute и убедиться, что статус код будет 2xx

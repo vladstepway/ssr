@@ -1,0 +1,383 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "7772285f-3142-4e43-8b92-f602736bb691",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7bcb021f-c4ec-4dc1-b8e7-9ff6747e7918",
+          "nickAttr": "code",
+          "value": "UGD_SSR_APARTMENT-INSPECTION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d6c04d58-3869-4950-9253-c11cc1f01a40",
+          "nickAttr": "fields",
+          "value": "50a0b744-c904-4fc9-b9c6-6b5f33fb3666",
+          "orders": 0,
+          "linkCode": "ugd_ssr_apartment_inspection_act_creation_date"
+        },
+        {
+          "attrId": "bea05689-a497-4844-aa08-644803ec5ae2",
+          "nickAttr": "fields",
+          "value": "f3a8cfd0-6e9f-4ce4-86eb-396899612a2c",
+          "orders": 1,
+          "linkCode": "ugd_ssr_apartment_inspection_address"
+        },
+        {
+          "attrId": "f4de19e2-f902-441d-a5b9-f702a8fc60f3",
+          "nickAttr": "fields",
+          "value": "9758ffd0-a7c7-4daa-a382-dcb3a995fc42",
+          "orders": 2,
+          "linkCode": "ugd_ssr_apartment_inspection_address_from"
+        },
+        {
+          "attrId": "64baf5b7-3ab2-41eb-ab68-2863e0328f94",
+          "nickAttr": "fields",
+          "value": "99ceb50a-8e88-47a6-bc7e-1bbb030f2e73",
+          "orders": 3,
+          "linkCode": "ugd_ssr_apartment_inspection_developer"
+        },
+        {
+          "attrId": "041f04ff-fe0c-4149-9510-cc0008f3c90f",
+          "nickAttr": "fields",
+          "value": "b9eff45e-4380-41e3-8129-61ff91a6f896",
+          "orders": 4,
+          "linkCode": "ugd_ssr_apartment_inspection_flat"
+        },
+        {
+          "attrId": "333260d0-4e8f-4dc9-96cb-1ecb99440106",
+          "nickAttr": "fields",
+          "value": "bcc4e426-8ff1-4332-8048-73883d6cd7ed",
+          "orders": 5,
+          "linkCode": "ugd_ssr_apartment_inspection_general_contractor"
+        },
+        {
+          "attrId": "4bad472b-9141-47fa-b060-aa48cc6ba653",
+          "nickAttr": "fields",
+          "value": "3cce3167-a49d-4bb1-9648-eb6325f6cd06",
+          "orders": 6,
+          "linkCode": "ugd_ssr_apartment_inspection_has_consent"
+        },
+        {
+          "attrId": "dad06023-22ef-4305-9c18-1976a68c5b26",
+          "nickAttr": "fields",
+          "value": "6281ff9c-5b1f-479f-b6bc-b44cbe746666",
+          "orders": 7,
+          "linkCode": "ugd_ssr_apartment_inspection_is_ready"
+        },
+        {
+          "attrId": "62d793cf-3194-464d-aade-085e8e0f6a0d",
+          "nickAttr": "fields",
+          "value": "71231d68-b6df-44c9-ba52-a9f8e9f6798d",
+          "orders": 8,
+          "linkCode": "ugd_ssr_apartment_inspection_person_fio"
+        },
+        {
+          "attrId": "8b427565-7808-43ed-bdcf-9f7a3391dbaa",
+          "nickAttr": "fields",
+          "value": "972b59cc-722a-432a-aeb8-8afb808f6044",
+          "orders": 9,
+          "linkCode": "ugd_ssr_apartment_inspection_planned_fixed_date"
+        },
+        {
+          "attrId": "16112f77-be17-4f1d-b497-9b6eb4f1c6ae",
+          "nickAttr": "fields",
+          "value": "268fec21-8599-4b31-8aa9-20afab45ec55",
+          "orders": 10,
+          "linkCode": "ugd_ssr_apartment_inspection_pending"
+        },
+        {
+          "attrId": "5c8f2e1e-687e-497a-bc23-e5d1201ddcb8",
+          "nickAttr": "fields",
+          "value": "573b52b7-1235-410b-a383-5fbb7df6dd9a",
+          "orders": 11,
+          "linkCode": "ugd_ssr_apartment_inspection_is_deleted"
+        },
+        {
+          "attrId": "f041d132-7068-4e34-889f-eb09edd77af0",
+          "nickAttr": "fields",
+          "value": "225dbaac-102b-477e-8a95-a4a98801b6aa",
+          "orders": 12,
+          "linkCode": "ugd_ssr_apartment_inspection_has_defects"
+        },
+        {
+          "attrId": "f18a1887-daa8-4d52-af9e-71fb0a7f0d89",
+          "nickAttr": "fields",
+          "value": "9bbf0a0a-390b-4684-83b8-39cc10fcad23",
+          "orders": 13,
+          "linkCode": "ugd_ssr_apartment_inspection_area"
+        },
+        {
+          "attrId": "9e44b9ec-107e-437d-a23e-d9a690728d1c",
+          "nickAttr": "fields",
+          "value": "e3b550ae-55b8-496a-abbb-14b23400d8bf",
+          "orders": 14,
+          "linkCode": "ugd_ssr_apartment_inspection_district"
+        },
+        {
+          "attrId": "5b5f363f-9c23-4fed-abec-7eceed075e6c",
+          "nickAttr": "fields",
+          "value": "0c4e9c17-f0eb-45b4-af9d-91e6165ecbe0",
+          "orders": 15,
+          "linkCode": "ugd_ssr_apartment_inspection_district_code"
+        },
+        {
+          "attrId": "c51ce179-862f-4af0-bbe2-f7e7de581e7c",
+          "nickAttr": "fields",
+          "value": "7ff92476-1909-492f-b7ba-2b8e27466c38",
+          "orders": 16,
+          "linkCode": "ugd_ssr_apartment_inspection_is_defects_accepted"
+        },
+        {
+          "attrId": "badb5d2c-8d72-42ac-a07a-5175a3c8fe54",
+          "nickAttr": "fields",
+          "value": "e87f670a-9dbf-4a72-bed9-b6e9eb38e501",
+          "orders": 17,
+          "linkCode": "ugd_ssr_apartment_inspection_organization_name"
+        },
+        {
+          "attrId": "70918331-2f4c-4a7d-a610-93d497e0df99",
+          "nickAttr": "fields",
+          "value": "4de87fe9-dc9c-4fda-b5bf-8296aaa4d42e",
+          "orders": 18,
+          "linkCode": "ugd_ssr_apartment_inspection_responsible_employee"
+        },
+        {
+          "attrId": "6e55e57a-82a5-4e6e-9312-7f309fb01fcd",
+          "nickAttr": "fields",
+          "value": "defc53bf-06c6-40b7-9d1d-14f596ca83ef",
+          "orders": 19,
+          "linkCode": "ugd_ssr_apartment_inspection_act_number"
+        },
+        {
+          "attrId": "1f387663-0abc-4e6e-817b-4f49c483f0f7",
+          "nickAttr": "fields",
+          "value": "1cb48d9a-500b-452d-83d3-450b02a48adf",
+          "orders": 20,
+          "linkCode": "ugd_ssr_apartment_inspection_signed_act_file_id"
+        },
+        {
+          "attrId": "9a7ddee3-4e39-4554-bb74-49237c4a7f6e",
+          "nickAttr": "fields",
+          "value": "7ffdf635-98ed-4c19-92c4-6f4c030f9964",
+          "orders": 21,
+          "linkCode": "ugd_ssr_apartment_inspection_defects"
+        },
+        {
+          "attrId": "9b312c62-851b-4827-ab3f-e1cb7235889f",
+          "nickAttr": "fields",
+          "value": "39826157-00b2-4633-85b0-ed19f65c8f9b",
+          "orders": 22,
+          "linkCode": "ugd_ssr_apartment_inspection_excluded_defects"
+        },
+        {
+          "attrId": "0b51de66-2380-430c-a79e-1eec18f60b58",
+          "nickAttr": "fields",
+          "value": "74f38e0a-6978-45dc-80c7-c8caec874931",
+          "orders": 23,
+          "linkCode": "ugd_ssr_apartment_inspection_defect_exclusion_reason"
+        },
+        {
+          "attrId": "9415379d-abde-418f-83c6-d1919ab8fad4",
+          "nickAttr": "fields",
+          "value": "00ba838b-9fa2-47ec-b733-56f276df7488",
+          "orders": 24,
+          "linkCode": "ugd_ssr_apartment_inspection_is_kp_ugs"
+        },
+        {
+          "attrId": "4385f7fc-3aac-4e3f-adad-60e5710f9de1",
+          "nickAttr": "fields",
+          "value": "7dae068e-0874-423b-9b7c-4488ec232cc9",
+          "orders": 25,
+          "linkCode": "ugd_ssr_apartment_inspection_warranty_period"
+        },
+        {
+          "attrId": "d471f313-f856-4b6f-8aee-29d8bc1417ec",
+          "nickAttr": "fields",
+          "value": "d8b6170b-2bed-412a-9040-a1c52fe568c0",
+          "orders": 26,
+          "linkCode": "ugd_ssr_apartment_inspection_assigned_general_contractor"
+        },
+        {
+          "attrId": "acb4b0bc-fc38-4dbf-97c6-a7ac74e49c83",
+          "nickAttr": "fields",
+          "value": "6f3654f3-a866-420c-8d01-10be531801b4",
+          "orders": 27,
+          "linkCode": "ugd_ssr_apartment_inspection_unom"
+        },
+        {
+          "attrId": "0b682c69-9954-4523-a534-77b47210679a",
+          "nickAttr": "name",
+          "value": "Акт осмотра квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3fe72d5b-a30d-46bd-976f-8aac40d3497a",
+          "nickAttr": "solrCore",
+          "value": "d9c7b4ea-a076-44f7-824b-22bc2d5bc48a",
+          "orders": 0,
+          "linkCode": "ugd_ssr_apartment_inspection"
+        },
+        {
+          "attrId": "d73f0d8d-88bb-4ecf-892e-fc742f792083",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "bbf08bd8-1b01-4457-aeea-4a301dd6be63",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "e6475162-2ade-46ab-bd2d-e11db0206163",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

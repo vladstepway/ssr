@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.some.org/test_complexContent.xsd" targetNamespace="http://www.some.org/test_complexContent.xsd">
+	<xs:element name="xyzContainer">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="xyzContainer_field" type="xs:string"/>
+				<xs:element name="x_type_field" type="x"/>
+				<xs:element name="y_type_field" type="y"/>
+				<xs:element name="z_type_field" type="z"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="x">
+		<xs:sequence>
+			<xs:element name="x_field1" type="xs:date"/>
+			<xs:element name="x_field2" type="xs:dateTime"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="y">
+		<xs:complexContent>
+			<xs:extension base="x">
+				<xs:sequence>
+					<xs:element name="y_field1" type="xs:string"/>
+					<xs:element name="y_field2" type="xs:boolean"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="z">
+		<xs:complexContent>
+			<xs:extension base="y">
+				<xs:sequence>
+					<xs:element name="z_field" type="xs:integer"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

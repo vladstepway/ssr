@@ -1,0 +1,302 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="root">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="region" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="kvartal" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="snos_buildings">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="snos_building" maxOccurs="unbounded"
+                                                                minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="snos_flats">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="snos_flat"
+                                                                                        maxOccurs="unbounded"
+                                                                                        minOccurs="0">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="snos_lic"
+                                                                                                    maxOccurs="unbounded"
+                                                                                                    minOccurs="0">
+                                                                                            <xs:complexType>
+                                                                                                <xs:simpleContent>
+                                                                                                    <xs:extension
+                                                                                                            base="xs:string">
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:string"
+                                                                                                                name="fls"
+                                                                                                                use="optional"/>
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:date"
+                                                                                                                name="date_reg"
+                                                                                                                use="optional"/>
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:string"
+                                                                                                                name="kod_plat"
+                                                                                                                use="optional"/>
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:date"
+                                                                                                                name="date_fls"
+                                                                                                                use="optional"/>
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:string"
+                                                                                                                name="type_reg"
+                                                                                                                use="optional"/>
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:string"
+                                                                                                                name="sobstv"
+                                                                                                                use="optional"/>
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:string"
+                                                                                                                name="osnovanie"
+                                                                                                                use="optional"/>
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:string"
+                                                                                                                name="sobstvennik"
+                                                                                                                use="optional"/>
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:dateTime"
+                                                                                                                name="last_updated"
+                                                                                                                use="optional"/>
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:byte"
+                                                                                                                name="nom_komn"
+                                                                                                                use="optional"/>
+                                                                                                    </xs:extension>
+                                                                                                </xs:simpleContent>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                        <xs:element name="flat_graf"
+                                                                                                    maxOccurs="unbounded"
+                                                                                                    minOccurs="0">
+                                                                                            <xs:complexType>
+                                                                                                <xs:simpleContent>
+                                                                                                    <xs:extension
+                                                                                                            base="xs:string">
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:byte"
+                                                                                                                name="kvq"
+                                                                                                                use="optional"/>
+                                                                                                        <xs:attribute
+                                                                                                                type="xs:byte"
+                                                                                                                name="kmq"
+                                                                                                                use="optional"/>
+                                                                                                    </xs:extension>
+                                                                                                </xs:simpleContent>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                    <xs:attribute type="xs:string"
+                                                                                                  name="kvnom"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:float"
+                                                                                                  name="gpl"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:byte"
+                                                                                                  name="kmq"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:float"
+                                                                                                  name="opl"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:float"
+                                                                                                  name="ppl"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:short"
+                                                                                                  name="unkv"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:byte"
+                                                                                                  name="disabled"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:byte"
+                                                                                                  name="queued"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:byte"
+                                                                                                  name="resident_num"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:byte"
+                                                                                                  name="kvnom_floor"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:byte"
+                                                                                                  name="entrance"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:string"
+                                                                                                  name="owner"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:float"
+                                                                                                  name="pl_kuh"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:string"
+                                                                                                  name="is_kommun"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:byte"
+                                                                                                  name="raschet_kv"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:string"
+                                                                                                  name="ruchnoy_vvod"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:byte"
+                                                                                                  name="status_kv"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:string"
+                                                                                                  name="type_kv"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:byte"
+                                                                                                  name="floor"
+                                                                                                  use="optional"/>
+                                                                                    <xs:attribute type="xs:dateTime"
+                                                                                                  name="last_updated"
+                                                                                                  use="optional"/>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:short" name="npc_cod"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="address"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:byte" name="floor_max"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="geoloc"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:short" name="god_p_dgp"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:float" name="hab_square"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:float" name="unhab_square"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="is_disabled"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="is_unhab"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="mat_sten"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="monument"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:byte" name="proc_izn"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="sost_dgp"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:int" name="unom" use="optional"/>
+                                                            <xs:attribute type="xs:short" name="god_ust_izn"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:float" name="proc_za"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:float" name="proc_protiv"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="kadastr"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="category"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:byte" name="lift" use="optional"/>
+                                                            <xs:attribute type="xs:byte" name="podezd" use="optional"/>
+                                                            <xs:attribute type="xs:float" name="nar_obm_pl"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="seria" use="optional"/>
+                                                            <xs:attribute type="xs:dateTime" name="last_updated"
+                                                                          use="optional"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="starts_tep">
+                                            <xs:complexType mixed="true">
+                                                <xs:sequence>
+                                                    <xs:element name="start_tep" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="buildobjects">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="buildobject">
+                                                                                <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                        <xs:extension base="xs:string">
+                                                                                            <xs:attribute type="xs:int"
+                                                                                                          name="buildobject_id"
+                                                                                                          use="optional"/>
+                                                                                            <xs:attribute
+                                                                                                    type="xs:string"
+                                                                                                    name="bld_address"
+                                                                                                    use="optional"/>
+                                                                                            <xs:attribute
+                                                                                                    type="xs:string"
+                                                                                                    name="geoloc"
+                                                                                                    use="optional"/>
+                                                                                            <xs:attribute
+                                                                                                    type="xs:float"
+                                                                                                    name="s_zhilaya"
+                                                                                                    use="optional"/>
+                                                                                            <xs:attribute
+                                                                                                    type="xs:dateTime"
+                                                                                                    name="last_updated"
+                                                                                                    use="optional"/>
+                                                                                            <xs:attribute
+                                                                                                    type="xs:string"
+                                                                                                    name="ugd_guid"
+                                                                                                    use="optional"/>
+                                                                                        </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute type="xs:short" name="id" use="optional"/>
+                                                            <xs:attribute type="xs:byte" name="categorija"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="geoloc"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="is_actual"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="is_invest"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:string" name="object_name"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:float" name="s_zhilaya"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:byte" name="region_code"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:dateTime" name="last_updated"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:short" name="plan_year"
+                                                                          use="optional"/>
+                                                            <xs:attribute type="xs:date" name="start_date"
+                                                                          use="optional"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="geoloc" use="optional"/>
+                                    <xs:attribute type="xs:short" name="npc_code" use="optional"/>
+                                    <xs:attribute type="xs:string" name="project_name" use="optional"/>
+                                    <xs:attribute type="xs:string" name="is_temporary" use="optional"/>
+                                    <xs:attribute type="xs:dateTime" name="last_updated" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                        <xs:attribute type="xs:short" name="region_code" use="optional"/>
+                        <xs:attribute type="xs:short" name="short" use="optional"/>
+                        <xs:attribute type="xs:byte" name="okrug_code" use="optional"/>
+                        <xs:attribute type="xs:string" name="okrug" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

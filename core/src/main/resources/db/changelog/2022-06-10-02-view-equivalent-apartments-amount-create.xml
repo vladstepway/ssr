@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2022-06-10-02-view-equivalent-apartments-amount-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+
+        <sql dbms="postgresql">DROP VIEW IF EXISTS analytics.v_equivalent_apartments_amount</sql>
+
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_equivalent_apartments_amount">
+            WITH objects AS (
+                SELECT
+                    json_data -> 'capitalConstructionObject' -> 'capitalConstructionObjectData' ->> 'unom' AS unom,
+                    json_data -> 'capitalConstructionObject' -> 'capitalConstructionObjectData' ->> 'assignedAddressString' AS address
+                FROM ps.documents
+                WHERE doc_type = 'CAPITAL-CONSTRUCTION-OBJECT'
+                    AND json_data -> 'capitalConstructionObject' -> 'capitalConstructionObjectData' ->> 'unom' IS NOT NULL
+            ),
+            personsOffersFiles AS (
+                -- все жители, получавшие письмо с предложением (с affairId)
+                SELECT
+                    json_data -> 'Person' -> 'PersonData' ->> 'affairId' AS affairId,
+                    (json_data -> 'Person' -> 'PersonData' ->> 'relocationStatus')::integer AS relocationStatus,
+                    jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'offerLetters' -> 'offerLetter') ->> 'letterId' AS letterId,
+                    (jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'offerLetters' -> 'offerLetter') ->> 'files')::jsonb AS offerFiles,
+                    (jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'offerLetters' -> 'offerLetter') ->> 'date')::date AS offerDate
+                FROM ssr.documents
+                WHERE doc_type = 'PERSON' AND json_data -> 'Person' -> 'PersonData' ->> 'affairId' is not null
+                    AND (json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false'
+                    OR json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+            ),
+            personWithContract4 AS (
+                SELECT DISTINCT
+                    person.json_data -> 'Person' -> 'PersonData' ->> 'affairId' AS affairId,
+                    new_flats.value->>'letterId' AS letterId,
+                    new_flats.value->>'orderId' AS orderId,
+                    new_flats.value->>'ccoUnom' AS unom,
+                    new_flats.value->>'ccoFlatNum' AS flatNum
+                FROM ssr.documents person
+                JOIN
+                    jsonb_array_elements(person.json_data->'Person'->'PersonData'->'contracts'->'contract') contracts
+                ON
+                    contracts.value->'contractStatus' @> '"4"'
+                JOIN
+                    jsonb_array_elements(person.json_data->'Person'->'PersonData'->'newFlatInfo'->'newFlat') new_flats
+                ON
+                    new_flats.value->'ccoUnom' IS NOT NULL AND new_flats.value->'ccoFlatNum' IS NOT NULL
+                WHERE (json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false'
+                    OR json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+            ),
+            personsNewFlatInfo AS (
+                -- все жители, у которых есть инфа по новой квартире (с affairId)
+                SELECT
+                    json_data -> 'Person' -> 'PersonData' ->> 'affairId' AS affairId,
+                    jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'newFlatInfo' -> 'newFlat') ->> 'letterId' AS letterId,
+                    jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'newFlatInfo' -> 'newFlat') ->> 'orderId' AS orderId,
+                    jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'newFlatInfo' -> 'newFlat') ->> 'ccoUnom' AS unom,
+                    jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'newFlatInfo' -> 'newFlat') ->> 'ccoFlatNum' AS flatNum
+                FROM ssr.documents
+                WHERE doc_type = 'PERSON' AND json_data -> 'Person' -> 'PersonData' ->> 'affairId' is not null
+                    AND (json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false'
+                        OR json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+            ),
+            affairLastOfferFiles AS (
+                (
+                    SELECT DISTINCT ON (personsOffersFiles.affairId)
+                        personsOffersFiles.affairId,
+                        personsNewFlatInfo.unom as unom,
+                        personsNewFlatInfo.flatNum as flatNum,
+                        personsOffersFiles.relocationStatus,
+                        jsonb_array_elements(personsOffersFiles.offerFiles -> 'file') ->> 'fileType' AS fileType
+                    FROM personsOffersFiles
+                    LEFT JOIN personsNewFlatInfo ON personsNewFlatInfo.letterId = personsOffersFiles.letterId AND personsNewFlatInfo.letterId IS NOT NULL
+                    ORDER BY
+                        personsOffersFiles.affairId,
+                        personsOffersFiles.offerDate DESC,
+                        personsOffersFiles.relocationStatus DESC NULLS LAST,
+                        (CASE WHEN ((personsOffersFiles.offerFiles)::text LIKE '%"fileType": "3"%') THEN 0 ELSE 1 END)
+                )
+
+                UNION
+
+                (
+                    SELECT DISTINCT ON (personsOffersFiles.affairId)
+                        personsOffersFiles.affairId,
+                        personWithContract4.unom as unom,
+                        personWithContract4.flatNum as flatNum,
+                        personsOffersFiles.relocationStatus,
+                        jsonb_array_elements(personsOffersFiles.offerFiles -> 'file') ->> 'fileType' AS fileType
+                    FROM personsOffersFiles
+                    LEFT JOIN personWithContract4 ON personWithContract4.affairId = personsOffersFiles.affairId AND personWithContract4.letterId IS NULL
+                    ORDER BY
+                        personsOffersFiles.affairId,
+                        personsOffersFiles.offerDate DESC,
+                        personsOffersFiles.relocationStatus DESC NULLS LAST,
+                        (CASE WHEN ((personsOffersFiles.offerFiles)::text LIKE '%"fileType": "3"%') THEN 0 ELSE 1 END)
+                )
+            )
+            SELECT DISTINCT ON (affairLastOfferFiles.affairId)
+                affairLastOfferFiles.affairId AS affairId,
+                affairLastOfferFiles.unom,
+                affairLastOfferFiles.flatNum,
+                affairLastOfferFiles.relocationStatus,
+                objects.address,
+                array_agg(affairLastOfferFiles.fileType) AS fileTypes
+            FROM affairLastOfferFiles
+            LEFT JOIN objects ON objects.unom = affairLastOfferFiles.unom
+            GROUP BY
+                affairLastOfferFiles.affairId,
+                affairLastOfferFiles.unom,
+                affairLastOfferFiles.flatNum,
+                affairLastOfferFiles.relocationStatus,
+                objects.address
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_equivalent_apartments_amount TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

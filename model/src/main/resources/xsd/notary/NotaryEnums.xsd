@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/notary"
+           targetNamespace="http://www.ugd.croc.ru/ssr/notary">
+
+    <xs:simpleType name="NotaryStatus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Активный">
+                <xs:annotation>
+                    <xs:documentation>Активный</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="В архиве">
+                <xs:annotation>
+                    <xs:documentation>В архиве</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

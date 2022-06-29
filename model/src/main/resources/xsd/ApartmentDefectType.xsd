@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+  xmlns="http://www.ugd.croc.ru/ssr"
+  targetNamespace="http://www.ugd.croc.ru/ssr">
+  <xs:complexType name="ApartmentDefectType">
+    <xs:annotation>
+      <xs:documentation>Сведение о дефектах квартиры</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="flatElement" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Элемент квартиры</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="description" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Описание дефекта</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

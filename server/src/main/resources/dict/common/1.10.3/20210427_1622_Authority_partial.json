@@ -1,0 +1,82 @@
+{
+  "metaDict": {
+    "nick": "Authority",
+    "name": "Полномочия",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "52bef0e0-4395-4485-8df3-fa8bf817f6fa",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "09ad034a-5561-453e-8b39-2db446c656f1",
+          "nickAttr": "code",
+          "value": "UGD_SSR_CHESSBOARD_VIEW",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fb6d08ac-038b-4542-8a4a-a2c6b44785c1",
+          "nickAttr": "group",
+          "value": "UGD_SSR_CHESSBOARD_VIEW",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3795c8b3-da00-47f1-9249-4a4ab01d3df8",
+          "nickAttr": "name",
+          "value": "Просмотр данных дашбордов отселяемого и заселяемого дома",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

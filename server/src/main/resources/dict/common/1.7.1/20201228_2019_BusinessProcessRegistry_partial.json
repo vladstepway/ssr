@@ -1,0 +1,180 @@
+{
+  "metaDict": {
+    "nick": "BusinessProcessRegistry",
+    "name": "Реестр бизнес-процессов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "docType",
+        "name": "Тип документа",
+        "typeAttr": "link",
+        "nickDictLink": "DocumentTypes",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "exits",
+        "name": "Выходы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "exists",
+        "name": "Выходы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "Путь к репозиторию в GIT",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "filename",
+        "name": "Путь к файлу",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "c79d5ba0-2106-4839-b5e9-3409a75c3fa8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9daaf29c-b73b-4a3b-b113-7898831d1050",
+          "nickAttr": "code",
+          "value": "ugdssr_DefectsEliminationStart_prc",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ec79b9f6-ac97-4ff6-81aa-e95b3d5551f9",
+          "nickAttr": "docType",
+          "value": "7772285f-3142-4e43-8b92-f602736bb691",
+          "orders": 0,
+          "linkCode": "UGD_SSR_APARTMENT-INSPECTION"
+        },
+        {
+          "attrId": "00c7bb38-08b0-4743-ab9b-754708109cf1",
+          "nickAttr": "name",
+          "value": "Утвердить информацию об устранении дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2ac293ef-b26d-4219-af5c-6861b13e491d",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "ae8d3ca4-87ff-4cda-9064-839e98fcb08a",
+          "nickAttr": "system",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    }
+  ]
+}

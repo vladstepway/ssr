@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/commissionOrganisation"
+           targetNamespace="http://www.ugd.croc.ru/ssr/commissionOrganisation"
+           elementFormDefault="qualified">
+    <xs:include schemaLocation="CommissionInspectionOrganisation.xsd"/>
+    <xs:element name="CommissionInspectionOrganisation">
+        <xs:annotation>
+            <xs:documentation>
+                Сведения об организации, осуществляющей запись на комиссионный осмотр
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="commissionInspectionOrganisationData" type="CommissionInspectionOrganisationData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="CommissionInspectionOrganisationData">
+        <xs:annotation>
+            <xs:documentation>Сведения об организации</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="area" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Округ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="type" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>
+                        Тип организации:
+                        1 - Префектура
+                        2 - Фонд Реновации
+                        3 - Горячая Линия
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="phone" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер телефона</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

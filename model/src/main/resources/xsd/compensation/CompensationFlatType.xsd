@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/compensationFlat"
+           targetNamespace="http://www.ugd.croc.ru/ssr/compensationFlat">
+    <xs:complexType name="CompensationFlatType">
+        <xs:annotation>
+            <xs:documentation>Тип Данные о квартире на компенсацию</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="flatId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatNum" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="roomNum" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номера комнат</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affairId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

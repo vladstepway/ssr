@@ -1,0 +1,21 @@
+<jxb:bindings
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+        version="2.1">
+    <jxb:bindings schemaLocation="PersonUploadLogEnum.xsd">
+
+        <jxb:bindings
+                node="//xs:simpleType[@name='PersonUploadLogStatus']/xs:restriction/xs:enumeration[@value='В процессе']">
+            <jxb:typesafeEnumMember name="IN_PROGRESS"/>
+        </jxb:bindings>
+        <jxb:bindings
+                node="//xs:simpleType[@name='PersonUploadLogStatus']/xs:restriction/xs:enumeration[@value='Загружено']">
+            <jxb:typesafeEnumMember name="UPLOADED"/>
+        </jxb:bindings>
+        <jxb:bindings
+                node="//xs:simpleType[@name='PersonUploadLogStatus']/xs:restriction/xs:enumeration[@value='Ошибка']">
+            <jxb:typesafeEnumMember name="FAILED"/>
+        </jxb:bindings>
+    </jxb:bindings>
+
+</jxb:bindings>

@@ -1,0 +1,156 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Настройка страницы Реестры информации",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilder",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": "Использование параметра не рекомендовано. Используйте предустановленный фильтр в конструкторе витрин",
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "75a78e2a-5574-4cb9-aa18-dab1893a2969",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "efea7dbd-c94a-418d-b7ef-eadb91b638cd",
+          "nickAttr": "code",
+          "value": "UGD_SSR_NOTARY-APPLICATION-ADMIN",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ea57eb9-7aed-4c36-8675-ede36f067a4e",
+          "nickAttr": "description",
+          "value": "Реестр заявлений на запись на посещение нотариуса (Администрирование)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a38bb94-7014-4a79-9f1e-96ce46861704",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_NOTARY_APPLICATION_ADMIN",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aa35413a-0b8a-41a2-8f34-97249f16abca",
+          "nickAttr": "name",
+          "value": "Реестр заявлений на запись на посещение нотариуса (Администрирование)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "91787fca-fa12-4900-bf5c-a26526640585",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "2ebb7a0d-7526-4461-b5f8-bb0dfa75a33c",
+          "orders": 0,
+          "linkCode": "ugd_ssr_notary_application_admin_code"
+        }
+      ]
+    }
+  ]
+}

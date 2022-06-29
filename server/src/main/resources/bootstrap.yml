@@ -1,0 +1,22 @@
+#read properties: http://localhost:5000/conf/demo/dev
+#refresh properties: POST http://localhost:3034/demo/actuator/refresh
+#--spring.profiles.active=dev / stage / prod
+
+server:
+  port: 5966
+  servlet:
+    contextPath: /ssr
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: ssr_ssr
+  cloud:
+    config:
+      uri: http://app.cdp.local:5000/conf
+      fail-fast: true
+
+#logging:
+#  level:
+#    root: debug

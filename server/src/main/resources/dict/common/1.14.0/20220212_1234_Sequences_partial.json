@@ -1,0 +1,469 @@
+{
+  "metaDict": {
+    "nick": "Sequences",
+    "name": "Последовательности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код последовательности",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование последовательности",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "initialValue",
+        "name": "Начальное значение последовательности",
+        "typeAttr": "integer",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "step",
+        "name": "Шаг автоинкремента",
+        "typeAttr": "integer",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "keyRegexp",
+        "name": "Проверочное выражение для ключа подпоследовательности",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "notes",
+        "name": "Примечания",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "3cec7454-04ed-437f-ab68-7676f9306d81",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b072571a-8207-44e3-9503-f0504af494f6",
+          "nickAttr": "code",
+          "value": "UGD_SSR_ENO_DGI_TRADE_ADDITION_SEQ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9a3f8235-6ae5-42e8-9492-b3ae6423a4b4",
+          "nickAttr": "initialValue",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5c844b68-8a9a-4c75-9e38-9f401f647bd3",
+          "nickAttr": "name",
+          "value": "Последовательность для сообщений докупки и компенсации в ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e9069b09-cd32-4705-90bc-64e430130f92",
+          "nickAttr": "step",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d568124a-1a44-4ffc-9976-0e223d1c56fd",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "2845e597-de53-44da-ac51-256c2c170b67",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "98ec1bff-148e-4a67-9e12-a9c98b8da932",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bc59f1fb-52a0-4498-b384-e25b1f5e1c00",
+          "nickAttr": "code",
+          "value": "UGD_SSR_ENO_MFR_ADMINISTRATIVE_DOCUMENTS_SEQ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fd7a056b-f09b-4942-bb3e-4c29821cc16a",
+          "nickAttr": "initialValue",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "88c5137e-e336-4095-9dc2-48947204c9ad",
+          "nickAttr": "name",
+          "value": "Последовательность для сообщений в МФР из ДГП об административных документах.",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f9ccc7da-fa85-41b7-bd33-1eecdf9f7a1c",
+          "nickAttr": "step",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e17d1983-6c2d-4ac4-9ae5-9182f4ddabc8",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "3cff8fae-d372-46b0-9161-3a51f18df88c",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "a1cf8023-af3d-4537-bb95-aa08e14ab7e4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "204e5364-fb20-4e2a-b85c-89bc45512ee5",
+          "nickAttr": "code",
+          "value": "UGD_SSR_ENO_MFR_CONTRACT_INFO_SEQ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e4813a57-ecf2-4ee1-a2e1-e39099ca456f",
+          "nickAttr": "initialValue",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6b29ed3c-d3d1-4feb-9803-10232bbaefb5",
+          "nickAttr": "name",
+          "value": "Последовательность для сообщений в МФР из ДГП о контрактах.",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "108e3411-88f2-4295-ade9-84bcee63762e",
+          "nickAttr": "step",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a955255c-99db-4ee5-b210-0623c64a6e82",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "9af6ac69-6634-4117-81d4-6dcacf9244a8",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "77804641-35b1-4238-bc1d-1be5c87eb3d7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4db3e323-2615-4451-9fb3-d119b4c0abc3",
+          "nickAttr": "code",
+          "value": "UGD_SSR_ENO_MFR_RESETTLEMENT_INFO_SEQ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d10bee98-7cde-459c-9974-b1d6d71b0457",
+          "nickAttr": "initialValue",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5348b4b7-f80c-4b0c-8413-ccd6b8ddf906",
+          "nickAttr": "name",
+          "value": "Последовательность для сообщений в МФР из ДГП о начале переселения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d28447f3-3df4-4090-ae73-4c02dd64be8f",
+          "nickAttr": "step",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f175d892-4ac7-4f7e-b634-7f86db2549fe",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "b23bad88-f4c1-4e83-9f86-e05be4bb895e",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "e414229a-66eb-452f-96a3-9c0cf83e30c6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a82444c6-f98d-4914-bfb2-647817235149",
+          "nickAttr": "code",
+          "value": "UGD_SSR_ENO_MFR_CONTRACT_PROJECT_INFO_SEQ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8913c9ba-9b7a-4618-9aec-33d90cb39f92",
+          "nickAttr": "initialValue",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "586e3601-1faa-430b-8c82-1018da60b956",
+          "nickAttr": "name",
+          "value": "Последовательность для сообщений в МФР из ДГП о проектах контрактов.",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "76fbc1c8-22cc-41c3-bc70-f49f6636887b",
+          "nickAttr": "step",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9857fb10-3c83-405e-a06c-368bc4c63485",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "a46e5e8d-f9b7-45f1-b802-d4f84258b3cd",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "0a0c3002-cc90-43cb-ab01-50cda48bc406",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6ab00de5-1c94-417c-ba7b-081a52b244d0",
+          "nickAttr": "code",
+          "value": "UGD_SSR_ENO_MFR_PERSON_INFO_SEQ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4a08a595-35ba-4cfa-956b-b183fa1134ea",
+          "nickAttr": "initialValue",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9d0853a1-a206-488f-97ea-394b73ba3049",
+          "nickAttr": "name",
+          "value": "Последовательность для сообщений в МФР из ДГП о жителях.",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e50da2fc-a6c0-4f24-b294-ed6ce25eb42e",
+          "nickAttr": "step",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "73457591-6b0e-4777-a5bd-aac811fd00c1",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "09d3d11f-08d6-4f32-8ffc-4cfa331e9943",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "82302265-c1f2-40cf-9234-f17725c32302",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3ae9178b-c572-45a1-ac3d-3a2fe1abfa74",
+          "nickAttr": "code",
+          "value": "UGD_SSR_ENO_MFR_RELEASE_FLAT_INFO_SEQ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "74da8dc5-3405-4df5-b5aa-7e967bc3ace0",
+          "nickAttr": "initialValue",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "180f3e95-2c26-4612-ba01-ebd616366de0",
+          "nickAttr": "name",
+          "value": "Последовательность для сообщений в МФР из ДГП об освобождении квартир.",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cffd1b84-19dc-4912-96d3-0daf6521e91c",
+          "nickAttr": "step",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d13d34fb-6f31-452b-8424-bdaf97e5d2fb",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "57581b6f-623d-457d-87db-f74c37dec649",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    }
+  ]
+}

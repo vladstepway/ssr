@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/mdm"
+           targetNamespace="http://www.ugd.croc.ru/ssr/mdm"
+           elementFormDefault="qualified">
+    <xs:element name="MdmExternalPersonInfo">
+        <xs:annotation>
+            <xs:documentation>Данные Person из МДМ (ГИС ЦВПЗ)</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="mdmExternalPersonInfoData" type="MdmExternalPersonInfoType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="MdmExternalPersonInfoType">
+        <xs:annotation>
+            <xs:documentation>Данные Person из МДМ</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="creationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время создания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа Person</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="request" type="MdmRequest">
+                <xs:annotation>
+                    <xs:documentation>Запрос в сервис МДМ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="json" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Строка ответа json</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="response" type="MdmResponse" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Ответ сервиса МДМ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="MdmRequest">
+        <xs:annotation>
+            <xs:documentation>Запрос в сервис МДМ</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="protocol" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Протокол</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="query" type="Query">
+                <xs:annotation>
+                    <xs:documentation>Запрос</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Query">
+        <xs:annotation>
+            <xs:documentation>Query</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="logic" type="Logic">
+                <xs:annotation>
+                    <xs:documentation>Logic</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Logic">
+        <xs:annotation>
+            <xs:documentation>Logic</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="operator" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>operator</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="conditions" type="Condition" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Условия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Condition">
+        <xs:annotation>
+            <xs:documentation>Условия</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="binary" type="Binary">
+                <xs:annotation>
+                    <xs:documentation>Binary</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Binary">
+        <xs:annotation>
+            <xs:documentation>Binary</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="field" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Поле</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="operator" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Оператор</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="value" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Значение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="MdmResponse">
+        <xs:annotation>
+            <xs:documentation>Ответ сервиса МДМ</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="errorCode" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Код ошибки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="requestId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="foundRecords" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Найдено записей</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="data" type="PersonDetail" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Данные Person</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="PersonDetail">
+        <xs:annotation>
+            <xs:documentation>Данные Person</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Имя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Фамилия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="gender" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Пол</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="birthDate" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата рождения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ripDate" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата смерти</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ids" type="Ids" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификаторы</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="documents" type="Documents" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Документы</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contacts" type="Contacts" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Контакты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="addresses" type="Addresses" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Адреса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Ids">
+        <xs:annotation>
+            <xs:documentation>Идентификаторы</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="ssoList" type="Sso" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Имя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Documents">
+        <xs:annotation>
+            <xs:documentation>Документы</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="passports" type="DocPassportRf" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Паспорт РФ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="snils" type="DocSnils" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>СНИЛС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Contacts">
+        <xs:annotation>
+            <xs:documentation>Контакты</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="contactMobileRegistrations" type="ContactMobileRegistration" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>ContactMobileRegistration</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Addresses">
+        <xs:annotation>
+            <xs:documentation>Адреса</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="addressList" type="Address" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Адреса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Sso">
+        <xs:annotation>
+            <xs:documentation>ssoId</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="value" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ssoId</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DocSnils">
+        <xs:annotation>
+            <xs:documentation>СНИЛС</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="value" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>СНИЛС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DocPassportRf">
+        <xs:annotation>
+            <xs:documentation>Паспорт РФ</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="series" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Серия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="number" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="issueDate" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Дата выдачи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="issuerCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код подразделения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Address">
+        <xs:annotation>
+            <xs:documentation>Адрес</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>УНОМ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flat" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="estates" type="Estates">
+                <xs:annotation>
+                    <xs:documentation>estates</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Estates">
+        <xs:annotation>
+            <xs:documentation>Estates</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="validation" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>validation</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="estateType" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>estateType</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ownershipRight" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ownershipRight</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ContactMobileRegistration">
+        <xs:annotation>
+            <xs:documentation>ContactMobileRegistration</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="value" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ContactMobileRegistration</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

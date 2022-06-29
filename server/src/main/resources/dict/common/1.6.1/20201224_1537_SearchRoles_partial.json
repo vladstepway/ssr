@@ -1,0 +1,252 @@
+{
+  "metaDict": {
+    "nick": "SearchRoles",
+    "name": "Правила разграничения прав доступа к результатам общего поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 1,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "используется в search",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа (подтипа) документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование типа (подтипа) документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "documentType",
+        "name": "Тип документа",
+        "typeAttr": "link",
+        "nickDictLink": "DocumentTypes",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "role",
+        "name": "Группа, дающая право доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "ed4976b7-2a57-41f3-8c1f-c2a046ac230d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1554b06a-df3c-471d-8c22-abf78ecd09a6",
+          "nickAttr": "code",
+          "value": "UGD_SSR_SHIPPING-DAY-SCHEDULE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d2fa5111-605c-439c-b821-3fc10742eb62",
+          "nickAttr": "documentType",
+          "value": "8145913b-4951-4a56-9795-7f01a49189d7",
+          "orders": 0,
+          "linkCode": "UGD_SSR_SHIPPING-DAY-SCHEDULE"
+        },
+        {
+          "attrId": "a8c71274-6369-48a1-a72c-1d87ccf100c5",
+          "nickAttr": "name",
+          "value": "Каталог дней помощи для переезда",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f082e8ae-c2d4-42d9-a865-02e8a8f523c6",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5ea80ba5-229f-46ad-89f5-fec709526768",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "e4be2965-0e5f-43a4-a393-6bc31fa0e89e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "UGD_SSR_SHIPPING-DAY-SCHEDULE",
+      "values": [
+        {
+          "attrId": "9d75b11a-e782-4ece-8a70-6e203ae889e8",
+          "nickAttr": "code",
+          "value": "UGD_SSR_SHIPPING-DAY-SCHEDULE_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1de951dc-a1f3-42ad-b1eb-d6f87c8392a2",
+          "nickAttr": "documentType",
+          "value": "8145913b-4951-4a56-9795-7f01a49189d7",
+          "orders": 0,
+          "linkCode": "UGD_SSR_SHIPPING-DAY-SCHEDULE"
+        },
+        {
+          "attrId": "66a50bff-84a9-44f6-be45-e6af10ea4c7e",
+          "nickAttr": "name",
+          "value": "UGD_SSR_SHIPPING-DAY-SCHEDULE_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0431f8f1-6f01-4708-aed2-2f46f857cea6",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a131d6df-bc52-4b49-876b-17068f6fe29d",
+          "nickAttr": "subsystem",
+          "value": "f58e37eb-b5f2-4aa6-bd74-9de1bb207bf0",
+          "orders": 0,
+          "linkCode": "SYS_COMMON"
+        }
+      ]
+    },
+    {
+      "elementId": "fa3ee74d-ba61-4a26-8bb7-479f28fdc608",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fdd106bc-c3e1-4c82-8a83-be4fcd8dd57c",
+          "nickAttr": "code",
+          "value": "UGD_SSR_SHIPPING-APPLICATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7d5b0d4c-92e7-4e6d-9e29-947d0d00816a",
+          "nickAttr": "documentType",
+          "value": "a676ccc5-88a3-4d43-b4fa-a58d87b206a8",
+          "orders": 0,
+          "linkCode": "UGD_SSR_SHIPPING-APPLICATION"
+        },
+        {
+          "attrId": "f431a141-ef46-4eb9-b29a-f1ee5a93be2c",
+          "nickAttr": "name",
+          "value": "Запись на помощь в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d61a548-0b96-48a0-a4bc-1193c00fd11e",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7b4525d4-b4e8-4d30-9e9b-1f1ba64b44ab",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "52e3846d-16e9-4081-a4cd-f61c5b2b49ba",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "UGD_SSR_SHIPPING-APPLICATION",
+      "values": [
+        {
+          "attrId": "2c324e42-a5e3-42ef-b1f6-653a54103f3f",
+          "nickAttr": "code",
+          "value": "UGD_SSR_SHIPPING-APPLICATION_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2d86c3ae-d27c-416d-ab09-5097f9c9b79b",
+          "nickAttr": "documentType",
+          "value": "a676ccc5-88a3-4d43-b4fa-a58d87b206a8",
+          "orders": 0,
+          "linkCode": "UGD_SSR_SHIPPING-APPLICATION"
+        },
+        {
+          "attrId": "71dc7bc2-154c-468b-907a-30db2d881133",
+          "nickAttr": "name",
+          "value": "UGD_SSR_SHIPPING-APPLICATION_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "603b5d02-14a8-49d6-97d5-d7e099ef7024",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e0251e18-9e49-4181-988f-32323a817500",
+          "nickAttr": "subsystem",
+          "value": "f58e37eb-b5f2-4aa6-bd74-9de1bb207bf0",
+          "orders": 0,
+          "linkCode": "SYS_COMMON"
+        }
+      ]
+    }
+  ]
+}

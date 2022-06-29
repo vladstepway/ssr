@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-05-27-03-view-persons-with-relocation-statuses-create.xml" author="akurganov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_persons_with_relocation_statuses">
+            WITH realEstates AS (
+                SELECT
+                    re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'UNOM' AS unom,
+                    re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'Address' AS address
+                FROM ssr.documents re
+                WHERE re.doc_type = 'REAL-ESTATE'
+            )
+            SELECT
+                json_data -> 'Person' -> 'PersonData' ->> 'UNOM' AS UNOM,
+                re.address,
+                json_data -> 'Person' -> 'PersonData' ->> 'flatNum' AS flatNum,
+                json_data -> 'Person' -> 'PersonData' ->> 'personID' AS personId,
+                json_data -> 'Person' -> 'PersonData' ->> 'FIO' AS fio,
+                json_data -> 'Person' -> 'PersonData' ->> 'relocationStatus' AS relocationStatus
+            FROM ssr.documents
+            LEFT JOIN realEstates re ON re.unom = json_data -> 'Person' -> 'PersonData' ->> 'UNOM'
+            WHERE doc_type = 'PERSON'
+            AND json_data -> 'Person' -> 'PersonData' ->> 'personID' is not null
+            AND json_data -> 'Person' -> 'PersonData' ->> 'relocationStatus' is not null
+            AND (json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false' OR json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_persons_with_relocation_statuses TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

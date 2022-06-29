@@ -1,0 +1,170 @@
+{
+  "metaDict": {
+    "nick": "Actions",
+    "name": "Возможности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "disabled",
+        "name": "Признак неактивности",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "URL адрес страницы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "theme",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "eb256819-10c1-40dd-8d1e-1f1952be4bbb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a99ae9df-216f-4cd1-a85f-270c131188f4",
+          "nickAttr": "code",
+          "value": "ugd_ssr_sendAffairCollation",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "059f43b8-e555-4ec0-b8a2-fbd2a1889557",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f6539363-7685-4b51-b4de-72630fbebd32",
+          "nickAttr": "group",
+          "value": "UGD_SSR_PERSON_CARD_DGP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "78640f39-f052-4c49-8397-125d01112b96",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "44565400-9818-4a2f-bbc5-0acb01ced9d6",
+          "nickAttr": "name",
+          "value": "Запрос обновления сведений из ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d1fad059-dc62-404a-9f0e-893126536ee2",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c93d9701-e5ce-4325-a5f9-3aaab1049a08",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/dgi-affair-info",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

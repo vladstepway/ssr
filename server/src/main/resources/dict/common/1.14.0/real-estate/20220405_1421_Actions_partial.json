@@ -1,0 +1,260 @@
+{
+  "metaDict": {
+    "nick": "Actions",
+    "name": "Возможности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "disabled",
+        "name": "Признак неактивности",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "URL адрес страницы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "theme",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "27979ef2-efb6-4305-846f-59a61413fca7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7fde9cd1-4bec-4bb3-99ab-e271be65c2ce",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addRealEstateAdditionalInfo",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a7673a34-4ef8-4045-8cd6-dafbcf28fced",
+          "nickAttr": "group",
+          "value": "UGD_SSR_REAL_DEMOLITION_CHANGE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1c459790-e63c-4b64-8edc-2819b088cfcf",
+          "nickAttr": "name",
+          "value": "Внести дополнительные сведения о расселении дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "920d548e-160c-47dd-903e-683af34b929d",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/real-estate/additional-info",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6ef4174e-f5da-4e34-9c2d-06cb80201430",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "95ea85eb-5690-45ff-b5ba-14fb8fc47f70",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addRealEstatePreservationInfo",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "26bfb1c7-1505-4f22-a980-cc65805ec65b",
+          "nickAttr": "group",
+          "value": "UGD_SSR_REAL_DEMOLITION_CHANGE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3b834f6-4fff-4fe8-ac04-19419e1a28ab",
+          "nickAttr": "name",
+          "value": "Внести сведения о сохранении дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d39447c6-0e9e-41a3-8cf4-aac48b1dbc39",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/real-estate/preservation-info",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ba638253-1676-4b45-835c-33a95326df3b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "81961e7a-520a-4726-a5e2-c5166f14c9b7",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addRealEstateDemolitionInfo",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c0c139eb-3e56-43ab-8293-e7e4ece4d1b6",
+          "nickAttr": "group",
+          "value": "UGD_SSR_REAL_DEMOLITION_CHANGE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "85346957-76e7-45ff-bddb-bb1a92e1a94d",
+          "nickAttr": "name",
+          "value": "Внести сведения о сносе дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d2d36e91-9f91-4fb4-96df-200c5c74dc18",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/real-estate/demolition-info",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6a075c63-a6ff-466f-8f31-4a0e4135e223",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "babe0653-22a8-4b74-942f-a719f0f8c1b6",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addRealEstateNonResidentalSpacesInfo",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fd66fd96-66cc-4ba5-a5d5-a9fd5d3ac136",
+          "nickAttr": "group",
+          "value": "UGD_SSR_REAL_NON_RESIDENTIAL",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d047a8a1-0450-45f2-b988-a4c4adb485c0",
+          "nickAttr": "name",
+          "value": "Внести сведения о наличии нежилых помещений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "81655afc-8b54-45f8-b901-5a70bcb10545",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/real-estate/non-residential-spaces-info",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

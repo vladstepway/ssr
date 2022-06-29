@@ -1,0 +1,528 @@
+{
+  "metaDict": {
+    "nick": "Roles",
+    "name": "Роли пользователей",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "Плоский",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "organization",
+        "name": "Организация",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "authority",
+        "name": "Полномочие",
+        "typeAttr": "link",
+        "nickDictLink": "Authority",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "2a70f3ec-1be7-42b4-a370-464d676d452d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "25741a51-90b1-49e3-b9e2-a6e33594aabd",
+          "nickAttr": "authority",
+          "value": "515385b2-c95b-4d8f-ae54-8ce0bc06ddd2",
+          "orders": 0,
+          "linkCode": "UGD_SSR_OPERATOR_ARM_CP"
+        },
+        {
+          "attrId": "a340877c-67b6-4041-bb3d-c7b58ac01ec4",
+          "nickAttr": "code",
+          "value": "UGD_SSR_OPERATOR_ARM_CP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "01cc9ff5-8563-4b0f-a15c-b86a9fbc8b88",
+          "nickAttr": "description",
+          "value": "Роль обеспечивает возможность  просматривать  информацию в реестре АРМ ЦП, формировать и выполнять задачи по карточке жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "770a9630-73db-462e-a38a-51e0b4a3b8d7",
+          "nickAttr": "name",
+          "value": "Оператор АРМ Центра информирования по переселению",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eae8102b-6dc5-4155-bbf4-27032ffd407d",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "749c786f-e4f6-4d91-8e11-b22d607c46f3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0f31f00f-59a7-47f8-bcaf-95f57774c5ee",
+          "nickAttr": "authority",
+          "value": "616140df-beca-4c8d-9424-b31e8e1bb7a7",
+          "orders": 0,
+          "linkCode": "UGD_SSR_ARM_RELEASE_APART"
+        },
+        {
+          "attrId": "43c6dc4b-b1e1-4805-8c90-99561290d4ac",
+          "nickAttr": "code",
+          "value": "UGD_SSR_PREFECTURE_EMPLOYEE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c651430f-921b-4ea7-9eca-ceb9a42c4c26",
+          "nickAttr": "description",
+          "value": "Роль, обеспечивает возможности:\n- просмотра реестра АРМ сотрудника Центра информирования по переселению жителей\n-  ввода данных об освобождении квартиры ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4047ed84-ecd6-4440-bdca-4cb78d552444",
+          "nickAttr": "name",
+          "value": "Сотрудник Префектуры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a585ddb0-569d-4a12-82fd-9ca7807642f2",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "584940ba-8e08-490b-9f5e-53683f2eeb64",
+      "deleted": 0,
+      "sortValue": "3",
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ffbe81ed-895d-479d-841e-702fbc99a831",
+          "nickAttr": "authority",
+          "value": "bc314604-e3c6-45a6-bc71-191b290964fe",
+          "orders": 0,
+          "linkCode": "UGD_SSR_OPERATOR"
+        },
+        {
+          "attrId": "6213f9f2-b1f3-4181-90d3-b4545acde355",
+          "nickAttr": "code",
+          "value": "UGD_SSR_OPERATOR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aa708ef8-7117-4f2a-8828-01e95c73504f",
+          "nickAttr": "name",
+          "value": "Оператор ССР",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4b15d9d4-792a-43a7-ae2e-4dbb95f7188a",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "c60ea39d-0550-4fec-8004-326a96e75feb",
+      "deleted": 0,
+      "sortValue": "2",
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fee0274c-5919-4d4b-8207-4e0122348f55",
+          "nickAttr": "authority",
+          "value": "3ac69eca-ea89-45cd-841d-6e2b6dd52d95",
+          "orders": 0,
+          "linkCode": "UGD_SSR_OPERATOR_DASHBOARD_VIEWONLY"
+        },
+        {
+          "attrId": "1b21daf1-664b-4f6e-b1dd-27df7f6c4911",
+          "nickAttr": "code",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_VIEWONLY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4580c92a-196a-43df-a4ce-67d99b33f2cd",
+          "nickAttr": "name",
+          "value": "Оператор статистической информации о переселении (только просмотр)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ec5a226-5d91-4bfa-95fd-dfc2b2b5acb6",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "282d916b-c962-46f5-900e-4f9620aca438",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ecc2dbf6-97f8-414a-b405-e1b696d85db7",
+          "nickAttr": "authority",
+          "value": "6f523b6f-8315-44a7-b1f3-7377fe85988e",
+          "orders": 0,
+          "linkCode": "UGD_SSR_OPERATOR_DASHBOARD_DGI"
+        },
+        {
+          "attrId": "141018fc-8cae-419e-87db-f259a67fd931",
+          "nickAttr": "code",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGI",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0f18b89a-e510-4f60-8583-052bf66a9f38",
+          "nickAttr": "description",
+          "value": "Роль обеспечивает возможность  вносить (в части ДГИ) и просматривать  статистическую информацию о переселении для Дашборда",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cc7d82c7-cdc4-444f-b192-09873e2253fc",
+          "nickAttr": "name",
+          "value": "Оператор статистической информации о переселении (ДГИ)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "86d3d841-ffe6-4881-9985-727918971732",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "1fabf2f8-6118-4527-b354-82238debe504",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7e153555-5e70-4c5e-8c30-c6c423553e42",
+          "nickAttr": "authority",
+          "value": "6e61b3ec-fa18-4ee0-85ca-4815340c8331",
+          "orders": 0,
+          "linkCode": "UGD_SSR_OPERATOR_DASHBOARD_DGP"
+        },
+        {
+          "attrId": "08b12543-a996-4b93-8ab5-4d4f7ca0fa92",
+          "nickAttr": "code",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9ffb3a1e-48b4-4b53-8b4d-328819ca5d2a",
+          "nickAttr": "description",
+          "value": "Роль обеспечивает возможность  вносить (в части ДГП) и просматривать  статистическую информацию о переселении для Дашборда",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c8a237ed-6001-4adf-85c5-510af9aab5b1",
+          "nickAttr": "name",
+          "value": "Оператор статистической информации о переселении (ДГП)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d770ee87-574f-4eaa-be8c-cd90006da4c3",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "54a20438-8377-4f6c-86a7-014d59ba691c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "54d3f8c9-da72-4d57-b30a-98c05453417a",
+          "nickAttr": "authority",
+          "value": "6de8ac42-c42b-40cc-b9a4-cbd292fed128",
+          "orders": 0,
+          "linkCode": "UGD_SSR_OPERATOR_DASHBOARD_FOND"
+        },
+        {
+          "attrId": "0654ae37-90b9-423e-ab64-12aa77793eea",
+          "nickAttr": "code",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_FOND",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4abe04e0-5a0f-4f74-ba1e-b01c3a8521d0",
+          "nickAttr": "description",
+          "value": "Роль обеспечивает возможность  вносить (в части Фонда) и просматривать  статистическую информацию о переселении для Дашборда",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "65db4d33-5515-4cd9-8964-e2540a9f8b4d",
+          "nickAttr": "name",
+          "value": "Оператор статистической информации о переселении (Фонд)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9d5976f7-af2d-4bc9-bfa2-9d7f48aec309",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "b9956464-e4ba-4344-9274-ee19798cffc1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "04fa518c-27a7-41e4-95d9-9424b32c6ec9",
+          "nickAttr": "authority",
+          "value": "82e81e85-a25b-46b6-835a-a9abcd93a863",
+          "orders": 0,
+          "linkCode": "UGD_SSR_ARM_DGI_APPLY"
+        },
+        {
+          "attrId": "4fa4db6c-ef52-4eff-bea5-f43d02e655b0",
+          "nickAttr": "authority",
+          "value": "feb9b930-0436-418b-93ac-8664e0c206ec",
+          "orders": 1,
+          "linkCode": "UGD_SSR_ARM_SIGN_CONTRACT"
+        },
+        {
+          "attrId": "ef52d799-4b67-41ca-b7f7-46ef128fcade",
+          "nickAttr": "code",
+          "value": "UGD_SSR_DGI_EMPLOYEE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2cae8289-65e3-4e9e-bd89-5b73aa0ff8ff",
+          "nickAttr": "description",
+          "value": "Роль, обеспечивает возможности:\n- ввода и передачи в ДГИ заявления на согласие или отказ от получения равнозначного жилья, а также недостающих документов\n- принятие данных подписанного договора\n- просмотра реестра жителей отселяемых домов\n- просмотра карточки жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "28c60b21-a2fc-4953-9a33-9de729b035f6",
+          "nickAttr": "name",
+          "value": "Сотрудник ДГИ ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f79ee1aa-b13c-4f0d-b86b-daf39486dc66",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "131065fd-18e1-4b8e-a21b-f81e06ab9957",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3bc0db53-9b63-47bc-8968-81baf5dd2f98",
+          "nickAttr": "authority",
+          "value": "e06d0e1a-2810-40b2-94d0-52dcf8c02c3e",
+          "orders": 0,
+          "linkCode": "UGD_SSR_OPERATOR_DASHBOARD_DS"
+        },
+        {
+          "attrId": "91b289ce-4db1-499e-93ee-fab38b31b7b6",
+          "nickAttr": "code",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c09041ba-879e-4094-b38a-9a8d1ab0279e",
+          "nickAttr": "description",
+          "value": "Роль обеспечивает возможность  вносить (в части ДС) и просматривать  статистическую информацию о переселении для Дашборда",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "47c209fa-d9fa-4b94-9cba-5f4ee7539c19",
+          "nickAttr": "name",
+          "value": "Оператор статистической информации о переселении (ДС)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "69cfb0c5-8421-4122-81d3-c7655d75578b",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "86648a9b-f645-4dfd-bce9-907a56125899",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7e63d727-6e79-4f0d-8441-26d1a87c83c8",
+          "nickAttr": "authority",
+          "value": "248750e1-aec9-4fd7-a362-80e396815895",
+          "orders": 0,
+          "linkCode": "UGD_SSR_ARM_DGI_SHOW_APART"
+        },
+        {
+          "attrId": "e5ca0372-e736-44cf-a2ed-07ce37dcd97d",
+          "nickAttr": "authority",
+          "value": "60d05ebd-8252-447b-959e-1ff92558eca2",
+          "orders": 1,
+          "linkCode": "UGD_SSR_ARM_GIVE_KEYS"
+        },
+        {
+          "attrId": "da3c02ef-6f03-4526-abb8-08bb8caa0d0e",
+          "nickAttr": "code",
+          "value": "UGD_SSR_MCN_EMPLOYEE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b2c13644-add3-4bf4-ad23-3380a86fdd72",
+          "nickAttr": "description",
+          "value": "Роль, обеспечивает возможности:\n- ввода данных по выдаче ключей от новой квартиры \n- ввода и передачи в ДГИ сведений о просмотрах квартир \n- просмотра реестра жителей отселяемых домов\n- просмотра карточки жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4cf10e83-abd4-478d-ae76-21ab40382aec",
+          "nickAttr": "name",
+          "value": "Сотрудник МЦН",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9e238614-89b5-413a-952d-aa24c5018a85",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    }
+  ]
+}

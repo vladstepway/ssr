@@ -1,0 +1,131 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_flat_appointment_statuses",
+    "name": "Статусы реестра заявлений на осмотр квартиры",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [{
+      "nick": "status_name",
+      "name": "Текстовое значение статуса",
+      "typeAttr": "string",
+      "nickDictLink": null,
+      "arrayAttr": 0,
+      "required": 1,
+      "deleted": 0,
+      "note": null,
+      "orders": 0,
+      "unique": 0
+    }, {
+      "nick": "code",
+      "name": "Код",
+      "typeAttr": "string",
+      "nickDictLink": null,
+      "arrayAttr": 0,
+      "required": 1,
+      "deleted": 0,
+      "note": null,
+      "orders": 1,
+      "unique": 0
+    }]
+  },
+  "elements": [{
+    "elementId": "614e7268-1dc5-4fae-aad5-4c408632b41f",
+    "deleted": 0,
+    "sortValue": "2",
+    "note": null,
+    "parentCode": null,
+    "values": [{
+      "attrId": "9c3abea4-f9de-407e-8b11-fc9b7c868e9f",
+      "nickAttr": "code",
+      "value": "02",
+      "orders": 0,
+      "linkCode": null
+    }, {
+      "attrId": "ed271e05-f3b0-4fac-8dbc-00baefd14d7b",
+      "nickAttr": "status_name",
+      "value": "Запись отменена по инициативе ГКУ МЦН",
+      "orders": 0,
+      "linkCode": null
+    }]
+  }, {
+    "elementId": "7e1b9f44-fba0-4383-ba4c-5ea06f0c4aeb",
+    "deleted": 0,
+    "sortValue": "1",
+    "note": null,
+    "parentCode": null,
+    "values": [{
+      "attrId": "b7a0466f-cada-4759-afe5-80b50f53e00b",
+      "nickAttr": "code",
+      "value": "01",
+      "orders": 0,
+      "linkCode": null
+    }, {
+      "attrId": "64429cc2-afdb-46bd-becd-8ed671e7091f",
+      "nickAttr": "status_name",
+      "value": "Запись отменена по инициативе заявителя",
+      "orders": 0,
+      "linkCode": null
+    }]
+  }, {
+    "elementId": "020709f2-fae4-4a61-9800-fe003f01ca01",
+    "deleted": 0,
+    "sortValue": "0",
+    "note": null,
+    "parentCode": null,
+    "values": [{
+      "attrId": "d3cbfba6-0e96-47c5-bb32-9deb551249b2",
+      "nickAttr": "code",
+      "value": "0",
+      "orders": 0,
+      "linkCode": null
+    }, {
+      "attrId": "016efc6f-36f1-4ac2-82c4-10ab2c981fe6",
+      "nickAttr": "status_name",
+      "value": "Запись произведена",
+      "orders": 0,
+      "linkCode": null
+    }]
+  }, {
+    "elementId": "ce6c64ce-807d-455c-9055-7cf318589e33",
+    "deleted": 0,
+    "sortValue": "3",
+    "note": null,
+    "parentCode": null,
+    "values": [{
+      "attrId": "c6c301d5-c808-4b02-a613-d0cdb4e61967",
+      "nickAttr": "code",
+      "value": "03",
+      "orders": 0,
+      "linkCode": null
+    }, {
+      "attrId": "a8e28c98-1774-4719-b47e-e130ec65357d",
+      "nickAttr": "status_name",
+      "value": "Услуга оказана. Осмотр произведен",
+      "orders": 0,
+      "linkCode": null
+    }]
+  }, {
+    "elementId": "fdc42bc7-2c4c-43a6-b2b3-34cf10ae34e7",
+    "deleted": 0,
+    "sortValue": "4",
+    "note": null,
+    "parentCode": null,
+    "values": [{
+      "attrId": "ed49b196-3d1d-460c-bf79-b151c5d60bd5",
+      "nickAttr": "code",
+      "value": "04",
+      "orders": 0,
+      "linkCode": null
+    }, {
+      "attrId": "ad8e3123-a875-4b62-813e-4e1877ae34e6",
+      "nickAttr": "status_name",
+      "value": "Отказ в предоставлении услуги. Осмотр квартиры не состоялся",
+      "orders": 0,
+      "linkCode": null
+    }]
+  }]
+}

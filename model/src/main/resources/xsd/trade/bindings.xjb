@@ -1,0 +1,187 @@
+<jxb:bindings
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+        version="2.1">
+    <jxb:bindings schemaLocation="enums.xsd">
+        <jxb:bindings node="//xs:simpleType[@name='TradeType']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="SIMPLE_TRADE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='TradeType']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="TRADE_WITH_COMPENSATION"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='TradeType']/xs:restriction/xs:enumeration[@value='3']">
+            <jxb:typesafeEnumMember name="TRADE_IN_TWO_YEARS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='TradeType']/xs:restriction/xs:enumeration[@value='4']">
+            <jxb:typesafeEnumMember name="COMPENSATION"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='TradeType']/xs:restriction/xs:enumeration[@value='5']">
+            <jxb:typesafeEnumMember name="OUT_OF_DISTRICT"/>
+        </jxb:bindings>
+
+
+        <jxb:bindings node="//xs:simpleType[@name='TradeResult']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="AGREED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='TradeResult']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="REFUSED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='TradeResult']/xs:restriction/xs:enumeration[@value='3']">
+            <jxb:typesafeEnumMember name="TERMINATION"/>
+        </jxb:bindings>
+
+
+        <jxb:bindings node="//xs:simpleType[@name='CommissionDecisionResult']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="POSITIVE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='CommissionDecisionResult']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="NEGATIVE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='CommissionDecisionResult']/xs:restriction/xs:enumeration[@value='3']">
+            <jxb:typesafeEnumMember name="AUCTION"/>
+        </jxb:bindings>
+
+
+        <jxb:bindings node="//xs:simpleType[@name='AuctionResult']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="HELD"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='AuctionResult']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="FAILED"/>
+        </jxb:bindings>
+
+
+        <jxb:bindings node="//xs:simpleType[@name='AuctionOutput']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="WON"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='AuctionOutput']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="SECOND_PLACE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='AuctionOutput']/xs:restriction/xs:enumeration[@value='3']">
+            <jxb:typesafeEnumMember name="LOST"/>
+        </jxb:bindings>
+
+
+        <jxb:bindings node="//xs:simpleType[@name='ClaimStatus']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="ACTIVE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='ClaimStatus']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="RECALLED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='ClaimStatus']/xs:restriction/xs:enumeration[@value='3']">
+            <jxb:typesafeEnumMember name="REJECTED_BY_COMMISSION"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='ClaimStatus']/xs:restriction/xs:enumeration[@value='4']">
+            <jxb:typesafeEnumMember name="REJECTED_WINNER_AUCTION"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='ClaimStatus']/xs:restriction/xs:enumeration[@value='5']">
+            <jxb:typesafeEnumMember name="REJECTED_BY_PRIORITY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='ClaimStatus']/xs:restriction/xs:enumeration[@value='6']">
+            <jxb:typesafeEnumMember name="AUCTION_LOST"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='ClaimStatus']/xs:restriction/xs:enumeration[@value='7']">
+            <jxb:typesafeEnumMember name="REJECTED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='ClaimStatus']/xs:restriction/xs:enumeration[@value='8']">
+            <jxb:typesafeEnumMember name="REJECTED_COMPENSATION"/>
+        </jxb:bindings>
+
+
+        <jxb:bindings node="//xs:simpleType[@name='BatchProcessingStatus']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="COMPLETED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BatchProcessingStatus']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="INPROGRESS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BatchProcessingStatus']/xs:restriction/xs:enumeration[@value='3']">
+            <jxb:typesafeEnumMember name="ERROR"/>
+        </jxb:bindings>
+
+
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="REQUEST_APPLIED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="POSITIVE_DECISION_OF_COMMISSION"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='3']">
+            <jxb:typesafeEnumMember name="NEGATIVE_DECISION_OF_COMMISSION"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='4']">
+            <jxb:typesafeEnumMember name="AUCTION"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='5']">
+            <jxb:typesafeEnumMember name="AUCTION_REJECTED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='6']">
+            <jxb:typesafeEnumMember name="AUCTION_LOST"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='7']">
+            <jxb:typesafeEnumMember name="AUCTION_WON"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='8']">
+            <jxb:typesafeEnumMember name="CONTRACT_PROVIDED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='9']">
+            <jxb:typesafeEnumMember name="CONTRACT_SIGNED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='10']">
+            <jxb:typesafeEnumMember name="KEYS_ISSUED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInStatus']/xs:restriction/xs:enumeration[@value='11']">
+            <jxb:typesafeEnumMember name="REJECTED"/>
+        </jxb:bindings>
+
+
+        <jxb:bindings node="//xs:simpleType[@name='CompensationStatus']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="LETTER_ACCEPTED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='CompensationStatus']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="INSPECTION_COMPETED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='CompensationStatus']/xs:restriction/xs:enumeration[@value='3']">
+            <jxb:typesafeEnumMember name="AGREEMENT_APPLIED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='CompensationStatus']/xs:restriction/xs:enumeration[@value='4']">
+            <jxb:typesafeEnumMember name="REJECTION_APPLIED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='CompensationStatus']/xs:restriction/xs:enumeration[@value='5']">
+            <jxb:typesafeEnumMember name="CONTRACT_PROVIDED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='CompensationStatus']/xs:restriction/xs:enumeration[@value='6']">
+            <jxb:typesafeEnumMember name="CONTRACT_SIGNED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='CompensationStatus']/xs:restriction/xs:enumeration[@value='7']">
+            <jxb:typesafeEnumMember name="KEYS_ISSUED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='CompensationStatus']/xs:restriction/xs:enumeration[@value='8']">
+            <jxb:typesafeEnumMember name="APARTMENT_VACATED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='CompensationStatus']/xs:restriction/xs:enumeration[@value='9']">
+            <jxb:typesafeEnumMember name="REJECTED"/>
+        </jxb:bindings>
+
+
+        <jxb:bindings node="//xs:simpleType[@name='BuyInFunds']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="OWN_FUNDS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInFunds']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="MORTGAGE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInFunds']/xs:restriction/xs:enumeration[@value='3']">
+            <jxb:typesafeEnumMember name="MATERNAL_CAPITAL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInFunds']/xs:restriction/xs:enumeration[@value='4']">
+            <jxb:typesafeEnumMember name="OWN_FUNDS_AND_MATERNAL_CAPITAL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInFunds']/xs:restriction/xs:enumeration[@value='5']">
+            <jxb:typesafeEnumMember name="COMPENSATION"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInFunds']/xs:restriction/xs:enumeration[@value='6']">
+            <jxb:typesafeEnumMember name="SUBSIDIES_AND_CERTIFICATES"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='BuyInFunds']/xs:restriction/xs:enumeration[@value='7']">
+            <jxb:typesafeEnumMember name="WITHOUT_PAY"/>
+        </jxb:bindings>
+    </jxb:bindings>
+</jxb:bindings>

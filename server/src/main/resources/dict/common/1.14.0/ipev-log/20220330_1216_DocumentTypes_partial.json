@@ -1,0 +1,229 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "link",
+        "nickDictLink": "InformationObjectRegister",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "3e796693-9b37-4a1d-8a41-922c6e3aa773",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "032118fd-6191-467d-8a8a-96524fa43756",
+          "nickAttr": "code",
+          "value": "UGD_SSR_IPEV-LOG",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f09ee849-420a-4de3-a3bf-6160c35057c2",
+          "nickAttr": "fields",
+          "value": "bacbb611-2cc6-43bd-a197-fd36b36c1b9b",
+          "orders": 0,
+          "linkCode": "ugd_ssr_ipev_log_event_date_time"
+        },
+        {
+          "attrId": "ecc77e74-4721-4733-a3e8-20e648947ed1",
+          "nickAttr": "fields",
+          "value": "d41e1402-1cbd-497d-9d5b-60201048e5b7",
+          "orders": 1,
+          "linkCode": "ugd_ssr_ipev_log_egrn_request_date_time"
+        },
+        {
+          "attrId": "f0f27b88-fe27-4083-a3b4-419fb42dccdb",
+          "nickAttr": "fields",
+          "value": "4620fe55-cfcf-4482-b180-22681bbc6e6e",
+          "orders": 2,
+          "linkCode": "ugd_ssr_ipev_log_status"
+        },
+        {
+          "attrId": "8e94cc41-c3d8-467f-bab0-60b7f6034367",
+          "nickAttr": "fields",
+          "value": "012337a7-b7ee-4c5b-b5ed-12392b325d87",
+          "orders": 3,
+          "linkCode": "ugd_ssr_ipev_log_cadastral_numbers_count"
+        },
+        {
+          "attrId": "cb9d59e2-86cc-43ac-a952-a36489f25f01",
+          "nickAttr": "fields",
+          "value": "9406ba9a-c21c-42db-a020-7489b0390018",
+          "orders": 4,
+          "linkCode": "ugd_ssr_ipev_log_filtered_cadastral_numbers_count"
+        },
+        {
+          "attrId": "205ba197-864d-440c-aae5-97bdde6b8d5a",
+          "nickAttr": "fields",
+          "value": "024ce884-23b4-4594-ae1a-b514ed3c6aa1",
+          "orders": 5,
+          "linkCode": "ugd_ssr_ipev_log_orr_file_store_id"
+        },
+        {
+          "attrId": "882d35fa-c04c-4581-b944-9e3e1cdf2117",
+          "nickAttr": "name",
+          "value": "Журнал обмена с ИПЭВ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "621c0a22-4bb8-4987-b881-1709ea08e77c",
+          "nickAttr": "solrCore",
+          "value": "07c45e88-667c-45bd-8374-144ce58fc4b5",
+          "orders": 0,
+          "linkCode": "ugd_ssr_ipev_log"
+        },
+        {
+          "attrId": "49928cb8-ffa3-4ec0-8d8c-51e7ad40697f",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "53c46954-6aac-42d5-a610-d67241a85eab",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "9402c528-9578-4bdb-b5b1-6e0c809653f1",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

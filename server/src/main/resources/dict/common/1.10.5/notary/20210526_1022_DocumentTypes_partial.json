@@ -1,0 +1,229 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "link",
+        "nickDictLink": "InformationObjectRegister",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "aa8b122a-4abb-46cb-be37-436750346a09",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "91c4bf4b-f983-41f7-8866-d640f139cf12",
+          "nickAttr": "code",
+          "value": "UGD_SSR_NOTARY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1e61f4c6-5898-4410-b334-d63689baa45b",
+          "nickAttr": "fields",
+          "value": "1c9fc1a8-95c3-447c-8229-199465ac28fb",
+          "orders": 0,
+          "linkCode": "ugd_ssr_notary_full_name"
+        },
+        {
+          "attrId": "6ce92ae0-4927-4789-b4e7-25cc41e05044",
+          "nickAttr": "fields",
+          "value": "5e6d23e6-cd16-4aec-baad-57d823725dc9",
+          "orders": 1,
+          "linkCode": "ugd_ssr_notary_office_address"
+        },
+        {
+          "attrId": "7fd76861-6d26-4d50-9aa1-7e0f6cf97a75",
+          "nickAttr": "fields",
+          "value": "75d2474d-2a5e-4d2a-b5f0-5f1d605c1b68",
+          "orders": 2,
+          "linkCode": "ugd_ssr_notary_additional_info"
+        },
+        {
+          "attrId": "626a4cb4-51a8-4749-9585-39750b70c38f",
+          "nickAttr": "fields",
+          "value": "e68ac554-4896-4f16-b4c8-1f21b1b525d6",
+          "orders": 3,
+          "linkCode": "ugd_ssr_notary_phone"
+        },
+        {
+          "attrId": "250ab201-bc78-4021-814b-99423e9f0ebf",
+          "nickAttr": "fields",
+          "value": "9dae0498-9983-4cb0-9f43-678000de25d3",
+          "orders": 4,
+          "linkCode": "ugd_ssr_notary_status"
+        },
+        {
+          "attrId": "54ac7915-518f-4c2c-8582-4afd6dbaf002",
+          "nickAttr": "fields",
+          "value": "f1e3f94f-9725-4d20-8059-ac6d1d732924",
+          "orders": 5,
+          "linkCode": "ugd_ssr_notary_employee_logins"
+        },
+        {
+          "attrId": "f8459240-65df-4684-bbe8-bc9714671c8b",
+          "nickAttr": "name",
+          "value": "Реестр нотариусов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2afcb0a7-dc33-4bcc-8bfe-5b6131e470b5",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "439e2edd-45f3-4f7e-8118-8adae010fbe9",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "c3ece9aa-378d-437d-855a-4d72806f9942",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "3bfa3b78-0eef-4fdb-9ad2-fc5d6f77fe37",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

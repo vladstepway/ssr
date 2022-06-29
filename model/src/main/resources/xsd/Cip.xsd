@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ugd.croc.ru/ssr" targetNamespace="http://www.ugd.croc.ru/ssr" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Cip">
+		<xs:annotation>
+			<xs:documentation>Сведения о центрах информирования о переселении (ЦИП)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+					<xs:annotation>
+						<xs:documentation>Версия XSD схемы</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="folderGUID" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Идентификатор папки</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="documentID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Системный идентификатор документа</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="cipData" type="cipType">
+					<xs:annotation>
+						<xs:documentation>Данные ЦИП</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="cipType">
+		<xs:annotation>
+			<xs:documentation>Тип - ЦИП</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cipID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>ID ЦИП</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cipCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код ЦИП</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Адрес ЦИП</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="District" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Округ</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="code" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>Код</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="name" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Наименование</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Area" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Район</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="code" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>Код</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="name" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Наименование</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Phone" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Телефон ЦИП</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WorkTime" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Режим работы ЦИП</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cipDateStart" type="xs:date" minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Дата начала работы ЦИП</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cipDateEnd" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата окончания работы ЦИП</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cipStatus" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Статус ЦИП
+Значения (пишем латиницу) 
+WORK – Используется
+DEL - Удален
+</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cipDelReason" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Причина удаления</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LinkedHouses" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Список домов, привязанных к ЦИП</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Link" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="id" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Идентификатор ОКС (из подсистемы ПС)</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="linkDate" type="xs:date" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Дата привязки ЦИП</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="linkStatus" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Статус записи
+1-Активна
+2-Архивная</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Employees" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Связанные сотрудники</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Employee" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="login" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Логин сотрудника</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="People" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Список жителей расселяемых домов, привязанных к ЦИП</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Person" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="personID" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>ID жителя</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="affairId" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Идентификатор семьи (помещения)</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="UNOM" type="xs:integer" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>UNOM дома</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slotNumber" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Количество слотов, доступных для одновременного бронирования временных интервалов подряд</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FlatAppointmentDayScheduleEvents" type="DayScheduleEvents" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>События по расписаниям ЦИП для записей на осмотр квартиры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ContractAppointmentDayScheduleEvents" type="DayScheduleEvents" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>События по расписаниям ЦИП для записей на заключение договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="DayScheduleEvents">
+		<xs:annotation>
+			<xs:documentation>События по расписаниям ЦИП</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DayScheduleEvent" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="code" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>Код</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="date" type="xs:date" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Дата рабочего дня</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="dateFrom" type="xs:date" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Дата или начало периода копирования/удаления
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="dateTo" type="xs:date" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Конец периода копирования/удаления</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="weekdays" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Список дней недели ("MONDAY","TUESDAY" ...)</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="weekday" type="xs:string" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>День недели</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="weekRepeatNumber" type="xs:int" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Скопировано на каждую weekRepeatNumber неделю
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="dayRepeatNumber" type="xs:int" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Скопировано на каждый dayRepeatNumber день
+								</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

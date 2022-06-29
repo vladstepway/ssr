@@ -1,0 +1,90 @@
+swagger: '2.0'
+info:
+  description: |
+    ССР. Сервис для многостороннего подписания договоров с использованием УКЭП.
+  version: 1.0.0
+  title: SSR Contract Digital Sign
+schemes:
+  - http
+
+paths:
+  /contract-digital-signs/check:
+    get:
+      summary: Выполнение проверок и получение сведений для электронного подписания договора
+      operationId: checkPerson
+      tags:
+        - ContractDigitalSign
+      produces:
+        - application/json
+      parameters:
+        - name: eno
+          in: query
+          description: ЕНО уведомления
+          required: true
+          type: string
+      responses:
+        200:
+          description: Результат проверки и сведения для электронного подписания договора
+          schema:
+            $ref: '#/definitions/Check'
+        400:
+          description: Данные запроса невалидны
+definitions:
+  Check:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина по которой невозможно предоставить услугу
+      apartments:
+        uniqueItems: true
+        type: array
+        items:
+          $ref: '#/definitions/Apartment'
+    required: [ isPossible ]
+  Apartment:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина по которой невозможно предоставить услугу
+      address:
+        type: string
+        description: Адрес
+        example: г.Москва, ул Набережная 12, кв. 15
+      cip:
+        $ref: '#/definitions/Cip'
+      contractDigitalSignDocumentId:
+        type: string
+        description: Идентификатор документа многостороннего подписания договора с использованием УКЭП
+      contractFileId:
+        type: string
+        description: Идентификатор файла договора в ЦХЭД
+      actFileId:
+        type: string
+        description: Идентификатор файла акта в ЦХЭД
+    required: [ isPossible, address ]
+  Cip:
+    type: object
+    properties:
+      id:
+        type: string
+        description: id
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      address:
+        type: string
+        description: Адрес
+        example: Мытищи, Шараповский проезд, дом 2, строение 3й
+      phone:
+        type: string
+        description: Телефон
+        example: +7985478532
+    required: [ address ]

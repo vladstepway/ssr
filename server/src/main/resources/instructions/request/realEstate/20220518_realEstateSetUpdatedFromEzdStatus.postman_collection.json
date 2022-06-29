@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "52bc7a07-142d-4cc1-addf-6995c474cda7",
+		"name": "20220518_realEstateSetUpdatedFromEzdStatus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17236311"
+	},
+	"item": [
+		{
+			"name": "1) fetch realEstate",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"user\", \"\");\r",
+							"pm.collectionVariables.set(\"pass\", \"\");\r",
+							"pm.collectionVariables.set(\"urlHost\", \"smart.mos.ru\");\r",
+							"\r",
+							"let flagStarted = pm.collectionVariables.get(\"flagStarted\");\r",
+							"if (!flagStarted || flagStarted.length == 0) {\r",
+							"    console.log(\"init\");\r",
+							"    let realEstateIds = \"5871aa01-6306-4810-bca6-770be6c93638;7574e52a-f3bc-4325-a643-69d4ad25a280\";\r",
+							"    pm.collectionVariables.set(\"realEstateIds\", realEstateIds);\r",
+							"    let flatIds = \"648530853;1006484889\";\r",
+							"    pm.collectionVariables.set(\"flatIds\", flatIds);\r",
+							"    pm.collectionVariables.set(\"flagStarted\", \"started\");\r",
+							"}\r",
+							"\r",
+							"let realEstateIds = pm.collectionVariables.get(\"realEstateIds\");\r",
+							"if (realEstateIds && typeof(realEstateIds) == \"string\") {\r",
+							"    realEstateIds = realEstateIds.split(';');\r",
+							"}\r",
+							"if (realEstateIds && Array.isArray(realEstateIds)) {\r",
+							"    if (realEstateIds.length > 0) {\r",
+							"        let realEstateId = realEstateIds.shift();\r",
+							"        pm.collectionVariables.set(\"realEstateId\", realEstateId);\r",
+							"        pm.collectionVariables.set(\"realEstateIds\", realEstateIds.join(';'));\r",
+							"        console.log(\"обработка: \" + realEstateId);\r",
+							"    } else {\r",
+							"        pm.collectionVariables.set(\"realEstateId\", \"\");\r",
+							"        pm.collectionVariables.set(\"realEstateIds\", \"\");\r",
+							"    }\r",
+							"} else {\r",
+							"    pm.collectionVariables.set(\"realEstateId\", \"\");\r",
+							"    pm.collectionVariables.set(\"realEstateIds\", \"\");\r",
+							"}\r",
+							"\r",
+							"let flatIds = pm.collectionVariables.get(\"flatIds\");\r",
+							"if (flatIds && typeof(flatIds) == \"string\") {\r",
+							"    flatIds = flatIds.split(';');\r",
+							"}\r",
+							"if (flatIds && Array.isArray(flatIds)) {\r",
+							"    if (flatIds.length > 0) {\r",
+							"        let flatId = flatIds.shift();\r",
+							"        pm.collectionVariables.set(\"flatId\", flatId);\r",
+							"        pm.collectionVariables.set(\"flatIds\", flatIds.join(';'));\r",
+							"    } else {\r",
+							"        pm.collectionVariables.set(\"flatId\", \"\");\r",
+							"        pm.collectionVariables.set(\"flatIds\", \"\");\r",
+							"    }\r",
+							"} else {\r",
+							"    pm.collectionVariables.set(\"flatId\", \"\");\r",
+							"    pm.collectionVariables.set(\"flatIds\", \"\");\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = JSON.parse(pm.response.text());\r",
+							"let flatId = pm.collectionVariables.get(\"flatId\");\r",
+							"\r",
+							"if (jsonData.RealEstate.RealEstateData.Flats && jsonData.RealEstate.RealEstateData.Flats.Flat) {\r",
+							"    for (let i = 0; i < jsonData.RealEstate.RealEstateData.Flats.Flat.length; i++) {\r",
+							"        if (jsonData.RealEstate.RealEstateData.Flats.Flat[i].flatID == flatId) {\r",
+							"            jsonData.RealEstate.RealEstateData.Flats.Flat[i].UpdatedFromEZDstatus = \"обогащено\"\r",
+							"            jsonData.RealEstate.RealEstateData.Flats.Flat[i].UpdatedFullStatus = \"обогащено\"\r",
+							"            console.log(\"обновлена квартира: \" + flatId);\r",
+							"        }\r",
+							"    }\r",
+							"}\r",
+							"\r",
+							"pm.collectionVariables.set(\"correntDocumentBody\", JSON.stringify(jsonData));\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{urlHost}}/sg/app/ugd/ssr/crud/fetch/REAL-ESTATE/{{realEstateId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"sg",
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"fetch",
+						"REAL-ESTATE",
+						"{{realEstateId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2) update realEstate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let realEstateIds = pm.collectionVariables.get(\"realEstateIds\");\r",
+							"if (realEstateIds && typeof(realEstateIds) == \"string\") {\r",
+							"    realEstateIds = realEstateIds.split(';');\r",
+							"}\r",
+							"if (realEstateIds && Array.isArray(realEstateIds)) {\r",
+							"    if (realEstateIds.length > 0) {\r",
+							"        postman.setNextRequest(\"1) fetch realEstate\");\r",
+							"    } else {\r",
+							"        pm.collectionVariables.set(\"flagStarted\", \"\");\r",
+							"        postman.setNextRequest(null);\r",
+							"        console.log(\"не осталось элементов для обработки\");\r",
+							"    }\r",
+							"} else {\r",
+							"    pm.collectionVariables.set(\"flagStarted\", \"\");\r",
+							"    postman.setNextRequest(null);\r",
+							"    console.log(\"нет элементов для обработки\");\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{{correntDocumentBody}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/sg/app/ugd/ssr/crud/update/REAL-ESTATE/{{realEstateId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"sg",
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"update",
+						"REAL-ESTATE",
+						"{{realEstateId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{pass}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{user}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urlHost",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "user",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "pass",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "flagStarted",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "realEstateId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "realEstateIds",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "flatId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "flatIds",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "correntDocumentBody",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

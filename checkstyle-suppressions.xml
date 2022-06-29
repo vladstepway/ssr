@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <suppress checks="javadoc"
+              files=".*Mapper.java"/>
+    <suppress checks="javadoc"
+              files=".*Dto.java"/>
+    <suppress checks="javadoc"
+              files=".*Config.java"/>
+    <suppress checks="javadoc"
+              files=".*Validator.*.java"/>
+    <suppress checks="AvoidStarImport"
+              files=".*Validator.*.java"/>
+    <suppress checks="javadoc"
+              files=".*ShippingFlowStatus.java"/>
+    <suppress checks="OperatorWrap"
+              files=".*ShippingFlowStatus.java"/>
+    <suppress checks="javadoc"
+              files=".*TradeAdditionNotificationData.java"/>
+    <suppress checks="OperatorWrap"
+              files=".*TradeAdditionNotificationData.java"/>
+    <suppress checks="javadoc"
+              files=".*NotificationDescriptor.java"/>
+    <suppress checks="OperatorWrap"
+              files=".*PushAndSmsTemplates.java"/>
+    <suppress checks="javadoc"
+              files=".*PushAndSmsTemplates.java"/>
+    <suppress checks="javadoc"
+              files=".*ExcelRowProcessor.java"/>
+    <suppress checks="javadoc"
+              files=".*AdditionGeneralConstants.java"/>
+    <suppress checks="javadoc"
+              files=".*AdditionSheetConstants.java"/>
+    <suppress checks="AvoidStarImport"
+              files=".*ElkUserNotificationXmlCreateServiceImpl.java"/>
+    <suppress checks="javadoc"
+              files=".*AdditionHistoryChangeLogProcessor.java"/>
+    <suppress checks="javadoc"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]service[\\/]trade[\\/]"/>
+    <suppress checks="MemberName"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]service[\\/]trade[\\/]"/>
+    <suppress checks="AbbreviationAsWordInName"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]service[\\/]trade[\\/]"/>
+    <suppress checks="OperatorWrap"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]service[\\/]trade[\\/]status[\\/]"/>
+    <suppress files="TestController\.java" checks="[a-zA-Z0-9]*"/>
+    <suppress checks="SummaryJavadoc"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]solr[\\/]"/>
+    <suppress checks="CustomImportOrder"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]solr[\\/]"/>
+    <suppress checks="javadoc"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]solr[\\/]"/>
+    <suppress checks="LeftCurly"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]solr[\\/]"/>
+    <suppress checks="NeedBraces"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]solr[\\/]"/>
+    <suppress checks="LineLength"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]solr[\\/]"/>
+    <suppress checks="Indentation"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]solr[\\/]"/>
+    <suppress checks="OperatorWrap"
+              files="ru[\\/]croc[\\/]ugd[\\/]ssr[\\/]solr[\\/]"/>
+
+    <suppress checks="LineLength"
+              files=".*CommissionInspectionCheckMapper.java"/>
+</suppressions>

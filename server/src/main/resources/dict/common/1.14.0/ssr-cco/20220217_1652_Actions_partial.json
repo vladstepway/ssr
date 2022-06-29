@@ -1,0 +1,214 @@
+{
+  "metaDict": {
+    "nick": "Actions",
+    "name": "Возможности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "disabled",
+        "name": "Признак неактивности",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "URL адрес страницы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "theme",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "52af10b4-0843-4586-a6dd-40fa0ec8a3e4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5dc1456c-7428-4d50-ab45-af752e61b3fa",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addSsrCcosToEmployees",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c3dd3f68-3ef6-44ed-81bc-7980d782951c",
+          "nickAttr": "group",
+          "value": "UGD_SSR_MFR_CCO_ADMIN",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "93df56c8-3694-4187-bd0e-cf60c7819522",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "36fe1125-b8ec-4240-b123-3cfc296ce00a",
+          "nickAttr": "name",
+          "value": "Привязка ответственных сотрудников к заселяемым домам",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d85fcb15-0204-48b3-9815-b3b61b8fa17d",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3241af72-4275-451e-bbc9-29df97807119",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/ccos-employees",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "694525e1-1ab0-4672-a39f-b4338525d2ef",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ad17c2ab-18c6-46a9-8896-2f759f745442",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addSsrCcoToEmployee",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e6779ccd-1838-47cc-99f7-229cf80da8e9",
+          "nickAttr": "group",
+          "value": "UGD_SSR_MFR_CCO_ADMIN",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1aac65bc-a370-40f8-9dd4-34bbbb666112",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aedfeb8e-cf7e-46ab-8967-215c5c525a91",
+          "nickAttr": "name",
+          "value": "Управление привязкой сотрудников к заселяемому дому",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "27887cfa-6e18-4f35-98df-219f41d81b89",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7995ec88-b27a-4685-b0a4-02e9954a9721",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/cco-employees",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "metaDict": {
+    "nick": "SearchRoles",
+    "name": "Правила разграничения прав доступа к результатам общего поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 1,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Справочник предназначен для разграничения доступа к типам документов подсистемы поиска Инструкция по работе со справочником - https://wiki.reinform-int.ru/pages/viewpage.action?pageId=225183361",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа (подтипа) документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - Код типа документа =  ПОЛНЫЙКОДТИПАДОКУМЕНТА, код подтипа документа, если один ПОЛНЫЙКОДТИПАДОКУМЕНТА_ANY, код подтипа документа, если несколько ПОЛНЫЙКОДТИПАДОКУМЕНТА_КОДПОДТИПА",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование типа (подтипа) документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "documentType",
+        "name": "Тип документа",
+        "typeAttr": "link",
+        "nickDictLink": "DocumentTypes",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Типы документов\"",
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Подсистемы\"",
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "role",
+        "name": "Группа, дающая право доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": "Если указано несколько значений, то разграничение выполняется с условием ИЛИ",
+        "orders": 4,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "86369b57-79df-4697-9946-47196eedd81b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c71f6846-8674-4f08-ae2f-cb4a75ea7a91",
+          "nickAttr": "code",
+          "value": "UGD_SSR_PERSONAL-DOCUMENT-APPLICATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "19fc3aea-ae32-498a-b2f9-ad2960ed9f28",
+          "nickAttr": "documentType",
+          "value": "1a725354-475f-4304-a06d-117d2dac716a",
+          "orders": 0,
+          "linkCode": "UGD_SSR_PERSONAL-DOCUMENT-APPLICATION"
+        },
+        {
+          "attrId": "f1a05aa6-fe80-4725-a5e5-33c24af3d1a2",
+          "nickAttr": "name",
+          "value": "Реестр заявлений на предоставление документов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "655cef7e-903f-40db-bd6a-f8b38ddc1c87",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3d39fd7b-f6bc-4ce3-a472-c99b8e60dfa0",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "156c784c-1ff5-4953-87d5-a8157ab7ef28",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "UGD_SSR_PERSONAL-DOCUMENT-APPLICATION",
+      "values": [
+        {
+          "attrId": "6c9e32e5-5a5e-4868-86e1-79b02eccabcc",
+          "nickAttr": "code",
+          "value": "UGD_SSR_PERSONAL-DOCUMENT-APPLICATION_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8258a8d8-f4ef-4c34-9757-b2c42016cfd9",
+          "nickAttr": "documentType",
+          "value": "1a725354-475f-4304-a06d-117d2dac716a",
+          "orders": 0,
+          "linkCode": "UGD_SSR_PERSONAL-DOCUMENT-APPLICATION"
+        },
+        {
+          "attrId": "6c3d53b7-56d9-41c9-afa9-636b59e957ff",
+          "nickAttr": "name",
+          "value": "UGD_SSR_PERSONAL-DOCUMENT-APPLICATION_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9b2b5771-e6fd-4c4a-9e19-6437b97127de",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2e4c8daf-b59c-4f20-8946-c02f59f6d17c",
+          "nickAttr": "subsystem",
+          "value": "f58e37eb-b5f2-4aa6-bd74-9de1bb207bf0",
+          "orders": 0,
+          "linkCode": "SYS_COMMON"
+        }
+      ]
+    }
+  ]
+}

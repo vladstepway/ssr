@@ -1,0 +1,202 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_dayScheduleEvent",
+    "name": "События по расписаниям",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "text",
+        "name": "Текст",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "892df25f-8cd4-4109-9973-f3f5f088f2c6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "630161f6-8fef-4cdf-a568-f9ac6d2e4d76",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ed74d88-7bec-4b50-bceb-ac995ad280d4",
+          "nickAttr": "name",
+          "value": "Копирование рабочих дней за период",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "00d0b434-874a-431b-8129-a9ff9729f372",
+          "nickAttr": "text",
+          "value": "Скопирован рабочий день %s на период с %s по %s.\nКопировался каждый %d день.\nКопировалась каждая %d неделя.\nДни недели: %s.",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "469959ac-2f7c-4961-bc6f-e01c5349b66d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "407e2b81-a06c-4e00-b099-88b412464c60",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "baf66906-0f87-450f-b3c9-9f4fa37c2ba0",
+          "nickAttr": "name",
+          "value": "Удаление рабочих дней за период",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "05677787-cb38-4788-a3d8-2d2171270a0a",
+          "nickAttr": "text",
+          "value": "Удалён период с %s по %s.\nУдалялся каждый %d день.\nУдалялась каждая %d неделя.\nДни недели: %s.",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1a4184b5-46f9-44e9-91ba-148d9690886a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8e8dffe9-459e-407b-9eda-969f39cb01a2",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ead125e-97c0-409e-9d94-567ca6930867",
+          "nickAttr": "name",
+          "value": "Создание рабочего дня",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "412e9837-598a-4210-a8f2-c643bd74d624",
+          "nickAttr": "text",
+          "value": "Создан рабочий день %s.",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0a286919-b5fc-459c-bd7e-a1bf6babcfda",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "13f2789c-473c-4319-a497-742d51afe4ad",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c7211864-3eae-4552-8c24-409ba8e4abce",
+          "nickAttr": "name",
+          "value": "Изменение рабочего дня",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bb8e1bb1-3a78-4b08-bc33-f537c2613c2c",
+          "nickAttr": "text",
+          "value": "Изменён рабочий день %s.",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3d09292d-873f-4898-af65-d5739c1cdcd5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "68b226c2-4c32-468c-b48e-e737957ed4cd",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4c531cce-6e4c-4d1c-b64d-123e410b161e",
+          "nickAttr": "name",
+          "value": "Удаление рабочего дня",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a0e141f9-6b8f-41d9-ad36-41d69682a89c",
+          "nickAttr": "text",
+          "value": "Удалён рабочий день %s.",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

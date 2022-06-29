@@ -1,0 +1,229 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "21d0ba7e-4941-4026-ab5f-e0fb8846491d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a9eac341-d352-4477-90ad-13c9ef6875f6",
+          "nickAttr": "code",
+          "value": "UGD_SSR_AFFAIR-COLLATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f08d7daa-358b-4860-948d-44a93fa3a6b0",
+          "nickAttr": "fields",
+          "value": "cb74a8bc-01f9-43c1-8248-47cfd592ed78",
+          "orders": 0,
+          "linkCode": "ugd_ssr_affair_collation_flat_number"
+        },
+        {
+          "attrId": "62fadea1-849d-4c08-975b-e8b2efd3462f",
+          "nickAttr": "fields",
+          "value": "368ffc35-fbdb-4a3a-a327-a5e4c6f46000",
+          "orders": 1,
+          "linkCode": "ugd_ssr_affair_collation_affair_id"
+        },
+        {
+          "attrId": "def05e36-906b-4b75-81ca-68a6149193c8",
+          "nickAttr": "fields",
+          "value": "a402e30c-9efe-4813-b850-64518bf5e44c",
+          "orders": 2,
+          "linkCode": "ugd_ssr_affair_collation_response_date_time"
+        },
+        {
+          "attrId": "6ad2470a-db75-44f0-88a4-da0be33bc48d",
+          "nickAttr": "fields",
+          "value": "bacf07e7-f8ec-4d23-b5b5-d2ee835b6814",
+          "orders": 3,
+          "linkCode": "ugd_ssr_affair_collation_response_service_numbers"
+        },
+        {
+          "attrId": "d9afc642-29a9-4798-9761-a84244e4d2c7",
+          "nickAttr": "fields",
+          "value": "34607471-12d8-44c1-93f7-88f01f7a9119",
+          "orders": 4,
+          "linkCode": "ugd_ssr_affair_collation_request_date_time"
+        },
+        {
+          "attrId": "dfdca3e3-895c-4b9b-b3d3-311a3cc83a3a",
+          "nickAttr": "fields",
+          "value": "b0391ca6-f874-49aa-a879-c2b598daa12e",
+          "orders": 5,
+          "linkCode": "ugd_ssr_affair_collation_real_estate_unom"
+        },
+        {
+          "attrId": "74b4bde0-ad98-476a-9ff1-c752c02084fb",
+          "nickAttr": "name",
+          "value": "Сведения о запросе на сверку жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5ff62002-e751-489b-ad52-3a8778c6a08c",
+          "nickAttr": "solrCore",
+          "value": "f8a2a64c-1fb0-4f2d-af3d-dfd39ccaabf8",
+          "orders": 0,
+          "linkCode": "ugd_ssr_affair_collation"
+        },
+        {
+          "attrId": "e6fb02b5-96e5-46c7-b2c8-e2081789e5df",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "cde2eaaa-25d4-4094-9e6b-a9b5e9c61689",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "46dd3cec-4ec6-4a9f-98b4-1fad6f4fe94b",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

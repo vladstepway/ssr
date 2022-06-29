@@ -1,0 +1,156 @@
+{
+  "metaDict": {
+    "nick": "Actions",
+    "name": "Возможности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "disabled",
+        "name": "Признак неактивности",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "URL адрес страницы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "theme",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "29beae9c-6eda-4b9b-993b-2d01becbc8bc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5f119499-e1c4-4be3-903f-e8631db57c9f",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addShippingDaySchedule",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "01a61b44-e372-4d01-9283-15e74fc7d06a",
+          "nickAttr": "group",
+          "value": "UGD_SSR_PERSON_CARD_PREFECTURE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c933884d-46d4-40fe-a245-56472bccf7d0",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "83cf0f93-9344-467b-8a3e-e01ac23bcc1d",
+          "nickAttr": "name",
+          "value": "Добавить рабочий день помощи в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d1b5a16-406c-4ef0-b27a-3913a9fb40d5",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/shipping-day-schedule/new",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

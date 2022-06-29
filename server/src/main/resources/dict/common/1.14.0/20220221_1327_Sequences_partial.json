@@ -1,0 +1,163 @@
+{
+  "metaDict": {
+    "nick": "Sequences",
+    "name": "Последовательности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Справочник предназначен для описания последовательностей, используемых приложением Seqs для обслуживания автоинкрементных числовых последовательностей Инструкция по работе со справочником - https://smart.mos.ru/wiki/pages/viewpage.action?pageId=14487066",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код последовательности",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - КОДСИСТЕМЫ_КРАТКИЙКОДПОДСИСТЕМЫ_УНИКАЛЬНЫЙКОДПОСЛЕДОВАТЕЛЬНОСТИ",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование последовательности",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "initialValue",
+        "name": "Начальное значение последовательности",
+        "typeAttr": "integer",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "step",
+        "name": "Шаг автоинкремента",
+        "typeAttr": "integer",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Системы\"",
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Подсистемы\"",
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "keyRegexp",
+        "name": "Проверочное выражение для ключа подпоследовательности",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "notes",
+        "name": "Примечания",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "22c29d6a-eedc-4aae-8286-6ca7d07ca6c8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3715bba3-23b7-49ce-ac16-951df6bf5363",
+          "nickAttr": "code",
+          "value": "UGD_SSR_ENO_RSM_OBJECT_RESPONSE_SEQ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cc23f94b-bedf-41cf-b4fb-dee5c0fde869",
+          "nickAttr": "initialValue",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ec765d0f-e393-41ee-8d34-0d533e33ca49",
+          "nickAttr": "name",
+          "value": "Последовательность для ответов на запросы ОКС",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7105fae5-cdb9-4385-9666-0ef814a91782",
+          "nickAttr": "step",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "138a7aab-2427-4259-8d40-8a567e4cce6d",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "885ecdc2-6a8a-45f9-b16c-718dc7dd36cb",
+          "nickAttr": "system",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    }
+  ]
+}

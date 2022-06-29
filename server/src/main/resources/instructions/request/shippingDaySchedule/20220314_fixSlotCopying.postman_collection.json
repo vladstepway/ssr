@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "d9f31901-4914-4908-b23c-790f54421496",
+		"name": "fixSlotCopying",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1) fetch document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");",
+							"let preBookingIds = pm.collectionVariables.get(\"preBookingIds\");",
+							"let slotIds = pm.collectionVariables.get(\"slotIds\");",
+							"",
+							"if(!documentIds || documentIds.length == 0) {",
+							"    pm.collectionVariables.set(\"cookie\", \"\");",
+							"    pm.collectionVariables.set(\"urlHost\", \"smart.mos.ru\");",
+							"    documentIds = [\"2d94716d-91a0-4761-b8af-bf6b35f2815c\", \"37230f34-c2f6-4b6a-af50-c8b66f00e99f\", \"9e2c1297-e75d-4b19-b6a9-0a0dcec31062\", \"03e9e817-1217-4440-b7de-c6ade174d686\", \"23810878-fe35-4b27-9675-a439b4eaac46\", \"9f84ec05-243b-4276-8464-7d6b2cea3f92\", \"da701ee2-9140-4696-bb98-0d6cd64f4fb7\", \"df1fb7bc-27d6-4727-a42e-1fcdc7041500\", \"e50d1d00-05d3-44e1-a0ea-bfd1178e3742\", \"ffab0f62-55c8-4ab4-bde6-3ca4d7572124\", \"03e9e817-1217-4440-b7de-c6ade174d686\", \"23810878-fe35-4b27-9675-a439b4eaac46\", \"9f84ec05-243b-4276-8464-7d6b2cea3f92\", \"da701ee2-9140-4696-bb98-0d6cd64f4fb7\", \"df1fb7bc-27d6-4727-a42e-1fcdc7041500\", \"e50d1d00-05d3-44e1-a0ea-bfd1178e3742\", \"ffab0f62-55c8-4ab4-bde6-3ca4d7572124\", \"03e9e817-1217-4440-b7de-c6ade174d686\", \"23810878-fe35-4b27-9675-a439b4eaac46\", \"9f84ec05-243b-4276-8464-7d6b2cea3f92\", \"da701ee2-9140-4696-bb98-0d6cd64f4fb7\", \"df1fb7bc-27d6-4727-a42e-1fcdc7041500\", \"e50d1d00-05d3-44e1-a0ea-bfd1178e3742\", \"ffab0f62-55c8-4ab4-bde6-3ca4d7572124\", \"0e4529eb-a690-484c-9c5a-37118cab10bc\", \"11f4d334-8302-4155-a7a6-0acc25cfb615\", \"125769dd-82bb-4720-8213-9451eec57ad3\", \"591b0d43-95b3-4386-bfe9-3843607e2b03\", \"5c3ca2bf-b17a-4b3c-9cc9-59d83a43c265\", \"6079e566-0e59-43cf-8837-94afa76dfac5\", \"6ece700d-50f8-476e-8951-81ccc62ebb5e\", \"94f86675-7d4a-4379-b251-0c610f8c2119\", \"9564e55b-51cd-42c7-b17b-0638b41247af\", \"9aaf4a7f-1255-41cc-800d-3be11c59087b\", \"b1868f62-e59a-4e72-9db0-f7e9670f1764\", \"b8fde902-1df9-442b-88d0-1d28b0277e3e\", \"bf18905a-d4c2-43f0-a67b-32f2dc48d2de\", \"c45e4fe9-cedd-47db-8564-46dfa19aee2d\", \"cf8b9193-3be4-4df4-b292-c50726c54e04\", \"d767b993-22bb-4ddc-9a53-b254c72015ba\", \"d805e4ca-7b1f-45d9-b8bd-9e46f37bdc47\", \"db7759b2-6ba3-4e4c-a4b5-28b5c992ef70\", \"fd41b04c-b8e3-428b-bbbd-da41fbf37147\"];",
+							"    preBookingIds = [\"7115951c-9b50-3579-ac5c-cd900b1444d9\", \"7115951c-9b50-3579-ac5c-cd900b1444d9\", \"7115951c-9b50-3579-ac5c-cd900b1444d9\", \"de9cf2c4-8723-3302-ab03-e648a05690e3\", \"de9cf2c4-8723-3302-ab03-e648a05690e3\", \"de9cf2c4-8723-3302-ab03-e648a05690e3\", \"de9cf2c4-8723-3302-ab03-e648a05690e3\", \"de9cf2c4-8723-3302-ab03-e648a05690e3\", \"de9cf2c4-8723-3302-ab03-e648a05690e3\", \"de9cf2c4-8723-3302-ab03-e648a05690e3\", \"e9bd231c-71d0-3ed2-bb4f-044a77e0462e\", \"e9bd231c-71d0-3ed2-bb4f-044a77e0462e\", \"e9bd231c-71d0-3ed2-bb4f-044a77e0462e\", \"e9bd231c-71d0-3ed2-bb4f-044a77e0462e\", \"e9bd231c-71d0-3ed2-bb4f-044a77e0462e\", \"e9bd231c-71d0-3ed2-bb4f-044a77e0462e\", \"e9bd231c-71d0-3ed2-bb4f-044a77e0462e\", \"1c649dc9-f075-3a79-8ca7-8d226efb6f97\", \"1c649dc9-f075-3a79-8ca7-8d226efb6f97\", \"1c649dc9-f075-3a79-8ca7-8d226efb6f97\", \"1c649dc9-f075-3a79-8ca7-8d226efb6f97\", \"1c649dc9-f075-3a79-8ca7-8d226efb6f97\", \"1c649dc9-f075-3a79-8ca7-8d226efb6f97\", \"1c649dc9-f075-3a79-8ca7-8d226efb6f97\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\", \"cea63459-ed50-3acc-b6dd-3b499291bea0\"];",
+							"    slotIds = [\"40cfb984-feee-4c1c-976d-1241243db85b\", \"40cfb984-feee-4c1c-976d-1241243db85b\", \"40cfb984-feee-4c1c-976d-1241243db85b\", \"657dcb9b-08a5-4bb2-999e-54043a394a9e\", \"657dcb9b-08a5-4bb2-999e-54043a394a9e\", \"657dcb9b-08a5-4bb2-999e-54043a394a9e\", \"657dcb9b-08a5-4bb2-999e-54043a394a9e\", \"657dcb9b-08a5-4bb2-999e-54043a394a9e\", \"657dcb9b-08a5-4bb2-999e-54043a394a9e\", \"657dcb9b-08a5-4bb2-999e-54043a394a9e\", \"a69326c1-010b-47ed-bd7e-56c51a7c29e4\", \"a69326c1-010b-47ed-bd7e-56c51a7c29e4\", \"a69326c1-010b-47ed-bd7e-56c51a7c29e4\", \"a69326c1-010b-47ed-bd7e-56c51a7c29e4\", \"a69326c1-010b-47ed-bd7e-56c51a7c29e4\", \"a69326c1-010b-47ed-bd7e-56c51a7c29e4\", \"a69326c1-010b-47ed-bd7e-56c51a7c29e4\", \"85d5c39c-c83d-44a3-8310-45e9ca600550\", \"85d5c39c-c83d-44a3-8310-45e9ca600550\", \"85d5c39c-c83d-44a3-8310-45e9ca600550\", \"85d5c39c-c83d-44a3-8310-45e9ca600550\", \"85d5c39c-c83d-44a3-8310-45e9ca600550\", \"85d5c39c-c83d-44a3-8310-45e9ca600550\", \"85d5c39c-c83d-44a3-8310-45e9ca600550\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\"];",
+							"}",
+							"",
+							"let currentDocumentId = documentIds.shift();",
+							"let currentPreBookingId = preBookingIds.shift();",
+							"let currentSlotId = slotIds.shift();",
+							"",
+							"pm.collectionVariables.set(\"documentIds\", documentIds);",
+							"pm.collectionVariables.set(\"preBookingIds\", preBookingIds);",
+							"pm.collectionVariables.set(\"slotIds\", slotIds);",
+							"",
+							"pm.collectionVariables.set(\"currentDocumentId\", currentDocumentId);",
+							"pm.collectionVariables.set(\"currentPreBookingId\", currentPreBookingId);",
+							"pm.collectionVariables.set(\"currentSlotId\", currentSlotId);",
+							"",
+							"console.log(\"1) fetch document: currentDocumentId = \" + currentDocumentId + \", currentPreBookingId = \" + currentPreBookingId + \", currentSlotId = \" + currentSlotId);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = JSON.parse(pm.response.text());",
+							"let currentPreBookingId = pm.collectionVariables.get(\"currentPreBookingId\");",
+							"let currentSlotId = pm.collectionVariables.get(\"currentSlotId\");",
+							"",
+							"if(jsonData.shippingDaySchedule.shippingDayScheduleData.brigades) {",
+							"    for (let i = 0; i < jsonData.shippingDaySchedule.shippingDayScheduleData.brigades.length; i++) {",
+							"        if(jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots) {",
+							"            for (let j = 0; j < jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots.length; j++) {",
+							"                if ((jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].slotId && (jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].slotId == currentSlotId)) ",
+							"                && (jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].preBookingId && (jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].preBookingId == currentPreBookingId))) {",
+							"                    delete jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].preBookingId;",
+							"                }",
+							"            }",
+							"        }",
+							"    }",
+							"}",
+							"",
+							"pm.collectionVariables.set(\"documentBody\", JSON.stringify(jsonData));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/fetch/SHIPPING-DAY-SCHEDULE/{{currentDocumentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"fetch",
+						"SHIPPING-DAY-SCHEDULE",
+						"{{currentDocumentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2) update document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");\r",
+							"if (documentIds && documentIds.length > 0) {\r",
+							"    postman.setNextRequest(\"1) fetch document\");\r",
+							"} else {\r",
+							"    postman.setNextRequest(\"3) fetch document\");\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{documentBody}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/update/SHIPPING-DAY-SCHEDULE/{{currentDocumentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"update",
+						"SHIPPING-DAY-SCHEDULE",
+						"{{currentDocumentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3) fetch document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");",
+							"let slotIds = pm.collectionVariables.get(\"slotIds\");",
+							"",
+							"if(!documentIds || documentIds.length == 0) {",
+							"    documentIds = [\"cdb3168e-a3b0-49e5-806d-17541acec06b\", \"5dd5433d-5e4b-4b10-aab2-892f12ddfdf3\", \"835df7e2-e503-4636-ba03-397277343dc7\", \"f47aad04-d6b5-45c1-9f65-2ecd058b4534\", \"cbcc294a-5d41-48ca-9d5c-de6e8fe89b86\", \"ae56d0cb-c9c4-4348-a322-b21b422452e6\", \"f47aad04-d6b5-45c1-9f65-2ecd058b4534\", \"cdb3168e-a3b0-49e5-806d-17541acec06b\", \"dadf4cc0-32b4-446a-9884-98d19727ebd2\", \"83922046-6de9-48db-91a1-e6a7429d7940\"];",
+							"    slotIds = [\"22bdb457-3ce4-45e6-84a7-a0cffdea6f52\", \"7df5e928-c007-435c-b046-2eee9a649d98\", \"531e7449-10a3-4bed-bfb8-1da6feefc7ef\", \"a56de1ea-b552-4e08-abde-c146a4eddc3e\", \"b2b3e28f-3fcb-4e6e-8bc1-5fcb3a8e382f\", \"22bdb457-3ce4-45e6-84a7-a0cffdea6f52\", \"b2b3e28f-3fcb-4e6e-8bc1-5fcb3a8e382f\", \"7df5e928-c007-435c-b046-2eee9a649d98\", \"7df5e928-c007-435c-b046-2eee9a649d98\", \"b2b3e28f-3fcb-4e6e-8bc1-5fcb3a8e382f\"];",
+							"}",
+							"",
+							"let currentDocumentId = documentIds.shift();",
+							"let currentSlotId = slotIds.shift();",
+							"",
+							"pm.collectionVariables.set(\"documentIds\", documentIds);",
+							"pm.collectionVariables.set(\"slotIds\", slotIds);",
+							"",
+							"pm.collectionVariables.set(\"currentDocumentId\", currentDocumentId);",
+							"pm.collectionVariables.set(\"currentSlotId\", currentSlotId);",
+							"",
+							"console.log(\"3) fetch document: currentDocumentId = \" + currentDocumentId + \", currentSlotId = \" + currentSlotId);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = JSON.parse(pm.response.text());",
+							"let currentSlotId = pm.collectionVariables.get(\"currentSlotId\");",
+							"const uuid = require('uuid');",
+							"",
+							"if(jsonData.shippingDaySchedule.shippingDayScheduleData.brigades) {",
+							"    for (let i = 0; i < jsonData.shippingDaySchedule.shippingDayScheduleData.brigades.length; i++) {",
+							"        if(jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots) {",
+							"            for (let j = 0; j < jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots.length; j++) {",
+							"                if ((jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].slotId && (jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].slotId == currentSlotId))) {",
+							"                    jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].slotId = uuid();",
+							"                }",
+							"            }",
+							"        }",
+							"    }",
+							"}",
+							"",
+							"pm.collectionVariables.set(\"documentBody\", JSON.stringify(jsonData));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/fetch/SHIPPING-DAY-SCHEDULE/{{currentDocumentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"fetch",
+						"SHIPPING-DAY-SCHEDULE",
+						"{{currentDocumentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4) update document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");\r",
+							"if (documentIds && documentIds.length > 0) {\r",
+							"    postman.setNextRequest(\"3) fetch document\");\r",
+							"} else {\r",
+							"    postman.setNextRequest(null);\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{documentBody}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/update/SHIPPING-DAY-SCHEDULE/{{currentDocumentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"update",
+						"SHIPPING-DAY-SCHEDULE",
+						"{{currentDocumentId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "cookie",
+			"value": ""
+		},
+		{
+			"key": "urlHost",
+			"value": ""
+		},
+		{
+			"key": "documentIds",
+			"value": ""
+		},
+		{
+			"key": "preBookingIds",
+			"value": ""
+		},
+		{
+			"key": "slotIds",
+			"value": ""
+		},
+		{
+			"key": "currentDocumentId",
+			"value": ""
+		},
+		{
+			"key": "currentPreBookingId",
+			"value": ""
+		},
+		{
+			"key": "currentSlotId",
+			"value": ""
+		},
+		{
+			"key": "documentBody",
+			"value": ""
+		}
+	]
+}

@@ -1,0 +1,48 @@
+Добавление файлов в отселяемый дом 3d9ea39a-d9dd-4c9a-a8b9-ce9e633a2732:
+
+1. Открыть https://smart.mos.ru/filestore/swagger-ui.html#/files-controller
+2. Выбрать POST /v1/files/createNew и нажать Try it out
+3. Заполнить поля:
+    - file = приложенный файл(Фрезер, 9.pdf)
+    - fileType = pdf
+    - folderGuid = 91f5e5f2-b44a-4179-b674-57d4bb1afd63
+    - systemCode = UGD
+4. Нажать Execute
+5. Убедиться, что статус код ответа 200 и сохранить полученный в ответе guid (пример, 8e3c13e8-cfb5-43f7-9727-9d6f521fbb61, будет использоваться на шаге 8)
+
+6. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+7. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+8. Ввести anyDocumentTypeCode = REAL-ESTATE; id = 3d9ea39a-d9dd-4c9a-a8b9-ce9e633a2732; jsonPatch =
+[
+    {
+        "op": "add",
+        "path": "/RealEstate/RealEstateData/resettlementCompletionData/fileStoreId",
+        "value": "ЗНАЧЕНИЕ_ИЗ_ШАГА_5"
+    }
+]
+9. Нажать Execute и убедиться, что статус код ответа 200
+
+---------------------------------------------------------------------------------------------------
+Добавление файлов в отселяемый дом 87b5c4bc-2f32-44fa-b183-59a196af36ed:
+
+1. Открыть https://smart.mos.ru/filestore/swagger-ui.html#/files-controller
+2. Выбрать POST /v1/files/createNew и нажать Try it out
+3. Заполнить поля:
+    - file = приложенный файл(Яблокова 28, корпус 1.pdf)
+    - fileType = pdf
+    - folderGuid = 1abf544e-3d51-49f8-9faf-50c228c52e87
+    - systemCode = UGD
+4. Нажать Execute
+5. Убедиться, что статус код ответа 200 и сохранить полученный в ответе guid (пример, 8e3c13e8-cfb5-43f7-9727-9d6f521fbb61, будет использоваться на шаге 8)
+
+6. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+7. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+8. Ввести anyDocumentTypeCode = REAL-ESTATE; id = 87b5c4bc-2f32-44fa-b183-59a196af36ed; jsonPatch =
+[
+    {
+        "op": "add",
+        "path": "/RealEstate/RealEstateData/resettlementCompletionData/fileStoreId",
+        "value": "ЗНАЧЕНИЕ_ИЗ_ШАГА_5"
+    }
+]
+9. Нажать Execute и убедиться, что статус код ответа 200

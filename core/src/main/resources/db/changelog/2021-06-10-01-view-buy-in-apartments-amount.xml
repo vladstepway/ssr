@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-06-10-01-view-buy-in-apartments-amount" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_buy_in_apartments_amount">
+            WITH objects AS (
+                SELECT
+                    ccos.json_data -> 'capitalConstructionObject' -> 'capitalConstructionObjectData' ->> 'unom' as UNOM,
+                    ccos.json_data -> 'capitalConstructionObject' -> 'capitalConstructionObjectData' ->> 'assignedAddressString' as address
+                FROM ps.documents ccos
+                WHERE ccos.doc_type = 'CAPITAL-CONSTRUCTION-OBJECT'
+            )
+            SELECT
+                trade_addition.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'affairId' AS affairId,
+                COALESCE(new_estates->>'unom', 'Без УНОМ') AS unom,
+                obj.address,
+                new_estates->>'flatNumber' AS flatNumber,
+                trade_addition.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'tradeType' AS tradeType,
+                (trade_addition.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'contractSignedDate')::DATE AS contractSignedDate,
+                trade_addition.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'claimStatus' AS claimStatus,
+                (trade_addition.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'offerLetterDate')::DATE AS offerLetterDate
+            FROM
+                ssr.documents trade_addition
+            LEFT JOIN
+                jsonb_array_elements(trade_addition.json_data->'tradeAddition'->'tradeAdditionTypeData'->'newEstates') new_estates
+            ON
+                TRUE
+            LEFT JOIN objects obj ON obj.unom = new_estates->>'unom'
+            WHERE
+                doc_type = 'TRADE-ADDITION'
+                AND (trade_addition.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'confirmed')::BOOLEAN = TRUE
+                AND (trade_addition.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'indexed')::BOOLEAN = TRUE
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_buy_in_apartments_amount TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

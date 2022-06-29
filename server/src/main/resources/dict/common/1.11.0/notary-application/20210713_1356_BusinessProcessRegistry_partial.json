@@ -1,0 +1,224 @@
+{
+  "metaDict": {
+    "nick": "BusinessProcessRegistry",
+    "name": "Реестр бизнес-процессов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "docType",
+        "name": "Тип документа",
+        "typeAttr": "link",
+        "nickDictLink": "DocumentTypes",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "exits",
+        "name": "Выходы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "exists",
+        "name": "Выходы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "Путь к репозиторию в GIT",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "filename",
+        "name": "Путь к файлу",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "e49de875-98ca-4c5b-9b3f-dcedca158d9d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d433f16a-baf1-4657-a5c9-fcb83d90e75b",
+          "nickAttr": "code",
+          "value": "ugdssrNotary_setUpAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a7dd0415-6711-473a-9046-661c94c75a2a",
+          "nickAttr": "docType",
+          "value": "7da15c31-2428-4efc-9b8a-fa6ce3bd59a6",
+          "orders": 0,
+          "linkCode": "UGD_SSR_NOTARY-APPLICATION"
+        },
+        {
+          "attrId": "eaddb4e1-6474-4265-ba67-bdfe8219d68c",
+          "nickAttr": "name",
+          "value": "Провести встречу с нотариусом",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d0556c12-a5df-4f80-b47e-5ca0618de7b2",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "03a5a925-5dc1-4531-844e-5d4a90c7d2ef",
+          "nickAttr": "system",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "a519af19-857f-446e-af7b-0e016d819164",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3c93149e-d0f4-45e1-9a25-aa3d1de7663b",
+          "nickAttr": "code",
+          "value": "ugdssrNotary_сreateDraftContract",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "58d79619-e0fb-4767-a6d8-1cb1a5582b21",
+          "nickAttr": "docType",
+          "value": "7da15c31-2428-4efc-9b8a-fa6ce3bd59a6",
+          "orders": 0,
+          "linkCode": "UGD_SSR_NOTARY-APPLICATION"
+        },
+        {
+          "attrId": "86581f9a-b58b-41b5-abe2-62ab76711950",
+          "nickAttr": "name",
+          "value": "Подготовка договора мены",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "426ce2fd-9713-4754-b8a6-e11a82c20ce5",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "c49eb6aa-60fc-43a4-a9d4-99627cef9e53",
+          "nickAttr": "system",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    }
+  ]
+}

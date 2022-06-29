@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/notary"
+           targetNamespace="http://www.ugd.croc.ru/ssr/notary">
+    <xs:include schemaLocation="NotaryEnums.xsd"/>
+    <xs:element name="Notary">
+        <xs:annotation>
+            <xs:documentation>Карточка нотариуса</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="notaryData" type="NotaryType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="NotaryType">
+        <xs:annotation>
+            <xs:documentation>Тип - Карточка нотариуса</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="registrationNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Регистрационный номер нотариуса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="status" type="NotaryStatus" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Статус карточки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Фамилия, имя, отчество</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="phones" type="NotaryPhone" maxOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Телефон</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="NotaryAddress">
+                <xs:annotation>
+                    <xs:documentation>Адрес</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="employeeLogin" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Логин пользователя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="additionalInformation" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Дополнительные сведения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NotaryPhone">
+        <xs:annotation>
+            <xs:documentation>Телефон</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="phone" type="xs:string" minOccurs="1" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Номер телефона</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NotaryAddress">
+        <xs:annotation>
+            <xs:documentation>Адрес</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>УНОМ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="additionalInformation" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Дополнительные сведения об адресе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

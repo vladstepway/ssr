@@ -1,0 +1,295 @@
+{
+  "metaDict": {
+    "nick": "MyTasksSettings",
+    "name": "Настройки для витрины \"Мои задачи\"",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Префикс бизнес процесса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование бизнес процесса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "firstrString",
+        "name": "Первая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "firstrWithHalfString",
+        "name": "Полуторная строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "secondString",
+        "name": "Вторая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "thirdString",
+        "name": "Третья строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "fourthString",
+        "name": "Четвертая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "fifthString",
+        "name": "Пятая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "sixthString",
+        "name": "Шестая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "searchUrl",
+        "name": "Базовый URL поиска",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      },
+      {
+        "nick": "tasksUrl",
+        "name": "Базовый URL задач",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 10,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "ИС",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 11,
+        "unique": 0
+      },
+      {
+        "nick": "showTasks",
+        "name": "Показывать список задач",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 12,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "a4daa90a-d23f-4b1f-a813-38ec0ae512c2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e811094c-2281-4bcf-9211-069578499d6c",
+          "nickAttr": "code",
+          "value": "ugdssrArm",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "04d2da9c-a6c3-4b95-88f3-a1bd0390297e",
+          "nickAttr": "name",
+          "value": "АРМ Центра информирования по переселению",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "73ad1ee0-43c5-485d-9417-3c00643251e5",
+          "nickAttr": "searchUrl",
+          "value": "/search",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b10e573d-536d-44b1-8c4e-dfb24c22d11a",
+          "nickAttr": "showTasks",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d9c00803-c0a0-4bbb-ba5a-ce498f1327bd",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "5341829a-5510-41c3-8d71-d87a68de54e6",
+          "nickAttr": "tasksUrl",
+          "value": "/ugd",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "cef65529-0cbd-4709-93fa-be7b63506853",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "982a7e46-b596-4cc4-a6bc-63926a1f818c",
+          "nickAttr": "code",
+          "value": "ugdssr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ebbec065-c38c-46f3-95c1-e637e82aeba0",
+          "nickAttr": "firstrString",
+          "value": "${ item.document.firstRow ? item.document.firstRow : '' }",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "387438df-4713-4c1f-b6ae-b1a0681027f8",
+          "nickAttr": "name",
+          "value": "Суперсервис реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "121aa4a9-5960-4071-bdd7-26d37e3f274e",
+          "nickAttr": "searchUrl",
+          "value": "/search",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1037d2c0-4402-4c39-8029-f1c615b67651",
+          "nickAttr": "secondString",
+          "value": "${ item.document.secondRow ? item.document.secondRow : '' }",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "020fcf64-e8ee-438c-abe5-c872fbcb0775",
+          "nickAttr": "showTasks",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6cfd2ca6-c4b7-49ac-883b-f6a120497848",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "30191e3a-eba3-4aed-bf9c-ed9425fe0171",
+          "nickAttr": "tasksUrl",
+          "value": "/ugd",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "68b9b110-e3f6-4c16-9205-4a7561aa0cea",
+          "nickAttr": "thirdString",
+          "value": "${ item.document.resettlementRequestFirstRow ? item.document.resettlementRequestFirstRow : '' }",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

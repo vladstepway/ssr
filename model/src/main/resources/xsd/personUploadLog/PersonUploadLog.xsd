@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/personUploadLog"
+           targetNamespace="http://www.ugd.croc.ru/ssr/personUploadLog"
+           elementFormDefault="qualified">
+    <xs:include schemaLocation="PersonUploadLogEnum.xsd"/>
+    <xs:element name="PersonUploadLog">
+        <xs:annotation>
+            <xs:documentation>Сведения о загрузках жителей</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personUploadLogData" type="PersonUploadLogData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PersonUploadLogData">
+        <xs:annotation>
+            <xs:documentation>Тип - Сведения о загрузке жителей</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="fileId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор файла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="username" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Имя пользователя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="startDateTime" type="xs:dateTime" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Дата и время начала загрузки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="filename" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Имя загружаемого файла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="status" type="PersonUploadLogStatus" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Статус загрузки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время завершения загрузки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="logFileId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID файла журнала загрузки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

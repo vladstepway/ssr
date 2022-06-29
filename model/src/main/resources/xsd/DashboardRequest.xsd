@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr"
+           targetNamespace="http://www.ugd.croc.ru/ssr">
+    <xs:element name="DashboardRequest">
+        <xs:annotation>
+            <xs:documentation>Запрос на создание записи дашборда</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="main" type="DashboardRequestType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="DashboardRequestType">
+        <xs:annotation>
+            <xs:documentation>Сведение о запросе на создание записи дашборда</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="dgi" type="DgiType">
+                <xs:annotation>
+                    <xs:documentation>Информация о переселении ДГИ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dgp" type="DgpType">
+                <xs:annotation>
+                    <xs:documentation>Информация о переселении ДГП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fond" type="FondType">
+                <xs:annotation>
+                    <xs:documentation>Информация о переселении Фонд</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ds" type="DsType">
+                <xs:annotation>
+                    <xs:documentation>Информация о переселении ДС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dashboardId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор записи дашборда</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DgiType">
+        <xs:annotation>
+            <xs:documentation>Сведения об информации о переселении ДГИ</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="flatsTotalAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Всего квартир в новостройках</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatsTotalAmountAuto" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Всего квартир (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useFlatsTotalAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Всего квартир"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="equivalentApartmentsAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Равнозначные квартиры представлены гражданам</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="equivalentApartmentsAmountAuto" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Равнозначные квартиры представлены гражданам
+                        (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useEquivalentApartmentsAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Равнозначные квартиры представлены гражданам"
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="offeredEquivalentApartmentsAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Ведется предложение равнозначных квартир жителям</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="offeredEquivalentApartmentsAmountAuto" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Ведется предложение равнозначных квартир жителям
+                        (рассчитано автоматически)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useOfferedEquivalentApartmentsAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Ведется предложение равнозначных квартир жителям"
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="residentsResettledAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Жители отселены, завершается изъятие нежилых помещений</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="paperworkCompletedAndFundIssuesAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>ДГИ завершил оформление документов жителям, остались вопросы Фонда (предоставление
+                        квартир с компенсацией за меньшую площадь)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="paperworkCompletedAndFundIssuesAmountAuto" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>ДГИ завершил оформление документов жителям, остались вопросы Фонда (предоставление
+                        квартир с компенсацией за меньшую площадь) (рассчитано автоматически)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="usePaperworkCompletedAndFundIssuesAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "ДГИ завершил оформление документов жителям, остались вопросы Фонда (предоставление
+                        квартир с компенсацией за меньшую площадь)"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resettlementInProcessAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Ведется отселение, завершение планируется в указанном периоде</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resettlementInProcessAmountAuto" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Ведется отселение, завершение планируется в указанном периоде
+                        (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useResettlementInProcessAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Ведется отселение, завершение планируется в указанном периоде"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="plannedResettlementCompletionTime" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Период планируемого завершения отселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="plannedResettlementCompletionTimeAuto" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Период планируемого завершения отселения
+                        (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="usePlannedResettlementCompletionTimeManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Период планируемого завершения отселения"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="outsideResidenceResettlementAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Переселение вне района проживания (включены в Реновацию + ведется изъятие)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="equivalentApartmentConsentedAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Согласия на равнозначные квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="equivalentApartmentConsentedAmountAuto" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Согласия на равнозначные квартиры (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useEquivalentApartmentConsentedAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Согласия на равнозначные квартиры"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="equivalentApartmentProposedAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>ДГИ предлагает равнозначные квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="equivalentApartmentProposedAmountAuto" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>ДГИ предлагает равнозначные квартиры (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useEquivalentApartmentProposedAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "ДГИ предлагает равнозначные квартиры"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="refusedAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Отказы, суды</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="familiesAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Количество семей, всего</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="familiesAmountAuto" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Количество семей, всего (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useFamiliesAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Количество семей, всего"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DgpType">
+        <xs:annotation>
+            <xs:documentation>Сведения об информации о переселении ДГП</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+
+            <xs:element name="newBuildingsTotalAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Всего "стартовых" новостроек передано под заселение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="newBuildingsTotalAmountAuto" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Всего "стартовых" новостроек передано под заселение (рассчитано автоматически)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useNewBuildingsTotalAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Всего "стартовых" новостроек передано под заселение"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="allBuildingsAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Всего домов отселяется</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="allBuildingsAmountAuto" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Всего домов отселяется (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="useAllBuildingsAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Всего домов отселяется"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="partResettlementInProcessAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Ведется частичное переселение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resettledFamiliesAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>В том числе семей - переехали</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resettledFamiliesAmountAuto" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>В том числе семей - переехали (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useResettledFamiliesAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "В том числе семей - переехали"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resettledResidentsAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Количество человек - переехали</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resettledResidentsAmountAuto" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Количество человек - переехали (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useResettledResidentsAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Количество человек - переехали"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="year" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Год</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="plannedResettledBuildingsAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Количество домов (планируется отселить)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actuallyResettledBuildingsRate" type="xs:double" nillable="true">
+                <xs:annotation>
+                    <xs:documentation>Фактически отселено домов, %</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="plannedResettledResidentsAmount" type="xs:double" nillable="true">
+                <xs:annotation>
+                    <xs:documentation>Количество человек (планируется отселить)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actuallyResettledResidenceRate" type="xs:double" nillable="true">
+                <xs:annotation>
+                    <xs:documentation>Фактически переселено, %</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="FondType">
+        <xs:annotation>
+            <xs:documentation>Сведения об информации о переселении Фонд</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="buyInApartmentsAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Приобретены гражданами в порядке докупки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="buyInApartmentsAmountAuto" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Приобретены гражданами в порядке докупки
+                        (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useBuyInApartmentsAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Приобретены гражданами в порядке докупки"
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartmentsWithCompensationAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Представлены с компенсацией за меньшую жилую площадь</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartmentsWithCompensationAmountAuto" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Представлены с компенсацией за меньшую жилую площадь
+                        (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useApartmentsWithCompensationAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Представлены с компенсацией за меньшую жилую площадь"
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="offeredApartmentsWithCompensationAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Ведется предложение квартир с компенсацией за меньшую жилую площадь
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartmentWithCompensationConsentedAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Согласия на компенсацию и докупку</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartmentWithCompensationConsentedAmountAuto" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Согласия на компенсацию и докупку (рассчитано автоматически)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useApartmentWithCompensationConsentedAmountManualValue" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использовать автоматически рассчитанное значение атрибута
+                        "Согласия на компенсацию и докупку"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartmentWithCompensationProposedAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Фонд предлагает компенсацию (нет равнозначных)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DsType">
+        <xs:annotation>
+            <xs:documentation>Сведения об информации о переселении ДС</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="demolishedAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Снесены</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="preparingForDemolitionAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Отселены, готовятся к сносу</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,155 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_informationCenters",
+    "name": "Информационные центры переселения",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "address",
+        "name": "Адрес",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "fb3084eb-8451-4674-abec-f32fd068d47b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ddffc8b5-9451-40c8-ae76-d5271dd64708",
+          "nickAttr": "address",
+          "value": "мкр. 3, корп. 51 (ул. Изумрудная, вл. 26А)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "66457e26-55d4-4eaa-8cc0-280beb588a1a",
+          "nickAttr": "code",
+          "value": "001",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "dc0f5a09-4b1e-4189-9df8-a929e11f0001",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c74f6980-4ae8-455f-ab46-5127dc080cb2",
+          "nickAttr": "address",
+          "value": "ул. Судостроительная вл. 5(3), к.1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4cc30972-ea19-400f-bbcc-8ff3f1ea6bbf",
+          "nickAttr": "code",
+          "value": "002",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4c3bf6b9-0821-4d20-a7cc-4cae0186bdbc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b8e71464-9640-40a0-ba7b-442ce58cadda",
+          "nickAttr": "address",
+          "value": "Коньково, кв.44-47, к.12",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a298d9be-695c-4c2f-99b3-e89f13bf5a4d",
+          "nickAttr": "code",
+          "value": "003",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "dc9b51c7-d71b-488d-a524-bdd70c0784ff",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "da636091-fba7-4aa3-977e-7e9983bf650e",
+          "nickAttr": "address",
+          "value": "Артюхиной ул., вл.28А",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "951e99e7-6994-49c6-b5b9-1972ab323bfe",
+          "nickAttr": "code",
+          "value": "004",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b3ae291d-edcd-4f90-ad9c-3c8931423bf9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3e1fe8f4-f330-405e-bb9f-72fda9b7ed83",
+          "nickAttr": "address",
+          "value": "Дмитровское шоссе, вл. 167 (2-я очередь), корп. 3А",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1ffc4cf0-3671-4e46-b653-661e53deae17",
+          "nickAttr": "code",
+          "value": "005",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

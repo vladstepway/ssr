@@ -1,0 +1,32 @@
+ibm:
+  mq:
+    queue-manager: QM1
+    channel: DEV.ADMIN.SVRCONN
+    password: passw0rd
+    user: admin
+    url: ${MQ_URL}
+    lockAppQueue: false
+
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+  cloud:
+    config:
+      uri: http://172.27.5.18:5000/conf
+  messages:
+    encoding: UTF-8
+
+ugd:
+  ssr:
+    queue:
+      person-response: DEV.QUEUE.1
+      person-buildings-request: DEV.QUEUE.2
+      offer-letters-request: DEV.QUEUE.3
+app:
+  security:
+    enabled: false

@@ -1,0 +1,156 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Настройка страницы Реестры информации",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilder",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": "Использование параметра не рекомендовано. Используйте предустановленный фильтр в конструкторе витрин",
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "dfec9f15-6e52-4524-ac7e-23bd0d20ff0e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ca43d6c6-291b-4cf6-9ad7-d75ffec7385c",
+          "nickAttr": "code",
+          "value": "UGD_SSR_NOTARY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "56720a99-bcd8-41bc-a8a0-e36519f8ad21",
+          "nickAttr": "description",
+          "value": "Реестр нотариусов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a257509e-062e-4ce6-90ed-86888885c1bf",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_NOTARY_CREATE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "22a8022a-d1e1-4929-a1d0-b9a7ebd9fab6",
+          "nickAttr": "name",
+          "value": "Реестр нотариусов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "84886595-ad1b-4a24-ae97-7a0548a641a8",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "b7144d6a-ed3f-4f6d-bbc0-2962df536553",
+          "orders": 0,
+          "linkCode": "ugd_ssr_notary_admin_code"
+        }
+      ]
+    }
+  ]
+}

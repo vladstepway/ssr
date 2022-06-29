@@ -1,0 +1,35 @@
+{
+	"contract": {
+		"versionXSD": 1.0,
+		"contractInfo": {
+			"contractText": "Настоящее соглашение заключено между ___ Предмет контракта ___",
+			"contractDate": "2019-08-15T11:00:00",
+			"siteA": {
+				"signerPerson": {
+					"firstName": "Иван",
+					"lastName": "Иванов",
+					"middleName": "Иванович",
+					"position": "директор"
+				},
+				"signerOrg": {
+					"fullName": "OOO Рога и Копыта",
+					"shortName": "РиК",
+					"INN": "897086880148"
+				}
+			},
+			"siteB": {
+				"signerPerson": {
+					"firstName": "Пётр",
+					"lastName": "Петров",
+					"middleName": "Петрович",
+					"position": "заместитель генерального директора по продажам"
+				},
+				"signerOrg": {
+					"fullName": "ООО Крылья ноги и хвосты",
+					"shortName": "КНХ",
+					"INN": "710473268151"
+				}
+			}
+		}
+	}
+}

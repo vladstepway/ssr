@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/shipping"
+           targetNamespace="http://www.ugd.croc.ru/ssr/shipping">
+    <xs:element name="shippingApplication">
+        <xs:annotation>
+            <xs:documentation>Заявление на помощь в переезде</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="shippingApplicationData" type="ShippingApplicationType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="ShippingApplicationType">
+        <xs:annotation>
+            <xs:documentation>Сведения о заявлении на помощь в переезде</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eno" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="creationDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Время создания заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicant" type="ShippingApplicant" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Данные о заявителе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartmentFrom" type="Apartment" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Данные о квартире откуда переезжают</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartmentTo" type="Apartment" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Данные о квартире куда переезжают</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="shippingDateStart" type="xs:dateTime" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Дата и время начала переезда</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="shippingDateEnd" type="xs:dateTime" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Дата и время окончания переезда</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="shippingDateTimeInfo" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Информация о времени переезда</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bookingId" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор забронированного слота</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="additionalInfo" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Дополнительная информация</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="status" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="declineReason" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Причина отказа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="declineDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время отказа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processInstanceId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID запущенного процесса для фиксации результатов переезда</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="source" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Источник подачи документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="district" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Район</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="brigade" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Бригада</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cipId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID ЦИП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ShippingApplicant">
+        <xs:annotation>
+            <xs:documentation>Информация о заявителе</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personUid" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>ID жителя в Person</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ssoId" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>ID на портале mos.ru</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="snils" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>СНИЛС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="phone" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Номер телефона</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="additionalPhone" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Дополнительный номер телефона</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="email" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Адрес электронной почты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ФИО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--            todo confirmation array-->
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Apartment">
+        <xs:annotation>
+            <xs:documentation>Информация о квартире</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="unom" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>УНОМ дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="stringAddress" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес строкой</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="rooms" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номера комнат указанные через запятую</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="roomNumber" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Количество комнат</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="floor" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Этаж</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="entrance" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Подъезд</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="entranceCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код подъезда или номер домофона</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

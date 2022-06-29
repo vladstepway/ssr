@@ -1,0 +1,67 @@
+Удалить проект договора из жителя 439b0631-760a-4055-bb70-78ba1a7d1629:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 439b0631-760a-4055-bb70-78ba1a7d1629; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/9"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/newFlatInfo/newFlat/0/orderId"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/14"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/13"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/12"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/11"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/10"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/24"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/23"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/21"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/20"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/18"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/17"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/16"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

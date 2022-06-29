@@ -1,0 +1,23 @@
+Изменить ssoId, snils, birthdate для жителя:
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = bb10f0e1-f51c-4238-a4d2-f3594535cda9; jsonPatch =
+[
+    {
+        "op": "add",
+        "path": "/Person/PersonData/SNILS",
+        "value": "019-263-266 48"
+    },
+    {
+        "op": "add",
+        "path": "/Person/PersonData/SsoID",
+        "value": "264b6edd-6809-4b37-8c46-227acd2c5eb8"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/birthDate",
+        "value": "1971-07-06"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

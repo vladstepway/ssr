@@ -1,0 +1,523 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_residentStatuses",
+    "name": "Статусы переселения жителя",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "2bd58d04-633f-4fdf-8008-ad2816107d8e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "70217ca5-efe8-411b-b55a-7b07a762f0b3",
+          "nickAttr": "code",
+          "value": "01",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "731d3646-9d4d-4349-be48-558a09eb2d88",
+          "nickAttr": "name",
+          "value": "Включен в программу реновации",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0cf45fe7-a035-47ed-bd70-a9a8082b32f5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "78c1f835-73b0-4386-b8c5-956e13ab6e8f",
+          "nickAttr": "code",
+          "value": "03",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "07b14506-58a0-4661-8654-bfe199df843c",
+          "nickAttr": "name",
+          "value": "Уведомлен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ebefe74f-c617-4771-abac-6276bda60edf",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a9f4fbd9-9960-41cf-a5d9-240961e9f529",
+          "nickAttr": "code",
+          "value": "02",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9e449341-aae1-4791-9e63-2f2652959be8",
+          "nickAttr": "name",
+          "value": "Назначена дата начала переселения",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "374fa14b-9355-4dfb-891e-dc849c96f8e7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6528c024-022a-4c8e-af48-336b0670e8a7",
+          "nickAttr": "code",
+          "value": "05",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "39bcfbb3-c852-49ff-a1cd-e491634d4142",
+          "nickAttr": "name",
+          "value": "Получен отказ",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "10605b98-dcc8-4a79-b1e5-22dd1fd49a62",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "19bc447a-227a-4b85-91d2-2fc836a7cb89",
+          "nickAttr": "code",
+          "value": "06",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4363ec81-619d-4335-87b2-1bec2fd2b7fa",
+          "nickAttr": "name",
+          "value": "Судебные разбирательства",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "479b6dc5-fee5-4bff-98bc-b4f8357a0956",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "920d903d-7357-4f34-916d-b693ef953002",
+          "nickAttr": "code",
+          "value": "07",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d2796475-c265-4aed-9fc5-9f8d1589cd7d",
+          "nickAttr": "name",
+          "value": "Подано заявление на докупку",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ffe77cc1-841e-4915-ae1b-e16e9bcd9f32",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "107809f2-7443-4043-9864-ab5141dd83a6",
+          "nickAttr": "code",
+          "value": "08",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0847da86-297f-4e0f-ab50-f5e0199f1092",
+          "nickAttr": "name",
+          "value": "Заявление на докупку отклонено",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6e649b8b-c3cd-47df-86c0-9fdae46f569f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3fa4ccaf-02a8-4b2f-9d2c-b37c058424b9",
+          "nickAttr": "code",
+          "value": "10",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b2e1a5d4-a329-4d12-be18-81fb03f5f94b",
+          "nickAttr": "name",
+          "value": "Выдано разрешение на докупку",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5c33596f-5a79-4f1d-a208-d4b5668a70da",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fdc45f8b-3ae8-4132-8819-ef7ace36b942",
+          "nickAttr": "code",
+          "value": "11",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ed09b05c-ca83-42a7-976d-db9f111cfeb3",
+          "nickAttr": "name",
+          "value": "Внесено обеспечение",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c847b63d-e479-4ff6-ae31-da319606e80c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2095ba9b-beef-4578-b0cc-fec418f501f3",
+          "nickAttr": "code",
+          "value": "12",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7edfce70-b717-44fd-9064-7a43675dd177",
+          "nickAttr": "name",
+          "value": "Назначена дата аукциона",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a9abec1c-394a-4865-8239-6a873e5794a3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7ee392ee-5c18-4ac8-a4a2-90367a8c376f",
+          "nickAttr": "code",
+          "value": "13",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5ef5fbf2-2c9a-435e-9542-cea4b1394eee",
+          "nickAttr": "name",
+          "value": "Аукцион проведен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "897d9b69-a4b2-4d9d-93fa-91c0f4e336ad",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9b967132-c285-4562-b00a-5c728eb28731",
+          "nickAttr": "code",
+          "value": "15",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "87568588-65ff-4c9c-977b-084f688a2717",
+          "nickAttr": "name",
+          "value": "Договор направлен (ДГИ)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d83e7841-d3a3-481d-8d97-4d90790e2bd7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b58ba0f4-2a35-4f52-a176-b547e8614d48",
+          "nickAttr": "code",
+          "value": "16",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d091d763-4643-4253-86a8-c497b4fd32ff",
+          "nickAttr": "name",
+          "value": "Договор подписан",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d60e1bf4-822e-4e69-8a26-89969c6bd601",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "746327c6-6eab-4239-91ad-a817a6991017",
+          "nickAttr": "code",
+          "value": "17",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "224f2c44-232c-4339-8d72-411a3dd3c51f",
+          "nickAttr": "name",
+          "value": "Вынесено решение суда",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "cf1accb9-6b71-4f23-b965-b58f4d4c8d64",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "cb49f779-9228-4039-854c-dc3c953c9c97",
+          "nickAttr": "code",
+          "value": "18",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2903d096-36d6-4a04-8169-e1152e441db6",
+          "nickAttr": "name",
+          "value": "Произведена оплата",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4a8978c3-b337-4eba-804b-b3dae6a4bf69",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "df7c9ade-3135-4b29-9f79-03e250dbed18",
+          "nickAttr": "code",
+          "value": "20",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f504bcfa-03db-4db1-92a0-151d139e7fe7",
+          "nickAttr": "name",
+          "value": "Подписан акт приема-передачи помещения",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7c5092bc-81e4-4bfa-b7eb-e00b22b6bb8b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5c65bb28-1254-4273-a847-94efcd6c0158",
+          "nickAttr": "code",
+          "value": "21",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4beb96d1-8340-48e7-a8c9-782cfb7d13b4",
+          "nickAttr": "name",
+          "value": "Переезд завершен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0538b56f-7c9a-42db-a877-6972311da27e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d0468659-372d-4616-82bc-0e63dedbb6ed",
+          "nickAttr": "code",
+          "value": "04",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "026e7a92-116c-46a9-b93a-e7ed85d397f0",
+          "nickAttr": "name",
+          "value": "Получено согласие",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "345a92e8-fa40-4568-b5fa-e09159e55ceb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ad5e897a-d906-4419-a76d-f89fda69132a",
+          "nickAttr": "code",
+          "value": "09",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e10f9ad8-79aa-43a0-879d-f7ac5e883a4c",
+          "nickAttr": "name",
+          "value": "Отзыв заявления на докупку",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "68e00e4a-bb43-4257-8175-cf856e7c9120",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c4572cc0-e1b7-4305-98b4-c266df312a57",
+          "nickAttr": "code",
+          "value": "14",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7f709ff8-15c5-40a2-ad21-84d246274a06",
+          "nickAttr": "name",
+          "value": "Договор выдан для ознакомления",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "64c9f846-529f-4b09-a5c0-5f2837552d80",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c9202497-90ea-4faa-b71a-1a763c02fe9b",
+          "nickAttr": "code",
+          "value": "19",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "479c982d-d4f6-4da8-a460-ddebde3b1bff",
+          "nickAttr": "name",
+          "value": "Заключено право собственности",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

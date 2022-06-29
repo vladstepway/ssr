@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "509a2233-13d3-4c26-8fd4-ef16d38f2560",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "16431d02-1e71-426f-a9bd-8a78cffa8027",
+          "nickAttr": "code",
+          "value": "ugd_ssr_apartment_inspection_catalog_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "49f75783-78a9-46d5-9b02-40f8c4ccb5bd",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_APARTMENT-INSPECTION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f8f4f094-4907-4454-82ef-9dd00eae922f",
+          "nickAttr": "documentName",
+          "value": " Акт осмотра квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9a603941-5d4b-406e-8aa0-f9d2cf6b09a5",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Акты по дефектам\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Акты по дефектам</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по адресу расселяемой квартиры, ФИО, адресу заселяемой квартиры, генеральному подрядчику, застройщику\",\"fields\":[{\"code\":\" ugd_ssr_apartment_inspection_address_from\",\"type\":\"text\",\"name\":\"Адрес расселяемой квартиры\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_apartment_inspection_person_fio\",\"type\":\"text\",\"name\":\"ФИО\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_apartment_inspection_address\",\"type\":\"text\",\"name\":\"Заселяемый адрес\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_apartment_inspection_act_creation_date\",\"type\":\"date\",\"name\":\"Дата заведения акта\",\"sortable\":true},{\"code\":\"ugd_ssr_apartment_inspection_planned_fixed_date\",\"type\":\"date\",\"name\":\"Плановая дата устранения\",\"sortable\":true},{\"code\":\"ugd_ssr_apartment_inspection_is_ready\",\"type\":\"boolean\",\"name\":\"Выполнено/не выполнено\",\"sortable\":true},{\"code\":\"ugd_ssr_apartment_inspection_has_consent\",\"type\":\"boolean\",\"name\":\"Согласие гражданина с устранением дефектов\",\"sortable\":true},{\"code\":\"ugd_ssr_apartment_inspection_general_contractor\",\"type\":\"text\",\"name\":\"Генеральный подрядчик\",\"sortable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_apartment_inspection_developer\",\"type\":\"text\",\"name\":\"Застройщик\",\"sortable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_apartment_inspection_is_deleted\",\"type\":\"boolean\",\"name\":\"Удален \\\\ не удален\"},{\"code\":\"ugd_ssr_apartment_inspection_pending\",\"type\":\"boolean\",\"name\":\"Временный акт\"}],\"tableColumns\":[{\"name\":\"Расселяемая квартира\",\"width\":\"1000px; white-space: nowrap;\",\"fieldCode\":\" ugd_ssr_apartment_inspection_address_from\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/apartment-inspection/act/{{item.sys_documentId}}\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_apartment_inspection_address_from}}\\n</a>\"},{\"name\":\"ФИО\",\"fieldCode\":\"ugd_ssr_apartment_inspection_person_fio\",\"template\":\"{{item.ugd_ssr_apartment_inspection_person_fio}}\"},{\"name\":\"Заселяемая квартира\",\"fieldCode\":\"ugd_ssr_apartment_inspection_address\",\"template\":\"{{item.ugd_ssr_apartment_inspection_address}}\"},{\"name\":\"Дата заведения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_act_creation_date\",\"template\":\"{{item.ugd_ssr_apartment_inspection_act_creation_date  | date:'dd.MM.yyyy' }}\"},{\"name\":\"Плановая дата устранения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_planned_fixed_date\",\"template\":\"{{item.ugd_ssr_apartment_inspection_planned_fixed_date  | date:'dd.MM.yyyy' }}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_apartment_inspection_is_ready\",\"template\":\"{{item.ugd_ssr_apartment_inspection_is_ready ? 'Устранено' : 'Не устранено'}}\"},{\"name\":\"Согласие гражданина\",\"fieldCode\":\"ugd_ssr_apartment_inspection_has_consent\",\"template\":\"{{item.ugd_ssr_apartment_inspection_has_consent  ? 'Да' : 'Нет'}}\"},{\"name\":\"Генеральный подрядчик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_general_contractor\",\"template\":\"{{item.ugd_ssr_apartment_inspection_general_contractor}}\"},{\"name\":\"Застройщик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_developer\",\"template\":\"{{item.ugd_ssr_apartment_inspection_developer}}\"}],\"filters\":[{\"name\":\"Адрес расселяемой квартиры\",\"fieldCode\":\" ugd_ssr_apartment_inspection_address_from\",\"placement\":\"bottom\"},{\"name\":\"ФИО\",\"fieldCode\":\"ugd_ssr_apartment_inspection_person_fio\",\"placement\":\"bottom\"},{\"name\":\"Адрес заселяемой квартиры\",\"fieldCode\":\"ugd_ssr_apartment_inspection_address\",\"placement\":\"bottom\"},{\"name\":\"Дата заведения дефекта\",\"fieldCode\":\"ugd_ssr_apartment_inspection_act_creation_date\",\"placement\":\"bottom\"},{\"name\":\"Плановая дата устранения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_planned_fixed_date\",\"placement\":\"bottom\"},{\"name\":\"Статус устранения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_is_ready\",\"placement\":\"bottom\"},{\"name\":\"Согласие гражданина с устранением дефектов\",\"fieldCode\":\"ugd_ssr_apartment_inspection_has_consent\",\"placement\":\"bottom\"},{\"name\":\"Генеральный подрядчик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_general_contractor\",\"placement\":\"bottom\"},{\"name\":\"Застройщик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_developer\",\"placement\":\"bottom\"},{\"name\":\"Удален \\\\ не удален\",\"fieldCode\":\"ugd_ssr_apartment_inspection_is_deleted\",\"placement\":\"bottom\",\"presetFilter\":\"false\"},{\"name\":\"Временный акт\",\"fieldCode\":\"ugd_ssr_apartment_inspection_pending\",\"placement\":\"bottom\",\"presetFilter\":\"false\"}],\"sortings\":[{\"name\":\"Расселяемый адрес\",\"fieldCode\":\" ugd_ssr_apartment_inspection_address_from\"},{\"name\":\"Заселяемый адрес\",\"fieldCode\":\"ugd_ssr_apartment_inspection_address\"},{\"name\":\"ФИО\",\"fieldCode\":\"ugd_ssr_apartment_inspection_person_fio\"},{\"name\":\"Дата заведения дефекта\",\"fieldCode\":\"ugd_ssr_apartment_inspection_act_creation_date\"},{\"name\":\"Плановая дата устранения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_planned_fixed_date\"},{\"name\":\"Статус устранения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_is_ready\"},{\"name\":\"Согласие гражданина с устранением дефектов\",\"fieldCode\":\"ugd_ssr_apartment_inspection_has_consent\"},{\"name\":\"Генеральный подрядчик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_general_contractor\"},{\"name\":\"Застройщик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_developer\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42709f99-d0f8-4e39-9f05-715342d42240",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_apartment_inspection_catalog",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "92e21035-3f92-4869-aea7-4cab14e09f06",
+          "nickAttr": "showcaseName",
+          "value": "Реестр актов по дефектам",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "011d8d17-98d6-495e-917d-9a73a5a45f0a",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f5f981ea-2e5c-420d-8add-f9e86a787b17",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a8743308-7886-4f6b-b3d4-69050cd4cf6b",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "53f65e77-41fc-4113-9815-11606d648e0e",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

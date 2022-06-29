@@ -1,0 +1,10 @@
+Актуализация объектов недвижимости:
+ - добавление папки в FileStore;
+ - перенос даты сноса дома в данные о сносе дома;
+ - заполнение статусов переселения.
+
+ 1) Открыть https://you_domain.ru/app/ugd/ssr/swagger-ui.html#/real-estate-controller
+ 2) Выбрать POST /realestate/actualize-real-estates
+ 3) Нажать Try it out
+ 4) Нажать Execute
+ 6) Проверить, что статус код 200

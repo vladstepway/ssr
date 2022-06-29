@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SmevResponse>
+    <messageId>2662639</messageId>
+    <serviceNumber>0874-9000155-067801-005076/20</serviceNumber>
+    <statusCode>1004</statusCode>
+    <note>Получен ответ из ФОИВ/ОИВ по запросу документа</note>
+    <resultCode>1</resultCode>
+    <resultDescription>&lt;ОТВЕТ_СНИЛС&gt;&lt;ФИО&gt;&lt;Фамилия&gt;ПЛАТОНОВ&lt;/Фамилия&gt;&lt;Имя&gt;ГЕННАДИЙ&lt;/Имя&gt;&lt;Отчество&gt;АНАТОЛЬЕВИЧ&lt;/Отчество&gt;&lt;/ФИО&gt;&lt;Пол&gt;МУЖСКОЙ&lt;/Пол&gt;&lt;ДатаРождения&gt;24.06.1957&lt;/ДатаРождения&gt;&lt;СтраховойНомер&gt;122-368-164
+        37&lt;/СтраховойНомер&gt;&lt;ДатаФормирования&gt;27.01.2020&lt;/ДатаФормирования&gt;&lt;/ОТВЕТ_СНИЛС&gt;
+    </resultDescription>
+</SmevResponse>

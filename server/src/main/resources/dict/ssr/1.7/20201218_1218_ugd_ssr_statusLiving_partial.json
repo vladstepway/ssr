@@ -1,0 +1,178 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_statusLiving",
+    "name": "Статусы проживания жителей",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "dc113969-26ab-4dfa-bd36-af2cb355d9a3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c0ed6c40-6050-4732-aab2-0eeedb490bb9",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "20ac5b7a-97c7-4a3b-a798-43a1ff36a580",
+          "nickAttr": "name",
+          "value": "Свободная",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "58770b0a-00f6-4aa6-a2a1-6d994b8f9221",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b631e546-96f0-4156-ab13-3d99cf0326aa",
+          "nickAttr": "code",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "14c9cd13-9584-4608-954c-6e897f6b225e",
+          "nickAttr": "name",
+          "value": "Отсутствует",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "14511555-4807-4761-8b0d-6155ed5a1cfe",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8dfb2b19-b227-4caf-9d4b-a03f90ffb5b7",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dada937f-80f4-4472-897d-34d8c937f0b0",
+          "nickAttr": "name",
+          "value": "Собственник (частная собственность)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e755e2ac-7a66-4d1c-8831-a56250e4f73e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "39c35b40-cf43-4a64-89e0-612f6b8b0ccd",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "200028a9-451f-4727-9d2c-2543e77ecbe5",
+          "nickAttr": "name",
+          "value": "Пользователь (частная собственность)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ca5b101f-407b-4202-81e8-beb77294d847",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c51561bf-8cd3-4df5-9656-e63b86c92c25",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f8f8e2d8-cfb6-41d6-b143-b22c0feafc28",
+          "nickAttr": "name",
+          "value": "Наниматель (найм/пользование)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3b1a3f81-52f6-4268-a429-373ca13bef3c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f6ef49b2-474b-4e60-a583-817a2630d075",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f29a29bf-ac42-4585-816c-f4b0844c7987",
+          "nickAttr": "name",
+          "value": "Проживающий (найм/пользователь)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

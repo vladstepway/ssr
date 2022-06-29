@@ -1,0 +1,224 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_refuseReason",
+    "name": "Причины отказов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "04a88e98-306e-444f-8d5e-e5a584649af3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "13430704-72b1-46de-a1ac-cac26655b2ee",
+          "nickAttr": "code",
+          "value": "30",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "462d0065-952c-4f16-b830-061761061b17",
+          "nickAttr": "name",
+          "value": "Реновация/техническое состояние квартиры",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "965cb451-eac8-4930-a1a1-f6e42e3c93d8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c1a6d60d-e1c0-4716-b33a-49516e69663a",
+          "nickAttr": "code",
+          "value": "31",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "43fc629f-8f36-494b-ba9c-858fde88aba7",
+          "nickAttr": "name",
+          "value": "Реновация/не устраивает планировка",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "821148fa-4751-4902-bbf4-d85ca0cfd77d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3df7f719-78c0-4669-ad2a-cb328f70eed6",
+          "nickAttr": "code",
+          "value": "32",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4ebef11a-dd15-4268-99ad-c75cfb22642d",
+          "nickAttr": "name",
+          "value": "Реновация/требование большего метража",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7560be0b-67e4-472f-91b6-854b627111c1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a1f08efc-6099-4097-9645-ef2629e730e5",
+          "nickAttr": "code",
+          "value": "33",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d3895854-0656-4699-847e-cc267f266798",
+          "nickAttr": "name",
+          "value": "Реновация/требование нескольких квартир",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "da333538-2a00-44aa-940a-b02b1dbbdef9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f6d16491-87cd-47c6-89e8-0209deef3782",
+          "nickAttr": "code",
+          "value": "34",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "369b93cb-b5c9-4f6c-98a0-af06e17cf9e7",
+          "nickAttr": "name",
+          "value": "Реновация/требование другого дома",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "22d2e043-cf0f-404b-b49e-7a55c1189fe3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fba8a0da-e915-4c0f-8d45-745fb617f08e",
+          "nickAttr": "code",
+          "value": "35",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a690cd57-0f95-4c62-bf54-9ce9b8f52d95",
+          "nickAttr": "name",
+          "value": "Реновация/требование другого района",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "92555a2a-e59c-4505-a8df-e068ff3cc0fe",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7562b7a2-b9b5-43b0-a892-59001c75e4a0",
+          "nickAttr": "code",
+          "value": "36",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9226e9ee-b483-466e-af2b-775cbef9418a",
+          "nickAttr": "name",
+          "value": "Реновация/не устраивает этаж",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "793b1ec3-d8a0-43f6-9c19-c92481fd3cd8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c0f95b95-89f0-4fe5-9581-6e044282d5eb",
+          "nickAttr": "code",
+          "value": "37",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9ffce2f8-8d71-43a7-aabf-4eab29d7692e",
+          "nickAttr": "name",
+          "value": "Реновация/Иное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

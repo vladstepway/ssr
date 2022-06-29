@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/courtInfo"
+           targetNamespace="http://www.ugd.croc.ru/ssr/courtInfo"
+           elementFormDefault="qualified">
+    <xs:element name="CourtInfo">
+        <xs:annotation>
+            <xs:documentation>
+                Сведения о судах
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="courtInfoData" type="CourtInfoData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="CourtInfoData">
+        <xs:annotation>
+            <xs:documentation>Сведения о судах</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="affairId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letterId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="caseId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор дела</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="courtDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата назначения судебного заседания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="courtResultDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата вынесения решения суда</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="courtLawDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата вступления суда в законную силу</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="courtResult" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Решение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

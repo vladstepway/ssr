@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/egrn"
+           targetNamespace="http://www.ugd.croc.ru/ssr/egrn">
+    <xs:include schemaLocation="ExtractAboutPropertyRoom.xsd"/>
+    <xs:element name="EgrnFlatRequest">
+        <xs:annotation>
+            <xs:documentation>Запрос в ЕГРН для получения выписки по квартире</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="egrnFlatRequestData" type="EgrnFlatRequestData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="EgrnFlatRequestData">
+        <xs:annotation>
+            <xs:documentation>Данные из запроса в ЕГРН для получения выписки по квартире</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="requestCriteria" type="FlatRequestCriteria">
+                <xs:annotation>
+                    <xs:documentation>Критерии запроса в ЕГРН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="egrnResponse" type="FlatEgrnResponse">
+                <xs:annotation>
+                    <xs:documentation>Ответ из ЕГРН по квартире</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="serviceNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Единый номер обращения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="errorDescription" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Описание ошибки если произошла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="busRequestDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа с данными по запросу в bus</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="creationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время создания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FlatRequestCriteria">
+        <xs:annotation>
+            <xs:documentation>Критерии запроса в ЕГРН</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="cadastralNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Кадастровый номер квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatNumber" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="unom" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уном</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="realEstateDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа отселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ccoDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа ОКСа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FlatEgrnResponse">
+        <xs:annotation>
+            <xs:documentation>Ответ из ЕГРН</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="pdfFileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор в FileStore выписки из ЕГРН в формате pdf</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="xmlFileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор в FileStore выписки из ЕГРН в формате xml</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="zipFileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор в FileStore выписки из ЕГРН в формате zip</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="extractAboutPropertyRoom" type="ExtractAboutPropertyRoom">
+                <xs:annotation>
+                    <xs:documentation>Данные выписки по квартире полученной из ЕГРН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="responseDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время получения ответа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

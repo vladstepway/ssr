@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2022-04-01-01-view-persons-with-new-flats-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_persons_with_new_flats">
+            SELECT
+                json_data->'Person'->'PersonData'->>'personID' AS personId,
+                json_data->'Person'->'PersonData'->>'affairId' AS affairId,
+                json_data->'Person'->'PersonData'->>'relocationStatus' AS relocationStatus,
+                new_flats.value->>'ccoUnom' AS unom,
+                new_flats.value->>'ccoFlatNum' AS flatNum
+            FROM
+                ssr.documents
+            JOIN
+                jsonb_array_elements(json_data->'Person'->'PersonData'->'newFlatInfo'->'newFlat') new_flats
+            ON
+                new_flats.value->'ccoUnom' IS NOT NULL AND new_flats.value->'ccoFlatNum' IS NOT NULL
+            WHERE
+                doc_type = 'PERSON'
+                AND (json_data->'Person'->'PersonData'->>'isArchive' = 'false'
+                    OR json_data->'Person'->'PersonData'->'isArchive' IS NULL)
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_persons_with_new_flats TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

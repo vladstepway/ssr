@@ -1,0 +1,299 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "8c90f56c-f1b3-4c40-936c-ecaa2a53fb36",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bec58004-e420-44f0-8e87-06f89b75f8cf",
+          "nickAttr": "code",
+          "value": "UGD_SSR_DISABLED-PERSON",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d278357d-480e-4605-9d77-7485813282f3",
+          "nickAttr": "fields",
+          "value": "e2e8e0c1-9301-4e99-a9a4-609fd37ffeb5",
+          "orders": 0,
+          "linkCode": "ugd_ssr_disabled_person_unom"
+        },
+        {
+          "attrId": "fc9b3e2c-03ff-4e5c-b06d-823e5b11e053",
+          "nickAttr": "fields",
+          "value": "8f134b65-2c7e-46ac-893d-e9d68a0e82ec",
+          "orders": 1,
+          "linkCode": "ugd_ssr_disabled_person_area"
+        },
+        {
+          "attrId": "5d87dc3d-024d-415d-bfd1-c8e46c931c9d",
+          "nickAttr": "fields",
+          "value": "e1f8255e-c060-4289-876d-684abeb182c5",
+          "orders": 2,
+          "linkCode": "ugd_ssr_disabled_person_district"
+        },
+        {
+          "attrId": "0aeddb99-55ae-4e98-8fc2-ccde8adad1e1",
+          "nickAttr": "fields",
+          "value": "1a062876-e12d-4a1f-81f0-6603df30469f",
+          "orders": 3,
+          "linkCode": "ugd_ssr_disabled_person_address_from"
+        },
+        {
+          "attrId": "0af300d1-ee54-4c01-9dba-46ebf60d9d7f",
+          "nickAttr": "fields",
+          "value": "5742162e-5e8f-4029-acb3-6f2f79a4820e",
+          "orders": 4,
+          "linkCode": "ugd_ssr_disabled_person_flat_number"
+        },
+        {
+          "attrId": "61d047a3-df21-4cb1-b036-d30714e93c4d",
+          "nickAttr": "fields",
+          "value": "dc2d2680-2be9-4ba5-9f01-eb9edd4f3148",
+          "orders": 5,
+          "linkCode": "ugd_ssr_disabled_person_full_name"
+        },
+        {
+          "attrId": "d2bad9b7-ec02-42e2-956e-aa16709a04e4",
+          "nickAttr": "fields",
+          "value": "94084d69-69d0-4060-8aff-fb88042a1d5b",
+          "orders": 6,
+          "linkCode": "ugd_ssr_disabled_person_snils"
+        },
+        {
+          "attrId": "bb76c6eb-39fe-438b-8dae-49ffcb8b6764",
+          "nickAttr": "fields",
+          "value": "0f7f2f2e-a219-4e3d-bf61-463870bfff0f",
+          "orders": 7,
+          "linkCode": "ugd_ssr_disabled_person_disability_group"
+        },
+        {
+          "attrId": "54eca810-e719-4c2e-ac42-6bff68736416",
+          "nickAttr": "fields",
+          "value": "315ae799-3e98-41a6-bb22-ee023d7fc582",
+          "orders": 8,
+          "linkCode": "ugd_ssr_disabled_person_is_using_wheelchair"
+        },
+        {
+          "attrId": "048962cc-32f1-4f1f-a789-256f9491881b",
+          "nickAttr": "fields",
+          "value": "f9a24f68-482a-4179-9850-e0791b0c3a54",
+          "orders": 9,
+          "linkCode": "ugd_ssr_disabled_person_district_code"
+        },
+        {
+          "attrId": "a855fed9-b11a-4b91-ac46-5f0a30056d42",
+          "nickAttr": "fields",
+          "value": "ee5b0472-f1b7-4a1a-9dfc-dc618534773a",
+          "orders": 10,
+          "linkCode": "ugd_ssr_disabled_person_first_name"
+        },
+        {
+          "attrId": "9a406fa3-f286-4886-9598-b2ecdf049f60",
+          "nickAttr": "fields",
+          "value": "ca8821e3-6323-413e-aad5-9bfc2b7527c5",
+          "orders": 11,
+          "linkCode": "ugd_ssr_disabled_person_last_name"
+        },
+        {
+          "attrId": "06fb32c6-512f-4b9e-9452-05ddd369c5f9",
+          "nickAttr": "fields",
+          "value": "d525f47e-b2a1-44ae-8b39-0a3fd9387e41",
+          "orders": 12,
+          "linkCode": "ugd_ssr_disabled_person_middle_name"
+        },
+        {
+          "attrId": "2e7f42a5-7316-4d39-8693-11881c9d2778",
+          "nickAttr": "fields",
+          "value": "7b3b6c63-96b0-4049-a70b-983ea436b57c",
+          "orders": 13,
+          "linkCode": "ugd_ssr_disabled_person_birth_date"
+        },
+        {
+          "attrId": "2ed5b705-1ec9-4e62-bab3-4d1e821c35cb",
+          "nickAttr": "fields",
+          "value": "3aa9ca89-04fe-4141-9e71-b090993cf2e1",
+          "orders": 14,
+          "linkCode": "ugd_ssr_disabled_person_person_document_id"
+        },
+        {
+          "attrId": "f993fa51-bf0b-4617-80da-eec47c8e7bc8",
+          "nickAttr": "fields",
+          "value": "3f3c88c9-4323-4aa6-bb28-19a7ec0a9a65",
+          "orders": 15,
+          "linkCode": "ugd_ssr_disabled_person_is_deleted"
+        },
+        {
+          "attrId": "235a7805-39c2-46a7-8e4a-73fed99ffb3b",
+          "nickAttr": "name",
+          "value": "Сведения об инвалидности жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bd4365c8-55b6-46ae-a7ec-2b4f9997b3e2",
+          "nickAttr": "solrCore",
+          "value": "379c496b-74c9-4c40-b27e-19bc80b0cddb",
+          "orders": 0,
+          "linkCode": "ugd_ssr_disabled_person"
+        },
+        {
+          "attrId": "5432ed81-23d6-4378-83eb-6ec9e809bdad",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "041594ea-f214-4894-86d3-f1554aae4402",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "91617781-d504-4adf-98a6-75626988e1d3",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

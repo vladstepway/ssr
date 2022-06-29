@@ -1,0 +1,86 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_applicationSource",
+    "name": "Источники заявлений",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "1e581713-3860-41d8-a875-7ed38e27c22b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fc5f8719-9b70-4232-8a31-7ed8c49cda74",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "767927a6-6a58-4aac-9fdc-a773ecc064a6",
+          "nickAttr": "name",
+          "value": "МПГУ",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1f8fc2fa-69da-4607-a636-f2134f9e3dcb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5138ae5b-efa8-4e4e-ab06-ecc6e8e263f5",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "553151ed-467f-4d68-b9c8-35ec38ca622e",
+          "nickAttr": "name",
+          "value": "ССР",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

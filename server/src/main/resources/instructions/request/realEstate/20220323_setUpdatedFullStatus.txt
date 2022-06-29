@@ -1,0 +1,11 @@
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = REAL-ESTATE; id = 90b58d3a-e3fb-4aff-aa73-e729e341eb2a; jsonPatch =
+[
+    {
+        "op": "replace",
+        "path": "/RealEstate/RealEstateData/Flats/Flat/34/UpdatedFullStatus",
+        "value": "обогащено"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/trade"
+           targetNamespace="http://www.ugd.croc.ru/ssr/trade">
+    <xs:element name="tradeApplicationFile">
+        <xs:annotation>
+            <xs:documentation>Документ с информацией о файле с приложением к загруженным данным о сделке.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="tradeApplicationFileTypeData" type="TradeApplicationFileType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="TradeApplicationFileType">
+        <xs:annotation>
+            <xs:documentation>Информация о файле с приложением к загруженным данным о сделке.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="fileName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Название файла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Id файла в системе FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="chedId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Id файла в системе ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="batchDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>documentID партии загруженных данных о сделках. Ссылка на TradeDataBatchStatus
+                        документ.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="mfrFlowTradeAdditionDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД документа tradeAddition, загруженного по потоку из МФР</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fileType" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Тип файла:
+                        0 - Приложенный файл
+                        1 - Протокол
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2022-06-06-01-view-resettlement-in-process-amount-v2-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_resettlement_in_process_amount_v2">
+            WITH estate_with_request AS (
+                SELECT
+                    houses_to_resettle.value ->> 'realEstateId' AS realEstateId,
+                    (request.json_data->'ResettlementRequest'->'main'->>'startResettlementDate')::DATE AS startResettlementDate,
+                    houses_to_resettle.value ->> 'resettlementBy' AS resettlementBy
+                FROM ssr.documents request
+
+                JOIN
+                    jsonb_array_elements(request.json_data->'ResettlementRequest'->'main'->'housesToSettle') AS houses_to_settle
+                ON
+                    request.json_data->'ResettlementRequest'->'main'->'housesToSettle' IS NOT NULL
+                JOIN
+                    jsonb_array_elements(houses_to_settle->'housesToResettle') AS houses_to_resettle
+                ON
+                    TRUE
+                WHERE
+                    doc_type = 'RESETTLEMENT-REQUEST'
+                ORDER BY
+                    realEstateId, resettlementBy, startResettlementDate
+            )
+
+            SELECT DISTINCT ON (estate_with_request.realEstateId)
+                real_estate.json_data->'RealEstate'->'RealEstateData'->>'UNOM' AS unom,
+                real_estate.json_data->'RealEstate'->'RealEstateData'->>'Address' AS address,
+                estate_with_request.startResettlementDate AS startResettlementDate,
+                INITCAP(estate_with_request.resettlementBy) AS resettlementBy,
+                real_estate.json_data->'RealEstate'->'RealEstateData'->>'resettlementStatus' AS resettlementStatus
+            FROM
+                estate_with_request
+            JOIN
+                ssr.documents real_estate
+            ON
+                estate_with_request.realEstateId = real_estate.id
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_resettlement_in_process_amount_v2 TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

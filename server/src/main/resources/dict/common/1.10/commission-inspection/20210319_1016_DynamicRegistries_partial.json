@@ -1,0 +1,156 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Справочник предназначен для вывода витрин в разделе \"Информация\" - \"Реестры\"",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - кодсистемы_краткийкодподсистемы_кодэлементасправочника",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Обладатель информации",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "Полное наименование органа исполнительной власти-владельца реестра",
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Витрина",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Ссылка на элемент справочника \"Настройки витрин\"",
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": "Если указано несколько значений, то разграничение выполняется с условием ИЛИ",
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilder",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": "Использование параметра не рекомендовано. Используйте предустановленный фильтр в конструкторе витрин",
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "6ec1def7-e77a-41d1-a284-711c3a730ef9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "51167be3-b9a5-4413-96fd-d5cee28edebf",
+          "nickAttr": "code",
+          "value": "UGD_SSR_COMMISSION-INSPECTION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3d56bc29-ee7a-4bce-bf9e-d41710bfb555",
+          "nickAttr": "description",
+          "value": "Реестр заявлений на комиссионный осмотр",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1117f4a1-9e3e-4e5f-bf29-5b5703088185",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_COMMISSION_INSPECTION_READ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "27e8a15e-16d5-4097-83fa-5ae1f95d9d36",
+          "nickAttr": "name",
+          "value": "Реестр заявлений на комиссионный осмотр",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "728f5177-0d7c-4bfd-a6c9-09ae7a03d07a",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "c98c5978-cb47-437e-8c3c-f62804b0b4fd",
+          "orders": 0,
+          "linkCode": "ugd_ssr_commission_inspection_code"
+        }
+      ]
+    }
+  ]
+}

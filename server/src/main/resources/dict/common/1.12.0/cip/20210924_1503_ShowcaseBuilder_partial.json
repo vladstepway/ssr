@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "5998218c-6033-4a8a-92ac-7238c7ab274b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "731ebf22-98b6-447e-bb62-6d42bf34de0f",
+          "nickAttr": "code",
+          "value": "ugd_ssr_cip_catalog_employee_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a966cb2e-8c66-4b15-a4c6-6f84b59758b1",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_CIP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5f9efaa5-620c-4492-9c90-ef2c299ba64e",
+          "nickAttr": "documentName",
+          "value": "Центр информирования по переселению жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b583800b-7284-46bb-a9ef-bcfcf27bd68b",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Каталог центров информирования по переселению\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Центры информирования по переселению</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по адресу ЦИП\",\"fields\":[{\"code\":\"ugd_ssr_cip_address\",\"type\":\"text\",\"name\":\"Адрес\",\"isSearchable\":true},{\"code\":\"ugd_ssr_cip_area\",\"type\":\"dictionary\",\"name\":\"Округ\",\"dictionary\":\"Prefect\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"fullName\",\"filterable\":true},{\"code\":\"ugd_ssr_cip_code\",\"type\":\"text\",\"name\":\"Код ЦИП\"},{\"code\":\"ugd_ssr_cip_del_reason\",\"type\":\"text\",\"name\":\"Причина удаления\"},{\"code\":\"ugd_ssr_cip_district\",\"type\":\"dictionary\",\"name\":\"Район\",\"dictionary\":\"District\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"name\",\"filterable\":true},{\"code\":\"ugd_ssr_cip_end_date\",\"type\":\"date\",\"name\":\"Дата окончания работы ЦИП\"},{\"code\":\"ugd_ssr_cip_start_date\",\"type\":\"date\",\"name\":\"Дата начала работы ЦИП\"},{\"code\":\"ugd_ssr_cip_phone\",\"type\":\"text\",\"name\":\"Телефон ЦИП\"},{\"code\":\"ugd_ssr_cip_status\",\"type\":\"dictionary\",\"name\":\"Статус ЦИП\",\"dictionary\":\"ugd_ssr_cipStatuses\",\"dictionaryCode\":\"code\",\"dictionaryText\":\"name\",\"dictionaryAttrs\":[\"name\",\"code\"]},{\"code\":\"ugd_ssr_cip_work_time\",\"type\":\"text\",\"name\":\"Режим работы\"},{\"code\":\"ugd_ssr_cip_settelment_count\",\"type\":\"number\",\"name\":\"Количество заселяемых домов\"},{\"code\":\"ugd_ssr_cip_resettelment_count\",\"type\":\"text\",\"name\":\"Количество расселяемых домов\"},{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"}],\"tableColumns\":[{\"name\":\"Адрес центра переселения (округ, район)\",\"fieldCode\":\"ugd_ssr_cip_address\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/cip/{{ item.sys_documentId }}\\\" target=\\\"_blank\\\">\\n{{ item.ugd_ssr_cip_address }} {{item.ugd_ssr_cip_area ||  item.ugd_ssr_cip_district ?  '(' : ''}}{{ item.ugd_ssr_cip_area?.name }}{{item.ugd_ssr_cip_area &&  item.ugd_ssr_cip_district ?  ', ' : ''}}{{ item.ugd_ssr_cip_district?.name }}{{item.ugd_ssr_cip_area ||  item.ugd_ssr_cip_district ?  ')' : ''}}\\n</a>\"},{\"name\":\"Отселяемых домов\",\"fieldCode\":\"ugd_ssr_cip_resettelment_count\",\"template\":\"{{ item.ugd_ssr_cip_resettelment_count}}\"},{\"name\":\"Заселяемых домов\",\"fieldCode\":\"ugd_ssr_cip_settelment_count\",\"template\":\"{{ item.ugd_ssr_cip_settelment_count}}\"},{\"name\":\"Дата открытия центра\",\"fieldCode\":\"ugd_ssr_cip_start_date\",\"template\":\"{{ item.ugd_ssr_cip_start_date | date:'dd.MM.yyyy' }}\"},{\"name\":\"Дата закрытия центра\",\"fieldCode\":\"ugd_ssr_cip_end_date\",\"template\":\"{{ item.ugd_ssr_cip_end_date | date:'dd.MM.yyyy' }}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_cip_status\",\"template\":\"{{ item.ugd_ssr_cip_status?.name }}\"}],\"filters\":[{\"name\":\"Округ\",\"fieldCode\":\"ugd_ssr_cip_area\",\"multiple\":true,\"template\":\"{{item.code}}\",\"usingDictionaryLinks\":true,\"placement\":\"bottom\"},{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_cip_district\",\"multiple\":true,\"usingDictionaryLinks\":true,\"placement\":\"bottom\"},{\"name\":\"Адрес\",\"fieldCode\":\"ugd_ssr_cip_address\",\"placement\":\"bottom\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_cip_status\",\"placement\":\"bottom\"},{\"name\":\"Код центра информирования по переселению\",\"fieldCode\":\"sys_documentId\",\"placement\":\"bottom\",\"userprofileFilter\":\"userprofile.cips\"}],\"dictionaryLinks\":[{\"dictionary\":\"Prefect\",\"linkedDictionary\":\"District\",\"code\":\"perfectId\"}],\"isNewSearch\":true,\"defaultFilters\":{\"sys_documentId\":\"NONE\"}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7e3d53d2-c324-42f5-9c12-27a565bd85d6",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_cip_catalog_employee",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d8318f10-8edb-420b-9c59-07d39769dee1",
+          "nickAttr": "showcaseName",
+          "value": "Каталог центров информирования по переселению жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3de04cc7-b4ad-4250-8c87-e28a05956b9e",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5da405e6-a4aa-420f-9d8e-fa4d3b54865b",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "771fb3e7-1b31-4f69-97fd-0bdc5da919de",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d2984192-5e8d-4659-82ca-6f4aca474d0f",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

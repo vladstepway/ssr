@@ -1,0 +1,243 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "link",
+        "nickDictLink": "InformationObjectRegister",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "1625a9f0-2017-4456-acc3-32aaeb4690fa",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7df80397-673d-4637-b25b-5a3fa49a1978",
+          "nickAttr": "code",
+          "value": "UGD_SSR_EGRN-FLAT-REQUEST",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "10f8c66c-64b2-4e0b-9166-509e322da9e0",
+          "nickAttr": "fields",
+          "value": "f7ad9466-1e64-4427-aed9-ab3623e15f90",
+          "orders": 0,
+          "linkCode": "ugd_ssr_egrn_flat_unom"
+        },
+        {
+          "attrId": "4e1bb213-7877-41f3-aa95-16c936440dc1",
+          "nickAttr": "fields",
+          "value": "da2c5839-f18e-4d08-9afe-8997fbf36bf5",
+          "orders": 1,
+          "linkCode": "ugd_ssr_egrn_flat_address"
+        },
+        {
+          "attrId": "bd4a892d-06e7-4d17-a0e7-8367c63ce5a1",
+          "nickAttr": "fields",
+          "value": "4c80dde6-991f-4cf6-bdc4-62742182d5ef",
+          "orders": 2,
+          "linkCode": "ugd_ssr_egrn_flat_room_number"
+        },
+        {
+          "attrId": "31cb9732-da05-497f-ac65-468b70b5b2b0",
+          "nickAttr": "fields",
+          "value": "0c90dee8-640f-4984-a35f-70b219815269",
+          "orders": 3,
+          "linkCode": "ugd_ssr_egrn_flat_real_estate_id"
+        },
+        {
+          "attrId": "a1e4f56f-1378-48ed-ab26-72627a68b1f7",
+          "nickAttr": "fields",
+          "value": "cbff7e02-6d38-4cac-8be2-841d1a2b064b",
+          "orders": 4,
+          "linkCode": "ugd_ssr_egrn_flat_cco_id"
+        },
+        {
+          "attrId": "1815e388-01b5-48d4-bfea-2f17012ce362",
+          "nickAttr": "fields",
+          "value": "79a3fd96-72f2-4e20-a51c-13f5e10da8ce",
+          "orders": 5,
+          "linkCode": "ugd_ssr_egrn_flat_number"
+        },
+        {
+          "attrId": "a2980518-c8f1-43dc-b629-e2eb7bfbf1f2",
+          "nickAttr": "fields",
+          "value": "5b1270b3-18eb-409f-899f-1c5e327c45cc",
+          "orders": 6,
+          "linkCode": "ugd_ssr_egrn_flat_cadastral_number"
+        },
+        {
+          "attrId": "955eb8d3-cbc2-49a2-8370-17f79f53c481",
+          "nickAttr": "fields",
+          "value": "f543a499-9101-4082-9f5f-36d24e2de529",
+          "orders": 7,
+          "linkCode": "ugd_ssr_egrn_flat_floor"
+        },
+        {
+          "attrId": "049d1424-271d-4976-a705-1fb624796006",
+          "nickAttr": "name",
+          "value": "Сведения о запрошенных квартирах",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "25fc129d-e7f0-43bd-9b71-0c74137bcd2f",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "8b7def6c-1c7a-4a48-afde-65ce4dac8b9d",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "b6657c8e-e49c-4fd6-b2f9-5d1075314ad6",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "78693692-cd45-4362-be45-16f5698e222d",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

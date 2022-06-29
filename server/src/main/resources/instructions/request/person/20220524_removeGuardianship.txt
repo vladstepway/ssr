@@ -1,0 +1,5 @@
+Удалить заявление:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать DELETE /crud/delete/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = GUARDIANSHIP; id = e9e83cd3-3b74-4897-96c0-9206cebef8e2;
+4. Нажать Execute и убедиться, что статус код ответа 200

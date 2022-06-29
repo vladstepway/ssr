@@ -1,0 +1,362 @@
+{
+  "metaDict": {
+    "nick": "Permissions",
+    "name": "Разрешения",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Идентификатор ресурса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "name",
+        "name": "Описание ресурса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ к ресурсу",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "permitAll",
+        "name": "Признак общедоступного ресурса",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "a3fc5363-e2e5-4439-a558-7146b3005ba8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "064ec23a-0a80-4325-94fd-d53fa6a96b23",
+          "nickAttr": "code",
+          "value": "ugd_ssr_armCreateTaskIssueLetter",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4aa10788-9ce2-4bea-afa7-b9a5c2c08c43",
+          "nickAttr": "group",
+          "value": "UGD_SSR_CREATE_TASK_ISSUE_LETTER",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bdedc870-b0de-4db5-9dfc-af18bdfec5ad",
+          "nickAttr": "name",
+          "value": "Создание задачи на выдачу письма с предложением",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a16db8ca-e961-432e-b934-4b72ef1ccb89",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "917b0111-5765-4cb8-a518-2b8a34b1b99b",
+          "nickAttr": "code",
+          "value": "ugd_ssr_armCreateTaskShowApart",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3ce7e76c-4779-41b4-9764-9e010d6417e8",
+          "nickAttr": "group",
+          "value": "UGD_SSR_CREATE_TASK_SHOW_APART",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b22d438f-b1e4-43fe-9c73-9f7f8f6ba425",
+          "nickAttr": "name",
+          "value": "Создание задачи на показ квартиры",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "38732666-baa5-4ba5-8635-83badb6afaba",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9c0fa20b-5101-4996-900a-61d0eba3086f",
+          "nickAttr": "code",
+          "value": "ugd_ssr_armCreateTaskApply",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2e141b19-0b61-44ea-a35e-08122bf3e74b",
+          "nickAttr": "group",
+          "value": "UGD_SSR_CREATE_TASK_APPLY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0e61355d-a892-4ae6-b13b-be306b75bfc2",
+          "nickAttr": "name",
+          "value": "Создание задачи на прием заявления",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "662635bd-bfa9-4292-adff-c7c70377ba00",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "49049343-8773-4ffb-a597-30429626adbb",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addDashboardToArchive",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "183caf5f-f672-4a1b-a1a9-91e7f3ff17fe",
+          "nickAttr": "group",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f91c2067-efb9-4f5a-8c53-95b174d07efb",
+          "nickAttr": "name",
+          "value": "Кнопка \"Перенести в архив\" для информации о переселении",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "aeb1c069-e077-439b-946e-1ce62a5fad22",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "52682833-5496-4e37-a9ed-505806b7c593",
+          "nickAttr": "code",
+          "value": "ugd_ssr_editDashboardDs",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c5a154de-ee7b-4110-8c4e-0ff250ce6d32",
+          "nickAttr": "group",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "306c31e3-5ad6-4599-8dea-f41041f201f6",
+          "nickAttr": "group",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 1,
+          "linkCode": null
+        },
+        {
+          "attrId": "49da863b-4a33-4144-a25d-8410833ca7fb",
+          "nickAttr": "name",
+          "value": "Кнопка \"Редактировать (ДC)\" для информации о переселении",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "670484ca-f15e-41d8-8c51-d6e8d0c1ff9e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b453fe9f-2570-4fc2-b926-964007dfee01",
+          "nickAttr": "code",
+          "value": "ugd_ssr_editDashboardFond",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9b19c046-8d01-4eaf-83c2-a9c53772d7f7",
+          "nickAttr": "group",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_FOND",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "63daa913-86b1-4e1a-abea-354b944d9a78",
+          "nickAttr": "group",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 1,
+          "linkCode": null
+        },
+        {
+          "attrId": "a8d8a684-91dc-41f2-85c8-e180d85ec7e7",
+          "nickAttr": "name",
+          "value": "Кнопка \"Редактировать (Фонд)\" для информации о переселении",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ebb9d8a9-b92c-431e-80a9-97763f188072",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f9b31979-3775-4267-ac36-0e55c0c3f8a6",
+          "nickAttr": "code",
+          "value": "ugd_ssr_editDashboardDgi",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "176a9e7c-b6ac-4a26-8971-7338e8d281ee",
+          "nickAttr": "group",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGI",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "79b64c0d-4905-4e3f-90d5-81c143d1f7d1",
+          "nickAttr": "group",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 1,
+          "linkCode": null
+        },
+        {
+          "attrId": "101c9fa8-92e0-4590-b9ae-85cc1098c31f",
+          "nickAttr": "name",
+          "value": "Кнопка \"Редактировать (ДГИ)\" для информации о переселении",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9914db65-56a9-4380-9282-35444b5e7205",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a7e28a52-2087-4a8a-aeea-d2c7c8c9e053",
+          "nickAttr": "code",
+          "value": "ugd_ssr_editDashboardDgp",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "942f55a8-79aa-46b9-a297-aae22a07b1b9",
+          "nickAttr": "group",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a0036e12-aafc-4921-8080-fb5c7df487da",
+          "nickAttr": "group",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 1,
+          "linkCode": null
+        },
+        {
+          "attrId": "72d5de30-8e36-49e5-89ff-718b727f9f8c",
+          "nickAttr": "name",
+          "value": "Кнопка \"Редактировать (ДГП)\" для информации о переселении",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0a58e1d5-f3d1-426c-bd7a-d3ac67341282",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "71da74db-cd61-44b3-b3e1-b1c387ccf7ae",
+          "nickAttr": "code",
+          "value": "ugd_ssr_publishDashboard",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "460f73a8-47f1-485c-9be4-245bed0587fa",
+          "nickAttr": "group",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8ebfb44c-b33c-4a4f-a9cb-86eb62ab1d5c",
+          "nickAttr": "name",
+          "value": "Публикация дашборда админом",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "metaDict": {
+    "nick": "Actions",
+    "name": "Возможности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "disabled",
+        "name": "Признак неактивности",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "URL адрес страницы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "theme",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "7d686ac9-e506-49a0-9cab-7a8e47aa283d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "186b531a-e453-45e9-b915-e3721007c894",
+          "nickAttr": "code",
+          "value": "ugd_ssr_signContract",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ab4281e7-f831-4af2-9513-6bccf3f8aa30",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f503fc41-569e-495b-bdbf-1c352ea1dfba",
+          "nickAttr": "group",
+          "value": "UGD_SSR_CONTRACT_SIGN",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b36da294-bc7c-4d93-af0c-dd339b67a4b3",
+          "nickAttr": "name",
+          "value": "Подписать договоры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8ec421ef-8b2d-4b8c-8342-d8ed6b867712",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a004d769-23b6-4531-b9e9-85ebaa0481f4",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/sign-contracts",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+<demo:demo xmlns:demo="http://www.cdp.org/demo">
+    <documentID>testDocID</documentID>
+    <main>
+        <regNumber>testRegNumber</regNumber>
+    </main>
+</demo:demo>

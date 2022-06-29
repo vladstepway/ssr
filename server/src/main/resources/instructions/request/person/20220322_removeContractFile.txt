@@ -1,0 +1,43 @@
+Удалить файл договора из жителя 5f512f4b-6c15-4fce-ad0e-20b256f7da8b:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 5f512f4b-6c15-4fce-ad0e-20b256f7da8b; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/actSignDate"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/contractSignDate"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/techInfo"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/files/file/7"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/files/file/6"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/20"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/19"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/14"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/13"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

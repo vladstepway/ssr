@@ -1,0 +1,60 @@
+mqetpmv:
+  etp-profiles:
+    # Запрос объектов капитального строительства
+    UGD_RSM_COURT_TASK_INC:
+      message-type: UGD_RSM_COURT_TASK_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.COURT
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_RSM_COURT_STATUS_OUT:
+      message-type: UGD_RSM_COURT_STATUS_OUT
+      inbound: false
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.ETP.COURT_DEL
+    # Поток ДГИ №17. Сведения по докупке и компенсации
+    UGD_APT_ADDITIONAL_STATUS_INC:
+      message-type: UGD_APT_ADDITIONAL_STATUS_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.APT_ADDITIONAL_DEL
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_APT_ADDITIONAL_TASK_OUT:
+      message-type: UGD_APT_ADDITIONAL_TASK_OUT
+      inbound: false
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.ETP.APT_ADDITIONAL
+    # Поток ДГИ №18. Сведения для сверки жителей
+    UGD_AFFAIR_COLLATION_STATUS_INC:
+      message-type: UGD_AFFAIR_COLLATION_STATUS_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.REPORT
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    # Поток ДГИ №18. Отчет о сверке жителей
+    UGD_AFFAIR_COLLATION_TASK_OUT:
+      message-type: UGD_AFFAIR_COLLATION_TASK_OUT
+      inbound: false
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.ETP.REQUEST_CITIZEN

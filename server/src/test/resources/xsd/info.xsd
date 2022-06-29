@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--cloner:skipFile-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.some.org/info.xsd">
+    <xs:complexType name="info">
+        <xs:sequence>
+            <xs:element name="birthday" type="xs:date"/>
+            <xs:element name="lastLoginDateTime" type="xs:dateTime"/>
+            <xs:element name="registrationDate" type="xs:date"/>
+            <xs:element name="isEmailConfirmed" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:simpleType name="id">`
+        <xs:restriction base="xs:int"/>
+    </xs:simpleType>
+</xs:schema>

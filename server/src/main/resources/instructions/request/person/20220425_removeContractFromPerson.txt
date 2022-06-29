@@ -1,0 +1,25 @@
+Удалить проект договора из жителя c7996abc-7b7d-4429-bdb5-397a1b3c5600:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = c7996abc-7b7d-4429-bdb5-397a1b3c5600; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/newFlatInfo/newFlat/0/event",
+        "value": "2"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/newFlatInfo/newFlat/0/orderId"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/relocationStatus",
+        "value": "4"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "961716ac-04ee-4cec-a2b3-bd85b19431bd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fd71ce24-bdaa-457b-af7b-2b1ba9396dd4",
+          "nickAttr": "code",
+          "value": "ugd_ssr_person_upload_log_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "88820d85-6990-473f-84a9-f5e9965d7bef",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_PERSON-UPLOAD-LOG",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "49d09f5d-7390-43a4-bf9a-d2070954d07a",
+          "nickAttr": "documentName",
+          "value": "Журнал загрузки жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8f5ec6d3-f693-4058-93b1-3c298b86b686",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Журнал загрузки жителей\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Журнал загрузки жителей</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableFilter\":true,\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по дате загрузки, имени пользователя, имени файла, статусу, дате завершения загрузки\",\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_person_upload_log_start_date\",\"type\":\"date\",\"name\":\"Дата загрузки\",\"sortable\":true,\"filterable\":true,\"defaultSorting\":\"DESC\",\"isSearchable\":true},{\"code\":\"ugd_ssr_person_upload_log_username\",\"type\":\"text\",\"name\":\"Пользователь\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_upload_log_filename\",\"type\":\"text\",\"name\":\"Имя файла\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_upload_log_status\",\"type\":\"text\",\"name\":\"Статус\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_upload_log_end_date\",\"type\":\"date\",\"name\":\"Дата завершения\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_upload_log_link\",\"type\":\"text\",\"name\":\"Журнал загрузки\",\"sortable\":true,\"filterable\":true}],\"tableColumns\":[{\"name\":\"Дата загрузки\",\"fieldCode\":\"ugd_ssr_person_upload_log_start_date\",\"template\":\"{{item.ugd_ssr_person_upload_log_start_date | date:'dd.MM.yyyy HH:mm'}}\"},{\"name\":\"Пользователь\",\"fieldCode\":\"ugd_ssr_person_upload_log_username\",\"template\":\"{{item.ugd_ssr_person_upload_log_username}}\"},{\"name\":\"Имя файла\",\"fieldCode\":\"ugd_ssr_person_upload_log_filename\",\"template\":\"{{item.ugd_ssr_person_upload_log_filename}}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_person_upload_log_status\",\"template\":\"{{item.ugd_ssr_person_upload_log_status}}\"},{\"name\":\"Дата завершения\",\"fieldCode\":\"ugd_ssr_person_upload_log_end_date\",\"template\":\"{{item.ugd_ssr_person_upload_log_end_date  | date:'dd.MM.yyyy HH:mm'}}\"},{\"name\":\"Журнал загрузки\",\"fieldCode\":\"ugd_ssr_person_upload_log_link\",\"template\":\"<a style=\\\"color: #676a6c; text-decoration: underline;\\\" \\n href=\\\"/filestore/v1/files/{{item.ugd_ssr_person_upload_log_link}}?systemCode=ugd\\\"\\ntarget=\\\"_blank\\\">\\nЖурнал\\n</a>\"}],\"filters\":[{\"name\":\"Дата загрузки\",\"fieldCode\":\"ugd_ssr_person_upload_log_start_date\",\"placement\":\"bottom\"},{\"name\":\"Пользователь\",\"fieldCode\":\"ugd_ssr_person_upload_log_username\",\"placement\":\"bottom\"},{\"name\":\"Имя файла\",\"fieldCode\":\"ugd_ssr_person_upload_log_filename\",\"placement\":\"bottom\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_person_upload_log_status\",\"placement\":\"bottom\"},{\"name\":\"Дата завершения\",\"fieldCode\":\"ugd_ssr_person_upload_log_end_date\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Дата загрузки\",\"fieldCode\":\"ugd_ssr_person_upload_log_start_date\"},{\"name\":\"Пользователь\",\"fieldCode\":\"ugd_ssr_person_upload_log_username\"},{\"name\":\"Имя файла\",\"fieldCode\":\"ugd_ssr_person_upload_log_filename\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_person_upload_log_status\"},{\"name\":\"Дата завершения\",\"fieldCode\":\"ugd_ssr_person_upload_log_end_date\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bc23f051-e8be-49e3-a187-65df438689fe",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_person_upload_log",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "70880a8b-665c-4ddc-ad5d-fd2248fe475c",
+          "nickAttr": "showcaseName",
+          "value": "Журнал загрузки жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2c7538f2-a6e2-4a95-ba4e-4555fd7fdaa8",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "001de8d9-5627-4302-a773-a4ba66cfe937",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fc3d641a-677c-4f35-a379-c058934efd39",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "900ba6d3-c00a-4a2f-8333-26535bc1b73c",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

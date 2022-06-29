@@ -1,0 +1,144 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации (dataset)",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Настройка страницы Реестры информации",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "fd5c543b-cef7-4811-9c45-c8a90bef8172",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "89700a76-1143-44ef-a0ea-9ff6fa65de13",
+          "nickAttr": "code",
+          "value": "UGD_SSR_CIPS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0ab9d654-4a09-4cbb-af94-d912fe371125",
+          "nickAttr": "description",
+          "value": "Реестр центров информирования по переселению жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fc849c82-b564-453c-9d51-02c07c269d30",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_CIP_VIEW",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "527d05eb-f621-4079-b5a6-c5cf820d7792",
+          "nickAttr": "name",
+          "value": "ССР. Реестр центров информирования по переселению жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fb0e7474-b309-4a0a-9d61-4adfb47a0da9",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "76f19053-37da-41f8-8c9e-10e85837f690",
+          "orders": 0,
+          "linkCode": "ugd_ssr_cip_catalog_code"
+        }
+      ]
+    }
+  ]
+}

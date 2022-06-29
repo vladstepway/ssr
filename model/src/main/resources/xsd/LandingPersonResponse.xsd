@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="personRes" type="personResType">
+		<xs:annotation>
+			<xs:documentation>Ответ с данными по жителю и его квартирам (запрос по СНИЛС)</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="personResType">
+		<xs:annotation>
+			<xs:documentation>Формат JSON ответа для лэндинга</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="snils" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>СНИЛС жителя - из запроса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="waiter" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Требуется улучшение жилищных условий (очередник/не очередник)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="marital" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Семейное положение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contract" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Между супругами заключен брачный договор (уточняющий)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="families" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Данные по помещениям жителя</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="family" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Данные одного помещения</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="affairId" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>ид помещения - affairId</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="roomType" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Тип помещения</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="encumbrances" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Наличие обременений</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="invalid" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Наличие недееспособных собственников/нанимателей</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="regDate" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Дата регистрации права собственности (уточняющий - До 31.01.1998 г.,После 31.01.1998 г.) 1 - до, 2 - после, 0 - нет данных</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="statusLiving" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Основание проживания - человека в этом помещении</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="spouse" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Супруг(а) участник договора собственности/найма (уточняющий)</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="residents" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Остальные собственники/наниматели/зарегистрированные</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="resident" maxOccurs="unbounded">
+													<xs:annotation>
+														<xs:documentation>Данные жителя</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="birthDate" type="xs:date">
+																<xs:annotation>
+																	<xs:documentation>Дата рождения</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="statusLiving" type="xs:string">
+																<xs:annotation>
+																	<xs:documentation>Основание проживания</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="flat">
+										<xs:annotation>
+											<xs:documentation>Данные расселяемой квартиры</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="snosUNOM" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>УНОМ старого жилья</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="snosAddress" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Адрес старого жилья</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="snosFlatNum" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Номер квартиры</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="snosRooms" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Номера комнат</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="snosRoomCount" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Параметры старого жилья (комнатность)</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="snosLivSquare" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Жилая площадь</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="snosTotSquare" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Общая площадь</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="snosFloor" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Этаж квартиры</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="offer" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Данные о предложении</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="letterDate" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Письмо с предложением в ЭВ (по человеку)</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="letterId" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Идентификатор письма с предложением (по человеку)</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="letterStatus" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Статус доставки письма с предложением (1040 - доставлено, 1075-прочитано)</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="option" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Предложенный вариант жилья
+															0 - Нет данных
+															1 - Меньшей площади с компенсацией (ФР tradeType=4)
+															2 - С улучшением жилищных условий (очередники)
+															3 - Той же площади в другом районе (ФР tradeType=5)
+															4 - Той же площади в том же районе (Равнозначное)</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="views" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Осмотры квартиры</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="viewFlat" type="xs:string">
+																<xs:annotation>
+																	<xs:documentation>Осмотр новой квартиры  (1 - проводился, 0 - не проводился)</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="view" maxOccurs="unbounded">
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="viewDate" type="xs:date">
+																			<xs:annotation>
+																				<xs:documentation>Дата осмотр квартиры</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="decision" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Решение по предложению</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="decisionResult" type="xs:string">
+																<xs:annotation>
+																	<xs:documentation>Решение по предложению (не завязано на осмотр квартиры - при докупке мб получено Заявление о  согласии без осмотра)  (по квартире)
+																		0 - нет данных, 1 - Согласие, 2 - Отказ, 3 - Выбрал денежную компенсацию, 4 - Выбрал равноценное жилье</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="decisionDate" type="xs:date">
+																<xs:annotation>
+																	<xs:documentation>Дата решения</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="fullPacket" type="xs:string">
+																<xs:annotation>
+																	<xs:documentation>Полный или не полный пакет документов (1 - полный, 2 - не полный, 0 - нет данных)</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="contract" minOccurs="0">
+																<xs:annotation>
+																	<xs:documentation>Данные договора</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="removalType" type="xs:string">
+																			<xs:annotation>
+																				<xs:documentation>Тип проекта договора</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="contractProj" type="xs:string" minOccurs="0">
+																			<xs:annotation>
+																				<xs:documentation>Состояние проекта договора (0 - Отсутствует, 1 - Проект договора подготовлен, 1040 - Доставлен, 1075 - Прочитан, 3 - Готов к подписанию в ЦИП)</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="contractStatus" type="xs:string" minOccurs="0">
+																			<xs:annotation>
+																				<xs:documentation>Статус договора (0 - Нет данных, 1 - Не подписан, 2 - Подписан, 3 -Выдан на руки)</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="contractSignDate" type="xs:date" minOccurs="0">
+																			<xs:annotation>
+																				<xs:documentation>Дата подписания договора</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="contractSignPlace" type="xs:string" minOccurs="0">
+																			<xs:annotation>
+																				<xs:documentation>Место подписания договора (0 - Нети данных, 1 - ЦИП, 2 - Нотариус)</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="keyPass" type="xs:string" minOccurs="0">
+																			<xs:annotation>
+																				<xs:documentation>Сданы ключи от старой квартиры (0 - не сданы, 1 - сданы)</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="keyIssue" type="xs:string" minOccurs="0">
+																			<xs:annotation>
+																				<xs:documentation>Выданы ключи от новой квартиры (0 - не выданы, 1 - выданы)</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="newFlat" minOccurs="0" maxOccurs="unbounded">
+																			<xs:annotation>
+																				<xs:documentation>Заселяемая квартира</xs:documentation>
+																			</xs:annotation>
+																			<xs:complexType>
+																				<xs:sequence>
+																					<xs:element name="newUNOM" type="xs:string">
+																						<xs:annotation>
+																							<xs:documentation>УНОМ дома</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="newAddress" type="xs:string" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Адрес нового жилья</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="newFlatNum" type="xs:string">
+																						<xs:annotation>
+																							<xs:documentation>Номер квартиры</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="newRoomCount" type="xs:string" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Количество комнат</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="newLivSquare" type="xs:string" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Жилая площадь</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="newTotSquare" type="xs:string" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Общая площадь</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="newFloor" type="xs:string" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Этаж квартиры</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="imperfections" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Недоделки</xs:documentation>
+																						</xs:annotation>
+																						<xs:complexType>
+																							<xs:sequence>
+																								<xs:element name="defect" type="xs:string">
+																									<xs:annotation>
+																										<xs:documentation>Недоделки (после осмотра квартиры)  (по квартире)
+																											0 - сведения отсутствуют, 1 - недоделки имеются, 2 -устранены и требуется осмотр, 3 - устранены и житель согласился</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="imperfection" maxOccurs="unbounded">
+																									<xs:annotation>
+																										<xs:documentation>Информация по недоделке</xs:documentation>
+																									</xs:annotation>
+																									<xs:complexType>
+																										<xs:sequence>
+																											<xs:element name="actId" type="xs:string">
+																												<xs:annotation>
+																													<xs:documentation>ИД акта по дефектам</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																											<xs:element name="defectItem" minOccurs="0" maxOccurs="unbounded">
+																												<xs:annotation>
+																													<xs:documentation>Данные по дефектам</xs:documentation>
+																												</xs:annotation>
+																												<xs:complexType>
+																													<xs:sequence>
+																														<xs:element name="description" type="xs:string">
+																															<xs:annotation>
+																																<xs:documentation>Описание дефекта</xs:documentation>
+																															</xs:annotation>
+																														</xs:element>
+																														<xs:element name="flatElement" type="xs:string">
+																															<xs:annotation>
+																																<xs:documentation>Комната, где обнаружен дефект</xs:documentation>
+																															</xs:annotation>
+																														</xs:element>
+																													</xs:sequence>
+																												</xs:complexType>
+																											</xs:element>
+																											<xs:element name="defectsEliminatedNotificationDate" type="xs:date">
+																												<xs:annotation>
+																													<xs:documentation>Дата устранения дефекта</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																											<xs:element name="acceptedDefectsDate" type="xs:date">
+																												<xs:annotation>
+																													<xs:documentation>Дата принятия устранения дефекта</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																											<xs:element name="filingDate" type="xs:dateTime">
+																												<xs:annotation>
+																													<xs:documentation>Дата и время подачи акта</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																										</xs:sequence>
+																									</xs:complexType>
+																								</xs:element>
+																							</xs:sequence>
+																						</xs:complexType>
+																					</xs:element>
+																					<xs:element name="shipping" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Данные по переезду</xs:documentation>
+																						</xs:annotation>
+																						<xs:complexType>
+																							<xs:sequence>
+																								<xs:element name="eno" type="xs:string" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Номер заявления</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="shippingDateEnd" type="xs:date" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Дата окончания переезда</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="processInstanceId" type="xs:string" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>ИД процесса переезде</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="shippingDateStart" type="xs:date" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Дата начала переезда</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="shippingDateTimeInfo" type="xs:string" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Дата и время переезда - описание</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="status" type="xs:string" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Статус переезда</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																							</xs:sequence>
+																						</xs:complexType>
+																					</xs:element>
+																				</xs:sequence>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="additions" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Обращения на докупку</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="addition" maxOccurs="unbounded">
+													<xs:annotation>
+														<xs:documentation>Обращение на докупку</xs:documentation>
+													</xs:annotation>
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="applicationId" type="xs:string">
+																<xs:annotation>
+																	<xs:documentation>ИД обращения на докупку</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="applicationDate" type="xs:date">
+																<xs:annotation>
+																	<xs:documentation>Дата обращения на докупку</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="tradeType" type="xs:string">
+																<xs:annotation>
+																	<xs:documentation>Тип обращения на докупку (1 - Докупка
+																		2 - Докупка с компенсацией
+																		3 - Покупка в течение 2-х лет)</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="moneyType" type="xs:string">
+																<xs:annotation>
+																	<xs:documentation>Средства докупа (уточняющий)</xs:documentation>
+																</xs:annotation>
+															</xs:element>
+															<xs:element name="decision" minOccurs="0">
+																<xs:annotation>
+																	<xs:documentation>Решение по докупке</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="commissionDecisionResult" type="xs:string">
+																			<xs:annotation>
+																				<xs:documentation>Результат решения Комиссии
+																					1 - положительное
+																					2 - отрицательное
+																					3 - о проведении аукциона</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="decisionDate" type="xs:date">
+																			<xs:annotation>
+																				<xs:documentation>Дата решения</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="auction" type="xs:string">
+																			<xs:annotation>
+																				<xs:documentation>Результаты аукциона
+																					1 - Состоявшийся
+																					2 - Не состоявшийся</xs:documentation>
+																			</xs:annotation>
+																		</xs:element>
+																		<xs:element name="contract" minOccurs="0">
+																			<xs:annotation>
+																				<xs:documentation>Данные договора</xs:documentation>
+																			</xs:annotation>
+																			<xs:complexType>
+																				<xs:sequence>
+																					<xs:element name="contractProj" type="xs:string">
+																						<xs:annotation>
+																							<xs:documentation>Состояние проекта договора (0 - Отсутствует, 1 - Проект договора подготовлен, 1040 - Доставлен, 1075 - Прочитан, 3 - Готов к подписанию в ЦИП)</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="contractStatus" type="xs:string" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Статус договора (0 - Нет данных, 1 - Не подписан, 2 - Подписан, 3 -Выдан на руки)</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="contractSignDate" type="xs:date" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Дата подписания договора</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="contractSignPlace" type="xs:string" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Место подписания договора (0 - Нети данных, 1 - ЦИП, 2 - Нотариус)</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="keyPass" type="xs:string" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Сданы ключи от старой квартиры (0 - не сданы, 1 - сданы)</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="keyIssue" type="xs:string" minOccurs="0">
+																						<xs:annotation>
+																							<xs:documentation>Выданы ключи от новой квартиры (0 - не выданы, 1 - выданы)</xs:documentation>
+																						</xs:annotation>
+																					</xs:element>
+																					<xs:element name="newFlat" minOccurs="0" maxOccurs="unbounded">
+																						<xs:annotation>
+																							<xs:documentation>Заселяемая квартира</xs:documentation>
+																						</xs:annotation>
+																						<xs:complexType>
+																							<xs:sequence>
+																								<xs:element name="newUNOM" type="xs:string">
+																									<xs:annotation>
+																										<xs:documentation>УНОМ дома</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="newAddress" type="xs:string" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Адрес нового жилья</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="newFlatNum" type="xs:string">
+																									<xs:annotation>
+																										<xs:documentation>Номер квартиры</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="newRoomCount" type="xs:string" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Количество комнат</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="newLivSquare" type="xs:string" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Жилая площадь</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="newTotSquare" type="xs:string" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Общая площадь</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="newFloor" type="xs:string" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Этаж квартиры</xs:documentation>
+																									</xs:annotation>
+																								</xs:element>
+																								<xs:element name="imperfections" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Недоделки</xs:documentation>
+																									</xs:annotation>
+																									<xs:complexType>
+																										<xs:sequence>
+																											<xs:element name="defect" type="xs:string">
+																												<xs:annotation>
+																													<xs:documentation>Недоделки (после осмотра квартиры)  (по квартире)
+																														0 - сведения отсутствуют, 1 - недоделки имеются, 2 -устранены и требуется осмотр, 3 - устранены и житель согласился</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																											<xs:element name="imperfection" maxOccurs="unbounded">
+																												<xs:annotation>
+																													<xs:documentation>Информация по недоделке</xs:documentation>
+																												</xs:annotation>
+																												<xs:complexType>
+																													<xs:sequence>
+																														<xs:element name="actId" type="xs:string">
+																															<xs:annotation>
+																																<xs:documentation>ИД акта по дефектам</xs:documentation>
+																															</xs:annotation>
+																														</xs:element>
+																														<xs:element name="defectItem" minOccurs="0" maxOccurs="unbounded">
+																															<xs:annotation>
+																																<xs:documentation>Данные по дефектам</xs:documentation>
+																															</xs:annotation>
+																															<xs:complexType>
+																																<xs:sequence>
+																																	<xs:element name="description" type="xs:string">
+																																		<xs:annotation>
+																																			<xs:documentation>Описание дефекта</xs:documentation>
+																																		</xs:annotation>
+																																	</xs:element>
+																																	<xs:element name="flatElement" type="xs:string">
+																																		<xs:annotation>
+																																			<xs:documentation>Комната, где обнаружен дефект</xs:documentation>
+																																		</xs:annotation>
+																																	</xs:element>
+																																</xs:sequence>
+																															</xs:complexType>
+																														</xs:element>
+																														<xs:element name="defectsEliminatedNotificationDate" type="xs:date">
+																															<xs:annotation>
+																																<xs:documentation>Дата устранения дефекта</xs:documentation>
+																															</xs:annotation>
+																														</xs:element>
+																														<xs:element name="acceptedDefectsDate" type="xs:date">
+																															<xs:annotation>
+																																<xs:documentation>Дата принятия устранения дефекта</xs:documentation>
+																															</xs:annotation>
+																														</xs:element>
+																														<xs:element name="filingDate" type="xs:dateTime">
+																															<xs:annotation>
+																																<xs:documentation>Дата и время подачи акта</xs:documentation>
+																															</xs:annotation>
+																														</xs:element>
+																													</xs:sequence>
+																												</xs:complexType>
+																											</xs:element>
+																										</xs:sequence>
+																									</xs:complexType>
+																								</xs:element>
+																								<xs:element name="shipping" minOccurs="0">
+																									<xs:annotation>
+																										<xs:documentation>Данные по переезду</xs:documentation>
+																									</xs:annotation>
+																									<xs:complexType>
+																										<xs:sequence>
+																											<xs:element name="eno" type="xs:string" minOccurs="0">
+																												<xs:annotation>
+																													<xs:documentation>Номер заявления</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																											<xs:element name="shippingDateEnd" type="xs:date" minOccurs="0">
+																												<xs:annotation>
+																													<xs:documentation>Дата окончания переезда</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																											<xs:element name="processInstanceId" type="xs:string" minOccurs="0">
+																												<xs:annotation>
+																													<xs:documentation>ИД процесса переезде</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																											<xs:element name="shippingDateStart" type="xs:date" minOccurs="0">
+																												<xs:annotation>
+																													<xs:documentation>Дата начала переезда</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																											<xs:element name="shippingDateTimeInfo" type="xs:string" minOccurs="0">
+																												<xs:annotation>
+																													<xs:documentation>Дата и время переезда - описание</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																											<xs:element name="status" type="xs:string" minOccurs="0">
+																												<xs:annotation>
+																													<xs:documentation>Статус переезда</xs:documentation>
+																												</xs:annotation>
+																											</xs:element>
+																										</xs:sequence>
+																									</xs:complexType>
+																								</xs:element>
+																							</xs:sequence>
+																						</xs:complexType>
+																					</xs:element>
+																				</xs:sequence>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="cipData" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Данные ЦИП</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="cipAddress" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Адрес ЦИП</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="cipPhone" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Телефон ЦИП</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="cipTime" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Время работы ЦИП</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

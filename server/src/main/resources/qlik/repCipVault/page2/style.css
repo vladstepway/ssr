@@ -1,0 +1,152 @@
+.qv-object-repCipVault2 div.qv-object-content-container {
+    overflow: auto;
+}
+
+* {
+    box-sizing: border-box !important;
+}
+
+.qv-object-repCipVault2 caption {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2258b7;
+}
+
+.qv-object-repCipVault2 table {
+    position: relative;
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #0C213B;
+    font-size: 13px;
+    border-collapse: separate;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.qv-object-repCipVault2 thead {
+    font-weight: normal;
+    border: 1px solid #4e4e4e !important;
+}
+
+.qv-object-repCipVault2 th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #F4F1F8;
+    padding: 2px 5px;
+    border: 1px solid #484848;
+}
+
+.qv-object-repCipVault2 thead tr:nth-child(2) th {
+    position: sticky;
+    top: 25px;
+}
+
+.qv-object-repCipVault2 thead tr:nth-child(3) th {
+    position: sticky;
+    top: 110px;
+}
+
+.qv-object-repCipVault2 thead tr:nth-child(4) th {
+    position: sticky;
+    top: 135px;
+}
+
+@media screen and (min-width: 2350px) {
+    .qv-object-repCipVault2 thead tr:nth-child(3) th {
+        position: sticky;
+        top: 91px;
+    }
+
+    .qv-object-repCipVault2 thead tr:nth-child(4) th {
+        position: sticky;
+        top: 115px;
+    }
+}
+
+.qv-object-repCipVault2 table th {
+    vertical-align: middle;
+}
+
+.qv-object-repCipVault2 .resettled {
+    background-color: #cccbcb !important;
+}
+
+.qv-object-repCipVault2 td {
+    padding: 2px 5px;
+    border: 1px solid #4e4e4e;
+    text-align: center;
+}
+
+.qv-object-repCipVault2 p.content-vertical {
+    transform: rotateZ(269deg);
+    white-space: nowrap;
+}
+
+.qv-object-repCipVault2 .border-dotted {
+    border-style: dotted;
+}
+
+.qv-object-repCipVault2 .border-top-dotted {
+    border-top-style: dotted;
+    border-left: none;
+    border-bottom: none;
+}
+
+.qv-object-repCipVault2 .border-bottom-none {
+    border-bottom: none;
+    border-left: none;
+}
+
+.qv-object-repCipVault2 .border-right-solid {
+    border-right-style: solid;
+}
+
+.qv-object-repCipVault2 .bg-white:not(.resettled) {
+    background-color: #ffffff !important;
+}
+
+.qv-object-repCipVault2 .bg-green:not(.resettled) {
+    background-color: #cff2cf !important;
+}
+
+.qv-object-repCipVault2 .text-blue {
+    color: #2258b7;
+}
+
+.qv-object-repCipVault2 .text-black {
+    color: #000000;
+}
+
+.qv-object-repCipVault2 .font-bold {
+    font-weight: bold;
+}
+
+.qv-object-repCipVault2 ul {
+    list-style-type: none;
+    margin: 20px
+}
+
+.qv-object-repCipVault2 li {
+    margin-bottom: 10px
+}
+
+.qv-object-repCipVault2 .square {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+    min-width: 28px;
+    text-align: center;
+}
+
+.qv-object-repCipVault2 .legend {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.qv-object-repCipVault2 .legend-title {
+    margin-bottom: 10px
+}

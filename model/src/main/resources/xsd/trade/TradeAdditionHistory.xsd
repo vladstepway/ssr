@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/trade"
+           targetNamespace="http://www.ugd.croc.ru/ssr/trade">
+    <xs:include schemaLocation="enums.xsd"/>
+    <xs:element name="tradeAdditionHistory">
+        <xs:annotation>
+            <xs:documentation>Документ с информацией об истории изменения загруженной партии данных о сделках.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="tradeAdditionHistoryData" type="TradeAdditionHistoryType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="TradeAdditionHistoryType">
+        <xs:annotation>
+            <xs:documentation>Документ с информацией об истории изменения загруженной партии данных о сделках.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="uploadedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Id загруженного файла в системе FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="uniqueRecordKey" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уникальный идентификатор записи. Формируется как affairId + letterId.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="tradeAdditionDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уникальный идентификатор документа TradeAddition.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sellId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уникальный номер реализации документа TradeAddition</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="updateDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время загрузки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pageName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Название страницы</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="recordNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Порядковый номер записи в таблице.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isIndexed" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Был ли проиндексирован документ для которого записана история.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="comment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий к загрузке</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="changes" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий по изменениям существующей записи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="mfrFlowFileStoreId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД в FileStore файла потока из МФР</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

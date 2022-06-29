@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/agreementApplication"
+           targetNamespace="http://www.ugd.croc.ru/ssr/agreementApplication"
+           elementFormDefault="qualified">
+    <xs:element name="AgreementApplication">
+        <xs:annotation>
+            <xs:documentation>Заявлений о согласии/отказе на предложенную квартиру</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="agreementApplicationData" type="AgreementApplicationData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="AgreementApplicationData">
+        <xs:annotation>
+            <xs:documentation>Сведения о заявлении о согласии/отказе на предложенную квартиру</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eno" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время подачи заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор статуса заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affairId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор семьи заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letterId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicant" type="Applicant">
+                <xs:annotation>
+                    <xs:documentation>Данные о заявителе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="decision" type="AgreementApplicationDecision">
+                <xs:annotation>
+                    <xs:documentation>Решение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Applicant">
+        <xs:annotation>
+            <xs:documentation>Данные о заявителе</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Фамилия заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Имя заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="email" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Электронная почта заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="phone" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер телефона заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="additionalPhone" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дополнительный номер телефона заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="addressFrom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес отселяемой квартиры (откуда)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="AgreementApplicationDecision">
+        <xs:annotation>
+            <xs:documentation>Решение</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="decisionResult" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Решение
+                        1 - Согласие на предложенную квартиру
+                        2 - Отказ от предложенной квартиры
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="declineReason" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина отказа (При выборе Отказ от предложенной квартиры)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="decisionDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время решения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signData" type="SignData" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Данные о подписи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="deadlineDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Срок решения (срок/период действия предложения,
+                        рассчитывается "время получение предложения (дата)" +
+                        "Срок действия предложения(по умолчанию - 7 дней)")
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SignData">
+        <xs:annotation>
+            <xs:documentation>Данные о подписи</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="signId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД подписи файла в fileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isVerified" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Подпись подтверждена</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="number" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер электронной подписи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ФИО владельца</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dateTimeFrom" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время выдачи ЭП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dateTimeTo" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время окончания действия ЭП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время подписания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

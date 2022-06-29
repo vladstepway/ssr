@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/disabledPerson"
+           targetNamespace="http://www.ugd.croc.ru/ssr/disabledPerson"
+           elementFormDefault="qualified">
+    <xs:element name="DisabledPerson">
+        <xs:annotation>
+            <xs:documentation>Сведения о маломобильности жителя</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="disabledPersonData" type="DisabledPersonData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="DisabledPersonData">
+        <xs:annotation>
+            <xs:documentation>Сведения о маломобильности жителя</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД документа жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ФИО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Фамилия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Имя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="birthDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата рождения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="snils" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>СНИЛС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="usingWheelchair" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использование кресла-коляски</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>УНОМ дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="addressFrom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес отселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Район</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="area" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Округ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="district" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Район</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="createdAt" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата создания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="deleted" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Признак удаления сведений о маломобильности</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="uniqueExcelRecordId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уникальный идентификатор строки в excel (вычисляемое поле)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="disabledPersonImportDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД импортированного документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

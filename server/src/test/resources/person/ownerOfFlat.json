@@ -1,0 +1,43 @@
+{
+  "id": "c06fa4f0-1bf8-4ed3-8c33-c7a47f27bff8",
+  "Person": {
+    "personData": {
+      "fio": "Гавриленко Никита Сергеевич",
+      "unom": 7908,
+      "snils": "000-098-732 05",
+      "ssoID": "0a477eef-2427-4b74-8cb9-07c1ff6f30be",
+      "owner": false,
+      "flatID": "648312045",
+      "gender": "МУЖСКОЙ",
+      "regDate": "2015-05-13",
+      "regType": "постоянно",
+      "relType": "заявитель",
+      "lastName": "Гавриленко",
+      "passport": "свидетельство о рождении № 715113 VII-МЮ, выдан Зеленоградский отдел    ЗАГС Управления ЗАГС  Москвы 27.04.2000",
+      "firstName": "Никита",
+      "birthDate": "2000-04-15",
+      "isArchive": false,
+      "middleName": "Сергеевич",
+      "newFlatInfo": {
+        "newFlat": [{
+          "event": "0",
+          "ccoUnom": 7775525,
+          "orderId": "120080",
+          "ccoFlatNum": "22"
+        }]
+      },
+      "statusLiving": "1",
+      "birthLocation": "Российская Федерация, Москва ",
+      "relocationStatus": "4",
+      "UpdatedFromELKdate": "2020-10-28",
+      "UpdatedFromPFRdate": "2020-10-28",
+      "UpdatedFromELKstatus": "обогащено",
+      "UpdatedFromPFRstatus": "обогащено",
+      "IntegrationNumberMale": "0874-9000155-067801-079252/20",
+      "IntegrationNumberFemale": "0874-9000155-067801-079253/20"
+    },
+    "documentID": "c06fa4f0-1bf8-4ed3-8c33-c7a47f27bff8",
+    "folderGUID": "6a2a4467-5446-4004-9102-e84252d5376b"
+  },
+  "folderId": "6a2a4467-5446-4004-9102-e84252d5376b"
+}

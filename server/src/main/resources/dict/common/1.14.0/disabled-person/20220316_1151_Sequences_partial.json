@@ -1,0 +1,163 @@
+{
+  "metaDict": {
+    "nick": "Sequences",
+    "name": "Последовательности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код последовательности",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование последовательности",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "initialValue",
+        "name": "Начальное значение последовательности",
+        "typeAttr": "integer",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "step",
+        "name": "Шаг автоинкремента",
+        "typeAttr": "integer",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "keyRegexp",
+        "name": "Проверочное выражение для ключа подпоследовательности",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "notes",
+        "name": "Примечания",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "885fbd81-05fd-4932-b4af-03c2e81978da",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ff6f20aa-88ba-49f5-a0c2-28a095ed5591",
+          "nickAttr": "code",
+          "value": "UGD_SSR_ENO_DISABLED_PERSON_SEQ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "feda292b-4bd4-4c85-84a3-a72d2fdde8ed",
+          "nickAttr": "initialValue",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "31f2cfd1-2b04-413a-b9b5-3128bbedd925",
+          "nickAttr": "name",
+          "value": "Последовательность для сообщений об инвалидах в ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "951c7b5d-314e-41da-b74b-397100217330",
+          "nickAttr": "step",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2a8ecd54-d0db-42fd-ba6b-6af0e02cced0",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "9757feec-e8fa-4f43-9210-9556c818c371",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    }
+  ]
+}

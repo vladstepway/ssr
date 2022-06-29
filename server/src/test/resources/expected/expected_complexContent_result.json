@@ -1,0 +1,92 @@
+{
+  "name": "xyzContainer",
+  "isComplex": true,
+  "arity": "1-1",
+  "attributes": [
+    {
+      "name": "xyzContainer_field",
+      "isComplex": false,
+      "arity": "1-1",
+      "type": "string"
+    }, {
+      "name": "x_type_field",
+      "isComplex": true,
+      "arity": "1-1",
+      "type": "x",
+      "attributes": [
+        {
+          "name": "x_field1",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "date"
+        }, {
+          "name": "x_field2",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "dateTime"
+        }
+      ]
+    }, {
+      "name": "y_type_field",
+      "isComplex": true,
+      "arity": "1-1",
+      "type": "y",
+      "attributes": [
+        {
+          "name": "x_field1",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "date"
+        }, {
+          "name": "x_field2",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "dateTime"
+        }, {
+          "name": "y_field1",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "string"
+        }, {
+          "name": "y_field2",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "boolean"
+        }
+      ]
+    }, {
+      "name": "z_type_field",
+      "isComplex": true,
+      "arity": "1-1",
+      "type": "z",
+      "attributes": [
+        {
+          "name": "x_field1",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "date"
+        }, {
+          "name": "x_field2",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "dateTime"
+        }, {
+          "name": "y_field1",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "string"
+        }, {
+          "name": "y_field2",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "boolean"
+        }, {
+          "name": "z_field",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "integer"
+        }
+      ]
+    }
+  ]
+}

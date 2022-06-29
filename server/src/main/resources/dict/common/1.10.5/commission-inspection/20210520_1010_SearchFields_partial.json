@@ -1,0 +1,686 @@
+{
+  "metaDict": {
+    "nick": "SearchFields",
+    "name": "Поля документов подсистемы поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "fieldName",
+        "name": "Название поля в SOLR",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип поля",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFieldTypes",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "searchRule",
+        "name": "Тип поиска по полю",
+        "typeAttr": "link",
+        "nickDictLink": "SearchRules",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "indexed",
+        "name": "Индексировать или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "multi",
+        "name": "Множественное или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "commonSearch",
+        "name": "Участвует ли поле в общем поиске",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "83e6dd2c-a200-45c7-a3fd-c2c8ce8b8de1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "497d32db-9ec3-4394-9413-e8e9477c17d1",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_offer_letter_file_link",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b15cd17e-b250-41cf-841c-139e13103cdd",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c0f0a0ed-530a-45b6-9df2-4e57cc7ed7b9",
+          "nickAttr": "description",
+          "value": "Письмо с предложением",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f49823e8-e484-4e35-a296-81b8722a710f",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_offer_letter_file_link",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c7c7869-4d34-42d4-8ec3-c4a5c6dc476b",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "129424ba-9843-4830-994f-0d8bce196c4e",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7281f0b7-31b7-4116-9f25-3469bfac03a1",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "18016f13-1608-40a5-b0e4-37d475f54abf",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "43705f3a-f76c-4e0b-b043-59ad3cd688a5",
+          "nickAttr": "type",
+          "value": "0692a30c-0ce2-4e1e-9fa4-f8d7e98363c1",
+          "orders": 0,
+          "linkCode": "STRINGWITHCASE"
+        }
+      ]
+    },
+    {
+      "elementId": "7a358658-91ff-4541-a959-e2b7891378e5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c340c9c5-e506-4136-a960-3056dbfe6055",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_creation_date_time",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "404b39e4-3a6c-451f-ab31-c5f08f95d72b",
+          "nickAttr": "description",
+          "value": "Дата и время подачи заявления",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1d1fe00d-dd5d-41e0-888a-f12eff637412",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_creation_date_time",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8f5b2b22-984e-456e-b308-6d2a5ca4b1ea",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1fb98fb2-8559-48b1-923c-77fbe41001ef",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "41f886ec-1078-4820-b134-24e3f8c81775",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "66b71687-8e9d-449c-a270-9b77465c5126",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "8ac75f2d-7b1c-405e-954e-aa136948bc3a",
+          "nickAttr": "type",
+          "value": "28854573-8e65-45ac-90aa-424df5d74485",
+          "orders": 0,
+          "linkCode": "DATETIME"
+        }
+      ]
+    },
+    {
+      "elementId": "027968f5-c82f-4c47-ae90-e6c03cd2af4b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c1581225-f6c8-4e8d-b0cb-1f36e5f1553e",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_application_number",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bb2afd28-31eb-40aa-a61a-1f0b4e3b07dc",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "be28b9b5-3b41-41ae-8cf1-a8eff8e85714",
+          "nickAttr": "description",
+          "value": "Номер заявления",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2f1f2c7b-cc7a-483d-8244-40a29d244cd2",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_application_number",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4f006559-81c8-4f7c-8b47-795432f4b369",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "330cfd2a-4f04-4341-a917-3dbc5395a892",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b2755fb2-d258-4ad8-ad57-90ded9fe5fae",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "8299c934-8bef-428e-8259-f75919531d74",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "5dee8b68-9cb2-46a7-b652-7a03ef512db7",
+          "nickAttr": "type",
+          "value": "0692a30c-0ce2-4e1e-9fa4-f8d7e98363c1",
+          "orders": 0,
+          "linkCode": "STRINGWITHCASE"
+        }
+      ]
+    },
+    {
+      "elementId": "ff1afdde-c920-4df5-975f-37febdc8c478",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "694a661a-42b0-4095-bf9b-26efc93c22ba",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_address_to",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6bdf688b-22d7-44d0-b309-f7e41aa7002e",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a2b5b82b-a320-4374-b055-3e589c43028a",
+          "nickAttr": "description",
+          "value": "Заселяемый адрес",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "23829750-8963-4987-82f1-58f037b4063d",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_address_to",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9e90bcd2-8e02-4184-af68-c4bbeea2074a",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2a82da45-feff-47cf-8db1-a18bb768c1bc",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "894f4d0a-d0d6-4e50-b97b-12b00229aa8d",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "5821d096-13ac-4e7b-9e64-90ee059e36aa",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "463bd755-e368-4ad2-a43f-cfb562b1f024",
+          "nickAttr": "type",
+          "value": "0692a30c-0ce2-4e1e-9fa4-f8d7e98363c1",
+          "orders": 0,
+          "linkCode": "STRINGWITHCASE"
+        }
+      ]
+    },
+    {
+      "elementId": "912acbda-7465-4f55-82ef-faf34655a827",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e5978990-c3c5-41a6-aa68-e4a1f53fa7c9",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_status",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1338cbbe-b88a-4660-9901-5e6475892d18",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ea8e0bf-b739-4e16-ad76-f585d8eace6e",
+          "nickAttr": "description",
+          "value": "Статус",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f248eedb-6d7b-4dc6-9ef4-ce05f840f82c",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_status",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9af19861-c557-4d5c-9a76-bbd8a16edc5e",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9468d79c-13a4-4e96-8487-911e645f76db",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "225bafdf-aca9-41ea-be59-ae7ce6b6eed5",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "cb9d41b0-aa7e-4f2e-be78-33b02b04cb07",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "6e9204c6-29b8-43c3-a813-4da9f9426ff7",
+          "nickAttr": "type",
+          "value": "0692a30c-0ce2-4e1e-9fa4-f8d7e98363c1",
+          "orders": 0,
+          "linkCode": "STRINGWITHCASE"
+        }
+      ]
+    },
+    {
+      "elementId": "685c00aa-dc94-49ba-9711-9a94eeda5981",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "18090447-59b8-4b20-9b55-d7998d7dbb50",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_fio",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8a627b5a-d135-4633-9ba9-aa3cb3cb8eeb",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1999909d-ec96-42d6-a0b8-89f8e1953e63",
+          "nickAttr": "description",
+          "value": "Фамилия, имя, отчество",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "43f8647f-20e9-4f9d-9e3a-2dc3fe1da3de",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_fio",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "65189a48-4739-4088-beb4-922c9cb900f4",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3f7102da-8079-489d-8ed9-51b213d3706d",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "df87f82d-c108-42b2-9812-a05cc5b72638",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "d62a4725-4049-4bbe-b4cb-e6965e991fee",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "0f567e59-2645-4483-a6e0-8181e9ab9a24",
+          "nickAttr": "type",
+          "value": "0692a30c-0ce2-4e1e-9fa4-f8d7e98363c1",
+          "orders": 0,
+          "linkCode": "STRINGWITHCASE"
+        }
+      ]
+    },
+    {
+      "elementId": "c25857e3-7215-43b5-b866-0a4621e0a36f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bf81eb50-0c3a-42ad-beb3-df45ea96f43b",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_flat_to",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5e446583-3bd7-4fb4-8fca-fc378b2a6c4c",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6e6f64de-fdd5-45ef-835c-87585c5f4dd8",
+          "nickAttr": "description",
+          "value": "Заселяемая квартира",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "93cdf57c-8601-4ba0-be7e-971c49d56454",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_flat_to",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6352c786-0a10-4847-b5e3-57e66977afcb",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0817a8d5-c39a-445c-abbe-5a7ccd2749d9",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d6e2597a-c3ae-481f-ae91-38301ebb3060",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "8504d0f5-46e8-4591-8e00-eaded76aeb93",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "9ba45ed6-00ea-4a70-84ad-3afee8f28e11",
+          "nickAttr": "type",
+          "value": "0692a30c-0ce2-4e1e-9fa4-f8d7e98363c1",
+          "orders": 0,
+          "linkCode": "STRINGWITHCASE"
+        }
+      ]
+    },
+    {
+      "elementId": "cd25bb35-4481-41eb-b82a-dab5e3223e9f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "83f9b3de-ab2f-41c3-84e3-5447fdda6259",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_date",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "09550416-6923-4ce1-a248-e25d3a6bf14a",
+          "nickAttr": "description",
+          "value": "Дата и время осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "21298b24-b819-4dec-80ff-ebc96b5b7e42",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_date",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7f92cb32-9a0d-4d50-9d65-e89006a3baa9",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c14c2305-5576-4ac1-a29b-074b72605aa2",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d858407-2559-4633-975b-9861b5f3c3ae",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "877b3f07-fecb-4906-903d-d73b6caa192e",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "e6f13a94-8c3f-45e1-8a1b-c68528905b6b",
+          "nickAttr": "type",
+          "value": "0692a30c-0ce2-4e1e-9fa4-f8d7e98363c1",
+          "orders": 0,
+          "linkCode": "STRINGWITHCASE"
+        }
+      ]
+    }
+  ]
+}

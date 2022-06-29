@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/ipev"
+           targetNamespace="http://www.ugd.croc.ru/ssr/ipev"
+           elementFormDefault="qualified">
+    <xs:element name="IpevLog">
+        <xs:annotation>
+            <xs:documentation>Журнал обмена с ИПЭВ</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="ipevLogData" type="IpevLogData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="IpevLogData">
+        <xs:annotation>
+            <xs:documentation>Тип - журнал обмена с ИПЭВ</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eventId" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>ИД события</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="eventDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД документа события</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="eventDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время события</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="orrFileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Ссылка на скачивание пакета изменений (из ORR)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="egrnRequestDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время формирования и отправки запроса на получение обновленных выписок из ЕГРН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="status" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус обработки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cadastralNumbers" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Измененные кадастровые номера</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="filteredCadastralNumbers" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Отфильтрованные кадастровые номера</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,236 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "link",
+        "nickDictLink": "InformationObjectRegister",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "44f1ecac-2a2f-4602-a3f2-b7e2c9afbefd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "43d5d91f-6ef7-411e-aa8b-bb90275814e9",
+          "nickAttr": "code",
+          "value": "UGD_SSR_CONTRACT-APPOINTMENT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c5a7e58b-8338-490a-968b-09646a801fb2",
+          "nickAttr": "fields",
+          "value": "4801242f-f594-401b-8fd5-a60ba86bc4ad",
+          "orders": 0,
+          "linkCode": "ugd_ssr_contract_appointment_application_number"
+        },
+        {
+          "attrId": "78adfd84-c787-46b0-a09d-f910bef6735f",
+          "nickAttr": "fields",
+          "value": "27bdde95-b917-40b3-a4d6-fca97680466e",
+          "orders": 1,
+          "linkCode": "ugd_ssr_contract_appointment_creation_date_time"
+        },
+        {
+          "attrId": "fcfba3c4-b155-471e-b6d7-a693bc32ab45",
+          "nickAttr": "fields",
+          "value": "19d0260e-b1f8-41f0-bad8-c747af627406",
+          "orders": 2,
+          "linkCode": "ugd_ssr_contract_appointment_full_name"
+        },
+        {
+          "attrId": "8be078f1-69b3-4dca-bf37-cc0c9cbd267e",
+          "nickAttr": "fields",
+          "value": "3cc52722-7819-49a0-880f-e1b7b14b1783",
+          "orders": 3,
+          "linkCode": "ugd_ssr_contract_appointment_cip_address"
+        },
+        {
+          "attrId": "b51eb229-c91b-42dd-ad29-c5bf665693c5",
+          "nickAttr": "fields",
+          "value": "7b434351-2ebe-4332-a3b0-e221a2f43aa6",
+          "orders": 4,
+          "linkCode": "ugd_ssr_contract_appointment_date_time"
+        },
+        {
+          "attrId": "de122870-6d00-4886-83d2-34ec49b03adb",
+          "nickAttr": "fields",
+          "value": "618da7a8-94a7-4ec8-a872-f0938f4848e0",
+          "orders": 5,
+          "linkCode": "ugd_ssr_contract_appointment_status"
+        },
+        {
+          "attrId": "984cd41b-fbf2-45c5-a055-dfa239298793",
+          "nickAttr": "fields",
+          "value": "7957e0fe-523c-429a-a3f1-692603c5270b",
+          "orders": 6,
+          "linkCode": "ugd_ssr_contract_appointment_address_to"
+        },
+        {
+          "attrId": "893506ab-4350-4594-89ce-531677895306",
+          "nickAttr": "name",
+          "value": "Реестр заявлений на заключение договора",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e6ccf1b9-ccd7-43f3-bc77-80e54275992a",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "68334a82-b17d-4927-8c8c-793141605be0",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "67230d77-c270-4996-bb73-635fca066c97",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "4039315f-0436-4baa-aee6-87adade58175",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

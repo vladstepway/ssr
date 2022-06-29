@@ -1,0 +1,101 @@
+{
+  "metaDict": {
+    "nick": "SubSystems",
+    "name": "Подсистемы",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "appUrl",
+        "name": "Ссылка на приложение",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "06c4c062-7076-43ec-937f-473ef9524876",
+          "nickAttr": "appUrl",
+          "value": "/app/ugd/ssr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ee7b79de-70ee-4e8b-ab52-43a025e6567f",
+          "nickAttr": "code",
+          "value": "UGD_SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1f5a1f07-794d-4470-864b-53d6af9f959c",
+          "nickAttr": "name",
+          "value": "Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fcf952e9-31fb-411d-b647-c46b38f8d73f",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    }
+  ]
+}

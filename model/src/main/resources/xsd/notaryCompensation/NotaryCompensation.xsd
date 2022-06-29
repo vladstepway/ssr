@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/notaryCompensation"
+           targetNamespace="http://www.ugd.croc.ru/ssr/notaryCompensation"
+           elementFormDefault="qualified">
+    <xs:element name="NotaryCompensation">
+        <xs:annotation>
+            <xs:documentation>Возмещение оплаты услуг нотариуса</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="notaryCompensationData" type="NotaryCompensationData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="NotaryCompensationData">
+        <xs:annotation>
+            <xs:documentation>Сведения о возмещении оплаты услуг нотариуса</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eno" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время подачи заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор статуса заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affairId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор семьи заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicant" type="NotaryCompensationApplicant">
+                <xs:annotation>
+                    <xs:documentation>Данные о заявителе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bankDetails" type="BankDetails">
+                <xs:annotation>
+                    <xs:documentation>Банковские реквизиты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="serviceRejectReason" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Причина отказа в предоставлении услуги</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="moneyIsNotPayedReason" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Причина невыплаты денежных средств</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="NotaryCompensationApplicant">
+        <xs:annotation>
+            <xs:documentation>Данные о заявителе</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Фамилия заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Имя заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="email" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Электронная почта заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="phone" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер телефона заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="additionalPhone" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дополнительный номер телефона заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BankDetails">
+        <xs:annotation>
+            <xs:documentation>Банковские реквизиты</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="recipientFio" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ФИО получателя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="account" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Расчетный счет заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bankName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Наименование банка</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="inn" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИНН банка</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bankBik" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>БИК банка</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="kpp" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>КПП банка</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="correspondentAccount" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Корреспондентский счет</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bankStatementFileLink" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Банковская выписка(ссылка на файл)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,18 @@
+Заархивировать карточки жителей:
+60061c68-bd2e-483d-9172-04f5a3f9b9a3
+8774b900-77ba-4613-80b5-01ac6395cea3
+345e4ca0-e4d8-42dd-bbfb-bb526157df71
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 60061c68-bd2e-483d-9172-04f5a3f9b9a3; jsonPatch =
+[
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/isArchive",
+        "value": "true"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+5. Повторить шаги 1-4 для id = 8774b900-77ba-4613-80b5-01ac6395cea3
+6. Повторить шаги 1-4 для id = 345e4ca0-e4d8-42dd-bbfb-bb526157df71

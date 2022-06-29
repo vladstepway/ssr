@@ -1,0 +1,382 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_notaryApplicationStatus",
+    "name": "Статусы заявлений на запись на посещение нотариуса",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "text",
+        "name": "Текст",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "5fd2c96c-8bc3-43f5-9cfd-8b2321510626",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ba8e6adb-1297-4bf1-b9b9-4a9a5822d556",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d796ce7-31a8-4060-bd80-77eac6fcfb7a",
+          "nickAttr": "name",
+          "value": "DECLINED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "81ef600c-176a-425f-a2d8-77c9a680e12c",
+          "nickAttr": "text",
+          "value": "Отказ в регистрации заявления",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "989fe662-905b-4a41-a332-1149d45c96c0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7463ba1a-cc12-4b72-973b-80d7d5c8692a",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "710e1d24-2c43-4e47-b194-6dd56034a80b",
+          "nickAttr": "name",
+          "value": "ACCEPTED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3097c8b7-ef09-4521-835a-b0ac518a5cd0",
+          "nickAttr": "text",
+          "value": "Заявление принято",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "fee13644-a15e-452c-b862-80422538e05f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a4285e49-25e9-4b34-8198-9126ef4ec006",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "421861b6-9413-405f-800c-82c2f549962e",
+          "nickAttr": "name",
+          "value": "RECOLLECT_DOCUMENTS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c352ea55-4332-4793-8b18-d45a61a345a7",
+          "nickAttr": "text",
+          "value": "На исполнении. Подготовка справок",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "935bc5c7-4d95-4807-8045-347e99a1a4aa",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f1e3076d-a861-41b3-aaa3-6c9b1abb0d32",
+          "nickAttr": "code",
+          "value": "7",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1adcb912-2283-4116-b05b-faff131bcc72",
+          "nickAttr": "name",
+          "value": "REFUSE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8077c742-cc95-4ada-8a5a-8e7bddd6d8c5",
+          "nickAttr": "text",
+          "value": "Отказ в предоставлении услуги",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9c159da7-9e18-4af2-a7c6-ccbe881adee2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "71f62784-56bb-48d4-9ab0-1cf5d1c66a4f",
+          "nickAttr": "code",
+          "value": "9",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4363844d-a181-4cc1-a176-1accaec2a1c1",
+          "nickAttr": "name",
+          "value": "DRAFT_CONTRACT_READY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a0a58a97-08ba-43dc-9b36-4600ab20cae1",
+          "nickAttr": "text",
+          "value": "Проект договора готов",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9df7dccd-cfd8-43cb-969b-fc24be768245",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "da7708bc-d3ec-4751-82e7-d5a392c8efec",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1b074500-9ac3-4e96-9dc6-b52d74fa83c0",
+          "nickAttr": "name",
+          "value": "REGISTERED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a28d8976-e90e-4524-adf5-25ae95cf60bf",
+          "nickAttr": "text",
+          "value": "На исполнении. Заявление зарегистрировано",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "53aedb2d-279c-4177-a6d4-ef115ab35383",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c371aaf2-a42c-4ebc-9756-c3218f49c60f",
+          "nickAttr": "code",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eae47f7f-32c1-497f-a9e1-ce7df06594b4",
+          "nickAttr": "name",
+          "value": "WAITING_DOCUMENTS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4e981824-28a9-489d-8352-1078996df218",
+          "nickAttr": "text",
+          "value": "Ожидание документов",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "00356695-a83a-41ba-a5fa-519f05690db0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "245bbbb6-0e48-4224-b407-cb2d620a7c68",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "008c80c5-aca1-4097-8aaf-04b8aa633e02",
+          "nickAttr": "name",
+          "value": "BOOKED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0ef6f3a5-b55c-4ad1-a221-1091b99138bb",
+          "nickAttr": "text",
+          "value": "Запись произведена",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "77f56614-7ea5-4dd0-8db4-c09df9b01677",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "83596b8e-7a1c-473a-9a98-93c9de8ccf7f",
+          "nickAttr": "code",
+          "value": "8",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e8e8f762-a280-4958-86cc-5a3b64e193fa",
+          "nickAttr": "name",
+          "value": "DOCUMENTS_RECEIVED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7d00e35b-57ff-4b26-a764-2457029a737c",
+          "nickAttr": "text",
+          "value": "Подтверждение документов",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c310f9bd-2e8b-4f6c-b68e-d3987c69a1d5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9b892355-d386-4306-b1f1-c8da67bf385a",
+          "nickAttr": "code",
+          "value": "10",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "739a892e-003c-4eb9-a8fb-fd04bfe77d21",
+          "nickAttr": "name",
+          "value": "APPOINTMENT_OPEN",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b7f65253-cf1e-41c1-a833-d05c673174c6",
+          "nickAttr": "text",
+          "value": "Проект договора подготовлен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ab2c7020-a175-48c2-b19b-e9d0011fa4c5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "151be8b6-8292-4cc6-b5d1-1fb4bfb300d5",
+          "nickAttr": "code",
+          "value": "11",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d70b439c-7965-494a-af2f-697b7189e1ee",
+          "nickAttr": "name",
+          "value": "CONTRACT_SIGNED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6204f9d0-2967-40bf-8889-f44bc000b848",
+          "nickAttr": "text",
+          "value": "Услуга оказана. Договор заключен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

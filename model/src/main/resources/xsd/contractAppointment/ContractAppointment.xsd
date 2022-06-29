@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/contractAppointment"
+           targetNamespace="http://www.ugd.croc.ru/ssr/contractAppointment"
+           elementFormDefault="qualified">
+    <xs:include schemaLocation="ContractAppointment.xsd"/>
+    <xs:include schemaLocation="Applicant.xsd"/>
+    <xs:element name="ContractAppointment">
+        <xs:annotation>
+            <xs:documentation>
+                Запись на заключение договора
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="contractAppointmentData" type="ContractAppointmentData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ContractAppointmentData">
+        <xs:annotation>
+            <xs:documentation>Заявление на заключение договора</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eno" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время подачи заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicant" type="Applicant" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Информация о заявителе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="addressTo" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Адрес заселяемой квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cipId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор центра переселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор статуса заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractOrderId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="appointmentDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время записи на прием</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bookingId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор забронированного слота</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cancelDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата отмены записи по инициативе ДГИ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cancelReason" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина отмены записи по инициативе ДГИ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processInstanceId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID запущенного процесса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="icsFileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID ics файла в FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="icsChedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID ics файла в ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isContractEntered" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Заключен ли договор</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="refuseReason" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина отказа в заключении договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractSignDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата подписания контракта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signType" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>
+                        Способ подписания:
+                        1 - Очное
+                        2 - Электронное
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actSignDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата подписания акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractFile" type="ContractAppointmentFile">
+                <xs:annotation>
+                    <xs:documentation>Данные о контракте</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actFile" type="ContractAppointmentFile">
+                <xs:annotation>
+                    <xs:documentation>Данные об акте</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ContractAppointmentFile">
+        <xs:annotation>
+            <xs:documentation>Документ</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="fileName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Имя файла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fileStoreId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID файла в fileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="chedFileId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID файла в ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,772 @@
+{
+  "metaDict": {
+    "nick": "SearchFields",
+    "name": "Поля документов подсистемы поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "fieldName",
+        "name": "Название поля в SOLR",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип поля",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFieldTypes",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "searchRule",
+        "name": "Тип поиска по полю",
+        "typeAttr": "link",
+        "nickDictLink": "SearchRules",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "indexed",
+        "name": "Индексировать или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "multi",
+        "name": "Множественное или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "commonSearch",
+        "name": "Участвует ли поле в общем поиске",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "f7ad9466-1e64-4427-aed9-ab3623e15f90",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a5a478c9-4b0b-4f83-ae2d-4a456b7ce9c1",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_flat_unom",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ef255519-b37e-4c30-9416-600728ce30e1",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "905271db-a0a5-4e6d-a64f-2ecfe7adfaa4",
+          "nickAttr": "description",
+          "value": "УНОМ дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9f65786b-080d-4ede-a472-eb049f1435ce",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_egrn_flat_unom",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0911162b-3d4c-4891-a08b-310ca9451d79",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c6649742-69c4-4644-8713-e3b303a68c02",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "55930bcd-f0d1-4db2-92f5-fddace207e24",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "27c8683a-e508-4412-b2d1-8b034cd28d37",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "c279d3fa-e0f5-4875-80e1-474c9cb7584e",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "da2c5839-f18e-4d08-9afe-8997fbf36bf5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8843d024-9445-4610-8a4d-65aa8bdb7e0b",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_flat_address",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "82343b33-b1f2-40ac-8cdc-ddb84220da91",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8a3d09d3-995e-4d42-82e5-62cd149d3590",
+          "nickAttr": "description",
+          "value": "Адрес квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2cdf5706-8043-46d0-8fe9-aa364034be79",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_egrn_flat_address",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3582437-b8bc-48d5-9144-2156f874f63d",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8bbb3c2b-fc7c-4501-a4e2-899fbdd0dfca",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "de7aba12-6ada-4755-b44b-9e14d91cc3b7",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "b0e669ad-b14c-405f-8780-f755999d2546",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "85e93476-2d8f-455d-98ef-099c2ff119ff",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "79a3fd96-72f2-4e20-a51c-13f5e10da8ce",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "51e49c24-2f5d-4fda-a415-8ccddca61fd8",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_flat_number",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8a5fe17f-6bd0-4c6d-8d3a-8964d9e7213f",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f6dee22d-a630-48a5-a3ef-b934be9fad09",
+          "nickAttr": "description",
+          "value": "Номер квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9fb37a99-15d7-49a4-a5ed-20d1b96a385a",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_egrn_flat_number",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b51e4c10-c421-4106-9c1a-afa33874a169",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2949cba9-f256-48e6-9c09-dc06911cc2c3",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1cea428-f28e-47b0-8f41-d40a3a15eca3",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "35069540-b9de-4e3c-80e5-b60999fa8c6e",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "a3b2e204-9cbb-4f33-afdd-d1ef51754cda",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "4c80dde6-991f-4cf6-bdc4-62742182d5ef",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "dcb268b7-5462-4cb6-a760-c15174702e25",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_flat_room_number",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8ba2d25e-94b4-430c-8ed7-987ef0574200",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f93250a3-9196-4ef2-96a8-de71404a8165",
+          "nickAttr": "description",
+          "value": "Номер комнаты",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "08783117-c268-4cae-aa33-593f9949aa0d",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_egrn_flat_room_number",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cf41b2f5-86e1-4341-b561-15a7c1c2fbe9",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d65e4c55-97e4-4eb5-86b9-30cc3e7deda3",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3399b620-185e-4ee5-abae-b5e4a468c89b",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "e22c0a69-f09a-4153-854d-d3559e5a4f2f",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "12cf7b4b-c8e4-46da-aa15-651ebb68f08d",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "5b1270b3-18eb-409f-899f-1c5e327c45cc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fe17b980-22ac-4156-8b55-d4d851b81833",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_flat_cadastral_number",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "25c2f183-d30d-42b2-a940-1caad588ab86",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f038812a-f713-4b36-b7a7-2dafe4f2acdb",
+          "nickAttr": "description",
+          "value": "Кадастровый номер квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "af0f24e8-11e6-4845-8ed4-62c9d643fa35",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_egrn_flat_cadastral_number",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "278e9c98-5de5-442c-ac3f-b5201174ab03",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4a6a4cd6-6eea-4ace-b9fc-2891ccaf3446",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ff0976a7-70cb-4210-af82-8c57543cba75",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "96baa7c3-036c-43a0-8945-10d1592e6531",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "d953c584-b291-4898-9792-91ec63632069",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "0c90dee8-640f-4984-a35f-70b219815269",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e846f886-bd99-4ed3-9e7d-7c2e787c6fb9",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_flat_real_estate_id",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "85656fad-00a1-4386-b6c8-eca51b550ec8",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1c81442f-2265-4dbd-8ab1-9aa262aa9d46",
+          "nickAttr": "description",
+          "value": "ID документа дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a9071d8d-946a-4d3b-9eed-5defa6761c2e",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_egrn_flat_real_estate_id",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "824abf6d-cbe9-4d00-b6ee-3ef225c4bc11",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "28ac06a0-8e1f-4581-86d9-83b4dcb6d749",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eea1b851-7ab0-42b6-b224-7b2b1ec853ef",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "aeae45e8-817b-4073-8cac-cfc98b4f3540",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "a6e7a871-a019-4d5e-9e07-62b459fb0eb7",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "cbff7e02-6d38-4cac-8be2-841d1a2b064b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ff6bdc4b-c46d-497c-949a-173a734e057d",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_flat_cco_id",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "347b9cb1-101a-45f5-9f3f-b057502196c7",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "78386ae2-f08c-4926-a25b-3b5af7f1b78f",
+          "nickAttr": "description",
+          "value": "ID документа ОКСа",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "77fa64b6-d8b3-4e4f-83db-a69c0cc6497e",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_egrn_flat_cco_id",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c11515fd-7e12-4922-bf8c-86ccfac622df",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "51bf382e-4db4-4b0c-bbf5-d5e8d9264d7e",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8f769d68-bd39-4bca-b35f-544435624e9a",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "d6d92ce2-5fb5-49d4-a10d-5dfde8b8c9f8",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "db87ab96-89ed-41d1-ae0a-fbb8df9fee3c",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "f543a499-9101-4082-9f5f-36d24e2de529",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "763690f8-7e4f-4dce-a6d4-602917b55fa0",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_flat_floor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b567f6cc-13e4-44d3-a47e-1407e2f7200a",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ed54f7af-6a86-4b34-908e-a506671cdfda",
+          "nickAttr": "description",
+          "value": "Этаж",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6a249ec8-5c95-4ad3-a779-3195e6f476f2",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_egrn_flat_floor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a6b989ed-13f3-4ed2-8c5e-569140aaa9ff",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e701f776-38d8-4000-8a98-9976b35441ab",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dde028d4-adb8-4283-9276-284aca0d8ac9",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "523a3cb4-c52d-4357-a808-db4a82402195",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "a13623c9-79b1-4d75-a483-b25f37dce7a8",
+          "nickAttr": "type",
+          "value": "56edf557-b12b-4847-bccb-e000983bf74e",
+          "orders": 0,
+          "linkCode": "NUMBER"
+        }
+      ]
+    },
+    {
+      "elementId": "df589c4d-8e49-4c3e-97ae-63af05bd87a4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2743b969-b141-4257-b4c0-fe32b627d23d",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_flat_resettled",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b6de6281-39a6-4fa0-9801-13cc176ebdca",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c37f6c05-1401-4b55-95af-4f61f800ec72",
+          "nickAttr": "description",
+          "value": "Помещение отселено (для отселяемых) / заселено (для заселяемых)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4116ddf3-05e5-48c7-ab53-8305f91fbc57",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_egrn_flat_resettled",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "67a8e72d-4d23-4c04-af4b-3549404ca90e",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "88c51a1c-e624-4c9a-b97f-37e17d9bedf2",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9e5e1128-ea03-41d6-b993-3561e8e7a1e2",
+          "nickAttr": "searchRule",
+          "value": "85d8f0ef-785a-454c-ae5f-93773450ecef",
+          "orders": 0,
+          "linkCode": "KEYWORD"
+        },
+        {
+          "attrId": "6e3a49a7-d193-42ed-a0b0-fb916cdb5ad4",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "04df64bb-04f0-4a21-baac-f5d0eae180a5",
+          "nickAttr": "type",
+          "value": "1c46e746-be8b-4452-8363-e6ad22cedf66",
+          "orders": 0,
+          "linkCode": "BOOL"
+        }
+      ]
+    }
+  ]
+}

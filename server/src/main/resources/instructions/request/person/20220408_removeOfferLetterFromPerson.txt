@@ -1,0 +1,199 @@
+Удалить сведениях о письмах с предложениями у жителей:
+9162fd6f-7f7e-4ef6-ad38-47878614d1af affairId = 726953, комнаты = [2,3], letterId = 14860075
+5bbdf210-3a23-4ff6-a3a9-d261c42b288d affairId = 726953, комнаты = [2,3], letterId = 14860075
+1d0977a0-14d1-4b37-a6af-4004827512eb affairId = 726953, комнаты = [2,3], letterId = 14860075
+539b154b-66ee-4c99-b231-56ea8873f7c2 affairId = 730795, комнаты = [1], letterId = 14860072
+c5cd99b9-e474-4b22-b02c-865b48d9709f affairId = 730795, комнаты = [1], letterId = 14860072
+
+
+Удалить сведения о письмах с предложениями у жителя с id = 9162fd6f-7f7e-4ef6-ad38-47878614d1af
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 9162fd6f-7f7e-4ef6-ad38-47878614d1af; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/offerLetters/offerLetter/0"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/6"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/3"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/2"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/1"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/0"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/11"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/10"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/8"
+    },    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/7"
+    },    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/6"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/2"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/1"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+===============================
+
+Удалить сведения о письмах с предложениями у жителя с id = 5bbdf210-3a23-4ff6-a3a9-d261c42b288d
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 5bbdf210-3a23-4ff6-a3a9-d261c42b288d; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/offerLetters/offerLetter/0"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/1"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/0"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/0"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+============================
+
+Удалить сведения о письмах с предложениями у жителя с id = 1d0977a0-14d1-4b37-a6af-4004827512eb
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 1d0977a0-14d1-4b37-a6af-4004827512eb; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/offerLetters/offerLetter/0"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/1"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/0"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/0"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+============================
+
+Удалить сведения о письмах с предложениями у жителя с id = 539b154b-66ee-4c99-b231-56ea8873f7c2
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 539b154b-66ee-4c99-b231-56ea8873f7c2; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/offerLetters/offerLetter/1"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/1"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/0"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/0"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/agreements/agreement/2/letterId",
+        "value": "14860072"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/agreements/agreement/1/letterId",
+        "value": "14860072"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/agreements/agreement/0/letterId",
+        "value": "14860072"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+============================
+
+Удалить сведения о письмах с предложениями у жителя с id = c5cd99b9-e474-4b22-b02c-865b48d9709f
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = c5cd99b9-e474-4b22-b02c-865b48d9709f; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/offerLetters/offerLetter/1"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/1"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/0"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/0"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/agreements/agreement/2/letterId",
+        "value": "14860072"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/agreements/agreement/1/letterId",
+        "value": "14860072"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/agreements/agreement/0/letterId",
+        "value": "14860072"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

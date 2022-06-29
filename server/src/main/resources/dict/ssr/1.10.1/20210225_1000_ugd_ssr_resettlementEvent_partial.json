@@ -1,0 +1,112 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_resettlementEvent",
+    "name": "События переселения",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Тип события (1 – Межведомственные взаимодействия, 2 – Информирование жителя)",
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "e651bfe5-7e46-4847-b7a4-a7b2b62b7623",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8d1958ea-a4d8-416b-bdaf-2dfccd3a4ef8",
+          "nickAttr": "code",
+          "value": "24",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3c05575f-9ae8-4981-9fe7-18ccc7d6a908",
+          "nickAttr": "name",
+          "value": "Получен договор для подписания",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d2c768a-f6ab-484a-9833-8b594ce0e6c2",
+          "nickAttr": "type",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "12040529-e6c0-487b-8c92-d05fdf1e60a4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f08a3f78-89d0-4c99-b04b-16030bd4a2b8",
+          "nickAttr": "code",
+          "value": "25",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "da554860-19ee-4c7d-8895-4ad5c0de1dad",
+          "nickAttr": "name",
+          "value": "Акт подписан жителем",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dbecf5db-57a2-4126-ac26-d5aab1bbe86f",
+          "nickAttr": "type",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

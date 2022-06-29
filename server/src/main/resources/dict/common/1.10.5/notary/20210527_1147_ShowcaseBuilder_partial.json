@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "c939727a-01e5-4856-82b0-c299856e6e7b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b96cb7e4-7b66-4ad5-b652-7d3d3aad81c8",
+          "nickAttr": "code",
+          "value": "ugd_ssr_notary_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "03c184b9-d25f-4d26-86af-4d1f255972fb",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_NOTARY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3cef5fa4-4848-4461-a80f-8384a39cb081",
+          "nickAttr": "documentName",
+          "value": "Реестр нотариусов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "117e660b-1126-4a1a-9dba-43609ac1b77c",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Реестр нотариусов\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Реестр нотариусов</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableFilter\":true,\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по ФИО, адресу, дополнительной информации, номеру телефона, статусу\",\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_notary_full_name\",\"type\":\"text\",\"name\":\"Нотариус\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_notary_office_address\",\"type\":\"text\",\"name\":\"Адрес\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_notary_additional_info\",\"type\":\"text\",\"name\":\"Дополнительная информация\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_notary_phone\",\"type\":\"text\",\"name\":\"Телефон\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_notary_status\",\"type\":\"text\",\"name\":\"Статус\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_notary_employee_logins\",\"type\":\"text\",\"name\":\"Логины сотрудников\"}],\"tableColumns\":[{\"name\":\"Нотариус\",\"fieldCode\":\"ugd_ssr_notary_full_name\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/notary/{{item.sys_documentId}}?arm\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_notary_full_name}}\\n</a>\"},{\"name\":\"Адрес\",\"fieldCode\":\"ugd_ssr_notary_office_address\",\"template\":\"{{item.ugd_ssr_notary_office_address}}\"},{\"name\":\"Дополнительная информация\",\"fieldCode\":\"ugd_ssr_notary_additional_info\",\"template\":\"{{item.ugd_ssr_notary_additional_info}}\"},{\"name\":\"Телефон\",\"fieldCode\":\"ugd_ssr_notary_phone\",\"template\":\"{{item.ugd_ssr_notary_phone}}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_notary_status\",\"template\":\"{{item.ugd_ssr_notary_status}}\"}],\"filters\":[{\"name\":\"Нотариус\",\"fieldCode\":\"ugd_ssr_notary_full_name\",\"placement\":\"bottom\"},{\"name\":\"Адрес\",\"fieldCode\":\"ugd_ssr_notary_office_address\",\"placement\":\"bottom\"},{\"name\":\"Дополнительная информация\",\"fieldCode\":\"ugd_ssr_notary_additional_info\",\"placement\":\"bottom\"},{\"name\":\"Телефон\",\"fieldCode\":\"ugd_ssr_notary_phone\",\"placement\":\"bottom\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_notary_status\",\"placement\":\"bottom\"},{\"name\":\"Логины сотрудников\",\"fieldCode\":\"ugd_ssr_notary_employee_logins\",\"placement\":\"bottom\",\"userprofileFilter\":\"userprofile.login\",\"strictMode\":true}],\"sortings\":[{\"name\":\"Нотариус\",\"fieldCode\":\"ugd_ssr_notary_full_name\"},{\"name\":\"Адрес\",\"fieldCode\":\"ugd_ssr_notary_office_address\"},{\"name\":\"Дополнительная информация\",\"fieldCode\":\"ugd_ssr_notary_additional_info\"},{\"name\":\"Телефон\",\"fieldCode\":\"ugd_ssr_notary_phone\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_notary_status\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4060c53a-4458-47ac-9b80-12d27a95b2eb",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_notary",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42c1cb20-402e-4190-996d-122e4fa38967",
+          "nickAttr": "showcaseName",
+          "value": "Реестр нотариусов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "828e2720-f36f-48f4-8e81-5c88d4ded36d",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ebc98508-f32f-4f31-92dc-e27d212a11c9",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "452fc48e-210e-4e3d-894c-59ba4500b870",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "78d1495a-16ea-43a0-8051-67db3ba7e5e4",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

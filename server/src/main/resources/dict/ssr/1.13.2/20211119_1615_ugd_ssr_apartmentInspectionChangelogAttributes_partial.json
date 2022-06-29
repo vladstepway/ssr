@@ -1,0 +1,665 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_apartmentInspectionChangelogAttributes",
+    "name": "Атрибуты для журнала изменений актов осмотра квартиры",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "title",
+        "name": "Заголовок",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "beanName",
+        "name": "Наименование бина для обработки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "isComplexPath",
+        "name": "Путь комплексный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "bfbd40f7-fc76-4bad-ab52-79bec181fb7b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5c744b92-2be5-46ee-8bb0-3980eadc23c1",
+          "nickAttr": "beanName",
+          "value": "apartmentDelayReasonChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "76bd1117-8fe0-4dbe-9ba7-b6feb9a89588",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/delayReason/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "53275ceb-2c01-4778-a078-8d521e879c5e",
+          "nickAttr": "name",
+          "value": "Плановая дата / перенос сроков устранения дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d0297b4e-993c-44cb-9a1c-90790249910b",
+          "nickAttr": "title",
+          "value": "Плановая дата / перенос сроков устранения дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d9174abf-70f8-41f6-b623-4f132eab2ef7",
+          "nickAttr": "type",
+          "value": "array",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f6b7bb36-b764-4874-aeb0-937723470ec2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2bbf5bd2-ea44-4cc5-bfef-effe461e0290",
+          "nickAttr": "beanName",
+          "value": "apartmentInspectionChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aa382693-443f-4e89-bd5f-58e0ec32b6dd",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/hasConsent",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "747bd1ce-1269-476f-970b-91014db9eafe",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7a3ccba8-cf9f-41a6-9ac9-23e50ddaffd7",
+          "nickAttr": "name",
+          "value": "Согласен ли житель",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a733f0d0-1b4d-47b3-bd38-3a31e1e64435",
+          "nickAttr": "title",
+          "value": "Согласен ли житель",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "35501288-590c-4d7d-a700-9da91426aef8",
+          "nickAttr": "type",
+          "value": "boolean",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "2e2fdbae-d14d-4f85-9b05-c8a54d372999",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b3519e5b-7435-4aee-be05-af810045c293",
+          "nickAttr": "beanName",
+          "value": "apartmentInspectionChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f7c04eb6-2eea-400e-adab-5ac463fd475f",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/acceptedDefectsActFileId",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "556fd4d8-6140-4f5a-861e-62167c208b8c",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3d8df72e-4f74-48ce-b1f7-99f657002a2b",
+          "nickAttr": "name",
+          "value": "Файл акта согласия / несогласия с устранением дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f2b3c9b6-7df5-4870-b1fb-a3e8cccbdd00",
+          "nickAttr": "title",
+          "value": "Файл акта согласия / несогласия с устранением дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ec573db4-bd47-496f-b58b-ebcdaae5882c",
+          "nickAttr": "type",
+          "value": "fileLink",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f60d1108-e81e-41d4-a1a7-6d659fb99a10",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1dcde015-3016-44ab-9ffb-6fa584a64652",
+          "nickAttr": "beanName",
+          "value": "apartmentInspectionChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5fabaede-dff3-416a-9fdf-5c2cf37fd907",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/acceptedDefectsDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b0374896-28e1-49e4-ae0a-45f847abe2c6",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d2c40e7-e669-4072-82fb-3fa4ad9a4824",
+          "nickAttr": "name",
+          "value": "Дата согласия/несогласия жителя с устраненными дефектами",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "92b03e38-7a20-4753-990c-5719d8ca5905",
+          "nickAttr": "title",
+          "value": "Дата согласия/несогласия жителя с устраненными дефектами",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "56a0a792-b5d7-4424-8c3c-336734952a77",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f706b520-fe60-4a32-b0b1-e6891c3f88ec",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b7dd6eab-cb35-4305-b9b6-698867ec3f3c",
+          "nickAttr": "beanName",
+          "value": "apartmentInspectionChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "386738f1-842c-4b7e-b62f-0c9b053b5043",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/defectsEliminatedNotificationDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6ff63e05-c952-4b25-8ecc-57b2eb0782a9",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7e17a2d6-5bec-464c-be38-26ae5eaaa9f5",
+          "nickAttr": "name",
+          "value": "Дата отправления уведомления об устранении дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "920689c9-a9c1-4d30-9107-76cbf374beb9",
+          "nickAttr": "title",
+          "value": "Дата отправления уведомления об устранении дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c9891d23-66f9-4e33-b4d0-a210fc132af0",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7b98b65a-42f8-46e3-8e31-8ededdb32e81",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e6df8469-3f8f-4ca9-a746-d46d8f05d50c",
+          "nickAttr": "beanName",
+          "value": "apartmentDefectsChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c25bb024-62b3-4f2f-99ac-24ebf720a623",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/apartmentDefects/-/ApartmentDefectData/isEliminated",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9a02095a-ee00-44af-aa6a-b02ca4901501",
+          "nickAttr": "name",
+          "value": "Устранен ли дефект",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7e504496-5846-481e-ab23-a5c573eb2411",
+          "nickAttr": "title",
+          "value": "Дефект устранен",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c489dc10-5d9a-4994-9e29-57c31749921a",
+          "nickAttr": "type",
+          "value": "array",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7ba9f751-90b8-41ce-be14-8dbd59533014",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4ac04783-079d-46c6-91d6-d345faad072a",
+          "nickAttr": "beanName",
+          "value": "apartmentInspectionChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d9132265-08c4-4898-a93e-8548014829bc",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/firstVisitDateTime",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "48d47567-0ee6-41f3-bfd9-37e6a38f096d",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b2117ca6-108e-403a-972e-3654893bf88c",
+          "nickAttr": "name",
+          "value": "Согласованная дата и время осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0f31d6ee-87dd-4bbe-b132-1e167ccdd4ad",
+          "nickAttr": "title",
+          "value": "Согласованная дата и время осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0bd9965f-b051-4d7c-99dc-fc07603e030e",
+          "nickAttr": "type",
+          "value": "datetime",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e03c7273-ca05-4f4c-aa18-31811332ff7e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "08d49ff8-101b-4948-af1f-366ef45c20ad",
+          "nickAttr": "beanName",
+          "value": "apartmentInspectionChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e76863b0-f91c-462d-845f-e7c5a3c2078a",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/secondVisitDateTime",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e220b2f4-1f70-4343-8ad9-5c596637b311",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "15be5f79-03b1-4bee-a734-993b15270c79",
+          "nickAttr": "name",
+          "value": "Согласованная дата и время повторного осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2f6af1df-dafd-430a-82dd-9481120fcfd1",
+          "nickAttr": "title",
+          "value": "Согласованная дата и время повторного осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "553461cc-107f-4ba7-8591-3da8ca25448a",
+          "nickAttr": "type",
+          "value": "datetime",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "66f2cd77-8a4a-42a5-bbac-d75ad4f27ef7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e9f4365e-30d1-4520-9b31-b6b9e572278e",
+          "nickAttr": "beanName",
+          "value": "apartmentInspectionChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ca18b41e-1809-4e69-bf3f-8a84e4aef41b",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/filingDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f85460bc-aeb3-4e51-86a4-ffcda7e88678",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "85ab5aef-2ed3-4b98-ba78-4fdf9a8541df",
+          "nickAttr": "name",
+          "value": "Дата и время подачи акта",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6a3b1155-533b-4bfb-885c-8d89fd7ae65c",
+          "nickAttr": "title",
+          "value": "Дата и время подачи акта",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c53c5b1e-fa7e-4077-b920-c1b8f33ebd90",
+          "nickAttr": "type",
+          "value": "datetime",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "54f46cd4-629c-4fdd-ae6a-c994a1debf39",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3ac5d397-44d0-4bb0-8516-5cd333f8873b",
+          "nickAttr": "beanName",
+          "value": "apartmentInspectionChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9b523821-ca57-4183-91f9-7bfd35aca159",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/flatRefusalDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b6a95316-3965-4beb-a34d-5acb93e77b10",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eab5a363-fced-41da-afb5-83a3691bcdfe",
+          "nickAttr": "name",
+          "value": "Дата отказа от квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ce121ba0-07db-42cd-80d3-be2bea66b5fc",
+          "nickAttr": "title",
+          "value": "Дата отказа от квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f1d9a44c-7b06-49bd-9eac-21c3b8d7a461",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6f36656f-5145-4af5-881a-92028cb58d04",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3ffa9901-4731-43c5-823f-7a16de08b402",
+          "nickAttr": "beanName",
+          "value": "apartmentActClosureReasonChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "77f6c16b-4d14-4124-b86a-6271f90d9a9f",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/actClosureReasonCode",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5ee81f63-3905-4a74-b2f7-11c6af5cf4fd",
+          "nickAttr": "name",
+          "value": "Причина закрытия акта",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1db46e6d-e2ef-496f-87c4-83770781aa56",
+          "nickAttr": "title",
+          "value": "Причина закрытия акта",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "094cb136-c1dd-42fd-9752-6fcc190c02c0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d8c8cd6f-c1b6-4e8d-8e06-b074c627a0b5",
+          "nickAttr": "beanName",
+          "value": "apartmentInspectionChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fe7802d3-808e-4761-84a1-1ff29fa9b788",
+          "nickAttr": "code",
+          "value": "/ApartmentInspection/ApartmentInspectionData/actClosureReasonComment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "30237811-644f-48fa-bbe5-530514ad636a",
+          "nickAttr": "name",
+          "value": "Комментарий к причине закрытия",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "67b4b908-8c34-44df-92d8-e50f6ff408f6",
+          "nickAttr": "title",
+          "value": "Комментарий к причине закрытия",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cb573c24-49bd-4e33-8076-f338c59fd513",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,845 @@
+{
+  "metaDict": {
+    "nick": "Actions",
+    "name": "Возможности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "disabled",
+        "name": "Признак неактивности",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "URL адрес страницы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "theme",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "91dc0e92-5fbb-4135-a107-e8f30d88167a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3a1eed56-5a66-4d67-a4dc-25d52a50ab98",
+          "nickAttr": "code",
+          "value": "ugd_ssr_bindEmployeesToCip",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "837e2faa-41e1-4a93-a6e9-19c0b3011560",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b5755892-1044-4e77-adfd-44b157ac1249",
+          "nickAttr": "group",
+          "value": "UGD_SSR_CIP_EMPLOYEES",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2a78bf59-1aac-42b4-8201-6bc6a8330f23",
+          "nickAttr": "name",
+          "value": "Привязка сотрудников к нескольким ЦИП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "51e3b126-f8c8-4cc4-bf90-8c7370ebc42c",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ef2c184-9ab7-4645-8a21-f15fbdd53554",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/cip/bind-employees",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "bb055772-46e6-43f8-9043-f98396aae829",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "53b0c197-28fe-4166-b53e-95ed2fcd9a78",
+          "nickAttr": "code",
+          "value": "ugd_ssr_enrichPersonDgi",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8615513b-c297-4ca3-aeec-c82d09c74fea",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3beeaf32-eacc-470b-b341-4b37bc04b1ca",
+          "nickAttr": "group",
+          "value": "UGD_SSR_OPERATOR_ENRICHMENT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c325b1e4-cb6a-47f3-9208-f51e617431f4",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "afd69a2f-2017-498b-90ab-deb32e2223d7",
+          "nickAttr": "name",
+          "value": "Инициировать обогащения данных отселяемых домов из ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e73498cb-ee8a-4fcc-94b9-76e5cd1b1002",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2ec3de72-1d2a-478c-a53c-0c21c6e89fe0",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/dgi-person-enrichment",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "87ad0359-22a4-4d68-ac44-f5fa9dfcb6da",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6a9dd433-c779-42b6-8b09-84a173a2e3db",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addNotaryDaySchedule",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b5530d5e-3bea-44c7-bdad-0655de556cf2",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "664b15bc-686c-4e33-b927-7013a637ef54",
+          "nickAttr": "group",
+          "value": "UGD_SSR_NOTARY_APPLICATION_READ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c8d58a42-9087-485a-9bd9-72d82ccf04d3",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1b1b0abf-358d-4293-a2de-9561f73b4559",
+          "nickAttr": "name",
+          "value": "Изменить данные / Добавить рабочий день нотариуса",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d3298d9d-47a1-4625-80ba-05e2a5db93d6",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "99af83f5-a3cb-45a5-b2e9-49e58f9419aa",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/notary/new?referrer=actions",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1ed3aaf2-d92a-4aa2-ad2c-1f04bef68237",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "49c8b847-d6ce-42a0-a8f3-d592bcda3bf7",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addNotary",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5a39bfc3-5116-467e-b24a-8d1c0c4e5c9f",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fd049927-45c6-4bb6-a492-ab3fe139ddda",
+          "nickAttr": "group",
+          "value": "UGD_SSR_NOTARY_CREATE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5bbadd43-45f1-48d9-ae99-b8dc83f528ee",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b7bfd873-e5b1-4cf3-b288-d1141f859133",
+          "nickAttr": "name",
+          "value": "Добавить нотариуса",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0b2a7f0e-df91-4cd7-8bd0-45b9707f0213",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "038ae3df-2fe5-498b-87e5-85cf8f88754a",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/notary/new",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "29beae9c-6eda-4b9b-993b-2d01becbc8bc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1de5066f-da35-4057-b961-5b928e943705",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addShippingDaySchedule",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9ffcdd15-9879-4649-b042-958e9ada1ef0",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "553cb6bb-6942-4ffb-9c22-271f1980f845",
+          "nickAttr": "group",
+          "value": "UGD_SSR_OPERATOR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e4429631-00d0-464b-bf1a-05c6e96c7a18",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8721c899-a10e-40d4-9491-bffebbe413cf",
+          "nickAttr": "name",
+          "value": "Добавить рабочий день помощи в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b86e0cea-c084-4563-bdd0-12165d1d15a3",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ffdf7a5a-6efa-4805-9949-3330c22fc3f1",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/shipping-day-schedule/new",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "571f5a7e-7e95-4b07-8505-9dbed324d8d7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f2f98808-6019-47f9-b152-b29a713fb45b",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addCip",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0077ce62-44c4-4d6d-8b0e-df5036daefbd",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b669edd0-5e3d-456b-ab05-92524242a502",
+          "nickAttr": "group",
+          "value": "UGD_SSR_CIP_EDIT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "78bb894e-5d63-4ad9-b672-8e5362acff9e",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "67cc855d-5a4b-473a-bfd5-383c4930882e",
+          "nickAttr": "name",
+          "value": "Добавить в каталог ЦИП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7f83af42-1b7a-45b4-bd02-b8a3e2aa66b2",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "05e9bbfd-2000-4302-aa24-500edf78e8aa",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/cip/new",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7c8bd31d-a12d-4cbd-9bfa-077ab5ee0c78",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "19428165-c318-4e9d-8c64-d1b121664748",
+          "nickAttr": "code",
+          "value": "ugd_ssr_manageCommissionInspectionOrganisations",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ba1d95bd-0c9c-4f36-81e4-a048b4d1853a",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "20bfceae-6fec-4a74-8f57-e8d90569247a",
+          "nickAttr": "group",
+          "value": "UGD_SSR_COMMISSION_INSPECTION_ORGANISATION_ADMIN",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fbc7015b-52b6-48dd-bfc4-60d82221f76e",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "32d27f3e-a18b-4f27-9b6b-817d9eeefc23",
+          "nickAttr": "name",
+          "value": "Администрирование организаций, осуществляющих запись на комиссионный осмотр",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f1bdcd34-5fbe-408e-a610-87dce88e5825",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ef1039e7-ad39-4c86-8863-5f4bc84e4ce4",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/commission-inspection/organisations",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c307265a-699d-4e51-b883-f310784f7ed7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7f87e96f-642f-4461-9d0b-6085cd4b3a86",
+          "nickAttr": "code",
+          "value": "ugd_ssr_uploadTradeAdditionBatch",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "abdab7d0-b647-454e-95af-c54a0bf9a69b",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "371c71b3-8361-4cbd-a2c4-d4e7dfd6af62",
+          "nickAttr": "group",
+          "value": "UGD_SSR_TRADE_ADDITION_UPLOAD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ffc0afd4-799c-4688-a17b-75b085fe4a07",
+          "nickAttr": "name",
+          "value": "Загрузить файл докупки и компенсации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c767b910-1e66-45d5-b48b-7c63556447d7",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "14d9df58-428b-43dc-83fe-4e1242650fab",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/trade-addition/upload",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1d547400-1103-4e75-9b3c-67b47de7f334",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d1062bf9-d37f-4540-b668-bdb81575accd",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addResettlementRequest",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2d798555-a0eb-452a-9a1a-ae1f404c1e2a",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c09da7d3-17a2-4006-b45c-2f29dd1bc73e",
+          "nickAttr": "group",
+          "value": "UGD_SSR_OPERATOR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "43bae097-709f-4613-acc3-1a76c84d6c0b",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b8c1f420-4b0c-4697-9f31-590f2e658d54",
+          "nickAttr": "name",
+          "value": "Инициация процесса начала переселения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6f1f7a17-61cc-4458-a881-64c351249646",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "55fefae8-c0b8-49d3-a418-23d9b2fd437c",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/template/select-resettlement-request",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f2179820-d959-42dc-ae35-b404a27e60b6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4a661d32-446b-44cc-9b7c-602243548e02",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addDashboard",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ff1e786-e5e5-4f2b-b63c-047ad4fea34b",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a4c042b2-cda8-4015-abc2-4334a29c01e9",
+          "nickAttr": "group",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dd86fa87-b98a-43c7-a75d-7d34f298aafd",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b39eb30e-d534-40be-a0ca-bfffe86b7355",
+          "nickAttr": "name",
+          "value": "Внести статистическую информацию о переселении",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8fa37411-99d8-4654-a7ae-84c5ce0594be",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "10b1730f-f52d-49f2-abdc-62e360cf375e",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/dashboard/new",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "168a86da-84f8-407b-91ef-bc5bdb9befa5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bd13e6c1-ae17-4c03-96c0-ec8908880305",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addSoonResettlementRequest",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0920c7d6-333c-49d2-91e5-5fd9a451ff58",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d1d89b53-12d2-485e-8a23-5c0a44dc5dfa",
+          "nickAttr": "group",
+          "value": "UGD_SSR_RESETTLEMENT_AUTHORITY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bf8027eb-0b30-4fa6-8e5a-b6dbcb8e32ca",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ef468008-5043-4df5-a8c9-3e31f1a40e5f",
+          "nickAttr": "name",
+          "value": "Запустить процесс обогащения данными отселяемого дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42f2181f-4996-4eb7-bdb5-794bfcc987b3",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "885872f5-9456-4b64-8182-632ebe326680",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/template/select-soon-resettlement-request",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ce3c8707-8b92-4fc6-917e-6ed2595b6be0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "773a9c11-ac58-40e2-864b-6f3b5633dd9f",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrnRequest",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3a2c9959-b76b-4d2e-a20b-be268acd55c2",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "866d50d9-b847-49bd-81a7-15a252dd0dc0",
+          "nickAttr": "group",
+          "value": "UGD_SSR_EGRN_REQUEST_ACTION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c883a8a-19b9-4f9e-900c-e0fb5a149bf3",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "001a410d-956f-42da-b19b-d1e6c67a2451",
+          "nickAttr": "name",
+          "value": "Запрос выписки из ЕГРН",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6c8abbf4-3e9a-4013-a0bc-3bb6e15767ae",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b159acb9-0751-4780-a995-72efa103a5bf",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/egrn-request",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "cca153a9-54f3-4fcd-af52-1baafe690596",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6e2919c9-ccc0-4b9a-892c-8ab454dcd2a6",
+          "nickAttr": "code",
+          "value": "ugd_ssr_uploadPerson",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5307234b-6a14-42a8-88c7-73b77cedf3ee",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4e5bb573-754a-48d8-b507-02fcaf85dc37",
+          "nickAttr": "group",
+          "value": "UGD_SSR_PERSON_UPLOAD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8b26a04a-bbda-46f9-818b-b16ac77d9543",
+          "nickAttr": "name",
+          "value": "Загрузить жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d37c2cfc-2709-4e92-8900-79996d882768",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f41fed1b-931c-4550-9fac-3b55f7730f39",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/person/upload",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

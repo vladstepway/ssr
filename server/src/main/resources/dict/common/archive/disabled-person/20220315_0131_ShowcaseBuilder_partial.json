@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "3fa370d6-ccd3-4bc5-a764-ec8b5d547b08",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ccbef6cb-ebdb-4292-9321-5d21327787f9",
+          "nickAttr": "code",
+          "value": "ugd_ssr_disabled_person_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c962364e-6416-488c-b1ff-64d9e0809b23",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_DISABLED-PERSON",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4cdef48c-e0f3-40df-96d2-035738136866",
+          "nickAttr": "documentName",
+          "value": "Реестр маломобильных граждан",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f6ab9585-562f-43ce-bdff-19fd55447f94",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Реестр маломобильных граждан\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Реестр маломобильных граждан</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableFilter\":true,\"changeTableColumns\":true,\"fields\":[{\"code\":\"ugd_ssr_disabled_person_unom\",\"type\":\"text\",\"name\":\" УНОМ\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_disabled_person_address_from\",\"type\":\"text\",\"name\":\"Адрес отселяемого дома\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_disabled_person_full_name\",\"type\":\"text\",\"name\":\"ФИО жителя\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_disabled_person_district_code\",\"type\":\"dictionary\",\"name\":\"Район\",\"dictionary\":\"District\",\"dictionaryCode\":\"code\",\"dictionaryText\":\"name\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_disabled_person_area\",\"type\":\"dictionary\",\"name\":\"Округ\",\"dictionary\":\"Prefect\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"name\",\"hierarchical\":true,\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_disabled_person_snils\",\"type\":\"text\",\"name\":\"СНИЛС\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_disabled_person_disability_group\",\"type\":\"text\",\"name\":\"Группа инвалидности\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_disabled_person_is_using_wheelchair\",\"type\":\"boolean\",\"name\":\"Использование кресла-коляски\"},{\"code\":\"ugd_ssr_disabled_person_flat_number\",\"type\":\"text\",\"name\":\"Номер квартиры\"}],\"tableColumns\":[{\"name\":\"UNOM\",\"fieldCode\":\"ugd_ssr_disabled_person_unom\",\"template\":\"{{item.ugd_ssr_disabled_person_unom}}\"},{\"name\":\"Округ\",\"fieldCode\":\"ugd_ssr_disabled_person_area\",\"template\":\"{{item.ugd_ssr_disabled_person_area?.name}}\"},{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_disabled_person_district_code\",\"template\":\"{{item.ugd_ssr_disabled_person_district}}\"},{\"name\":\"Адрес отселяемого дома\",\"fieldCode\":\"ugd_ssr_disabled_person_address_from\",\"template\":\"{{item.ugd_ssr_disabled_person_address_from}}\"},{\"name\":\"Номер квартиры\",\"fieldCode\":\"ugd_ssr_disabled_person_flat_number\",\"template\":\"{{item.ugd_ssr_disabled_person_flat_number}}\"},{\"name\":\"ФИО жителя\",\"fieldCode\":\"ugd_ssr_disabled_person_full_name\",\"template\":\"{{item.ugd_ssr_disabled_person_full_name}}\"},{\"name\":\"СНИЛС\",\"fieldCode\":\"ugd_ssr_disabled_person_snils\",\"template\":\"{{item.ugd_ssr_disabled_person_snils}}\"},{\"name\":\"Группа инвалидности\",\"fieldCode\":\"ugd_ssr_disabled_person_disability_group\",\"template\":\"{{item.ugd_ssr_disabled_person_disability_group}}\"},{\"name\":\"Использование кресла-коляски\",\"fieldCode\":\"ugd_ssr_disabled_person_is_using_wheelchair\",\"template\":\"{{item.ugd_ssr_disabled_person_is_using_wheelchair == true ? \\\"Да\\\" : \\\"Нет\\\"}}\"}],\"filters\":[{\"name\":\"УНОМ\",\"fieldCode\":\"ugd_ssr_disabled_person_unom\",\"placement\":\"bottom\"},{\"name\":\"Адрес отселяемого дома\",\"fieldCode\":\"ugd_ssr_disabled_person_address_from\",\"placement\":\"bottom\"},{\"name\":\"Округ\",\"fieldCode\":\"ugd_ssr_disabled_person_area\",\"placement\":\"bottom\"},{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_disabled_person_district_code\",\"placement\":\"bottom\"},{\"name\":\"ФИО жителя\",\"fieldCode\":\"ugd_ssr_disabled_person_full_name\",\"placement\":\"bottom\"},{\"name\":\"СНИЛС\",\"fieldCode\":\"ugd_ssr_disabled_person_snils\",\"placement\":\"bottom\"},{\"name\":\"Группа инвалидности\",\"fieldCode\":\"ugd_ssr_disabled_person_disability_group\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"UNOM\",\"fieldCode\":\"ugd_ssr_disabled_person_unom\"},{\"name\":\"Адрес отселяемого дома\",\"fieldCode\":\"ugd_ssr_disabled_person_address_from\"},{\"name\":\"ФИО жителя\",\"fieldCode\":\"ugd_ssr_disabled_person_full_name\"},{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_disabled_person_district_code\"},{\"name\":\"Округ\",\"fieldCode\":\"ugd_ssr_disabled_person_area\"},{\"name\":\"СНИЛС\",\"fieldCode\":\"ugd_ssr_disabled_person_snils\"},{\"name\":\"Группа инвалидности\",\"fieldCode\":\"ugd_ssr_disabled_person_disability_group\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f03a901a-ee72-4dac-bad2-03e9a1d25c26",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_disabled_person",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ad8b01f4-dd4d-4183-be98-69ae7d82a384",
+          "nickAttr": "showcaseName",
+          "value": "Реестр маломобильных граждан",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4a258706-7eee-4f24-a2f5-00f637a4978f",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9b763d95-26ec-4fae-b872-181efafd69ee",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fd9722ac-746c-48b0-91f1-3333912d42bd",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "547284ef-d75b-470e-a5c2-faef9a120b0e",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

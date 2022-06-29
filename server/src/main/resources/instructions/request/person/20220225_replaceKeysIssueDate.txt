@@ -1,0 +1,13 @@
+Изменить дату выдачи ключей:
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 4b2108f4-4ec1-445d-8d4b-5a4dd703e4fc; jsonPatch =
+[
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/keysIssue/actDate",
+        "value": "2022-02-16"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

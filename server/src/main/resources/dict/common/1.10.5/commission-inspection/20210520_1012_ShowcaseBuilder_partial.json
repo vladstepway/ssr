@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "c98c5978-cb47-437e-8c3c-f62804b0b4fd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e1e497a3-5819-4563-b685-858fdaac9ec7",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d0b25941-c2ca-4828-8595-d500cf07102b",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_COMMISSION-INSPECTION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e5dd53a4-d8e1-4a30-848c-b8ad440a5cf0",
+          "nickAttr": "documentName",
+          "value": "Реестр заявлений на устранение строительных дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d18882c4-7442-4409-aa07-ba887d74aa57",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Реестр заявлений на устранение строительных дефектов\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Реестр заявлений на устранение строительных дефектов</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableFilter\":true,\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по номеру заявления, дате подачи заявления, ФИО, адресу, номеру квартиры, дате и времени осмотра, статусу\",\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_commission_inspection_application_number\",\"type\":\"text\",\"name\":\"Номер заявления\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_commission_inspection_creation_date_time\",\"type\":\"date\",\"name\":\"Дата и время подачи заявления\"},{\"code\":\"ugd_ssr_commission_inspection_fio\",\"type\":\"text\",\"name\":\"Фамилия, имя, отчество\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_commission_inspection_address_to\",\"type\":\"text\",\"name\":\"Заселяемый адрес\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_commission_inspection_flat_to\",\"type\":\"text\",\"name\":\"Заселяемая квартира\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_commission_inspection_date\",\"type\":\"text\",\"name\":\"Дата и время осмотра\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_commission_inspection_status\",\"type\":\"text\",\"name\":\"Статус\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"item.ugd_ssr_commission_inspection_offer_letter_file_link\",\"type\":\"text\",\"name\":\"Письмо с предложением\"}],\"tableColumns\":[{\"name\":\"Номер заявления\",\"fieldCode\":\"ugd_ssr_commission_inspection_application_number\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/commission-inspection/{{item.sys_documentId}}\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_commission_inspection_application_number}}\\n</a>\"},{\"name\":\"Дата и время подачи заявления\",\"fieldCode\":\"ugd_ssr_commission_inspection_creation_date_time\",\"template\":\"{{item.ugd_ssr_commission_inspection_creation_date_time  | date:'dd.MM.yyyy, HH:mm'}}\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_commission_inspection_fio\",\"template\":\"{{item.ugd_ssr_commission_inspection_fio}}\"},{\"name\":\"Заселяемый адрес/письмо с предложением\",\"fieldCode\":\"ugd_ssr_commission_inspection_address_to\",\"template\":\"{{item.ugd_ssr_commission_inspection_address_to}}\\n<p *ngIf=\\\"item.ugd_ssr_commission_inspection_offer_letter_file_link\\\">\\n<a style=\\\"color: #2589c5; text-decoration: underline;\\\"\\n href=\\\"/filestore/v1/files/{{item.ugd_ssr_commission_inspection_offer_letter_file_link}}?systemCode=ugd\\\"\\ntarget=\\\"_blank\\\">\\nскачать письмо\\n</a>\\n</p>\"},{\"name\":\"Заселяемая квартира\",\"fieldCode\":\"ugd_ssr_commission_inspection_flat_to\",\"template\":\"{{item.ugd_ssr_commission_inspection_flat_to}}\"},{\"name\":\"Дата и время осмотра\",\"fieldCode\":\"ugd_ssr_commission_inspection_date\",\"template\":\"{{item.ugd_ssr_commission_inspection_date}}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_commission_inspection_status\",\"template\":\"{{item.ugd_ssr_commission_inspection_status}}\"}],\"filters\":[{\"name\":\"Номер заявления\",\"fieldCode\":\"ugd_ssr_commission_inspection_application_number\",\"placement\":\"bottom\"},{\"name\":\"Дата и время подачи заявления\",\"fieldCode\":\"ugd_ssr_commission_inspection_creation_date_time\",\"placement\":\"bottom\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_commission_inspection_fio\",\"placement\":\"bottom\"},{\"name\":\"Заселяемый адрес\",\"fieldCode\":\"ugd_ssr_commission_inspection_address_to\",\"placement\":\"bottom\"},{\"name\":\"Заселяемая квартира\",\"fieldCode\":\"ugd_ssr_commission_inspection_flat_to\",\"placement\":\"bottom\"},{\"name\":\"Дата и время осмотра\",\"fieldCode\":\"ugd_ssr_commission_inspection_date\",\"placement\":\"bottom\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_commission_inspection_status\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Номер заявления\",\"fieldCode\":\"ugd_ssr_commission_inspection_application_number\"},{\"name\":\"Дата и время подачи заявления\",\"fieldCode\":\"ugd_ssr_commission_inspection_creation_date_time\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_commission_inspection_fio\"},{\"name\":\"Заселяемый адрес/письмо с предложением\",\"fieldCode\":\"ugd_ssr_commission_inspection_address_to\"},{\"name\":\"Заселяемая квартира\",\"fieldCode\":\"ugd_ssr_commission_inspection_flat_to\"},{\"name\":\"Дата и время осмотра\",\"fieldCode\":\"ugd_ssr_commission_inspection_date\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_commission_inspection_status\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b1343fe1-51df-4113-9e01-605c03ba7736",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_commission_inspection",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "49b2ba99-b114-4282-bc0f-3562daaceb4b",
+          "nickAttr": "showcaseName",
+          "value": "Реестр заявлений на устранение строительных дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "82daabb0-8a1c-44a8-bbf4-cd31b14c4387",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "61ea9770-5491-40db-b802-d222c89f83fd",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "721a5446-098b-4916-ac33-295fcc3e50bd",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0ddd7308-32fc-430a-917f-05a98421c85c",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

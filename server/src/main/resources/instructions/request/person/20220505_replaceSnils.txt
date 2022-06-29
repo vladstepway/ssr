@@ -1,0 +1,13 @@
+Изменить snils:
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 0f744edc-52ab-4270-9aa4-50761e25f6f1; jsonPatch =
+[
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/SNILS",
+        "value": "186-351-980 03"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

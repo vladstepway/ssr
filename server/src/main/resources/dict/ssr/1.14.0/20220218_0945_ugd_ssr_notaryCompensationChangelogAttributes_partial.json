@@ -1,0 +1,139 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_notaryCompensationChangelogAttributes",
+    "name": "Атрибуты для журнала изменений заявлений на возмещение оплаты услуг нотариуса",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "title",
+        "name": "Заголовок",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "beanName",
+        "name": "Наименование бина для обработки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "isComplexPath",
+        "name": "Путь комплексный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "42f28c6f-91db-4209-898e-86462d4e7f04",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c2a5cee0-398f-476a-b48c-d737bb579cf2",
+          "nickAttr": "beanName",
+          "value": "notaryCompensationChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b38a8f2e-5617-4ad3-ac54-6a374490a511",
+          "nickAttr": "code",
+          "value": "/notaryCompensation/notaryCompensationData/statusId",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2d98dab1-f117-43fc-8754-8df735d2a84a",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cb076496-f4d5-4519-9a4c-311ed11a26d8",
+          "nickAttr": "name",
+          "value": "Статус",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a541ba5-084f-4f26-8ab2-fecfec1dc1eb",
+          "nickAttr": "title",
+          "value": "Статус",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e7d61f51-a6e8-4487-84a8-d9465c8cbf66",
+          "nickAttr": "type",
+          "value": "status",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

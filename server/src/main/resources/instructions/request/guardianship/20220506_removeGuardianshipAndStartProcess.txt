@@ -1,0 +1,64 @@
+Удалить РД ДТСЗН:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = GUARDIANSHIP; id = 65d6e5cf-2d98-408d-b182-5a0d0b926173; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/guardianshipRequest/guardianshipRequestData/decisionDate"
+    },
+    {
+        "op": "remove",
+        "path": "/guardianshipRequest/guardianshipRequestData/decisionFileId"
+    },
+    {
+        "op": "remove",
+        "path": "/guardianshipRequest/guardianshipRequestData/decisionType"
+    },
+    {
+        "op": "remove",
+        "path": "/guardianshipRequest/guardianshipRequestData/completionDateTime"
+    },
+    {
+        "op": "remove",
+        "path": "/guardianshipRequest/guardianshipRequestData/processInstanceId"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+
+Создать задачу на внос РД:
+1. Авторизоваться на https://smart.mos.ru
+2. Открыть https://smart.mos.ru/app/ugd/bpm/swagger-ui.html#/bp-definitions-controller
+3. Выбрать GET /bpdefinitions/{processDefinitionKey}/lastversion/info
+4. Нажать Try it out
+5. Вставить processDefinitionKey = ugdssrGuardianship_enterDetails
+6. Нажать Execute
+7. Убедиться, что статус код ответа 200, и скопировать значение id, например ugdssrGuardianship_enterDetails:2:548675
+8. Открыть https://smart.mos.ru/app/ugd/bpm/swagger-ui.html#/form-data-resource
+9. Выбрать POST /form/form-data
+10. Нажать Try it out
+11. Скопировать и вставить submitRequest указанный ниже, предварительно указав вместо пустой строки в processDefinitionId скопированное значение на шаге 7:
+{
+  "processDefinitionId": "",
+  "properties": [
+    {
+      "id": "EntityIdVar",
+      "value": "65d6e5cf-2d98-408d-b182-5a0d0b926173"
+    }
+  ]
+}
+12. Нажать Execute
+13. Убедиться, что статус код ответа 200, и скопировать значение id, например, 3788184
+14. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+15. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+16. Ввести anyDocumentTypeCode = GUARDIANSHIP; id = 65d6e5cf-2d98-408d-b182-5a0d0b926173;
+Скопировать и вставить jsonPatch указанный ниже, указав вместо пустой строки в value скопированное на 13-ом шаге значение id, например, 3788184
+[
+    {
+        "op": "add",
+        "path": "/guardianshipRequest/guardianshipRequestData/processInstanceId",
+        "value": ""
+    }
+]
+17. Нажать Execute и убедиться, что статус код ответа 200

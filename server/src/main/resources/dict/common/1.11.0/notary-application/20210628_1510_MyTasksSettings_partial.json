@@ -1,0 +1,258 @@
+{
+  "metaDict": {
+    "nick": "MyTasksSettings",
+    "name": "Настройки для витрины \"Мои задачи\"",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Справочник предназначен для настройки отображения содержания задач бизнес-процесса в витрине \"Задачи\"",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Префикс бизнес процесса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - кодсистемыкраткийкодподсистемы",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование бизнес процесса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Системы\"",
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "searchUrl",
+        "name": "Базовый URL поиска",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Обычно '/seach'",
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "tasksUrl",
+        "name": "Базовый URL задач",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": " Обычно '/кодсистемы'",
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "firstrString",
+        "name": "Первая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "firstrWithHalfString",
+        "name": "Полуторная строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "secondString",
+        "name": "Вторая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "thirdString",
+        "name": "Третья строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "sixthString",
+        "name": "Шестая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "fourthString",
+        "name": "Четвертая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      },
+      {
+        "nick": "fifthString",
+        "name": "Пятая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 10,
+        "unique": 0
+      },
+      {
+        "nick": "showTasks",
+        "name": "Показывать список задач",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 11,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "d42f53b6-1973-4b48-afcb-82635dc27151",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "635cc04c-6d06-411a-9848-3fdca26979c5",
+          "nickAttr": "code",
+          "value": "ugdssrNotary",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "87755b87-c6e9-4c74-950a-bba60ade51d3",
+          "nickAttr": "fifthString",
+          "value": "Статус: ${item.document.ugd_ssr_notary_application_status? item.document.ugd_ssr_notary_application_status : ''}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c550c7ca-d77e-4df4-8b4a-0729b7fcd37f",
+          "nickAttr": "firstrString",
+          "value": "Номер заявки:\n${item.document.ugd_ssr_notary_application_number ? item.document.ugd_ssr_notary_application_number : ''}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d66b241a-8736-40bd-88c6-73d204ad4fda",
+          "nickAttr": "fourthString",
+          "value": "${item.document.ugd_ssr_notary_application_appointment_datetime ? 'Время встречи: ' + item.document.ugd_ssr_notary_application_appointment_datetime : ''}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cfe20d8c-f7fd-46f7-9886-82582020793a",
+          "nickAttr": "name",
+          "value": "Визит нотариуса",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0be33639-f673-4f49-b26c-84e5ba25fb23",
+          "nickAttr": "searchUrl",
+          "value": "/search",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "acabc3d9-04c1-493c-a808-8dea9cf483fb",
+          "nickAttr": "secondString",
+          "value": "ФИО: ${item.document.ugd_ssr_notary_application_person_full_name ? item.document.ugd_ssr_notary_application_person_full_name : ''}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1f4142ff-c2f6-4c01-bb84-9f03e5abc647",
+          "nickAttr": "showTasks",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "282218ab-34c1-432f-897b-c0879d421572",
+          "nickAttr": "system",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "3ad23a44-d168-44f4-ac8e-5bfa4c296b8c",
+          "nickAttr": "tasksUrl",
+          "value": "/ugd/ssr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "142b2a44-421a-4d41-85bb-b9a9ef2c22a9",
+          "nickAttr": "thirdString",
+          "value": "Адрес квартиры заселения: ${item.document.ugd_ssr_notary_application_address_to ? item.document.ugd_ssr_notary_application_address_to : ''}",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

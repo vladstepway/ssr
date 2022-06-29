@@ -1,0 +1,30 @@
+Заархивировать карточки жителей:
+eff0880d-6f92-403f-b798-554d8e865716
+f4debf15-5d07-4a9d-a161-c7bcc55bd3bb
+95f8b2cd-3835-4dea-b493-bde700ac6fe2
+e95749f2-7f0d-4aa6-8746-1054335f5ffa
+efa6bdc0-ef55-4ef8-9c05-b6c9e8722225
+bd04679e-83aa-4780-9950-83f319e5fb19
+a35cf5a5-08f4-4367-a662-456d243776b3
+e0f29b94-1b53-4b91-9c6b-a37c4cf0f0b1
+ea72ae64-1b2e-4a25-acb5-95574dfc05f7
+ae77774f-80a5-4c19-8c0b-32e6cedc0e3b
+ead90e20-5f62-4566-aba5-f1fa2887026b
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/person-controller
+2. Выбрать DELETE /person/delete
+3. Ввести ids =
+[
+  "eff0880d-6f92-403f-b798-554d8e865716",
+  "f4debf15-5d07-4a9d-a161-c7bcc55bd3bb",
+  "95f8b2cd-3835-4dea-b493-bde700ac6fe2",
+  "e95749f2-7f0d-4aa6-8746-1054335f5ffa",
+  "efa6bdc0-ef55-4ef8-9c05-b6c9e8722225",
+  "bd04679e-83aa-4780-9950-83f319e5fb19",
+  "a35cf5a5-08f4-4367-a662-456d243776b3",
+  "e0f29b94-1b53-4b91-9c6b-a37c4cf0f0b1",
+  "ea72ae64-1b2e-4a25-acb5-95574dfc05f7",
+  "ae77774f-80a5-4c19-8c0b-32e6cedc0e3b",
+  "ead90e20-5f62-4566-aba5-f1fa2887026b"
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

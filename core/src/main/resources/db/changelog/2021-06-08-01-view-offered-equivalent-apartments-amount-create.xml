@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-06-08-01-view-offered-equivalent-apartments-amount-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true" schemaName="analytics" viewName="v_offered_equivalent_apartments_amount">
+            WITH realEstates AS (
+                SELECT
+                    re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'UNOM' AS unom,
+                    re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'Address' AS address
+                FROM
+                    ssr.documents re
+                WHERE
+                    re.doc_type = 'REAL-ESTATE'
+            ),
+            personsOffersFiles AS (
+                -- все жители, получавшие письмо с предложением (с affairId)
+                SELECT
+                    json_data -> 'Person' -> 'PersonData' ->> 'affairId' AS affairId,
+                    json_data -> 'Person' -> 'PersonData' ->> 'UNOM' AS unom,
+                    (json_data -> 'Person' -> 'PersonData' ->> 'relocationStatus')::integer AS relocationStatus,
+                    json_data -> 'Person' -> 'PersonData' ->> 'flatNum' AS flatNum,
+                    (jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'offerLetters' -> 'offerLetter') ->> 'files')::jsonb AS offerFiles,
+                    (jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'offerLetters' -> 'offerLetter') ->> 'date')::date AS offerDate
+                FROM
+                    ssr.documents
+                WHERE
+                    doc_type = 'PERSON'
+                    AND json_data -> 'Person' -> 'PersonData' ->> 'affairId' is not null
+                    AND (json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false'
+                        OR json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+            ),
+            affairLastOfferFiles AS (
+                SELECT DISTINCT ON (personsOffersFiles.affairId)
+                    personsOffersFiles.affairId,
+                    personsOffersFiles.relocationStatus,
+                    personsOffersFiles.unom,
+                    personsOffersFiles.flatNum,
+                    jsonb_array_elements(personsOffersFiles.offerFiles -> 'file') ->> 'fileType' AS fileType
+                FROM
+                    personsOffersFiles
+                ORDER BY
+                    personsOffersFiles.affairId,
+                    personsOffersFiles.offerDate DESC,
+                    personsOffersFiles.relocationStatus DESC NULLS LAST,
+                    (CASE
+                        WHEN ((personsOffersFiles.offerFiles)::text LIKE '%"fileType": "3"%') THEN 0
+                        WHEN personsOffersFiles.offerFiles IS NOT NULL THEN 1
+                        ELSE 2
+                    END)
+            )
+            SELECT
+                affairLastOfferFiles.affairId,
+                affairLastOfferFiles.unom,
+                re.address,
+                affairLastOfferFiles.flatNum,
+                affairLastOfferFiles.relocationStatus,
+                array_agg(affairLastOfferFiles.fileType) AS fileTypes
+            FROM
+                affairLastOfferFiles
+            LEFT JOIN
+                realEstates re ON re.unom = affairLastOfferFiles.unom
+            GROUP BY
+                affairLastOfferFiles.affairId, affairLastOfferFiles.unom, re.address, affairLastOfferFiles.flatNum, affairLastOfferFiles.relocationStatus
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_offered_equivalent_apartments_amount TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

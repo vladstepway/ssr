@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "4b4a9e7c-bb73-411a-947c-a3eb36aa279a",
+		"name": "20220215_cleanApartmentInspection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1) fetch document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"cookie\", \"\");\r",
+							"pm.collectionVariables.set(\"urlHost\", \"smart.mos.ru\");\r",
+							"pm.collectionVariables.set(\"documentId\", \"2186dfd8-21e5-4dee-a61c-fa634c82ecbb\");\r",
+							"pm.collectionVariables.set(\"taskId\", \"3004089\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = JSON.parse(pm.response.text());\r",
+							"\r",
+							"if (jsonData.ApartmentInspection.ApartmentInspectionData.developers) {\r",
+							"    delete jsonData.ApartmentInspection.ApartmentInspectionData.developers\r",
+							"}\r",
+							"\r",
+							"pm.collectionVariables.set(\"documentBody\", JSON.stringify(jsonData));\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/fetch/APARTMENT-INSPECTION/{{documentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"fetch",
+						"APARTMENT-INSPECTION",
+						"{{documentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2) update document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{documentBody}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/update/APARTMENT-INSPECTION/{{documentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"update",
+						"APARTMENT-INSPECTION",
+						"{{documentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3) update task",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"assignee\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/bpm/runtime/tasks/{{taskId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"bpm",
+						"runtime",
+						"tasks",
+						"{{taskId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4) delete var",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/bpm/runtime/tasks/{{taskId}}/variables/TaskTakeOnDateVar",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"bpm",
+						"runtime",
+						"tasks",
+						"{{taskId}}",
+						"variables",
+						"TaskTakeOnDateVar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5) delete task candidate group",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/bpm/runtime/tasks/{{taskId}}/identitylinks/groups/UGD_SSR_PERSON_KP_UGS/candidate",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"bpm",
+						"runtime",
+						"tasks",
+						"{{taskId}}",
+						"identitylinks",
+						"groups",
+						"UGD_SSR_PERSON_KP_UGS",
+						"candidate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6) create task candidate group",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"group\": \"UGD_SSR_PERSON_RENOVATION_FOND\",\r\n    \"type\": \"candidate\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/bpm/runtime/tasks/{{taskId}}/identitylinks",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"bpm",
+						"runtime",
+						"tasks",
+						"{{taskId}}",
+						"identitylinks"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urlHost",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "cookie",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "documentId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "documentBody",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "taskId",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

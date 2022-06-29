@@ -1,0 +1,170 @@
+{
+  "metaDict": {
+    "nick": "Actions",
+    "name": "Возможности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "disabled",
+        "name": "Признак неактивности",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "URL адрес страницы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "theme",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "ce3c8707-8b92-4fc6-917e-6ed2595b6be0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "773a9c11-ac58-40e2-864b-6f3b5633dd9f",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrnRequest",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3a2c9959-b76b-4d2e-a20b-be268acd55c2",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "866d50d9-b847-49bd-81a7-15a252dd0dc0",
+          "nickAttr": "group",
+          "value": "UGD_SSR_EGRN_REQUEST_ACTION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c883a8a-19b9-4f9e-900c-e0fb5a149bf3",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "001a410d-956f-42da-b19b-d1e6c67a2451",
+          "nickAttr": "name",
+          "value": "Запрос выписки из ЕГРН",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6c8abbf4-3e9a-4013-a0bc-3bb6e15767ae",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b159acb9-0751-4780-a995-72efa103a5bf",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/egrn-request",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="2018-08-31-02-documents_log-create.xml" author="ashigaev" dbms="postgresql">
+        <createTable tableName="DOCUMENTS_LOG">
+            <column name="ID" type="VARCHAR(36)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_DOCUMENTS_LOG"/>
+            </column>
+            <column name="ID_DOC" type="VARCHAR(36)"/>
+            <column name="DOC_TYPE" type="VARCHAR(100)"/>
+            <column name="USER_NAME" type="VARCHAR(100)"/>
+            <column name="JSON_OLD" type="JSONB"/>
+            <column name="MD5_OLD" type="VARCHAR(32)"/>
+            <column name="JSON_NEW" type="JSONB"/>
+            <column name="MD5_NEW" type="VARCHAR(32)"/>
+            <column name="JSON_PATCH" type="JSONB"/>
+            <column name="DATE_EDIT" type="TIMESTAMP" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NOTES" type="VARCHAR(2000)"/>
+        </createTable>
+
+        <rollback>
+            <dropTable tableName="DOCUMENTS_LOG" cascadeConstraints="true"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

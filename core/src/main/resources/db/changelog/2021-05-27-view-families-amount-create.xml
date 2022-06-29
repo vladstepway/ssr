@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-05-27-view-families-amount-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_families_amount">
+            WITH realEstates AS (
+                -- Объекты недвижимости (УНОМ и адрес)
+                SELECT
+                re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'UNOM' AS unom,
+                re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'Address' AS address
+                FROM ssr.documents re
+                WHERE re.doc_type = 'REAL-ESTATE'
+            ),
+            houses_to_resettle AS (
+                -- расселяемые дома (из запросов на переселение) - УНОМ, адрес, квартиры и признак полного/частичного переселения
+                WITH houses_to_settle AS (
+                SELECT
+                    jsonb_array_elements(requests.json_data->'ResettlementRequest'->'main'->'housesToSettle') AS json_data
+                FROM
+                    ssr.documents requests
+                WHERE
+                    EXISTS(
+                        SELECT TRUE
+                        FROM jsonb_array_elements(requests.json_data->'ResettlementRequest'->'main'->'housesToSettle') houses_to_settle_with_houses_to_resettle
+                        WHERE houses_to_settle_with_houses_to_resettle ? 'housesToResettle'
+                    )
+                )
+            SELECT
+                houses_to_resettle_in_houses_to_settle->>'realEstateUnom' AS unom,
+                re.address,
+                houses_to_resettle_in_houses_to_settle->'flats' AS resettle_flats,
+                houses_to_resettle_in_houses_to_settle->>'resettlementBy' AS resettlementBy
+            FROM
+                houses_to_settle, jsonb_array_elements(houses_to_settle.json_data->'housesToResettle') AS houses_to_resettle_in_houses_to_settle
+            LEFT JOIN realEstates re ON re.unom = houses_to_resettle_in_houses_to_settle->>'realEstateUnom'
+            ),
+            flats_to_resettle AS (
+                -- частично расселяемые дома
+
+                SELECT DISTINCT
+                    flats ->> 'flatID' AS flatId,
+                    COALESCE(flats->>'apartment_L4_VALUE', flats->>'FlatNumber') AS flatNum,
+                    real_estate.json_data->'RealEstate' -> 'RealEstateData' ->> 'UNOM' AS unom,
+                    real_estate.json_data->'RealEstate' -> 'RealEstateData' ->> 'Address' AS address
+                FROM
+                    houses_to_resettle
+                JOIN
+                    ssr.documents real_estate
+                ON
+                    real_estate.doc_type = 'REAL-ESTATE'
+                    AND real_estate.json_data @> cast('{"RealEstate": {"RealEstateData": {"UNOM": ' || houses_to_resettle.unom || '}}}' AS jsonb)
+                JOIN
+                    jsonb_array_elements(real_estate.json_data->'RealEstate' -> 'RealEstateData'->'Flats'->'Flat') flats
+                ON
+                    (flats->'flatID')::jsonb ?| array(SELECT jsonb_array_elements_text(houses_to_resettle.resettle_flats))
+                WHERE
+                    houses_to_resettle.resettlementBy = 'part'
+
+                UNION
+
+                -- полностью расселяемые дома
+
+                SELECT DISTINCT
+                    flats ->> 'flatID' AS flatid,
+                    COALESCE(flats->>'apartment_L4_VALUE', flats->>'FlatNumber') AS flatNum,
+                    real_estate.json_data->'RealEstate' -> 'RealEstateData' ->> 'UNOM' AS unom,
+                    real_estate.json_data->'RealEstate' -> 'RealEstateData' ->> 'Address' AS address
+                FROM
+                    houses_to_resettle
+                JOIN
+                    ssr.documents real_estate
+                ON
+                    real_estate.doc_type = 'REAL-ESTATE'
+                    AND real_estate.json_data @> cast('{"RealEstate": {"RealEstateData": {"UNOM": ' || houses_to_resettle.unom || '}}}' AS jsonb)
+                JOIN
+                    jsonb_array_elements(real_estate.json_data->'RealEstate' -> 'RealEstateData'->'Flats'->'Flat') flats
+                ON
+                    TRUE
+                WHERE
+                    houses_to_resettle.resettlementBy = 'full'
+            ),
+            persons_with_affair AS (
+                SELECT
+                    persons.json_data->'Person'->'PersonData'->>'affairId' as affairId,
+                    persons.json_data->'Person'->'PersonData'->>'relocationStatus' as relocationStatus,
+                    persons.json_data->'Person'->'PersonData'->>'flatID' as flatId
+                FROM
+                    ssr.documents persons
+                WHERE
+                    persons.json_data->'Person'->'PersonData' ? 'affairId'
+                    AND (persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false' OR persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+            ),
+            trade_additions AS (
+                -- УНОМ, номер квартиры и ID семьи из TRADE-ADDITION, где указан ID семьи, УНОМ в числе переселяемых и confirmed = true
+                SELECT
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'oldEstate'->>'unom' AS unom,
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'oldEstate'->>'flatNumber' AS flatNum,
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'affairId' AS affairId
+                FROM
+                    ssr.documents trade_additions
+                WHERE
+                    doc_type='TRADE-ADDITION'
+                    AND trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData' ? 'affairId'
+                    AND trade_additions.json_data @> cast('{"tradeAddition": {"tradeAdditionTypeData": {"confirmed": true}}}' as jsonb)
+                    AND trade_additions.json_data @> cast('{"tradeAddition": {"tradeAdditionTypeData": {"indexed": true}}}' as jsonb)
+                    AND trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'claimStatus' = '1'
+                    AND (
+                        SELECT to_jsonb(string_to_array(string_agg(houses_to_resettle.unom, ','), ',')) AS unoms
+                        FROM houses_to_resettle
+                    ) @> (trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'oldEstate'->'unom')::JSONB
+            )
+            -- из реестра жителей
+            SELECT DISTINCT ON (persons_with_affair.affairId)
+                'PERSON' as type,
+                flats_to_resettle.unom as UNOM,
+                flats_to_resettle.address as address,
+                flats_to_resettle.flatNum as flatNum,
+                persons_with_affair.affairId,
+                persons_with_affair.relocationStatus
+            FROM
+                flats_to_resettle
+            JOIN
+                persons_with_affair
+            ON
+                persons_with_affair.flatId = flats_to_resettle.flatId
+
+            UNION
+
+            -- из trade-addition
+            SELECT DISTINCT ON (trade_additions.affairId)
+                'TRADE' as type,
+                trade_additions.unom AS UNOM,
+                houses_to_resettle.address AS address,
+                trade_additions.flatNum AS flatNum,
+                trade_additions.affairId AS affairId,
+                '' AS relocationStatus
+            FROM
+                houses_to_resettle
+            JOIN
+                trade_additions
+            ON
+                trade_additions.unom = houses_to_resettle.unom
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_families_amount TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

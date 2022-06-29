@@ -1,0 +1,156 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Настройка страницы Реестры информации",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilder",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": "Использование параметра не рекомендовано. Используйте предустановленный фильтр в конструкторе витрин",
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "bb3def80-59c7-4bba-aa4e-74f33867776f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4e1d9115-2f5f-4223-859f-e93a16db8e8f",
+          "nickAttr": "code",
+          "value": "UGD_SSR_APARTMENT_INSPECTION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ed893302-59ba-474c-a30e-eaebb3715fbc",
+          "nickAttr": "description",
+          "value": "Реестр актов по дефектам",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "35c7ab54-2fe9-42b2-b5d8-aa09a6e1acfd",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_DEFFECT_LIST",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cc70fd4d-5f92-4c22-8003-633cd361df9d",
+          "nickAttr": "name",
+          "value": "Реестр актов по дефектам",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "21513faf-603f-4879-9e59-2112ba7d3fdf",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "509a2233-13d3-4c26-8fd4-ef16d38f2560",
+          "orders": 0,
+          "linkCode": "ugd_ssr_apartment_inspection_catalog_code"
+        }
+      ]
+    }
+  ]
+}

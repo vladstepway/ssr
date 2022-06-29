@@ -1,0 +1,8 @@
+Заполнение даты сдачи/выдачи ключей:
+
+ 1) Открыть https://you_domain.ru/app/ugd/ssr/swagger-ui.html#/person-test-controller
+ 2) Выбрать POST /person/actualize-keys-issue-and-release-flat
+ 3) Нажать Try it out
+ 4) Ввести historicalResettlementDate = 2020-11-01
+ 4) Нажать Execute
+ 5) Проверить, что статус код 200

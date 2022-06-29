@@ -1,0 +1,244 @@
+#app:
+#  security:
+#    enabled: false
+
+app:
+  domain: test.test
+userprofile:
+  url: http://nginx.cdp.local:8085/userprofile
+ugd:
+  ssr:
+    bpm:
+      document-type-ldap-group-map:
+        "COMMISSION-INSPECTION": "COMMISSION_INSPECTION_READ_LDAP_GROUP"
+    report:
+      flow-error-emails:
+        - test@test.com
+    guardianship:
+      portal-url: http://test.test/
+    opmosru:
+      username: pukp_ias_ugd
+      password: iI7P5ss
+      timeoutms: 600000
+      url: https://op.mos.ru:443/EHDWS/soap
+    apartment-inspection:
+      default-tech-user-org: NO_SUCH_ORG
+      kp-ugs-inn: 7719272800
+      closing-act-confirmation-group: UGD_SSR_CLOSING_ACT_CONFIRMATION
+    agreement-application:
+      days-to-receive-offer: 7
+    queue:
+      commission-inspection-request: SSR_DEFECT.APPLICATION_INC
+      commission-inspection-bk: SSR_DEFECT.APPLICATION_INC.BK
+      commission-inspection-status-inc: SSR_DEFECT.STATUS_INC
+      commission-inspection-status-bk: SSR_DEFECT.STATUS_INC.BK
+      commission-inspection-status-out: SSR_DEFECT.STATUS_OUT
+
+      notary-application-request: NOTARY.APPLICATION_INC
+      notary-application-bk: NOTARY.APPLICATION_INC.BK
+      notary-application-status-inc: NOTARY.STATUS_INC
+      notary-application-status-bk: NOTARY.STATUS_INC.BK
+      notary-application-status-out: NOTARY.ETP.STATUS_OUT
+
+      contract-appointment-request: SSR_CONTRACT.UGD.APPLICATION_INC
+      contract-appointment-bk: SSR_CONTRACT.UGD.APPLICATION_INC.BK
+      contract-appointment-status-inc: SSR_CONTRACT.UGD.STATUS_INC
+      contract-appointment-status-bk: SSR_CONTRACT.UGD.STATUS_INC.BK
+      contract-appointment-status-out: SSR_CONTRACT.UGD.STATUS_OUT
+
+      flat-appointment-request: SSR_FLAT.UGD.APPLICATION_INC
+      flat-appointment-bk: SSR_FLAT.UGD.APPLICATION_INC.BK
+      flat-appointment-status-inc: SSR_FLAT.UGD.STATUS_INC
+      flat-appointment-status-bk: SSR_FLAT.UGD.STATUS_INC.BK
+      flat-appointment-status-out: SSR_FLAT.UGD.STATUS_OUT
+
+      personal-document-application-request: SSR_PERSONALDOCUMENTS.UGD.APPLICATION_INC
+      personal-document-application-bk: SSR_PERSONALDOCUMENTS.UGD.APPLICATION_INC.BK
+      personal-document-application-status-out: SSR_PERSONALDOCUMENTS.UGD.STATUS_OUT
+
+      administrative-documents-elk-status-request: RENOVATION.ETP.APT_ADMINISTRATIVE_DEL
+
+      shipping-requests: SSR_REMOVAL.APPLICATION_INC
+      shipping-requests-bk: SSR_REMOVAL.APPLICATION_INC.BK
+      shipping-statuses-out: SSR_REMOVAL.STATUS_OUT
+      shipping-statuses-inc: SSR_REMOVAL.STATUS_INC
+      shipping-statuses-inc-bk: SSR_REMOVAL.STATUS_INC.BK
+
+      defect-elimination-act-request: RENOVATION.ETP.APT_FIXDEFECT
+      defect-elimination-transfer-request: RENOVATION.ETP.APT_DATADEFECT
+      defect-elimination-agreement-request: RENOVATION.ETP.APT_OKDEFECT
+
+    mqetpmv:
+      rsm-object-request-message-type: UGD_RSM_TASK_INC
+      rsm-object-response-status-out-profile: UGD_RSM_STATUS_OUT
+      mfr-flow-task-out-profile: UGD_FR_TASK_OUT
+      mfr-flow-status-out-profile: UGD_FR_STATUS_OUT
+      mfr-flow-task-inc-message-type: UGD_FR_TASK_INC
+      mfr-flow-status-inc-message-type: UGD_FR_STATUS_INC
+      court-flow-task-inc-message-type: UGD_RSM_COURT_TASK_INC
+      court-flow-status-out-profile: UGD_RSM_COURT_STATUS_OUT
+      disabled-person-flow-status-inc-message-type: UGD_RSM_DISABLED_PERSON_STATUS_INC
+      disabled-person-flow-task-out-profile: UGD_RSM_DISABLED_PERSON_TASK_OUT
+      trade-addition-flow-status-inc-message-type: UGD_APT_ADDITIONAL_STATUS_INC
+      trade-addition-flow-task-out-profile: UGD_APT_ADDITIONAL_TASK_OUT
+      flat-layout-status-inc-message-type: UGD_FLAT_LAYOUT_STATUS_INC
+      flat-layout-flow-task-out-profile: UGD_FLAT_LAYOUT_TASK_OUT
+      notary-compensation-request-inc-message-type: UGD_NOTARY_COMPENSATION_TASK_INC
+      notary-compensation-status-out-profile: UGD_NOTARY_COMPENSATION_STATUS_OUT
+      affair-collation-task-out-profile: UGD_AFFAIR_COLLATION_TASK_OUT
+      affair-collation-report-message-type: UGD_AFFAIR_COLLATION_STATUS_INC
+      person-response-message-type: UGD_PERSON_RESPONSE_INC
+      person-update-message-type: UGD_PERSON_UPDATE_INC
+      offer-letter-message-type: UGD_OFFER_LETTER_INC
+      status-relocation-message-type: UGD_STATUS_RELOCATION_INC
+      contract-ready-message-type: UGD_CONTRACT_READY_INC
+      contract-signed-message-type: UGD_CONTRACT_SIGNED_INC
+      contract-register-message-type: UGD_CONTRACT_REGISTER_INC
+      info-settlement-message-type: UGD_INFO_SETTLEMENT_INC
+      contract-pr-ready-message-type: UGD_CONTRACT_PR_READY_INC
+      administrative-document-message-type: UGD_ADMINISTRATIVE_DOCUMENT_INC
+
+    integration:
+      xml-import-commission-inspection-flow: "/data/ssr/xml/CommissionInspectionFlow/importXMLFiles/"
+      xml-import-notary-application-flow: "/data/ssr/xml/NotaryApplicationFlow/importXMLFiles/"
+      xml-import-notary-compensation-flow: "/data/ssr/xml/NotaryCompensationFlow/importXMLFiles/"
+      xml-import-contract-appointment-flow: "/data/ssr/xml/ContractAppointmentFlow/importXMLFiles/"
+      xml-import-flat-appointment-flow: "/data/ssr/xml/FlatAppointmentFlow/importXMLFiles/"
+      xml-import-personal-document-application-flow: "/data/ssr/xml/PersonalDocumentApplicationFlow/importXMLFiles/"
+      xml-import-flow-first: "/data/ssr/xml/firstFlow/importXMLFiles/"
+      xml-export-flow-first: "/data/ssr/xml/firstFlow/exportXMLFiles/"
+      xml-import-flow-second: "/data/ssr/xml/secondFlow/importXMLFiles/"
+      xml-export-flow-second: "/data/ssr/xml/secondFlow/exportXMLFiles/"
+      xml-export-flow-third: "/data/ssr/xml/thirdFlow/exportXMLFiles/"
+      xml-import-flow-fourth: "/data/ssr/xml/fourthFlow/importXMLFiles/"
+      xml-export-flow-fifth: "/data/ssr/xml/fifthFlow/exportXMLFiles/"
+      xml-export-flow-ninth: "/data/ssr/xml/ninthFlow/exportXMLFiles/"
+      xml-export-flow-tenth: "/data/ssr/xml/tenthFlow/exportXMLFiles/"
+      xml-export-flow-sixth: "/data/ssr/xml/sixthFlow/exportXMLFiles/"
+      xml-export-flow-eighth: "/data/ssr/xml/eighthFlow/exportXMLFiles/"
+      xml-import-flow-eighth: "/data/ssr/xml/eighthFlow/importXMLFiles/"
+      xml-import-flow-seventh: "/data/ssr/xml/seventhFlow/importXMLFiles/"
+      xml-export-flow-seventh: "/data/ssr/xml/seventhFlow/exportXMLFiles/"
+      xml-import-flow-twentieth: "/data/ssr/xml/twentiethFlow/importXMLFiles/"
+      xml-export-flow-twentieth: "/data/ssr/xml/twentiethFlow/exportXMLFiles/"
+      xml-import-shipping-flow: "/data/ssr/xml/shippingFlow/importXMLFiles/"
+      xml-export-flow-eleventh: "/data/ssr/xml/eleventhFlow/exportXMLFiles/"
+      xml-import-flow-twelfth: "/data/ssr/xml/twelfthFlow/importXMLFiles/"
+      xml-export-flow-twelfth: "/data/ssr/xml/twelfthFlow/exportXMLFiles/"
+      xml-import-flow-trade-addition: "/data/ssr/xml/tradeAddition/importXMLFiles/"
+      xml-export-flow-trade-addition: "/data/ssr/xml/tradeAddition/exportXMLFiles/"
+      xml-export-mfr-resettlement-info: "/data/ssr/xml/mfr/resettlementInfo/exportXMLFiles/"
+      xml-export-mfr-administrative-documents: "/data/ssr/xml/mfr/administrativeDocuments/exportXMLFiles/"
+      xml-export-mfr-contract: "/data/ssr/xml/mfr/contract/exportXMLFiles/"
+      xml-export-mfr-contract-project: "/data/ssr/xml/mfr/contractProject/exportXMLFiles/"
+      xml-export-mfr-person-info: "/data/ssr/xml/mfr/personInfo/exportXMLFiles/"
+      xml-export-mfr-release-flat: "/data/ssr/xml/mfr/releaseFlat/exportXMLFiles/"
+      xml-import-mfr-message: "/data/ssr/xml/mfr/message/importXMLFiles/"
+      xml-import-mfr-status: "/data/ssr/xml/mfr/status/importXMLFiles/"
+      xml-export-mfr-status: "/data/ssr/xml/mfr/status/exportXMLFiles/"
+      xml-import-administrative-documents: "/data/ssr/xml/administrativeDocuments/importXMLFiles/"
+      xml-export-administrative-documents: "/data/ssr/xml/administrativeDocuments/exportXMLFiles/"
+      ehd-catalog-push-updates-import: "/data/ssr/json/ehd/catalog/28609/importJsonFiles/"
+      ehd-catalog-push-updates-failed: "/data/ssr/json/ehd/catalog/28609/failedJsonFiles/"
+      xml-export-defect-elimination-act: "/data/ssr/xml/defectEliminationAct/exportXMLFiles/"
+      xml-export-defect-elimination-transfer: "/data/ssr/xml/defectEliminationTransfer/exportXMLFiles/"
+      xml-export-defect-elimination-agreement: "/data/ssr/xml/defectEliminationAgreement/exportXMLFiles/"
+      xml-import-rsm-object: "/data/ssr/xml/rsmObject/importXMLFiles/"
+      xml-export-rsm-object: "/data/ssr/xml/rsmObject/exportXMLFiles/"
+      xml-import-court-info: "/data/ssr/xml/courtInfo/importXMLFiles/"
+      xml-export-court-info: "/data/ssr/xml/courtInfo/exportXMLFiles/"
+      xml-import-disabled-person: "/data/ssr/xml/disabledPerson/importXMLFiles/"
+      xml-export-disabled-person: "/data/ssr/xml/disabledPerson/exportXMLFiles/"
+      xml-import-affair-collation: "/data/ssr/xml/affairCollation/importXMLFiles/"
+      xml-export-affair-collation: "/data/ssr/xml/affairCollation/exportXMLFiles/"
+    notification:
+      person-upload:
+        recipient-role: UGD_SSR_PERSON_UPLOAD_RESULT
+    request-response-logging:
+      enabled: true
+      uri-filter:
+        enabled: true
+    log:
+      path: "/data/ssr/logs/"
+      person-letter-and-contract-upload:
+        path: "/data/ssr/logs/personLetterAndContractUpload/"
+    auth:
+      person-group: UGD_SSR_PERSON_READ
+
+schedulers:
+  commission-inspection:
+    days-to-first-visit-confirmation: 7
+    days-to-second-visit-confirmation: 7
+    days-before-prolongation: 15
+    days-to-refuse-no-call: 7
+    days-to-finish-no-call: 7
+  contract-appointment:
+    days-before-auto-cancellation: 0
+  flat-appointment:
+    days-before-auto-cancellation: 2
+
+tasks:
+  duration:
+    notary:
+      refuse-no-booking: P30D
+      refuse-no-documents: P14D
+      booking-closed: P7D
+      appointment-reminder: P2D
+      cancellation-closed: P1D
+
+methods-informing:
+  default-methods: "1,2,4,5"
+  notification-codes:
+    "880040": "1,4,5"
+    "880044": "1,4,5"
+    "880046": "1,4,5"
+    "880047": "1,4,5"
+    "880048": "1,4,5"
+    "880050": "1,4,5"
+    "880051": "1,4,5"
+    "880052": "1,4,5"
+    "880055": "1,4,5"
+    "880056": "1,4,5"
+    "880058": "1,4,5"
+    "880059": "1,4,5"
+    "880060": "1,4,5"
+    "880061": "1,4,5"
+    "880063": "1,4,5"
+    "880076": "1,4,5"
+    "880077": "1,4,5"
+    "880078": "1,4,5"
+    "880079": "1,4,5"
+    "880080": "1,4,5"
+    "880081": "1,4,5"
+    "880082": "1,4,5"
+    "880083": "1,4,5"
+    "880084": "1,4,5"
+    "880095": "1,4,5"
+    "880104": "1,4"
+    "880105": "1,4"
+    "880106": "1,4"
+    "880107": "1,4"
+    "880126": "1,4"
+    "880127": "1,4"
+    "880129": "1,4"
+    "880130": "1,4"
+    "880131": "1,4"
+    "880132": "1,4"
+    "880134": "1,4"
+    "880135": "1,4"
+    "880139": "1,4"
+    "880140": "1,4"
+    "880142": "1,4"
+    "880144": "1,4"
+    "880114-1": "1,4"
+    "880147": "1,4"
+
+integration:
+  etp-mv:
+    trade-addition:
+      enable: false
+  asur:
+    allowed-request-initiators: 0874-9000155,0874-9000154
+    eno:
+      code: 0874-9000155
+      service: '067801'

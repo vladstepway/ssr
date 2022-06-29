@@ -1,0 +1,92 @@
+Удалить файл договора из жителя 42a6fdb1-af0d-4a58-a992-bc84dbd83895:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 42a6fdb1-af0d-4a58-a992-bc84dbd83895; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/actSignDate"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/contractSignDate"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/techInfo"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/files/file/3"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/files/file/2"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/14"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/13"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/12"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/23"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/22"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/21"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/20"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/19"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/18"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/12"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/11"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/10"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/9"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/8"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/keysIssue"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/relocationStatus",
+        "value": "6"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

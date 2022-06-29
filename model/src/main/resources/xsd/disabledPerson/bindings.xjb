@@ -1,0 +1,16 @@
+<jxb:bindings
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+        version="2.1">
+    <jxb:bindings schemaLocation="DisabledPersonImport.xsd">
+        <jxb:bindings node="//xs:simpleType[@name='ImportStatus']/xs:restriction/xs:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="COMPLETED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='ImportStatus']/xs:restriction/xs:enumeration[@value='2']">
+            <jxb:typesafeEnumMember name="INPROGRESS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='ImportStatus']/xs:restriction/xs:enumeration[@value='3']">
+            <jxb:typesafeEnumMember name="ERROR"/>
+        </jxb:bindings>
+    </jxb:bindings>
+</jxb:bindings>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cdp.org/demo">
+	<xs:element name="demo">
+		<xs:annotation>
+			<xs:documentation>Пример документа</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="versionXSD" type="xs:string" fixed="7">
+					<xs:annotation>
+						<xs:documentation>Версия XSD схемы</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="documentID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Системный идентификатор документа</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="folderGUID" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Идентификатор папки</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="main" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Общие сведения</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="regNumber" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Номер</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="regDate" type="xs:date" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Дата регистрации</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="userAccount" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Исполнитель</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="dateRange" type="xs:date" minOccurs="0" maxOccurs="2">
+								<xs:annotation>
+									<xs:documentation>Период исполнения</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="statusCode" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Код статуса</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="decision" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Решение</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="rejectReason" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Причина отказа</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

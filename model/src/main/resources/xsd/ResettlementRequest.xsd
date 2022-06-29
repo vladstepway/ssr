@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ds="http://www.ugd.croc.ru/ssr/compensationFlat"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr"
+           targetNamespace="http://www.ugd.croc.ru/ssr">
+    <xs:import namespace="http://www.ugd.croc.ru/ssr/compensationFlat" schemaLocation="../xsd/compensation/CompensationFlatType.xsd"/>
+    <xs:element name="ResettlementRequest">
+        <xs:annotation>
+            <xs:documentation>Запрос на переселение домов/квартир</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="main" type="resettlementRequestType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="resettlementRequestType">
+        <xs:annotation>
+            <xs:documentation>Сведение о запросе на переселение</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startResettlementDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата начала переселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="emailNumberDgp" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер письма ДГП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sendEmailDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата направления письма</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="housesToSettle" type="HouseToSettle" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Информация по заселяемым домам</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="status" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус заявки (Активна, Отклонена, Завершена)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="saveDraftDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата сохранения черновика</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sendNotificationStep" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Флаг перехода на этап отправки уведомлений</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HouseToSettle">
+        <xs:annotation>
+            <xs:documentation>Информация по заселяемым домам</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="capitalConstructionObjectId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ОКС (заселяемый дом)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="capitalConstructionObjectUnom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>UNOM ОКС (заселяемый дом)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="informationCenterCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код центра переселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="housesToResettle" type="HouseToResettle" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Информация по расселяемым домам</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HouseToResettle">
+        <xs:annotation>
+            <xs:documentation>Информация по расселяемым домам</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="realEstateId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ОН (расселяемый дом)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="realEstateUnom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>UNOM ОН (расселяемый дом)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resettlementBy" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Переселение в полном объеме или частично (full - полное, part - частичное)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flats" type="xs:string" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Идентификаторы квартир (если частично)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatNumbers" type="xs:string" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Номера квартир (если частично)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="compensationFlats" type="ds:CompensationFlatType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Данные по квартирам на компенсацию</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

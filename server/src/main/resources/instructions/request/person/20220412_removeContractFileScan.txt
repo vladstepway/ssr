@@ -1,0 +1,15 @@
+Удалить файл договора из жителя a5c083a5-2de1-450f-b0aa-c2c671c352e8:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = a5c083a5-2de1-450f-b0aa-c2c671c352e8; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/files/file/3"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0/files/file/2"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

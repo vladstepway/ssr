@@ -1,0 +1,85 @@
+Изменить ssoId и snils для жителей:
+
+personDocumentId = 62e68db7-e59c-4ec4-983d-0f0883e546b7, snils = 002-704-044 84, ssoId = f69e568e-892f-4a95-9bbf-43daa2ca4b12
+personDocumentId = ab21b4be-6183-43d1-bba7-853b26232dff, snils = 066-867-207 07, ssoId = 5b242c1b-048a-49e8-9ebc-acd6d543810b
+personDocumentId = 8c8ebfb8-2bc6-4370-bada-f33c5edbbe69, snils = 026-319-968 63, ssoId = 5782fe8f-f126-44a0-b032-0b6cd7d10c3e
+personDocumentId = 18b0db66-f51f-4443-9c97-312624a567ba, snils = 074-079-944 93, ssoId = f6c2f3a3-e206-4fbe-913b-ec8d0add0b06
+
+
+Для жителя с personDocumentId = 62e68db7-e59c-4ec4-983d-0f0883e546b7 :
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 62e68db7-e59c-4ec4-983d-0f0883e546b7; jsonPatch =
+[
+    {
+        "op": "add",
+        "path": "/Person/PersonData/SNILS",
+        "value": "002-704-044 84"
+    },
+    {
+        "op": "add",
+        "path": "/Person/PersonData/SsoID",
+        "value": "f69e568e-892f-4a95-9bbf-43daa2ca4b12"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+------------------------------------------
+
+Для жителя с personDocumentId = ab21b4be-6183-43d1-bba7-853b26232dff :
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = ab21b4be-6183-43d1-bba7-853b26232dff; jsonPatch =
+[
+    {
+        "op": "add",
+        "path": "/Person/PersonData/SNILS",
+        "value": "066-867-207 07"
+    },
+    {
+        "op": "add",
+        "path": "/Person/PersonData/SsoID",
+        "value": "5b242c1b-048a-49e8-9ebc-acd6d543810b"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+------------------------------------------
+
+Для жителя с personDocumentId = 8c8ebfb8-2bc6-4370-bada-f33c5edbbe69 :
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 8c8ebfb8-2bc6-4370-bada-f33c5edbbe69; jsonPatch =
+[
+    {
+        "op": "add",
+        "path": "/Person/PersonData/SNILS",
+        "value": "026-319-968 63"
+    },
+    {
+        "op": "add",
+        "path": "/Person/PersonData/SsoID",
+        "value": "5782fe8f-f126-44a0-b032-0b6cd7d10c3e"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+------------------------------------------
+
+Для жителя с personDocumentId = 18b0db66-f51f-4443-9c97-312624a567ba :
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 18b0db66-f51f-4443-9c97-312624a567ba; jsonPatch =
+[
+    {
+        "op": "add",
+        "path": "/Person/PersonData/SNILS",
+        "value": "074-079-944 93"
+    },
+    {
+        "op": "add",
+        "path": "/Person/PersonData/SsoID",
+        "value": "f6c2f3a3-e206-4fbe-913b-ec8d0add0b06"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

@@ -1,0 +1,598 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_personalDocumentType",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "kindCode",
+        "name": "Код АС ГУФ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 1
+      },
+      {
+        "nick": "sortNumber",
+        "name": "Порядковый номер сортировки",
+        "typeAttr": "integer",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "7f2cfa42-148c-43d2-9c0a-01b01555fb12",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9fb9f91f-00d3-471e-820c-f58354c6b050",
+          "nickAttr": "code",
+          "value": "12",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "879a5b5c-ee7f-4600-a7f9-5a1d0bb93940",
+          "nickAttr": "kindCode",
+          "value": "11675",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e9a1b109-8e5c-413f-b22d-2cda06755529",
+          "nickAttr": "name",
+          "value": "Иные документы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "40e4778a-179d-4a19-8454-290582ce33ab",
+          "nickAttr": "sortNumber",
+          "value": "15",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "31e251f7-212b-4dc5-8505-3dd818e297d0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8ee10fc6-3498-4489-bced-f69a28371c27",
+          "nickAttr": "code",
+          "value": "8",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b904cde3-447b-4001-8c41-8bf66bc4877b",
+          "nickAttr": "kindCode",
+          "value": "12034",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "507efb40-c7e9-407d-898f-7c03117cb2be",
+          "nickAttr": "name",
+          "value": "При наличии среди собственников несовершеннолетних детей – документы, подтверждающие полномочия опекуна/попечителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d039e19-af68-47fc-aa86-f5326f34af08",
+          "nickAttr": "sortNumber",
+          "value": "13",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3d3386bb-86e2-4a00-9826-7b2e9ef2b78c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "10063a92-bff9-4782-9b4c-07bbda820d62",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "acbb9504-cef9-42c4-bda4-20c923254741",
+          "nickAttr": "kindCode",
+          "value": "10845",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f7c22451-1c96-4b82-bd8d-dc69431c169a",
+          "nickAttr": "name",
+          "value": "Свидетельство о рождении (жителям до 18 лет)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "be50e852-53d9-4449-a749-c93ad5534e68",
+          "nickAttr": "sortNumber",
+          "value": "12",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "fcc5aaf5-8884-4306-a730-12f7aa5f85dd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f8a5099d-f7b0-4ea1-b81d-c813d1bdc503",
+          "nickAttr": "code",
+          "value": "7",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "de939d54-efed-435f-89b4-c049fafe1c22",
+          "nickAttr": "kindCode",
+          "value": "10850",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4d4ffb46-5003-4d20-b85e-c8b0f974fb2d",
+          "nickAttr": "name",
+          "value": "Свидетельство об установлении отцовства",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8852cae8-3ec4-42be-ad91-e7e9ead66cbf",
+          "nickAttr": "sortNumber",
+          "value": "11",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "fcb65ba9-a0ce-4441-b471-c5bdfcf6e281",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b5708240-d1b6-48af-aa2b-086f5ee925ee",
+          "nickAttr": "code",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a57367ac-26e0-4a92-a3eb-412fd6ba5076",
+          "nickAttr": "kindCode",
+          "value": "10849",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "798a9425-9e70-42d4-8b05-7f590995fd83",
+          "nickAttr": "name",
+          "value": "Свидетельство о перемене имени",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "560cb32f-d594-4f73-8d77-d4db38c5266b",
+          "nickAttr": "sortNumber",
+          "value": "10",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b0603a5f-3c5e-4d4a-be7d-fa690f6da801",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1fcf46d6-5772-46cc-9207-8f49b95c3bce",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "58cac0f1-f8fe-47a1-8213-91629222c695",
+          "nickAttr": "kindCode",
+          "value": "10846",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b9280de9-fc3b-4737-9a8b-e410220d60fa",
+          "nickAttr": "name",
+          "value": "Свидетельство о заключении брака (при смене фамилии)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "25f80355-2735-40dc-bd56-dce5411e7130",
+          "nickAttr": "sortNumber",
+          "value": "8",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c6ddac4e-5b99-4a18-823c-4fe1cd0a5505",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1d559b52-de2c-4bf1-8bc2-e347e87f894d",
+          "nickAttr": "code",
+          "value": "9",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7dab9514-4ce0-4f47-8c5a-c0882068393b",
+          "nickAttr": "kindCode",
+          "value": "10848",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "86dbc69b-b66a-4c20-91af-b805c22ceff5",
+          "nickAttr": "name",
+          "value": "Свидетельство о смерти правообладателя и при наличии обременения рентными обязательствами (смерть рентополучателя)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d2a51eee-dccd-441e-9844-b397ae76a91f",
+          "nickAttr": "sortNumber",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4c145ff5-76bc-4db4-a3b8-7c1ca63dd014",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f9b6ebc1-e452-4fce-836c-dc567633416e",
+          "nickAttr": "code",
+          "value": "10",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0176ce6b-f512-4b10-9f30-0873afd68a97",
+          "nickAttr": "kindCode",
+          "value": "10002",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7161ecc7-aea9-4cf4-9f99-21e0bbbdce73",
+          "nickAttr": "name",
+          "value": "Доверенность в нотариальной форме (при условии подписания заявления о согласии/договора по доверенности)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b41c0b45-c577-40d1-8c00-67c5509d9633",
+          "nickAttr": "sortNumber",
+          "value": "7",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "17cc3256-3452-4c9b-ae5f-d0381e164de0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "452b9d0b-4716-444f-a72a-a2d5de5d9e73",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8a4e0f91-aede-4bbb-a8cb-35c1b7ef2a47",
+          "nickAttr": "kindCode",
+          "value": "20001",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aa06121b-3116-4ad8-b563-63aef75adb53",
+          "nickAttr": "name",
+          "value": "Паспорт (страницы 2-3, 5 (6-12) – место регистрации)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0e3896d9-e950-4597-9c9f-3807211dd47d",
+          "nickAttr": "sortNumber",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c4fd1e2e-0071-48d6-9540-d4c773f5767c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "39abdfeb-3f8c-4616-9775-d8f69bb5becb",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "249f5046-a379-4869-aaf1-8d13e86dfaea",
+          "nickAttr": "kindCode",
+          "value": "2062",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "33fca490-82f6-4a42-90f8-1284c2942afb",
+          "nickAttr": "name",
+          "value": "Правоустанавливающие документы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "07e9e8f1-6c4c-4205-970a-a9ec4270a36c",
+          "nickAttr": "sortNumber",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "40b81192-17fc-4bd9-8a4f-eb5bf9e132c5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f641cfa5-f0f5-4dee-b48e-1e8a81521ffa",
+          "nickAttr": "code",
+          "value": "102",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3cc54b1d-6aaf-41fd-993f-cea0927a5258",
+          "nickAttr": "name",
+          "value": "Письмо с предложением",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "03e9bc80-9067-40f6-ab03-89297fb1df96",
+          "nickAttr": "sortNumber",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a4076bee-af28-4210-bc7e-6aa154f4eada",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7ab619f6-5ade-4384-8912-34b66a311cd0",
+          "nickAttr": "code",
+          "value": "101",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3a4022ad-a0bd-4b96-be78-534aabec2fe7",
+          "nickAttr": "name",
+          "value": "Заявление о согласии/отказе на получение равнозначного жилья",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7310f381-4676-45bc-9157-a880779c6c2f",
+          "nickAttr": "sortNumber",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b0ca2e87-f883-48c6-b1b4-45a35923a2f8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1e9e62ac-4076-498e-8774-a512b7bc5709",
+          "nickAttr": "code",
+          "value": "11",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7dccc7c6-1428-4932-a8fb-492fcad3e74a",
+          "nickAttr": "kindCode",
+          "value": "12099",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d84613ac-a44a-4f17-9c42-6a0e62d4cd90",
+          "nickAttr": "name",
+          "value": "Документы в отношении недееспособных и ограниченно дееспособных лиц",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "30ff9c15-2e80-48d2-a6ba-b3f2de309967",
+          "nickAttr": "sortNumber",
+          "value": "14",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7d1f45a8-5ed5-4b54-8d9c-16aa863d8bd6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "95925d11-8323-4b99-bf25-2fcf9fd9c160",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "381b487c-0a38-482c-ae6d-cc0b4613e393",
+          "nickAttr": "kindCode",
+          "value": "10847",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2481e70d-2b93-4a2a-8298-90c5215718fe",
+          "nickAttr": "name",
+          "value": "Свидетельство о расторжении брака (при смене фамилии)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6d8cdf48-0393-45a9-b2bf-4ff65f230250",
+          "nickAttr": "sortNumber",
+          "value": "9",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d0b9e47b-75a3-4d80-86cf-c7dc2dc4bf63",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "034d00d5-685d-432e-8b01-09558c61bf27",
+          "nickAttr": "code",
+          "value": "103",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "65cddc54-a571-4873-8ce8-3dc83e8c74e8",
+          "nickAttr": "name",
+          "value": "Обязательство",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9d170c2d-4c92-4e92-bda5-8329c3cd537d",
+          "nickAttr": "sortNumber",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

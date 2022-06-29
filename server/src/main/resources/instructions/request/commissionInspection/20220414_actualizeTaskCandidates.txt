@@ -1,0 +1,7 @@
+Актуализировать список кандидатов у задач:
+
+1) Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/commission-inspection-controller
+2) Выбрать POST /commission-inspection/actualize-task-candidates
+3) Нажать Try it out
+4) Нажать Execute
+6) Проверить, что статус код 200

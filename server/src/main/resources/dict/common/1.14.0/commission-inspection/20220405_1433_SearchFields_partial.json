@@ -1,0 +1,340 @@
+{
+  "metaDict": {
+    "nick": "SearchFields",
+    "name": "Поля документов подсистемы поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "fieldName",
+        "name": "Название поля в SOLR",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип поля",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFieldTypes",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "searchRule",
+        "name": "Тип поиска по полю",
+        "typeAttr": "link",
+        "nickDictLink": "SearchRules",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "indexed",
+        "name": "Индексировать или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "multi",
+        "name": "Множественное или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "commonSearch",
+        "name": "Участвует ли поле в общем поиске",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "74544a9c-15d2-4c0e-849b-a2c3c9b0c08c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5979fcc9-4c1d-4ff0-b925-e03044d6c49d",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_organization_type",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "13b9e887-f6ce-4693-aad6-12fdddf8effe",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8bb492f0-af56-4108-9986-5afa5fdb8f95",
+          "nickAttr": "description",
+          "value": "Тип организации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c7850b4a-e920-4218-ba76-e50ed131259b",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_organization_type",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ae71df9e-ea77-4e09-b08c-2d8c15704520",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9b9f0fc9-4640-49e7-993f-162c904d2dbd",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "24cc5af8-5a40-4b47-a729-14ed7c70d1bb",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "8b4fbb89-0447-4821-9818-f670cfb901fd",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "0f483c70-c30f-4bf3-9ca4-9c9b4fd7ab11",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "ba75508b-f76d-4bc6-9f17-6044caa0fbea",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ab5e1356-e0c2-4c54-8599-286ad7c9a01d",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_unom",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c8489622-d346-4af6-bbfa-307b63650166",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c10558e9-4fe9-42d0-bdcc-5b4979859171",
+          "nickAttr": "description",
+          "value": "Уном заселяемого дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1ea22cee-e389-4476-8800-7420121917c1",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_unom",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8af9f275-5a3b-4d05-8e27-11bc43b93e79",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b710ab6b-1ef1-4429-82d5-ccd816f9dcfd",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ecd52ec6-135e-4798-b87e-b940ac096e64",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "bfcf2f02-bddf-4cfe-b4bd-8aeba5d63c89",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "3dd58dc6-e4d2-4321-a3d2-6d2db99505c8",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "80183b86-e642-49ff-8e36-35e2df62e49a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f362b5b8-52db-43e6-bd5a-baab5975239f",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_task_id",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c57c2320-c3ae-418d-a9f0-f4b939ec4a63",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ad16fc6e-d769-4a35-a7b7-204ffdbc045d",
+          "nickAttr": "description",
+          "value": "ИД задачи",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d853dfac-72aa-44d3-9773-91fbaba3e54c",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_commission_inspection_task_id",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "423a5a37-b413-4c2a-a499-93d6e8adacf6",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b1d171dd-42ac-4713-a6b4-5d49e7e310e9",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f02a2fa3-cb55-4a17-aab0-76c3ce2b27fc",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "5f2de734-843c-455a-9a8c-833d1e9e9f7d",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "16c35b67-0a3c-4177-9914-919f42857172",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    }
+  ]
+}

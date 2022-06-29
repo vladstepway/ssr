@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "5cc4327e-0d94-4bb2-b8b6-3d4f51e23217",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "58ca9a36-e10c-47af-8a08-39272b231da3",
+          "nickAttr": "code",
+          "value": "ugd_ssr_personal_document_application_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d252fd4d-83b3-4ca2-867e-754a394f8bc4",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_PERSONAL-DOCUMENT-APPLICATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5c79c39d-67dd-43cc-8414-0467a5c4e777",
+          "nickAttr": "documentName",
+          "value": "Реестр заявлений на предоставление документов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6932183c-9071-4c88-a15e-89a5de6bffba",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Реестр заявлений на предоставление документов\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Реестр заявлений на предоставление документов</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableFilter\":true,\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по номеру заявления, дате предоставления документов, ФИО, адресу отселяемой квартиры\",\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_personal_document_application_eno\",\"type\":\"text\",\"name\":\"Номер заявления\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_personal_document_application_date_time\",\"type\":\"date\",\"name\":\"Дата предоставления документов\",\"sortable\":true,\"filterable\":true,\"defaultSorting\":\"DESC\",\"isSearchable\":true},{\"code\":\"ugd_ssr_personal_document_application_full_name\",\"type\":\"text\",\"name\":\"Фамилия, имя, отчество\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_personal_document_application_address_from\",\"type\":\"text\",\"name\":\"Адрес отселяемой квартиры\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true}],\"tableColumns\":[{\"name\":\"№ заявления\",\"fieldCode\":\"ugd_ssr_personal_document_application_eno\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/personal-document-applications/{{item.sys_documentId}}\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_personal_document_application_eno}}\\n</a>\"},{\"name\":\"Дата предоставления документов\",\"fieldCode\":\"ugd_ssr_personal_document_application_date_time\",\"template\":\"{{item.ugd_ssr_personal_document_application_date_time  | date:'dd.MM.yyyy, HH:mm'}}\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_personal_document_application_full_name\",\"template\":\"{{item.ugd_ssr_personal_document_application_full_name}}\"},{\"name\":\"Адрес отселяемой квартиры (откуда)\",\"fieldCode\":\"ugd_ssr_personal_document_application_address_from\",\"template\":\"{{item.ugd_ssr_personal_document_application_address_from}}\"}],\"filters\":[{\"name\":\"Номер заявления\",\"fieldCode\":\"ugd_ssr_personal_document_application_eno\",\"placement\":\"bottom\"},{\"name\":\"Дата предоставления документов\",\"fieldCode\":\"ugd_ssr_personal_document_application_date_time\",\"placement\":\"bottom\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_personal_document_application_full_name\",\"placement\":\"bottom\"},{\"name\":\"Адрес отселяемой квартиры\",\"fieldCode\":\"ugd_ssr_personal_document_application_address_from\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Номер заявления\",\"fieldCode\":\"ugd_ssr_personal_document_application_eno\"},{\"name\":\"Дата предоставления документов\",\"fieldCode\":\"ugd_ssr_personal_document_application_date_time\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_personal_document_application_full_name\"},{\"name\":\"Адрес отселяемой квартиры\",\"fieldCode\":\"ugd_ssr_personal_document_application_address_from\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fe15ac66-7bac-439b-b320-e5a32957e062",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_personal_document_application",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "10d8ee2d-252b-40bd-97d6-59fe81859250",
+          "nickAttr": "showcaseName",
+          "value": "Реестр заявлений на предоставление документов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "edac859f-18e3-4cfd-891b-f8cdaf0874fa",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a0d20a7-dafb-4b1a-8511-ca91f3a0da8f",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "90abd919-d3a8-4f23-93fd-5718fad0058a",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3a23c612-ecb6-44f3-b49b-f88721a53c42",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

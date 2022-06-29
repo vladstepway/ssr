@@ -1,0 +1,132 @@
+{
+  "metaDict": {
+    "nick": "Roles",
+    "name": "Роли пользователей",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "Плоский",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "organization",
+        "name": "Организация",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "authority",
+        "name": "Полномочие",
+        "typeAttr": "link",
+        "nickDictLink": "Authority",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "2e86d3a5-6638-4997-97aa-3840285466dc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ef31a5ae-d114-4f3b-b6c9-6bb92eaa930f",
+          "nickAttr": "authority",
+          "value": "52bef0e0-4395-4485-8df3-fa8bf817f6fa",
+          "orders": 0,
+          "linkCode": "UGD_SSR_CHESSBOARD_VIEW"
+        },
+        {
+          "attrId": "effb3324-5c4f-4652-83c3-4c770eb97bc7",
+          "nickAttr": "code",
+          "value": "UGD_SSR_CHESSBOARD_VIEW",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "671a4c88-4bc5-4878-b7fd-9e4ed0a3156a",
+          "nickAttr": "description",
+          "value": "Просмотр данных дашбордов отселяемого и заселяемого дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "926e3b11-db96-4d57-8e33-90e889ef1b85",
+          "nickAttr": "name",
+          "value": "Просмотр данных дашбордов отселяемого и заселяемого дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d04b4214-9206-479e-9873-d65cd4502318",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    }
+  ]
+}

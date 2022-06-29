@@ -1,0 +1,178 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_resettlementStatus",
+    "name": "Статусы переселения",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "5f97c70f-67a1-4f99-b489-a15f2cec55b1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "12ea1581-fcf2-4ba7-963e-646cf9e8785a",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "23cf988a-e614-4ceb-b5ab-85a6503d3e0c",
+          "nickAttr": "name",
+          "value": "Переселение не начиналось",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "340b0a6e-67b5-4bb0-a710-b8734bcb88c7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2e1950df-dca7-4f57-8e82-02dce663ecfd",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9687be6d-be77-4e3c-a97c-53dcc4a559cb",
+          "nickAttr": "name",
+          "value": "В процессе переселения",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e26e7740-26d1-48ed-bd75-b9010c4b4805",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "658b226f-9796-470f-8181-ef4ee717b8fb",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0b22c701-95bb-4833-866f-56a4cfb4eb2d",
+          "nickAttr": "name",
+          "value": "Расселен, ведется изъятие нежилых помещений",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "93af9832-8a72-4ffc-a346-8129401f8551",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7bc717b1-09f5-44f7-a85d-c6028949a012",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d26e6e0e-9766-49fa-b23a-50664b909e9c",
+          "nickAttr": "name",
+          "value": "Расселен, готовится к сносу",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "850325d9-a3ef-49d2-bf52-d4021cf8fff1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "82583dc4-243d-490b-a56b-e960d0818444",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "20139751-3534-4e36-bd1c-97b109867fce",
+          "nickAttr": "name",
+          "value": "Расселен, сохраняемый дом",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e64ee7ca-60cb-47d2-8123-f9d7f0644a81",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e0ffd378-5deb-4dfa-b8fa-e1e1e4d942b6",
+          "nickAttr": "code",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c35bcaad-7f5c-43af-8128-3f58745315af",
+          "nickAttr": "name",
+          "value": "Снесен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

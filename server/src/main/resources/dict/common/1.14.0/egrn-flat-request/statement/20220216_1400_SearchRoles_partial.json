@@ -1,0 +1,164 @@
+{
+  "metaDict": {
+    "nick": "SearchRoles",
+    "name": "Правила разграничения прав доступа к результатам общего поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 1,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "используется в search",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа (подтипа) документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование типа (подтипа) документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "documentType",
+        "name": "Тип документа",
+        "typeAttr": "link",
+        "nickDictLink": "DocumentTypes",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "role",
+        "name": "Группа, дающая право доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "a7323384-25f7-499d-bc88-b50de533629e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0473f462-899a-41e8-af27-bc678951c734",
+          "nickAttr": "code",
+          "value": "UGD_SSR_EGRN-FLAT-REQUEST-STATEMENT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "985cf45b-1760-4932-ba56-711a74c7f03b",
+          "nickAttr": "documentType",
+          "value": "4d1dcb9c-6027-4683-9fa9-e5a2602d4971",
+          "orders": 0,
+          "linkCode": "UGD_SSR_EGRN-FLAT-REQUEST-STATEMENT"
+        },
+        {
+          "attrId": "8dfbbaf3-8fb2-4302-9db4-2ea68072c0d8",
+          "nickAttr": "name",
+          "value": "Сведения о выписке по помещению",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fac5a91d-093a-4e05-ba76-d23aa491cac5",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d56338d0-b4b8-4234-b7a1-f6a440be2778",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "e46aa7ca-34d1-445c-aa6e-e8c592c7c730",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "UGD_SSR_EGRN-FLAT-REQUEST-STATEMENT",
+      "values": [
+        {
+          "attrId": "2154dd3d-f108-4d50-918a-5e0623cf3d7d",
+          "nickAttr": "code",
+          "value": "UGD_SSR_EGRN-FLAT-REQUEST-STATEMENT_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5a26f61d-2d36-4cf8-81e8-372c1f148c88",
+          "nickAttr": "documentType",
+          "value": "4d1dcb9c-6027-4683-9fa9-e5a2602d4971",
+          "orders": 0,
+          "linkCode": "UGD_SSR_EGRN-FLAT-REQUEST-STATEMENT"
+        },
+        {
+          "attrId": "432fd545-4d89-4935-9829-716366b4ea8f",
+          "nickAttr": "name",
+          "value": "Сведения о выписке по помещению - все подтипы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e5c977e0-8686-4a11-9da7-f127c01abd9a",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "97077a5f-8749-4c7e-889f-09a2a976f24b",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    }
+  ]
+}

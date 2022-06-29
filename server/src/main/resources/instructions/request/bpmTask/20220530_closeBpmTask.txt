@@ -1,0 +1,12 @@
+Закрыть задачу по ручному разбору ошибок обновления данных из ДГИ:
+ 1) Открыть https://smart.mos.ru/app/ugd/bpm/swagger-ui.html#/task-resource
+ 2) Выбрать POST /runtime/tasks/{taskId}
+ 3) Нажать Try it out
+ 4) Ввести actionRequest =
+        {
+            "action": "complete",
+            "variables": []
+        }
+ 5) Ввести taskId = 7070974
+ 5) Нажать Execute
+ 6) Проверить, что статус код 200

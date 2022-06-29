@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings version="2.1" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+
+    <jaxb:globalBindings>
+        <xjc:javaType adapter="ru.reinform.cdp.utils.mapper.xml.LocalDateXmlAdapter" name="java.time.LocalDate" xmlType="xs:date" />
+        <xjc:javaType adapter="ru.reinform.cdp.utils.mapper.xml.LocalDateTimeXmlAdapter" name="java.time.LocalDateTime" xmlType="xs:dateTime" />
+        <xjc:javaType adapter="ru.reinform.cdp.utils.mapper.xml.LocalTimeXmlAdapter" name="java.time.LocalTime" xmlType="xs:time" />
+    </jaxb:globalBindings>
+
+</jaxb:bindings>

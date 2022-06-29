@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns="http://www.ugd.croc.ru/ssr"
+		   targetNamespace="http://www.ugd.croc.ru/ssr">
+	<xs:element name="RealEstate">
+		<xs:annotation>
+			<xs:documentation>Объект недвижимости</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+					<xs:annotation>
+						<xs:documentation>Версия XSD схемы</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="folderGUID" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Идентификатор папки</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="documentID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Системный идентификатор документа</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="RealEstateData" type="realEstateDataType">
+					<xs:annotation>
+						<xs:documentation>Данные ОН</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="realEstateDataType">
+		<xs:annotation>
+			<xs:documentation>Тип Объект недвижимости</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="UpdatedFromDgiDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата обогащения ДГИ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedFromDgiStatus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус обогащения ДГИ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="globalID" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>идентификатор записи ОН (ОДОПМ)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resettlementBy" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Тип переселения (full - полное, part - частичное)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NREG" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Уникальный номер адреса в Адресном реестре</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AID" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Идентификатор адреса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Полное юридическое написание адреса или описание местоположения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UNOM" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Учётный номер объекта адресации в БД БТИ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SubjectRF_P1" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Субъект РФ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Settlement_P3" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Поселение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Town_P4" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Город</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MunOkrug_P5" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Муниципальный округ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Locality_P6" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Населённый пункт</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Element_P7" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование элемента планировочной структуры или улично-дорожной сети
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalAddrElement_P90" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дополнительный адресообразующий элемент</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RefinementAddr_P91" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Уточнение дополнительного адресообразующего элемента</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="House_L1_VALUE" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер дома, владения, участка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="House_L1_TYPE" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип номера дома, владения, участка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Corp_L2_VALUE" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер корпуса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Corp_L2_TYPE" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип номера корпуса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Building_L3_VALUE" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер строения, сооружения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Building_L3_TYPE" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип номера строения, сооружения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ADM_AREA" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Административный округ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DISTRICT" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Муниципальный округ, поселение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="N_FIAS" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Уникальный номер адреса в государственном адресном реестре</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GEO" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Геоданные</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="informationCenterCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код центра переселения (запись справочника)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ADR_TYPE" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип адреса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SOSTAD" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Состояние адреса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VID" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид адреса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="STATUS" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус адреса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OBJ_TYPE" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип объекта адресации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cadastralNums" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Кадастровые номера объекта недвижимости</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CadastralNum" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Кадастровый номер объекта недвижимости</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="xs:string">
+										<xs:attribute name="globalID" type="xs:integer">
+											<xs:annotation>
+												<xs:documentation>идентификатор записи</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="cadastralNumsZU" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Кадастровые номера земельного участка (для ОКС)</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CadastralZU" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Кадастровый номер земельного участка (для ОКС)</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:simpleContent>
+									<xs:extension base="xs:string">
+										<xs:attribute name="globalID" type="xs:integer">
+											<xs:annotation>
+												<xs:documentation>идентификатор записи</xs:documentation>
+											</xs:annotation>
+										</xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ResettlementSoon" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак "Скоро начнется переселение дома"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ResettlementDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата расселения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ResettlementUser" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Пользователь, запустивший расселение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата обогащения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedStatus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус обогащения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="enrichingFlag" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Флаг запуска обогащения (true - обогащение запускалось хоть раз, false - ни
+						разу)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="serviceCompany" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Организация, выполняющая функции управления домом</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="serviceCompanyAddrPhone" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Адрес и телефон организации, выполняющей функции управления домом
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="seria" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Серия дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wallMaterial" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Материал стен дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lift" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наличие лифта</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="houseYear" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Год постройки дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cfloor" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Количество этажей в доме</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssoIdCount" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Отношение количества жителей с ssoId к общему количеству жителей
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="entranceCount" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Количество подъездов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="voteYesPercent" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Процент голосовавших за реновацию дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="voteNoPercent" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Процент голосовавших против реновации дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coordinates" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Координаты отселяемого дома (ОДОПМ 27451-geodata)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Flats" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Данные по квартирам в доме</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Flat" type="flatType" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Данные квартиры</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="wearInfo">
+				<xs:annotation>
+					<xs:documentation>Информация по износу дома</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="wearItem" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Износ дома на указанный год</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="date" type="xs:date">
+										<xs:annotation>
+											<xs:documentation>Дата указания данных по износу</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="wearYear" type="xs:int">
+										<xs:annotation>
+											<xs:documentation>Год установки износа</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="wearPercent" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Процент износа дома - на данный год</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="hasNonResidentialSpaces" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Флаг наличия нежилых помещений (true - есть нежилые помещения, false - нет)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="withdrawnNonResidentialSpaces" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Флаг изъятия нежилых помещений (true - нежилые помещения изъяты, false - нет)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="demolitionDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата сноса дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="demolitionData" type="DemolitionData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Данные о сносе дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resettlementCompletionDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата завершения переселения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resettlementCompletionData" type="ResettlementCompletionData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Данные о завершении переселения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="housePreservationData" type="HousePreservationData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Данные о сохранении дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resettlementStatus" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Статус переселения
+						1 - Переселение не начиналось
+						2 - В процессе переселения
+						3 - Расселен, ведется изъятие нежилых помещений
+						4 - Расселен, готовится к сносу
+						5 - Расселен, сохраняемый дом
+						6 - Снесен
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="processInstanceId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ID запущенного процесса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ccoUnoms" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Уномы заселяемых домов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resettledFlatCountDgi" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Отселено квартир (ДГИ)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resettledFlatCountMfr" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Отселено квартир (МФР)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="courtFlatCountDgi" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Судебные квартиры (ДГИ)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="courtFlatCountMfr" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Судебные квартиры (МФР)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="activeResettlementFlatCountDgi" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Квартиры в процессе переселения (ДГИ)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="activeResettlementFlatCountMfr" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Квартиры в процессе переселения (МФР)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="notSendResettlementNotification" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>Не отправлять уведомление о начале переселения
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsiType">
+		<xs:annotation>
+			<xs:documentation>Значение с выбором из справочника</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="code" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Код</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="flatType">
+		<xs:annotation>
+			<xs:documentation>Тип Данные о квартире</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="flatID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>ID квартиры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IntegrationNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер запроса в системе по интеграции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="globalID" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>идентификатор записи квартиры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NREG" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Уникальный номер адреса в Адресном реестре</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AID" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Идентификатор адреса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="N_FIAS" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Уникальный номер адреса в ФИАС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Полное юридическое написание адреса или описание местоположения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="apartment_L4_VALUE" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер помещения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="apartment_L4_TYPE" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип номера помещения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cadNum" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Кадастровый номер</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FlatNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер квартиры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CadastralNum" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Кадастровый номер квартиры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SOSTAD" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Состояние адреса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="STATUS" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус адреса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedFromEZDdate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата обогащения из ЕЖД</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedFromEZDstatus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус обогащения из ЕЖД</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedFullDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата полного обогащения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UpdatedFullStatus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус полного обогащения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Note" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Описание</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="roomsCount" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Количество комнат</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="totalSquare" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Общая площадь</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Accounts" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Лицевые счета</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Account" type="accountType" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Данные лицевого счета</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="vanna" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наличие ванной</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schema_hw" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип системы ГВС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="san_type" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип санузла</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="s_kitchen" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Площадь кухни</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="s_priv" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Приведенная доля общей площади жилого помещения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="s_let" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Площадь балконов, лоджий, веранд, террас</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="s_gil" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Жилая площадь</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="s_alllet" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Площадь жилого помещения (с учетом балконов, лоджий, веранд, террас)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="s_all" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Площадь жилого помещения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isSobstv" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>В частной собственности или нет</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isDolg" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Задолженность по оплате жилого помещения и коммунальных услуг (имеется/не
+						имеется)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kanal" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наличие водопровода</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hw" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Горячее водоснабжение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gas" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Газоснабжение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="electr" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Электроснабжение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cw" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Водопровод</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="floor" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Этаж</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="entrance" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Секция/подъезд</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="counter_type" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наличие приборов учета</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="centr_otopl" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Центральное отопление</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="house_prinadl" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип жилого фонда (ЖСК/муниципальный)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="flat_type" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип квартиры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FLS" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>ФЛС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resettlement_status" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус расселения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="owners" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Собственники</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ccoId" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>ID ОКС (заселяемый дом)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Rooms" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Данные о комнатах в квартире</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Room" type="roomType" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Данные о комнате</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="roomType">
+		<xs:annotation>
+			<xs:documentation>Тип Данные о комнате</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="roomID" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>ИД комнаты</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="room_L5_VALUE" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер комнаты</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="room_L5_TYPE" type="nsiType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип номера комнаты</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="s_room" type="xs:float" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Площадь комнаты</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="room_plan" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип комнаты</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FLS" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ФЛС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="resettlement_status" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус расселения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="accountType">
+		<xs:annotation>
+			<xs:documentation>Тип Данные по лицевому счету</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AccountNumber" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Номер лицевого счета</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResettlementCompletionData">
+		<xs:annotation>
+			<xs:documentation>Данные о завершении переселения</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="documentNumber" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Номер документа о завершении переселения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentDate" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>Дата документа о завершении переселения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fileStoreId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ИД в FileStore файла документа о завершении переселения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HousePreservationData">
+		<xs:annotation>
+			<xs:documentation>Данные о сохранении дома</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="isPreserved" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>Признак сохранения дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DemolitionData">
+		<xs:annotation>
+			<xs:documentation>Данные о сносе дома</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="isDemolished" type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation>Признак сноса дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер документа о сносе дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата документа о сносе дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fileStoreId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ИД в FileStore файла документа о сносе дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип документа о сносе дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ИД документа о сносе дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentContent" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Контент документа о сносе дома</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

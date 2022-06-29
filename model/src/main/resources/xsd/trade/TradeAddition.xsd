@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/trade"
+           targetNamespace="http://www.ugd.croc.ru/ssr/trade">
+    <xs:include schemaLocation="enums.xsd"/>
+    <xs:element name="tradeAddition">
+        <xs:annotation>
+            <xs:documentation>Документ записи о торговой сделке</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="tradeAdditionTypeData" type="TradeAdditionType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="TradeAdditionType">
+        <xs:annotation>
+            <xs:documentation>Сведения о сделке</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="batchDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>documentID партии загруженных данных о сделках. Ссылка на TradeDataBatchStatus
+                        документ.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="recordNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Порядковый номер записи в таблице.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sellId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уникальный номер реализации (идентификатор потока из МФР, по данным из которого
+                        создан tradeAddition)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="uniqueRecordKey" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уникальный идентификатор записи. Формируется как offerLetterDate/applicationDate +
+                        affairId.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="attachedFileName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Название приложенного файла к записи. Пример
+                        Предложение_20.20.2020_12345666_864657.
+                        Ключ к документу TradeApplicationFile
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationFileId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Id приложенного файла в системе FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationChedId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Id приложенного файла в ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="protocolFileId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Id файла протокола в системе FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="protocolChedId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Id файла протокола в ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="oldEstate" type="EstateInfoType">
+                <xs:annotation>
+                    <xs:documentation>Информация о расселяемой недвижимости</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="newEstates" type="EstateInfoType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Информация о заселяемой недвижимости</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="uploadedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Id загруженного файла в системе FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personsInfo" type="PersonInfoType" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Информация о жителях</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affairId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID семьи.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="tradeType" type="TradeType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Тип сделки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="offerLetterDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата письма с предложением квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата подачи заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="agreementDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата согласия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="tradeResult" type="TradeResult" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Предложение сделки при виде сделки 4-5</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="commissionDecisionDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата решения комиссии</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="commissionDecisionResult" type="CommissionDecisionResult" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Результат решения комиссии</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="commissionDeclineReason" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина отказа (при отрицательном решении комиссии)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="auctionDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата проведения аукциона</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="plannedAuctionDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Плановая дата проведения аукциона</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="auctionResult" type="AuctionResult" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Итог аукциона</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="auctionOutput" type="AuctionOutput" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Результат аукциона</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractReadinessDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата готовности проекта договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractSignedDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата подписания договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractNumber" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="buyInFunds" type="BuyInFunds" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Средства на докупку</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="keysIssueDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата выдачи ключей</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="claimStatus" type="ClaimStatus" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Статус заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="claimCancelDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата аннулирования заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="registrationDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата регистрации</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fondReceiveDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата получения Фондом</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractTerminationDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата расторжения договора (дата статуса)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="terminated" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Договор расторгнут</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="buyInStatus" type="BuyInStatus" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Статусы по докупке</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="compensationStatus" type="CompensationStatus" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Статусы по компенсации</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="comment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий к загрузке</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pageName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Название страницы</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="confirmed" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Подтвержден ли загруженый документ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="removalStatusUpdated" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Обновлены ли статусы квартир</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="indexed" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Проиндексирован ли загруженый документ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sentNotifications" type="NotificationInfo" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Список отправленных уведомлений</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="mfrFlow" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Документ создан по данным потока из МФР</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="integrationFlowDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД документа сообщения по потоку из МФР</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EstateInfoType">
+        <xs:annotation>
+            <xs:documentation>Информация по недвижимости</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>UNOM дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cadNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Кадастровый номер</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрем дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatCadNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Кадастровый номер квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="rooms" type="xs:string" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Номера комнат</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NotificationInfo">
+        <xs:annotation>
+            <xs:documentation>Информация по отправленым уведомлениям</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eventCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код уведомления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sentDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата отправки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ok" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Была ли успешная отправка</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="errorDescription" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Описание ошибки если произошла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PersonInfoType">
+        <xs:annotation>
+            <xs:documentation>Информация по жителю</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID жителей. Внимание! Не тоже самое что documentID в Person</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personFio" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ФИО жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Фамилия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Имя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>DocumentId жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="snils" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Снилс</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

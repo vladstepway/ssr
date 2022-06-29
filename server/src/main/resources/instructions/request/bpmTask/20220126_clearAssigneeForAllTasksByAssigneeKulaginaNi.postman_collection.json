@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "bf23c127-5002-443c-a83e-a4b2309600e7",
+		"name": "clearAssigneeForAllTasksByAssigneeKulaginaNi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1) find tasks with assignee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = JSON.parse(pm.response.text());",
+							"",
+							"let taskIds = [];",
+							"",
+							"for (let i = 0; i < jsonData.data.length; i++){",
+							"  taskIds.push(jsonData.data[i].id);",
+							"}",
+							"",
+							"pm.collectionVariables.set(\"taskIds\", taskIds);",
+							"console.log(\"1 taskIds (\" + taskIds.length + \"): \" + pm.collectionVariables.get(\"taskIds\"));",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"cookie\", \"\");\r",
+							"pm.collectionVariables.set(\"urlHost\", \"smart.mos.ru\");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"assignee\": \"kulagina_ni\",\r\n    \"size\": 1000000\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/bpm/query/tasks",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"bpm",
+						"query",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2) update task",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let taskIds = pm.collectionVariables.get(\"taskIds\");\r",
+							"\r",
+							"let currentTaskId = taskIds.pop();\r",
+							"console.log(\"2 update task: \" + currentTaskId)\r",
+							"pm.collectionVariables.set(\"currentTaskId\", currentTaskId);\r",
+							"pm.collectionVariables.set(\"taskIds\", taskIds);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"assignee\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/bpm/runtime/tasks/{{currentTaskId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"bpm",
+						"runtime",
+						"tasks",
+						"{{currentTaskId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3) delete var",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let taskIds = pm.collectionVariables.get(\"taskIds\");",
+							"if (taskIds && taskIds.length > 0) {",
+							"    postman.setNextRequest(\"2) update task\");",
+							"} else {",
+							"    postman.setNextRequest(null);",
+							"}",
+							"",
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/bpm/runtime/tasks/{{currentTaskId}}/variables/TaskTakeOnDateVar",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"bpm",
+						"runtime",
+						"tasks",
+						"{{currentTaskId}}",
+						"variables",
+						"TaskTakeOnDateVar"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urlHost",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "cookie",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "taskIds",
+			"value": ""
+		},
+		{
+			"key": "currentTaskId",
+			"value": ""
+		}
+	]
+}

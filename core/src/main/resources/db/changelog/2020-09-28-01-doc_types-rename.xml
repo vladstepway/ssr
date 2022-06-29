@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="2020-09-28-01-doc_types-rename" author="akurganov" dbms="postgresql">
+        
+        <validCheckSum>ANY</validCheckSum>
+        
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents set doc_type='REAL-ESTATE' where doc_type='REAL_ESTATE';
+        </sql>
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents_log set doc_type='REAL-ESTATE' where doc_type='REAL_ESTATE';
+        </sql>
+
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents set doc_type='SOON-RESETTLEMENT-REQUEST' where doc_type='SOON_RESETTLEMENT_REQUEST';
+        </sql>
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents_log set doc_type='SOON-RESETTLEMENT-REQUEST' where doc_type='SOON_RESETTLEMENT_REQUEST';
+        </sql>
+
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents set doc_type='RESETTLEMENT-REQUEST' where doc_type='RESETTLEMENT_REQUEST';
+        </sql>
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents_log set doc_type='RESETTLEMENT-REQUEST' where doc_type='RESETTLEMENT_REQUEST';
+        </sql>
+
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents set doc_type='DASHBOARD-REQUEST' where doc_type='DASHBOARD_REQUEST';
+        </sql>
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents_log set doc_type='DASHBOARD-REQUEST' where doc_type='DASHBOARD_REQUEST';
+        </sql>
+
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents set doc_type='ARM-ISSUE-OFFER-LETTER-REQUEST' where doc_type='ARM_ISSUE_OFFER_LETTER_REQUEST';
+        </sql>
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents_log set doc_type='ARM-ISSUE-OFFER-LETTER-REQUEST' where doc_type='ARM_ISSUE_OFFER_LETTER_REQUEST';
+        </sql>
+
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents set doc_type='ARM-SHOW-APART-REQUEST' where doc_type='ARM_SHOW_APART_REQUEST';
+        </sql>
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents_log set doc_type='ARM-SHOW-APART-REQUEST' where doc_type='ARM_SHOW_APART_REQUEST';
+        </sql>
+
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents set doc_type='ARM-APPLY-REQUEST' where doc_type='ARM_APPLY_REQUEST';
+        </sql>
+        <sql splitStatements="true" endDelimiter=";\n">
+            update documents_log set doc_type='ARM-APPLY-REQUEST' where doc_type='ARM_APPLY_REQUEST';
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

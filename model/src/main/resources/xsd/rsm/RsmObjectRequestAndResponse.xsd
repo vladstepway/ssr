@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/rsm"
+           targetNamespace="http://www.ugd.croc.ru/ssr/rsm"
+           elementFormDefault="qualified">
+    <xs:complexType name="ObjectResponseType">
+        <xs:sequence>
+            <xs:element name="docHeader" type="ObjectHeaderType"/>
+            <xs:element name="docContent" type="ObjectContentType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ObjectContentType">
+        <xs:annotation>
+            <xs:documentation>Объект капитального строительства</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="basicDataCco" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Основные сведения объекта</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="buildingAddress" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Строительный адрес</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="assignedAddressString" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Почтовый адрес (по реестру)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="unom" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>УНОМ</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="assignedAddressStructured" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Сведения о структурированном почтовом адресе</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="fias_id" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>ФИАС ID</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="settlement_with_type" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Населенный пункт</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="street_with_type" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Улица</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="housing" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Корпус</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="house_type_full" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Типы домов</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="house" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Дом</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="block_type_full" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Типы строения</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="block" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>строение</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="region" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Регион</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="region_type_full" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Регион</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="manuallySpecified" type="xs:boolean" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Адрес не найден в адресном сервисе (Найден true, Не найден false)</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="districts" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Районы</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="areas" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Округа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="nameObject" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование объекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="jobType" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Вид работ</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="financeSource" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Источник финансирования</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="state" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Статус объекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="projectSeries" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Серия проекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="cords" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Координаты ОКС</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="mgsnCaseNumber" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер дела МГСН</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="codeDc" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Код ДС</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="datesCco" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Сведения о датах объекта</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="planDateStart" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Плановая дата начала строительства</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="date" type="xs:date" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Дата</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="quarter" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Квартал</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="month" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Месяц</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="year" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Год</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="factDateStart" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Фактическая дата начала строительства</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="planDateEnd" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Плановая дата завершения строительства</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="date" type="xs:date" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Дата</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="quarter" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Квартал</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="month" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Месяц</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="year" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Год</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="factDateEnd" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Фактическая дата завершения строительства</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="planDateInput" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Плановая дата ввода</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="date" type="xs:date" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Дата</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="quarter" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Квартал</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="month" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Месяц</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="year" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Год</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="factDateInput" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Фактическая дата ввода</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="fno" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Сведения о функциональных назначениях объекта</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="codeObjFuncObj" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Код основного функционального назначения объекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="nameObjFuncObj" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование основного функционального назначения объекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="codeObjFuncFirstFloor" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Код функционального назначения 1-ого этажа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="nameObjFuncFirstFloor" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование функционального назначения 1-ого этажа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="codeObjFuncUnderground" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Кода функционального назначения подземного этажа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="nameObjFuncUnderground" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование функционального назначения подземного этажа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="org" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Организации об активных участниках строительства</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="orgRole" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Роль организации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--Игнор-->
+                        <xs:element name="orgFormShort" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Организационно-правовая форма</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="orgNameFull" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование организации (полное)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="orgShortName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование организации (краткое)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="orgAddressLegal" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Юридический адрес организации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="orgAddressPost" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Почтовый адрес организации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="orgOgrn" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>ОГРН</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="orgInn" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>ИНН</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="orgKpp" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>КПП</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="orgStatus" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Статус (W- действует, L- ликвидирована, R- реорганизована)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="power" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Технико-экономические показатели объекта строительства</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="powerName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование показателя</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="powerUnit" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Единица измерения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="powerValue" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Значение</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="powerCode" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Код показателя</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="powerType" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Тип показателя</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="doc" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Документы по объекту</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="docParentId" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Идентификатор документа в системе источнике</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="docRasporNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер документа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="docRasporDate" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата документа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="docYear" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Год документа (для титулов)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="docType" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Тип документа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="evZayavNum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер заявки</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="evZayavDate" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата заявки</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="docState" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Статус документа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="docEndDateRc" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата окончания действия РС</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--ГК пока игнорю т.к. этого еще нет-->
+                        <xs:element name="docTypeGk" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Тип ГК</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="docZaklDateGk" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата заключения ГК</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="docEndDateGk" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата окончания ГК</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="docPartnerGk" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Контрагент ГК</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="docSumGk" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Сумма по ГК</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--Игнор-->
+                        <xs:element name="documentLink" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Ссылка для скачивания файлов документа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--Не делать очевидно-->
+            <xs:element name="complexProject" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Сведения о связанном комплексном проекте</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cpId" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Идентификатор комплексного проекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="cpName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование комплекстного проекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="cpLandMark" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Адресный ориентир комплексного проекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="cpLink" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Ссылка на КП</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="pc" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Сведения о связанном проекте строительства</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="psGuid" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Идентификатор проекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="uniquePsId" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Уникальный идентификационный номер проекта (бизнесовый)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="namePc" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование проекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="pcBuildingAddress" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Строительный адрес</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="psLink" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Ссылка</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="specialBoolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Особые признаки объекта</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="unfinishedBuild" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Незавершенное строительство (долгострой)</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="booleanUnfinishedBuild" type="xs:boolean" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Признак незавершенного строительства (долгострой)</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="inWork" type="xs:boolean" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>В работе</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="condition" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Текущая ситуация по объектам</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="renovation" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Реновация</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="booleanRenovation" type="xs:boolean" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Признак объекта реновации</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <!--Это из ССР. Пока не делать-->
+                                    <xs:element name="transferredSettlement" type="xs:boolean" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Передано под заселение (0 - нет, 1- есть)</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="landmark" type="xs:boolean" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Знаковый</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="objVvod" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Объект ввода</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="booleanObjVvod" type="xs:boolean" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Признак объекта ввода</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="confirmedPrefecture" type="xs:boolean" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Подтверждено Префектурой</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="causeException" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Причина исключения</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--тоже не делать-->
+            <xs:element name="territory" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Сведения о земельных участках</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="territoryRosReestr" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Сведения Росреестра о земельном участке</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="cadastralNumber" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Кадастровый номер земельного участка</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="tAddress" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Адрес участка</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="docOwner" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Сведения о правоудостоверяющих/ документах</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="docNumber" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Номер договора аренды земельного участка</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="docStartDate" type="xs:date" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Дата начала ДАЗУ</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="docEndDate" type="xs:date" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Дата окончания ДАЗУ</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="docStatus" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Статус документа</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="usePurpose" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Цель использования</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--Этого тоже нет-->
+            <xs:element name="cadastralRegistration" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Кадастровый учет</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cadastralNumber" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Кадастровый номер</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="dateCadastral" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата присвоения кадастрового</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="objName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование объекта кадастрового учета</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="objType" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Тип объекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="objCharacteristics" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Характеристика объекта</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="resin" type="xs:boolean" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Подлежит передаче городу</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="buildingProgress" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Ход (состояние) строительства</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="source" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Источник (Оператор, МГСН)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="currentStateDescription" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Описание текущего состояния</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="dateCondition" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата информации</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="workingPerson" type="xs:int" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Количество работающих на стройплощадке</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="endPercent" type="xs:int" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Процент завершения строительства</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="problemType" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Причины приостановки строительства (классификатор)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="dateStop" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата приостановки строительства</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="conditionConstruction" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Состояние строительства</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="currentCondition" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Состояние площадки</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--Пока не делать-->
+            <xs:element name="photosObject" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Фотографии объекта</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="linkPhotosObject" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Ссылка для скачивания архива фотоматериалов</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="infoPhotosObject" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные фотоматериалов</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="datePhotos" type="xs:date" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Дата загрузки фотографии</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="idPhotos" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Идентификатор фотографии в электронной библиотеке</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="namePhotos" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Имя файла</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="dateShooting" type="xs:date" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Дата съемки</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="author" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Автор</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="link" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Ссылка</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="vpp" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Встроенно-пристроенные помещения</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nameVpp" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="descriptionVpp" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Описание встроенно-пристроенного помещения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="codeFnoVpp" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Код функционального назначения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="nameFnoVpp" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование функционального назначения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="cadNumVpp" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Кадастровый номер</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="resInVpp" type="xs:boolean" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Подлежит передаче городу</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="powerVpp" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Технико-экономические показатели</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="powerVppCodeName" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Код и наименование показателя</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="powerVppUnit" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Ед. измерения</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="powerVppValue" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Значение</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="powerType" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Тип показателя</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--Это не делать-->
+            <xs:element name="infoCheckResult" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Сведения по проведенным проверкам</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="dateAndNumberCheckResult" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата и номер акта проверки</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="typeCheckResult" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Тип проверки (плановая, внеплановая)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="checkResultReshen" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Принятые решения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="regulation" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер и дата предписания</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--Это не делать-->
+            <xs:element name="infoCustomProcedure" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Сведения по административному делопроизводству</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="positionCustomer" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Должностное лицо</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="numAndDateDoc" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер и дата документа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="articleCoAP" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Статья КоАП</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="decision" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Решение</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="sumAccruedFines" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Сумма начисленных штрафов</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="sumCollectFines" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Сумма взысканных штрафов</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--этого нет-->
+            <xs:element name="objAip" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Сведения по объектам АИП</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nameObjAip" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Наименование объекта АИП</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="Cbc" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>КБК</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="limitPrice" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Предельная стоимость АИП</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="limitPriceThisYear" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Лимит на текущий год</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="limitThisYearPlusOne" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Лимит (на текущий год + 1)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="limitThisYearPlusTwo" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Лимит (на текущий год + 2)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="balance" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Остаток на 1ое января (на текущий год + 3)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="totalPaid" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Оплачено всего</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="paidThisYear" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Оплачено в текущем году</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="section" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Раздел программы, в который входит в объект</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ObjNumber" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Номер объекта в программе</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="objProgram" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Программа / отрасль</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="objSubProgram" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Подпрограмма / под отрасль</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="action" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Мероприятие</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="customerProgram" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Госзаказчик по программе</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="works" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Работы / мероприятия по объекту</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="typeWork" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Вид работы / мероприятия</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="powerUnit" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>YearWork</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="program" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Программа</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="ProgramId" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Идентификатор программы</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="ProgramName" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Краткое наименование программы</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="ProgramState" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Статус программы</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="Link" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Документы, утверждающие программу</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="DocNumber" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Номер распорядительного документа</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="DocDate" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Дата распорядительного документа</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="DocState" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Состояние распорядительного документа</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ObjectHeaderType">
+        <xs:annotation>
+            <xs:documentation>Заголовок объекта</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Сведения об уникальных идентификаторах</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="documentId" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Идентификатор объекта (GUID)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="ugdId" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Идентификатор объекта в ИАС УГД (ugdid)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="uniqueId" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Уникальный идентификационный номер объекта (бизнесовый)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="docDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Системная дата передачи Json файла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isDeleted" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Объект удален (1 - удален, 0 - не удален)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dateLastUpdate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время последнего обновления данных об объекте строительства</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Filter">
+        <xs:annotation>
+            <xs:documentation>Фильтр</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="attr_name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Наименование атрибута из xsd на предоставление данных</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="filt_type" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Метод фильтрации. В запросе необходимо передавать код метода
+                        1 - Содержит указанное значение
+                        2 - Начинается на указанное значение
+                        3 - Заканчивается на указанное значение
+                        4 - Совпадает с указанным значением
+                        5 - Только пустые значения
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="value" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Значение для фильтрации</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="RsmObjectRequest">
+        <xs:complexType>
+            <xs:annotation>
+                <xs:documentation>Запрос объектов капитального строительства</xs:documentation>
+            </xs:annotation>
+            <xs:sequence>
+                <xs:element name="skip" type="xs:int" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Количество страниц, которые требуется пропустить</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="top" type="xs:int" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Максимальное количество записей на странице</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="filters" type="Filter" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Фильтры</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="RsmObjectResponse">
+        <xs:complexType>
+            <xs:annotation>
+                <xs:documentation>Ответ на запрос объектов капитально строительства</xs:documentation>
+            </xs:annotation>
+            <xs:sequence>
+                <xs:element name="ObjectResponse" type="ObjectResponseType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

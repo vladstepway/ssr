@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "fc4acfc3-d2db-47f7-a109-1af0415f89c9",
+		"name": "fixSlotCopying",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1) fetch document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");",
+							"let preBookingIds = pm.collectionVariables.get(\"preBookingIds\");",
+							"let slotIds = pm.collectionVariables.get(\"slotIds\");",
+							"",
+							"if(!documentIds || documentIds.length == 0) {",
+							"    pm.collectionVariables.set(\"cookie\", \"\");",
+							"    pm.collectionVariables.set(\"urlHost\", \"smart.mos.ru\");",
+							"    documentIds = [\"07c6332c-8b05-469f-984e-93f032a0f6cc\", \"08b1e30e-06c9-421f-bd3f-fcc96c1cc782\", \"0b4ff5c5-4530-4184-97f6-c12ed17480ce\", \"0da807e0-0756-441a-929d-20810bf0b56b\", \"0e6972f2-df68-4e8b-a210-cbef87011432\", \"111a4be0-5f0b-42aa-b2a5-bd5875ee8464\", \"115840ba-9153-4790-84ce-50a715b40b7d\", \"169fd50e-31b7-47b6-a2b5-a9e6eb0da908\", \"1ac58ebb-9482-4e52-98d6-9bfb1abc5ac0\", \"1b586b95-c745-4c47-98ee-10de90e6efe2\", \"1b5f600d-a28b-4ed1-ad3d-d95e6fe4ebbb\", \"225d216e-61d0-4db3-bf48-0afc98316c57\", \"22e17f7e-67d6-4570-8d03-a9a21f74e119\", \"2794486a-6230-4a35-8a31-f8c19a8bda4e\", \"29031ded-5e69-4a4e-9b7f-395912af9f90\", \"2d8b3021-c5b2-4547-8e57-d06652d5c7c1\", \"309e6f6b-c5a9-490a-a2c0-041dacdd426f\", \"3bfbb8b7-b08c-4e9f-b9ab-bfef8b54363f\", \"3edf280c-3d2e-43e1-927d-144db75ed486\", \"3f634d09-c57a-495a-9020-9a884623650f\", \"4a4ec550-9aea-4ebc-b09c-14c1dbe0458b\", \"5039e8bd-5042-493f-9974-8cf6be2ff92e\", \"5dc1c99c-4320-4283-8798-40bcc48714ab\", \"610b23d5-b60f-4a88-806d-047e8716c193\", \"6288c413-af5a-4416-bdf3-4a2f785bdd68\", \"66cd15ba-091d-4e24-a620-7f294b2b8e30\", \"80e104b2-75a3-4b03-8b98-d38a103e4def\", \"83941836-be00-4285-9951-c2b6eed12cf5\", \"85111faf-d81c-495e-86cc-011cdf11e874\", \"8ae91d76-cdc3-443a-a6f5-d024e2335116\", \"8b6b1cfa-79df-43b8-9569-a38349b1174b\", \"8e95b05a-1587-4371-bb78-d972c7aa8c0f\", \"9d5709cb-c20e-4226-bb90-0cb246e7491d\", \"9e6a5378-9fe2-449d-b307-ed8eba35404e\", \"a3045750-0639-48a1-8f10-c3bf8470311f\", \"a9c001a9-cc33-4bc4-bf1f-ec89879dbce3\", \"aa12d20c-8721-4b1f-aaea-d778e51c2606\", \"ab12ce4c-fb78-4a11-b298-8045bc3a8694\", \"af98ade6-4522-47ac-9171-16091eb60bf8\", \"b33c713c-b726-4b22-a1bf-507582a2cb84\", \"b6c2a16f-72e7-4f2f-ad98-767b266ae057\", \"b9e6ff85-2f1a-4ba4-ad6c-8f3b90b26e91\", \"ba5018ba-9c79-4784-8dbf-1548904ba88f\", \"c038f89a-001a-4dde-98e3-3d1a9a51256c\", \"c6069323-1d24-468a-a847-4c6e1b220ae4\", \"c9b401b1-b52f-4ed5-9106-c07723b965ae\", \"ca36ec6d-a4ce-4ec3-ae5d-828cab3036a9\", \"cd121c87-cc44-4345-9fdd-9512356487d8\", \"d315aa92-f377-464b-b5e9-6b374b2f25aa\", \"d7351b85-cd49-4619-8dc8-ee6ad94d1938\", \"d78368f7-32fa-4b8c-b293-a2813b80aff1\", \"dd4776ce-dc9e-45b9-a6c2-7adb3c4d449a\", \"de33c70b-5406-4152-9a01-98fc8762235e\", \"e8343651-3b49-44bb-b71c-2bad8ebea70b\", \"eafdc996-4b43-4459-809d-dd9e5018b67a\", \"ec71c3a9-fc6c-4cae-9e49-7f3b697bb619\", \"f4f00dec-ff41-4952-a6eb-927c039af5d8\", \"f88fc1f1-c1e0-4dc6-ba7c-fae71088f2df\", \"fab7c4ea-7f05-47dd-93d4-495a8a2f9b69\"];",
+							"    preBookingIds = [\"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\", \"0438d1fc-2558-39bc-a7ec-7855fe24ee3f\"];",
+							"    slotIds = [\"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\", \"a1a08757-7989-40de-b8d3-e9a315df3fad\"];",
+							"}",
+							"",
+							"let currentDocumentId = documentIds.shift();",
+							"let currentPreBookingId = preBookingIds.shift();",
+							"let currentSlotId = slotIds.shift();",
+							"",
+							"pm.collectionVariables.set(\"documentIds\", documentIds);",
+							"pm.collectionVariables.set(\"preBookingIds\", preBookingIds);",
+							"pm.collectionVariables.set(\"slotIds\", slotIds);",
+							"",
+							"pm.collectionVariables.set(\"currentDocumentId\", currentDocumentId);",
+							"pm.collectionVariables.set(\"currentPreBookingId\", currentPreBookingId);",
+							"pm.collectionVariables.set(\"currentSlotId\", currentSlotId);",
+							"",
+							"console.log(\"1) fetch document: currentDocumentId = \" + currentDocumentId + \", currentPreBookingId = \" + currentPreBookingId + \", currentSlotId = \" + currentSlotId);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = JSON.parse(pm.response.text());",
+							"let currentPreBookingId = pm.collectionVariables.get(\"currentPreBookingId\");",
+							"let currentSlotId = pm.collectionVariables.get(\"currentSlotId\");",
+							"",
+							"if(jsonData.shippingDaySchedule.shippingDayScheduleData.brigades) {",
+							"    for (let i = 0; i < jsonData.shippingDaySchedule.shippingDayScheduleData.brigades.length; i++) {",
+							"        if(jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots) {",
+							"            for (let j = 0; j < jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots.length; j++) {",
+							"                if ((jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].slotId && (jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].slotId == currentSlotId)) ",
+							"                && (jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].preBookingId && (jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].preBookingId == currentPreBookingId))) {",
+							"                    delete jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].preBookingId;",
+							"                }",
+							"            }",
+							"        }",
+							"    }",
+							"}",
+							"",
+							"pm.collectionVariables.set(\"documentBody\", JSON.stringify(jsonData));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/fetch/SHIPPING-DAY-SCHEDULE/{{currentDocumentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"fetch",
+						"SHIPPING-DAY-SCHEDULE",
+						"{{currentDocumentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2) update document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");\r",
+							"if (documentIds && documentIds.length > 0) {\r",
+							"    postman.setNextRequest(\"1) fetch document\");\r",
+							"} else {\r",
+							"    postman.setNextRequest(\"3) fetch document\");\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{documentBody}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/update/SHIPPING-DAY-SCHEDULE/{{currentDocumentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"update",
+						"SHIPPING-DAY-SCHEDULE",
+						"{{currentDocumentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3) fetch document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");",
+							"let slotIds = pm.collectionVariables.get(\"slotIds\");",
+							"",
+							"if(!documentIds || documentIds.length == 0) {",
+							"    documentIds = [\"db7759b2-6ba3-4e4c-a4b5-28b5c992ef70\", \"becca5e7-7656-4eed-9083-ffb24243f104\", \"0925abd0-e720-43dd-8c39-bf5cb8cd4b14\", \"ff002716-bff5-4005-b74f-05b4f3372e10\", \"09680883-12b6-4307-8515-871a5294f3ce\", \"6b1c9610-fb79-437e-8494-57a07c18e839\", \"09680883-12b6-4307-8515-871a5294f3ce\", \"c45e4fe9-cedd-47db-8564-46dfa19aee2d\", \"568337d3-0e0e-4384-8a03-d5fd92bcdc8c\", \"10987dbe-b52f-4303-b7c1-ef0b048610e3\", \"83922046-6de9-48db-91a1-e6a7429d7940\", \"2ab43d26-8869-4b3a-99ba-ec8776aa0ff9\", \"10987dbe-b52f-4303-b7c1-ef0b048610e3\", \"10987dbe-b52f-4303-b7c1-ef0b048610e3\", \"becca5e7-7656-4eed-9083-ffb24243f104\", \"09680883-12b6-4307-8515-871a5294f3ce\", \"09680883-12b6-4307-8515-871a5294f3ce\", \"becca5e7-7656-4eed-9083-ffb24243f104\", \"b8d9f07f-4e43-495a-87ec-2dd724340dc5\"];",
+							"    slotIds = [\"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"a56de1ea-b552-4e08-abde-c146a4eddc3e\", \"814e93f8-42e6-4c31-950b-194d8c97d2e4\", \"b2b3e28f-3fcb-4e6e-8bc1-5fcb3a8e382f\", \"a56de1ea-b552-4e08-abde-c146a4eddc3e\", \"b2b3e28f-3fcb-4e6e-8bc1-5fcb3a8e382f\", \"814e93f8-42e6-4c31-950b-194d8c97d2e4\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\", \"b2b3e28f-3fcb-4e6e-8bc1-5fcb3a8e382f\", \"a56de1ea-b552-4e08-abde-c146a4eddc3e\", \"814e93f8-42e6-4c31-950b-194d8c97d2e4\", \"b2b3e28f-3fcb-4e6e-8bc1-5fcb3a8e382f\", \"814e93f8-42e6-4c31-950b-194d8c97d2e4\", \"b2b3e28f-3fcb-4e6e-8bc1-5fcb3a8e382f\", \"814e93f8-42e6-4c31-950b-194d8c97d2e4\", \"b2b3e28f-3fcb-4e6e-8bc1-5fcb3a8e382f\", \"46bdff62-af9d-48c7-9a21-21854624965e\", \"46bdff62-af9d-48c7-9a21-21854624965e\", \"0285fd89-6bbb-4a1a-a866-7c8cba89137c\"];",
+							"}",
+							"",
+							"let currentDocumentId = documentIds.shift();",
+							"let currentSlotId = slotIds.shift();",
+							"",
+							"pm.collectionVariables.set(\"documentIds\", documentIds);",
+							"pm.collectionVariables.set(\"slotIds\", slotIds);",
+							"",
+							"pm.collectionVariables.set(\"currentDocumentId\", currentDocumentId);",
+							"pm.collectionVariables.set(\"currentSlotId\", currentSlotId);",
+							"",
+							"console.log(\"3) fetch document: currentDocumentId = \" + currentDocumentId + \", currentSlotId = \" + currentSlotId);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = JSON.parse(pm.response.text());",
+							"let currentSlotId = pm.collectionVariables.get(\"currentSlotId\");",
+							"const uuid = require('uuid');",
+							"",
+							"if(jsonData.shippingDaySchedule.shippingDayScheduleData.brigades) {",
+							"    for (let i = 0; i < jsonData.shippingDaySchedule.shippingDayScheduleData.brigades.length; i++) {",
+							"        if(jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots) {",
+							"            for (let j = 0; j < jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots.length; j++) {",
+							"                if ((jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].slotId && (jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].slotId == currentSlotId))) {",
+							"                    jsonData.shippingDaySchedule.shippingDayScheduleData.brigades[i].bookingSlots[j].slotId = uuid();",
+							"                }",
+							"            }",
+							"        }",
+							"    }",
+							"}",
+							"",
+							"pm.collectionVariables.set(\"documentBody\", JSON.stringify(jsonData));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/fetch/SHIPPING-DAY-SCHEDULE/{{currentDocumentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"fetch",
+						"SHIPPING-DAY-SCHEDULE",
+						"{{currentDocumentId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4) update document",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");\r",
+							"if (documentIds && documentIds.length > 0) {\r",
+							"    postman.setNextRequest(\"3) fetch document\");\r",
+							"} else {\r",
+							"    postman.setNextRequest(null);\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{documentBody}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/update/SHIPPING-DAY-SCHEDULE/{{currentDocumentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"update",
+						"SHIPPING-DAY-SCHEDULE",
+						"{{currentDocumentId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "cookie",
+			"value": ""
+		},
+		{
+			"key": "urlHost",
+			"value": ""
+		},
+		{
+			"key": "documentIds",
+			"value": ""
+		},
+		{
+			"key": "preBookingIds",
+			"value": ""
+		},
+		{
+			"key": "slotIds",
+			"value": ""
+		},
+		{
+			"key": "currentDocumentId",
+			"value": ""
+		},
+		{
+			"key": "currentPreBookingId",
+			"value": ""
+		},
+		{
+			"key": "currentSlotId",
+			"value": ""
+		},
+		{
+			"key": "documentBody",
+			"value": ""
+		}
+	]
+}

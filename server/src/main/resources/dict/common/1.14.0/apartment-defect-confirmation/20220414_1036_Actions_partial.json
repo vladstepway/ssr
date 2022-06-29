@@ -1,0 +1,265 @@
+{
+  "metaDict": {
+    "nick": "Actions",
+    "name": "Возможности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "disabled",
+        "name": "Признак неактивности",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "URL адрес страницы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "theme",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "39390fc1-97b1-48bb-8948-ca0db86a37be",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d3755d9a-6d19-491d-9d65-52a988affdbc",
+          "nickAttr": "code",
+          "value": "ugd_ssr_ccoDefectsTerms",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fc9ca9eb-e9da-4619-9fba-6f80bbeb9a2b",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9979a3f2-2596-46b7-afe3-045a7fbe8cbf",
+          "nickAttr": "group",
+          "value": "UGD_SSR_PERSON_RENOVATION_FOND",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ace4db7b-3844-43b7-974a-f1bc03229f2a",
+          "nickAttr": "name",
+          "value": "Назначение плановых сроков устранения дефектов в актах",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4a4161e5-ff35-4f22-86bf-351eb8e9e04f",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0c2e537a-d3a6-4c49-9633-8ce9e931b6b3",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/cco-defects-terms",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4eaa32b6-d864-42ad-927d-272f7b580a15",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a612409c-591b-4f2a-9f25-88709b0873f6",
+          "nickAttr": "code",
+          "value": "ugd_ssr_ccoDefectsEliminationByDeveloper",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "14e3b91e-bd24-490a-90a3-57300e52b75c",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f1f823ad-1604-4f65-beb2-e277c001c74e",
+          "nickAttr": "group",
+          "value": "UGD_SSR_PERSON_RENOVATION_FOND",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "184763c2-1bd4-4d94-9f4a-195c96728ede",
+          "nickAttr": "name",
+          "value": "Внесение застройщиком сведений об устранении дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e829c016-1e5e-4fd3-acc6-9a14fa14adc3",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ecab9a2f-6491-492f-9c49-15fab634bc58",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/cco-defects-elimination-by-developer",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "af3f0e88-fe72-4969-93f1-25303068e6c3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bed6a788-b74d-400d-bb1e-49813a3ae73d",
+          "nickAttr": "code",
+          "value": "ugd_ssr_ccoDefectsEliminationByContractor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3688e83b-6f2e-4434-9817-eedf7c6faa93",
+          "nickAttr": "description",
+          "value": " ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5a481334-c8f9-406d-be99-bf5e115372e1",
+          "nickAttr": "group",
+          "value": "UGD_SSR_PERSON_DEVELOPER",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7824e616-4123-4ac6-abf4-3b257192df31",
+          "nickAttr": "name",
+          "value": "Внесение генподрядчиком сведений об устранении дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a8a4b0ae-3661-4b35-883f-8b2825774a7d",
+          "nickAttr": "theme",
+          "value": "УГД. Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2c335d6a-a009-45ac-b07d-7003f34bd6ea",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/cco-defects-elimination-by-contractor",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

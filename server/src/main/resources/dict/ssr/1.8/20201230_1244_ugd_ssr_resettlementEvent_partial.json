@@ -1,0 +1,112 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_resettlementEvent",
+    "name": "События переселения",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Тип события (1 – Межведомственные взаимодействия, 2 – Информирование жителя)",
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "e05ce1d2-addb-4247-8258-47fd589dafdd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d8cb42c2-902d-4d05-b120-d1786add958b",
+          "nickAttr": "code",
+          "value": "21",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2caffaa4-e320-47cf-9519-810fe378068a",
+          "nickAttr": "name",
+          "value": "Подписан акт об устранении дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a4848870-9546-4c6b-91a9-053cfa5201a9",
+          "nickAttr": "type",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "30a4e0de-362b-488c-9a30-c6afe3b01864",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c551bd51-1c08-460d-b2fc-24bbfff8aabd",
+          "nickAttr": "code",
+          "value": "22",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a65391df-3db5-45b8-82ac-0d2d7a26e9e7",
+          "nickAttr": "name",
+          "value": "Составлен акт осмотра квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0cfc505c-05d2-4b09-9214-43a8bdd8a8c2",
+          "nickAttr": "type",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

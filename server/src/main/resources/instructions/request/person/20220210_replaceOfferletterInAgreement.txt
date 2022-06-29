@@ -1,0 +1,13 @@
+Перепривязать согласие к письму с предложением №13420934:
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = ea20ec54-b086-4792-8eaf-668868aa6092; jsonPatch =
+[
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/agreements/agreement/0/letterId",
+        "value": "13420934"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

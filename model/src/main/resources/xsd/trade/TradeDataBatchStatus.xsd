@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/trade"
+           targetNamespace="http://www.ugd.croc.ru/ssr/trade">
+    <xs:include schemaLocation="enums.xsd"/>
+    <xs:element name="tradeDataBatchStatus">
+        <xs:annotation>
+            <xs:documentation>Документ с информацией о загруженной партии данных о сделках.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="tradeDataBatchStatusTypeData" type="TradeDataBatchStatusType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="TradeDataBatchStatusType">
+        <xs:annotation>
+            <xs:documentation>Статус загруженной партии данных о сделках.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="uploadedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Id загруженного файла в системе FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="uploadedFileName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Название загруженного файла в системе FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processedFileId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Id обработанного файла в системе FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="warnings" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Замечания при обработке файла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="startedProcessId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Запущеный процесс по утверждению загруженных документов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="status" type="BatchProcessingStatus">
+                <xs:annotation>
+                    <xs:documentation>Статус обработки данных в партии</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="percentageReady" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Процент готовности обработки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="percentageDeployed" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Процент проиндексированных из подтвержденных</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="allRowsNumber" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Общее кол-во строк в документе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="loadedOkRowsNumber" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Обработанное кол-во строк в документе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="loadedNokRowsNumber" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Обработанное с ошибками кол-во строк в документе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="errorDetails" type="ErrorDescription" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Описание ошибки обработки данных</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="deployed" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Загружен ли в реестр</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ErrorDescription">
+        <xs:annotation>
+            <xs:documentation>Описание ошибки обработки данных партии.</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="dateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Время ошибки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="stacktrace" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Детальный стектрейс ошибки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="description" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Описание ошибки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

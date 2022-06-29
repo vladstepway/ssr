@@ -1,0 +1,144 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации (dataset)",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Настройка страницы Реестры информации",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "7d7ff22d-ae14-495a-9cd3-bdd891198334",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6515087e-e2d0-45ff-84b1-2090e01c4b9e",
+          "nickAttr": "code",
+          "value": "UGD_SSR_DISABLED-PERSON",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2ad00c95-9cea-4b95-99a7-5b301370aca8",
+          "nickAttr": "description",
+          "value": "Реестре маломобильных граждан",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "98400980-534b-4cf5-919f-dc98329702e6",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_DISABILITY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2e22b774-e69f-43d0-900c-1db2c18826a1",
+          "nickAttr": "name",
+          "value": "Реестр маломобильных граждан",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ff519fa2-86e5-4365-a92b-a200afc517d0",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "3fa370d6-ccd3-4bc5-a764-ec8b5d547b08",
+          "orders": 0,
+          "linkCode": "ugd_ssr_disabled_person_code"
+        }
+      ]
+    }
+  ]
+}

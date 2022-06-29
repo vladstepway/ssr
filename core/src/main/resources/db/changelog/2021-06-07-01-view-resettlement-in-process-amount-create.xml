@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-06-07-01-view-resettlement-in-process-amount-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_resettlement_in_process_amount">
+            WITH houses_to_resettle AS (
+            -- все расселяемые дома
+                WITH houses_to_settle AS (
+                -- все заселяемые дома с указанными расселяемыми домами
+                    SELECT
+                        jsonb_array_elements(requests.json_data->'ResettlementRequest'->'main'->'housesToSettle') AS json_data,
+                        (requests.json_data->'ResettlementRequest'->'main'->>'startResettlementDate')::date AS startResettlementDate
+                    FROM
+                        ssr.documents requests
+                    WHERE
+                        EXISTS (
+                            SELECT TRUE
+                            FROM jsonb_array_elements(requests.json_data->'ResettlementRequest'->'main'->'housesToSettle') houses_to_settle_with_houses_to_resettle
+                            WHERE houses_to_settle_with_houses_to_resettle ? 'housesToResettle'
+                        )
+                )
+                SELECT
+                    houses_to_resettle_in_houses_to_settle->>'realEstateId' AS estateId,
+                    houses_to_resettle_in_houses_to_settle->>'realEstateUnom' AS unom,
+                    MAX(houses_to_settle.startResettlementDate) AS startResettlementDate
+                FROM
+                    houses_to_settle,
+                    jsonb_array_elements(houses_to_settle.json_data->'housesToResettle') AS houses_to_resettle_in_houses_to_settle
+                WHERE
+                    houses_to_resettle_in_houses_to_settle @> cast('{"resettlementBy": "' || 'full' || '"}' as jsonb)
+                GROUP BY
+                    houses_to_resettle_in_houses_to_settle->>'realEstateId',
+                    houses_to_resettle_in_houses_to_settle->>'realEstateUnom'
+            ),
+            flats_in_resettling_houses AS (
+            -- квартиры в расселяемых домах
+                SELECT DISTINCT
+                    flats ->> 'flatID' AS flatid,
+                    flats ->> 'apartment_L4_VALUE' AS flatnum,
+                    real_estate.json_data->'RealEstate' -> 'RealEstateData' ->> 'UNOM' AS unom,
+                    real_estate.json_data->'RealEstate' -> 'RealEstateData' ->> 'Address' AS address,
+                    houses_to_resettle.estateId AS estateId,
+                    houses_to_resettle.startResettlementDate AS startResettlementDate
+                FROM
+                    houses_to_resettle
+                JOIN
+                    ssr.documents real_estate
+                ON
+                    real_estate.doc_type = 'REAL-ESTATE'
+                    AND real_estate.json_data @> cast('{"RealEstate": {"RealEstateData": {"UNOM": ' || houses_to_resettle.unom || '}}}' AS jsonb)
+                JOIN
+                    jsonb_array_elements(real_estate.json_data->'RealEstate' -> 'RealEstateData'->'Flats'->'Flat') flats
+                ON
+                    TRUE
+            ),
+            persons_with_last_letter AS (
+            -- жители этих квартир с последним по хронологии письмом, если есть
+                WITH persons_with_all_letters AS (
+                -- жители этих квартир с письмами, если есть
+                    SELECT DISTINCT ON (personId)
+                        flats_in_resettling_houses.flatId as flatId,
+                        persons.id as personId,
+                        persons.json_data->'Person'->'PersonData'->>'relocationStatus' as relocationStatus,
+                        offer_letters->>'letterId' as letterId,
+                        (offer_letters->>'date')::date as letterDate,
+                        persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' AS isArchive
+                    FROM
+                        flats_in_resettling_houses
+                    JOIN
+                        ssr.documents persons
+                    ON
+                        persons.doc_type = 'PERSON'
+                        AND persons.json_data @> cast('{"Person": {"PersonData": {"flatID": "' || flats_in_resettling_houses.flatId || '"}}}' as jsonb)
+                    LEFT JOIN
+                        jsonb_array_elements(persons.json_data->'Person'->'PersonData'->'offerLetters'->'offerLetter') offer_letters
+                    ON
+                        offer_letters ? 'letterId'
+                    ORDER BY
+                        personId, letterDate DESC NULLS LAST
+                )
+                SELECT DISTINCT ON (personId)
+                    flatId,
+                    personId,
+                    relocationStatus,
+                    letterId,
+                    letterDate
+                FROM
+                    persons_with_all_letters
+                WHERE isArchive IS NULL OR isArchive = 'false'
+                ORDER BY
+                    personId, letterDate DESC
+            ),
+            flats_with_last_letter AS (
+            -- квартиры с последним по хронологии письмом
+                SELECT DISTINCT ON (flats_in_resettling_houses.flatId)
+                    flats_in_resettling_houses.estateId AS estateId,
+                    flats_in_resettling_houses.unom AS unom,
+                    flats_in_resettling_houses.address AS address,
+                    flats_in_resettling_houses.flatId AS flatId,
+                    flats_in_resettling_houses.startResettlementDate AS startResettlementDate,
+                    flats_in_resettling_houses.flatNum AS flatNum,
+                    persons_with_last_letter.letterId AS letterId,
+                    persons_with_last_letter.letterDate AS letterDate
+                FROM
+                    flats_in_resettling_houses
+                LEFT JOIN
+                    persons_with_last_letter
+                ON
+                    persons_with_last_letter.flatId = flats_in_resettling_houses.flatId
+                ORDER BY
+                    flats_in_resettling_houses.flatId, letterDate DESC NULLS LAST
+            )
+            SELECT DISTINCT
+                flats_with_last_letter.estateId AS estateId,
+                flats_with_last_letter.unom AS unom,
+                flats_with_last_letter.address AS address,
+                flats_with_last_letter.startResettlementDate AS startResettlementDate,
+                flats_with_last_letter.flatNum AS flatNum,
+                flats_with_last_letter.letterId AS letterId,
+                persons_with_last_letter.relocationStatus AS relocationStatus
+            FROM
+                flats_with_last_letter
+            LEFT JOIN
+                persons_with_last_letter ON persons_with_last_letter.flatId = flats_with_last_letter.flatId
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_resettlement_in_process_amount TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

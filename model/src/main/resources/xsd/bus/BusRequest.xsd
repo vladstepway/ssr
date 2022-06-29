@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+           xmlns="http://www.ugd.croc.ru/ssr/bus"
+           targetNamespace="http://www.ugd.croc.ru/ssr/bus">
+    <xs:element name="BusRequest">
+        <xs:annotation>
+            <xs:documentation>Запрос в платформенный модуль bus</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="busRequestData" type="BusRequestData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="BusRequestData">
+        <xs:annotation>
+            <xs:documentation>Данные запроса в платформенный модуль bus</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="ssrRequestTypeCode" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Код запроса в системе ССР</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="serviceNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>S/N документа основания (ЕНО)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="serviceTypeCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код ГУ, на основании которой производится запрос в БР</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ochdFolderGuid" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор папки в fileStore для сохранения результатов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="requestPayload" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Содержимое запроса, отправленного в bus</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="creationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время создания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cdpBusResponse" type="CdpBusResponse" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Сведения из платформенного модуля bus об обработке запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CdpBusResponse">
+        <xs:annotation>
+            <xs:documentation>Сведения из платформенного модуля bus об обработке запроса</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="cdpBusMessageId" type="xs:long" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор сообщения в платформенном модуле bus</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cdpBusMessageDocument" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Документ из ответа модуля bus</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cdpBusMessageStatus" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Статус из ответа модуля bus</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

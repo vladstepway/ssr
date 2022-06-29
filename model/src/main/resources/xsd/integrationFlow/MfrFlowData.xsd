@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/integrationFlow"
+           targetNamespace="http://www.ugd.croc.ru/ssr/integrationFlow"
+           elementFormDefault="qualified">
+    <xs:complexType name="MfrFlowData">
+        <xs:annotation>
+            <xs:documentation>Данные по МФР-потоку</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="affairId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letterId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор письма</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractOrderId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractProjectStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус проекта договора
+                        1 - Аннулирован
+                        2 - Подготовлен
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус договора
+                        1 - Аннулирован
+                        2 - Подписан
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

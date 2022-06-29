@@ -1,0 +1,268 @@
+{
+  "metaDict": {
+    "nick": "SearchFields",
+    "name": "Поля документов подсистемы поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "fieldName",
+        "name": "Название поля в SOLR",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип поля",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFieldTypes",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "searchRule",
+        "name": "Тип поиска по полю",
+        "typeAttr": "link",
+        "nickDictLink": "SearchRules",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "indexed",
+        "name": "Индексировать или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "multi",
+        "name": "Множественное или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "commonSearch",
+        "name": "Участвует ли поле в общем поиске",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "f8fa7bb5-04ec-4717-bdb8-3c7748c06384",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fbb98385-64bd-44a3-9892-32e498ea9bcf",
+          "nickAttr": "code",
+          "value": "ugd_ssr_apartment_inspection_closing_initiator_fio",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ea32a39d-2ded-4bd5-ba7d-f25e994a772e",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3c2fb28d-054e-48f4-b70a-a34017afbace",
+          "nickAttr": "description",
+          "value": "ФИО сотрудника, инициировавшего закрытие акта",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cfac5cd5-a02d-4149-a07d-c11f42022a6e",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_apartment_inspection_closing_initiator_fio",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0d543cfe-46dd-43b7-8fea-8e944a419385",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cacb53c1-505b-4618-a79e-3d2246aa251f",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e20c8db3-51e0-4051-94ef-5abd562cabcc",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "53789197-a60e-4f09-a8b7-65250508181e",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "2488d455-4a5a-4139-b4cf-579ca00b6b8b",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "64ce8950-b400-4806-ba26-f21d9fa5dd05",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "397af97b-bec5-4e3c-ab3f-8ca70fbbba19",
+          "nickAttr": "code",
+          "value": "ugd_ssr_apartment_inspection_closing_initiator_organization_name",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "445d561f-d063-40af-836f-27d2b995b883",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "071d0cb1-357a-4e59-a621-beeb81b5eba8",
+          "nickAttr": "description",
+          "value": "Наименование организации сотрудника, инициировавшего закрытие акта",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "08591e2b-6b80-4dcd-9422-5e2438d2919d",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_apartment_inspection_closing_initiator_organization_name",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a3de0daf-b4ea-4ba0-89e0-b5efba60abf2",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d3cc8c8b-be9e-44f5-81e3-3c6efbd7bbf2",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9862cb87-d0cf-4c50-94d2-d71fe53f5ed5",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "078ab8c3-a2a9-4519-b16e-1acc7b7ca575",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "5ec61b98-97f5-4b4e-b5c3-4ece8337e886",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    }
+  ]
+}

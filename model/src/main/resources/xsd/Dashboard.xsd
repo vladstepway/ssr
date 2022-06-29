@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           xmlns="http://www.ugd.croc.ru/ssr"
+           targetNamespace="http://www.ugd.croc.ru/ssr">
+
+    <xs:element name="Dashboard">
+        <xs:annotation>
+            <xs:documentation>Статистическая информация о переселении</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="archived" type="xs:boolean">
+                    <xs:annotation>
+                        <xs:documentation>Архивная запись</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="published" type="xs:boolean">
+                    <xs:annotation>
+                        <xs:documentation>Запись опубликована</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="auto" type="xs:boolean">
+                    <xs:annotation>
+                        <xs:documentation>Запись сформирована автоматически?</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="user">
+                    <xs:annotation>
+                        <xs:documentation>Пользователь</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="login" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Логин пользователя</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="name" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Имя пользователя</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="fillInDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата заполнения</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="data" type="DashboardData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="DashboardData">
+        <xs:annotation>
+            <xs:documentation>Тип - Статистическая информация о переселении</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+
+            <xs:element name="informationDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Информация на дату</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="newBuildingsTotalAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Всего "стартовых" новостроек передано под заселение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="newBuildingsFlatsInfo" type="NewBuildingsFlats">
+                <xs:annotation>
+                    <xs:documentation>Сведения о квартирах в новостройках</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="resettlementBuildingsInfo" type="ResettlementBuildings">
+                <xs:annotation>
+                    <xs:documentation>Сведения об отселяемых домах</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="buildingsInResettlementProcessInfo" type="BuildingsInResettlementProcess">
+                <xs:annotation>
+                    <xs:documentation>Сведения о домах в процессе переселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="resettlementBuildingsResidentsInfo" type="ResettlementBuildingsResidents">
+                <xs:annotation>
+                    <xs:documentation>Статистическая информация о переселении</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="tasksInfo" type="Tasks">
+                <xs:annotation>
+                    <xs:documentation>Сведения о задачах</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NewBuildingsFlats">
+        <xs:annotation>
+            <xs:documentation>Сведения о квартирах в новостройках</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+
+            <xs:element name="flatsTotalAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Всего квартир</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="equivalentApartmentsAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Равнозначные квартиры представлены гражданам</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="buyInApartmentsAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Приобретены гражданами в порядке докупки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="apartmentsWithCompensationAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Представлены с компенсацией за меньшую жилую площадь</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="offeredApartmentsWithCompensationAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Ведется предложение квартир с компенсацией за меньшую жилую площадь
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="offeredEquivalentApartmentsAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Ведется предложение равнозначных квартир жителям</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ResettlementBuildings">
+        <xs:annotation>
+            <xs:documentation>Сведения об отселяемых домах</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+
+            <xs:element name="allBuildingsAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Всего домов отселяется</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="demolishedAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Снесены</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="preparingForDemolitionAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Отселены, готовятся к сносу</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="preservedAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Расселен, сохраняемый дом</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="BuildingsInResettlementProcess">
+        <xs:annotation>
+            <xs:documentation>Сведения о домах в процессе переселения</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+
+            <xs:element name="residentsResettledAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Жители отселены, завершается изъятие нежилых помещений</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="paperworkCompletedAndFundIssuesAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>ДГИ завершил оформление документов жителям, остались вопросы Фонда (предоставление
+                        квартир с компенсацией за меньшую площадь)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="resettlementInProcessAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Ведется отселение, завершение планируется в указанном периоде</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="plannedResettlementCompletionTime" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Период планируемого завершения отселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="outsideResidenceResettlementAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Переселение вне района проживания (включены в Реновацию + ведется изъятие)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="partResettlementInProcessAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Ведется частичное переселение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ResettlementBuildingsResidents">
+        <xs:annotation>
+            <xs:documentation>Сведения о жителях расселяемых домов</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+
+            <xs:element name="equivalentApartmentConsentedAmount" type="xs:integer" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Согласия на равнозначные квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="apartmentWithCompensationConsentedAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Согласия на компенсацию и докупку</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="equivalentApartmentProposedAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>ДГИ предлагает равнозначные квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="apartmentWithCompensationProposedAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Фонд предлагает компенсацию (нет равнозначных)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="refusedAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Отказы, суды</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="familiesAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Количество семей, всего</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="resettledFamiliesAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>В том числе семей - переехали</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="resettledResidentsAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Количество человек - переехали</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tasks">
+        <xs:annotation>
+            <xs:documentation>Сведения о задачах</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+
+            <xs:element name="year" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Год</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="plannedResettledBuildingsAmount" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Количество домов (планируется отселить)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="actuallyResettledBuildingsRate" type="xs:double" nillable="true">
+                <xs:annotation>
+                    <xs:documentation>Фактически отселено домов, %</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="plannedResettledResidentsAmount" type="xs:double" nillable="true">
+                <xs:annotation>
+                    <xs:documentation>Количество человек (планируется отселить)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="actuallyResettledResidenceRate" type="xs:double" nillable="true">
+                <xs:annotation>
+                    <xs:documentation>Фактически переселено, %</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

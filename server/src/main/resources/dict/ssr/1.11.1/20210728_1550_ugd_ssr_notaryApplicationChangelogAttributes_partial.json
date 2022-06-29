@@ -1,0 +1,343 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_notaryApplicationChangelogAttributes",
+    "name": "Атрибуты для журнала изменений заявлений на посещение нотариуса",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "title",
+        "name": "Заголовок",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "beanName",
+        "name": "Наименование бина для обработки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "isComplexPath",
+        "name": "Путь комплексный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "9dbf932a-a2e9-442b-99f2-384fde3ec510",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ef227faf-e3ae-4638-9d84-9864b54a6274",
+          "nickAttr": "beanName",
+          "value": "notaryApplicationChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "29f2a125-b602-4bbc-9319-816a7a181273",
+          "nickAttr": "code",
+          "value": "/notaryApplication/notaryApplicationData/statusId",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bccc6456-7513-4d17-b724-07a422391df6",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5ae6f94c-006d-483b-99ad-e9d40e8b7be7",
+          "nickAttr": "name",
+          "value": "Статус",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "285b5a1a-4cfa-4b08-912d-2c3496a2aa6c",
+          "nickAttr": "title",
+          "value": "Статус",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bf9d6ad5-bdb2-40ec-8e05-45b4c4132880",
+          "nickAttr": "type",
+          "value": "status",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "215ec54e-103d-4c39-9a4f-c3723d36991d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "14c38cb6-3b46-4f4b-911b-106dfad44644",
+          "nickAttr": "beanName",
+          "value": "notaryApplicationChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7a34992c-fb1b-44f9-8487-e3471a99841d",
+          "nickAttr": "code",
+          "value": "/notaryApplication/notaryApplicationData/completionDateTime",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eb8f4374-d524-4108-8e8b-682745c622da",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cf567f32-54fd-4f03-8543-618d44f21f29",
+          "nickAttr": "name",
+          "value": "Дата и время закрытия заявления",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b63237e4-5239-4c1f-bb60-78881b56a373",
+          "nickAttr": "title",
+          "value": "Дата и время закрытия заявления",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "50b5a99a-493d-4eb2-8cdd-535118d53b33",
+          "nickAttr": "type",
+          "value": "datetime",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "25a5b7fc-bdc6-4ad3-83fa-31100eb78260",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a339db6b-5398-424f-8c6f-6dcc39f11a22",
+          "nickAttr": "beanName",
+          "value": "notaryApplicationChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aaedeb8b-5d35-44b4-a30d-9bb6b5c19aa7",
+          "nickAttr": "code",
+          "value": "/notaryApplication/notaryApplicationData/appointmentDateTime",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7bda50c5-7404-42dc-9849-9bddff4d95cc",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b74bc1cf-cf36-4651-8fd5-d39f753e180d",
+          "nickAttr": "name",
+          "value": "Время приема",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b9c93b23-bf25-4816-82c9-565c55d9c522",
+          "nickAttr": "title",
+          "value": "Время приема",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e453035b-ca89-48d9-9a3d-fc9117e08173",
+          "nickAttr": "type",
+          "value": "datetime",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "493627c7-7f2c-4ddb-98d3-60f7c2cb649c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "02aba986-b061-4562-ac6e-efecd60f541a",
+          "nickAttr": "beanName",
+          "value": "notaryApplicationChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6833d82a-6664-4c1c-981c-6c0b358fbdb3",
+          "nickAttr": "code",
+          "value": "/notaryApplication/notaryApplicationData/processingComment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "79b28a16-897a-481b-b514-5c77ed63fb6e",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f64867a8-984e-47b8-9cbe-b1b8562fc520",
+          "nickAttr": "name",
+          "value": "Комментарий",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b8f18346-d1eb-4f23-88da-ed205c8c7f71",
+          "nickAttr": "title",
+          "value": "Комментарий",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b61fb8a4-dcbd-4b09-9af7-83ac1403a4e6",
+          "nickAttr": "type",
+          "value": "comment",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3ff4d1f0-076a-44f7-933e-3c1dc5ba86a2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "69a3eb96-3c0e-4273-8cbb-2327a96c6dde",
+          "nickAttr": "beanName",
+          "value": "notaryApplicationChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "94ec3f91-5666-4845-a471-f97a692979a9",
+          "nickAttr": "code",
+          "value": "/notaryApplication/notaryApplicationData/applicantFiles/files/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bac54c7f-93ee-4286-a064-3d46448e45f1",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d102c32-e791-419b-897f-9629eb60ebf7",
+          "nickAttr": "name",
+          "value": "Загруженные документы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0413f075-2ce9-41e1-897e-d40b4a128e73",
+          "nickAttr": "title",
+          "value": "Загруженные документы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cdf386e0-d2d0-48b6-a14c-6a5a0d5d80eb",
+          "nickAttr": "type",
+          "value": "file",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

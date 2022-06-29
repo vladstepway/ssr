@@ -1,0 +1,132 @@
+{
+  "metaDict": {
+    "nick": "Roles",
+    "name": "Роли пользователей",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "Плоский",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "organization",
+        "name": "Организация",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "authority",
+        "name": "Полномочие",
+        "typeAttr": "link",
+        "nickDictLink": "Authority",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "8b56e41e-c15b-4091-a57a-d241bccc4d52",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c747aa20-35b4-4736-bc99-6990def5611e",
+          "nickAttr": "authority",
+          "value": "2a6f64c1-4d73-4de9-80db-4071d1680364",
+          "orders": 0,
+          "linkCode": "UGD_SSR_OPERATOR_ENRICHMENT"
+        },
+        {
+          "attrId": "c0ca442a-9b32-4e51-a415-8eb501c84e84",
+          "nickAttr": "code",
+          "value": "UGD_SSR_OPERATOR_ENRICHMENT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f8b713f8-61b0-4f1e-844d-79ce4ad5bff3",
+          "nickAttr": "description",
+          "value": "Роль, обеспечивает возможность инициировать обогащение данных отселяемых домов и жителей из ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "50d70882-b14e-49d5-a9f5-e08797724cc6",
+          "nickAttr": "name",
+          "value": "Оператор обогащения данных",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aaa0afff-6066-47d3-af0a-eb58c9b0b9c3",
+          "nickAttr": "system",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    }
+  ]
+}

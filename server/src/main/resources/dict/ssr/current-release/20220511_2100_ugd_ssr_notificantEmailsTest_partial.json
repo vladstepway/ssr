@@ -1,0 +1,520 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_notificantEmailsTest",
+    "name": "Справочник сотрудников для уведомления о событиях (тестовый контур)",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "notificationType",
+        "name": "Тип уведомления",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "areaCode",
+        "name": "Код округа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "area",
+        "name": "Округ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "email",
+        "name": "Адрес электронной почты",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "fullName",
+        "name": "ФИО",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "position",
+        "name": "Должность",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "department",
+        "name": "Отдел",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "cc",
+        "name": "Всегда ставить в копию",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код записи",
+        "typeAttr": "integer",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "4a6ee9d7-06bb-4922-9753-72dae6cf83f5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "dbc4ea65-7d38-4daa-8204-40dc583ff9ba",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "73ade6cf-1d4e-4440-9742-038d6dd927c1",
+          "nickAttr": "code",
+          "value": "9",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8943be00-d617-4bed-a690-0e7f4d8044f3",
+          "nickAttr": "email",
+          "value": "shinkevich@itopcase.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2fb79fae-c775-4792-8316-f41c276f07e0",
+          "nickAttr": "fullName",
+          "value": "Шинкевич Алексей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "da32e242-27bc-4c3e-82e4-d15e552d9e15",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ea6c35da-67fa-47fd-a861-38ccb7bc56d8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "54c10d15-f633-496a-a82b-e0fa45c1408f",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6f3e2f0f-d7ce-4cf5-b8ea-35e6eb3f6ffa",
+          "nickAttr": "code",
+          "value": "8",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "239f7300-88a5-4c17-8554-33ff54fcbcd8",
+          "nickAttr": "email",
+          "value": "shinkevich@itopcase.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b2f552df-9464-43a2-a16c-80dfad758d0a",
+          "nickAttr": "fullName",
+          "value": "Шинкевич Алексей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6a650d2c-de64-45ab-a70f-905106fbd571",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3b042a4b-3940-4a56-bc97-735a8dc8a32e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "38f13818-277b-4b3e-a81b-cf2c8a3c0805",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e328c930-1f93-4965-9241-66a7eb9b3e70",
+          "nickAttr": "code",
+          "value": "7",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "03fd0bd6-ebfe-48c5-9d0c-1eb4ad753cea",
+          "nickAttr": "email",
+          "value": "shinkevich@itopcase.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3d6621cd-0151-4a7d-ba03-0216bd20a2f3",
+          "nickAttr": "fullName",
+          "value": "Шинкевич Алексей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7119115f-7f1e-4340-9a08-3a2d51301047",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a812e2c3-73a1-4631-b4bf-e167c23e5643",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "33e0e057-a246-490e-88af-60ff4040f5d6",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "25f45d34-4099-42a0-931f-fb71301178af",
+          "nickAttr": "code",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2a1b6179-602a-43bb-bde7-d0cf09ff2164",
+          "nickAttr": "email",
+          "value": "mamaev@upt24.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1274f3dc-3ecb-4628-ba59-68c26d2323a6",
+          "nickAttr": "fullName",
+          "value": "Мамаев Алексей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2b8187cf-023a-40c2-a5c0-6a2c8717c74f",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a3f9993c-137b-40d1-9ba1-47f0102bc47a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bb6958e5-0549-431c-8a0d-0be657cae4f9",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c533ef96-0021-4017-868c-53fe8d03a817",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "83daf34f-d175-4ace-9165-ffd499f3b180",
+          "nickAttr": "email",
+          "value": "mamaev@upt24.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ef18a314-85c4-4b91-82f7-c074f182547e",
+          "nickAttr": "fullName",
+          "value": "Мамаев Алексей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9cb0036f-078e-48c8-ac06-ad7b4c861340",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0f41a278-0845-4b7c-a4c7-ed1e79eff78d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "77cf92bb-d781-471b-b5a5-322923d5f04b",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fcae7e5d-a3a1-4cdb-9d34-d02059d36681",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bdf3eaa8-8021-4efa-9539-78bc5606b3b9",
+          "nickAttr": "email",
+          "value": "mamaev@upt24.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6c0a0541-894c-4d32-ba42-3cced1be5a3f",
+          "nickAttr": "fullName",
+          "value": "Мамаев Алексей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "adc33ce4-676d-4f11-be4d-8239e7e5fab7",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9f347ee1-932c-4788-b98d-cb4397d435ba",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "dbec025b-9c23-4e28-a243-8c30b5bfa540",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cf9b5c6f-d58e-46ea-b34b-43dea1486e9e",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cd412960-4c7b-46d5-b2a8-616fabf159bc",
+          "nickAttr": "email",
+          "value": "psmith@yandex.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cedb1ba9-3e13-4c2e-9c16-714a99974ecc",
+          "nickAttr": "fullName",
+          "value": "Пантелеев Александр",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a941f9e-1ec7-4468-9873-37ede0dd9e84",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "69ecdb6f-a21c-4288-8c48-101436fc1cbc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5c52d2e5-0b59-4562-83a4-232cfbe9bce7",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8e04d8ba-e139-4235-8e41-0de1942e62eb",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a942882e-491b-409d-bfb5-501ae527ebae",
+          "nickAttr": "email",
+          "value": "psmith@yandex.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "93c9e5a1-1e79-45c5-97f5-857266a9cbc4",
+          "nickAttr": "fullName",
+          "value": "Пантелеев Александр",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fba4a0e4-a584-4de5-958c-623e263028a4",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1c063e7b-47bb-4f40-9d75-3c81df90a3d6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6d0ee08f-5b1f-49ab-b681-ce52058c69e6",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "07768ceb-f345-4c64-9a3f-740b83407fdc",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "58d91d54-ef00-46fa-8b1a-52ea8a656388",
+          "nickAttr": "email",
+          "value": "psmith@yandex.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "791d1d0a-e5e5-47e5-88a0-63750e73357e",
+          "nickAttr": "fullName",
+          "value": "Пантелеев Александр",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "490e34f5-c0b5-4429-be3b-2cfa421dea83",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

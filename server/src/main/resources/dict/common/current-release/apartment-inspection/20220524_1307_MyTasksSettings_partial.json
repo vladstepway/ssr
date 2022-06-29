@@ -1,0 +1,258 @@
+{
+  "metaDict": {
+    "nick": "MyTasksSettings",
+    "name": "Настройки для витрины \"Мои задачи\"",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Префикс бизнес процесса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование бизнес процесса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "firstrString",
+        "name": "Первая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "firstrWithHalfString",
+        "name": "Полуторная строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "secondString",
+        "name": "Вторая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "thirdString",
+        "name": "Третья строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "fourthString",
+        "name": "Четвертая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "fifthString",
+        "name": "Пятая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "sixthString",
+        "name": "Шестая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "searchUrl",
+        "name": "Базовый URL поиска",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      },
+      {
+        "nick": "tasksUrl",
+        "name": "Базовый URL задач",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 10,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "ИС",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 11,
+        "unique": 0
+      },
+      {
+        "nick": "showTasks",
+        "name": "Показывать список задач",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 12,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "cef65529-0cbd-4709-93fa-be7b63506853",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "89e6e724-093d-4db8-9825-b825c9daf33d",
+          "nickAttr": "code",
+          "value": "ugdssr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6829b8b6-6273-4d35-b9ca-8602f448533e",
+          "nickAttr": "fifthString",
+          "value": "${ item.document.ugd_ssr_apartment_inspection_is_ready ? '' : (item.document.ugd_ssr_apartment_inspection_organization_name ? `Наименование организации: ${item.document.ugd_ssr_apartment_inspection_organization_name}` : '') }",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9a3f21e8-faf5-4e1c-a137-d4e0517a5a16",
+          "nickAttr": "firstrString",
+          "value": "${ item.document.firstRow ? item.document.firstRow : (item.document.ugd_ssr_apartment_inspection_is_ready ? (item.document.ugd_ssr_apartment_inspection_person_fio ? `ФИО жителя: ${item.document.ugd_ssr_apartment_inspection_person_fio}` : '') : (item.document.ugd_ssr_apartment_inspection_address ? `Адрес: ${item.document.ugd_ssr_apartment_inspection_address}` : '')) }",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c4cbdd81-d6b8-43c0-a20e-9fd70e535d13",
+          "nickAttr": "fourthString",
+          "value": "${ item.document.ugd_ssr_apartment_inspection_closing_initiator_organization_name ? `Наименование организации: ${item.document.ugd_ssr_apartment_inspection_closing_initiator_organization_name}` : (item.document.ugd_ssr_apartment_inspection_is_ready ? '' : (item.document.ugd_ssr_apartment_inspection_responsible_employee ? `Ответственный сотрудник: ${item.document.ugd_ssr_apartment_inspection_responsible_employee}` : '')) }",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b0fb81b1-cbfc-43db-b042-f9d8ed9aac72",
+          "nickAttr": "name",
+          "value": "Суперсервис реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "63338af2-e53a-4059-87ba-7dca029e1144",
+          "nickAttr": "searchUrl",
+          "value": "/search",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "16c6d662-f264-4eaf-8333-7a0da2103879",
+          "nickAttr": "secondString",
+          "value": "${ item.document.secondRow ? item.document.secondRow : (item.document.ugd_ssr_apartment_inspection_is_ready ? (item.document.ugd_ssr_apartment_inspection_address ? `Адрес: ${item.document.ugd_ssr_apartment_inspection_address}` : '') : (item.document.ugd_ssr_apartment_inspection_area ? `Округ: ${item.document.ugd_ssr_apartment_inspection_area}` : '')) }",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ee51b860-f2a0-485d-ae88-d326b7ddc684",
+          "nickAttr": "showTasks",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "512ebe5f-a795-43fa-8b43-887102ef9d96",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "e194e749-176c-4f12-b2b1-03956ec6f13c",
+          "nickAttr": "tasksUrl",
+          "value": "/ugd/ssr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cc96c217-f56f-4ff6-be50-f27755ce92f0",
+          "nickAttr": "thirdString",
+          "value": "${ item.document.resettlementRequestFirstRow ? item.document.resettlementRequestFirstRow : (item.document.ugd_ssr_apartment_inspection_closing_initiator_fio ? `Ответственный сотрудник: ${item.document.ugd_ssr_apartment_inspection_closing_initiator_fio}` : (item.document.ugd_ssr_apartment_inspection_is_ready ? '' : (item.document.ugd_ssr_apartment_inspection_district ? `Район: ${item.document.ugd_ssr_apartment_inspection_district}` : ''))) }",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

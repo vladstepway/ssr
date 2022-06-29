@@ -1,0 +1,63 @@
+{
+  "metaDict": {
+    "nick": "Settings",
+    "name": "Настройки",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Наименование свойства",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "value",
+        "name": "Значение свойства",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "0832e0f6-12a1-4e55-a638-5eeee38073d1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "cb5f5921-503e-41a7-b5bf-a96f5461461e",
+          "nickAttr": "code",
+          "value": "ugd_ssr_new_dashboard_week_day",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a84123c4-caff-415b-a6bb-b21e54cdfca9",
+          "nickAttr": "value",
+          "value": "WEDNESDAY",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

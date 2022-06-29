@@ -1,0 +1,3868 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_notificantEmails",
+    "name": "Справочник сотрудников для уведомления о событиях",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "notificationType",
+        "name": "Тип уведомления",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "areaCode",
+        "name": "Код округа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "area",
+        "name": "Округ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "email",
+        "name": "Адрес электронной почты",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "fullName",
+        "name": "ФИО",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "position",
+        "name": "Должность",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "department",
+        "name": "Отдел",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "cc",
+        "name": "Всегда ставить в копию",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код записи",
+        "typeAttr": "integer",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "7f8a95ff-0423-4773-84e8-cf1b678cf8e6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "01af509e-c41a-4470-a0ee-69719784e5f8",
+          "nickAttr": "area",
+          "value": "ЦАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b1655376-e3c9-44fa-a127-243776cf5d6b",
+          "nickAttr": "areaCode",
+          "value": "45286000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4335c0dc-ada9-420d-95d1-0a9c09863293",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c38fcf6b-e1c6-4e7d-9268-79e3000f1930",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6f9c6f92-0586-4bba-bb12-7a3f7890acca",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЦАО и ЗелАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "22f136ce-9dfb-4b2c-bd38-4221e9d059da",
+          "nickAttr": "email",
+          "value": "AlekseevVL1@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "057f9b9c-655c-42a6-8e7b-4a7705b0b4d1",
+          "nickAttr": "fullName",
+          "value": "Алексеев Владимир Леонидович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8aebd9d8-2d8d-4d96-a68a-1c87ed03c83b",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "46130e78-b7de-4240-a3e0-e4be5cb73bfc",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b1917f90-0ac4-443f-be99-a7c6b5aa79e6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d5b73e7c-14ce-47a8-b5f6-51ed9860817c",
+          "nickAttr": "area",
+          "value": "ЮАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "15bf0102-49bc-4506-a805-9060c32596cf",
+          "nickAttr": "areaCode",
+          "value": "45296000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "edb23cae-e1a7-43ae-b1c7-8c5656ed45a0",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dac62c87-d7f6-45c1-90ca-9862b3a59fa7",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "475a95ec-e939-4922-b714-ca0cef718886",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮАО и ТиНАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a3994738-74cf-4954-b98c-5ae79f93db46",
+          "nickAttr": "email",
+          "value": "KevbrinVV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6f03de8b-c5aa-46ea-8e4b-e870e73a3861",
+          "nickAttr": "fullName",
+          "value": "Кевбрин Владислав Викторович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "28dd221a-6e63-4955-a3bc-bd7dea0c8824",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9e2a771b-c8c9-4fd9-acf8-27b2fe7a4ec7",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f2d8eb89-df17-4c46-9ed2-3e2f7b567a26",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2689ae98-8d26-4a45-863c-1d9c5abbb3c3",
+          "nickAttr": "area",
+          "value": "ЗелАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d575804e-64f2-4503-90dc-007abf2e09df",
+          "nickAttr": "areaCode",
+          "value": "45272000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "86212fd9-3463-4516-a070-08192137c82f",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "97505b93-7378-4cdc-8e29-5aa7f8143c06",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a6b35491-afc2-4c13-be72-5827d74aa7c4",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЦАО и ЗелАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "03c1a6b5-aecb-487a-961e-b134ed17a3c6",
+          "nickAttr": "email",
+          "value": "AlekseevVL1@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1a309fd-eee2-498c-b67f-20b9484f37bc",
+          "nickAttr": "fullName",
+          "value": "Алексеев Владимир Леонидович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5ae09c71-0fb7-4b17-b79a-93abd6e347c3",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6be6a846-7a65-419f-9d86-5075ca4c8dc6",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8a0f52c3-1201-4623-94ae-87f7ac2abc8b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7855ff0c-7d07-4d48-9d27-33f3e8c0d356",
+          "nickAttr": "area",
+          "value": "ТАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "27ee755f-0e39-41ea-9aef-a0edc223df5e",
+          "nickAttr": "areaCode",
+          "value": "45298000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "be32b6e3-f5b2-4957-a842-685b08d66a52",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c344bbb1-88c2-47f3-b720-80a32581cf3c",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "81ba7988-10c6-4415-9338-d5ad2722a85f",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮАО и ТиНАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dc5b39ef-711f-4863-8706-31ecd9806e8f",
+          "nickAttr": "email",
+          "value": "KevbrinVV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "36fe7356-5073-4b39-a525-dffd0a90341d",
+          "nickAttr": "fullName",
+          "value": "Кевбрин Владислав Викторович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5a9df389-8e33-47b9-84f4-5ad598ca98fc",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "32782d10-1dde-4b64-bb5c-a262cfe56e45",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "fcaaba8e-1ba9-45a1-b102-7fb0fe80a466",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e30bdf66-e744-44dd-85ad-190334d28499",
+          "nickAttr": "area",
+          "value": "НАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "86cf3fed-4add-4f41-88dc-ffc41d09d10c",
+          "nickAttr": "areaCode",
+          "value": "45297000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f050cdc2-d7fc-4845-be67-fb618b16722e",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0990a7ae-b968-4d08-aa21-6be70fe392d3",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "815d440a-2795-413a-be37-f74367095433",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮАО и ТиНАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "00099061-75b9-4b57-8b00-87d6aeaf1f0d",
+          "nickAttr": "email",
+          "value": "KevbrinVV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "710d4360-bc1c-4f6c-b06f-f311b9e9c768",
+          "nickAttr": "fullName",
+          "value": "Кевбрин Владислав Викторович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "854fb1a7-d6cd-4b90-9470-5d3d82df7589",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "098d819e-385b-4969-9f07-913bfa40b36f",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "33c24f0d-bacc-40fd-96d7-3f762f36bdc1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "15c953e7-a888-419d-bccb-d72a0f4d5679",
+          "nickAttr": "area",
+          "value": "САО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bd4280bc-0994-47a6-929f-cbd422c7331e",
+          "nickAttr": "areaCode",
+          "value": "45277000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8f339d6e-b6de-411f-a216-50b71ae34441",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2cc8975e-9e3e-43c5-8f91-3affec10f7d9",
+          "nickAttr": "code",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "69cecb4e-e84f-456d-8e61-eec4b4c45120",
+          "nickAttr": "department",
+          "value": "Отдел переселения в САО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "74caa031-c6d7-4d09-aa04-89cb5e4a7f16",
+          "nickAttr": "email",
+          "value": "ShaporenkovAN@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f12ffa64-5a98-43f4-aa86-55d952cec313",
+          "nickAttr": "fullName",
+          "value": "Шапоренков Александр Николаевич",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f8254eca-d269-4181-9c09-7c56c7efea4d",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9c3a113d-38e7-43a9-a55c-a7db74590603",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f5f2e46c-8f9d-46c1-869c-4e11531bb25d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7be13775-7e6c-426b-a947-ba9aec15a4f7",
+          "nickAttr": "area",
+          "value": "СВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "da3e7394-6944-45bb-b6f8-7221cf2558cf",
+          "nickAttr": "areaCode",
+          "value": "45280000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "206d6822-fc06-4826-b0b2-155bf6b7032c",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "61e9680d-b6c3-43b2-998c-74c9086ed827",
+          "nickAttr": "code",
+          "value": "7",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4dd521c4-6a55-4d05-85e4-921bddae39cf",
+          "nickAttr": "department",
+          "value": "Отдел переселения в СВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "41defc00-873d-43c3-a6e3-2252e7ac18f9",
+          "nickAttr": "email",
+          "value": "ChernykhNA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "27f2fee3-4b53-4e67-88b7-f186c67c1ee5",
+          "nickAttr": "fullName",
+          "value": "Черных Никита Александрович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "54fa4f95-b02b-411a-b6f4-a8b4d3e1c29d",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d9054620-7305-424d-859d-a369097d9831",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3320040b-1971-4a15-b3ff-7af726483b03",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "30cece1a-abd2-4d70-ac86-4edba3b8a960",
+          "nickAttr": "area",
+          "value": "ВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "63e191f1-373c-40ca-b32c-65cb075ebb21",
+          "nickAttr": "areaCode",
+          "value": "45263000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "52ce5eb8-7a57-4484-9ac0-fb42447e1143",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "45d1402b-85dc-4c78-9142-164629ff697c",
+          "nickAttr": "code",
+          "value": "8",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "02fec250-9ee8-4ef0-a8de-c9865aa998f2",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2c0f2683-02f8-4a44-b966-c0fe5e8e0331",
+          "nickAttr": "email",
+          "value": "ShenderovichSY@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "60c68c6d-65bc-444b-84f4-93e99bd86903",
+          "nickAttr": "fullName",
+          "value": "Шендерович Станислав Юрьевич",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "19428a78-ebf4-4dc8-a258-e579c8c8d0d9",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a05ed535-50c7-44e5-aa08-677e1d199616",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5abeb513-cb21-48fe-bc81-b52bd5b0f993",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f8b5384e-79c4-4990-8eaf-0fce59b2f591",
+          "nickAttr": "area",
+          "value": "ЮВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1b280c44-41a6-487c-96b6-435c390bc554",
+          "nickAttr": "areaCode",
+          "value": "45290000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7e083912-375b-4199-9f3e-0c26bee16bd2",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "54585e96-53ec-4b58-b240-5dfd2821963f",
+          "nickAttr": "code",
+          "value": "9",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f6d8eee1-d034-4594-9c0a-59c20fec25c7",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "65552098-a37d-421e-af14-beee761a918d",
+          "nickAttr": "email",
+          "value": "AnisimovAG@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "648957da-5462-4034-9771-dbb7e0a81c1e",
+          "nickAttr": "fullName",
+          "value": "Анисимов Артем Геннадьевич ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d96649b-82d2-44bf-957a-8c88e1486ac1",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7661c2a7-be4b-4b70-8086-127908fc17ee",
+          "nickAttr": "position",
+          "value": "Консультант",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f0df242e-e0b1-48b6-81a3-80aed4f3c2f6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "da4828c9-9d50-448b-8744-8406561438dc",
+          "nickAttr": "area",
+          "value": "ЮЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8acc7365-3c55-44ba-ad1d-60f62711d396",
+          "nickAttr": "areaCode",
+          "value": "45293000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0811cdad-6c65-4ade-8321-6e97e114905d",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3c3122e7-98b2-4580-8ebc-f0244ea687ed",
+          "nickAttr": "code",
+          "value": "10",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "249cf80c-7e2f-4ffb-908b-50e438751d66",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "410ff2dc-8a37-4948-9b98-550bca04e474",
+          "nickAttr": "email",
+          "value": "BenevskyEV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2c0fad69-c78d-4558-8d52-91078d7e5ec2",
+          "nickAttr": "fullName",
+          "value": "Беневский Евгений Валентинович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cbe10780-9a1c-4e67-b5cb-7b2f8a4fd146",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "71585700-6acc-4315-aa7b-227396128ce2",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "acecb8a3-f263-4c83-9053-69296f98847e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b68bd44a-7bbb-4497-bea1-97c1f46eb9f3",
+          "nickAttr": "area",
+          "value": "ЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0c40bc1e-af66-498c-a2bd-4b9742314b82",
+          "nickAttr": "areaCode",
+          "value": "45268000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d85ee3d1-4249-41d3-8109-217737f52b0f",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6663946f-3e6b-4049-9de6-0c2f9d4c164e",
+          "nickAttr": "code",
+          "value": "11",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e44e0bed-c3c6-4bec-b005-6017a4e8f109",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c0914497-9973-407d-89e2-675884fe42bc",
+          "nickAttr": "email",
+          "value": "ZubtsovDA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b504b957-13c2-45f6-8fb0-e1f69746604c",
+          "nickAttr": "fullName",
+          "value": "Зубцов Дмитрий Алексеевич",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "002ffa89-b900-4946-81aa-b9a64c3b98ff",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3b90f79a-3da0-4a9f-ae06-aead88a3d238",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "30115c4b-41e4-4d9b-b84e-93080eac4816",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "90e4f810-3e3d-41d1-9bf3-2b859eceda7d",
+          "nickAttr": "area",
+          "value": "СЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "996a9b88-8a35-4a99-bbc3-7968528fdd80",
+          "nickAttr": "areaCode",
+          "value": "45283000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9a888d5a-cb19-4f49-8c12-e2dcd4e4708c",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d4ce0172-4bbf-49c0-8fd1-b428ade533f7",
+          "nickAttr": "code",
+          "value": "12",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9b0d4ab5-97cf-4be3-89d6-acd415f00378",
+          "nickAttr": "department",
+          "value": "Отдел переселения в СЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a9da4cdc-767a-4498-8fb7-09a7785f9265",
+          "nickAttr": "email",
+          "value": "VinokurovSA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8944c0eb-c85e-47db-82ed-d1ad8f2072be",
+          "nickAttr": "fullName",
+          "value": "Винокуров Сергей Александрович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "81872c59-f973-4872-8229-a8df52c10a54",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0855db17-dc0e-46d1-88d8-c7ddc2efcbfb",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7d1e555b-8585-4205-bfdd-62617059db4b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8a5d92b4-ab02-4de9-b9dc-bde49a263ef0",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "595f125d-a395-4f00-92f7-588b843e0ed6",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3ce15d89-31ce-4b03-bff0-856a591656de",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ea98889-c3c4-4789-94e2-b5f2cd08c926",
+          "nickAttr": "code",
+          "value": "13",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3403bc12-72ed-4627-81ca-3dde74574f2a",
+          "nickAttr": "department",
+          "value": "Отдел учета и оформления распоряжений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c2e3b9e2-f04e-4f59-8e41-bd9cc191a58c",
+          "nickAttr": "email",
+          "value": "MusinIA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "14515195-7a64-43f6-a455-36f6e5fa5e5f",
+          "nickAttr": "fullName",
+          "value": "Мусин Ильдар Анверович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "01232009-fc2e-44b3-867e-5abd98801e85",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b617e8ea-4918-4bb6-bfc6-a602546fb406",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "da7ab901-b63a-404a-b9ca-3c0c46cb9175",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "da0b4e8e-14d6-440d-b1e8-191eb0c8fdc3",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "475fc730-73db-479b-90a5-6325cfdb0cfc",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b8b57ecf-cfce-41a6-a68a-c8fdbfcbfaaa",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6de11e94-0153-4446-88e6-2f61c418dee5",
+          "nickAttr": "code",
+          "value": "14",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "52a0d1e5-4d06-4a3f-8f0a-e1e23fd30a2e",
+          "nickAttr": "department",
+          "value": "Отдел оформления договоров",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5bcd1555-bb0e-48ed-a4ff-4eb33b2ed008",
+          "nickAttr": "email",
+          "value": "LoginovaMV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c17cde21-1f02-49ed-81aa-a8974b307f4a",
+          "nickAttr": "fullName",
+          "value": "Логинова Марина Викторовна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a09dc363-6d45-4329-9e2b-fc70f6a65890",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d7d6bfa8-5f83-418a-8d2d-fe9f73a5ba83",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e7ec3725-f91e-49d2-b5ae-07cc420926e9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8040d5ab-d332-4a4c-a70d-1f0dc1cc087f",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8b1e142d-47f9-4452-abb4-a80c0c5f1840",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "46f94fe8-d871-4166-8e70-1068a1edb038",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4ef5a63d-1f1d-47ff-9672-7192d16e2462",
+          "nickAttr": "code",
+          "value": "15",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0576aee8-c789-4706-8229-eaa6b7b05047",
+          "nickAttr": "department",
+          "value": "Отдел планирования, анализа и координации программ переселения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4376e4ff-e752-4812-a557-f897217335aa",
+          "nickAttr": "email",
+          "value": "RyzheninaNV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d4d5757f-cd84-4697-8f0f-273160efbf59",
+          "nickAttr": "fullName",
+          "value": "Рыженина Надежда Владимировна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fda12d2e-9afe-45a3-976d-6305a4f737e1",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "23ad3191-3c58-4ae6-8e8d-f5d209e49e2f",
+          "nickAttr": "position",
+          "value": "Консультант",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3e11d019-a027-41d0-9f5f-db6366d371d3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5f56fd8a-cef5-48e3-84d9-dfad96243c85",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2a640c45-3744-4b51-ad56-878ad417667b",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5fdc293a-4f41-462c-a3f1-8f8fb984901b",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "51534f77-0acc-44fe-bd2c-818d4ef11037",
+          "nickAttr": "code",
+          "value": "16",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "54348b87-ecda-4d76-b682-64ad72d09e51",
+          "nickAttr": "department",
+          "value": "Отдел оформления договоров",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "962fdc02-f084-451e-bd1e-5e158435098e",
+          "nickAttr": "email",
+          "value": "KurbatovaMM@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e5b0b962-5a20-4973-bb72-ffa9f815c2dc",
+          "nickAttr": "fullName",
+          "value": "Курбатова Марина Михайловна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3c0f264a-87cb-4180-8754-265d732adade",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f6d4883d-701a-4265-8b82-781b6e8c8da4",
+          "nickAttr": "position",
+          "value": "Зам.нач.отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "57724345-34ec-49a5-a8c9-579928b6c101",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5d9a9417-8f2c-4779-ae42-eebbc5058483",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d82ad5f3-fc66-4158-bb7f-c921bffd517b",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ef7055b6-16a7-4319-8db7-1e5eeb248938",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "72ce4364-68b0-43ff-814c-948ab6b3c030",
+          "nickAttr": "code",
+          "value": "17",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "db4d7c9a-af3f-4453-961f-e9cd3cc0dd81",
+          "nickAttr": "department",
+          "value": "Отдел учета и оформления распоряжений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b57f36fc-f1d2-43e2-afd2-28461dd10ce7",
+          "nickAttr": "email",
+          "value": "Dzhishkarianita@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4dab6f44-027f-453f-bcde-7ca64e82ff82",
+          "nickAttr": "fullName",
+          "value": "Джишкариани Тамари Астамуровна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2dd7979b-6504-4fb9-85d7-01180c1c2a00",
+          "nickAttr": "notificationType",
+          "value": "contractAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "46e8a7d0-43f9-4286-8df8-1a56f262e29c",
+          "nickAttr": "position",
+          "value": "ведущий специалист",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b6939d78-76f7-49f7-a262-916ea0c09c25",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "339c0b52-2b4b-4dbd-bb1e-f2f0f09d9a41",
+          "nickAttr": "area",
+          "value": "ЦАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "02764719-ccbf-4c61-87e7-3377490991eb",
+          "nickAttr": "areaCode",
+          "value": "45286000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5313443c-ff08-4e12-86d5-429629d8ce2e",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e68affb7-6f7c-437a-9070-825a0da4e94b",
+          "nickAttr": "code",
+          "value": "18",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9b9eaecb-f561-4e1b-ad69-3e69f77373c4",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЦАО и ЗелАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f288fb18-9af9-4549-ba73-3313c10d277a",
+          "nickAttr": "email",
+          "value": "AlekseevVL1@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2e75cf9b-622d-44ee-8ddd-c2f31c1e26e4",
+          "nickAttr": "fullName",
+          "value": "Алексеев Владимир Леонидович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2297e7a7-c63f-4157-b9a8-27315b16d62a",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b0095c16-a332-49af-8deb-23b06070a79f",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d26b0413-8a2d-4627-8e79-d58f34181f83",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fda2485c-039d-4a47-8f35-1e890d0d20cc",
+          "nickAttr": "area",
+          "value": "ЮАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d8d79206-ce05-4dc2-9f24-830f3551e1c2",
+          "nickAttr": "areaCode",
+          "value": "45296000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cd8b852e-315c-4d05-ad89-f20f86fa8027",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e569a3de-55a6-4a32-96f6-853e0df02713",
+          "nickAttr": "code",
+          "value": "19",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "db87aaa1-f3af-4ab2-932c-7b24b9854d37",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮАО и ТиНАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3b701961-aae9-4047-8c16-6e4ee8e37009",
+          "nickAttr": "email",
+          "value": "KevbrinVV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a5ca030e-81b6-4301-bba0-c5d1626a3433",
+          "nickAttr": "fullName",
+          "value": "Кевбрин Владислав Викторович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e554372e-9f2c-41be-9d1a-a4222203293d",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "62a75214-a81e-403a-85ae-07e97b35f1c1",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "91fe01e9-2c9b-403b-a134-4121216ff1bc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "908207e8-79a7-4922-a215-0f64c55da1cb",
+          "nickAttr": "area",
+          "value": "ЗелАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "da0da341-702e-4c1b-acaa-d7bfefd914ee",
+          "nickAttr": "areaCode",
+          "value": "45272000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "558faf2f-1f09-4ac4-a57b-4d420e8e4501",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8687e0cc-cf74-4cea-af73-33415f8162df",
+          "nickAttr": "code",
+          "value": "20",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "82d920fe-738f-41ae-9b03-d330d952d81a",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЦАО и ЗелАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2437f4c0-f104-45f1-ac3e-029a91c52473",
+          "nickAttr": "email",
+          "value": "AlekseevVL1@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1094ff37-1d8c-4167-88f2-043a186ce810",
+          "nickAttr": "fullName",
+          "value": "Алексеев Владимир Леонидович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "62884889-5f11-4e19-92e8-cac09d9c4cfd",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9ef134dc-0d18-49bc-af83-25e88b9e6f43",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "26c27ad5-33cd-45ac-849c-0e699ea66880",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ac1f808d-2e3e-4ad0-8f6b-257a90c4e1a3",
+          "nickAttr": "area",
+          "value": "ТАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4efc8a98-4160-40fc-862f-4f2a5a85ab04",
+          "nickAttr": "areaCode",
+          "value": "45298000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2334e7b3-86f2-4505-a3ca-a13e038dd6b9",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b4183465-b050-4d0d-82ae-c358318a054e",
+          "nickAttr": "code",
+          "value": "21",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b5f2b657-57d6-49a1-83e6-b19d2514ba63",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮАО и ТиНАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1c6a2636-218f-4258-9ded-9c45502e565b",
+          "nickAttr": "email",
+          "value": "KevbrinVV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d2f44448-6d1a-483b-b5f0-cb05b0980ee7",
+          "nickAttr": "fullName",
+          "value": "Кевбрин Владислав Викторович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "23645458-1a9f-4249-82d3-d25035e735cb",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9eb750c1-40fa-4836-bb6f-a0274dcea8db",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "65844993-73de-4e46-bbc2-652d13660f8b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6344d4ad-b27a-41a7-9a98-74fc079449e4",
+          "nickAttr": "area",
+          "value": "НАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3aa6f9f7-c1b9-44e4-a7d0-905956933c81",
+          "nickAttr": "areaCode",
+          "value": "45297000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "36a4f8bf-a9e0-46b0-8bcf-c370e00ebcaa",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f757ba0f-f8cd-4b5d-b854-393872c6d8eb",
+          "nickAttr": "code",
+          "value": "22",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6d7e477c-4bc7-443d-ab5f-fae7052ca840",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮАО и ТиНАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "afc82aa1-c597-4d3a-a2c7-79252915cb1a",
+          "nickAttr": "email",
+          "value": "KevbrinVV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "55a9c0f9-873b-4db3-a1e6-0bd8debd2f9b",
+          "nickAttr": "fullName",
+          "value": "Кевбрин Владислав Викторович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "16efbe2e-fd6a-48b4-b741-953139fd721c",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2e8f815b-16dc-47ed-921c-2032aa22ce7d",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c051a863-27a3-4d64-b92b-d1f05fde3169",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2c598d85-30ba-4bfd-a8db-813918f1b219",
+          "nickAttr": "area",
+          "value": "САО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d9d6a983-5cf8-4e4c-8c60-b9b57ce3d40a",
+          "nickAttr": "areaCode",
+          "value": "45277000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "317b1e5d-3203-4bfe-a1a9-637cc7201d75",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "82e514e5-ab14-47da-a466-3831cebc1fcc",
+          "nickAttr": "code",
+          "value": "23",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4137ac5c-97a1-4475-a9f5-ff6b5ca3802c",
+          "nickAttr": "department",
+          "value": "Отдел переселения в САО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "611d2817-cc81-4342-828b-0508dcb52e5e",
+          "nickAttr": "email",
+          "value": "ShaporenkovAN@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8fb28078-437f-4ea2-839e-e749eedec088",
+          "nickAttr": "fullName",
+          "value": "Шапоренков Александр Николаевич",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c2f32392-e4e5-427e-93b5-c363e1ffca92",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a446ea71-fd6d-49b7-997d-4e2f7a237298",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "05ce4843-8a85-475c-8157-f27525fb0966",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0286777e-02a3-47ae-b375-9dddf18956f8",
+          "nickAttr": "area",
+          "value": "СВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "701f4620-87f2-48ef-96ec-049deac11f03",
+          "nickAttr": "areaCode",
+          "value": "45280000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6508fe44-fb25-432d-9e75-1714af26a0d6",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9f73e49e-4e2e-4c3e-933d-13a1411ebe12",
+          "nickAttr": "code",
+          "value": "24",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f562d1ad-0af0-4dcb-9c5a-71464645664c",
+          "nickAttr": "department",
+          "value": "Отдел переселения в СВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "94feaccb-1e19-4356-9d2b-e46f25fe8a09",
+          "nickAttr": "email",
+          "value": "ChernykhNA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "783d54b0-95ea-442c-a4ad-6c08fe1ee853",
+          "nickAttr": "fullName",
+          "value": "Черных Никита Александрович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eb769f55-b772-4573-9b74-9a368e17f986",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d807be74-bb92-4e8d-848e-26d7e3d1993e",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "edeabc62-7750-4bd3-834e-a3817351c3fb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "05315733-b5e1-4f56-bb3f-fd0d2357dc7d",
+          "nickAttr": "area",
+          "value": "ВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c210560-a811-43d4-8712-2d4263d0cc3b",
+          "nickAttr": "areaCode",
+          "value": "45263000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0e84275e-0922-4979-ba58-7907bff158c4",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6dafa527-bc60-4c7b-8f66-6c4b5d1174ac",
+          "nickAttr": "code",
+          "value": "25",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c8a398c9-c50d-4eba-ac33-7f51b45da971",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3cfe35d7-3833-442f-8a60-124326afea00",
+          "nickAttr": "email",
+          "value": "ShenderovichSY@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a899694b-642e-4111-aeff-655d4ff51cfb",
+          "nickAttr": "fullName",
+          "value": "Шендерович Станислав Юрьевич",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "af04f999-85a4-4018-803e-1638c81759bd",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ce549afa-bef8-44e2-841c-dbb7e43b4a1e",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8819ffc8-4214-4156-a5b4-9b013601c45d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f47f8ce3-408e-41ec-9e30-ed8859def481",
+          "nickAttr": "area",
+          "value": "ЮВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cfe0d1d7-8249-4615-ac19-c43bcab851e0",
+          "nickAttr": "areaCode",
+          "value": "45290000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7b174131-af2a-453c-9e87-e109fa0c60be",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5c774ac4-7b01-4641-985a-e747cdecd6e1",
+          "nickAttr": "code",
+          "value": "26",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "93c76462-9078-45eb-8886-a77e5a0a8b0a",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8ad8f106-4f17-4e2d-a91b-9fffb6ca35b3",
+          "nickAttr": "email",
+          "value": "AnisimovAG@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a6cd06d8-1559-4274-8348-7e4c43a73ad1",
+          "nickAttr": "fullName",
+          "value": "Анисимов Артем Геннадьевич ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "51886c87-f398-48d3-a091-625510b438cd",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c52ea804-61fd-4ec8-9738-3bfea6b68d25",
+          "nickAttr": "position",
+          "value": "Консультант",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7df5dd88-2c9b-4e68-bcc3-fc9a00a4afae",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ef8222d1-a12e-4590-bade-55e44e18a0e5",
+          "nickAttr": "area",
+          "value": "ЮЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e791ce54-c8e0-45e6-b48e-d0153937eb33",
+          "nickAttr": "areaCode",
+          "value": "45293000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c04736cc-b1a9-4101-92dc-4891072e7ce9",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b76e7227-a53f-4f48-b6d8-44758ef01d01",
+          "nickAttr": "code",
+          "value": "27",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "08a5a664-62ae-48d4-a2a5-46c3055fe6cd",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "40430c35-6e3f-43fc-9bc5-192b1c188b84",
+          "nickAttr": "email",
+          "value": "BenevskyEV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f8764cdb-e2c4-47a4-a52d-81a5055f321c",
+          "nickAttr": "fullName",
+          "value": "Беневский Евгений Валентинович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e30a15a2-a8aa-4d82-b6a3-f1146bf09a68",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42b8b54e-cd3b-4986-a600-4c5bb9b3830e",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8382f028-c1df-43f0-9502-77212bca0ceb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "58a07328-599b-4489-9934-62d52ab17b66",
+          "nickAttr": "area",
+          "value": "ЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b019d60b-f6c6-4e4a-adda-990f65f22c8e",
+          "nickAttr": "areaCode",
+          "value": "45268000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1a829126-aa89-49a3-b4ec-4f853ffda1b4",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "602930fd-ceeb-412f-a133-ba330ce33bbd",
+          "nickAttr": "code",
+          "value": "28",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c942d1a5-d570-4905-9564-6ab7106294bf",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d17ca539-d722-4abb-91e7-c0d86bfe34ca",
+          "nickAttr": "email",
+          "value": "ZubtsovDA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d8ab0921-2e5b-4e7e-a45e-1a799d9f8b8a",
+          "nickAttr": "fullName",
+          "value": "Зубцов Дмитрий Алексеевич",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d0269daa-a382-4ced-9e91-2440738ccec8",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3b589141-db2b-431c-b77f-f600ae12992f",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "abd36e94-a676-4f81-b2bd-b094bb422210",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d497efc9-3aac-4b5b-b38c-6c491c958f8c",
+          "nickAttr": "area",
+          "value": "СЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "efe62325-a5c8-41ed-9ea7-8da1145bff4c",
+          "nickAttr": "areaCode",
+          "value": "45283000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "693e7300-d9e8-46f7-aaf5-85805c3752ef",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4b04a98c-b52e-4158-aeb8-1b06fc65395b",
+          "nickAttr": "code",
+          "value": "29",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d05f249-3e8c-4ef2-8c23-36e7ee4cf22c",
+          "nickAttr": "department",
+          "value": "Отдел переселения в СЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "166ad798-0dbe-4b74-862e-b091ae98e625",
+          "nickAttr": "email",
+          "value": "VinokurovSA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6a551b1f-88c9-43a2-b377-74026b58060a",
+          "nickAttr": "fullName",
+          "value": "Винокуров Сергей Александрович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "229cb1a8-4ddf-48a8-9f50-2d04a2d600f7",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a3cdc99c-c178-40e1-8855-96719ae41170",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8dd68236-4116-4d67-bb46-548b36303cc8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8724e3a6-ad10-4bd4-8092-faed6cdabc49",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "41a1468b-d57f-4110-8ab1-91f3e61672dd",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5571dc64-c829-494e-adda-9fe5274817ee",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dbfa96a5-32e1-4fd0-be14-ad1f5844a070",
+          "nickAttr": "code",
+          "value": "30",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f08d4f3e-605e-4b70-b089-8fab125b37fe",
+          "nickAttr": "department",
+          "value": "Отдел учета и оформления распоряжений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a5b55d1c-1ae8-44ca-b9a6-f627252216de",
+          "nickAttr": "email",
+          "value": "MusinIA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9845c326-3f66-40c6-96a1-5e9712fe012a",
+          "nickAttr": "fullName",
+          "value": "Мусин Ильдар Анверович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2c17bf5c-0288-4b68-9e7b-b51ac1bf685b",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1e5f839-c996-495f-8bd8-6339b3963473",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "48503985-726b-4e71-b725-b9f667f59708",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d9cf666e-7330-40fd-bd95-8d5665a2ea31",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "55b07b4f-325e-4fcf-9abb-fc58b2db95de",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ebf5f7e3-0111-4d9e-92ff-03f4715fb24d",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4419c053-2f6a-4dde-804d-d903ecc2a65f",
+          "nickAttr": "code",
+          "value": "31",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "94c4c399-d78b-4de9-a49c-034dc01f2e40",
+          "nickAttr": "department",
+          "value": "Отдел оформления договоров",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "54c1e65d-8cd5-478d-8bf8-a972db0edb4c",
+          "nickAttr": "email",
+          "value": "LoginovaMV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f9cb8a2f-91ea-4fbb-bd0e-c47fe39b3564",
+          "nickAttr": "fullName",
+          "value": "Логинова Марина Викторовна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2d5ca6a9-399f-4705-859b-f3aa132ec6b8",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "86c4029b-a023-4a57-b4ba-0e5885d03c44",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "009c2fb6-bd79-4097-a4df-f448bad4622b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4cdd4367-9802-4e85-8081-155e4bbec01f",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9501296d-1e49-4ddc-b84c-2966bac63329",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5b741cfa-992c-4844-99f6-2907d34f3d78",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6fa86a18-17be-44b9-a859-dc0bce59c6b6",
+          "nickAttr": "code",
+          "value": "32",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "031e57a6-c375-49a1-98ae-3b364a07a323",
+          "nickAttr": "department",
+          "value": "Отдел планирования, анализа и координации программ переселения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5510a4df-44ae-4504-964b-66fd449a8156",
+          "nickAttr": "email",
+          "value": "RyzheninaNV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d453704-066f-407a-b00f-fcaaeb87a063",
+          "nickAttr": "fullName",
+          "value": "Рыженина Надежда Владимировна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "753a71d6-6f70-4f8a-9d78-179e5a59a630",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b6922a6c-5b29-4a89-8f15-c3c71a08dd20",
+          "nickAttr": "position",
+          "value": "Консультант",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f576bc51-fbdc-4950-b666-f2381492438b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ba7f7e1c-893b-4e9d-929b-4813b11b4879",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "def7733f-37fa-425a-91d5-7d6c28a5ccfd",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "af6507f2-4fdc-4f20-aad3-bae449f7ee07",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e110aaa8-4c6b-4f39-ba77-1b5b4d05142d",
+          "nickAttr": "code",
+          "value": "33",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e8b205d8-2010-49e1-9663-aa6385488e6b",
+          "nickAttr": "department",
+          "value": "Отдел оформления договоров",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0d67d500-2d84-4988-adb1-ed18d3190d7f",
+          "nickAttr": "email",
+          "value": "KurbatovaMM@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "791a4f2e-93da-4510-94ba-2d34fe6cea3e",
+          "nickAttr": "fullName",
+          "value": "Курбатова Марина Михайловна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7e456b53-6383-4d46-8758-b0529e232dc2",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "79757eb4-6d80-4105-81ea-15230ad0dc5e",
+          "nickAttr": "position",
+          "value": "Зам.нач.отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "cc8e09fa-c772-4f6e-b1e0-19ec6153ca0d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "24d987d3-da18-4c63-b875-ca4d787d2e1d",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a9540c09-cad8-4d96-97f7-087eb7234ee6",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4666742a-b8dc-45a9-a885-57927318eb0e",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9dc5034c-182d-4878-bd58-1b3a89ce566e",
+          "nickAttr": "code",
+          "value": "34",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4a4a0973-e548-4f60-af1a-99633059b08c",
+          "nickAttr": "department",
+          "value": "Отдел учета и оформления распоряжений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "46a19163-a5b8-4af1-b0da-7f3a5a52cf82",
+          "nickAttr": "email",
+          "value": "Dzhishkarianita@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2fa9e8c5-cd63-4a70-a2cc-32111efc15f8",
+          "nickAttr": "fullName",
+          "value": "Джишкариани Тамари Астамуровна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "139eb156-a2e1-466b-bfcf-b4033a6208d9",
+          "nickAttr": "notificationType",
+          "value": "flatAppointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c81e3cf-5322-4356-b325-39ac40b9b1e7",
+          "nickAttr": "position",
+          "value": "ведущий специалист",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "dd11099a-dd4b-49d8-8a75-926ee9dec82c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "563b06f4-b155-4552-838a-681e07a2519a",
+          "nickAttr": "area",
+          "value": "ЦАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "22031a12-00bf-4f8f-9c31-39b0ac096320",
+          "nickAttr": "areaCode",
+          "value": "45286000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "69241c2b-c2c1-4426-bd77-72b4c0f4ffe5",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e6456b00-bfd1-42ba-b22c-ec3367770d4b",
+          "nickAttr": "code",
+          "value": "35",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "44f39911-f72f-43c8-a91a-5c79fcb46108",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЦАО и ЗелАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b397283a-5bfa-4b86-a2d6-ec9faf56694a",
+          "nickAttr": "email",
+          "value": "AlekseevVL1@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bf18b9d2-379b-4889-b70d-a202a779aaa5",
+          "nickAttr": "fullName",
+          "value": "Алексеев Владимир Леонидович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0961af62-a990-42b8-b8d9-2d1d0326d119",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "538942b5-2eef-4b88-990f-8f5b725b4126",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "bc9a76dd-3159-4fe3-85b7-c674f8427f54",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c003179c-749f-469e-92ad-968e06fb6f0d",
+          "nickAttr": "area",
+          "value": "ЮАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "731e15b1-fc78-43b5-93d2-894c3c7c41e1",
+          "nickAttr": "areaCode",
+          "value": "45296000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9649f2ea-6269-4322-9051-58659c9f137d",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c39db54b-c8d5-4c91-8438-0988c21bfefb",
+          "nickAttr": "code",
+          "value": "36",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ae64a4e4-158a-4250-a5ab-a60d477a9697",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮАО и ТиНАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "854ec7d5-aeb7-488d-821c-4f12b87f8c1f",
+          "nickAttr": "email",
+          "value": "KevbrinVV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e5c0f3cc-7fef-40d1-b1dc-82dcd709d031",
+          "nickAttr": "fullName",
+          "value": "Кевбрин Владислав Викторович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7bcd3524-21ae-4529-91aa-12ef003948ed",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "866bdbed-306b-42da-a418-6e229f303f08",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0bcf81a8-9d70-4122-b1f0-0cb56500de63",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "17514b47-9c3c-427a-ab0e-5dd4b3bc6713",
+          "nickAttr": "area",
+          "value": "ЗелАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1c06b0b0-32b0-4259-9a49-db92ec2cf3aa",
+          "nickAttr": "areaCode",
+          "value": "45272000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b5d99033-d119-4da4-ad92-335a25a3fa6a",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5cb7f03f-1323-4d05-b148-1ee8dd76ea9d",
+          "nickAttr": "code",
+          "value": "37",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9418e395-1904-4ec0-b97f-eaef41192d5a",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЦАО и ЗелАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "165def24-2bde-4f13-970c-1b31bff244ba",
+          "nickAttr": "email",
+          "value": "AlekseevVL1@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "40f71b96-a8d5-4dad-9427-f7241cafa111",
+          "nickAttr": "fullName",
+          "value": "Алексеев Владимир Леонидович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "93e7f7b2-a7f9-4925-8de7-7dfeb69f63d0",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "999ef181-86bb-45e9-8d85-fd3cc3ca59d0",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b0fbd881-0b93-497c-9616-0b55ccf1e802",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1c0679c5-1a75-45ae-874e-203e21481b8b",
+          "nickAttr": "area",
+          "value": "ТАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42170e19-1251-4daf-ac08-cc4f1056c6a8",
+          "nickAttr": "areaCode",
+          "value": "45298000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "43680a66-f306-4110-8666-9203054b64e1",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "933493eb-8852-4cf6-bd87-fbb4cc61681c",
+          "nickAttr": "code",
+          "value": "38",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aab3e674-b1aa-446f-a73b-363e65d696ae",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮАО и ТиНАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "53d46fd2-d14b-4fea-b294-71d2767e1d62",
+          "nickAttr": "email",
+          "value": "KevbrinVV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c77415bc-2dcb-42d8-9eb2-fce5c03fcc0d",
+          "nickAttr": "fullName",
+          "value": "Кевбрин Владислав Викторович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a2b85303-d662-46ba-af7b-dca3f606f0d7",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "903c16de-df49-4efc-96ce-521e8f80b815",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "40dea6ac-7894-4000-a851-5e00da7c1ef2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ebb98633-eb28-4df7-ae70-59419143200f",
+          "nickAttr": "area",
+          "value": "НАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b148c04c-43ec-495b-887e-1f3bbf8ac821",
+          "nickAttr": "areaCode",
+          "value": "45297000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "22055b4c-4394-4b79-864f-34c389c221c8",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d8ae876c-daf8-40eb-bed4-830c7a17f6a2",
+          "nickAttr": "code",
+          "value": "39",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8f621fdf-52cb-42db-8b51-e04da0244879",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮАО и ТиНАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6262630e-8ece-4003-9079-2095efe012fb",
+          "nickAttr": "email",
+          "value": "KevbrinVV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "05e9ce98-e100-4158-bdf3-bc106d71dbe4",
+          "nickAttr": "fullName",
+          "value": "Кевбрин Владислав Викторович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "58d52cc6-4119-4366-9852-9c2b9af94245",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "76ae8513-882c-4d0a-a266-17409e1064b6",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "bf4bbea6-4262-493c-b6bd-1bed7e071760",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0d5eb840-557d-4e06-b63c-9ccdae3d49ea",
+          "nickAttr": "area",
+          "value": "САО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bbdb0e15-c5ab-4ab7-897e-ff9201248363",
+          "nickAttr": "areaCode",
+          "value": "45277000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42f69eba-39ac-47fe-ae4e-e58a4d59873a",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "50480fd6-e933-4bb5-aec3-be7f01e6e9f9",
+          "nickAttr": "code",
+          "value": "40",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7698b424-4595-4324-8b42-6285268dc444",
+          "nickAttr": "department",
+          "value": "Отдел переселения в САО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b1a78f47-fdd1-4c31-aa8a-91811a300703",
+          "nickAttr": "email",
+          "value": "ShaporenkovAN@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "434c1a82-baa6-4349-bfe1-3c6f423df2bb",
+          "nickAttr": "fullName",
+          "value": "Шапоренков Александр Николаевич",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d0c7a80b-e0b1-4ec6-a78d-7a39af4babb0",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5ec1e3c2-784b-4216-b8bf-e87df4feb1ee",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e268fc87-2bf4-4f23-a9b4-89437179cded",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "686b55ed-0643-4356-a505-590d540a1b0d",
+          "nickAttr": "area",
+          "value": "СВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fdcfac76-b719-49d2-afb0-9e92cd165cc9",
+          "nickAttr": "areaCode",
+          "value": "45280000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8e005e8b-e831-4071-be14-70d0253109f3",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ba73506f-2d7d-4593-97f2-54a4175fb682",
+          "nickAttr": "code",
+          "value": "41",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3999be1a-9b48-47d5-8ca1-8bd4f531cf44",
+          "nickAttr": "department",
+          "value": "Отдел переселения в СВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3ecb8aad-6a93-4bf3-8451-bf7db01e4bf1",
+          "nickAttr": "email",
+          "value": "ChernykhNA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "117f38b3-8c53-411c-a178-c7c5f1942cf2",
+          "nickAttr": "fullName",
+          "value": "Черных Никита Александрович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "51ba16ed-6e1c-45c2-a1b5-a4b41bf7f18a",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b2af5114-44ff-40c4-b890-3f9b47864600",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "aaf78e40-ce1e-417f-aa88-8b853cde8dfc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "eaee9136-2308-454c-8d0f-3418613e286b",
+          "nickAttr": "area",
+          "value": "ВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9f8b0583-32e0-4c4b-a8f5-d249ccd6ac4f",
+          "nickAttr": "areaCode",
+          "value": "45263000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "84e08a3d-f21f-4ac8-9523-a21d0279c1cb",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d3b0724-e755-4159-9df9-b2d231a5cf94",
+          "nickAttr": "code",
+          "value": "42",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c4663c32-80b3-4f6e-9dc2-56d4c8f26a5d",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "06d99138-a397-415c-8635-bcdebf4a474d",
+          "nickAttr": "email",
+          "value": "ShenderovichSY@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5aec4157-198f-4cc7-b636-f102a431a190",
+          "nickAttr": "fullName",
+          "value": "Шендерович Станислав Юрьевич",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f3164ab0-d49d-43c0-b54b-210899113abd",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b9ce72bc-a9ed-4ab8-a0cd-0abc989285d4",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ffcdbacb-b6a0-4ed9-b39c-042b90690d68",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8381a891-b68c-4a31-88d9-3cf9c8149ddf",
+          "nickAttr": "area",
+          "value": "ЮВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "275be3a5-090d-41e3-9415-1977932958d7",
+          "nickAttr": "areaCode",
+          "value": "45290000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "89fe18a2-9711-4a53-9b50-6a5360d60b0c",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "72a7181e-f452-48ee-a63b-a618dc5a5a77",
+          "nickAttr": "code",
+          "value": "43",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c0f1b81b-c7ad-4652-9aa2-4552db54a2f0",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮВАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "503e2090-bc08-422b-a33c-c8b6203f7fae",
+          "nickAttr": "email",
+          "value": "AnisimovAG@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1b8a9743-ea98-4a60-8aa4-374c4d90451b",
+          "nickAttr": "fullName",
+          "value": "Анисимов Артем Геннадьевич ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "97af89af-449d-4684-b6a3-2b592ef0ee6b",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "47cf8bc1-4212-4a7d-8271-830037ef8d05",
+          "nickAttr": "position",
+          "value": "Консультант",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "04728854-2657-47e8-bd15-a5dada8a86da",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f5d3b7a4-85f4-4949-ae5e-0fbce4fa9983",
+          "nickAttr": "area",
+          "value": "ЮЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a703502e-3b8c-43b2-bc95-a738df79768a",
+          "nickAttr": "areaCode",
+          "value": "45293000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6ef3146c-41d0-42be-9410-0cb8a0d71685",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d2292bd3-2a85-46f4-8614-f5c39270bf44",
+          "nickAttr": "code",
+          "value": "44",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e230a6f1-82c8-4beb-bfcb-8c8672ca5c78",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЮЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ecd7eae7-4e20-4e7e-bc7a-7d723b485b8f",
+          "nickAttr": "email",
+          "value": "BenevskyEV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cb0a5b8a-6a7d-41ee-8a8d-af32b9d5555e",
+          "nickAttr": "fullName",
+          "value": "Беневский Евгений Валентинович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2a82637c-c818-4c8e-8577-bcf40e65ce9b",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d74adeab-9839-4cf7-8fe8-06e66f8b1d9f",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "713a689c-6579-441b-8b15-89ece7a96037",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "059cbb5a-f868-425e-89bc-7584fd075d33",
+          "nickAttr": "area",
+          "value": "ЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0e803226-f25f-4019-9ec8-3581d804250b",
+          "nickAttr": "areaCode",
+          "value": "45268000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9c39ce78-c3d5-4acb-a406-431c60c007e1",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ae8f733d-9109-425b-bc6c-7e137f4311b8",
+          "nickAttr": "code",
+          "value": "45",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "126e99cb-7b51-4e7e-9c1a-debd7a4fdfb0",
+          "nickAttr": "department",
+          "value": "Отдел переселения в ЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "830a8ba1-e3f8-4bb0-9eab-f23fcd51042a",
+          "nickAttr": "email",
+          "value": "ZubtsovDA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "89426779-9d6f-445e-a5ad-56a165490bb2",
+          "nickAttr": "fullName",
+          "value": "Зубцов Дмитрий Алексеевич",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "da5355ef-7063-4dc9-9e22-7059db847437",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0f56ae0e-f8e2-4776-a8e3-c0bd0c9c16e9",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "357634ac-15ae-4259-8b4e-9bd350019a2d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4acff810-71c8-4a8f-9889-5545724dc5a1",
+          "nickAttr": "area",
+          "value": "СЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a82fb47f-bc9c-4d45-9730-9abfd69bda57",
+          "nickAttr": "areaCode",
+          "value": "45283000000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "90330340-1163-4254-b6cd-8fd68457bc85",
+          "nickAttr": "cc",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7bf34c2f-79d1-45fb-a9f0-e146329b24b2",
+          "nickAttr": "code",
+          "value": "46",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fef5c48a-be8a-4cc8-9894-3aaa7dd64c8e",
+          "nickAttr": "department",
+          "value": "Отдел переселения в СЗАО",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5bc2c8b6-7472-44c6-8768-4d38af8b631b",
+          "nickAttr": "email",
+          "value": "VinokurovSA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d3ef1023-e81e-4782-9b54-4e67fe8a447d",
+          "nickAttr": "fullName",
+          "value": "Винокуров Сергей Александрович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "186ce2a1-274a-4c47-9b3e-084257412057",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1766346-b10d-4df6-9c91-8dd8a028e9ea",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6c87c66b-69e9-4892-bad3-fe3401522c97",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3b5184c6-3150-4e71-9e40-8e61f011d67e",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bec63212-f17e-44b5-8309-9916e2e1b257",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "117b7343-d7de-4f7a-a401-0fb6faa37a2b",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c3e2e6c7-7e48-44fb-a219-80e04821b4c4",
+          "nickAttr": "code",
+          "value": "47",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dcf13ca4-b7f0-49e1-8a64-16de2bff7eab",
+          "nickAttr": "department",
+          "value": "Отдел по работе с жилищным фондом",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "67fba1bf-f92e-4549-b8ed-876330c119d3",
+          "nickAttr": "email",
+          "value": "LugovoyAV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7f937ec1-0c81-49bd-9ded-ed379346a539",
+          "nickAttr": "fullName",
+          "value": "Луговой Анатолий Васильевич",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dd04bee2-9be2-4b98-93ea-5e72a7a98d78",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7654f9c2-ff26-47d3-b6bd-8bec07aef9a2",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e864107d-4a3f-429a-a684-882feb3abdd2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "81b68acc-d70a-471f-adf4-34cfa7411a2b",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a423de51-ded8-41ca-ad3b-1143622741cd",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1e24286c-ff75-4f88-b2df-359380941477",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7f63f10b-dca6-4919-8cff-9f7be0314b1f",
+          "nickAttr": "code",
+          "value": "48",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cc654ff4-ca24-4be1-9483-b2776c4278ae",
+          "nickAttr": "department",
+          "value": "Отдел учета и оформления распоряжений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "100c520a-6ddf-4e8f-9a74-5185c40551fb",
+          "nickAttr": "email",
+          "value": "MusinIA@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6bb3416d-0f3c-42c1-b812-42d58a68a265",
+          "nickAttr": "fullName",
+          "value": "Мусин Ильдар Анверович",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4b3ff3b2-f787-499a-9df5-1d6c0ddc0024",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d5781ac9-66e7-4a06-8bed-4de94410659b",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "298df0e9-da06-493c-94f1-b5e4df37b68f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8759b987-cf54-4023-aba9-62efe31a6683",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e71e0ad5-3140-48b9-b13e-0ddf60aedfda",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8442626e-cebc-402f-b922-add6414d9fe9",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ae606017-c023-495e-b441-fb0d63343077",
+          "nickAttr": "code",
+          "value": "49",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "280b649e-5482-41d2-9797-9a6762a82e4f",
+          "nickAttr": "department",
+          "value": "Отдел оформления договоров",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4458c874-f75d-4ea7-abb7-0a959e793109",
+          "nickAttr": "email",
+          "value": "LoginovaMV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "84444a05-ddc2-4042-91e8-47d432551c80",
+          "nickAttr": "fullName",
+          "value": "Логинова Марина Викторовна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "619000b5-aeae-4ef7-a557-c1235d262646",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0d2c96e5-7f84-4e89-8e64-08814f9323c6",
+          "nickAttr": "position",
+          "value": "Начальник отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9d7c288c-1b36-44c3-98ac-7052625d73d7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0fd2c364-3e23-48ae-8cca-3dcfd8cc1112",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1384f83-6895-45ec-a96e-77df39dddf94",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "190fbe97-6657-4b8f-9d00-186275ef134a",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "72c64455-55a4-4e20-94d4-b1c93e96e334",
+          "nickAttr": "code",
+          "value": "50",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "feb9b8f9-d1d5-4697-a72b-dcdd0ae89860",
+          "nickAttr": "department",
+          "value": "Отдел учета и оформления распоряжений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d798a931-d9fc-43f3-9953-deb591c32b86",
+          "nickAttr": "email",
+          "value": "PervushinaEM@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "18525944-95aa-42ac-b056-47ae9e431c97",
+          "nickAttr": "fullName",
+          "value": "Первушина Елена Михайловна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4c4deca4-05b8-4ca1-8341-9574a028cf72",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c38ac662-8574-438b-ade5-65ce1e38c797",
+          "nickAttr": "position",
+          "value": "заместитель начальника отдела",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "faa91b32-0cdd-4b9d-8c5b-3956b77ea4c3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "90db6b00-9f39-463c-9493-756d24c81b12",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "76e53271-7fdc-4ebf-acdb-a51ee138ec4c",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "12c428d2-41c3-4007-9169-9b57ee0c9a7f",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9bb3db67-600e-4e2c-86f6-7c1f493417bf",
+          "nickAttr": "code",
+          "value": "51",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ff6176b8-1cb7-4fcd-b09f-867d1cc0fd88",
+          "nickAttr": "department",
+          "value": "Отдел планирования, анализа и координации программ переселения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3935fd43-8610-4328-970b-0d4763e98195",
+          "nickAttr": "email",
+          "value": "RyzheninaNV@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "84a9b465-bd81-4527-8d00-d29eb675e0fb",
+          "nickAttr": "fullName",
+          "value": "Рыженина Надежда Владимировна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "afa01a56-48e3-4cd1-98a7-3426ab4b3177",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b46565a6-64d9-487a-986b-2cd5cdab09ac",
+          "nickAttr": "position",
+          "value": "Консультант",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "156dd034-babd-476e-9b9a-134696d22e26",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "74aaad2c-76a5-48f3-9723-1c5597e1ad74",
+          "nickAttr": "area",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "24ccf93c-de65-40bd-bbb6-f2789deaedf3",
+          "nickAttr": "areaCode",
+          "value": "",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4be55106-3b1f-4d85-a0a5-0e3eba332b6f",
+          "nickAttr": "cc",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "039e71cc-2c4a-4d70-92b9-a44f2c11655e",
+          "nickAttr": "code",
+          "value": "52",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ac9b2677-b06b-42f3-b87a-e1d43e0b7576",
+          "nickAttr": "department",
+          "value": "Отдел учета и оформления распоряжений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c5de8fef-2687-4fa6-b25d-ed20ab409407",
+          "nickAttr": "email",
+          "value": "Dzhishkarianita@mos.ru",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b8cfe891-9bca-487d-8e17-c5aeb1e1e204",
+          "nickAttr": "fullName",
+          "value": "Джишкариани Тамари Астамуровна",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "672a7f38-f180-4d7e-80e9-8351b5b6101a",
+          "nickAttr": "notificationType",
+          "value": "guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1d5c5101-d3c4-44f9-8653-006940c16160",
+          "nickAttr": "position",
+          "value": "ведущий специалист",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

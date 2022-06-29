@@ -1,0 +1,484 @@
+{
+  "metaDict": {
+    "nick": "SearchFields",
+    "name": "Поля документов подсистемы поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "fieldName",
+        "name": "Название поля в SOLR",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип поля",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFieldTypes",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "searchRule",
+        "name": "Тип поиска по полю",
+        "typeAttr": "link",
+        "nickDictLink": "SearchRules",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "indexed",
+        "name": "Индексировать или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "multi",
+        "name": "Множественное или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "commonSearch",
+        "name": "Участвует ли поле в общем поиске",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "8a8307bf-2d34-4854-aac0-96d9a0c2f24e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "727cbf84-3899-4adb-999a-2fc78344831e",
+          "nickAttr": "code",
+          "value": "ugd_ssr_notary_compensation_date_time",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "53c76927-08ae-47a7-98ab-e332caf2026b",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a8179e42-65c1-4c4c-92bc-f350360a373f",
+          "nickAttr": "description",
+          "value": "Дата подачи заявления",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "55d93748-2edb-470f-8dc3-6dce1d648c40",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_notary_compensation_date_time",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a5a4a550-68b2-4f4e-92ac-f48ff0f83f13",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "112fa4cc-ea51-42ef-a083-fd2077503cea",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "35041864-9471-41e4-897d-1c604642ba66",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "33b65598-c62c-4ae3-a44c-05778ddbf733",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "319abc2f-463c-4537-8f0f-15304e499f47",
+          "nickAttr": "type",
+          "value": "28854573-8e65-45ac-90aa-424df5d74485",
+          "orders": 0,
+          "linkCode": "DATETIME"
+        }
+      ]
+    },
+    {
+      "elementId": "12d5c983-c198-4f63-919c-39f70138698b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ab2835d2-2de3-475b-a2fe-d60cdaef76ab",
+          "nickAttr": "code",
+          "value": "ugd_ssr_notary_compensation_eno",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3b4058e-8b61-4342-b01c-bca41ae07bf0",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ad494242-d98d-4701-9b52-8485de11f989",
+          "nickAttr": "description",
+          "value": "Номер заявления",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4aaa7c8a-1060-44aa-b748-6309ae075385",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_notary_compensation_eno",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2fe07dae-0e12-4eb1-9492-c9f4237b1e38",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0afb4ed1-cc72-40b4-9f44-54f2346f5a45",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4d8d66d5-f480-4101-b195-b99125bb38c9",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "751b2a81-2c75-4299-9f8c-0a5f3aba9b62",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "4ec35eb4-1368-43e4-abf7-f29f8c74850c",
+          "nickAttr": "type",
+          "value": "0692a30c-0ce2-4e1e-9fa4-f8d7e98363c1",
+          "orders": 0,
+          "linkCode": "STRINGWITHCASE"
+        }
+      ]
+    },
+    {
+      "elementId": "1c1acea6-9397-44b1-930a-dbcf3b4c21ba",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "99814447-fe39-40ca-be8d-fab2f6a1898f",
+          "nickAttr": "code",
+          "value": "ugd_ssr_notary_compensation_applicant_full_name",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a604ede4-3678-4f0a-bd7b-2a7343380744",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d16c30fe-3320-4f80-bbec-a2f982115ea1",
+          "nickAttr": "description",
+          "value": "ФИО заявителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f4cdd808-d665-4dec-a1a2-b57905b52020",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_notary_compensation_applicant_full_name",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "054c73de-ff76-43bd-87d5-3cbc88277002",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5dc53068-0286-4f13-9109-784d22f7cd7f",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "44222d59-af85-4897-a814-04ba2c9384f9",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "85da88d9-87d7-4495-a539-1cb20f62ca0a",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "49615bb9-8704-46ea-a15b-b61c5be3c2eb",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "c9a726af-0e06-4ecb-a1ff-96ff86c80b03",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5f0e2a95-5017-4333-8358-2ea972d042b4",
+          "nickAttr": "code",
+          "value": "ugd_ssr_notary_compensation_owners_full_name",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bfd4b510-2c3c-459f-b8d8-5ab3395084b3",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b013bd8a-5714-41a9-85ca-9e7ccec36393",
+          "nickAttr": "description",
+          "value": "Правообладатели",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a48f9433-5ea9-4145-9b64-62ccd78ace7c",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_notary_compensation_owners_full_name",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d9dec37f-d750-4f3a-bd64-db9c124f2662",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "002fa7c1-bf59-406d-9a90-c5add34b1e9e",
+          "nickAttr": "multi",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a1ffe9bb-e9e2-45dc-873b-e7b949a33e54",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "f638b16a-d6d5-4356-9760-369c368bb98e",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "d49df743-7ffb-48a4-bcfe-e42b8ae66ecd",
+          "nickAttr": "type",
+          "value": "0692a30c-0ce2-4e1e-9fa4-f8d7e98363c1",
+          "orders": 0,
+          "linkCode": "STRINGWITHCASE"
+        }
+      ]
+    },
+    {
+      "elementId": "b835e0a9-51ed-438e-a234-af7b7cbdc163",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "35d7770c-7bef-4765-b8e1-d2c0805427fb",
+          "nickAttr": "code",
+          "value": "ugd_ssr_notary_compensation_status",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d7d4900-8504-4aa6-9457-6a13200f39dd",
+          "nickAttr": "commonSearch",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7b9dcf85-4a32-41ba-bd92-e2efcee83492",
+          "nickAttr": "description",
+          "value": "Статус",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a0bf116a-fd13-4b62-bb2a-a8dca94f6f24",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_notary_compensation_status",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cac7642c-6169-4f89-984d-7623be30c96d",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d0984ecd-bb95-4c66-bcda-42633913a55c",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "06c654be-b51b-425c-99e5-27896daf8b37",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "8884e0a2-835c-48f0-9b88-35fd0b00db41",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "a3770b7e-926c-4918-b2f7-79c2da37c60d",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    }
+  ]
+}

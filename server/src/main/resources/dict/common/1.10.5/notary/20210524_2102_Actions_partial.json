@@ -1,0 +1,156 @@
+{
+  "metaDict": {
+    "nick": "Actions",
+    "name": "Возможности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Справочник предназначен для регистрации доступных пользователю возможностей портала Инструкция по работе со справочником -https://smart.mos.ru/wiki/pages/viewpage.action?pageId=27755159",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - кодсистемы_краткийкодподсистемы_кодэлементасправочника",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": "Если указано несколько значений, то разграничение выполняется с условием ИЛИ",
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "URL адрес страницы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Относительная ссылка на страницу портала",
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "disabled",
+        "name": "Признак неактивности",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "theme",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "1ed3aaf2-d92a-4aa2-ad2c-1f04bef68237",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6b83d63c-5f18-4c84-8084-d6d2512ae81f",
+          "nickAttr": "code",
+          "value": "ugd_ssr_addNotary",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ecc73bc4-774f-4729-9033-be60d8edb53c",
+          "nickAttr": "group",
+          "value": "UGD_SSR_NOTARY_CREATE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9820f286-e609-4560-b3ef-baa0fa9446be",
+          "nickAttr": "icon",
+          "value": "fa fa-user-plus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "959159b0-5fd3-4492-b8c9-09416884f7d9",
+          "nickAttr": "name",
+          "value": "Добавить нотариуса",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a9f75f79-99ec-464b-b1b8-5b2d50a06be8",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/notary/new",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

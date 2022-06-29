@@ -1,0 +1,198 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "3c22045f-7e31-4781-b592-b7afeb2c3e7c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "919659b4-55db-4a20-b6b3-13ed39807454",
+          "nickAttr": "code",
+          "value": "UGD_SSR_GUARDIANSHIP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6ded976f-ba83-46b4-8248-f3bd847119ac",
+          "nickAttr": "fields",
+          "value": "d5c88b1f-0a34-413c-bcc3-50465ff44275",
+          "orders": 0,
+          "linkCode": "ugd_ssr_guardianship_fio"
+        },
+        {
+          "attrId": "b0f141d2-c529-4c39-ac8c-1e6100d069c6",
+          "nickAttr": "fields",
+          "value": "1a575df3-6166-47e4-8dbb-2bb34bc2744c",
+          "orders": 1,
+          "linkCode": "ugd_ssr_guardianship_address_to"
+        },
+        {
+          "attrId": "4dd13c6a-fab9-4abb-8f1e-7b0db488519d",
+          "nickAttr": "fields",
+          "value": "a58114e4-36d1-4936-b47d-d1c863b6306a",
+          "orders": 2,
+          "linkCode": "ugd_ssr_guardianship_district"
+        },
+        {
+          "attrId": "775beae0-ab52-4eef-8701-11af07378044",
+          "nickAttr": "fields",
+          "value": "6219879e-ed02-4cfa-9dc1-f34e5f5b845b",
+          "orders": 3,
+          "linkCode": "ugd_ssr_guardianship_area"
+        },
+        {
+          "attrId": "14687af5-216a-40e4-8762-8256ff69b5ba",
+          "nickAttr": "fields",
+          "value": "cd612ea5-01e6-43ee-926e-5ed0d43711de",
+          "orders": 4,
+          "linkCode": "ugd_ssr_guardianship_address_from"
+        },
+        {
+          "attrId": "7e3c811b-71ca-437c-a831-baa868fcc06e",
+          "nickAttr": "name",
+          "value": "Заявление жителя в органаны опеки.",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "485be022-dea4-4edc-a2ee-f7e4d43f67f1",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "63ff7c20-5c66-42e3-a263-62d12ef6bdeb",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "c8ba9f3e-20d2-460c-8ad2-a222b8c3780e",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "48f1ad37-5f76-4162-b189-597196d2ff7c",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-05-27-02-view-resettled-families-amount-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_resettled_families_amount">
+            WITH houses_with_released_flats AS (
+                -- дома, в которых есть хотя бы одна семья с заполненным releaseFlat.actDate
+                SELECT DISTINCT
+                    persons.json_data->'Person'->'PersonData'->>'UNOM' as unom
+                FROM
+                    ssr.documents persons
+                WHERE
+                    persons.doc_type = 'PERSON'
+                    AND persons.json_data->'Person'->'PersonData'->'releaseFlat' ? 'actDate'
+                    AND (persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false' OR persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+            ),
+            flats as (
+                -- все квартиры в таких домах
+                SELECT
+                    real_estate.json_data->'RealEstate'->'RealEstateData'->>'UNOM' as unom,
+                    real_estate.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'Address' AS address,
+                    COALESCE(flats->>'apartment_L4_VALUE', flats->>'FlatNumber') as flatnum,
+                    flats->>'flatID' as flatid
+                FROM
+                    ssr.documents real_estate, houses_with_released_flats
+                JOIN jsonb_array_elements(real_estate.json_data->'RealEstate'->'RealEstateData'->'Flats'->'Flat') flats
+                ON TRUE
+                WHERE real_estate.json_data @> cast('{"RealEstate": {"RealEstateData": {"UNOM": ' || houses_with_released_flats.unom || '}}}' as jsonb)
+            ),
+            persons_in_flats AS (
+                -- жители этих квартир с заполненным affairId
+                SELECT DISTINCT
+                    flats.unom,
+                    flats.address,
+                    flats.flatnum,
+                    persons.json_data->'Person'->'PersonData'->>'affairId' as affairId,
+                    MAX((persons.json_data->'Person'->'PersonData'->'releaseFlat'->>'actDate')::date) as actDate
+                FROM
+                    flats
+                JOIN
+                    ssr.documents persons
+                ON
+                    persons.doc_type = 'PERSON'
+                    AND persons.json_data @> cast('{"Person": {"PersonData": {"flatID": "' || flats.flatid || '"}}}' as jsonb)
+                    AND (persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false' OR persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+                WHERE
+                    persons.json_data->'Person'->'PersonData'->'affairId' IS NOT NULL
+                GROUP BY
+                    unom, address, flatNum, affairId
+            )
+            SELECT DISTINCT ON (affairId) * FROM persons_in_flats
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_resettled_families_amount TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

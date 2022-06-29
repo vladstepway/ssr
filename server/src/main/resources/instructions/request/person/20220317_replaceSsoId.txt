@@ -1,0 +1,13 @@
+Изменить ssoId:
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = e75cbb39-0650-4424-8c30-b763a6112c53; jsonPatch =
+[
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/SsoID",
+        "value": "476c3a00-e5af-4e12-9074-24551f1fb600"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

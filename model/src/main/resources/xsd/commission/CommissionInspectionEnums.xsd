@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/commission"
+           targetNamespace="http://www.ugd.croc.ru/ssr/commission">
+
+    <xs:simpleType name="InspectionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Комиссионный осмотр">
+                <xs:annotation>
+                    <xs:documentation>Комиссионный осмотр</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Повторный комиссионный осмотр">
+                <xs:annotation>
+                    <xs:documentation>Повторный комиссионный осмотр</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

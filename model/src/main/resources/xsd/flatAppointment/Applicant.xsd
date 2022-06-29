@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/flatAppointment"
+           targetNamespace="http://www.ugd.croc.ru/ssr/flatAppointment">
+    <xs:complexType name="Applicant">
+        <xs:annotation>
+            <xs:documentation>Сведения о заявителе</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="email" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Электронная почта жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="phone" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер телефона жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="additionalPhone" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Дополнительный номер телефона жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

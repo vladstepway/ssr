@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "dac9789b-f6e1-47dd-9ba2-3604db02d7f8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "583dd395-f408-4ff1-9a1c-18fb286a0b3d",
+          "nickAttr": "code",
+          "value": "ugd_ssr_trade_addition_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "25c37595-6879-4db4-b947-d5dc479e9a19",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_TRADE-ADDITION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "943f0643-502d-42c2-8173-6cb4f7c04e05",
+          "nickAttr": "documentName",
+          "value": "Реестр по докупке и компенсации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "50790caa-f259-4abf-b226-58212c5e8fb7",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Реестры по докупке и компенсации\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Реестры по докупке и компенсации</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableFilter\":true,\"separateFilter\":false,\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по ФИО заявителя, адресу проживания, адресу заселения, типу сделки, номеру заявления, статусу\",\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_trade_addition_fio\",\"type\":\"text\",\"name\":\"ФИО заявителя\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_trade_addition_address_from\",\"type\":\"text\",\"name\":\"Адрес отселения\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_trade_addition_address_to\",\"type\":\"text\",\"name\":\"Адрес заселения\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_trade_addition_type\",\"type\":\"text\",\"name\":\"Тип сделки\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_trade_addition_status\",\"type\":\"text\",\"name\":\"Статус\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_trade_addition_application_number\",\"type\":\"text\",\"name\":\"Номер заявления\",\"isSearchable\":true},{\"code\":\"ugd_ssr_trade_addition_indexed\",\"type\":\"boolean\",\"name\":\"Проиндексирован \\\\ нет\"}],\"tableColumns\":[{\"name\":\"ФИО заявителя\",\"fieldCode\":\"ugd_ssr_trade_addition_fio\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/trade-addition/info/{{item.sys_documentId}}?arm\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_trade_addition_fio}}\\n</a>\"},{\"name\":\"Адрес отселения\",\"fieldCode\":\"ugd_ssr_trade_addition_address_from\",\"template\":\"{{item.ugd_ssr_trade_addition_address_from}}\"},{\"name\":\"Адрес заселения\",\"fieldCode\":\"ugd_ssr_trade_addition_address_to\",\"template\":\"{{item.ugd_ssr_trade_addition_address_to}}\"},{\"name\":\"Тип сделки\",\"fieldCode\":\"ugd_ssr_trade_addition_type\",\"template\":\"{{item.ugd_ssr_trade_addition_type}}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_trade_addition_status\",\"template\":\"{{item.ugd_ssr_trade_addition_status}}\"}],\"filters\":[{\"name\":\"ФИО заявителя\",\"fieldCode\":\"ugd_ssr_trade_addition_fio\",\"placement\":\"bottom\"},{\"name\":\"Адрес отселения\",\"fieldCode\":\"ugd_ssr_trade_addition_address_from\",\"placement\":\"bottom\"},{\"name\":\"Адрес заселения\",\"fieldCode\":\"ugd_ssr_trade_addition_address_to\",\"placement\":\"bottom\"},{\"name\":\"Тип сделки\",\"fieldCode\":\"ugd_ssr_trade_addition_type\",\"placement\":\"bottom\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_trade_addition_status\",\"placement\":\"bottom\"},{\"name\":\"Номер заявления\",\"fieldCode\":\"ugd_ssr_trade_addition_application_number\",\"placement\":\"bottom\"},{\"name\":\"Проиндексирован \\\\ нет\",\"fieldCode\":\"ugd_ssr_trade_addition_indexed\",\"placement\":\"bottom\",\"presetFilter\":\"true\"}],\"sortings\":[{\"name\":\"ФИО заявителя\",\"fieldCode\":\"ugd_ssr_trade_addition_fio\"},{\"name\":\"Адрес отселения\",\"fieldCode\":\"ugd_ssr_trade_addition_address_from\"},{\"name\":\"Адрес засмеления\",\"fieldCode\":\"ugd_ssr_trade_addition_address_to\"},{\"name\":\"Тип сделки\",\"fieldCode\":\"ugd_ssr_trade_addition_type\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_trade_addition_status\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f74f5f03-310a-490c-9396-47efa2b1cc03",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_trade_addition",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "55ec5f61-7c07-4aa8-a81a-29a2fa083598",
+          "nickAttr": "showcaseName",
+          "value": "Реестр по докупке и компенсации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2f79ccc1-f0dc-4411-805e-10cf166461ab",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cdf13b92-069e-457f-a220-9e70963a7d85",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b8d3f6ee-f233-4341-a290-310f6a601222",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2cbf1f35-5d3a-4672-bcae-9a4091fc5e71",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

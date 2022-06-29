@@ -1,0 +1,621 @@
+{
+  "metaDict": {
+    "nick": "SearchFields",
+    "name": "Поля документов подсистемы поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "fieldName",
+        "name": "Название поля в SOLR",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип поля",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFieldTypes",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "searchRule",
+        "name": "Тип поиска по полю",
+        "typeAttr": "link",
+        "nickDictLink": "SearchRules",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "indexed",
+        "name": "Индексировать или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "multi",
+        "name": "Множественное или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "commonSearch",
+        "name": "Участвует ли поле в общем поиске",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "51629823-4678-41ff-824e-97ab5e0e7fc9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e21ea8b8-80d5-456d-bb54-6ac5c644d2ed",
+          "nickAttr": "code",
+          "value": "ugd_ssr_real_estate_cco_unoms",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "38dda440-0f2a-4318-b378-9a04f2eebde3",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e22e1dcf-3350-460b-b168-e150486c9ecb",
+          "nickAttr": "description",
+          "value": "Уномы заселяемых домов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d6a81ec3-c00d-45d1-85b5-2cac1fc65b28",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_real_estate_cco_unoms",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7a254205-2511-44a7-ab07-f95056256637",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9457065d-dff0-45bb-ae90-490cc9b70c43",
+          "nickAttr": "multi",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c8fe8bee-efd3-475a-bab0-6d9c6e40d5f9",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "e0c6a06a-84b8-452a-ad75-ffdd3941e435",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "e747e670-d31c-49c3-8720-2b56b7a1d9fc",
+          "nickAttr": "type",
+          "value": "562194b4-efcf-4893-8b61-621a83c8fb6f",
+          "orders": 0,
+          "linkCode": "STRING"
+        }
+      ]
+    },
+    {
+      "elementId": "7b5ea75a-a27c-4626-859c-04b3f3763db7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ca25711f-ebc0-4fcc-8846-299771343cbc",
+          "nickAttr": "code",
+          "value": "ugd_ssr_real_estate_resettled_flat_count_dgi",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b3f59cb8-859b-45f7-9127-57d7e35cf6dd",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "102c090b-d930-46f1-8a16-956d91c1dd3e",
+          "nickAttr": "description",
+          "value": "Отселено квартир (ДГИ)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e5b134a4-68d3-4968-b0af-546663d8af7e",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_real_estate_resettled_flat_count_dgi",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7d453e77-96cd-43ee-981b-597f535b3606",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42ac9404-8590-4a72-b68f-fdaec01b4789",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d4451e6e-452f-46ed-95c2-f1c89b3b0430",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "511de7cf-aa81-4eda-a5f8-487b1212f039",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "d5783774-2ba6-4c31-82fd-a63cb60fe245",
+          "nickAttr": "type",
+          "value": "56edf557-b12b-4847-bccb-e000983bf74e",
+          "orders": 0,
+          "linkCode": "NUMBER"
+        }
+      ]
+    },
+    {
+      "elementId": "cb43030d-98d4-4c39-9b60-ff79ebe00141",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "16209af1-12ce-4d62-8643-db684f2c5c2a",
+          "nickAttr": "code",
+          "value": "ugd_ssr_real_estate_resettled_flat_count_mfr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "295b066e-9bc9-4c9f-a39f-f5dea880c0be",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e8296850-7aca-4bdb-bafd-ca3ca65157ae",
+          "nickAttr": "description",
+          "value": "Отселено квартир (МФР)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c7591c6d-d93a-4b5e-beb8-dd8404d29f09",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_real_estate_resettled_flat_count_mfr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f51a8762-0699-4546-a8b1-9e1facd3d552",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bef41ab3-3923-4502-9d0b-f245c4ba44e9",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "14469119-ad5b-46a9-8eed-d8d1487c6a5e",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "ef92c14e-c495-4a6e-8375-56db45b087eb",
+          "nickAttr": "type",
+          "value": "56edf557-b12b-4847-bccb-e000983bf74e",
+          "orders": 0,
+          "linkCode": "NUMBER"
+        }
+      ]
+    },
+    {
+      "elementId": "8bce1c03-1f6a-4dd1-a241-a2e56c51162e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4e941653-af0e-4961-ac66-555eebf0c2b1",
+          "nickAttr": "code",
+          "value": "ugd_ssr_real_estate_court_flat_count_dgi",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f45c6ac9-3d7e-43dd-8801-79a619bbce4f",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dc9a3546-e4c8-4f30-a1a3-6a675d5008d5",
+          "nickAttr": "description",
+          "value": "Судебные квартиры (ДГИ)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e19b0b94-9481-455b-adeb-059fc69627d6",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_real_estate_court_flat_count_dgi",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bedc1eb5-df55-4e28-8b22-1756e57c92ef",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ba4e2ccb-7599-4697-a824-39454314b203",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a5b0a550-c84c-400c-9e69-10ebbba99e84",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "a12fe5a4-cd1b-4067-93a0-2b0cb20de2cd",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "97e178d3-d876-4109-bb72-6806eff2136d",
+          "nickAttr": "type",
+          "value": "56edf557-b12b-4847-bccb-e000983bf74e",
+          "orders": 0,
+          "linkCode": "NUMBER"
+        }
+      ]
+    },
+    {
+      "elementId": "9fc74ca5-ecee-46c0-a6c1-48cbafecbde6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4198f0e7-c738-41e9-a0aa-15ef2b3430b3",
+          "nickAttr": "code",
+          "value": "ugd_ssr_real_estate_court_flat_count_mfr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3dfcc1b9-33d8-4371-8a11-152d13435fb3",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4b46ece4-9570-40b9-8d6a-4302be8de261",
+          "nickAttr": "description",
+          "value": "Судебные квартиры (МФР)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "64701e25-a43f-44d2-b70f-e6eb3f1379a0",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_real_estate_court_flat_count_mfr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "777d6524-88ce-49b5-a91a-a83e31234816",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8cfffc3f-030a-40a0-8fe7-6750d235b880",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3f20a47e-64e3-4f0d-8b73-f88f07917f4e",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "48609269-135d-4328-8725-e478df9e5644",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "9ee4f3a5-d0a3-4e23-9285-cd3dfb82b6bb",
+          "nickAttr": "type",
+          "value": "56edf557-b12b-4847-bccb-e000983bf74e",
+          "orders": 0,
+          "linkCode": "NUMBER"
+        }
+      ]
+    },
+    {
+      "elementId": "904072fc-9ac4-4b1c-94a6-bf964230a6a5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2bf115f9-cf29-4314-ad61-5e9d17fb5179",
+          "nickAttr": "code",
+          "value": "ugd_ssr_real_estate_active_resettlement_flat_count_mfr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3746139f-3bab-4f21-9d01-14869fd70d69",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "615012bc-7757-43dd-ab7a-a33f66b20a6d",
+          "nickAttr": "description",
+          "value": "Квартиры в процессе переселения (МФР)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4dc954e1-00e7-4468-88dc-7c66253fa391",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_real_estate_active_resettlement_flat_count_mfr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d94ea656-f9c8-415f-b593-29beb1c20123",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "210440ab-1fa1-426a-87de-1982874ac336",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "70653f22-46fe-47a3-9df8-2b1f46e88357",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "224b8faa-f476-4176-bd94-3bc6972a2c3c",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "fe0456ff-acef-488f-a177-54d1d994bc52",
+          "nickAttr": "type",
+          "value": "56edf557-b12b-4847-bccb-e000983bf74e",
+          "orders": 0,
+          "linkCode": "NUMBER"
+        }
+      ]
+    },
+    {
+      "elementId": "d219fb33-aaf1-44a2-9c45-689912d9b8bd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "78204725-c317-4222-bfd1-c08aa6a8773c",
+          "nickAttr": "code",
+          "value": "ugd_ssr_real_estate_active_resettlement_flat_count_dgi",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7b366098-a743-4b86-abf0-32d7e14c9431",
+          "nickAttr": "commonSearch",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fb47cc5c-7ce3-41cc-a5d6-4f6bd159b499",
+          "nickAttr": "description",
+          "value": "Квартиры в процессе переселения (ДГИ)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e8445bba-2d38-4be3-b9f6-fc00a4108c2c",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_real_estate_active_resettlement_flat_count_dgi",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eb78b832-722e-40b9-8bd3-c824be291e43",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f3d2959c-c3e3-4690-880a-88797f57f903",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "310dc226-4f97-4812-b7db-c6fbe62e8158",
+          "nickAttr": "searchRule",
+          "value": "60fd5e26-81b2-40d5-8029-4306a5a4b68a",
+          "orders": 0,
+          "linkCode": "LIKE"
+        },
+        {
+          "attrId": "e084f9c0-08b9-4374-adda-bda0cdccdeb2",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "8032cd8e-0b85-4dcd-a20d-67b5783a6388",
+          "nickAttr": "type",
+          "value": "56edf557-b12b-4847-bccb-e000983bf74e",
+          "orders": 0,
+          "linkCode": "NUMBER"
+        }
+      ]
+    }
+  ]
+}

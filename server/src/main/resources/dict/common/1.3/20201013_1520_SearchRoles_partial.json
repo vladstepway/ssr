@@ -1,0 +1,621 @@
+{
+  "metaDict": {
+    "nick": "SearchRoles",
+    "name": "Правила разграничения прав доступа к результатам общего поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 1,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "используется в search",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа (подтипа) документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование типа (подтипа) документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "documentType",
+        "name": "Тип документа",
+        "typeAttr": "link",
+        "nickDictLink": "DocumentTypes",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "role",
+        "name": "Группа, дающая право доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "b9ec9b83-95bc-4d2b-a6c4-ee7a1ec426de",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "UGD_SSR_PERSON",
+      "values": [
+        {
+          "attrId": "40e9e44b-8998-4472-9bc5-946e61eecd5b",
+          "nickAttr": "code",
+          "value": "UGD_SSR_PERSON_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "115056b7-391d-448b-a8c7-36eb51388be3",
+          "nickAttr": "documentType",
+          "value": "ec573dd8-13da-47cf-92ec-6fb1fbb1c1b0",
+          "orders": 0,
+          "linkCode": "UGD_SSR_PERSON"
+        },
+        {
+          "attrId": "16a4184f-fe96-44db-9aff-d6da9ec838cc",
+          "nickAttr": "name",
+          "value": "Каталог жильцов - все подтипы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "029f1f0a-f397-42b9-9212-5dbb00bf9324",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fa8d3242-bb36-4fb5-8454-00c50db5e67e",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "66654869-fd3c-4f7a-a120-270b21e61210",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "UGD_SSR_REAL-ESTATE",
+      "values": [
+        {
+          "attrId": "635feb0e-6438-4f75-8781-05342ced1612",
+          "nickAttr": "code",
+          "value": "UGD_SSR_REAL-ESTATE_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e64d21db-4a93-43c7-a9b9-303ca7a3e3e4",
+          "nickAttr": "documentType",
+          "value": "26767d0f-1d9e-4987-9817-a4c74f2b07df",
+          "orders": 0,
+          "linkCode": "UGD_SSR_REAL-ESTATE"
+        },
+        {
+          "attrId": "ca02daaa-e90a-4ee1-a312-c70a08ba16d0",
+          "nickAttr": "name",
+          "value": "Каталог объектов переселения - все подтипы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a8fd78d8-0b6c-41c8-b0df-b5a0fdcc0417",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "12acb40f-3f0a-4738-88c7-638b5ae39e67",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "412cdfce-3143-4679-a38a-04d0bb816097",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "UGD_SSR_DASHBOARD",
+      "values": [
+        {
+          "attrId": "b34092a7-1dfd-4542-b0ad-c900624e8abe",
+          "nickAttr": "code",
+          "value": "UGD_SSR_DASHBOARD_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "73f20b9c-d574-47f5-a878-264e738bc8fb",
+          "nickAttr": "documentType",
+          "value": "5aa94fbe-23d7-4742-8930-f8a954621ec8",
+          "orders": 0,
+          "linkCode": "UGD_SSR_DASHBOARD"
+        },
+        {
+          "attrId": "2f272c50-30c9-4bdc-9580-83534430591b",
+          "nickAttr": "name",
+          "value": "Каталог статистической информации о переселении - все подтипы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0cc3893f-11ff-493f-9575-611eeeb1ccf0",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_VIEWONLY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d62b8107-ae07-4ea3-ac91-31f328912acf",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGI",
+          "orders": 1,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d2101d5-9909-4a79-b27e-0177a99f8704",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGP",
+          "orders": 2,
+          "linkCode": null
+        },
+        {
+          "attrId": "de152d05-e389-4385-b385-270630e211b5",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_FOND",
+          "orders": 3,
+          "linkCode": null
+        },
+        {
+          "attrId": "8b5156b9-226d-4809-bd44-759ccf046f5f",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DS",
+          "orders": 4,
+          "linkCode": null
+        },
+        {
+          "attrId": "f7eee57f-723a-445e-aae7-59362eb0a699",
+          "nickAttr": "role",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 5,
+          "linkCode": null
+        },
+        {
+          "attrId": "bf546b45-89ae-40c9-bf9d-2d2e4c7443ba",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "4fd5ac7f-0753-4bdd-ad4e-aa814070747f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "34753483-c5c1-486d-8b70-2a725a16ac32",
+          "nickAttr": "code",
+          "value": "UGD_SSR_DASHBOARD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1262338-fcfd-4979-a965-2921913435b9",
+          "nickAttr": "documentType",
+          "value": "5aa94fbe-23d7-4742-8930-f8a954621ec8",
+          "orders": 0,
+          "linkCode": "UGD_SSR_DASHBOARD"
+        },
+        {
+          "attrId": "4e862f45-b019-40be-a9f9-a0842f98534d",
+          "nickAttr": "name",
+          "value": "Каталог статистической информации о переселении",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e803de02-62f3-4316-a7fc-b43d733c24bb",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_VIEWONLY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "69467316-fd71-4dd8-b134-27cbb5b62f81",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGI",
+          "orders": 1,
+          "linkCode": null
+        },
+        {
+          "attrId": "b0f681ad-7130-4faa-b604-2fb0ae12443f",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGP",
+          "orders": 2,
+          "linkCode": null
+        },
+        {
+          "attrId": "2677e1ca-2cf4-4cfe-87dc-fa6e509b75d8",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DS",
+          "orders": 3,
+          "linkCode": null
+        },
+        {
+          "attrId": "8f40e5fb-b92e-439b-8234-08336527c77d",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_FOND",
+          "orders": 4,
+          "linkCode": null
+        },
+        {
+          "attrId": "248f32b2-71ba-4911-aa57-41528c7a93bf",
+          "nickAttr": "role",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 5,
+          "linkCode": null
+        },
+        {
+          "attrId": "e5c49043-ab2a-4776-8c45-15e0d22eab74",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "0ac43452-7e46-4865-84dc-3c9da64b5efd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2bfc49d8-bcaa-4342-b1a0-93bc35e44286",
+          "nickAttr": "code",
+          "value": "UGD_SSR_REAL-ESTATE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5976c615-b9ed-422d-bc12-c065e98dcb06",
+          "nickAttr": "documentType",
+          "value": "26767d0f-1d9e-4987-9817-a4c74f2b07df",
+          "orders": 0,
+          "linkCode": "UGD_SSR_REAL-ESTATE"
+        },
+        {
+          "attrId": "b5eb3e6b-bfe4-4087-bff1-e1944b26ecff",
+          "nickAttr": "name",
+          "value": "Каталог объектов переселения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "374bcefa-a999-43d4-a215-3efc3d23690b",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2f95ef8b-1d60-414d-a7bd-c3f60d0909df",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "64dc7ee5-25e0-48f2-b932-5879dcc2aa40",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "32e17a87-a393-410a-a120-680bc8a11fc0",
+          "nickAttr": "code",
+          "value": "UGD_SSR_PERSON",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cbcc6642-7674-4c02-a9ec-193e20de7e2b",
+          "nickAttr": "documentType",
+          "value": "ec573dd8-13da-47cf-92ec-6fb1fbb1c1b0",
+          "orders": 0,
+          "linkCode": "UGD_SSR_PERSON"
+        },
+        {
+          "attrId": "61e0d31f-958e-4b0a-b41b-a57c44e4322d",
+          "nickAttr": "name",
+          "value": "Каталог жильцов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d9de442c-dda0-4a85-8706-e2361252c258",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b3042f31-f02a-4067-a399-60688b23461b",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "4ce68eda-9474-49e3-a187-770b54fe85ef",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "UGD_SSR_FIRST-FLOW-ERROR-ANALYTICS",
+      "values": [
+        {
+          "attrId": "76bce4a8-0a3b-43bb-b6f0-573f23396bca",
+          "nickAttr": "code",
+          "value": "UGD_SSR_FIRST-FLOW-ERROR-ANALYTICS_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "91203f57-4b03-4ed7-ac6e-f3d8057369ad",
+          "nickAttr": "documentType",
+          "value": "049c8c35-d6d7-485d-bec0-e4845aed1dec",
+          "orders": 0,
+          "linkCode": "UGD_SSR_FIRST-FLOW-ERROR-ANALYTICS"
+        },
+        {
+          "attrId": "6cd5de2a-4b65-4b2a-bcec-194294ae09cb",
+          "nickAttr": "name",
+          "value": "Каталог ошибок загрузки данных из ДГИ - все подтипы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dda8aac3-0b6b-4bf9-9bff-0fc2898ec636",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bb4ea8e9-8cfb-4ecd-86db-306699afe6ab",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "57440866-c4a9-4be2-b964-da845d0dc532",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "80475c3a-6337-48df-8663-e2055f781483",
+          "nickAttr": "code",
+          "value": "UGD_SSR_FIRST-FLOW-ERROR-ANALYTICS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a071c8b4-a7dd-4b2b-a6d1-dc99993055b1",
+          "nickAttr": "documentType",
+          "value": "049c8c35-d6d7-485d-bec0-e4845aed1dec",
+          "orders": 0,
+          "linkCode": "UGD_SSR_FIRST-FLOW-ERROR-ANALYTICS"
+        },
+        {
+          "attrId": "d19ff6c0-62d2-4824-a335-4ff18aeab4fc",
+          "nickAttr": "name",
+          "value": "Каталог ошибок загрузки данных из ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "24afc7e8-ded4-416e-85f1-663786c476e0",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1a0fff4-5f8f-4871-a864-b2bfc48c3947",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "1a0eb30d-bb73-4056-8398-b6f4c1d87565",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bb87c963-c78d-48a9-a9f6-21762336e04e",
+          "nickAttr": "code",
+          "value": "UGD_SSR_CIP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6e8c5e3b-8280-46b2-b3a3-3ff6598ea910",
+          "nickAttr": "documentType",
+          "value": "68997a97-3c0e-4a36-a670-5d3044ea8c7a",
+          "orders": 0,
+          "linkCode": "UGD_SSR_CIP"
+        },
+        {
+          "attrId": "8f5eb3e6-3adb-433a-8636-c343a3408c6f",
+          "nickAttr": "name",
+          "value": "Каталог центров информирования по переселению",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0770221d-9b55-42c6-b03f-17ba6a832300",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5766df16-83ea-45b3-9530-719ad59aeaad",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "5251d039-60ed-4a01-aad2-bac7c83e3c01",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "UGD_SSR_CIP",
+      "values": [
+        {
+          "attrId": "dbfc93a4-92b9-4c6c-821f-ee26e787f047",
+          "nickAttr": "code",
+          "value": "UGD_SSR_CIP_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4b617e3a-d990-4ee9-be27-3fc4ddc14417",
+          "nickAttr": "documentType",
+          "value": "68997a97-3c0e-4a36-a670-5d3044ea8c7a",
+          "orders": 0,
+          "linkCode": "UGD_SSR_CIP"
+        },
+        {
+          "attrId": "4dd89b22-a890-4d07-b55b-8a88917e9db3",
+          "nickAttr": "name",
+          "value": "Каталог центров информирования по переселению - все подтипы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a0ca34d9-7eb1-451a-b79e-45dd0892adaf",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_VIEWONLY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3b52370-b365-495f-86b8-b6cefe01bf9e",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGI",
+          "orders": 1,
+          "linkCode": null
+        },
+        {
+          "attrId": "e00a4256-8315-4b5f-a099-6fa96049ee15",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGP",
+          "orders": 2,
+          "linkCode": null
+        },
+        {
+          "attrId": "53d2d4ca-4094-4ec4-8dfd-424ed65c20b1",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_FOND",
+          "orders": 3,
+          "linkCode": null
+        },
+        {
+          "attrId": "3e7e88fa-b74a-490b-ba15-a96a9eca54ca",
+          "nickAttr": "role",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DS",
+          "orders": 4,
+          "linkCode": null
+        },
+        {
+          "attrId": "8dec8e66-8a31-4393-94a4-2dfb3d5d7fd1",
+          "nickAttr": "role",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 5,
+          "linkCode": null
+        },
+        {
+          "attrId": "5387c496-8e93-4bbf-9ea6-bd153980a798",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    }
+  ]
+}

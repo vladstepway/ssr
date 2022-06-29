@@ -1,0 +1,135 @@
+{
+  "Person": {
+    "personData": {
+      "fio": "Гукасов Тигран Богданович",
+      "unom": 18822,
+      "snils": "000-099-043 92",
+      "ssoID": "0b227034-9396-4158-9c9a-39396ceed970",
+      "owner": false,
+      "flatID": "648578321",
+      "gender": "Мужской",
+      "waiter": "0",
+      "addInfo": {
+        "isDead": "0"
+      },
+      "flatNum": "93",
+      "regDate": "2004-10-19",
+      "regFrom": "Москва, Московская, Подольский р-н Бычково",
+      "regType": "постоянно",
+      "roomNum": [null],
+      "lastName": "Гукасов",
+      "affairId": "900399",
+      "passport": "паспорт РФ № 567915 46 06, выдан Рязановским ПОМ Подольского УВД Московской обл. 12.05.2004",
+      "personID": "4684365",
+      "firstName": "Тигран",
+      "birthDate": "1976-08-10",
+      "contracts": {
+        "contract": [{
+          "files": {
+            "file": [{
+              "fileLink": "ac359615-17da-41ee-bb65-bff16d41d6d5",
+              "fileType": "1"
+            }, {
+              "fileLink": "d0253174-2125-4b1d-a6d1-d888c5869a66",
+              "fileType": "3"
+            }, {
+              "fileLink": "63645f98-8837-49d2-9916-dbf27d3a0c26",
+              "fileType": "2"
+            }, {
+              "fileLink": "0496e37f-421d-44ea-9058-db67b4634886",
+              "fileType": "4"
+            }]
+          },
+          "dataId": "859b0e64-9eff-4294-8fbf-80b6db2efb79",
+          "orderId": "7820",
+          "issueDate": "2020-11-26",
+          "contractNum": "780077",
+          "msgDateTime": "2020-11-26T16:10:26.768",
+          "contractType": "39",
+          "contractStatus": "2",
+          "contractDateEnd": "2020-12-01",
+          "contractSignDate": "2020-11-26"
+        }]
+      },
+      "isArchive": false,
+      "middleName": "Богданович",
+      "agreements": {
+        "agreement": [{
+          "date": "2020-11-01",
+          "event": "1",
+          "dataId": "bb11d70f-d762-9df9-6f26-924e77e1f129",
+          "fileLink": "b28a7c0b-c4c2-44a2-8dc3-e42d37ee4250",
+          "fullDocs": "1",
+          "letterId": "7456-963",
+          "techInfo": {
+            "userID": "ivanov_ii",
+            "userFIO": "Иванов Иван Иванович",
+            "actionDateTime": "2020-11-14T14:23:08.254"
+          },
+          "participants": {
+            "personID": ["3bb8dfb1-3cf6-4879-8861-80ff7b586727", "2a71d112-0de0-407e-9ce7-44a93cd6d8b8", "047d4c24-fae9-43b5-8419-240af84e895e"]
+          }
+        }, {
+          "date": "2020-11-04",
+          "event": "1",
+          "dataId": "9d821247-ebfb-69ea-2a40-1a5484e7c9b8",
+          "fileLink": "09462bf4-60cd-46d3-8edc-cffdab78bc9c",
+          "fullDocs": "1",
+          "letterId": "7456-963",
+          "techInfo": {
+            "userID": "ivanov_ii",
+            "userFIO": "Иванов Иван Иванович",
+            "actionDateTime": "2020-11-16T12:54:59.845"
+          },
+          "participants": {
+            "personID": ["3bb8dfb1-3cf6-4879-8861-80ff7b586727", "2a71d112-0de0-407e-9ce7-44a93cd6d8b8", "047d4c24-fae9-43b5-8419-240af84e895e"]
+          }
+        }, {
+          "date": "2020-11-05",
+          "event": "1",
+          "dataId": "49f36eb2-396a-8fb5-1e5f-ff76b318cdf2",
+          "fileLink": "be89ec94-ad73-4e04-8666-01b6a6e8a261",
+          "fullDocs": "1",
+          "letterId": "7456-963",
+          "techInfo": {
+            "userID": "ivanov_ii",
+            "userFIO": "Иванов Иван Иванович",
+            "actionDateTime": "2020-11-17T22:14:41.026"
+          },
+          "participants": {
+            "personID": ["3bb8dfb1-3cf6-4879-8861-80ff7b586727", "2a71d112-0de0-407e-9ce7-44a93cd6d8b8", "047d4c24-fae9-43b5-8419-240af84e895e"]
+          }
+        }]
+      },
+      "addFlatInfo": {
+        "noFlat": "0",
+        "inCourt": "0",
+        "ownFederal": "0"
+      },
+      "newFlatInfo": {
+        "newFlat": [{
+          "event": "0",
+          "ccoUnom": 7775525,
+          "orderId": "120080",
+          "ccoFlatNum": "21"
+        }]
+      },
+      "arriveMoscow": "19.10.2004",
+      "encumbrances": "Нет данных",
+      "statusLiving": "1",
+      "birthLocation": "Россия, Волгоградская область, Волжский ",
+      "relocationStatus": "4",
+      "UpdatedFromDgiDate": "2020-10-31",
+      "UpdatedFromELKdate": "2020-10-28",
+      "UpdatedFromPFRdate": "2020-10-28",
+      "UpdatedFromDgiStatus": 1,
+      "UpdatedFromELKstatus": "обогащено",
+      "UpdatedFromPFRstatus": "обогащено",
+      "IntegrationNumberMale": "0874-9000155-067801-078856/20",
+      "IntegrationNumberFemale": "0874-9000155-067801-078857/20"
+    },
+    "documentID": "e0126eb8-c84e-4a6e-8cdb-09aaad144847",
+    "folderGUID": "0826a860-2634-43dc-8995-419ecd17d444"
+  },
+  "folderId": "0826a860-2634-43dc-8995-419ecd17d444"
+}

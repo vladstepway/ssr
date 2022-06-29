@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cdp.org/demo">
+	<xs:element name="propusk">
+		<xs:annotation>
+			<xs:documentation>Заявка на пропуск (динамические формы)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="documentID" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Системный идентификатор документа</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="main" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Общие сведения</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="regNumber" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Номер</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="reqDate" type="xs:date" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Дата, на которую заказан пропуск</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="initiator">
+								<xs:annotation>
+									<xs:documentation>Кто заказывает пропуск</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="fioFull" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>ФИО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="phone" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Телефон</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

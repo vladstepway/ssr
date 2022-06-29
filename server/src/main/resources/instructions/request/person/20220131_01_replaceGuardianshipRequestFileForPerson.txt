@@ -1,0 +1,23 @@
+1. Открыть https://smart.mos.ru/filestore/swagger-ui.html#/files-controller
+2. Выбрать POST /v1/files/createNew и нажать Try it out
+3. Заполнить поля:
+    - file = приложенный к инструкции pdf файл
+    - fileType = pdf
+    - folderGuid = 0a7ce7a0-a36a-42e1-8320-b5b4736a6857
+    - systemCode = UGD
+4. Нажать Execute
+5. Убедиться, что статус код ответа 200 и сохранить полученный в ответе guid (пример, 8e3c13e8-cfb5-43f7-9727-9d6f521fbb61, будет использоваться на шаге 8)
+6. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+7. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+8. Заполнить поля, заменив значение ЗНАЧЕНИЕ_ИЗ_ШАГА_5 на полученное на шаге 5, например, 8e3c13e8-cfb5-43f7-9727-9d6f521fbb61:
+    - anyDocumentTypeCode = GUARDIANSHIP
+    - id = 84a47620-cf94-4aed-9f9f-1d566cb192ca
+    - jsonPatch =
+[
+    {
+        "op": "replace",
+        "path": "/guardianshipRequest/guardianshipRequestData/requestFileId",
+        "value": "ЗНАЧЕНИЕ_ИЗ_ШАГА_5"
+    }
+]
+9. Нажать Execute и убедиться, что статус код ответа 200

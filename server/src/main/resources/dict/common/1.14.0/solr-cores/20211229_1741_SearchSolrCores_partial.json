@@ -1,0 +1,915 @@
+{
+  "metaDict": {
+    "nick": "SearchSolrCores",
+    "name": "Ядра SOLR",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Название ядра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "description",
+        "name": "Описание ядра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальное",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "3175c61b-50bc-4164-88ef-8b4727be473c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a7061e8c-130f-46ab-b1bd-0686424265d0",
+          "nickAttr": "code",
+          "value": "ugd_ssr_personal_document_application",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b3d2cc2c-50c0-4eac-b574-176c325b7cf3",
+          "nickAttr": "description",
+          "value": "Поиск заявления на предоставление документов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "709d5916-2b39-44f3-8734-58837afdd732",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "00e81d35-0d77-43b2-9cbc-fdbef5fc664b",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e1ebd28e-c3e5-43c0-991b-f87fdab7448d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "53f0b646-8f22-4366-b2c8-2630042d7ca6",
+          "nickAttr": "code",
+          "value": "ugd_ssr_real_estate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "23492f2b-4235-4548-bc0b-991916d6cf3b",
+          "nickAttr": "description",
+          "value": "Поиск объекта недвижимости",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "92be5fcc-7c38-486d-b6be-caceb29bfc1f",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "d3096565-1315-4694-b2ff-68bf4dcf0161",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "381dc886-ad7a-4435-97d0-ab6e389577e2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c4a4482e-41ff-4ecb-b666-bbc85eb2f163",
+          "nickAttr": "code",
+          "value": "ugd_ssr_resettlement_request",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "96b831c5-33d4-4b09-9bfb-1336548553e2",
+          "nickAttr": "description",
+          "value": "Поиск запроса на переселение домов/квартир",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "882ba508-6616-4003-9153-21ca7abbfc51",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "d49b9808-df6d-40cc-ad81-1833ced8ef2f",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a97e8d3f-7071-4137-84ae-cab20de32dcd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a744b852-28a4-4fc8-8d3c-9a67bbc57d25",
+          "nickAttr": "code",
+          "value": "ugd_ssr_shipping_application",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "78604fb1-7dde-41ab-994d-d327e0737193",
+          "nickAttr": "description",
+          "value": "Поиск заявления на помощь в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ae089577-1776-4992-9b75-dc8c127c48bd",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "10166a7a-4edb-4fcd-9e22-1bf16588ee85",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "36789ca1-bef7-48f2-a6ce-05e7075b1707",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bbee196e-c9c5-40e6-bcf2-7c2fd2cf7bc8",
+          "nickAttr": "code",
+          "value": "ugd_ssr_trade_addition",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6340b6b4-e6a8-4e20-a9dc-72c45d1cfd68",
+          "nickAttr": "description",
+          "value": "Поиск сведений о сделке по докупке и компенсации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "99034b03-e0b7-453d-afe2-e9c5c6678328",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "43c17c2e-cffb-4f47-ad85-89b93ed9a477",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d9c7b4ea-a076-44f7-824b-22bc2d5bc48a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c58beefd-ed1c-4ec8-89b3-e5e7395c770b",
+          "nickAttr": "code",
+          "value": "ugd_ssr_apartment_inspection",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "62b8e575-c176-4bab-bc30-89db6024229e",
+          "nickAttr": "description",
+          "value": "Поиск акта осмотра квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "322f41c3-2b48-42c5-b588-06d7d7db7f4d",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "2565367f-9660-45f4-8d14-597669fc1092",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3c4d9394-33be-4662-a631-be98156262d6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2c528c33-9ab6-43ff-a1ca-5f65d47e21c5",
+          "nickAttr": "code",
+          "value": "ugd_ssr_cip",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "466aaf28-6a59-4093-a44c-d340b1160cd3",
+          "nickAttr": "description",
+          "value": "Поиск центра информирования по переселению",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b36d870f-f60c-4c88-84f1-eb25df559564",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "ee715266-fcd1-4808-a87f-b1c7d5a23346",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6ff71146-d9af-48f9-b576-18c5c017a1cf",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0d00cd9a-db81-4203-8054-ece8822f6fbd",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e0849f59-fefb-4bb1-8ea3-33eb55e6e12f",
+          "nickAttr": "description",
+          "value": "Поиск заявления на устранение строительных дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "69d9c6ab-b0e9-4fae-8669-2a2c7209a8e1",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "c1481a87-8f67-4cf3-8e1c-047b17f63d85",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "fdef5abc-5be3-4048-8794-2156b789d30b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bc642361-210a-4c2e-bcb7-034280758435",
+          "nickAttr": "code",
+          "value": "ugd_ssr_contract_appointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "47ca5b94-87cf-4085-9c54-59a470a38c3a",
+          "nickAttr": "description",
+          "value": "Поиск заявления на заключение договора",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f97d1d82-edf9-4456-93c2-bd1a12f05f81",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "9c11cc6e-4e58-4c27-a138-2fbe257f5a5e",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f3eb3da1-94c3-4149-87cc-5e93ab089eaa",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7034e4d1-33ba-4a69-8d7a-9596d14f45f8",
+          "nickAttr": "code",
+          "value": "ugd_ssr_dashboard",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "282230cb-cf35-4081-8df5-b2737ade9720",
+          "nickAttr": "description",
+          "value": "Поиск статистической информации о переселении",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d2fa849f-56d2-4fe9-bba7-ebd104048544",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "5192c08b-86f7-4ace-9d6b-7fd3e629d260",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a4f3c85f-3ae8-45f4-ad2a-58ce23faa350",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7bec2bb8-74aa-4ae0-9ef7-ed5d26b204ce",
+          "nickAttr": "code",
+          "value": "ugd_ssr_defect",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "792bac5e-bbd0-438d-af06-f2f5e486008a",
+          "nickAttr": "description",
+          "value": "Поиск дефекта квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "570ac924-1078-4ed3-9208-b4e944f8151a",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "c6f664a7-343e-46fd-8961-4ae954c5d2bb",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ae0e4782-ff19-4df3-b17e-87092ba94a57",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ba8c9f2b-52db-441d-be7a-72902440ec64",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_flat_request",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fe996329-126f-4a11-81a6-26f19771ac99",
+          "nickAttr": "description",
+          "value": "Поиск сведений о запрошенных квартирах",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "27bd0a89-df81-4a51-a6d6-8744d9d0dfb0",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "a904ca9e-661b-45ab-80ac-82f98ee23aee",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7d571c8d-22e8-49d8-8726-02a0aea6263a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9915aa60-af29-4b92-bebb-4bdb0aace92e",
+          "nickAttr": "code",
+          "value": "ugd_ssr_guardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7c966a0d-b81e-4d09-9027-17d33ae895dd",
+          "nickAttr": "description",
+          "value": "Поиск заявления жителя в органы опеки",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "110c9e08-707d-4786-ad94-9e909c183226",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "a7de0276-017a-4a51-85d3-bb222abec762",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c373fc84-7bde-4c4a-b486-71af14ba99bd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "899a398b-f19e-4b2a-aefd-1c49b0144034",
+          "nickAttr": "code",
+          "value": "ugd_ssr_first_flow_error_analytics",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9b67a964-ea0d-42fd-98c0-dc2b048fb120",
+          "nickAttr": "description",
+          "value": "Поиск сведений о разборе ошибок загрузки данных из ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0ca6ba65-a829-46a9-8518-05690a4ea247",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "75e9667b-e2d3-4e15-94e7-80ecafdf77dc",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "54c47186-eea8-4d14-9282-b84502c66285",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a0f7d39c-cc88-4afc-aed3-603df58bdaf4",
+          "nickAttr": "code",
+          "value": "ugd_ssr_flat_appointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "85af5e05-a9d1-4cce-93e9-71275c4b5b87",
+          "nickAttr": "description",
+          "value": "Поиск заявления на осмотр квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3b9af908-f333-48ba-9853-6931ec4aea9f",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "d163cdc9-d737-460e-b37e-3614fd639213",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7e872390-52d3-4f98-94d9-ccd6d57585a4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "64d62afe-6047-4ce8-af49-72b9b7b28cc2",
+          "nickAttr": "code",
+          "value": "ugd_ssr_notary",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "014b2a51-3b34-40f3-8622-c296a9ca68aa",
+          "nickAttr": "description",
+          "value": "Поиск нотариуса",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6fe4c439-7ba6-48cf-b5a4-e784d361b015",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "13e5469b-f122-4526-a73e-9b0347087155",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f0db6cf9-9e2c-47f7-8c56-455f8549b1ee",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9e5ef2f7-bc76-4ba9-b01a-1cca7c72ea91",
+          "nickAttr": "code",
+          "value": "ugd_ssr_notary_application",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a63d86c-3c8c-42c7-afda-14c05b8dc992",
+          "nickAttr": "description",
+          "value": "Поиск заявления на запись на посещение нотариуса",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e112a89f-6c06-4d5f-b5af-4f62d8ebd454",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "bf48d1d8-7a72-4ecb-9588-e24ea9988ffa",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e8861f21-c850-492a-80eb-0536f6d7296a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ecf4a65e-3c72-4b6e-a414-5972f504bf14",
+          "nickAttr": "code",
+          "value": "ugd_ssr_person_upload_log",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a96aad8-8d66-477b-8f8f-702ba72f5fda",
+          "nickAttr": "description",
+          "value": "Поиск журнала загрузки жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3df27945-ea5f-4632-b36c-40ca7fdb4d2f",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "e3380015-03ee-4361-8963-70c31ae60451",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "dd81177a-bae6-4b0a-9dfc-e7a4b83b96f8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9dcc940b-83a5-4416-85f5-78b97bffcab3",
+          "nickAttr": "code",
+          "value": "ugd_ssr_personal_document",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e5248170-6423-4a87-9c67-db72efa25105",
+          "nickAttr": "description",
+          "value": "Поиск сведений о документах",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "63bebc5f-7890-4fdc-9870-c7824074aa8a",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "b7a43d76-57bc-4465-9547-ea8815804d95",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "be1c746c-ffe6-4c63-95c6-dbdb3ad37d83",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d96f79f1-69e0-4865-be2c-fc9a60ca76d9",
+          "nickAttr": "code",
+          "value": "ugd_ssr_shipping_day_schedule",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1974273d-9c11-43c6-be98-0e8e188634d6",
+          "nickAttr": "description",
+          "value": "Поиск расписания дней для переезда",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2ebc8db6-2d06-4d27-a943-0e74c22c4f19",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "86ffe36e-7259-489b-93b1-2bf0a0b413c3",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b808f725-c6d0-4747-9683-3416f91863b4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fd31ce7a-9cde-46d7-9ef9-6f8fb04991c4",
+          "nickAttr": "code",
+          "value": "ugd_ssr_trade_data_batch_status",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5ab05faf-165b-47ad-bbc5-6dd9e066920a",
+          "nickAttr": "description",
+          "value": "Поиск информации о загруженной партии данных о сделках",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "44dfce58-7b38-463b-bc99-d40bf8158af6",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "5f249ad4-5c38-438b-a9b9-00c459a574a8",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ae0638fb-ec3f-4fe0-873e-c9c96990efaa",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1189f582-4709-4832-ad84-cf4775b5e471",
+          "nickAttr": "code",
+          "value": "ugd_ssr_soon_resettlement_request",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9db518ff-3c85-4c78-8a5b-558e3ccc9762",
+          "nickAttr": "description",
+          "value": "Поиск запроса на скорое переселение домов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6ae9a18f-7e14-4c73-b944-47f1db6d7f73",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "4bfc2e16-9261-4a38-ac22-26b2065d1739",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1165db70-6265-4dac-839d-8475312837c6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "33ad8698-58d2-47d5-b2f2-1e1d74ac80e3",
+          "nickAttr": "code",
+          "value": "ugd_ssr_offer_letter_parsing",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "90282254-1af5-41a9-86ac-5736c151577c",
+          "nickAttr": "description",
+          "value": "Поиск сведений о разборе письма с предложением",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "97f1901c-e3c2-42ac-a36e-1483c7e943a2",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "6d8531c0-44a2-4e85-a4de-9ca356605023",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+Удалить проект договора из жителя 84868fc8-dbd9-486b-8af6-2405d7cf58d2:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 84868fc8-dbd9-486b-8af6-2405d7cf58d2; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts/contract/0"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/newFlatInfo/newFlat/0/event"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/newFlatInfo/newFlat/0/orderId"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

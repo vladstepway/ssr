@@ -1,0 +1,27 @@
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 592ebd76-e517-41f3-8498-38e35f376ece; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/keysIssue"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/newFlatInfo"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/7"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/8"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/relocationStatus",
+        "value": "4"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

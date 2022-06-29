@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/pfr"
+           targetNamespace="http://www.ugd.croc.ru/ssr/pfr"
+           elementFormDefault="qualified">
+    <xs:element name="PfrSnilsRequest">
+        <xs:annotation>
+            <xs:documentation>Данные запроса СНИЛС в ПФР</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="pfrSnilsRequestData" type="PfrSnilsRequestType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PfrSnilsRequestType">
+        <xs:annotation>
+            <xs:documentation>Данные запроса СНИЛС в ПФР</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="requestCriteria" type="PfrSnilsRequestCriteria">
+                <xs:annotation>
+                    <xs:documentation>Критерии запроса СНИЛС в ПФР</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="response" type="PfrSnilsResponse" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Ответ ПФР</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="serviceNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Единый номер обращения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="creationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время создания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusCode" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Статус запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="errorDescription" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Описание ошибки если произошла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="busRequestDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа с данными по запросу в bus</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="PfrSnilsRequestCriteria">
+        <xs:annotation>
+            <xs:documentation>Критерии запроса в ЕГРН</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Фамилия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Имя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="birthDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата рождения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="genderCode" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Пол</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="docType" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Тип документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="series" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Серия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="number" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="issueDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата выдачи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="issuer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Кем выдан</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="PfrSnilsResponse">
+        <xs:annotation>
+            <xs:documentation>Ответ ПФР</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="snils" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>СНИЛС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="gender" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Пол</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

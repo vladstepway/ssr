@@ -1,0 +1,82 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_resettlementEvent",
+    "name": "События переселения",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Тип события (1 – Межведомственные взаимодействия, 2 – Информирование жителя)",
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "ebbfe848-fbf8-478d-9583-792bad43b8a9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1fd4e46f-01e0-4dc8-bac5-6b471d87b397",
+          "nickAttr": "code",
+          "value": "23",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cef0d248-3ba4-4e41-96e5-6a6ea8407b67",
+          "nickAttr": "name",
+          "value": "Удален акт по устранению дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ad6cff45-9d57-4c6c-bef8-845cad45155a",
+          "nickAttr": "type",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_realEstateChangelogAttributes",
+    "name": "Атрибуты для журнала изменений расселяемых домов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "title",
+        "name": "Заголовок",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "beanName",
+        "name": "Наименование бина для обработки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "isComplexPath",
+        "name": "Путь комплексный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "dba7ce42-625a-4f23-896f-6c536649f775",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9dc2d7ef-efb6-4f68-b4f8-38ff6e98012a",
+          "nickAttr": "beanName",
+          "value": "realEstateChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1fe947f3-1864-48c9-9f27-74b782c8ef64",
+          "nickAttr": "code",
+          "value": "/RealEstate/RealEstateData/withdrawnNonResidentialSpaces",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3e594d1a-0b09-468f-8146-0cc51ac74427",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8b573020-c71f-4477-ba32-4495c0fd31bd",
+          "nickAttr": "name",
+          "value": "Флаг изъятия нежилых помещений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f3b8ea57-a5c0-4014-bf62-c4eaef88a61a",
+          "nickAttr": "title",
+          "value": "Флаг изъятия нежилых помещений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "693817a9-fb93-4119-af26-e55445ad0c8d",
+          "nickAttr": "type",
+          "value": "boolean",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5f4f8e32-4b6f-4825-96d3-7c95ed5b5cd6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "74b065cd-d251-450d-ac6c-7d021ecedd50",
+          "nickAttr": "beanName",
+          "value": "realEstateChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9ff05c48-6d4a-41e9-85aa-6132ef672ead",
+          "nickAttr": "code",
+          "value": "/RealEstate/RealEstateData/demolitionDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f83016a9-91d9-491f-8365-9482cae40d2e",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "52077f2d-b7e2-4e99-8c91-6aacd7854a3c",
+          "nickAttr": "name",
+          "value": "Дата сноса дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5145fbab-bff5-4acb-8061-06ab7c3c484f",
+          "nickAttr": "title",
+          "value": "Дата сноса дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "df931d6c-2185-4564-a5ca-c5cec282df4f",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "34ca87e5-0440-46bc-8233-b49cc63d73ce",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "414af7b9-269d-4973-994e-78edac969515",
+          "nickAttr": "beanName",
+          "value": "realEstateChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3e872347-0445-43f1-89df-ad577aad6874",
+          "nickAttr": "code",
+          "value": "/RealEstate/RealEstateData/hasNonResidentialSpaces",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e4a36527-1279-426a-b32c-a9ae4a013204",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d5d9e477-27dd-44bd-9d2b-424d0bc221b7",
+          "nickAttr": "name",
+          "value": "Наличие нежилых помещений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ac87346f-87fa-44a1-a6e0-34c95e283e2b",
+          "nickAttr": "title",
+          "value": "Наличие нежилых помещений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5564ce7f-5a9e-4d5e-ae8e-7c75897853be",
+          "nickAttr": "type",
+          "value": "boolean",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

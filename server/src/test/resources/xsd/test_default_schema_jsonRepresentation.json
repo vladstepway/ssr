@@ -1,0 +1,22 @@
+{
+  "name": "demo",
+  "description": "Пример JSON документа с данными процесса",
+  "isComplex": true,
+  "arity": "1-1",
+  "attributes": [
+    {
+      "name": "versionXSD",
+      "description": "Версия XSD схемы",
+      "isComplex": false,
+      "arity": "1-1",
+      "type": "string"
+    },
+    {
+      "name": "documentID",
+      "description": "Системный идентификатор документа",
+      "isComplex": false,
+      "arity": "1-1",
+      "type": "string"
+    }
+  ]
+}

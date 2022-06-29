@@ -1,0 +1,445 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_contractAppointmentChangelogAttributes",
+    "name": "Атрибуты для журнала изменений записи на заключение договора",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "title",
+        "name": "Заголовов",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "beanName",
+        "name": "Наименование бина для обработки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "isComplexPath",
+        "name": "Путь комплексный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "8c88f708-d5f5-49d1-a941-7c125fac8b41",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6f67abea-4234-4c0c-8460-986066558f73",
+          "nickAttr": "beanName",
+          "value": "contractAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8ec43dc3-c4ff-4617-8418-f64a0cf44147",
+          "nickAttr": "code",
+          "value": "/contractAppointment/contractAppointmentData/appointmentDateTime",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "096cb785-38b8-486b-a3dd-9ac620981032",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "14984048-e200-4a18-9857-79d281430a03",
+          "nickAttr": "name",
+          "value": "Время записи на прием",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5c288672-6f52-4d9a-afab-5b45aa91f7cc",
+          "nickAttr": "title",
+          "value": "Время записи на прием",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e56fe55f-efe5-4ef8-8a47-f7b59e194b4b",
+          "nickAttr": "type",
+          "value": "datetime",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "42ebf111-c4ee-4ae3-9039-dbc3accb4185",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e95ab493-6c77-4060-a9ff-846ed87f9bd2",
+          "nickAttr": "beanName",
+          "value": "contractAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bd0afe3a-b007-4260-a789-3e8d37e20f50",
+          "nickAttr": "code",
+          "value": "/contractAppointment/contractAppointmentData/contractSignDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "85e6bacf-a684-468a-a935-93f42f2e02a4",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8a871654-1635-4435-8f19-a2594333b036",
+          "nickAttr": "name",
+          "value": "Дата подписания договора",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1e76d23e-66d2-49e9-8f96-3c90d5dbcd2a",
+          "nickAttr": "title",
+          "value": "Дата подписания договора",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6ab5dd90-8f87-4568-b463-499d62ed4fcd",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "903cb740-67ea-46bc-8f9d-6d4be3a7b645",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b449c1f1-a468-40c5-86fb-94a67e56422b",
+          "nickAttr": "beanName",
+          "value": "contractAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0ea10969-f824-4634-8cca-57e179387924",
+          "nickAttr": "code",
+          "value": "/contractAppointment/contractAppointmentData/cancelReason",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d77d92cb-45ab-4753-a186-9aab44148245",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6734fdf5-15b8-4db8-a9bd-f281c165187d",
+          "nickAttr": "name",
+          "value": "Причина отмены записи",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "003496d5-d1ef-4e90-9877-8783dc4e7e6f",
+          "nickAttr": "title",
+          "value": "Причина отмены записи",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "062c5271-9db4-4236-a2e9-7963156dd231",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c70fbc24-e54a-40b6-bd7e-f49b1da69a6b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a726f96f-05f1-4616-b59e-90c85c0cc506",
+          "nickAttr": "beanName",
+          "value": "contractAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a7859cb7-e92b-4aa9-bf08-8fe0d51a58db",
+          "nickAttr": "code",
+          "value": "/contractAppointment/contractAppointmentData/contractFile",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f7ce6142-bb6d-4660-aaaf-dc3497f4dcef",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1fa547e1-7f15-49cf-962d-ca15061181be",
+          "nickAttr": "name",
+          "value": "Загруженный договор",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "802bf962-b7fc-47ef-85db-14406237446a",
+          "nickAttr": "title",
+          "value": "Загруженный договор",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eb35f5c4-7df1-4e33-ac7c-2413a822d147",
+          "nickAttr": "type",
+          "value": "fileName",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f5d8551e-f623-473f-a042-35249ad00111",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a42c91ec-e966-454e-acac-3af58c97885b",
+          "nickAttr": "beanName",
+          "value": "contractAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "19861612-579f-4685-94b2-20910c7aa3ae",
+          "nickAttr": "code",
+          "value": "/contractAppointment/contractAppointmentData/actFile",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eeb8f359-3c4b-48eb-97b8-1766a147e97e",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2172113b-c9e8-4494-ac59-4ac0f987003a",
+          "nickAttr": "name",
+          "value": "Загруженный акт",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fb6ad053-15cd-4b76-8dd0-db7f22a224ef",
+          "nickAttr": "title",
+          "value": "Загруженный акт",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eda4e021-7592-48f3-8560-75cfcee3fcb8",
+          "nickAttr": "type",
+          "value": "fileName",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5148e812-2860-46df-93f6-03d834d8fca4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fa58e62f-53f3-4a6f-b3be-782c513dc292",
+          "nickAttr": "beanName",
+          "value": "contractAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "27d29f03-8401-4da5-af8a-fa13008f0bf2",
+          "nickAttr": "code",
+          "value": "/contractAppointment/contractAppointmentData/statusId",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1309b429-06a0-4eb4-a065-05640697592d",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "14401abe-a9cf-449b-a852-d71e91df1cda",
+          "nickAttr": "name",
+          "value": "Статус",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "afb1631f-ad37-47fa-926b-50a4086ed912",
+          "nickAttr": "title",
+          "value": "Статус",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4f5cdc18-fb64-4345-9b00-8f15ae088980",
+          "nickAttr": "type",
+          "value": "status",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d5ceff75-1f56-4fd9-9ba3-823e5b6b6612",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "099bbead-5e3a-4ffc-bf44-57dc9d4ea373",
+          "nickAttr": "beanName",
+          "value": "contractAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b8dd7b81-4bf5-428c-a83c-73033f268752",
+          "nickAttr": "code",
+          "value": "/contractAppointment/contractAppointmentData/actSignDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "406df33b-881a-434a-91d7-4bb5c21cfa17",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "12e9de4f-1256-4a54-9774-2123467d6c92",
+          "nickAttr": "name",
+          "value": "Дата подписания акта",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "16a23770-8999-4124-ba7b-643dca44bb4f",
+          "nickAttr": "title",
+          "value": "Дата подписания акта",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "50828073-8953-431f-a92a-bec3ede9a07e",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

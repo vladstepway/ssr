@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "b1214959-9c53-48ec-ac59-a112e8461f4f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "41d987c9-bb0a-43ed-9bc4-a76ef6575a32",
+          "nickAttr": "code",
+          "value": "ugd_ssr_contract_appointment_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d8970944-fb35-4a97-a9a4-c7ae38543aa9",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_CONTRACT-APPOINTMENT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c4acfd0d-2136-4f3b-80f2-71adb11075cf",
+          "nickAttr": "documentName",
+          "value": "Реестр заявлений на заключение договора",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f8a2cfad-40c5-43ea-b9d4-8e5f3197e0af",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Реестр заявлений на заключение договора\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Реестр заявлений на заключение договора</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableFilter\":true,\"changeTableColumns\":true,\"changeFilterType\":true,\"changeNumberOfElementsPerPage\":true,\"urlFilterAlwaysApplied\":true,\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_contract_appointment_application_number\",\"type\":\"text\",\"name\":\"Номер заявления\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_contract_appointment_creation_date_time\",\"type\":\"date\",\"name\":\"Дата подачи заявления\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_contract_appointment_full_name\",\"type\":\"text\",\"name\":\"Фамилия, имя, отчество\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_contract_appointment_cip_address\",\"type\":\"text\",\"name\":\"Адрес центра переселения (округ, район)\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_contract_appointment_address_to\",\"type\":\"text\",\"name\":\"Адрес (куда)\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_contract_appointment_date_time\",\"type\":\"date\",\"name\":\"Дата и время приема\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_contract_appointment_status\",\"type\":\"dictionary\",\"name\":\"Статус\",\"dictionary\":\"ugd_ssr_contract_appointment_statuses\",\"dictionaryCode\":\"status_name\",\"dictionaryText\":\"status_name\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_contract_appointment_area\",\"type\":\"dictionary\",\"name\":\"Фильтр для округа\",\"dictionary\":\"Prefect\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"fullName\",\"hierarchical\":true,\"valueOnLeaves\":false,\"sortable\":true,\"filterable\":true},{\"code\":\"ugd_ssr_contract_appointment_district_code\",\"type\":\"dictionary\",\"name\":\"Район\",\"dictionary\":\"District\",\"dictionaryCode\":\"code\",\"dictionaryText\":\"name\",\"sortable\":true,\"filterable\":true}],\"tableColumns\":[{\"name\":\"№ заявления\",\"fieldCode\":\"ugd_ssr_contract_appointment_application_number\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/contract-appointment/{{item.sys_documentId}}\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_contract_appointment_application_number}}\\n</a>\"},{\"name\":\"Дата подачи заявления\",\"fieldCode\":\"ugd_ssr_contract_appointment_creation_date_time\",\"template\":\"{{item.ugd_ssr_contract_appointment_creation_date_time | date:'dd.MM.yyyy HH:mm'}}\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_contract_appointment_full_name\",\"template\":\"{{item.ugd_ssr_contract_appointment_full_name}}\"},{\"name\":\"Адрес центра переселения (округ, район)\",\"fieldCode\":\"ugd_ssr_contract_appointment_cip_address\",\"template\":\"{{item.ugd_ssr_contract_appointment_cip_address}}\"},{\"name\":\"Адрес (куда)\",\"fieldCode\":\"ugd_ssr_contract_appointment_address_to\",\"template\":\"{{item.ugd_ssr_contract_appointment_address_to}}\"},{\"name\":\"Дата и время приема\",\"fieldCode\":\"ugd_ssr_contract_appointment_date_time\",\"template\":\"{{item.ugd_ssr_contract_appointment_date_time | date:'dd.MM.yyyy HH:mm'}}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_contract_appointment_status\",\"template\":\"{{item.ugd_ssr_contract_appointment_status.status_name}}\",\"sortable\":true,\"filterable\":true}],\"filters\":[{\"name\":\"Номер заявления\",\"fieldCode\":\"ugd_ssr_contract_appointment_application_number\",\"placement\":\"bottom\"},{\"name\":\"Дата подачи заявления\",\"fieldCode\":\"ugd_ssr_contract_appointment_creation_date_time\",\"placement\":\"bottom\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_contract_appointment_full_name\",\"placement\":\"bottom\"},{\"name\":\"Адрес центра переселения (округ, район)\",\"fieldCode\":\"ugd_ssr_contract_appointment_cip_address\",\"placement\":\"bottom\"},{\"name\":\"Адрес (куда)\",\"fieldCode\":\"ugd_ssr_contract_appointment_address_to\",\"placement\":\"bottom\"},{\"name\":\"Дата и время приема\",\"fieldCode\":\"ugd_ssr_contract_appointment_date_time\",\"placement\":\"bottom\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_contract_appointment_status\",\"placement\":\"bottom\"},{\"name\":\"Округ\",\"fieldCode\":\"ugd_ssr_contract_appointment_area\",\"multiple\":true,\"usingDictionaryLinks\":true,\"placement\":\"bottom\"},{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_contract_appointment_district_code\",\"multiple\":true,\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Номер заявления\",\"fieldCode\":\"ugd_ssr_contract_appointment_application_number\"},{\"name\":\"Дата подачи заявления\",\"fieldCode\":\"ugd_ssr_contract_appointment_creation_date_time\"},{\"name\":\"Фамилия, имя, отчестов\",\"fieldCode\":\"ugd_ssr_contract_appointment_full_name\"},{\"name\":\"Адрес центра переселения (округ, район)\",\"fieldCode\":\"ugd_ssr_contract_appointment_cip_address\"},{\"name\":\"Адрес (куда)\",\"fieldCode\":\"ugd_ssr_contract_appointment_address_to\"},{\"name\":\"Дата и время приема\",\"fieldCode\":\"ugd_ssr_contract_appointment_date_time\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_contract_appointment_status\"}],\"dictionaryLinks\":[{\"dictionary\":\"Prefect\",\"linkedDictionary\":\"District\",\"code\":\"perfectId\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ddafaac7-ee45-454e-9852-3b09452e5c3e",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_contract_appointment",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "48886117-349d-430b-bb2e-55e276590a0a",
+          "nickAttr": "showcaseName",
+          "value": "Реестр заявлений на заключение договора",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "da08268d-9d94-480c-9284-4f22452e761a",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "af032895-26dd-4f3a-b5aa-3e0530d2a7f1",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ebf292f7-d785-43d4-b505-2a86d41d4220",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0feb255b-dd17-400b-b67b-d20f1ce7e53f",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5506 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_uprAddress",
+    "name": "Адреса управ",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "oldMoscow",
+        "name": "Старая/Новая Москва",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "admAreaName",
+        "name": "Административный округ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "place",
+        "name": "Наименование муниципального округа/поселения",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "uprAddress",
+        "name": "Адрес управы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "a821f139-778f-49f0-808b-c1c437a11176",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "795245ad-67ee-430f-801c-dd2fa3e7d5bd",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "85d92a56-c928-434e-a2c4-0d2f99ec22e0",
+          "nickAttr": "code",
+          "value": "035",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9d4e654a-a240-4df5-bae0-e2752650bc99",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "36c57c31-50a3-406e-8a9b-737160b67338",
+          "nickAttr": "place",
+          "value": "муниципальный округ Северное Измайлово",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a53ff68-f88b-4c8d-b417-4341df12a8d7",
+          "nickAttr": "uprAddress",
+          "value": "улица 5-я Парковая, д. 58а",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a26e99e0-48be-40f0-ab10-c011525bfa6f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "756df7a5-0652-4327-93bb-807fdfd7acd7",
+          "nickAttr": "admAreaName",
+          "value": "Зеленоградский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c666d18f-3c50-4e74-a347-63ed9a1e659b",
+          "nickAttr": "code",
+          "value": "052",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2722471f-2b82-4819-a750-383545f18d6e",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "375bdf17-9931-40af-905e-dc3b3561a46c",
+          "nickAttr": "place",
+          "value": "муниципальный округ Крюково",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1649216-e633-4237-92a7-2bbc6731a36c",
+          "nickAttr": "uprAddress",
+          "value": "Зеленоград, корп.1444",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "60399dc3-7886-4cae-bfac-cf82d02478f6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f34824cd-8680-4974-b5d8-de222a25e9fd",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2a69f6c6-6b99-4f53-9c89-be189c4af914",
+          "nickAttr": "code",
+          "value": "088",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0d94b3d0-3b68-427d-9731-08a0d277dd1a",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0f167627-0f5e-47a3-accd-e9c556aedc81",
+          "nickAttr": "place",
+          "value": "муниципальный округ Куркино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "91f4bb2c-4e6f-4d36-ab92-1b6dbd9c1beb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7e9a61b8-d80f-4feb-887f-28564350fc89",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "39cad6be-f0b2-466f-bf96-003727255adb",
+          "nickAttr": "code",
+          "value": "084",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5b31f42a-66f5-4f8e-abd2-86229dfda357",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "955dc5d5-815b-4839-9829-0365cae569ec",
+          "nickAttr": "place",
+          "value": "муниципальный округ Ростокино",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "de8e6960-33b1-4265-8d17-e128aafe5747",
+          "nickAttr": "uprAddress",
+          "value": "Будайский проезд, д.9",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4d3bbf8f-01d2-49ae-8a5c-af676dc5a6bc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "38310ab4-142a-44e4-9a0a-1c5f1b7f48d8",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d5883b80-0b70-4d4e-b753-1e06b95f6d6c",
+          "nickAttr": "code",
+          "value": "007",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ce7e0d2c-58cf-442a-b7ce-b184d3c90dcd",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cfbd2555-6a42-44cd-a120-e8db9c72a2b1",
+          "nickAttr": "place",
+          "value": "поселение Марушкинское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1deeb445-8020-48ba-a4fe-a33e2ef7f812",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "de913029-80e6-4e50-b34c-0d342bcf295f",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9b03b333-d668-4c69-b779-30dbbbb418fc",
+          "nickAttr": "code",
+          "value": "010",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a4304ecc-46ba-45d9-9fb3-75efbe35238e",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c5335d50-e949-43f9-94f6-f419da23de4b",
+          "nickAttr": "place",
+          "value": "поселение Сосенское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9f0fcbef-8c1e-4dde-bc5c-9d67a1b8b673",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ecd2a995-7ed5-45aa-89df-24110abca6de",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b4e2407f-3eb3-4b34-a620-1d9cd76d5627",
+          "nickAttr": "code",
+          "value": "033",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4b9d5438-4fb1-4591-abbf-513278c8a321",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f596c9e1-9aa8-40e7-bd35-e622d459e87c",
+          "nickAttr": "place",
+          "value": "муниципальный округ Перово",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c52cd800-ca2f-4ca9-8ef5-9006d09e1b6a",
+          "nickAttr": "uprAddress",
+          "value": "Зеленый проспект, д. 20",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a61e3977-1b33-46b4-90e0-96a54b2babb4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c941d888-b47b-4717-b814-e2f0fb5f69c3",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "723a3c06-ca04-4732-8b35-32141732bc03",
+          "nickAttr": "code",
+          "value": "001",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "26f82074-7ef3-4118-8ee9-db1c2f76b34a",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fa96a609-348f-4870-8e56-9a3abad51020",
+          "nickAttr": "place",
+          "value": "городской округ Щербинка",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c956e8c0-828a-4416-9af2-af97f77ade71",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "50ee4fbf-6e3d-47a6-9b21-85f7d43dd30c",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1d567b59-d574-49bc-a83b-bc4cb1ca2edc",
+          "nickAttr": "code",
+          "value": "002",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "73ea9843-e389-459a-a039-f7cb2eda1c14",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ea5aa7f5-6ba9-4ebc-89e6-3ba7a0d992c3",
+          "nickAttr": "place",
+          "value": "поселение \\\"Мосрентген\\\"",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b5c613a1-aca2-4bcb-b39e-60ef077c8898",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "85de8d18-7817-44f4-8021-6621cc14423c",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ab7e32a9-691c-4557-88d3-cc56bc390889",
+          "nickAttr": "code",
+          "value": "005",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "61dbf742-75cf-47c9-86b0-0f8708d02be6",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1964ce9a-5e85-422e-93d4-7ed3b35e2429",
+          "nickAttr": "place",
+          "value": "поселение Десеновское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "fad06fcf-9dcb-4f36-a2c7-7a0f7cee5233",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c1999b35-293d-44c0-b61d-de74fbc2f8b6",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1d7dd823-9508-404a-93aa-11a9576024cd",
+          "nickAttr": "code",
+          "value": "008",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1821a62b-085d-44f1-bbc6-c9815b41ffd1",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6289aa01-9517-4318-b4d8-7d792dbf7bd1",
+          "nickAttr": "place",
+          "value": "поселение Московский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "118ef2bd-9f55-4107-8274-0334ca5e7e29",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e75dd70e-5bc9-46e5-8191-8e24aa775531",
+          "nickAttr": "admAreaName",
+          "value": "Троицкий административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3053ce2-4f1d-48b8-8bd5-07833e743456",
+          "nickAttr": "code",
+          "value": "012",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8db44dc6-8ec6-47e0-b2bf-bfc1df07b3b2",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3f8c7953-1c01-4a0a-a385-50d8a703ce38",
+          "nickAttr": "place",
+          "value": "городской округ Троицк",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e50e5516-bd90-4940-a5b8-9d9bbd051062",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "361ba505-8dad-48e2-9799-49441137d918",
+          "nickAttr": "admAreaName",
+          "value": "Троицкий административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f4d9ac0b-54ac-4a1b-88d9-2c34e24cad42",
+          "nickAttr": "code",
+          "value": "014",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6d0f369e-84bd-4230-aadd-85d397f9c785",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "44887724-b853-46bb-a932-a8d67b6c7341",
+          "nickAttr": "place",
+          "value": "поселение Киевский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a0054398-4f65-4ce0-8409-984c7e7b63ce",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "94b13725-4055-4b9e-a175-ca9d04c5ff3d",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "37cffa5b-df11-4420-9e60-062957e54f5b",
+          "nickAttr": "code",
+          "value": "011",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "34b975ec-d06c-4c27-b1ba-110a5f91d162",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42ae646c-ae5e-4285-8048-144c1bdad630",
+          "nickAttr": "place",
+          "value": "поселение Филимонковское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e8984ff0-d2d0-4f89-9a1d-b5e8e4410916",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "06630db9-1c08-4334-b72e-20a54cd267a7",
+          "nickAttr": "admAreaName",
+          "value": "Троицкий административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eb85ad52-e6e2-4dcb-9741-9bbff4428b46",
+          "nickAttr": "code",
+          "value": "013",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bae9fafa-79ed-4170-86ac-bfc0f9f22916",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ed51df78-904c-465d-b47a-7c0ff33345c6",
+          "nickAttr": "place",
+          "value": "поселение Вороновское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e40cc3dc-ae41-4245-be10-9d074b9eb1bf",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f2e5cdf7-58e1-4e73-bc49-8c1683f45956",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "944ee809-a3da-4852-b6bc-aa417533c735",
+          "nickAttr": "code",
+          "value": "004",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0f9e8bae-0e07-41c4-b6be-9da6beb86fc7",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "58944bd5-2a3d-4801-ab87-66ed4b13b5e4",
+          "nickAttr": "place",
+          "value": "поселение Воскресенское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1cb2af83-4863-48ca-b24c-5605d9356c80",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5313d1a1-6ca2-4348-aa7b-179238959170",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "22366cdc-6f55-4983-9c04-9fa3b263762c",
+          "nickAttr": "code",
+          "value": "006",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b73fe18f-a2e0-4755-ad32-bcb234bd3ffb",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "df76a257-b2ce-4bdc-b9ef-64ba45983a32",
+          "nickAttr": "place",
+          "value": "поселение Кокошкино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "43083341-dff6-4d98-aab5-4f76b8079a03",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "865fa5dd-3a04-42db-8e5e-15d96069eaec",
+          "nickAttr": "admAreaName",
+          "value": "Троицкий административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2eb8700e-5cf0-4465-9d1f-5ed6fc99434b",
+          "nickAttr": "code",
+          "value": "015",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6357026a-0c0c-4270-a766-91947cea1a8b",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9100e17e-b057-468a-ae30-4ac631d7a676",
+          "nickAttr": "place",
+          "value": "поселение Кленовское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5f9f16fd-bb61-4767-8367-0c93be1045cf",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8597c4f7-7fab-49d6-94ca-d227a94d70eb",
+          "nickAttr": "admAreaName",
+          "value": "Троицкий административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "73e769e1-898a-4d63-827d-3efe5e86307b",
+          "nickAttr": "code",
+          "value": "016",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ee48120f-5d9e-4368-8c7b-c9e5991456a6",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cc1417b2-219e-4ddf-8e4b-11bb08abaced",
+          "nickAttr": "place",
+          "value": "поселение Краснопахорское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7b67fbc2-ab16-4a42-abe8-df9147334c92",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4acb4e5e-1a7d-44f3-bd60-109fba6ecf63",
+          "nickAttr": "admAreaName",
+          "value": "Троицкий административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f57db809-46fd-4860-810c-bb0b3d206272",
+          "nickAttr": "code",
+          "value": "018",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a29f2beb-678e-4b8a-a7fd-b15d22ad58e9",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "035106b4-dd68-48ca-bf37-edec8cd2324b",
+          "nickAttr": "place",
+          "value": "поселение Новофедоровское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9e4b92a7-a500-4b0f-8b86-0e42417b09a7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c24b790d-439a-4d31-9e3f-e02c87f0790e",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f006f9a2-61b0-4665-876b-8c06dc9b1dd5",
+          "nickAttr": "code",
+          "value": "009",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1c036730-7a34-451c-8e02-a6d540cf8636",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9ce023be-7490-44e6-95e7-7b5966f75ed4",
+          "nickAttr": "place",
+          "value": "поселение Рязановское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "dafebdaa-c905-4699-861b-bb8dc980bbeb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ff0e6d30-4d58-4770-857a-3c35f24b4bf8",
+          "nickAttr": "admAreaName",
+          "value": "Троицкий административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "19f23d7b-67c2-4ea8-a5d6-c8e2f14f1838",
+          "nickAttr": "code",
+          "value": "017",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7f07bddb-07d2-40d9-8fbe-364748021ba7",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c119793f-b337-4b8a-8453-47adac822b03",
+          "nickAttr": "place",
+          "value": "поселение Михайлово-Ярцевское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8b94db3e-ba0d-4150-8b76-09929ed9e20b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "927a0cdf-79b1-426d-9dcb-b30dc1e9042c",
+          "nickAttr": "admAreaName",
+          "value": "Троицкий административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "34126931-e31b-4a0e-8e0f-318333e2f832",
+          "nickAttr": "code",
+          "value": "019",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9f6290f4-bcfb-49c0-86be-d783c7b5771f",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "06957cdc-666e-456c-b60c-69102e2a769c",
+          "nickAttr": "place",
+          "value": "поселение Первомайское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "860e1a0b-2aa8-4a1d-bfad-91cae4ffdd1f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "11253df8-8ad5-4ac3-b38f-9d25ec96faf6",
+          "nickAttr": "admAreaName",
+          "value": "Троицкий административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6bdd1c68-e31c-45d2-be76-54ac5e734926",
+          "nickAttr": "code",
+          "value": "020",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aab78971-b5c3-447a-b8fc-cef72774c7e3",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bea880b4-d958-41f2-8354-10a24c9f5a08",
+          "nickAttr": "place",
+          "value": "поселение Роговское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f9a7eb5c-0a24-4fe2-866c-f4e61568fe30",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "eb5163bd-f717-465c-acd3-9d4ed34677f4",
+          "nickAttr": "admAreaName",
+          "value": "Троицкий административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e1fc7741-0fa0-46fd-9ab3-3532df598832",
+          "nickAttr": "code",
+          "value": "021",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8ed1a35e-376c-4eb6-abdd-745460d3ad99",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8b2d7cb5-bd70-4eba-8cee-18bbffc6a3fe",
+          "nickAttr": "place",
+          "value": "поселение Щаповское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7f983f0c-ed32-4100-b668-c30babdb7982",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "816e0710-8f54-4f29-b3a0-942844a4e6c5",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e5238741-516b-467f-9812-56a6d715442e",
+          "nickAttr": "code",
+          "value": "022",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "62aa68be-40ee-400c-b046-c10df5912c73",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "06c426c9-ac4c-4a59-ad70-098b01a6e23f",
+          "nickAttr": "place",
+          "value": "муниципальный округ Богородское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "cdd5c62c-73df-4f87-baa2-58cb7e8633de",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e2d9f04c-26fe-4610-a9d4-641a93e9291f",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b55d3865-7a5f-44f2-a470-466294a4cb11",
+          "nickAttr": "code",
+          "value": "025",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "505664fe-89fc-425f-8b5d-58b7ba8b6955",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3f81955e-71f9-4e28-86b6-575f0101805a",
+          "nickAttr": "place",
+          "value": "муниципальный округ Восточный",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0f2fbb1f-3978-45d3-a9a8-30d656a42ed7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c9bbf2fd-66d3-43f4-8641-0100e911eaaa",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "458bd860-3210-4125-b721-94f078cf1e15",
+          "nickAttr": "code",
+          "value": "027",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2492207d-3282-4cbc-b23f-d16774506feb",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4cd7cfa2-f378-4f04-82c9-34984e14fb12",
+          "nickAttr": "place",
+          "value": "муниципальный округ Ивановское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3ed87ea9-4fb9-422a-b078-044e2351114b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "dbc4f0f7-d723-46c6-b2d2-2c6e2d0e63cb",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3416b81-e529-4ba7-b89b-f6fe1a154f8f",
+          "nickAttr": "code",
+          "value": "031",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "33c0fde6-ce50-4f53-aea8-6c2a6deb4552",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e6260de1-bad5-4d42-bfc5-b608afea35e7",
+          "nickAttr": "place",
+          "value": "муниципальный округ Новогиреево",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "966b5853-6100-4e1a-bb5c-a68842cb5a84",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b9c88b40-d3c9-46ab-ac32-ecb23a6bf048",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e5066fae-2b24-4cf1-9248-2f184fa15762",
+          "nickAttr": "code",
+          "value": "023",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "29f91511-c99b-459c-ac07-c5c0cafd2dda",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "76bd5b84-4805-428f-8646-8aa2c3000c33",
+          "nickAttr": "place",
+          "value": "муниципальный округ Вешняки",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a6ec7e24-e0bd-4dd2-9231-a80497c4e9c8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "77043627-6b2f-462c-b97d-2029e0c27119",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "da35004a-9ab6-4492-8adb-2134a6b613ae",
+          "nickAttr": "code",
+          "value": "029",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "679ec5d2-c069-4c6e-a35d-bdc04bf09c21",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1866a7b0-47f8-4290-be29-35af776dd4ec",
+          "nickAttr": "place",
+          "value": "муниципальный округ Косино-Ухтомский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "2cc8f834-7d17-42df-90e5-e7a342c225ad",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e801ceda-1153-4ee4-a3c0-174545a657bd",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "049902c7-cfd7-4936-b9b0-004705bea5f3",
+          "nickAttr": "code",
+          "value": "024",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "419b6fd3-af20-49df-a0bc-eee0f9ba1505",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e02df62b-804c-4b77-97b1-7b903205087e",
+          "nickAttr": "place",
+          "value": "муниципальный округ Восточное Дегунино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b9c6ac64-528b-4147-8364-2f1ada390341",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2df2b3d8-bfc0-41e2-9067-357d0ba5da7d",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "29bd20d0-26e8-42b8-a64e-120af0275a58",
+          "nickAttr": "code",
+          "value": "026",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "15772d1a-6a86-4591-a84e-a895295a6883",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f9a1d78a-3544-4704-826d-45227b3e6f5f",
+          "nickAttr": "place",
+          "value": "муниципальный округ Гольяново",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d3510b05-f688-44d8-bdd0-414beb125b9c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "02ba2dbd-b1db-41c4-bf0b-19f0b510b68b",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0baa5207-3507-4d31-ba2b-6c61eb55bbd6",
+          "nickAttr": "code",
+          "value": "030",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a7451ca7-f0da-4ef3-91f5-b7006e83be8f",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ff58dd88-e7bb-46c9-9746-c09c9689b94a",
+          "nickAttr": "place",
+          "value": "муниципальный округ Метрогородок",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "25024681-06e5-4ab1-a035-3137af7f94ed",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "03afaf4e-aca0-4859-9652-23889ded0211",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0c26b538-c182-45ab-bd04-c6aaf9f6a402",
+          "nickAttr": "code",
+          "value": "034",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c0652e6-f64f-4515-b3bd-a87309a43ee2",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5355db51-e59b-4b35-a86f-87d5015dd33b",
+          "nickAttr": "place",
+          "value": "муниципальный округ Преображенское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f3afeb4e-2a01-4144-9902-3725f5b7dd41",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f63b4794-3025-4b17-a870-f3b95116fac9",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0281216d-12d5-44f5-a00e-7b62858ce131",
+          "nickAttr": "code",
+          "value": "028",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "798f90a7-2faa-4d49-a11c-ecb14598930f",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fc17c51d-debd-4fbd-a254-c4cfdea9a84b",
+          "nickAttr": "place",
+          "value": "муниципальный округ Измайлово",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8b29291a-56d1-4400-9442-f7e159be2d42",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "04e5d535-95b2-45e6-8c70-eaafa4c3a400",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2cf1bd76-25c3-449d-917d-8a4214311952",
+          "nickAttr": "code",
+          "value": "032",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "05778ae0-2ab8-4281-b5e9-2efac0e34c01",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "784257e7-8f41-41f1-89fd-67252cd6ba0f",
+          "nickAttr": "place",
+          "value": "муниципальный округ Новокосино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "77191ab1-e3ba-4a51-a156-4c6f396a10a7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bcf91adc-cab6-4a9d-b451-c484d1568804",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "92f79f06-f56c-4f3b-82c9-c99b07088cd4",
+          "nickAttr": "code",
+          "value": "038",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2735ed63-7c81-4bff-a0da-d4e369a7ab3e",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f75034fd-e6bf-4431-90d2-4ca278edae0f",
+          "nickAttr": "place",
+          "value": "муниципальный округ Сокольники",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4984b47a-1c5d-424a-b43f-86aa4dcb0916",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "94f2feeb-3bb0-4468-97dd-5f8de3c6b035",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "04c3cffb-ae44-45e1-9449-d842a75f733c",
+          "nickAttr": "code",
+          "value": "036",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42c164ba-0d4f-46bc-b89c-798b4a0e834c",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c51ec9d7-6e12-48d8-bef3-741199428dd2",
+          "nickAttr": "place",
+          "value": "муниципальный округ Северное Медведково",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8e77b307-98f1-4d93-96bb-f181f431bd1b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "25aa2f70-82e1-448c-a199-7ac0937da434",
+          "nickAttr": "admAreaName",
+          "value": "Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e91dc9a1-dc71-409e-836e-a1ada9a22fc3",
+          "nickAttr": "code",
+          "value": "037",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "878668ca-8013-43e3-89ce-a59fd2ff7aaf",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d3c5a88e-e8d3-4297-9149-acb517b038a1",
+          "nickAttr": "place",
+          "value": "муниципальный округ Соколиная Гора",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a3b3a084-889e-4d17-9a44-6b9b5105be67",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "52ce230d-44f1-45f9-82b4-fb2ee35368b4",
+          "nickAttr": "admAreaName",
+          "value": "Зеленоградский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "20391e90-b8b8-4dcc-a29e-5124100caf25",
+          "nickAttr": "code",
+          "value": "053",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a3f6fb93-6c2c-445d-a2d4-89f458ab896a",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "07813df3-ad8d-4a0c-981f-a8e8728d03d3",
+          "nickAttr": "place",
+          "value": "муниципальный округ Матушкино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "46922095-471c-442d-9fe2-b5bf5a68cdbc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "49140088-f666-46bc-b987-a0f167ed503d",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f78dac65-171a-4d6a-9abf-056e5860e920",
+          "nickAttr": "code",
+          "value": "060",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ca0c3ba4-a2a6-49ec-bc09-b02208d61675",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a80bbc81-9d8f-469e-a4f6-0a84da00b7fe",
+          "nickAttr": "place",
+          "value": "муниципальный округ Войковский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3a6084f1-bb5a-450a-afea-118ce1ed0a18",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "05ad4924-580b-4b2c-8b88-48eb8834d1be",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d3661197-7f2d-4b95-ae71-b612d2141832",
+          "nickAttr": "code",
+          "value": "040",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cd3e1670-20b7-4ca2-bb05-3d83c7f01d0d",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8db40974-5625-41df-8d31-e4442fae3568",
+          "nickAttr": "place",
+          "value": "муниципальный округ Дорогомилово",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4252011e-abce-4e5d-b3df-26676a4ccd2a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3f3e2130-3577-437d-bdb0-f8372a74045a",
+          "nickAttr": "admAreaName",
+          "value": "Зеленоградский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "248ead11-cf4b-4848-8f7b-03518ac9c081",
+          "nickAttr": "code",
+          "value": "054",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1c44b31-636c-41b4-841b-0429886b23fa",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "171e3fed-4ce1-423e-9ce2-729b7358dabe",
+          "nickAttr": "place",
+          "value": "муниципальный округ Савелки",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b59cc6fa-2b80-489a-ae26-289534dbc76b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e3a1abd5-2dfa-42ac-9339-acddaed8de2d",
+          "nickAttr": "admAreaName",
+          "value": "Зеленоградский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a5fde91b-8559-4fb7-adbf-dd79b8545135",
+          "nickAttr": "code",
+          "value": "055",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "538e1d1a-1438-45ea-91f0-1674c19af2ea",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "31639fde-938c-48ff-aa0f-ba5052d933f0",
+          "nickAttr": "place",
+          "value": "муниципальный округ Силино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6ab7abcd-7d46-4316-842c-4ed6f8f3c570",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8751b649-fa25-4fb1-8c6c-7d857844c530",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f096a12e-a1d6-4cfa-ab41-61deff926f1e",
+          "nickAttr": "code",
+          "value": "047",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4efee57b-b1d5-45ec-b36a-04ed54add184",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "334040f0-7f4a-4254-9b25-c61d7b4943be",
+          "nickAttr": "place",
+          "value": "муниципальный округ Раменки",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a9b5ad1b-4386-4ede-b5bb-b315c99234ad",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d612710e-3972-40c0-9faf-e9bc62f454b4",
+          "nickAttr": "admAreaName",
+          "value": "Зеленоградский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "752407cb-51aa-4463-84cd-37f9c99b5286",
+          "nickAttr": "code",
+          "value": "056",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f7a0a7bf-bedb-44cc-9606-def45ad96758",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2f76f9c4-b2a7-42ef-b005-07a92f396663",
+          "nickAttr": "place",
+          "value": "муниципальный округ Старое Крюково",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4b379a31-4adb-4d1c-bc49-0e4454eece84",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1ab94ee6-4885-4886-b49f-bca9a1682e22",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7c82cf85-ce33-42d6-a0c8-6356ada5099e",
+          "nickAttr": "code",
+          "value": "058",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "103e1796-5942-4595-91c6-b036566b702a",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9c045984-3dc5-482c-85a4-12ee59110ad7",
+          "nickAttr": "place",
+          "value": "муниципальный округ Беговой",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9a195ba3-6852-4f22-8f41-9cffe080930a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "73314c74-1dd8-4afd-b314-9e634003227b",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "568d4c84-5213-4275-a32d-fb49e4173343",
+          "nickAttr": "code",
+          "value": "039",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b6af17e5-63de-4348-80cd-fa341ad2b429",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a88fade1-ad73-4133-96dc-951390cfd906",
+          "nickAttr": "place",
+          "value": "муниципальный округ Внуково",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "fb2680fe-8cbe-436a-a600-afc5fc6eb451",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "15d77095-beb2-4fc6-8be6-da78546c9c13",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c88dbd06-eba6-462d-8a28-a65ff58a49ca",
+          "nickAttr": "code",
+          "value": "049",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "82d97815-c96b-41d3-9c26-5c865c29badb",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9ce07b99-a231-48ba-8786-9106e023d006",
+          "nickAttr": "place",
+          "value": "муниципальный округ Тропарево-Никулино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c855e221-6c60-4e34-b039-58a4051f5c4e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "41ed29b4-828d-40eb-a91d-8f3b85808f61",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fd6c2975-7a76-4a16-8dd3-f2ae17c0db5c",
+          "nickAttr": "code",
+          "value": "041",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6cdc083a-cb52-4bd0-a00e-832d3b6b2587",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eed0bff8-a467-4f77-bc71-80206d4ff055",
+          "nickAttr": "place",
+          "value": "муниципальный округ Крылатское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "de8db753-ddd2-46fd-8c62-7d40be563ca0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2da69418-6fb0-4982-aee0-d324e3d2c7fc",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8a9dcc27-c502-492e-bc11-ba3c0e4f2c4c",
+          "nickAttr": "code",
+          "value": "046",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a30ff371-e230-43d7-a028-9fa71095dbe9",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "396d0d40-ab89-4112-b300-88fa8f4b7eea",
+          "nickAttr": "place",
+          "value": "муниципальный округ Проспект Вернадского",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "cf105089-ed27-4115-828a-65510c448d4e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f315ce46-d540-4b69-bcb1-35e04bc81f20",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0e31bb0d-0d31-44ec-ba6e-bcc4f0aaab01",
+          "nickAttr": "code",
+          "value": "067",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "780466e8-5682-4393-b5ed-440386222ed9",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fdc955e9-8874-47fb-b2b8-9a190ca498cf",
+          "nickAttr": "place",
+          "value": "муниципальный округ Молжаниновский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0064629c-8eca-44ca-85c6-87802af86f19",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d3ef7412-71e6-4f05-9db2-716db1fafea2",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "043020d7-2ea0-4a30-a8aa-fd0fd1149a42",
+          "nickAttr": "code",
+          "value": "083",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "74137238-10f0-405b-935d-9b7eed13e358",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b1177fa0-4f31-46e9-873f-77b0f2d13430",
+          "nickAttr": "place",
+          "value": "муниципальный округ Отрадное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a814c26d-1e18-4956-9cf5-54022f7bde05",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0cf947c7-e3e6-404a-bfb3-656405673afc",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b829cd7a-6880-4f7a-8907-322ac73a4f33",
+          "nickAttr": "code",
+          "value": "087",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9dcf29b3-b693-47e5-b6d0-27bd43b2a7dc",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a3a171fc-428f-492f-8d53-2ba9cdceb486",
+          "nickAttr": "place",
+          "value": "муниципальный округ Ярославский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0100b3c3-41d0-4789-bf9c-7047a1238241",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a0ca487a-d3ff-4727-bea9-0b8d23558a08",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fbd9aee6-fabf-4ce4-83c4-9fa4a2396615",
+          "nickAttr": "code",
+          "value": "042",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "be562bb0-fd0f-4c10-a61b-5366002cd4e6",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "75d3624e-22f4-4e5a-87f8-71e8c9024eda",
+          "nickAttr": "place",
+          "value": "муниципальный округ Кунцево",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b312611d-fce1-4e38-838a-846b45c6e042",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b11d2296-899a-4424-b34e-f9d181606ab6",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "54a3b157-8c86-4dd9-a7b7-10272abae314",
+          "nickAttr": "code",
+          "value": "066",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "60845a0d-30cd-4b10-b755-668846540775",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c941e7e6-b4cb-4e3c-8cd1-d47a477f1186",
+          "nickAttr": "place",
+          "value": "муниципальный округ Левобережный",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "64fe0474-43eb-4687-bed2-301e6d0bc1ec",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a360eb3b-02ba-4c76-abf6-7818aea32ac5",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "68cc310f-c372-41e1-b00b-5592e6ed429c",
+          "nickAttr": "code",
+          "value": "044",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "704cc7a2-2254-4488-859d-33c5d8ed5f84",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6fa63f33-5a23-4959-b56a-faa96be898c3",
+          "nickAttr": "place",
+          "value": "муниципальный округ Ново-Переделкино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "15b23d48-f8ea-4997-9f36-44914379eb84",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "30f7de47-45c8-4288-ba5e-9cc17fbd3f96",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "584c5994-f32a-4604-9a31-a76b5d72f5d0",
+          "nickAttr": "code",
+          "value": "045",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f04827e3-4792-4165-8276-cf840c6a5d69",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4f213c94-86b3-4638-be90-58d839762869",
+          "nickAttr": "place",
+          "value": "муниципальный округ Очаково-Матвеевское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ba9d694c-eff0-48aa-9b95-99b41f7710ff",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6b7a4615-8753-4924-988c-21a2b0074a44",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "07af9790-7a72-46f5-9438-43b1edddf931",
+          "nickAttr": "code",
+          "value": "059",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7227ef1e-539d-450d-91f1-2819e55f9340",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "73b77e57-5660-4738-8d31-50ec67e007a0",
+          "nickAttr": "place",
+          "value": "муниципальный округ Бескудниковский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "994a1637-f477-45cd-a8a7-4c4c6457febd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a3ead37c-c31d-4d2a-943f-cfab5b8798ce",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fee35f42-4779-4930-b865-5f25753c3ebb",
+          "nickAttr": "code",
+          "value": "048",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a8dfacfd-8ead-4908-98c7-629cbea6494b",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "49f5c13a-3b62-4b73-9444-56f20bc398bd",
+          "nickAttr": "place",
+          "value": "муниципальный округ Солнцево",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b668644c-13fa-4655-b079-c0b017d468dc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7a121254-9f91-450d-beda-aeadaeb4246e",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "353fcc1a-b106-43d1-a9dd-6fc4748a1b5b",
+          "nickAttr": "code",
+          "value": "051",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e106e012-926d-4db2-8b78-ed4b5174a2a5",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3890709a-1b0a-492f-9998-109fbbd233e8",
+          "nickAttr": "place",
+          "value": "муниципальный округ Фили-Давыдково",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9ed3404b-6294-4c83-85e0-784b6682153c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "00a8b07d-3e8b-4b62-982f-9240fff404ac",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1c281ef4-c6d1-4cd9-b639-62d3ba53001d",
+          "nickAttr": "code",
+          "value": "070",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "806f0b05-0519-4167-a07b-69406b7e0ee6",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "feb40d0e-c8d0-4f67-928f-cefa462a3d31",
+          "nickAttr": "place",
+          "value": "муниципальный округ Тимирязевский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9a349f9e-c6b0-440b-a25c-17f72f3aa65c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1bd8322f-783b-4d2d-9287-1faeb8bf4174",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3c3e4337-a698-45fa-9e92-7583099e0194",
+          "nickAttr": "code",
+          "value": "061",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c61fad2-b88f-4b3d-983f-eb4bf984b2b3",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ea5827da-1bc4-412a-98b7-012eaf652c15",
+          "nickAttr": "place",
+          "value": "муниципальный округ Восточное Измайлово",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b284a7b4-27b3-4d06-ab8a-b208ea57cce4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b45e920f-0461-41bf-a6c8-64c254d07663",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3cdc493c-6abb-4f50-a36f-6557617ee273",
+          "nickAttr": "code",
+          "value": "062",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "68cc37fe-f7e6-45ee-86a9-61e278484374",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "752cedd0-21dc-411f-8efb-698cb7b3a0e0",
+          "nickAttr": "place",
+          "value": "муниципальный округ Головинский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1c056730-b428-42c6-823f-de690b5cd620",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "aeadff37-e668-4e87-9393-6ebdda361e13",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fc1ca912-7cce-454a-a6ef-63209c86be83",
+          "nickAttr": "code",
+          "value": "063",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8246bfa2-b332-42c3-991c-7b68ae51d243",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bbadeef3-89c8-400e-9dd2-4d013e6cacb5",
+          "nickAttr": "place",
+          "value": "муниципальный округ Дмитровский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1aace8c2-ce28-45c9-aa04-cf4d5d218dbe",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7c055672-a400-41fe-b786-2c0309a5de6b",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "09204c8e-d390-45db-a6ee-24253bf68793",
+          "nickAttr": "code",
+          "value": "064",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dda67e15-0d5d-4f5b-86c9-413481dc71ea",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fd9a1958-5f9e-4de9-9b70-e15f6851e38d",
+          "nickAttr": "place",
+          "value": "муниципальный округ Западное Дегунино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7d86b034-3b6e-4f3a-a070-7cb7683d0142",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "49f76f0f-efd1-47b2-99dc-8fd65094498e",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "20f86703-7dec-46a5-94d8-0dcfaed44461",
+          "nickAttr": "code",
+          "value": "069",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ae7520d4-c484-4ea9-a70a-57358cbe143a",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bd5cdca9-4a18-4f77-b80b-beb3dfe40092",
+          "nickAttr": "place",
+          "value": "муниципальный округ Сокол",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9799c97d-cfd1-443d-a0a4-a9c62bf99c54",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e26ac31a-7975-43c9-9596-72067debe62a",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "60d402ee-4ece-4abb-a6af-61cf72ef369e",
+          "nickAttr": "code",
+          "value": "076",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f100a5bc-6663-4313-8471-cb95ce2ca22b",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0ae3b62c-c5fb-43d1-9001-a3d6569be806",
+          "nickAttr": "place",
+          "value": "муниципальный округ Бибирево",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "df926966-0a22-4471-ba19-d861bd0eedfd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "66b496b5-84be-4c95-addc-2f07314b47bc",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "94c2ddd2-917f-4d97-b6cd-1b359cace9ca",
+          "nickAttr": "code",
+          "value": "078",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a84c714b-7626-484f-a83e-475156304f88",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ad0cea85-77cb-424b-a784-8d392ade261d",
+          "nickAttr": "place",
+          "value": "муниципальный округ Лианозово",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "383b3799-f59e-4d3f-a3b0-6d8ad072f423",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "08b20111-5164-43cb-a16b-c9969c52d479",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "747d9b39-c709-45c0-8b74-fdd41b05f1fa",
+          "nickAttr": "code",
+          "value": "079",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "acdc1bd6-53ec-4587-82e4-c498d8ecb501",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7a3cebf8-14d7-4990-bb02-582fb22edfaa",
+          "nickAttr": "place",
+          "value": "муниципальный округ Лосиноостровский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "343dfb36-5de5-447a-a23b-9ba55510c61c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2496120b-4c45-4676-93dd-af6a03a7ce5d",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8b0340e7-d53e-499e-a4d9-6bb974fdb6ff",
+          "nickAttr": "code",
+          "value": "065",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "51ec79eb-d1ee-457a-8a14-a66ae88593fe",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eebcee52-3acc-45bb-a192-b701b65ba1ed",
+          "nickAttr": "place",
+          "value": "муниципальный округ Коптево",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "bb3ee3b5-1495-4949-b5bc-9c7c4455eac5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "770598c0-a817-432e-b00b-2ee1a38abe38",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "08dca487-2827-4a70-b8a7-65d52c01bf22",
+          "nickAttr": "code",
+          "value": "068",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0c3a787d-0178-4076-82b1-a302e9f952a1",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3a461326-ad15-4683-9141-d1a0f4830283",
+          "nickAttr": "place",
+          "value": "муниципальный округ Савеловский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f39d5625-0d68-4625-a409-7bfe9373d309",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "104c1d12-ae89-4b7d-9290-c85f17e4854e",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "96f2d620-f6cb-4c53-ba1f-801196395244",
+          "nickAttr": "code",
+          "value": "077",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cbe30bcc-46ec-4b7e-a816-e7e2fb8fb2aa",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "26aa6c9c-9b25-4d62-b2c2-a1488fa1a392",
+          "nickAttr": "place",
+          "value": "муниципальный округ Бутырский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "42a6d1b7-6fe2-4be8-9d48-47ab0d381ffa",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3bfa3c34-13dd-44b3-93da-0314038199eb",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1435781c-d877-4c8e-9bcb-018b5b9ac673",
+          "nickAttr": "code",
+          "value": "081",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "10e49e61-5d3f-4399-9e41-43f5e4dce6d9",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c85520b4-1328-4b36-9b95-806532ac2166",
+          "nickAttr": "place",
+          "value": "муниципальный округ Марьина Роща",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "112b17a0-5751-4b1a-b28e-a1b52532beca",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5aaa03e8-13e1-488c-af42-007c0b33a074",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "63e2b5f4-1537-4e32-968f-27a962852d66",
+          "nickAttr": "code",
+          "value": "071",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f612ef3a-39fb-4d26-a989-162efa9633a1",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "466b9a36-8a00-4602-a78e-b367c119892d",
+          "nickAttr": "place",
+          "value": "муниципальный округ Ховрино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9fc01e02-1748-433b-bb9c-937b3cf06e19",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f5bd44f6-15ef-4c68-82a1-835cd53699e0",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "074ba377-8bdd-4b77-8ec3-a860a5d6aaa3",
+          "nickAttr": "code",
+          "value": "072",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1d15a90d-a526-4d52-a194-5ef743f16dd9",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2ca784a0-ef72-45b0-8748-ea46a48c6e44",
+          "nickAttr": "place",
+          "value": "муниципальный округ Хорошевский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4526f1e5-2137-4011-a603-15b5036acabd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fedde117-f83a-47a3-97ee-65a8db0cd076",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ed2968a9-7aed-4879-bb63-6c22bcccc347",
+          "nickAttr": "code",
+          "value": "074",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3d19cd1-3d62-4f0a-b299-b1f82b59a503",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c96becdc-5e18-4a89-b96f-1b8b4c2a2d5a",
+          "nickAttr": "place",
+          "value": "муниципальный округ Алтуфьевский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "475c53e4-39fc-414c-b4dd-405f31128cd2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5fad58a7-8f75-4286-8ba1-122dde4b9d75",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a33121a2-1d76-4f41-82b3-8c25560a51e4",
+          "nickAttr": "code",
+          "value": "075",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "96f2d799-9f75-46b2-8fc1-661bec325e35",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c2134e85-b080-473f-a32c-a5a4f9c58b11",
+          "nickAttr": "place",
+          "value": "муниципальный округ Бабушкинский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "397e6cd5-cdb8-4d3a-b92f-7e22bc4a0ea2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "77905e57-0eb0-4f55-9c70-a050886dcf8b",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "431281d5-28b4-498b-bd54-11752e7e5f66",
+          "nickAttr": "code",
+          "value": "080",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f6695a53-ebb0-4def-b6e5-a593df0ec95e",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "004f3093-334a-4878-81d0-df26f9733bdd",
+          "nickAttr": "place",
+          "value": "муниципальный округ Марфино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "43237f05-f940-4309-a058-2e8a5da5978c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "74cef5ba-1e19-4d45-b96f-5719a9e722af",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "63cc68a0-9bf1-4c53-9fab-49dbff2678a1",
+          "nickAttr": "code",
+          "value": "082",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1cb8d1a-ba90-425e-81ce-ebf60abc223c",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a0e5b937-8797-4713-865e-294bdcbbb7f5",
+          "nickAttr": "place",
+          "value": "муниципальный округ Останкинский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "05275c14-71f3-4f88-8e2f-de6c2a53f124",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e8a7a7e1-cfd2-41f1-9c3e-a64db29a9b45",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aaa75df7-51aa-45ab-bc02-f48b7354709b",
+          "nickAttr": "code",
+          "value": "073",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5def67a4-7d8d-480e-9e68-45340a0b5567",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "681f4cb7-b6ad-4230-9ec4-dd40a0139b7c",
+          "nickAttr": "place",
+          "value": "муниципальный округ Алексеевский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "661a85a4-a3b9-4e2b-8bd0-84df9822b7c0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2088be18-7723-4f2c-af09-1f9c2ec00c47",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b06d3ebc-210f-46b1-8159-38b8590b0c18",
+          "nickAttr": "code",
+          "value": "089",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "592c3584-4f0f-4f44-92af-911a048f15ff",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d81b1c8c-a84c-4c2c-8812-d16942272578",
+          "nickAttr": "place",
+          "value": "муниципальный округ Митино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0ac8a795-be60-4501-82a4-e824beedd90d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8c21000c-2114-4573-a6fe-8dac09ba8989",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "66bda3cc-76ff-4835-b57f-34823ce728d6",
+          "nickAttr": "code",
+          "value": "091",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "70eebd81-a2d9-486a-a877-a671305ca255",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6b43399d-2f57-4107-a0fb-78c0096bb843",
+          "nickAttr": "place",
+          "value": "муниципальный округ Северное Тушино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3feb01a7-2011-4129-a7b9-bdef8db6f744",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9f62c5d4-0d3c-4ce3-b706-22e1398aa09c",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6c733a3b-a969-4aee-bd99-bdced4a514ad",
+          "nickAttr": "code",
+          "value": "096",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d0d209fd-3f84-4c29-985c-0d1093205cb6",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e0e87f62-5ecd-47dd-8096-e74e875993a4",
+          "nickAttr": "place",
+          "value": "муниципальный округ Южное Тушино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "15f690e2-990f-4c53-a1a6-56b62449a454",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e1d3fece-2aed-41cb-ba5f-ff54767dc887",
+          "nickAttr": "admAreaName",
+          "value": "Центральный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7a0d9263-7a9f-4b8a-98fc-6a9c014df764",
+          "nickAttr": "code",
+          "value": "097",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "20fd2fb3-7eae-4c13-9373-285e8b6821e3",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4f52909f-bf1c-407e-9b63-8ae547070326",
+          "nickAttr": "place",
+          "value": "муниципальный округ Арбат",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a2087864-cdd4-4af6-8da8-62590c5382ff",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "aea8c3d6-82cd-4cf1-a94e-9ba75a093f58",
+          "nickAttr": "admAreaName",
+          "value": "Центральный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9b8f9ef3-18f8-4392-8a8d-756d6c76d22d",
+          "nickAttr": "code",
+          "value": "103",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "24ec9726-4220-4949-8234-72426ff90fb5",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bc2aab97-820b-4fdf-a314-651d5793f86f",
+          "nickAttr": "place",
+          "value": "муниципальный округ Таганский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "07cc9163-4f8f-45a1-a097-63fede343ac7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "cf9aea97-1245-45b0-bd43-f7ef79e27d3a",
+          "nickAttr": "admAreaName",
+          "value": "Центральный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f726bfde-8593-464b-abfc-5e0c753e8bf5",
+          "nickAttr": "code",
+          "value": "106",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9d73415b-5934-4f2a-b370-7706c78e7bb5",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "23c1b1e1-ace6-465d-95e3-ae25c987d594",
+          "nickAttr": "place",
+          "value": "муниципальный округ Якиманка",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "128e3369-37d2-4910-8147-07504e0e5ca7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ea70056f-48c6-4072-8118-2ea809090ad7",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dde33001-796f-4ec8-b5bd-e937eea3dc5a",
+          "nickAttr": "code",
+          "value": "085",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bc3a1df5-46fe-4db5-81c2-bc613c297484",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d9f6d648-de66-4c5d-856b-7f7ac32cecfb",
+          "nickAttr": "place",
+          "value": "муниципальный округ Свиблово",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "040f90a7-d3b4-4d05-b10f-b648b2e87f54",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2193b727-7c50-4d70-861a-fda2bff91525",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ef25ed67-4ffa-4d71-acce-dcdbbfe5530d",
+          "nickAttr": "code",
+          "value": "090",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6a30239b-403f-4dbf-9459-ceb127375a3c",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "63948942-ed8c-4a14-a747-689524c5bda9",
+          "nickAttr": "place",
+          "value": "муниципальный округ Покровское-Стрешнево",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b141df0c-e1eb-47e4-aac0-f983c25b537e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ac3589e0-585b-49d7-8ab5-ba4637ab1b05",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ad5410d-176e-4d67-8666-25c3957983fe",
+          "nickAttr": "code",
+          "value": "095",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a24163b6-54c0-4b4c-b796-936052251ab5",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b129c503-b401-43cb-b5eb-e548c5445b82",
+          "nickAttr": "place",
+          "value": "муниципальный округ Щукино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b8f5ea1b-cb6e-47ad-8e5c-5fa859791177",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "471a855f-79af-4c07-bc4d-2772f2a545d6",
+          "nickAttr": "admAreaName",
+          "value": "Центральный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6352dad4-fe82-488b-a4fe-199f4f85f76e",
+          "nickAttr": "code",
+          "value": "101",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c77f0f20-684b-4eee-87ff-24e7c7f4cf6e",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "40114b0b-0e45-4ecf-8df0-dad9a66cfc77",
+          "nickAttr": "place",
+          "value": "муниципальный округ Мещанский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6a86ca9e-e319-4df8-a327-0ce74c700fe7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "855869ae-4297-4b69-a480-60ec4c36a0c1",
+          "nickAttr": "admAreaName",
+          "value": "Центральный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "79baedd1-6710-491d-a209-eecb3f843479",
+          "nickAttr": "code",
+          "value": "102",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "55e598c0-ddc6-48e1-85b1-e43fb75d7c20",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "317846bd-ec63-4e13-9165-2fea2a58629c",
+          "nickAttr": "place",
+          "value": "муниципальный округ Пресненский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9baad9f5-f03f-4ef4-b69d-ed73e2e80049",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "91f74217-682f-4d08-bf83-fd132fdc4455",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "612e1e7b-92a1-44ee-8070-1e6ad25a65a3",
+          "nickAttr": "code",
+          "value": "086",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "526c0829-d491-4956-b479-822b3ed1425b",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "49279a10-ecf2-4903-9cfe-817e2e8f6a56",
+          "nickAttr": "place",
+          "value": "муниципальный округ Южное Медведково",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "069d74bf-3e92-4ab6-9297-1b9a8eed5adc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0f60c4cc-9a62-44b8-b72a-9af527e1027b",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4c33c42a-2144-4397-9424-ce7e20d5ffe6",
+          "nickAttr": "code",
+          "value": "092",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "49e44c55-3764-4155-af71-993f5b7f6921",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0bc56d35-7b66-402a-9fce-4d94dcb3c9aa",
+          "nickAttr": "place",
+          "value": "муниципальный округ Северный",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6a30fbf2-1e52-40cf-b8b3-3c9182a06eb8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "258d33d9-5ca8-40ed-af6f-6ecf7996bad0",
+          "nickAttr": "admAreaName",
+          "value": "Центральный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "67d1c433-3126-4f5b-bf85-f49edb295e3f",
+          "nickAttr": "code",
+          "value": "098",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ffd4861f-9493-4fc9-b1b4-b1f5a386ce8e",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "83445000-cbc4-4a49-8d80-6ba979deae82",
+          "nickAttr": "place",
+          "value": "муниципальный округ Басманный",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c0e62a49-ad05-4a81-8023-52a0ea9947ec",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1dbf43b3-c7ff-4cd9-92b7-bccbae025039",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e76d6a20-3358-4894-832b-4a0b358a13c8",
+          "nickAttr": "code",
+          "value": "093",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0fac9e8a-d7cd-45e0-b89b-3d8cd3a33097",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d98f35e7-31a2-497b-a6ac-5123a92eee21",
+          "nickAttr": "place",
+          "value": "муниципальный округ Строгино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f4d99e42-2ab4-4486-ba19-478a116d4958",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "65ce6c91-9a61-465d-85df-bfa8fc6e5115",
+          "nickAttr": "admAreaName",
+          "value": "Центральный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cf971b89-7278-4658-ada5-647bdcb0a193",
+          "nickAttr": "code",
+          "value": "104",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6edd7bf6-8b18-4c5e-b155-f5d059aef201",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "64f90f1b-4897-469f-9c7e-97e7517df4e8",
+          "nickAttr": "place",
+          "value": "муниципальный округ Тверской",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "09456573-06e4-4f40-83ca-4271e9da27b9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e8d1f187-aa31-44b8-9b9f-2017e25f0473",
+          "nickAttr": "admAreaName",
+          "value": "Северо-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "162cbeae-951b-4a29-82d1-2c9ac60927ab",
+          "nickAttr": "code",
+          "value": "094",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dda65566-1248-449e-8f5e-4d176a8a8798",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a6d03ed6-10d8-43c7-bbf2-9365d6df3e9c",
+          "nickAttr": "place",
+          "value": "муниципальный округ Хорошево-Мневники",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "07d5cb5b-7e50-469d-89a3-d7d28438ef8e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b713c1ae-0f87-435e-8085-a2b5d6439184",
+          "nickAttr": "admAreaName",
+          "value": "Центральный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5f5c83b0-fdd4-4091-a1cd-7bf067d04eb6",
+          "nickAttr": "code",
+          "value": "099",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aeb200a3-2331-4647-a000-82ea5977fd1c",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0ff3dc9c-2653-47ad-803e-b353b204638c",
+          "nickAttr": "place",
+          "value": "муниципальный округ Замоскворечье",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "17542d06-c1c5-483e-9437-63b4ac2abdba",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "aa9426f6-c646-406f-b91d-17c3ab0549ea",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "00960c70-b02b-40ef-9324-9b2c8e953230",
+          "nickAttr": "code",
+          "value": "107",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "56e78c4d-9f97-4d10-b3c2-8ee094135b76",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "94fb351f-f298-4a24-bc57-9c0b77af5615",
+          "nickAttr": "place",
+          "value": "муниципальный округ Выхино-Жулебино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f7a25f86-b106-4df2-99d3-c08de50c3dc8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3539edd7-a583-49e9-9fa3-07ff6a2b2379",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9095ccc3-8b8e-4c5d-aca8-9a9dd0700c48",
+          "nickAttr": "code",
+          "value": "110",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f8b03069-9cdd-4f80-8f6f-af6122555537",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "92273533-1f36-4f35-9608-641274bb224d",
+          "nickAttr": "place",
+          "value": "муниципальный округ Лефортово",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "242bcced-7b7f-4b73-88d6-2823c57c21c7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "719aa9a3-a087-40fb-be9e-5699eaf22e21",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1491c356-0c0f-4f71-8986-a3ff401c1659",
+          "nickAttr": "code",
+          "value": "113",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "333c442c-c668-46cb-aa76-a4647034c4a6",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "555e52fc-f0bd-4ce5-a532-206a7c879a32",
+          "nickAttr": "place",
+          "value": "муниципальный округ Некрасовка",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "077bf2c9-e99f-4692-bf0f-65273c9219bd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "34af615f-2865-4e3b-aca9-88b775d01d5d",
+          "nickAttr": "admAreaName",
+          "value": "Центральный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dfc38ba8-de56-4d4e-8628-9704496fa759",
+          "nickAttr": "code",
+          "value": "100",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "673a790f-91dc-4c74-8ce6-6f396b6e9532",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f60db52e-42a1-49d7-9606-0243e6e0e9c0",
+          "nickAttr": "place",
+          "value": "муниципальный округ Красносельский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6a6e1c5f-f78f-4174-b5f9-9af49ff1fc07",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "213e6e3a-f291-493f-bda2-9909d6bd3b7c",
+          "nickAttr": "admAreaName",
+          "value": "Центральный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f2fbbaa2-c0d6-43cb-b06c-a2c22078b370",
+          "nickAttr": "code",
+          "value": "105",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "88cb7875-7402-4344-b6b4-72f7a1066d8e",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "59d496d7-6ab3-4b8e-8ea7-3edf0da883d0",
+          "nickAttr": "place",
+          "value": "муниципальный округ Хамовники",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8023b635-e6cb-4355-bf26-a42b36341883",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "565173ea-167c-4ea6-897d-cca1edcd9dff",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e7fc2335-2540-4de5-ad58-27825109443b",
+          "nickAttr": "code",
+          "value": "108",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d95f230e-740a-45b5-880f-23ee2142c3af",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "98c87da3-65ba-4ab7-a13a-aca102af10da",
+          "nickAttr": "place",
+          "value": "муниципальный округ Капотня",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a7335893-bd48-48be-92d6-8eb602cc3890",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6268c1fc-ace6-4139-b61c-3217e954f0e9",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bdfe9490-6012-4161-9920-470843ecadb9",
+          "nickAttr": "code",
+          "value": "119",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "97f7640e-78db-4f7d-9873-c519f5ecd175",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3c70e5e-99b9-4a67-9bd9-cfc3ebeacf99",
+          "nickAttr": "place",
+          "value": "муниципальный округ Академический",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3af6d8a3-dfdc-4489-b40a-486660679d7d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6033b6ef-3b91-4900-b377-20af5139b3f3",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "065787fe-cf5c-40f1-8597-3997e38df928",
+          "nickAttr": "code",
+          "value": "124",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6b693841-4e49-4a4e-b115-09cc6740b202",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a947a55b-51f1-428e-a3e7-7836cf0cca1c",
+          "nickAttr": "place",
+          "value": "муниципальный округ Ломоносовский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "bfc38789-ef53-406e-be57-0e12e7aff6a8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1b8153d0-0b63-4846-b9d7-a2c458213a9b",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a493ad73-2e89-4212-afc2-e35cf85eb9ab",
+          "nickAttr": "code",
+          "value": "136",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "68286a24-f040-43d4-a2f5-a64c8a6f41bd",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "34be3998-ebb4-4442-9c82-f1c42b8b76c8",
+          "nickAttr": "place",
+          "value": "муниципальный округ Зябликово",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "57cbf2b9-711e-4b2a-804d-683bc9f3508d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ce671f76-9745-405f-b9e7-d71f28dce888",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "af5a0450-9d64-4105-9531-90b1456c3aec",
+          "nickAttr": "code",
+          "value": "137",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "541bb68c-9253-4a57-9104-fc65e2f1e630",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d1955708-30fe-4bd5-8196-873c0114566f",
+          "nickAttr": "place",
+          "value": "муниципальный округ Москворечье-Сабурово",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e3351c25-3019-421e-8aae-4b4eb4abea2f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "18bb61fc-ee3e-4df8-8d60-ae14e6443e11",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aa893f58-a177-48a8-9cc2-e342a5c54c0d",
+          "nickAttr": "code",
+          "value": "142",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6238bbd3-2e58-4145-8c8e-397b9bf8fc5d",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5063e4d0-deb8-4aa3-bd32-80c38ad99e65",
+          "nickAttr": "place",
+          "value": "муниципальный округ Орехово-Борисово Южное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ee59098d-dad6-4eb2-8419-108d3da14f89",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "88077a2f-c7be-4c23-9355-052e0abe8d62",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "31efbcb4-f2ff-4b3d-8167-b3f86e0d6359",
+          "nickAttr": "code",
+          "value": "144",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ba97590b-2b61-4d65-a70d-366ae54838f8",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dc800276-fddd-4912-8ab6-b522328a18ce",
+          "nickAttr": "place",
+          "value": "муниципальный округ Чертаново Северное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b61ac216-abac-4b90-94b5-056154ae9689",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d6dd69f9-8968-48de-b50f-8d1619959308",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7529662c-c7d6-44f4-8b93-d22e3c40a87e",
+          "nickAttr": "code",
+          "value": "109",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "83eef33b-7852-4936-bf36-bd8303adccda",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "74d747a4-0cb5-4260-80e5-78ea5724d11e",
+          "nickAttr": "place",
+          "value": "муниципальный округ Кузьминки",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1c69806b-9c9d-4d56-b399-7b289b9a2b78",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4837e1c2-c8e2-48b8-99d5-47e9c89d7758",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4f547cd7-3822-4d1a-a4de-8dc3e7b61d14",
+          "nickAttr": "code",
+          "value": "118",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0e0e9a88-2b1f-42ec-9fea-654b21302373",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eda82d8b-0266-4358-be9d-4c2b6756ca4b",
+          "nickAttr": "place",
+          "value": "муниципальный округ Южнопортовый",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "58631e88-889a-45d2-ae94-20addd08deb6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d3aa005b-5e9c-4cd9-bb88-e5e1c978993e",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "89307aa9-1580-4428-8a9a-b7c9723fe817",
+          "nickAttr": "code",
+          "value": "111",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5c831255-b3d8-4a7a-8692-b7073da4f975",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3231b083-88d2-4c67-bf7e-90868b77acce",
+          "nickAttr": "place",
+          "value": "муниципальный округ Люблино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "475af7b6-cbbd-42cd-9517-a85db85bcb9c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a4aa5797-39f7-44a7-abb9-77b86720da99",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2c9af64b-1f55-4f5f-8990-9279633d6d22",
+          "nickAttr": "code",
+          "value": "126",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ff6f5de6-fa80-4097-9523-a44d33aa04d5",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fc3a0049-d3ed-4954-b7f7-c52c298df435",
+          "nickAttr": "place",
+          "value": "муниципальный округ Северное Бутово",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0c30c0ad-7dc1-49a4-9e92-33b7cb20d823",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c81a8a03-db40-4ca2-8bbe-946fabd5d462",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "18a31adf-207a-40ec-9012-aeff7b2b1012",
+          "nickAttr": "code",
+          "value": "112",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3c6c1ec9-1ee1-41ae-91af-15427af60309",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1f959095-fe0b-48a5-9d13-6b3a5131a233",
+          "nickAttr": "place",
+          "value": "муниципальный округ Марьино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "053fb213-def0-4514-be25-e465bf8d3165",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ca4ef536-00b6-4717-a971-74b02b7326ed",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "73622d62-3a3e-4d71-8a3d-b72f9d506c1a",
+          "nickAttr": "code",
+          "value": "114",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3be0b622-6c4a-41ba-8e95-2255736b016d",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9d098ec6-9978-44a4-a1dc-5075ad3a040c",
+          "nickAttr": "place",
+          "value": "муниципальный округ Нижегородский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "cb08f27c-8c86-43e4-862a-39f1803dccbc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "72839153-0fa6-4ab5-8018-423f15c12eb5",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d8ca609e-959b-40eb-b087-62e8620fd2e8",
+          "nickAttr": "code",
+          "value": "115",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "427d57a7-0775-4641-a682-9a7faa73fde4",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1e6eb75a-146b-4d2a-81c5-4117d11f05c1",
+          "nickAttr": "place",
+          "value": "муниципальный округ Печатники",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "af4b87ce-5dbb-400a-b9b1-9d378039809d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b77deb22-9739-4b94-bf04-19e199f78c43",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b88fd7f2-62d3-45b1-a869-8b3099ce5314",
+          "nickAttr": "code",
+          "value": "121",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4e365f0a-5cf1-4a11-9d0b-648a042a93ea",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "30e0c54c-240b-440c-b5f4-1b39abe3277c",
+          "nickAttr": "place",
+          "value": "муниципальный округ Зюзино",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3445311b-366b-41e2-affd-9cd726fc2e96",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7a274d5d-f162-40b6-a5e9-61eef1797cd6",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f77fb7bf-ec94-4709-8d99-b5a828f521e6",
+          "nickAttr": "code",
+          "value": "122",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6a4821e3-e7df-43e3-bb7f-793af4f285b5",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "69679aa2-b500-4c1e-9083-4609e2f532fa",
+          "nickAttr": "place",
+          "value": "муниципальный округ Коньково",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8dd9bf2b-e8c0-46a3-bcee-092c730055c7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fc3f314f-bf06-4a5e-85b3-5728b3f4c6b9",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "15a4429f-8124-4d81-9f88-79d6fc3d42c3",
+          "nickAttr": "code",
+          "value": "128",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "38354e95-e521-4524-966a-783edc8ea8f8",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0f90e835-5198-4071-a05d-b31f8e8ab0b2",
+          "nickAttr": "place",
+          "value": "муниципальный округ Черемушки",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e903c1c7-f209-40fa-b33f-9c0b15a97d40",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3806a3bc-1c4b-4b8b-9623-90103c6695d9",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ff5e9d35-9b80-4b77-b1cd-aa1713f24ad1",
+          "nickAttr": "code",
+          "value": "129",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9a9f1123-b353-421d-ba29-4e966c9c11ea",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e2d56579-e868-4780-ab14-ca3357ce6044",
+          "nickAttr": "place",
+          "value": "муниципальный округ Южное Бутово",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "17f1dec4-ac39-4804-8da0-cb2c540c70ed",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c4e391bd-e3a4-49d4-ba3d-15d9b975448a",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "97c3dffc-9ecb-49b2-816b-727025515250",
+          "nickAttr": "code",
+          "value": "130",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1da8b809-1d8c-43a4-9518-41619e47a92e",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6305b34c-51b2-4787-bf47-10e7e2ac0f54",
+          "nickAttr": "place",
+          "value": "муниципальный округ Ясенево",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4fc43b8d-346a-49bb-9bd7-c0aa54b4f1a1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5813c1cf-bec6-4bb6-97bc-2ae752568e79",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0c017c91-4f96-45bf-9f87-dac6de5711a5",
+          "nickAttr": "code",
+          "value": "132",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bef17454-e3f9-4c49-92d9-2441d75a1e5b",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fa729f51-8568-4472-a624-92ed1e391cb7",
+          "nickAttr": "place",
+          "value": "муниципальный округ Бирюлево Западное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "85a66c33-516a-419c-8d96-b5691152b3c5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "abb2af98-c09a-4acb-b4e6-9479ce2d2e9f",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f998dfb0-1b75-4b60-86a5-c4304d28ab4a",
+          "nickAttr": "code",
+          "value": "135",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1555f321-c3b2-4bdd-a61e-f70e972eec43",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "785e5732-7f3b-4a9c-8a03-de59cc7cbe53",
+          "nickAttr": "place",
+          "value": "муниципальный округ Донской",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "676e16ec-b1df-40ec-bbc1-a5f27e15184a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "362be9c9-5dbc-47a3-bdf6-794c9a7926a6",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "483e51e7-293e-4a18-b194-9a1605a66ec8",
+          "nickAttr": "code",
+          "value": "138",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6789e654-59f5-4cb7-9530-57847e98f9be",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b592918f-227b-402c-b161-9cf1a23dbdec",
+          "nickAttr": "place",
+          "value": "муниципальный округ Нагатино-Садовники",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7f393c28-a14f-4b48-b325-530654729d86",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d3141ae6-b58f-4682-b29c-8f040762d7e6",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1ad4a05c-36ef-4598-8120-ce85056c9e93",
+          "nickAttr": "code",
+          "value": "140",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "292614f3-2022-4ae1-9f6c-e56b51fe3d1e",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8acb1d3a-8b34-4cbb-84b3-ea4f30954b36",
+          "nickAttr": "place",
+          "value": "муниципальный округ Нагорный",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "eca3ab64-e8e0-4c8b-865b-fdb11d5f1336",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3012e258-8413-46e7-af2e-ace203c3976f",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e4c72c84-91e5-47d3-804f-80daf7eef4bf",
+          "nickAttr": "code",
+          "value": "145",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4ca68f0e-3e3e-4a3d-b4c9-5fe8903dc827",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "91c3c1da-7066-481b-a41b-365fe8b2ba85",
+          "nickAttr": "place",
+          "value": "муниципальный округ Чертаново Центральное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "eeea25f5-c2d2-4e8f-b121-79757a45dc2b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "598d784b-d314-43ce-b237-4450eb27d60d",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "40024cfe-0a8b-4132-8502-23869c49f1b4",
+          "nickAttr": "code",
+          "value": "146",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e4a61c3e-59b6-4d58-adcc-186a207217c1",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a4dda64e-9e67-4f3f-bad9-f2959d910b76",
+          "nickAttr": "place",
+          "value": "муниципальный округ Чертаново Южное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8b607e72-bddf-44a5-b6a8-8dbaa4330555",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e6181d10-1bd8-40a4-8345-56a8168c630b",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ac4c8370-f815-4d15-be43-2ab93e4fd969",
+          "nickAttr": "code",
+          "value": "116",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "88058fae-759c-4b8b-8170-3e0e85b64350",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fec1ab2e-5f4d-4eea-987a-6199ac2cbe23",
+          "nickAttr": "place",
+          "value": "муниципальный округ Рязанский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8c5db457-8b11-4e41-9b96-77cf084d684c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d51b525b-75d5-43cb-96f5-b394c982ac2d",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2e1e7dcb-5c3c-42e4-928c-365d6b0a99ec",
+          "nickAttr": "code",
+          "value": "123",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e7c525fd-2483-418b-b2a0-a0d625be6a1d",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8ef92835-8c1f-438f-a5ff-6200a8bca43b",
+          "nickAttr": "place",
+          "value": "муниципальный округ Котловка",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5c81f58a-557c-4bca-85e3-739cf65ac3ee",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9b42dc3f-2a4f-42ed-b4c9-1ff8b4af1ddb",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e58e3be0-642e-4ea1-ab82-7aad6b2b8d0a",
+          "nickAttr": "code",
+          "value": "125",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0374f9a0-3d23-4f40-b66f-8081ff0a70c8",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1ea5f3e2-24dd-4571-9412-f4a5beb3e4c9",
+          "nickAttr": "place",
+          "value": "муниципальный округ Обручевский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e982c75a-4c89-4859-a629-45087f52d393",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "de4532a7-cbb4-4ca2-8a60-6711f9768389",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4d540b72-5272-49f1-b4d0-466e01d676ae",
+          "nickAttr": "code",
+          "value": "127",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "937a334d-52bf-4051-b356-860d2987b476",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c961ad24-0416-44cf-8d36-ff911946b5e9",
+          "nickAttr": "place",
+          "value": "муниципальный округ Теплый Стан",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8e8fa5b2-10ab-44a9-bdb6-31165820df26",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "93545b74-0046-483b-b625-1d80bf241489",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "70184e7c-9362-4fd8-9bb6-bd4a1f23c27b",
+          "nickAttr": "code",
+          "value": "131",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "80ef8326-8ce6-4a15-9472-0757174828bb",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f0af14e4-d9c9-4276-8008-e0b6780ed39e",
+          "nickAttr": "place",
+          "value": "муниципальный округ Бирюлево Восточное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "567d78a7-f83c-4f25-9cae-3bb495486cf5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "16fabf2e-6773-41e8-82f6-29047cb26984",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "801bce81-7b2e-488f-827c-d93733c697a0",
+          "nickAttr": "code",
+          "value": "134",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b2479fff-27fe-478d-917c-af390e5d0d31",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cb0e5dfa-36fa-4d4e-bf4b-b93bbb22b857",
+          "nickAttr": "place",
+          "value": "муниципальный округ Даниловский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "58c1a94f-c25e-4822-b84b-1a257d379a7b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d0b00a70-5a89-43ff-97cd-0169c3d0a7d7",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8256ea7b-a390-43b7-b754-f235688a9931",
+          "nickAttr": "code",
+          "value": "143",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0bc0f145-57d8-4a6f-92f7-1428a8efed85",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3a44815b-1f5b-4e0d-95ee-11da3a631229",
+          "nickAttr": "place",
+          "value": "муниципальный округ Царицыно",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "808e9a7a-a8b4-49e1-9873-29ec1e143621",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0365e513-8570-4bde-85af-9ce9f3ff3827",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Восточный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fbac53bd-89ba-48fc-a2b9-387e44d844a5",
+          "nickAttr": "code",
+          "value": "117",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "67fc0869-e263-4bf7-964a-10f0101031fd",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8e73d47d-cc4f-492b-805e-b3c81959c9fb",
+          "nickAttr": "place",
+          "value": "муниципальный округ Текстильщики",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8eb3a36b-a0a3-4c09-ac32-a2a8ba0793d4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f5868812-c4fd-45ad-bab4-e12af7432902",
+          "nickAttr": "admAreaName",
+          "value": "Юго-Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8021fc34-ded8-4827-9e93-bebd50a280ad",
+          "nickAttr": "code",
+          "value": "120",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7caea376-4bfa-43dd-80e5-e36dcdb9b597",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0e4dfdde-bcf4-40c0-b7e5-c618aa4b521c",
+          "nickAttr": "place",
+          "value": "муниципальный округ Гагаринский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "2e7ce644-f03c-4121-a5cc-46d34d7a16db",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a42c2756-c3f5-4bb5-b825-6f35af4271d7",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aaf3f305-d375-4fe6-bed1-3efddd6de295",
+          "nickAttr": "code",
+          "value": "133",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4c4a8a6e-578f-4082-b447-7ffd3e6896a0",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2676388b-d00b-40d5-a36d-79a0ef992c14",
+          "nickAttr": "place",
+          "value": "муниципальный округ Братеево",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "da0f9e9f-f0e6-4317-a297-f2319f2f2ac3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7bfb981a-40e1-43c2-b636-881f0a731e20",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "287bfcfe-e91e-4995-b2cd-f1f5e53bf41e",
+          "nickAttr": "code",
+          "value": "139",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "53d50577-e05c-439f-aa26-e7983f2a5cdd",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "59cd43fc-aa53-4a49-9767-e03b72e34c51",
+          "nickAttr": "place",
+          "value": "муниципальный округ Нагатинский Затон",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ce960b67-e3a0-4232-bbe1-7e00ee580b61",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bdafa4b7-833e-46c8-8633-bacf72ef96f5",
+          "nickAttr": "admAreaName",
+          "value": "Южный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "87695552-0102-46be-b1dd-d61782db4ea4",
+          "nickAttr": "code",
+          "value": "141",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a7310299-ef56-43d4-aac8-f1a5aa82e5d4",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e34d46b7-c781-4ff6-ab22-912daf225d2b",
+          "nickAttr": "place",
+          "value": "муниципальный округ Орехово-Борисово Северное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "992286d6-0dc2-4be2-ad5a-39f181952253",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "55958660-409d-4890-b4eb-56d66ea56272",
+          "nickAttr": "admAreaName",
+          "value": "Новомосковский административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f6e3d131-e214-4fb9-9ece-964f906511ef",
+          "nickAttr": "code",
+          "value": "003",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "51b8233f-f26c-4a10-9790-d736f8c95819",
+          "nickAttr": "oldMoscow",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "164055eb-2852-40e8-8cd4-ae393bc7d0f3",
+          "nickAttr": "place",
+          "value": "поселение Внуковское",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "19f2d09a-acc1-4804-a677-62d4e1eda0eb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "321593b2-c5f5-4975-ba29-564c05aee8f5",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1c1803df-3a71-4775-b990-2705f6ab7fb5",
+          "nickAttr": "code",
+          "value": "043",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "98f43138-3670-4a63-8178-26c7d2577423",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a897d4f2-faaf-424e-8fbc-890e70a3ff28",
+          "nickAttr": "place",
+          "value": "муниципальный округ Можайский",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d968d906-9524-4304-a193-b2f79877f673",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "45844ec8-2aad-4a08-b38d-08f8409576b1",
+          "nickAttr": "admAreaName",
+          "value": "Западный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "22bbcd2d-d210-4c7f-a50d-07748f470cc6",
+          "nickAttr": "code",
+          "value": "050",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "10a67abb-dfeb-401a-9c65-3d57c34384e3",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "85cf8d72-7f3a-4205-b573-4bcdcff49b97",
+          "nickAttr": "place",
+          "value": "муниципальный округ Филевский Парк",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "165432ab-31cb-4209-90e7-d9bdc1b86961",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "abe43f61-6d94-4726-afca-0980a17b47fc",
+          "nickAttr": "admAreaName",
+          "value": "Северный административный округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ad8844a8-8d22-4fd3-90c5-2c87693970ba",
+          "nickAttr": "code",
+          "value": "057",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "53e8b1a7-bcf7-45cc-8ee4-5f6626b00176",
+          "nickAttr": "oldMoscow",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "882365f4-79e8-4a8a-b033-d9bd523d9e5b",
+          "nickAttr": "place",
+          "value": "муниципальный округ Аэропорт",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

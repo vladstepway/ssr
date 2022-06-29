@@ -1,0 +1,339 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_documentCategory",
+    "name": "Категория документа",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "9d462578-f883-4022-83d1-abe2de22eed1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "84c7f6b3-f8d6-4931-bd3e-81eac7c1cc75",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6bec2308-5fbd-4270-9d46-3e47b809879c",
+          "nickAttr": "name",
+          "value": "Паспорта лиц старше 14 лет (собственников, нанимателей и лиц, зарегистрированных по месту жительства в жилом помещении)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f5b7f7ad-3edf-4100-a499-5f741ad97665",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4a30aacb-9bac-4391-b21e-71ce2181419e",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9eef1c60-dfc0-47a5-917a-454a963b03ee",
+          "nickAttr": "name",
+          "value": "Паспорта законных представителей интересов несовершеннолетних детей (одного из родителей либо опекуна), недееспособных граждан (опекуна)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d13515ac-ec9e-414f-94a1-4e64158de59c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7b1f1777-016f-4197-afdc-bbc5259bcc57",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b6aa9db1-4fe6-4b83-9f34-3eb372a32d74",
+          "nickAttr": "name",
+          "value": "Свидетельство о рождении несовершеннолетних детей до 18 лет",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3e321423-c1c1-40c6-b9e2-bd861a5aab4a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "affcc044-b90d-43dd-a7ac-344fd6313b7a",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fffd8dee-4e2c-4c0d-9d2c-98133dcd2692",
+          "nickAttr": "name",
+          "value": "Свидетельство о браке",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0eec7315-62e5-47a5-93d1-37bf90b316a6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5dd2b21e-8628-492c-8d2a-1ff4db14c10b",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "04f3ace1-38c4-45f9-afeb-872d7d727add",
+          "nickAttr": "name",
+          "value": "Свидетельство о разводе",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9034ac00-00c2-441d-86fd-83b2b19624a2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5080699b-4f75-48e7-b276-c8748f7782da",
+          "nickAttr": "code",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "71654389-305e-4191-8885-b3b5c36e615f",
+          "nickAttr": "name",
+          "value": "Свидетельство о перемене имени",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "98f80052-bac8-4103-8cdf-37c9fea55619",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fea275c5-6237-4cd5-87a9-a56bd9ab2b69",
+          "nickAttr": "code",
+          "value": "7",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c8fc2fdf-1874-4621-9613-02fb550beec1",
+          "nickAttr": "name",
+          "value": "Свидетельство о смерти",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "40f62b11-2224-44f9-b65a-19cf9c616189",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "804b56c7-9701-4bda-b6de-dcc1a7556c72",
+          "nickAttr": "code",
+          "value": "8",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b08067e5-2749-466f-bab8-1af6d7ed3a51",
+          "nickAttr": "name",
+          "value": "Свидетельство об усыновлении (удочерение)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "67b6c96f-492d-4de8-856e-092629314131",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1c8a3087-36ae-4ad9-8701-bd1a4c635bc3",
+          "nickAttr": "code",
+          "value": "9",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c4a0d207-6989-4ac4-81ac-d76c06d2d871",
+          "nickAttr": "name",
+          "value": "Свидетельство об установлении отцовства",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4d7de657-80c1-4f5c-9f9c-473941a5a1e3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b3cd188e-6d10-4f75-8db5-a1c483aeae54",
+          "nickAttr": "code",
+          "value": "10",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42a44b84-78ad-4135-9c0c-01a67cc5505a",
+          "nickAttr": "name",
+          "value": "Доверенность, паспорт представителя по доверенности (в случае представления интересов собственников и зарегистрированных лиц в жилом помещении)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ae6da23f-4eb1-41f4-9ab6-d9010b835e7e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b8c123aa-588c-479c-86be-967e1c14a5e3",
+          "nickAttr": "code",
+          "value": "11",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c0b7447b-6a52-4911-906c-f5d6b5e121cf",
+          "nickAttr": "name",
+          "value": "Договор социального найма или копия ордера на вселение в жилое помещение",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f5743664-dbdb-4c4f-a806-ddc8983e8051",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8dfa4372-f477-462c-8732-f8f7141819df",
+          "nickAttr": "code",
+          "value": "12",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7386aad2-d960-48ef-8246-b09af6c67dbc",
+          "nickAttr": "name",
+          "value": "Свидетельство о праве собственности / выписка из ЕГРН о зарегистрированных правах на объект недвижимости",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e63fc9d1-5d65-48ac-acfd-ec593dafafcc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c1f38e18-292f-4279-b51a-388cd64f1ebc",
+          "nickAttr": "code",
+          "value": "13",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b267a136-01de-4874-a61a-bc80f8a5dce2",
+          "nickAttr": "name",
+          "value": "Документ-основание передачи жилого помещения в собственность",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

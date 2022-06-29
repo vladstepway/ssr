@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ds="http://www.ugd.croc.ru/ssr/daySchedule"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/daySchedule/flatAppointment"
+           targetNamespace="http://www.ugd.croc.ru/ssr/daySchedule/flatAppointment">
+  <xs:import namespace="http://www.ugd.croc.ru/ssr/daySchedule" schemaLocation="../daySchedule/SlotType.xsd"/>
+  <xs:element name="FlatAppointmentDaySchedule">
+    <xs:annotation>
+      <xs:documentation>Расписание записи на осмотр квартиры</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+          <xs:annotation>
+            <xs:documentation>Версия XSD схемы</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Идентификатор папки</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="documentID" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Системный идентификатор документа</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="flatAppointmentDayScheduleData" type="FlatAppointmentDayScheduleData"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FlatAppointmentDayScheduleData">
+    <xs:annotation>
+      <xs:documentation>Сведения о расписании на заспись на осмотр квартиры</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="cipId" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>ID центра по переселению</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="date" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата работы</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="slots">
+        <xs:annotation>
+          <xs:documentation>Слоты</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="slot" type="ds:SlotType" maxOccurs="unbounded">
+              <xs:annotation>
+                <xs:documentation>Данные слотов</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

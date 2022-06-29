@@ -1,0 +1,12 @@
+Заархивировать карточки жителей:
+d2a9d877-54fe-415d-8859-516338aef770
+87714042-a6c0-494a-9e9d-f42d144a7284
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/person-controller
+2. Выбрать DELETE /person/delete
+3. Ввести ids =
+[
+  "d2a9d877-54fe-415d-8859-516338aef770",
+  "87714042-a6c0-494a-9e9d-f42d144a7284"
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

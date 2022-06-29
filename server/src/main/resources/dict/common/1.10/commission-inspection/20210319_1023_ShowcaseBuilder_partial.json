@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "c98c5978-cb47-437e-8c3c-f62804b0b4fd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8e676184-5ea8-40a3-9148-2d4ae10dd8a8",
+          "nickAttr": "code",
+          "value": "ugd_ssr_commission_inspection_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c729cc7e-f4ef-47ce-b0f2-9eaf035a2423",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_COMMISSION-INSPECTION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1426acba-ea0d-49ca-9b9a-93c7510c03d2",
+          "nickAttr": "documentName",
+          "value": "Реестр заявлений на комиссионный осмотр",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "438490aa-aa43-4bb1-a275-b135868c9965",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Реестр заявлений на комиссионный осмотр\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Реестр заявлений на комиссионный осмотр</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableSorting\":false,\"separateFilter\":false,\"changeTableColumns\":true,\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_commission_inspection_application_number\",\"type\":\"text\",\"name\":\"Номер заявления\"},{\"code\":\"ugd_ssr_commission_inspection_creation_date\",\"type\":\"date\",\"name\":\"Дата подачи заявления\"},{\"code\":\"ugd_ssr_commission_inspection_fio\",\"type\":\"text\",\"name\":\"Фамилия, имя, отчество\"},{\"code\":\"ugd_ssr_commission_inspection_address_to\",\"type\":\"text\",\"name\":\"Заселяемый адрес\"},{\"code\":\"ugd_ssr_commission_inspection_flat_to\",\"type\":\"text\",\"name\":\"Заселяемая квартира\"},{\"code\":\"ugd_ssr_commission_inspection_date\",\"type\":\"text\",\"name\":\"Дата и время осмотра\"},{\"code\":\"ugd_ssr_commission_inspection_status\",\"type\":\"text\",\"name\":\"Статус\"}],\"tableColumns\":[{\"name\":\"Номер заявления\",\"fieldCode\":\"ugd_ssr_commission_inspection_application_number\"},{\"name\":\"Дата подачи заявления\",\"fieldCode\":\"ugd_ssr_commission_inspection_creation_date\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_commission_inspection_fio\"},{\"name\":\"Заселяемый адрес\",\"fieldCode\":\"ugd_ssr_commission_inspection_address_to\"},{\"name\":\"Заселяемая квартира\",\"fieldCode\":\"ugd_ssr_commission_inspection_flat_to\"},{\"name\":\"Дата и время осмотра\",\"fieldCode\":\"ugd_ssr_commission_inspection_date\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_commission_inspection_status\"}],\"filters\":[{\"name\":\"Номер заявления\",\"fieldCode\":\"ugd_ssr_commission_inspection_application_number\",\"placement\":\"bottom\"},{\"name\":\"Дата подачи заявления\",\"fieldCode\":\"ugd_ssr_commission_inspection_creation_date\",\"placement\":\"bottom\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_commission_inspection_fio\",\"placement\":\"bottom\"},{\"name\":\"Заселяемый адрес\",\"fieldCode\":\"ugd_ssr_commission_inspection_address_to\",\"placement\":\"bottom\"},{\"name\":\"Заселяемая квартира\",\"fieldCode\":\"ugd_ssr_commission_inspection_flat_to\",\"placement\":\"bottom\"},{\"name\":\"Дата и время осмотра\",\"fieldCode\":\"ugd_ssr_commission_inspection_date\",\"placement\":\"bottom\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_commission_inspection_status\",\"placement\":\"bottom\"}],\"isNewSearch\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9d379067-a0b3-4dea-abda-b5d0e666b0a4",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_commission_inspection",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0d2e3389-d905-4325-85fd-a85c8d12c857",
+          "nickAttr": "showcaseName",
+          "value": "Реестр заявлений на комиссионный осмотр",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "47c17379-e4ab-447d-919d-d1b3126a8392",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5f40435d-abb4-4518-9d39-a3a7b93d2537",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ef883e0a-2438-437c-b652-d58c6f3c15c7",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "43b7724c-e22f-44ee-b14e-e92e81c40b4e",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

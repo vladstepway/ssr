@@ -1,0 +1,189 @@
+{
+  "metaDict": {
+    "nick": "SearchFields",
+    "name": "Поля документов подсистемы поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Справочник предназначен для регистрации свойств полей документа, используемых в подсистеме поиска Инструкция по работе со справочником - https://smart.mos.ru/wiki/pages/viewpage.action?pageId=11763769",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - кодсистемы_краткийкодподсистемы_краткийкодтипадокумента_имяпоисковогополя ИЛИ кодсистемы_краткийкодподсистемы_common_имяпоисковогополя",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "fieldName",
+        "name": "Название поля в SOLR",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - краткийкодтипадокумента_имяпоисковогополя ИЛИ common_имяпоисковогополя",
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Системы\"",
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип поля",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFieldTypes",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Типы полей подсистемы поиска\"",
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "searchRule",
+        "name": "Тип поиска по полю",
+        "typeAttr": "link",
+        "nickDictLink": "SearchRules",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "KEYWORD – точное совпадение с поисковой фразой, LIKE - числа по вхождению, буквы по вхождению, LIKE_EXACTMATCH – буквы по вхождению, числа по точному совпадению",
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "indexed",
+        "name": "Индексировать или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "multi",
+        "name": "Множественное или нет",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "commonSearch",
+        "name": "Участвует ли поле в общем поиске",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "При установке значения = Да, обязательно заполнение поля \"Тип поиска по полю\"",
+        "orders": 8,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "268fec21-8599-4b31-8aa9-20afab45ec55",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "76ed8207-3625-4411-ad10-b30571ed41e6",
+          "nickAttr": "code",
+          "value": "ugd_ssr_apartment_inspection_is_deleted",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9c38a805-7b02-4cd9-8a6c-679d078b9123",
+          "nickAttr": "description",
+          "value": "Удален/не удален",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f817ed7a-e1cd-42fb-a48f-5b3ec7315131",
+          "nickAttr": "fieldName",
+          "value": "ugd_ssr_apartment_inspection_is_deleted",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2d18f40d-12ba-4a4e-9dd3-a80add1c338f",
+          "nickAttr": "indexed",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "beb07875-20e4-471e-a8ef-54d1fa1ba7cd",
+          "nickAttr": "multi",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c9f433c2-29fc-49fc-8ee1-c980e73b3172",
+          "nickAttr": "searchRule",
+          "value": "85d8f0ef-785a-454c-ae5f-93773450ecef",
+          "orders": 0,
+          "linkCode": "KEYWORD"
+        },
+        {
+          "attrId": "748edd3d-6cd3-435d-a42b-a3ebbb41d37c",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "e421e667-d9f9-46fa-826c-a9eb2a3d8dbd",
+          "nickAttr": "type",
+          "value": "1c46e746-be8b-4452-8363-e6ad22cedf66",
+          "orders": 0,
+          "linkCode": "BOOL"
+        }
+      ]
+    }
+  ]
+}

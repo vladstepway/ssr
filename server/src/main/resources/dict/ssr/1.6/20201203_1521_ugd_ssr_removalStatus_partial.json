@@ -1,0 +1,431 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_removalStatus",
+    "name": "Статусы заселения квартиры",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "f8958ab5-8a57-40b7-a19a-154c1666c1f6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8f4650cc-6e30-40b9-af99-9669d46f4a2c",
+          "nickAttr": "code",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c4ef8b63-2be0-43bc-8512-d9e5fa2e1f92",
+          "nickAttr": "name",
+          "value": "Свободна",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "87bf67f5-42aa-4066-ac89-34d28bd3dbff",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f9fa127b-368b-42c0-bec9-1af411feedf6",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4e78b63c-4c30-4363-8a8e-7b71d847bcdc",
+          "nickAttr": "name",
+          "value": "Не предлагалась",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1257ea3e-ac48-46bb-b5f9-204e0844b405",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8fddb97a-ed68-4aa0-a7be-3bff6675bb8f",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9a114cb7-b49b-47e8-ad1b-bb18f92dec60",
+          "nickAttr": "name",
+          "value": "Выдано письмо с предложением",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1703c7e5-c533-4e5e-89fa-0849e93696fc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6b224e21-9f13-4f21-a789-773693f9fa31",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bc4c5ebb-3907-4f2e-ab13-11a557bad4fc",
+          "nickAttr": "name",
+          "value": "Получено согласие",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e1bd0fe4-52e5-445c-abf8-d29f084497e5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1cc69ac2-00d2-41f6-80d4-3fbfa083748b",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "15476acc-124b-40ee-956c-7fb67c5b7974",
+          "nickAttr": "name",
+          "value": "Получен отказ",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "96b0686c-c00a-44dc-8da2-739eba08cc39",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f2f222dd-3ad5-4371-8888-07c382e263ee",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9292c8b9-ccd1-4a50-984f-c25be4e075dd",
+          "nickAttr": "name",
+          "value": "Выдан проект договора",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "dfb9fc39-6542-41b4-9082-71ae1c6b26eb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ff0cd3de-0d4e-4298-ab66-e30452eaac6b",
+          "nickAttr": "code",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3957204-1505-4485-88ba-744f65c026e9",
+          "nickAttr": "name",
+          "value": "Договор подписан",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "2e955b24-9b3a-4704-87a7-2d5028bb814a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "91e82a3f-9a9b-40d7-a03d-509652b136df",
+          "nickAttr": "code",
+          "value": "7",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "240f9807-9fe3-4a09-8aca-fddff553c8b3",
+          "nickAttr": "name",
+          "value": "В суде ",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "637a7059-8ff8-41a0-9d71-640714725047",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "71afcd92-51e2-4c1b-a831-5d8f6b1d7137",
+          "nickAttr": "code",
+          "value": "8",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "015dc98c-b1ab-4d61-ae20-27feaab25d32",
+          "nickAttr": "name",
+          "value": "Иное (в работе)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "307943be-c4ee-4a0c-8b4f-fb5af07ee9b6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "734167a2-4c47-45a6-a000-32b0b76bd6ad",
+          "nickAttr": "code",
+          "value": "9",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f4a12598-64e3-4283-aa0d-97b1201c4e17",
+          "nickAttr": "name",
+          "value": "Иное (договор подписан)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a2b6ca9c-3a2b-4892-9d58-7b896f0253c3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "75a229fe-8873-4e83-9e71-360b82fe5fa7",
+          "nickAttr": "code",
+          "value": "10",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ce550a50-6061-443b-af77-47d32beaf9ae",
+          "nickAttr": "name",
+          "value": "Иное в суде",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "926cff1f-ea39-4456-a969-e890ae9b5537",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8b10a5ac-28f9-462c-a12d-9c8a00dea5b2",
+          "nickAttr": "code",
+          "value": "11",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1f4360be-afa7-4ba4-a218-30f34351cb7e",
+          "nickAttr": "name",
+          "value": "Подано заявление на докупку",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c23ac825-6dc3-4b5d-ba34-a449e88e522e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "26427b79-847a-4c57-8bdf-3f9af73f093a",
+          "nickAttr": "code",
+          "value": "12",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "379196f7-0bd9-4beb-97d0-8c9f8fd883c7",
+          "nickAttr": "name",
+          "value": "Получено положительное/отрицательное решение Комиссии Фонда реновации",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d8ad2ed5-f812-49d6-a6ed-db4243113892",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "83f2bfc2-0d1d-478e-906b-b8191736a784",
+          "nickAttr": "code",
+          "value": "13",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "480065ef-e9a7-4352-b0ee-67fa9a2dba5f",
+          "nickAttr": "name",
+          "value": "Выданы ключи от новой квартиры",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "adcaf7a6-e248-4394-bd51-7fbb76dadd48",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "280081aa-7acd-4f06-be4c-b28ad0681a3a",
+          "nickAttr": "code",
+          "value": "14",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fc00d59d-680c-4308-96d7-48f06566d13d",
+          "nickAttr": "name",
+          "value": "Принято заявление/акт на устранение дефектов (с указанием статуса устранения дефектов)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "100d7fc9-9daf-4dc2-a926-3d94ce8c9ded",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "aaa4a175-4ff5-4925-aba6-cb9884d5f694",
+          "nickAttr": "code",
+          "value": "15",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b7c07016-eb33-45be-aa0d-fca18c425193",
+          "nickAttr": "name",
+          "value": "Подано заявление на перевозку вещей (с указанием статуса перевозки)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e3d30055-ce1e-48d1-8ded-0cb0678211c7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "25e784c4-1173-47bd-9fea-84c4d90ee8f7",
+          "nickAttr": "code",
+          "value": "16",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b7c56479-3280-49f1-bd2e-a033c9cadc54",
+          "nickAttr": "name",
+          "value": "Квартира заселена",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "name": "demo",
+  "description": "Пример JSON документа с данными процесса",
+  "isComplex": true,
+  "arity": "1-1",
+  "attributes": [
+    {
+      "name": "versionXSD",
+      "description": "Версия XSD схемы",
+      "isComplex": false,
+      "arity": "1-1",
+      "type": "string"
+    }, {
+      "name": "documentID",
+      "description": "Системный идентификатор документа",
+      "isComplex": false,
+      "arity": "1-1",
+      "type": "string"
+    }, {
+      "name": "main",
+      "description": "Общие сведения",
+      "isComplex": true,
+      "arity": "0-1",
+      "attributes": [
+        {
+          "name": "regNumber",
+          "description": "Номер",
+          "isComplex": false,
+          "arity": "0-1",
+          "type": "string"
+        }, {
+          "name": "reqDate",
+          "description": "Дата, на которую заказан пропуск",
+          "isComplex": false,
+          "arity": "0-1",
+          "type": "date"
+        }, {
+          "name": "initiator",
+          "description": "Кто заказывает пропуск",
+          "isComplex": true,
+          "arity": "1-1",
+          "attributes": [
+            {
+              "name": "fioFull",
+              "description": "ФИО",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "string"
+            }, {
+              "name": "post",
+              "description": "Должность",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "string"
+            }, {
+              "name": "phone",
+              "description": "Телефон",
+              "isComplex": false,
+              "arity": "0-1",
+              "type": "string"
+            }
+          ]
+        }, {
+          "name": "PersonData",
+          "description": "Данные о человеке, на которого заказывается пропуск",
+          "isComplex": true,
+          "arity": "1-1",
+          "attributes": [
+            {
+              "name": "FirstName",
+              "description": "Имя",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "string"
+            }, {
+              "name": "LastName",
+              "description": "Фамилия",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "string"
+            }, {
+              "name": "MiddleName",
+              "description": "Отчество",
+              "isComplex": false,
+              "arity": "0-1",
+              "type": "string"
+            }, {
+              "name": "Identity",
+              "description": "Данные распорта или иного документа, удостоверяющего\nличность",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "string"
+            }
+          ]
+        }, {
+          "name": "approve",
+          "description": "Информация о согласовании",
+          "isComplex": true,
+          "arity": "1-1",
+          "attributes": [
+            {
+              "name": "result",
+              "description": "результат согласования, true - согласовано, false -\nотказ в согласовании",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "boolean"
+            }, {
+              "name": "comments",
+              "description": "Комментарии по согласованию",
+              "isComplex": false,
+              "arity": "0-unbounded",
+              "type": "string"
+            }
+          ]
+        }, {
+          "name": "handout",
+          "description": "Информация о выдаче пропуска",
+          "isComplex": true,
+          "arity": "1-1",
+          "attributes": [
+            {
+              "name": "Date",
+              "description": "Дата выдачи",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "date"
+            }, {
+              "name": "result",
+              "description": "результат - true-пропуск выдан, false - в выдаче\nотказано",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "boolean"
+            }
+          ]
+        }
+      ]
+    }, {
+      "name": "DocFolder",
+      "description": "Папки для документов экземпляра процесса, создаются автоматически при запуске\nпроцесса",
+      "isComplex": true,
+      "arity": "0-unbounded",
+      "attributes": [
+        {
+          "name": "parentFolder",
+          "description": "Имя родительской папки в ХД, в которой будут создаваться папки для запущенных\nэкземпляров процесса",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "string"
+        }, {
+          "name": "folderNameTemplate",
+          "description": "Шаблон для генерации имени папки, включая preffix, уникальный номер, дата-время\nсоздания, имя процесса, суффикс",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "string"
+        }, {
+          "name": "folderGUID",
+          "description": "Идентификатор папки, заполняется после создания папки при старте процесса",
+          "isComplex": false,
+          "arity": "0-1",
+          "type": "string"
+        }, {
+          "name": "FileTypes",
+          "description": "Список допустимых типов, например ppt; doc; xls",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "string"
+        }, {
+          "name": "file",
+          "isComplex": true,
+          "arity": "0-unbounded",
+          "attributes": [
+            {
+              "name": "fileName",
+              "description": "Имя файла с расширением",
+              "isComplex": true,
+              "arity": "1-1",
+              "type": "anyType",
+              "attributes": []
+            }, {
+              "name": "fileGUID",
+              "description": "ID файла в ХД",
+              "isComplex": true,
+              "arity": "1-1",
+              "type": "anyType",
+              "attributes": []
+            }, {
+              "name": "fileType",
+              "description": "тип файла",
+              "isComplex": true,
+              "arity": "1-1",
+              "type": "anyType",
+              "attributes": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

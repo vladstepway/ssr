@@ -1,0 +1,149 @@
+{
+  "metaDict": {
+    "nick": "Actions",
+    "name": "Возможности",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Справочник предназначен для регистрации доступных пользователю возможностей портала Инструкция по работе со справочником -https://smart.mos.ru/wiki/pages/viewpage.action?pageId=27755159",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - кодсистемы_краткийкодподсистемы_кодэлементасправочника",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": "Если указано несколько значений, то разграничение выполняется с условием ИЛИ",
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "url",
+        "name": "URL адрес страницы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Относительная ссылка на страницу портала",
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "disabled",
+        "name": "Признак неактивности",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "theme",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "cca153a9-54f3-4fcd-af52-1baafe690596",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b10f4571-64bf-4b6b-924e-f25fab43c5ce",
+          "nickAttr": "code",
+          "value": "ugd_ssr_uploadPerson",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5fdf342b-932d-439f-93e7-4769f8646efa",
+          "nickAttr": "group",
+          "value": "UGD_SSR_PERSON_UPLOAD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b458412c-4829-4ea3-81e2-2ec642758328",
+          "nickAttr": "name",
+          "value": "Загрузить жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d5d13203-de12-4c2b-add1-d0f9d1d397b9",
+          "nickAttr": "url",
+          "value": "/ugd/ssr/#/app/person/upload",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

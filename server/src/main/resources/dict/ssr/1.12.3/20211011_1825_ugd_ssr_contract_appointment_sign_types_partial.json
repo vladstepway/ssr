@@ -1,0 +1,86 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_contract_appointment_sign_types",
+    "name": "Способы подписания договора",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "type_name",
+        "name": "Текстовое значение способа подписания",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "17ac60ab-612b-4531-876c-ecf304841de1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a7787e8b-db7b-4dc1-8cda-5cfc7a2a3880",
+          "nickAttr": "code",
+          "value": "00",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f358b754-f716-4096-853b-0aef426b417a",
+          "nickAttr": "type_name",
+          "value": "Очное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3b680927-3e7b-4e53-9166-9dab5adf3a90",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "22ce8298-a307-4222-9e5e-ce316450c0f4",
+          "nickAttr": "code",
+          "value": "01",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d8fb2e5c-e37c-4ee9-80de-d364cd05965f",
+          "nickAttr": "type_name",
+          "value": "Электронное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

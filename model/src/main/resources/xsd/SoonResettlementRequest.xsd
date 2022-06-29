@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr"
+           targetNamespace="http://www.ugd.croc.ru/ssr">
+    <xs:element name="SoonResettlementRequest">
+        <xs:annotation>
+            <xs:documentation>Запрос на скорое переселение домов</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="main" type="soonResettlementRequestType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="soonResettlementRequestType">
+        <xs:annotation>
+            <xs:documentation>Сведение о запросе на скорое переселение</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="soonResettlementRequestID" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="type" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Тип обогащения (full - полное, elk - только ssoId, flats - только квартиры)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="realEstates" type="xs:string" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Идентификаторы ОН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flats" type="xs:string" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Идентификаторы квартир</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

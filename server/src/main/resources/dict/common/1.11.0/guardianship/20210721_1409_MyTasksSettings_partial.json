@@ -1,0 +1,258 @@
+{
+  "metaDict": {
+    "nick": "MyTasksSettings",
+    "name": "Настройки для витрины \"Мои задачи\"",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Префикс бизнес процесса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование бизнес процесса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "firstrString",
+        "name": "Первая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "firstrWithHalfString",
+        "name": "Полуторная строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "secondString",
+        "name": "Вторая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "thirdString",
+        "name": "Третья строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "fourthString",
+        "name": "Четвертая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "fifthString",
+        "name": "Пятая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "searchUrl",
+        "name": "Базовый URL поиска",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "sixthString",
+        "name": "Шестая строка",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "tasksUrl",
+        "name": "Базовый URL задач",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "ИС",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 10,
+        "unique": 0
+      },
+      {
+        "nick": "showTasks",
+        "name": "Показывать список задач",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 11,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "75740bfd-90bd-443d-a1de-fb1147255d81",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "74a80a5d-05aa-422e-aa0e-854db6bb4643",
+          "nickAttr": "code",
+          "value": "ugdssrGuardianship",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "72728027-4309-4579-bb78-403a2cbc4969",
+          "nickAttr": "fifthString",
+          "value": "Адрес квартиры заселения: ${item.document.ugd_ssr_guardianship_address_to ? item.document.ugd_ssr_guardianship_address_to : '-'}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "85af64d6-87b0-4583-96fb-378a9c84b5c7",
+          "nickAttr": "firstrString",
+          "value": "ФИО: ${item.document.ugd_ssr_guardianship_fio ? item.document.ugd_ssr_guardianship_fio : '-'}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c89ecec9-1ca4-4db5-87db-3240c038feb0",
+          "nickAttr": "fourthString",
+          "value": "Адрес отселяемой квартиры: ${item.document.ugd_ssr_guardianship_address_from ? item.document.ugd_ssr_guardianship_address_from : '-'}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "35314d24-37e0-41b1-80a7-1f1ddea01907",
+          "nickAttr": "name",
+          "value": "Органы опеки",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6cbbd528-ad68-48d2-abfc-9672f10f0677",
+          "nickAttr": "searchUrl",
+          "value": "/search",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b0b2e60d-1564-405c-ad74-ff97d3064d1d",
+          "nickAttr": "secondString",
+          "value": "Округ: ${item.document.ugd_ssr_guardianship_district ? item.document.ugd_ssr_guardianship_district : '-'}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "208d2c1c-a420-4b4c-979b-004a63eb22d0",
+          "nickAttr": "showTasks",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a382031d-c917-42fe-afe1-9ce09c4ed523",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "1680f24c-9dd7-45f2-b168-fdcfb57d488a",
+          "nickAttr": "tasksUrl",
+          "value": "/ugd/ssr",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fc37506c-f69c-410e-9384-b200bbc82488",
+          "nickAttr": "thirdString",
+          "value": "Район: ${item.document.ugd_ssr_guardianship_area ? item.document.ugd_ssr_guardianship_area : '-'}",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

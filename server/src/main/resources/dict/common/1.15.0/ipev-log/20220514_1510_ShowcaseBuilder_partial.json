@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "9671d5dd-ae6a-424c-aed2-48a7beffcddb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f23e543c-9c84-4bc6-8fb3-2346a7348b1b",
+          "nickAttr": "code",
+          "value": "ugd_ssr_ipev_log_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6bc3cc4e-378f-4eff-8539-a8060e9b925c",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_IPEV-LOG",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "896f5026-9578-4c4b-b1c9-a586ecf9cfbc",
+          "nickAttr": "documentName",
+          "value": "Журнал информационного обмена с ИПЭВ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2f8ca8fc-8cf8-4381-9e20-d851110c0cc9",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Журнал информационного обмена с ИПЭВ\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Журнал информационного обмена с ИПЭВ</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableFilter\":true,\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по статусу\",\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_ipev_log_event_date_time\",\"type\":\"date\",\"name\":\"Дата сообщения об изменении\",\"sortable\":true,\"filterable\":true,\"defaultSorting\":\"DESC\"},{\"code\":\"ugd_ssr_ipev_log_cadastral_numbers_count\",\"type\":\"number\",\"name\":\"Количество кадастровых номеров с изменениями\"},{\"code\":\"ugd_ssr_ipev_log_filtered_cadastral_numbers_count\",\"type\":\"number\",\"name\":\"Количество кадастровых номеров с изменениями по которым запрошено обновление данных\"},{\"code\":\"ugd_ssr_ipev_log_egrn_request_date_time\",\"type\":\"date\",\"name\":\"Дата запроса на обновление данных\",\"sortable\":true,\"filterable\":true},{\"code\":\"ugd_ssr_ipev_log_status\",\"type\":\"text\",\"name\":\"Статус\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_ipev_log_orr_file_store_id\",\"type\":\"text\",\"name\":\"Пакет ответа\"}],\"tableColumns\":[{\"name\":\"Дата сообщения об изменении\",\"fieldCode\":\"ugd_ssr_ipev_log_event_date_time\",\"template\":\"{{item.ugd_ssr_ipev_log_event_date_time | date:'dd.MM.yyyy HH:mm'}}\"},{\"name\":\"Количество кадастровых номеров с изменениями\",\"fieldCode\":\"ugd_ssr_ipev_log_cadastral_numbers_count\",\"template\":\"{{item.ugd_ssr_ipev_log_cadastral_numbers_count}}\"},{\"name\":\"Количество кадастровых номеров с изменениями по которым запрошено обновление данных\",\"fieldCode\":\"ugd_ssr_ipev_log_filtered_cadastral_numbers_count\",\"template\":\"{{item.ugd_ssr_ipev_log_filtered_cadastral_numbers_count}}\"},{\"name\":\"Дата запроса на обновление данных\",\"fieldCode\":\"ugd_ssr_ipev_log_egrn_request_date_time\",\"template\":\"{{item.ugd_ssr_ipev_log_egrn_request_date_time | date:'dd.MM.yyyy HH:mm'}}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_ipev_log_status\",\"template\":\"{{item.ugd_ssr_ipev_log_status}}\"},{\"name\":\"Пакет ответа\",\"fieldCode\":\"ugd_ssr_ipev_log_orr_file_store_id\",\"template\":\"<a style=\\\"color: #676a6c; text-decoration: underline;\\\" \\n href=\\\"/filestore/v1/files/{{item.ugd_ssr_ipev_log_orr_file_store_id}}?systemCode=ugdnpc\\\"\\ntarget=\\\"_blank\\\">\\nПакет ответа\\n</a>\"}],\"filters\":[{\"name\":\"Дата сообщения об изменении\",\"fieldCode\":\"ugd_ssr_ipev_log_event_date_time\",\"placement\":\"bottom\"},{\"name\":\"Дата запроса на обновление данных\",\"fieldCode\":\"ugd_ssr_ipev_log_egrn_request_date_time\",\"placement\":\"bottom\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_ipev_log_status\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Дата сообщения об изменении\",\"fieldCode\":\"ugd_ssr_ipev_log_event_date_time\"},{\"name\":\"Дата запроса на обновление данных\",\"fieldCode\":\"ugd_ssr_ipev_log_egrn_request_date_time\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_ipev_log_status\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2a956d6f-e3a7-4065-baba-6c033a3a3b47",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_ipev_log",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f43390df-3744-44e2-b814-b1bc7def479a",
+          "nickAttr": "showcaseName",
+          "value": "Журнал информационного обмена с ИПЭВ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f6d03d9b-0660-419a-8471-37a59cf69c7b",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "68ddc39b-2630-45c2-a44e-c5f7e10231e8",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4961131f-ea2d-4fb1-9864-a91ef9e850ec",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "01980d93-6937-4477-b3d7-dc97da4aa9e8",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-05-26-01-view-equivalent-apartment-consented-amount-create.xml" author="akurganov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_equivalent_apartment_consented_amount">
+            WITH pers AS (
+                SELECT
+                    json_data -> 'Person' -> 'PersonData' ->> 'personID' AS personId,
+                    jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'agreements' -> 'agreement') ->> 'event' AS event,
+                    (jsonb_array_elements(json_data -> 'Person' -> 'PersonData' -> 'agreements' -> 'agreement') -> 'techInfo' ->>'actionDateTime')::TIMESTAMP AS eventDate
+                FROM
+                    ssr.documents
+                WHERE
+                    doc_type = 'PERSON'
+                AND
+                    json_data -> 'Person' -> 'PersonData' ->> 'personID' is not null
+                AND
+                    json_data -> 'Person' -> 'PersonData' ->> 'agreements' is not null
+                UNION
+                SELECT
+                    json_data -> 'Person' -> 'PersonData' ->> 'personID' AS personId,
+                    NULL AS event,
+                    NULL AS eventDate
+                FROM
+                    ssr.documents
+                WHERE
+                    json_data -> 'Person' -> 'PersonData' -> 'contracts' -> 'contract' @> cast('[{"contractStatus": "4"}]' as jsonb)
+                ORDER BY
+                    personId, eventDate
+            ),
+            persons_agreements AS (
+                SELECT
+                    pers.personId,
+                    array_agg(pers.event) AS event
+                FROM
+                    pers
+                GROUP BY
+                    personId
+            ),
+            persons_agreements_without_null AS (
+                SELECT
+                    personId,
+                    array_remove(event, NULL) AS event
+                FROM
+                    persons_agreements
+            ),
+            max_event_date_by_person AS (
+                SELECT DISTINCT ON (pers.personId)
+                    pers.personId,
+                    pers.eventDate as maxEventDate,
+                    pers.event
+                FROM
+                    pers
+                ORDER BY
+                    pers.personId, pers.eventDate DESC
+            ),
+            realEstates AS (
+                SELECT
+                    re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'UNOM' AS unom,
+                    re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'Address' AS address
+                FROM
+                    ssr.documents re
+                WHERE
+                    re.doc_type = 'REAL-ESTATE'
+            ),
+            trade_additions AS (
+                SELECT DISTINCT ON (affairId)
+                    json_data->'tradeAddition'->'tradeAdditionTypeData'->>'affairId' AS affairId,
+                    json_data->'tradeAddition'->'tradeAdditionTypeData'->>'claimStatus' AS claimStatus,
+                    json_data->'tradeAddition'->'tradeAdditionTypeData'->>'tradeType' AS tradeType,
+                    (json_data->'tradeAddition'->'tradeAdditionTypeData'->>'agreementDate')::DATE AS agreementDate,
+                    (json_data->'tradeAddition'->'tradeAdditionTypeData'->>'applicationDate')::DATE AS applicationDate
+                FROM
+                    ssr.documents
+                WHERE
+                    doc_type = 'TRADE-ADDITION'
+                    AND json_data->'tradeAddition'->'tradeAdditionTypeData'->'confirmed' @> 'true'
+                    AND json_data->'tradeAddition'->'tradeAdditionTypeData'->'indexed' @> 'true'
+                ORDER BY
+                    affairId, (json_data->'tradeAddition'->'tradeAdditionTypeData'->>'offerLetterDate') DESC NULLS LAST
+            )
+            SELECT DISTINCT
+                persons.id as documentID,
+                persons.json_data -> 'Person' -> 'PersonData' ->> 'UNOM' AS UNOM,
+                re.address,
+                persons.json_data -> 'Person' -> 'PersonData' ->> 'flatNum' AS flatNum,
+                persons.json_data -> 'Person' -> 'PersonData' ->> 'affairId' AS affairId,
+                persons.json_data -> 'Person' -> 'PersonData' ->> 'personID' AS personId,
+                persons.json_data -> 'Person' -> 'PersonData' ->> 'FIO' AS fio,
+                person_contracts.value AS concluded_contracts,
+                (
+                    CASE
+                        WHEN person_contracts.value IS NOT NULL THEN ARRAY_APPEND(agreements.event, '9')
+                        WHEN person_contracts.value IS NULL THEN agreements.event
+                    END
+                ) AS event,
+                (
+                    CASE
+                        WHEN person_contracts.value IS NOT NULL THEN '9'
+                        WHEN person_contracts.value IS NULL THEN maxEventDate.event
+                    END
+                ) AS eventLast,
+                trade_additions.tradeType,
+                trade_additions.claimStatus,
+                persons.json_data -> 'Person' -> 'PersonData' -> 'addFlatInfo' ->> 'inCourt' AS inCourt,
+                persons.json_data -> 'Person' -> 'PersonData' ->> 'relocationStatus' AS relocationStatus,
+                trade_additions.agreementDate,
+                trade_additions.applicationDate
+            FROM
+                ssr.documents persons
+            JOIN
+                persons_agreements_without_null AS agreements
+            ON
+                agreements.personId = persons.json_data -> 'Person' -> 'PersonData' ->> 'personID'
+            JOIN
+                max_event_date_by_person AS maxEventDate
+            ON
+                maxEventDate.personId = persons.json_data -> 'Person' -> 'PersonData' ->> 'personID'
+            LEFT JOIN
+                jsonb_array_elements(json_data -> 'Person' -> 'PersonData'->'contracts'->'contract') AS person_contracts
+            ON
+                person_contracts.value ->> 'contractStatus' = '4'
+            LEFT JOIN
+                realEstates re
+            ON
+                re.unom = persons.json_data -> 'Person' -> 'PersonData' ->> 'UNOM'
+            LEFT JOIN
+                trade_additions
+            ON
+                persons.json_data -> 'Person' -> 'PersonData' ->> 'affairId' = trade_additions.affairId
+            WHERE
+                doc_type = 'PERSON'
+                AND json_data -> 'Person' -> 'PersonData' ->> 'personID' is not null
+                AND (
+                    json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false'
+                    OR json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null
+                )
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_equivalent_apartment_consented_amount TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

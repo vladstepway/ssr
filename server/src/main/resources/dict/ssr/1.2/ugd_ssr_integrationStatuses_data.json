@@ -1,0 +1,132 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_integrationStatuses",
+    "name": "Статусы интеграции",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "160388d5-0c68-48c2-8aad-a2176738e106",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "48ce7e68-04a8-4071-b847-d9ba237d47ea",
+          "nickAttr": "code",
+          "value": "enriched",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "30a86e85-ad7c-4929-9b6d-cc412a00b4b8",
+          "nickAttr": "name",
+          "value": "обогащено",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "be0328c6-4ebc-4075-93c7-917176d2c94c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "73b12d2a-25ec-473f-86e1-287c14a093c3",
+          "nickAttr": "code",
+          "value": "enrichmentProccess",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "efc934fa-e631-4f24-9605-f7cf5d80d188",
+          "nickAttr": "name",
+          "value": "в процессе обогащения",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8698a3b8-6c45-4366-8263-48ad2a93d543",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "461fbb6c-4ef5-49c2-9924-1c53e8d8c475",
+          "nickAttr": "code",
+          "value": "notEnriched",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ba0d2d9e-bda1-44a1-9575-b6b8b9f026b3",
+          "nickAttr": "name",
+          "value": "не обогащалось",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "80a19271-cb45-4d5d-9c9f-6848ac9fcafa",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6d9f5924-fc5b-4d4e-a6a5-dc353855e2a6",
+          "nickAttr": "code",
+          "value": "error",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d51a4a5b-b89e-46db-b325-de95db9e7d6a",
+          "nickAttr": "name",
+          "value": "ошибка обогащения",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

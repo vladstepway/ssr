@@ -1,0 +1,94 @@
+{
+  "metaDict": {
+    "nick": "Permissions",
+    "name": "Разрешения",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Идентификатор ресурса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "name",
+        "name": "Описание ресурса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа, дающая доступ к ресурсу",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "permitAll",
+        "name": "Признак общедоступного ресурса",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "b2029fd7-7090-4b58-b644-6c784f3bfd89",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5bae5747-05b5-437b-a1b9-04b9f0b6c5bc",
+          "nickAttr": "code",
+          "value": "ugd_ssr_chessboard_view",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7f9f3813-44e1-4d7e-86b5-9818b9395866",
+          "nickAttr": "group",
+          "value": "UGD_SSR_CHESSBOARD_VIEW",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "23ad4a1d-3396-4a96-aef9-1cbeb7b54bee",
+          "nickAttr": "name",
+          "value": "Просмотр данных дашбордов отселяемого и заселяемого дома",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

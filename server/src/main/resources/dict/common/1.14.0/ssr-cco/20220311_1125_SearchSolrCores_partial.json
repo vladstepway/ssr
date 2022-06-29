@@ -1,0 +1,101 @@
+{
+  "metaDict": {
+    "nick": "SearchSolrCores",
+    "name": "Ядра SOLR",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Название ядра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "description",
+        "name": "Описание ядра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальное",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "cdb900c7-bc1f-4269-9f62-bcaa94b9398b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c2a17564-577f-4878-ae0b-b78e5b5dbcf4",
+          "nickAttr": "code",
+          "value": "ugd_ssr_ssr_cco",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bac89fbd-bffe-4650-91b3-90b1d24897e0",
+          "nickAttr": "description",
+          "value": "Поиск ОКС в системе ССР",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "19b9031e-fa92-4261-b640-34949721dbda",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "27912a54-1440-4e46-a781-de9c7b94abce",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

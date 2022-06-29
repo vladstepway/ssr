@@ -1,0 +1,222 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "9a0adf4e-8071-4a69-90a5-167783d658b9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "943f470f-f9b7-496b-a7f1-29aff13727cf",
+          "nickAttr": "code",
+          "value": "UGD_SSR_NOTARY-COMPENSATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "26ec4c3b-ac87-487f-bc4e-764854cfd486",
+          "nickAttr": "fields",
+          "value": "8a8307bf-2d34-4854-aac0-96d9a0c2f24e",
+          "orders": 0,
+          "linkCode": "ugd_ssr_notary_compensation_date_time"
+        },
+        {
+          "attrId": "4980d4ad-42fb-40bf-b842-e0f8381c025d",
+          "nickAttr": "fields",
+          "value": "12d5c983-c198-4f63-919c-39f70138698b",
+          "orders": 1,
+          "linkCode": "ugd_ssr_notary_compensation_eno"
+        },
+        {
+          "attrId": "eae7830a-fbbe-40e8-b574-c3d32823fba4",
+          "nickAttr": "fields",
+          "value": "1c1acea6-9397-44b1-930a-dbcf3b4c21ba",
+          "orders": 2,
+          "linkCode": "ugd_ssr_notary_compensation_applicant_full_name"
+        },
+        {
+          "attrId": "29a19726-520c-46a7-a4b4-fa1fcdd2feaf",
+          "nickAttr": "fields",
+          "value": "c9a726af-0e06-4ecb-a1ff-96ff86c80b03",
+          "orders": 3,
+          "linkCode": "ugd_ssr_notary_compensation_owners_full_name"
+        },
+        {
+          "attrId": "3a738544-bbb8-4c42-bb9a-a51a312a758b",
+          "nickAttr": "fields",
+          "value": "b835e0a9-51ed-438e-a234-af7b7cbdc163",
+          "orders": 4,
+          "linkCode": "ugd_ssr_notary_compensation_status"
+        },
+        {
+          "attrId": "f19ca5fb-1434-43ee-bcc5-dfc78105d8ab",
+          "nickAttr": "name",
+          "value": "Реестр заявлений на возмещение оплаты услуг нотариуса",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5cce1a02-6273-4902-9dd3-7757ba2ad9ef",
+          "nickAttr": "solrCore",
+          "value": "4de2b93e-0dcc-4e20-aeec-75c64a018015",
+          "orders": 0,
+          "linkCode": "ugd_ssr_notary_compensation"
+        },
+        {
+          "attrId": "265f77f8-3523-4e78-a719-d42839e0969e",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "767b43f2-328f-46ca-bd36-e69229df6394",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "c1b0191e-a753-4c05-924c-02567a0580a7",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

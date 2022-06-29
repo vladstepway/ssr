@@ -1,0 +1,112 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_interagencyInteractionEvent",
+    "name": "События межведомственных взаимодействий",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "initiator",
+        "name": "Инициатор",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "4d0b9451-cc64-4225-87b5-724ffdee093a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0435b97d-efd6-4092-811a-631b72a121a7",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPSignActStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2cdb286d-e63b-4269-9503-cf067db35ca4",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6293c094-cfe8-47e9-b457-78a6fca7adf6",
+          "nickAttr": "name",
+          "value": "Сведения о подписанном акте приема-передачи жилого помещения",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "15d13c33-ec8a-497e-a1c5-3345d1a2a6a2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5f9533e2-daba-4110-94cd-3ac62260e247",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPContractPrReady",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "98590ae7-9968-44c4-bc24-2eaef9ee2494",
+          "nickAttr": "initiator",
+          "value": "ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6c99cb56-463a-4174-8fc8-179600619526",
+          "nickAttr": "name",
+          "value": "Сведения о готовности проекта договора для ознакомления",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+swagger: '2.0'
+info:
+  description: |
+    ССР. Сервис для записи на осмотр квартиры.
+  version: 1.0.0
+  title: SSR Flat Appointment
+schemes:
+  - http
+
+paths:
+  /flat-appointments/check:
+    get:
+      summary: Выполнение проверок и получение сведений о жильцах для записи
+      operationId: checkPerson
+      tags:
+        - FlatAppointment
+      produces:
+        - application/json
+      parameters:
+        - name: snils
+          in: query
+          description: СНИЛС, пример 001-198-166 10
+          required: true
+          type: string
+        - name: ssoId
+          in: query
+          description: ssoId, пример cd4b6f7c-81d6-45ea-bf3f-e73c0750f84b
+          required: true
+          type: string
+      responses:
+        200:
+          description: Результат проверки и сведения о жильцах и помещениях
+          schema:
+            $ref: '#/definitions/FlatAppointmentPersonCheck'
+        400:
+          description: Данные запроса невалидны
+  /flat-appointments:
+    get:
+      summary: Получение данных по заявлению
+      operationId: fetchByEno
+      tags:
+        - FlatAppointment
+      produces:
+        - application/json
+      parameters:
+        - name: eno
+          in: query
+          description: ЕНО
+          required: true
+          type: string
+      responses:
+        200:
+          description: Данные по заявлению
+          schema:
+            $ref: '#/definitions/FlatAppointment'
+        400:
+          description: Отсутствует заявление по указанному ЕНО
+  /flat-appointments/timetable:
+    get:
+      summary: Получение доступной сетки расписания для записи
+      operationId: fetchTimetable
+      tags:
+        - FlatAppointment
+      produces:
+        - application/json
+      parameters:
+        - name: cipId
+          in: query
+          description: Идентификатор ЦИПа
+          required: true
+          type: string
+        - name: days
+          in: query
+          description: Количество дней для вывода сетки расписания
+          required: false
+          type: integer
+          default: 7
+        - name: startFrom
+          in: query
+          description: Дата начала диапозона сетки расписания
+          required: false
+          type: string
+          format: date
+      responses:
+        200:
+          description: Сетка расписания
+          schema:
+            $ref: '#/definitions/FlatAppointmentTimetable'
+        400:
+          description: Данные запроса невалидны
+  /flat-appointments/prebook:
+    post:
+      summary: Предбронирование интервала времени
+      operationId: prebookSlot
+      tags:
+        - FlatAppointment
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Информация о выбранном интервале
+          required: true
+          schema:
+            $ref: '#/definitions/FlatAppointmentPrebookRequest'
+      responses:
+        200:
+          description: Результат предбронированния интервала времени
+          schema:
+            $ref: '#/definitions/FlatAppointmentPrebookResponse'
+        400:
+          description: Данные запроса невалидны
+  /flat-appointments/book:
+    post:
+      summary: Бронирование интервала времени
+      operationId: bookSlot
+      tags:
+        - FlatAppointment
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Информация о предбронированном интервале времени
+          required: true
+          schema:
+            $ref: '#/definitions/FlatAppointmentBookRequest'
+        - name: flatAppointmentDocumentId
+          in: query
+          description: Идентификатор документа, используется для переноса осмотра квартиры внутри ССР
+          required: false
+          type: string
+      responses:
+        200:
+          description: Результат бронирования
+        400:
+          description: Данные запроса невалидны
+definitions:
+  FlatAppointmentPersonCheck:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина по которой невозможно предоставить услугу
+      apartments:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/FlatAppointmentApartment'
+    required: [ isPossible ]
+  FlatAppointmentApartment:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина по которой невозможно предоставить услугу
+      personDocumentId:
+        type: string
+        description: Идентификатор документа жителя в системе ССР к которому относится письмо с предложением на квартиру
+      letter:
+        $ref: '#/definitions/FlatAppointmentLetter'
+        description: Письмо с предложением
+      cip:
+        $ref: '#/definitions/FlatAppointmentCip'
+        description: ЦИП
+      invitedApplicants:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/FlatAppointmentApplicant'
+    required: [ isPossible ]
+  FlatAppointmentCip:
+    type: object
+    properties:
+      id:
+        type: string
+        description: id
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      address:
+        type: string
+        description: Адрес
+        example: Мытищи, Шараповский проезд, дом 2, строение 3й
+      phone:
+        type: string
+        description: Телефон
+        example: +7985478532
+      startDate:
+        type: string
+        format: date
+        description: Дата начала работы ЦИП
+      slotsAllowed:
+        type: integer
+        maximum: 3
+        description: Допустимое количество последовательных слотов для бронирования (до 3х)
+        example: 3
+    required: [ address ]
+  FlatAppointmentLetter:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Идентификатор письма
+        example: 1556-963
+      fileLink:
+        type: string
+        description: Ссылка на письмо в ЦХЭД
+    required: [ id, fileLink ]
+  FlatAppointmentApplicant:
+    type: object
+    properties:
+      ssoId:
+        type: string
+        description: SSOID
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      lastName:
+        type: string
+        description: Фамилия
+        example: Иванов
+      firstName:
+        type: string
+        description: Имя
+        example: Иван
+      middleName:
+        type: string
+        description: Отчество
+        example: Иванович
+      dob:
+        type: string
+        format: date
+        description: Дата рождения
+    required: [ lastName, firstName, dob ]
+  FlatAppointment:
+    type: object
+    properties:
+      letter:
+        $ref: '#/definitions/FlatAppointmentLetter'
+        description: Письмо с предложением
+      cip:
+        $ref: '#/definitions/FlatAppointmentCip'
+        description: ЦИП
+      bookingId:
+        type: string
+        description: Идентификатор бронии интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      appointmentDateTime:
+        type: string
+        format: date-time
+        description: Дата и время осмотра
+    required: [ letter, cip, bookingId, appointmentDateTime ]
+  FlatAppointmentTimetable:
+    type: object
+    properties:
+      timetable:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/FlatAppointmentSlot'
+    required: [ timetable ]
+  FlatAppointmentSlot:
+    type: object
+    properties:
+      slotId:
+        type: string
+        description: Идентификатор интервала записи
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      timeFrom:
+        type: string
+        format: date-time
+      timeTo:
+        type: string
+        format: date-time
+    required: [ slotId, timeFrom, timeTo ]
+  FlatAppointmentPrebookRequest:
+    type: object
+    properties:
+      letterId:
+        type: string
+        description: Идентификатор письма с предложением
+      slotId:
+        type: string
+        description: Идентификатор начального интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      slotNumber:
+        type: string
+        default: 1
+        description: Количество последовательных слотов выбранных для бронирования, начиная с начального интервала
+    required: [ slotId, letterId ]
+  FlatAppointmentPrebookResponse:
+    type: object
+    properties:
+      bookingId:
+        type: string
+        description: Идентификатор брони интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+    required: [ bookingId ]
+  FlatAppointmentBookRequest:
+    type: object
+    properties:
+      bookingId:
+        type: string
+        description: Идентификатор брони интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+    required: [ bookingId ]

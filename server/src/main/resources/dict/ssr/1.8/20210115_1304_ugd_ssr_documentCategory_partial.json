@@ -1,0 +1,63 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_documentCategory",
+    "name": "Категория документа",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "79135c90-493c-4d35-b9d8-705a49caebed",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1da4a374-af9e-4009-8d74-183d7e51d9d5",
+          "nickAttr": "code",
+          "value": "14",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f5c2f530-508f-479b-9a27-74269b3b051c",
+          "nickAttr": "name",
+          "value": "Иной документ",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

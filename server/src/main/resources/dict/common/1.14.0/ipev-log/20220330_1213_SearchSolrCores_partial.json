@@ -1,0 +1,101 @@
+{
+  "metaDict": {
+    "nick": "SearchSolrCores",
+    "name": "Ядра подсистемы поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Справочник предназначен для регистрации созданных ядер подсистемы поиска Инструкция по работе со справочником - https://smart.mos.ru/wiki/pages/viewpage.action?pageId=11763769",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Название ядра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - кодсистемы_краткийкодподсистемы_кодядра",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "description",
+        "name": "Описание ядра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Системы\"",
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальное",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": " Виртуальное ядро - это ядро, которое не существует в Solr и используется только для виртуальных типов документов",
+        "orders": 3,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "07c45e88-667c-45bd-8374-144ce58fc4b5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d7a741b3-b362-423c-a178-5aac54d1834b",
+          "nickAttr": "code",
+          "value": "ugd_ssr_ipev_log",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ff9bef2a-06ae-4dd3-adf3-5beaab57890d",
+          "nickAttr": "description",
+          "value": "Поиск журнала обмена с ИПЭВ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "50cfb388-99af-477e-ad2a-f899119bad4d",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "afaf94fc-51a3-4362-b7a6-fb0f4a80941c",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

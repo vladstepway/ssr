@@ -1,0 +1,293 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_notary_compensation_statuses",
+    "name": "Статусы реестра заявлений на возмещение оплаты услуг нотариуса",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "status_name",
+        "name": "Текстовое значение статуса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "3548ebc2-6d03-45f8-be67-6e7f445c3a77",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b376aeff-2996-4fbe-97f7-d8e18f692eab",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fb7d7d4b-ebb0-4a82-bfd2-5089cb6773d6",
+          "nickAttr": "status_name",
+          "value": "Требуется получение согласия правообладателей",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1fcb94b3-d394-49b3-b62e-bbbb35c8f666",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2010aae1-7370-4b7e-81ec-bdc25b3ca35b",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ed218d84-09e0-4771-91ec-84d03489e77d",
+          "nickAttr": "status_name",
+          "value": "Заявление на рассмотрении",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c9c32611-60c0-4589-8d74-295b6c3df6d2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e007bd8c-75bc-48cd-913e-49c16294ed2a",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cd0e1023-373c-4d41-ba8a-642c1f8c72d4",
+          "nickAttr": "status_name",
+          "value": "Заявление отозвано",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "61c5dfb5-b0af-42c1-a333-523bc36fb4a5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "19c1ed72-8412-41de-9029-90272dbae230",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "476bc029-5784-4992-9eb4-fb12f4e19f10",
+          "nickAttr": "status_name",
+          "value": "Отказ в предоставлении услуги",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "bbda00d1-8d1d-4be2-ab13-f54f14661c98",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "74926e7f-edb9-4683-ad54-c7e497065669",
+          "nickAttr": "code",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e063b5bd-f016-47c4-a5de-c6370bbd436b",
+          "nickAttr": "status_name",
+          "value": "Услуга оказана. Решение положительное",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3630486e-5144-4f50-8e17-946084140c33",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b868928a-2493-44d8-868e-73b089d3f290",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "433c971d-f260-4fd3-a110-1649f323b2d9",
+          "nickAttr": "status_name",
+          "value": "Отказ в регистрации заявления. Некорректная подпись заявителя.",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "537cae20-e5df-41c5-a764-04d10563f9cf",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e71e07b5-11f7-4304-8526-0ab75fb09673",
+          "nickAttr": "code",
+          "value": "8",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d30f435d-ac5c-4d7f-9f06-be7cf2b7f6f9",
+          "nickAttr": "status_name",
+          "value": "Отказ в регистрации заявления. Истек срок предоставления согласия.",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7d88dfdf-af8b-40ed-a149-a6e03effc24a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "738c50a6-63f2-4ad3-9a02-2dccf0a75f11",
+          "nickAttr": "code",
+          "value": "9",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ac8fc8b7-9cb5-4ff8-aca2-fa52a66e905c",
+          "nickAttr": "status_name",
+          "value": "Отказ в регистрации заявления. Некорректная подпись правообладателя.",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "734fd06b-c67e-469a-b12d-411e6b64b7e5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "96d47c01-207e-4b31-af4a-5fee34f9e0ec",
+          "nickAttr": "code",
+          "value": "10",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f0ebdad2-9418-40c1-bcf5-801c0873ed1c",
+          "nickAttr": "status_name",
+          "value": "Отказ в регистрации заявления. Отказ правообладателя по заявлению.",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9c7e6726-d3ad-4234-9a85-20ddff97d8b0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2f29dfb6-0545-4af6-94a9-712dd3aa0db3",
+          "nickAttr": "code",
+          "value": "11",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e9b47fa6-464f-4ef8-afb7-d48f44a62092",
+          "nickAttr": "status_name",
+          "value": "Заявление отозвано",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "17f9459d-3d84-4b60-ab4f-7f67fb6334b7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d324b4ac-f02b-4566-ba75-6b998f61bbb9",
+          "nickAttr": "code",
+          "value": "7",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "59e710ad-98c2-4407-a911-2d2c394d8b1b",
+          "nickAttr": "status_name",
+          "value": "Денежные средства не выплачены",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

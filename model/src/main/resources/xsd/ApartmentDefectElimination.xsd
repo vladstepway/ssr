@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr"
+           targetNamespace="http://www.ugd.croc.ru/ssr">
+    <xs:complexType name="ApartmentDefectElimination">
+        <xs:annotation>
+            <xs:documentation>Данные об устранении дефекта</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eliminationDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Плановый срок устранения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="eliminationDateComment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина изменения планового срока устранения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="itemRequired" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Требуется заказная позиция</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="itemRequiredComment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина необходимости заказной позиции</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isNotDefect" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Не дефект</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="notDefectComment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий к признаку "Не дефект"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

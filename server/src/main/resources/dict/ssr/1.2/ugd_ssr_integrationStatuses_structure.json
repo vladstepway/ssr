@@ -1,0 +1,39 @@
+{
+  "metaDict": {
+	"nick": "ugd_ssr_integrationStatuses",
+	"name": "Статусы интеграции",
+	"context": "SYSTEM",
+	"hierarchyDict": 0,
+	"deleted": 0,
+	"sysName": "UGD_SSR",
+	"note": null,
+	"transfer": 0,
+	"metaAttr": [
+	  {
+		"nick": "code",
+		"name": "Код",
+		"typeAttr": "string",
+		"nickDictLink": null,
+		"arrayAttr": 0,
+		"required": 1,
+		"deleted": 0,
+		"note": null,
+		"orders": 0,
+		"unique": 1
+	  },
+	  {
+		"nick": "name",
+		"name": "Наименование",
+		"typeAttr": "string",
+		"nickDictLink": null,
+		"arrayAttr": 0,
+		"required": 1,
+		"deleted": 0,
+		"note": null,
+		"orders": 1,
+		"unique": 1
+	  }
+	]
+  },
+  "elements": null
+}

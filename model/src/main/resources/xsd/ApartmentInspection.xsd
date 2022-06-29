@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr"
+           targetNamespace="http://www.ugd.croc.ru/ssr">
+    <xs:include schemaLocation="ApartmentDefectType.xsd"/>
+    <xs:include schemaLocation="ApartmentDefectElimination.xsd"/>
+    <xs:include schemaLocation="IntegrationLogData.xsd"/>
+    <xs:include schemaLocation="WorkConfirmationFile.xsd"/>
+    <xs:element name="ApartmentInspection">
+        <xs:annotation>
+            <xs:documentation>Акт осмотра квартиры</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="ApartmentInspectionData" type="ApartmentInspectionType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ApartmentInspectionType">
+        <xs:annotation>
+            <xs:documentation>Сведение о акте осмотра квартиры</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="commissionInspectionId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор заявления на комиссионный осмотр</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstVisitDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Согласованная дата и время осмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="secondVisitDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Согласованная дата и время повторного осмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actNum" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Уном</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flat" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Квартира</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letterId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Id последнего письма при создании акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cipId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Id ЦИП при создании акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personID" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID Жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resettlementType" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Вид переселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartmentDefects" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Дефекты квартиры</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ApartmentDefectData" type="ApartmentEliminationDefectType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="excludedApartmentDefects" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Дефекты квартиры, исключенные из списка дефектов</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ApartmentDefectData" type="ApartmentEliminationDefectType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="defectExclusionReason" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина исключения дефектов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signedActFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID акта первичного осмотра в filestore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signedActChedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID акта первичного осмотра в ЦХЭДе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="generalContractors" type="OrganizationInformation" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Генеральные подрядчики</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="developers" type="OrganizationInformation" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Застройщики</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="filingDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время подачи акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="delayReason" type="DelayReasonData" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Данные по переносам</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="defectsEliminatedNotificationDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата отправления уведомления об устранении дефектов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="hasConsent" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Получено согласие/отказ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="hasDefects" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Обнаружены дефекты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="acceptedDefectsDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата принятия устранения дефектов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="acceptedDefectsActFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID акта принятых устранений дефектов в filestore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="acceptedDefectsActChedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID акта принятых устранений дефектов в ЦХЭДе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatRefusalDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата отказа от квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processInstanceId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID запущенного процесса для текущего документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isRemoved" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Акт закрыт принудительно</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pending" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>В ожидании события(создания акта, подтверждения времени осмотра)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actClosureReasonCode" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Код причины закрытия акта (справочник ugd_ssr_actClosureReason)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actClosureReasonComment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий к причине закрытия акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pendingActClosureReasonCode" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Код причины закрытия акта (в ожидании подтверждения закрытия без согласия)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pendingActClosureReasonComment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий к причине закрытия акта (в ожидании подтверждения закрытия без
+                        согласия)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="integrationLog" type="IntegrationLog" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Лог межведомственной интеграции</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useDefectEliminationFlows" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Включена отправка потоков</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="workConfirmationFiles" type="WorkConfirmationFile" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Файлы документов, подтверждающих проделанную работу (об устранении дефектов)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="closingInitiatorLogin" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Логин сотрудника, инициировавшего создание задачи на подтверждение закрытия акта
+                        без согласия жителя
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ApartmentEliminationDefectType">
+        <xs:annotation>
+            <xs:documentation>Дефект с возможностью устранения</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="ApartmentDefectType">
+                <xs:sequence>
+                    <xs:element name="id" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>ИД дефекта</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="isEliminated" type="xs:boolean">
+                        <xs:annotation>
+                            <xs:documentation>Устранен ли дефект</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="isBlocked" type="xs:boolean">
+                        <xs:annotation>
+                            <xs:documentation>Заблокирован (существуют изменения по дефекту, отправленные на
+                                согласование)
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="eliminationData" type="ApartmentDefectElimination">
+                        <xs:annotation>
+                            <xs:documentation>Данные об устранении дефекта</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="DelayReasonData">
+        <xs:annotation>
+            <xs:documentation>Причины переносов</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="delayReasonText" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Текст причины переноса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="delayDate" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата переноса сроков</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="OrganizationInformation">
+        <xs:annotation>
+            <xs:documentation>Информация об организации (например застройщик или подрядчик)</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="externalId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Внешнее ID организации</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="orgFullName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Полное название организации</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isAssigned" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Назначена ли организация на исполнение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

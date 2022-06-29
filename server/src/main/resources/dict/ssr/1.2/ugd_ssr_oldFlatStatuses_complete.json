@@ -1,0 +1,316 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_oldFlatStatuses",
+    "name": "Статусы квартиры в расселяемом доме",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "e60bcb6c-f9cb-4030-8a9d-94eb906c036c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "25af9e2e-57ca-4761-a0f5-46be6a457d1f",
+          "nickAttr": "code",
+          "value": "01",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7e50b76b-92af-45e1-9f0f-082a21e1e15f",
+          "nickAttr": "name",
+          "value": "Не определен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "cd078e8e-7072-41b7-a4d3-bbaa46ee2484",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "325d0e44-69a1-4ac0-9117-c5a48774c619",
+          "nickAttr": "code",
+          "value": "02",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c940302-047c-47e9-8dda-6f8a186ffdac",
+          "nickAttr": "name",
+          "value": "Заселена",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f7a75443-5533-46df-af87-e7654ecf2b4b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3b4c7b30-cc32-4431-b5c1-bd4ddf178dac",
+          "nickAttr": "code",
+          "value": "03",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bcbb1632-d45d-4634-ab12-b420aae70670",
+          "nickAttr": "name",
+          "value": "Свободна",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8012809f-456b-45d6-8f58-a15722781a3e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1b79aec5-3e3c-4b4a-97f9-9b26ac16b672",
+          "nickAttr": "code",
+          "value": "04",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aa6130af-0c87-4262-8ac2-df6809ba66de",
+          "nickAttr": "name",
+          "value": "Освобождена",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ca23373a-38a7-4aba-b6db-32c5c89e6275",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9797eb28-c9ec-4f05-af17-a6b6966598eb",
+          "nickAttr": "code",
+          "value": "05",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "556123ba-ed22-4292-93e5-f9d0c7c05209",
+          "nickAttr": "name",
+          "value": "Выморочная",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5adf56ed-28b9-4cec-a16f-9c8cb2090aef",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7cbd1f1a-136f-4e8b-8619-458af27f10fe",
+          "nickAttr": "code",
+          "value": "06",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3f5a3a38-bf9d-48b4-b2d1-9e44cbc840bf",
+          "nickAttr": "name",
+          "value": "Коммунальная квартира",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0c8e22ca-8e5c-4a65-9123-f292d1ce75a1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bc83c273-994b-4a43-ac55-1cf94a37c6b0",
+          "nickAttr": "code",
+          "value": "07",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "26c7818d-4d97-4d52-8fb4-a9cd25ded7f5",
+          "nickAttr": "name",
+          "value": "Собственность города",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7018d065-16ff-48f3-88ad-d11802ee21a7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b67d14e6-fec9-4147-b5b1-d6e89b6b1c08",
+          "nickAttr": "code",
+          "value": "08",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f2084260-d002-4397-ad40-e6e20866aad8",
+          "nickAttr": "name",
+          "value": "Выплата компенсации (нежилое помещение)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3860fd8e-80b3-4112-8d65-f3e43445147a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "846927d5-415f-4ce9-9a77-aaabdfad804e",
+          "nickAttr": "code",
+          "value": "09",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cb786a76-7214-4689-8536-70b34179b24e",
+          "nickAttr": "name",
+          "value": "Служебная квартира",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6b2545aa-de94-4426-8e33-ba4c7187df5a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "976946b6-f2d0-4bb6-b67b-0fd5c842eec0",
+          "nickAttr": "code",
+          "value": "10",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "84b5d031-a922-45d4-8d15-b3d7810f38bf",
+          "nickAttr": "name",
+          "value": "Квартира для детей-сирот",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "73c73ea6-85ac-4acc-af1d-bf641bf4285a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b061c5a0-39b2-4875-9a6c-0cfe90f431a8",
+          "nickAttr": "code",
+          "value": "11",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "73788a71-8163-4927-97ac-646fbda7f782",
+          "nickAttr": "name",
+          "value": "Соц. найм",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "18957090-b205-4689-be71-9dd08df65203",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7eccf1b2-4df2-4d25-9a9a-d02ac70bbebf",
+          "nickAttr": "code",
+          "value": "12",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "af5e0841-e1fa-4b70-903c-ce314f514109",
+          "nickAttr": "name",
+          "value": "Свободна (документы оформлены)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

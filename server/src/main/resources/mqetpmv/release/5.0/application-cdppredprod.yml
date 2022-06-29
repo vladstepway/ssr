@@ -1,0 +1,102 @@
+mqetpmv:
+  etp-profiles:
+    UGD_PERSON_RESPONSE_INC:
+      message-type: UGD_PERSON_RESPONSE_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.UGD.PERSONS_RES
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_PERSON_UPDATE_INC:
+      message-type: UGD_PERSON_UPDATE_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.UGD.PERSONS_UPD_REQ
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_OFFER_LETTER_INC:
+      message-type: UGD_OFFER_LETTER_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.UGD.LETTERS_REQ
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_STATUS_RELOCATION_INC:
+      message-type: UGD_STATUS_RELOCATION_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.UGD.RELOCATION_REQ
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_CONTRACT_READY_INC:
+      message-type: UGD_CONTRACT_READY_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.APT_DRAFT
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_CONTRACT_SIGNED_INC:
+      message-type: UGD_CONTRACT_SIGNED_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.APT_COURT
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_CONTRACT_REGISTER_INC:
+      message-type: UGD_CONTRACT_REGISTER_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.APT_REG
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_INFO_SETTLEMENT_INC:
+      message-type: UGD_INFO_SETTLEMENT_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.APT_FLAT
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_CONTRACT_PR_READY_INC:
+      message-type: UGD_CONTRACT_PR_READY_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.APT_DRAFTTWO
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_ADMINISTRATIVE_DOCUMENT_INC:
+      message-type: UGD_ADMINISTRATIVE_DOCUMENT_INC
+      inbound: true
+      queue-manager: PPROD01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.APT_ADMINISTRATIVE
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *

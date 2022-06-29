@@ -1,0 +1,394 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_flatAppointmentChangelogAttributes",
+    "name": "Атрибуты для журнала изменений записи на осмотр квартиры",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "title",
+        "name": "Заголовок",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "beanName",
+        "name": "Наименование бина для обработки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "isComplexPath",
+        "name": "Путь комплексный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "045c2811-b129-4d96-816e-77f369a281da",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "eda4aef8-97a1-4751-a20d-adece6a83bc3",
+          "nickAttr": "beanName",
+          "value": "flatAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6ba11b9e-c378-4d89-aa3f-b3e0d96f9fd3",
+          "nickAttr": "code",
+          "value": "/flatAppointment/flatAppointmentData/statusId",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ef0a5464-cfea-4781-a83d-ccfd0aa382d5",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f11d50e3-e4cc-48c3-89e7-933167fa8f0f",
+          "nickAttr": "name",
+          "value": "Статус",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dfb16969-0824-4ede-bed6-f850eb8174ba",
+          "nickAttr": "title",
+          "value": "Статус",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e02d3716-a4f9-4fc8-a24d-7f351a748049",
+          "nickAttr": "type",
+          "value": "status",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "42d20332-482b-4679-b187-0e44d47242b6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bfb1c6c2-1a3d-42dd-9715-1f42d2ab763b",
+          "nickAttr": "beanName",
+          "value": "flatAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e02034af-bc8a-4e3f-b24c-625712883c6c",
+          "nickAttr": "code",
+          "value": "/flatAppointment/flatAppointmentData/participantSummary",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "548be6ed-04ca-46f9-bce7-a413f8b8f1bd",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "da800e0b-ae73-4523-bf78-4d15b94ecea8",
+          "nickAttr": "name",
+          "value": "Участники осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f11d6599-ebc6-4047-a025-9ac548911770",
+          "nickAttr": "title",
+          "value": "Участники осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "81db4126-7469-4a55-af3f-b3402b91165d",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "118a080c-96b7-45ae-98ea-4a13578f97aa",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0ee44306-614f-4080-bb46-fa6452af2abb",
+          "nickAttr": "beanName",
+          "value": "flatAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "af84fcc6-ef3a-4dbb-86f3-e200f1853a61",
+          "nickAttr": "code",
+          "value": "/flatAppointment/flatAppointmentData/cancelReason",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d6ca1588-fdfe-4569-b761-dcba2515ecd7",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "265e19be-a50a-4fbb-a9b6-c3e1851f50b8",
+          "nickAttr": "name",
+          "value": "Причина отмены",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "137dcbe6-936f-464c-8ea1-8c8e6a858cae",
+          "nickAttr": "title",
+          "value": "Причина отмены",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bc6ee8b3-6edd-4729-8589-e7364f638a36",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "39a64fca-90d3-4b5b-a533-6269f433c87d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6ab354cc-c435-4486-9c65-50ea8c8a7eff",
+          "nickAttr": "beanName",
+          "value": "flatAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6e1775a2-100f-48f7-9532-a5056b570783",
+          "nickAttr": "code",
+          "value": "/flatAppointment/flatAppointmentData/appointmentDateTime",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d23ff7ad-105f-47de-b554-46758eee3a04",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d3dc72a-1a15-4601-a2a7-be6875209a7f",
+          "nickAttr": "name",
+          "value": "Плановая дата осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e5f5a565-3eb6-4cd1-a6c1-cb99237dde07",
+          "nickAttr": "title",
+          "value": "Плановая дата осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3c1d878e-bace-4b34-8644-81cdc2366a64",
+          "nickAttr": "type",
+          "value": "datetime",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4c344f31-02a4-4514-a753-eed6fff4dbad",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ced51c68-b652-499c-a643-a04ba6cf6c41",
+          "nickAttr": "beanName",
+          "value": "flatAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "db374423-86e9-4c72-ab07-c03bb2164747",
+          "nickAttr": "code",
+          "value": "/flatAppointment/flatAppointmentData/actualDemoDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f0df9709-69ed-4b4c-952a-8ea740e3c800",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "94db965c-f1ff-4c0d-9fba-c1a45038a52f",
+          "nickAttr": "name",
+          "value": "Дата осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "46710e21-1a82-44c3-8673-6b8d24d4e36b",
+          "nickAttr": "title",
+          "value": "Дата осмотра",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9e1070fd-e3a3-4d54-a44b-ee533e533bf2",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e3cc6375-69b0-4f6d-a64b-23a5f1a51e30",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "62523f77-ad0f-4671-9b84-c6937b0e7a75",
+          "nickAttr": "beanName",
+          "value": "flatAppointmentChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "72491786-6feb-4092-9d03-cc7b6d817063",
+          "nickAttr": "code",
+          "value": "/flatAppointment/flatAppointmentData/annotation",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f4dd0521-7c38-4fba-a33b-c62706d3adf0",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2b4005a6-c84d-4073-8c34-10233a17ad9a",
+          "nickAttr": "name",
+          "value": "Примечание",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d13d2474-1600-48d4-94d1-ecb1cf9ec9e8",
+          "nickAttr": "title",
+          "value": "Примечание",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3c01209e-23f0-49cc-a986-7a9e6c4fbc36",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

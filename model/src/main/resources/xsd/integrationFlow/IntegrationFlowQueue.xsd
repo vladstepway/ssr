@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/integrationFlow"
+           targetNamespace="http://www.ugd.croc.ru/ssr/integrationFlow"
+           elementFormDefault="qualified">
+    <xs:include schemaLocation="IntegrationFlowType.xsd"/>
+    <xs:element name="IntegrationFlowQueue">
+        <xs:annotation>
+            <xs:documentation>Сообщение во внутренней очереди, отвечающее за обработку поточного сообщения
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="integrationFlowQueueData" type="IntegrationFlowQueueData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="IntegrationFlowQueueData">
+        <xs:annotation>
+            <xs:documentation>Сведения о сообщении во внутренней очереди</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="integrationFlowDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор поточного сообщения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="eno" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ЕНО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flowType" type="IntegrationFlowType">
+                <xs:annotation>
+                    <xs:documentation>Тип потока</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="enoMessage" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Часть поточного сообщения, которая относится к ЕНО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processingPostponed" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Обработка сообщения отложена</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="createdAt" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время создания документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

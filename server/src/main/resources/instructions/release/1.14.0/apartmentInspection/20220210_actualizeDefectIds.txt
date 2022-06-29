@@ -1,0 +1,7 @@
+Заполнение идентификаторов дефектов:
+
+ 1) Открыть https://you_domain.ru/app/ugd/ssr/swagger-ui.html#/apartment-inspection-controller
+ 2) Выбрать POST /apartment-inspections/actualize-defect-ids
+ 3) Нажать Try it out
+ 4) Нажать Execute
+ 6) Проверить, что статус код 200

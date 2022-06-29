@@ -1,0 +1,1064 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "68997a97-3c0e-4a36-a670-5d3044ea8c7a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5acc4937-9835-4c24-927d-e3905d448fb6",
+          "nickAttr": "code",
+          "value": "UGD_SSR_CIP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "90681cac-eccd-4e01-83f3-083c01423653",
+          "nickAttr": "fields",
+          "value": "3ceff1e6-b961-4ae1-9527-dd8c2bcfd038",
+          "orders": 0,
+          "linkCode": "ugd_ssr_cip_code"
+        },
+        {
+          "attrId": "24f9c848-4bb3-4016-baa5-c62f48f88560",
+          "nickAttr": "fields",
+          "value": "3fd9b410-8ba5-47ba-995f-b466dec023b8",
+          "orders": 1,
+          "linkCode": "ugd_ssr_cip_address"
+        },
+        {
+          "attrId": "3405107f-47d2-44c9-ad3e-3ff93ea863a0",
+          "nickAttr": "fields",
+          "value": "7d1c97b4-92b3-4b2f-8131-b3f7156c3da2",
+          "orders": 2,
+          "linkCode": "ugd_ssr_cip_phone"
+        },
+        {
+          "attrId": "3537c5b0-fa75-42b0-876b-83f7bdfaaa44",
+          "nickAttr": "fields",
+          "value": "87b3a957-3a14-4244-a912-8a5856a98b15",
+          "orders": 3,
+          "linkCode": "ugd_ssr_cip_start_date"
+        },
+        {
+          "attrId": "b88cf8a9-0eee-4500-8ae1-d69818b4415e",
+          "nickAttr": "fields",
+          "value": "a85df45d-91f5-4273-90a3-ea0a62618514",
+          "orders": 4,
+          "linkCode": "ugd_ssr_cip_end_date"
+        },
+        {
+          "attrId": "fb4a52ca-6ca6-4c6c-ae9c-5e072c5c8fd5",
+          "nickAttr": "fields",
+          "value": "73ffe453-4d54-4b3e-b42d-f55e8a4d647b",
+          "orders": 5,
+          "linkCode": "ugd_ssr_cip_del_reason"
+        },
+        {
+          "attrId": "d0eab607-9f7d-4293-9659-782b514a573c",
+          "nickAttr": "fields",
+          "value": "8b004e29-0c0c-479f-88ad-257cec2c1612",
+          "orders": 6,
+          "linkCode": "ugd_ssr_cip_area"
+        },
+        {
+          "attrId": "cd0db625-2b93-4dff-b5d0-7f9d8ebc67d1",
+          "nickAttr": "fields",
+          "value": "4a730ee3-02b0-4eec-aa43-e3413b681adc",
+          "orders": 7,
+          "linkCode": "ugd_ssr_cip_district"
+        },
+        {
+          "attrId": "8ef50584-69fe-45fa-aa04-9332d8dbdd75",
+          "nickAttr": "fields",
+          "value": "39ccfbb6-9c0d-421b-9ee7-208fbb3687fe",
+          "orders": 8,
+          "linkCode": "ugd_ssr_cip_work_time"
+        },
+        {
+          "attrId": "eb3ad40c-8972-419c-b5d9-09574d53ef90",
+          "nickAttr": "fields",
+          "value": "459c9ea2-08e1-4764-9cc8-f5b61ef33abf",
+          "orders": 9,
+          "linkCode": "ugd_ssr_cip_status"
+        },
+        {
+          "attrId": "d18053e3-d9ba-46b0-91e5-3f7d87041e3d",
+          "nickAttr": "fields",
+          "value": "c31c890b-7a28-4426-b2dc-b9f9e00b56fe",
+          "orders": 10,
+          "linkCode": "ugd_ssr_cip_resettelment_count"
+        },
+        {
+          "attrId": "996efde4-e0ec-401a-8e90-5b848c51ad9d",
+          "nickAttr": "fields",
+          "value": "250615f2-1e73-4798-9fe9-a1d418fd9146",
+          "orders": 11,
+          "linkCode": "ugd_ssr_cip_settelment_count"
+        },
+        {
+          "attrId": "1ff68bc8-1a57-4957-951f-2e1f8d4617ee",
+          "nickAttr": "name",
+          "value": "Центры информирования по переселению",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3e6aee9b-fdd1-48c8-a442-14f99696f070",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "97479b93-7796-4df3-afbf-acffdc34b4b5",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "86cf46b6-a05a-4ea0-bfd5-7f73bba8c072",
+          "nickAttr": "systemCode",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "2e1b9252-eae5-4cd7-b516-95dbf7d73015",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "26767d0f-1d9e-4987-9817-a4c74f2b07df",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e023e9dd-ac8f-4faf-8cf5-22ada7673743",
+          "nickAttr": "code",
+          "value": "UGD_SSR_REAL-ESTATE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a2a7dd6-ad3e-4743-8112-047b7f9ee2a4",
+          "nickAttr": "fields",
+          "value": "b5e5192b-0ea9-4c68-8bde-a319352a7a2b",
+          "orders": 0,
+          "linkCode": "ugd_ssr_real_estate_global_id"
+        },
+        {
+          "attrId": "97cc4015-e372-4eb3-b156-9ca2b807542c",
+          "nickAttr": "fields",
+          "value": "b8440d0f-e264-4f1e-ae24-692bfa3e8beb",
+          "orders": 1,
+          "linkCode": "ugd_ssr_real_estate_aid"
+        },
+        {
+          "attrId": "f853d143-29ea-4d43-970b-8e45d3bd4161",
+          "nickAttr": "fields",
+          "value": "0588bc79-9bc2-443f-8e54-6ef12c3c2d47",
+          "orders": 2,
+          "linkCode": "ugd_ssr_real_estate_settlement_p3"
+        },
+        {
+          "attrId": "41e3e975-c797-425e-9a30-acd831b4ce18",
+          "nickAttr": "fields",
+          "value": "6e652fa0-6014-4c11-9466-8f28f1e20600",
+          "orders": 3,
+          "linkCode": "ugd_ssr_real_estate_town_p4"
+        },
+        {
+          "attrId": "a8e5512d-5496-40d5-b5f4-01bdb843a4d4",
+          "nickAttr": "fields",
+          "value": "8ade23d9-e637-4ff4-8fe2-2475dd298a73",
+          "orders": 4,
+          "linkCode": "ugd_ssr_real_estate_mun_okrug_p5"
+        },
+        {
+          "attrId": "51687725-bdad-4c8c-8d58-a0b52bd2b42b",
+          "nickAttr": "fields",
+          "value": "75d0e2d5-2ac5-419a-9576-b9cf3368f3e9",
+          "orders": 5,
+          "linkCode": "ugd_ssr_real_estate_element_p7"
+        },
+        {
+          "attrId": "52702f00-92f1-49a3-8e60-9d61cf767532",
+          "nickAttr": "fields",
+          "value": "ee5782a9-eb92-4d26-970c-af792f385ceb",
+          "orders": 6,
+          "linkCode": "ugd_ssr_real_estate_house_l1_type"
+        },
+        {
+          "attrId": "15c63568-8eb1-41c2-bf8d-8ebaf695053a",
+          "nickAttr": "fields",
+          "value": "a9bde3b9-e74e-4016-8f6d-df70dbd5d038",
+          "orders": 7,
+          "linkCode": "ugd_ssr_real_estate_corp_l2_type"
+        },
+        {
+          "attrId": "becf6b69-2d0e-4b91-88ef-b0cb05ffb3c1",
+          "nickAttr": "fields",
+          "value": "b1f9716c-9632-4a0d-8952-4afce195bda7",
+          "orders": 8,
+          "linkCode": "ugd_ssr_real_estate_building_l3_value"
+        },
+        {
+          "attrId": "99bc70d3-773a-4555-ba21-b581ab2592ab",
+          "nickAttr": "fields",
+          "value": "9670d3cb-8697-4d3b-ac40-2433bccfc2a8",
+          "orders": 9,
+          "linkCode": "ugd_ssr_real_estate_n_fias"
+        },
+        {
+          "attrId": "64badb26-e061-42db-9eb6-8a518da8bfe1",
+          "nickAttr": "fields",
+          "value": "6f1b76f1-fd73-45ee-bbad-fcda616ac1fe",
+          "orders": 10,
+          "linkCode": "ugd_ssr_real_estate_nreg"
+        },
+        {
+          "attrId": "ac9b3a68-8a65-4e56-996a-ba3baa89b71d",
+          "nickAttr": "fields",
+          "value": "49083b5a-b528-4906-83c2-85c94d2e0fab",
+          "orders": 11,
+          "linkCode": "ugd_ssr_real_estate_additional_addr_document_p90"
+        },
+        {
+          "attrId": "7bcb5761-9203-4581-abba-5befece5daf9",
+          "nickAttr": "fields",
+          "value": "76b306b9-b3a4-4521-98c0-ab3e45a1c9d4",
+          "orders": 12,
+          "linkCode": "ugd_ssr_real_estate_house_l1_value"
+        },
+        {
+          "attrId": "3761e7b1-1e83-4129-80f7-3e7887ed7278",
+          "nickAttr": "fields",
+          "value": "a7e5e10b-b975-4022-a1a7-3036783e7a55",
+          "orders": 13,
+          "linkCode": "ugd_ssr_real_estate_subject_rf_p1"
+        },
+        {
+          "attrId": "7154b27c-df50-4e4b-8a5b-3eff3a146840",
+          "nickAttr": "fields",
+          "value": "fd83820c-57b5-46c3-a7ab-d5f37e33913e",
+          "orders": 14,
+          "linkCode": "ugd_ssr_real_estate_locality_p6"
+        },
+        {
+          "attrId": "87d49df2-deb6-4d17-b111-24d96353020b",
+          "nickAttr": "fields",
+          "value": "d1165616-1e94-41de-bc9f-d84914eee6e3",
+          "orders": 15,
+          "linkCode": "ugd_ssr_real_estate_refinement_addr_p91"
+        },
+        {
+          "attrId": "65cafe4a-2129-4411-9be6-f595a335dfa4",
+          "nickAttr": "fields",
+          "value": "cabd8b55-ddb8-4353-9b37-da640c4eaf2b",
+          "orders": 16,
+          "linkCode": "ugd_ssr_real_estate_corp_l2_value"
+        },
+        {
+          "attrId": "2ba60515-521c-4051-8680-c18095f44753",
+          "nickAttr": "fields",
+          "value": "01a09628-a442-4279-b5aa-5d0f2da7d900",
+          "orders": 17,
+          "linkCode": "ugd_ssr_real_estate_building_l3_type"
+        },
+        {
+          "attrId": "1c2e4de4-0cc4-43d6-bf39-489ebf4834e1",
+          "nickAttr": "fields",
+          "value": "b6d88225-a27d-4274-a0d5-e6a11944ead5",
+          "orders": 18,
+          "linkCode": "ugd_ssr_real_estate_district"
+        },
+        {
+          "attrId": "58e89538-4cd0-4ffb-b904-d3fa13fb6987",
+          "nickAttr": "fields",
+          "value": "2912361a-caf1-4dfa-b6ef-f6599e2cd0c3",
+          "orders": 19,
+          "linkCode": "ugd_ssr_real_estate_geo"
+        },
+        {
+          "attrId": "d67126be-6171-4ef8-952e-e2f6a63f7a15",
+          "nickAttr": "fields",
+          "value": "33987d65-bdc7-4e14-9614-059ebc3afd9a",
+          "orders": 20,
+          "linkCode": "ugd_ssr_real_estate_adr_type"
+        },
+        {
+          "attrId": "b730594c-c020-43e3-9e69-4d6954e087cc",
+          "nickAttr": "fields",
+          "value": "689011fd-a9bd-451a-b41a-5e076db4b68b",
+          "orders": 21,
+          "linkCode": "ugd_ssr_real_estate_vid"
+        },
+        {
+          "attrId": "771ac00c-ed38-48f0-a8f0-77b5290b7b3f",
+          "nickAttr": "fields",
+          "value": "bf698ea2-bb22-45b3-8aa8-0b7693e4f169",
+          "orders": 22,
+          "linkCode": "ugd_ssr_real_estate_sostad"
+        },
+        {
+          "attrId": "72e6e4ae-2c9c-4670-8a74-c6d77f3c3de0",
+          "nickAttr": "fields",
+          "value": "a91a9e99-2977-4201-86cd-7ba680cdea27",
+          "orders": 23,
+          "linkCode": "ugd_ssr_real_estate_cadastal_nums"
+        },
+        {
+          "attrId": "bb0e7ad8-31e2-4891-a06d-d1c1d5a64097",
+          "nickAttr": "fields",
+          "value": "b8c15ae4-8ef9-4c8e-ba04-97a5aaca5211",
+          "orders": 24,
+          "linkCode": "ugd_ssr_real_estate_status"
+        },
+        {
+          "attrId": "2a21d500-ed6e-4280-804e-c41d44c6ee59",
+          "nickAttr": "fields",
+          "value": "e0f77185-a9b1-47d1-8323-47a1951df123",
+          "orders": 25,
+          "linkCode": "ugd_ssr_real_estate_obj_type"
+        },
+        {
+          "attrId": "63cfc78c-057e-4a2c-a37f-d4e025aea5ce",
+          "nickAttr": "fields",
+          "value": "2f4f5543-54c5-4773-a90b-53a855b4f94e",
+          "orders": 26,
+          "linkCode": "ugd_ssr_real_estate_cadastal_nums_zu"
+        },
+        {
+          "attrId": "1877a31b-2963-47de-a963-c6c530acc1c6",
+          "nickAttr": "fields",
+          "value": "d6ead348-82c4-4b68-9095-8629e43ef272",
+          "orders": 27,
+          "linkCode": "ugd_ssr_real_estate_updated_from_eirz"
+        },
+        {
+          "attrId": "400c33d5-044c-4489-ae03-839665afa668",
+          "nickAttr": "fields",
+          "value": "d42a860f-889e-4e68-87c1-f72fbc625c10",
+          "orders": 28,
+          "linkCode": "ugd_ssr_real_estate_service_company"
+        },
+        {
+          "attrId": "089b4d1c-1264-4279-9c6b-58e553259e0d",
+          "nickAttr": "fields",
+          "value": "016c1bfa-0285-4760-bba4-adb4832879ac",
+          "orders": 29,
+          "linkCode": "ugd_ssr_real_estate_seria"
+        },
+        {
+          "attrId": "8e5a3ded-70bc-432a-9d5f-ecca0244f924",
+          "nickAttr": "fields",
+          "value": "ccbb0885-471b-4495-b499-f38f09276ad1",
+          "orders": 30,
+          "linkCode": "ugd_ssr_real_estate_house_year"
+        },
+        {
+          "attrId": "cd8095a7-68f7-4750-a6a7-903afc70af9c",
+          "nickAttr": "fields",
+          "value": "3ca648fc-2e3b-49b1-9b44-2b3d85d9ffc2",
+          "orders": 31,
+          "linkCode": "ugd_ssr_real_estate_resettlement_soon"
+        },
+        {
+          "attrId": "bc486737-aab8-48b7-9690-289135bbd0ff",
+          "nickAttr": "fields",
+          "value": "12a88af0-f747-4af0-ba22-9d3e357c6497",
+          "orders": 32,
+          "linkCode": "ugd_ssr_real_estate_updated_date"
+        },
+        {
+          "attrId": "cd27a6db-4cda-416e-8eda-e0dd1a123ae9",
+          "nickAttr": "fields",
+          "value": "5c30dfe4-884c-4552-9327-189be0e9ac8d",
+          "orders": 33,
+          "linkCode": "ugd_ssr_real_estate_service_company_addr_phone"
+        },
+        {
+          "attrId": "cf9b5747-c119-4d16-9a88-bc2926a7df64",
+          "nickAttr": "fields",
+          "value": "f5bcc422-642b-4018-bdcb-d32e7572c5b0",
+          "orders": 34,
+          "linkCode": "ugd_ssr_real_estate_address@@"
+        },
+        {
+          "attrId": "b0e2b849-a6f5-471c-94a6-3d27a4603929",
+          "nickAttr": "fields",
+          "value": "75354ea8-b0fd-44d0-a997-79bbb944ce3e",
+          "orders": 35,
+          "linkCode": "ugd_ssr_real_estate_updated_status"
+        },
+        {
+          "attrId": "bfb4ee52-cf0d-4f17-a4ba-2aeb051dfc65",
+          "nickAttr": "fields",
+          "value": "4b9bba5a-2f69-495d-b5ad-fcace23f1f0b",
+          "orders": 36,
+          "linkCode": "ugd_ssr_real_estate_adm_area"
+        },
+        {
+          "attrId": "3c661848-d9ae-43d2-8ffd-3cb2364394e4",
+          "nickAttr": "fields",
+          "value": "565e3bca-da58-4e18-b7e2-719886b1f5aa",
+          "orders": 37,
+          "linkCode": "ugd_ssr_real_estate_ssoid_count"
+        },
+        {
+          "attrId": "b7254555-698b-4f14-9292-fc892893d438",
+          "nickAttr": "fields",
+          "value": "5207d127-bb84-4942-835b-353bcfdad144",
+          "orders": 38,
+          "linkCode": "ugd_ssr_real_estate_unom"
+        },
+        {
+          "attrId": "c597f731-049d-44cc-9a83-0163525c93e0",
+          "nickAttr": "fields",
+          "value": "6146c1da-2e38-4dc9-b619-568450d64d2f",
+          "orders": 39,
+          "linkCode": "ugd_ssr_real_estate_flatCount"
+        },
+        {
+          "attrId": "e43200ac-c14d-4b16-8e83-46e98a0b25a8",
+          "nickAttr": "name",
+          "value": "Объект недвижимости",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ca8f044d-6469-4148-bbf6-7daa9dc41ac6",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "b23ba447-cefb-4f8c-9eaf-081dfb41cee0",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "a4b2b315-96ac-4681-b575-87859e8689f8",
+          "nickAttr": "systemCode",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "98393c33-9b75-4703-8266-d2449188927c",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a2bf63b1-bff8-4ed7-a935-d8745a876328",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2c0fed62-96e4-41a8-a9a2-ab32a13bbd1a",
+          "nickAttr": "code",
+          "value": "UGD_SSR_SOON-RESETTLEMENT-REQUEST",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "419c71a6-159e-4de1-a2ac-f3c063b6d08b",
+          "nickAttr": "fields",
+          "value": "4c65a0ad-aa7a-42dd-8dd6-b89201d896dc",
+          "orders": 0,
+          "linkCode": "ugd_ssr_soon_resettlement_request_id"
+        },
+        {
+          "attrId": "577aa631-05a7-434a-9b67-c27fe190c9fa",
+          "nickAttr": "fields",
+          "value": "d48bbf3e-d195-464e-a3a9-aec9ff616344",
+          "orders": 1,
+          "linkCode": "ugd_ssr_soon_resettlement_request_real_estates"
+        },
+        {
+          "attrId": "98b13d32-bf03-47d7-b494-1d95c35e17d6",
+          "nickAttr": "name",
+          "value": "Запрос на скорое переселение домов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f5371aff-069b-4493-9e42-a21bafc349a9",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "a5c8d2aa-4915-4948-be5c-223313fd4baf",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "3af5af9d-6b00-4233-ab08-2c217e650dc1",
+          "nickAttr": "systemCode",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "6e24063d-11b2-4f9b-a22d-ba2e3d5fe753",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ae0c788d-8bb6-40a5-baed-5c368f08add5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9fc2ee1c-9ed2-42ab-97e2-d22e8b561b95",
+          "nickAttr": "code",
+          "value": "UGD_SSR_RESETTLEMENT-REQUEST",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cf678cbc-5ae0-4b61-83c3-909a320a8806",
+          "nickAttr": "fields",
+          "value": "2031ab7a-a2f2-40f0-895c-07f871338294",
+          "orders": 0,
+          "linkCode": "ugd_ssr_resettlementRequest_contentFirstRow"
+        },
+        {
+          "attrId": "afb9d831-dc30-48c0-b598-45aa52379b18",
+          "nickAttr": "name",
+          "value": "Запрос на переселение домов/квартир",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "44e21b75-723c-42dc-9fe4-160ca15ef47b",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "d2314d58-71e5-435a-b1e0-3c8550319a94",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "49f1b312-8c20-4076-8526-65b5904ad86f",
+          "nickAttr": "systemCode",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "f990161f-fcab-4fea-affa-922848551204",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ec573dd8-13da-47cf-92ec-6fb1fbb1c1b0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "34c743bc-5e2c-4e5f-a775-7bede8c33eb8",
+          "nickAttr": "code",
+          "value": "UGD_SSR_PERSON",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "756c8b07-7362-4359-9d59-73d452ad846d",
+          "nickAttr": "fields",
+          "value": "0b5c55ee-1399-4aa2-bc72-46276d8f6684",
+          "orders": 0,
+          "linkCode": "ugd_ssr_person_person_id"
+        },
+        {
+          "attrId": "11d093a2-560c-4b92-987b-ece14e759577",
+          "nickAttr": "fields",
+          "value": "21209d3c-b690-45e9-8b61-d0fc05772706",
+          "orders": 1,
+          "linkCode": "ugd_ssr_person_fio"
+        },
+        {
+          "attrId": "3d93c7df-b597-4aa0-824e-7e62feb0eec0",
+          "nickAttr": "fields",
+          "value": "254f1d1a-2791-4fc7-bb7e-872286b6ab83",
+          "orders": 2,
+          "linkCode": "ugd_ssr_person_birthDate"
+        },
+        {
+          "attrId": "28204266-7890-4c1d-b6c7-8e4d486d059d",
+          "nickAttr": "fields",
+          "value": "e9ce8f60-b397-4966-907f-49eff8b7e99b",
+          "orders": 3,
+          "linkCode": "ugd_ssr_person_passport"
+        },
+        {
+          "attrId": "970365bc-f39e-4105-aa07-517e190f504b",
+          "nickAttr": "fields",
+          "value": "2cfe7b11-bbff-4f43-8ba0-a754682bebc0",
+          "orders": 4,
+          "linkCode": "ugd_ssr_person_snils"
+        },
+        {
+          "attrId": "675ce4ec-eade-4e1c-b3cf-f25700a8d67f",
+          "nickAttr": "fields",
+          "value": "da05d54d-26db-4717-bffa-d23d3aa9b3f2",
+          "orders": 5,
+          "linkCode": "ugd_ssr_person_real_estate_address"
+        },
+        {
+          "attrId": "604eac1e-4c2c-4200-bd43-bc3999ecbb65",
+          "nickAttr": "fields",
+          "value": "f2d76493-ec61-479d-9c23-c9febc34d015",
+          "orders": 6,
+          "linkCode": "ugd_ssr_person_room_number"
+        },
+        {
+          "attrId": "d950168c-df93-4eee-a6a7-e1785e2b66c4",
+          "nickAttr": "fields",
+          "value": "a8fe9761-33cf-48db-8edb-40b32dd6289e",
+          "orders": 7,
+          "linkCode": "ugd_ssr_person_flat_number"
+        },
+        {
+          "attrId": "88b75e1c-95dc-4160-a21d-314e6766cb9f",
+          "nickAttr": "fields",
+          "value": "998d328b-8669-4fb4-85f5-0019ae5760fd",
+          "orders": 8,
+          "linkCode": "ugd_ssr_person_updated_from_pfr_date"
+        },
+        {
+          "attrId": "8ca33bc2-de36-40ad-aff4-5caaed0b7fb3",
+          "nickAttr": "fields",
+          "value": "1367b65d-00c4-46a5-b8bb-2ef2c043cca1",
+          "orders": 9,
+          "linkCode": "ugd_ssr_person_updated_from_pfr_status"
+        },
+        {
+          "attrId": "50327f31-9e53-44aa-aab8-6ddaecff5674",
+          "nickAttr": "fields",
+          "value": "7228de5a-fd69-4cde-ae5d-cad9b42d813d",
+          "orders": 10,
+          "linkCode": "ugd_ssr_person_updated_from_elk_date"
+        },
+        {
+          "attrId": "5adbbeac-e246-4d92-a765-821dc6f4edb2",
+          "nickAttr": "fields",
+          "value": "2d00b908-c9dd-4ca8-a1d2-420062c49ac0",
+          "orders": 11,
+          "linkCode": "ugd_ssr_person_updated_from_elk_status"
+        },
+        {
+          "attrId": "dce1a1fa-2150-4fde-9975-de663242e90d",
+          "nickAttr": "fields",
+          "value": "753526bd-02d6-4e60-8a73-00ea132716fe",
+          "orders": 12,
+          "linkCode": "ugd_ssr_person_sso_id"
+        },
+        {
+          "attrId": "95135da4-45b1-4108-b3b9-aa893870f429",
+          "nickAttr": "fields",
+          "value": "125eacfb-7d30-4eeb-9cf1-7fc5a27d3161",
+          "orders": 13,
+          "linkCode": "ugd_ssr_person_unom"
+        },
+        {
+          "attrId": "55d50ced-55c8-416b-8683-6019d3b39595",
+          "nickAttr": "fields",
+          "value": "865d1b5d-cd8f-4f4b-8e0c-9f6e8908913e",
+          "orders": 14,
+          "linkCode": "ugd_ssr_person_settle_address"
+        },
+        {
+          "attrId": "aa202d50-28d0-4b5f-b8db-1fd637536425",
+          "nickAttr": "fields",
+          "value": "333275ce-09be-40e4-a818-287486ecd011",
+          "orders": 15,
+          "linkCode": "ugd_ssr_person_relocation_status"
+        },
+        {
+          "attrId": "da6a7c07-f2c3-47d4-b2f5-7b9319cea8dc",
+          "nickAttr": "fields",
+          "value": "4961c696-65dd-4ea0-ac94-386dfa94aa07",
+          "orders": 16,
+          "linkCode": "ugd_ssr_person_residence_reason"
+        },
+        {
+          "attrId": "76550841-48f7-4069-8143-1ac63d8cec76",
+          "nickAttr": "fields",
+          "value": "d1d914dd-9840-4c4e-b862-2af209f24271",
+          "orders": 17,
+          "linkCode": "ugd_ssr_person_information_center_code"
+        },
+        {
+          "attrId": "59f9fe7a-c57d-4665-b2d2-3ac99b82e40b",
+          "nickAttr": "fields",
+          "value": "953a3f47-9e9f-4049-8025-4200ad52e298",
+          "orders": 18,
+          "linkCode": "ugd_ssr_person_district"
+        },
+        {
+          "attrId": "23905ea2-2a9b-4230-9898-4c1499291440",
+          "nickAttr": "fields",
+          "value": "44a807df-f0ca-4d69-b9ed-69e44d4d85c2",
+          "orders": 19,
+          "linkCode": "ugd_ssr_person_prefect"
+        },
+        {
+          "attrId": "de3f27d5-a6a0-439a-956b-0d02b53698c1",
+          "nickAttr": "fields",
+          "value": "62095369-701c-4c1c-8e30-768bd1aa9906",
+          "orders": 20,
+          "linkCode": "ugd_ssr_person_isNotArchived"
+        },
+        {
+          "attrId": "283c31d6-378f-41a5-949d-e65771e5e26e",
+          "nickAttr": "name",
+          "value": "Житель дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c87234ee-8ee2-4c67-9fa0-bff222903eee",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "65f94567-eabe-4bb6-8d5d-8fafc3f82d69",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "2f180bff-6404-44ae-a759-a017af1a7e86",
+          "nickAttr": "systemCode",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "d5c6c6a2-2e93-4502-91dc-b37be78e90ec",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5aa94fbe-23d7-4742-8930-f8a954621ec8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9be56d6c-61c1-4c8e-86e1-47d8c33f0dd0",
+          "nickAttr": "code",
+          "value": "UGD_SSR_DASHBOARD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bd9c044f-62eb-424f-acc2-d2bb897ed7f4",
+          "nickAttr": "fields",
+          "value": "065c1e15-4863-495c-bc6a-617da56ec37c",
+          "orders": 0,
+          "linkCode": "ugd_ssr_dashboard_information_date"
+        },
+        {
+          "attrId": "28fdc065-2926-40e2-b8b3-8a02f6efdc91",
+          "nickAttr": "fields",
+          "value": "0fdc9e5f-8df9-4e7d-8bf1-9fed7575dc25",
+          "orders": 1,
+          "linkCode": "ugd_ssr_dashboard_archived"
+        },
+        {
+          "attrId": "88295e0b-d8fe-4a7a-8dfd-2b53e065cfe9",
+          "nickAttr": "fields",
+          "value": "bc9619be-9003-4b54-b5d3-d9213156b430",
+          "orders": 2,
+          "linkCode": "ugd_ssr_dashboard_user_name"
+        },
+        {
+          "attrId": "5f40376d-1dab-4d0b-b7c3-65d1a8ea372c",
+          "nickAttr": "fields",
+          "value": "44d990b9-181e-4b49-81fb-0cc06f940785",
+          "orders": 3,
+          "linkCode": "ugd_ssr_dashboard_fill_in_date"
+        },
+        {
+          "attrId": "4c2a58df-e372-4a19-90ab-570ba72c12de",
+          "nickAttr": "fields",
+          "value": "4c30654f-1773-4430-ba64-c86c3c0b7809",
+          "orders": 4,
+          "linkCode": "ugd_ssr_dashboard_new_builds_total_amount"
+        },
+        {
+          "attrId": "39fdc87d-4bb2-4244-a0a1-d62ee39914fd",
+          "nickAttr": "fields",
+          "value": "0497da12-0b1d-4d98-95e0-8e11d3eccd71",
+          "orders": 5,
+          "linkCode": "ugd_ssr_resettlement_buildings_amount"
+        },
+        {
+          "attrId": "e2eb5835-7238-4e44-8c7e-d39b660b1ab3",
+          "nickAttr": "fields",
+          "value": "63be1de5-ac9d-4154-adf4-8da3c485c56a",
+          "orders": 6,
+          "linkCode": "ugd_ssr_dashboard_published"
+        },
+        {
+          "attrId": "68d82038-a4ab-4d20-9eee-0e3ce1264734",
+          "nickAttr": "name",
+          "value": "Статистическая информация о переселении",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "35fa45d5-b1ab-4afb-b400-26f406cbde48",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "db595bdc-c1b9-47ae-90ff-88312b3d3546",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "a4e8ed2a-e77a-44af-a43b-05b7b1b48092",
+          "nickAttr": "systemCode",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "7c829721-f947-47f2-91d0-29da5419368c",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "049c8c35-d6d7-485d-bec0-e4845aed1dec",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "efcc0bbf-6e58-4501-900a-cf1dc3385f58",
+          "nickAttr": "code",
+          "value": "UGD_SSR_FIRST-FLOW-ERROR-ANALYTICS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "98b3f89f-2029-446c-8161-7d9a2fedb179",
+          "nickAttr": "fields",
+          "value": "e45e21d2-25da-40f7-8633-009dbe6ea407",
+          "orders": 0,
+          "linkCode": "ugd_ssr_firstFlowErrorAnalytics_contentFirstRow"
+        },
+        {
+          "attrId": "76f91131-71af-4c9a-b992-f58229922791",
+          "nickAttr": "fields",
+          "value": "87e22ab1-ce9f-4a42-90c6-6e14a7876c2e",
+          "orders": 1,
+          "linkCode": "ugd_ssr_firstFlowErrorAnalytics_contentSecondRow"
+        },
+        {
+          "attrId": "4a4e79b1-4f34-489f-8930-8dfc1fe5a689",
+          "nickAttr": "name",
+          "value": "Обработка ошибок загрузки данных из ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b7476b2a-b720-4cb5-b86d-a8f00139ee02",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "2bb6b1bf-7f9d-4e0c-900a-c86ffe0023be",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "d6f65835-e2b5-4340-9330-cc0673720e4b",
+          "nickAttr": "systemCode",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "950dd7f8-dbc1-4489-89b0-d3c4c7b9afcc",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

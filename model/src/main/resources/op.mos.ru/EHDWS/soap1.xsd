@@ -1,0 +1,395 @@
+<!--
+ Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown.
+-->
+<xs:schema xmlns:tns="http://ehd.mos.com/" xmlns:ns1="http://ehd.mos.com" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           version="1.0" targetNamespace="http://ehd.mos.com/">
+    <xs:import namespace="http://ehd.mos.com" schemaLocation="soap2.xsd"/>
+    <xs:element name="AuthFault" nillable="true" type="tns:authFault"/>
+    <xs:element name="Exception" type="tns:Exception"/>
+    <xs:element name="dictAttrV2" type="tns:DictAttrV2"/>
+    <xs:element name="ehdAttrSpec" type="tns:EhdAttrSpec"/>
+    <xs:element name="ehdAttrSpecNew" type="tns:EhdAttrSpecNew"/>
+    <xs:element name="ehdCatalog" type="tns:EhdCatalog"/>
+    <xs:element name="ehdCatalogItem" type="tns:EhdCatalogItem"/>
+    <xs:element name="ehdCatalogItems" type="tns:EhdCatalogItems"/>
+    <xs:element name="ehdCatalogRow" type="tns:EhdCatalogRow"/>
+    <xs:element name="ehdCatalogStats" type="tns:EhdCatalogStats"/>
+    <xs:element name="ehdCatalogs" type="tns:EhdCatalogs"/>
+    <xs:element name="ehdCommonAttribute" type="tns:EhdCommonAttribute"/>
+    <xs:element name="ehdCommonAttributeNew" type="tns:EhdCommonAttributeNew"/>
+    <xs:element name="ehdDictionaries" type="tns:EhdDictionaries"/>
+    <xs:element name="ehdDictionary" type="tns:EhdDictionary"/>
+    <xs:element name="ehdDictionaryItem" type="tns:EhdDictionaryItem"/>
+    <xs:element name="ehdDictionaryItemV2" type="tns:EhdDictionaryItemV2"/>
+    <xs:element name="ehdDictionaryItems" type="tns:EhdDictionaryItems"/>
+    <xs:element name="ehdDictionaryItemsV2" type="tns:EhdDictionaryItemsV2"/>
+    <xs:element name="ehdException" type="tns:EhdException"/>
+    <xs:element name="getAllDict" type="tns:getAllDict"/>
+    <xs:element name="getAllDictResponse" type="tns:getAllDictResponse"/>
+    <xs:element name="getCatalogItems" type="tns:getCatalogItems"/>
+    <xs:element name="getCatalogItemsNew" type="tns:getCatalogItemsNew"/>
+    <xs:element name="getCatalogItemsNewResponse" type="tns:getCatalogItemsNewResponse"/>
+    <xs:element name="getCatalogItemsResponse" type="tns:getCatalogItemsResponse"/>
+    <xs:element name="getCatalogList" type="tns:getCatalogList"/>
+    <xs:element name="getCatalogListResponse" type="tns:getCatalogListResponse"/>
+    <xs:element name="getCatalogSpec" type="tns:getCatalogSpec"/>
+    <xs:element name="getCatalogSpecNew" type="tns:getCatalogSpecNew"/>
+    <xs:element name="getCatalogSpecNewResponse" type="tns:getCatalogSpecNewResponse"/>
+    <xs:element name="getCatalogSpecResponse" type="tns:getCatalogSpecResponse"/>
+    <xs:element name="getCatalogStats" type="tns:getCatalogStats"/>
+    <xs:element name="getCatalogStatsResponse" type="tns:getCatalogStatsResponse"/>
+    <xs:element name="getDictItem" type="tns:getDictItem"/>
+    <xs:element name="getDictItemResponse" type="tns:getDictItemResponse"/>
+    <xs:element name="getDictItemV2" type="tns:getDictItemV2"/>
+    <xs:element name="getDictItemV2Response" type="tns:getDictItemV2Response"/>
+    <xs:element name="getUserBySession" type="tns:getUserBySession"/>
+    <xs:element name="getUserBySessionResponse" type="tns:getUserBySessionResponse"/>
+    <xs:element name="resultInfo" type="tns:ResultInfo"/>
+    <xs:element name="resultUid" type="tns:ResultUid"/>
+    <xs:element name="setDataIn" type="tns:setDataIn"/>
+    <xs:element name="setDataInResponse" type="tns:setDataInResponse"/>
+    <xs:complexType name="getCatalogSpecNew">
+        <xs:sequence>
+            <xs:element name="idCatalog" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getCatalogSpecNewResponse">
+        <xs:sequence>
+            <xs:element ref="tns:ehdAttrSpecNew" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdAttrSpecNew">
+        <xs:sequence>
+            <xs:element name="count" type="xs:long" form="qualified"/>
+            <xs:element name="ehdCommonAttribute" type="tns:EhdCommonAttributeNew" form="qualified" nillable="true"
+                        minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="ehdException" type="tns:EhdException" form="qualified" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdCommonAttributeNew">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="typeId" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="colname" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="type" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isPrimaryKey" type="xs:boolean" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isEdit" type="xs:boolean" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isReq" type="xs:boolean" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="fieldMask" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="tehName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="maxLength" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="maxLengthDecimal" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="dictId" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="refCatalog" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isDeleted" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isDeletedTmp" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isMulti" type="xs:boolean" form="qualified" nillable="true"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdException">
+        <xs:sequence>
+            <xs:element name="errorCode" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="errorText" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="authFault">
+        <xs:sequence>
+            <xs:element name="faultCode" type="xs:string" minOccurs="0"/>
+            <xs:element name="faultString" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getCatalogList">
+        <xs:sequence/>
+    </xs:complexType>
+    <xs:complexType name="getCatalogListResponse">
+        <xs:sequence>
+            <xs:element ref="tns:ehdCatalogs" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdCatalogs">
+        <xs:sequence>
+            <xs:element name="ehdCatalog" type="tns:EhdCatalog" form="qualified" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdCatalog">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="fullName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="technicalName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="shortName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="accountingObject" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="keywords" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="vid" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="type" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="period" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="hasGeo" type="xs:boolean" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="categories" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="oiv" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getDictItem">
+        <xs:sequence>
+            <xs:element name="dictionaryId" type="xs:long" minOccurs="0"/>
+            <xs:element name="start" type="xs:int" minOccurs="0"/>
+            <xs:element name="end" type="xs:int" minOccurs="0"/>
+            <xs:element name="elementId" type="xs:string" minOccurs="0"/>
+            <xs:element name="version" type="xs:int" minOccurs="0"/>
+            <xs:element name="showDeleted" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getDictItemResponse">
+        <xs:sequence>
+            <xs:element ref="tns:ehdDictionaryItems" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdDictionaryItems">
+        <xs:sequence>
+            <xs:element name="ehdDictionary" type="tns:EhdDictionaryItem" form="qualified" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdDictionaryItem">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="parent_id" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="enName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isDeleted" type="xs:int" form="qualified" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getCatalogStats">
+        <xs:sequence>
+            <xs:element name="idCatalog" type="xs:int"/>
+            <xs:element name="countSubscribe" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getCatalogStatsResponse">
+        <xs:sequence>
+            <xs:element ref="tns:ehdCatalogStats" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdCatalogStats">
+        <xs:sequence>
+            <xs:element name="catalogId" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="fullName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="technicalName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="cntActiveObj" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="cntDelObj" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="cntNotSubscribe" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="cntError" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="cntGeoError" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="setDataIn">
+        <xs:sequence>
+            <xs:element name="xml" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="setDataInResponse">
+        <xs:sequence>
+            <xs:element name="setDataResponse" type="tns:ResultInfo" form="qualified" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ResultInfo">
+        <xs:sequence>
+            <xs:element name="status" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="message" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="detail_message" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="global_id" type="xs:long" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="system_object_id" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="action" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Exception">
+        <xs:sequence>
+            <xs:element name="message" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getCatalogItems">
+        <xs:sequence>
+            <xs:element name="idCatalog" type="xs:int"/>
+            <xs:element name="start" type="xs:int"/>
+            <xs:element name="end" type="xs:int"/>
+            <xs:element name="hideDeleted" type="xs:boolean"/>
+            <xs:element name="idGlobalObject" type="xs:long" minOccurs="0"/>
+            <xs:element name="filters" type="xs:string" minOccurs="0"/>
+            <xs:element name="status" type="xs:string" minOccurs="0"/>
+            <xs:element name="idParentCatalog" type="xs:int" minOccurs="0"/>
+            <xs:element name="fetchGeodata" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="geoType" type="xs:string" minOccurs="0"/>
+            <xs:element name="getSigned" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getCatalogItemsResponse">
+        <xs:sequence>
+            <xs:element name="ehdCatalogItemsset" type="tns:EhdCatalogItems" form="qualified" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdCatalogItems">
+        <xs:sequence>
+            <xs:element name="ehdCatalogItem" type="tns:EhdCatalogRow" form="qualified" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+            <xs:element name="ehdException" type="tns:EhdException" form="qualified" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdCatalogRow">
+        <xs:sequence>
+            <xs:element name="ehdCatalogAttr" type="tns:EhdCatalogItem" form="qualified" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdCatalogItem">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isDeleted" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isDeletedTmp" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="tehName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="type" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="dictValue" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="value" type="xs:anyType" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="groupValue" type="tns:EhdCatalogItems" form="qualified" nillable="true" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getCatalogSpec">
+        <xs:sequence>
+            <xs:element name="idCatalog" type="xs:int"/>
+            <xs:element name="version" type="xs:int" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getCatalogSpecResponse">
+        <xs:sequence>
+            <xs:element ref="tns:ehdAttrSpec" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdAttrSpec">
+        <xs:sequence>
+            <xs:element name="geoType" type="xs:string" form="qualified" minOccurs="0"/>
+            <xs:element ref="ns1:geoFormat" minOccurs="0"/>
+            <xs:element name="count" type="xs:long" form="qualified"/>
+            <xs:element name="ehdCommonAttribute" type="tns:EhdCommonAttribute" form="qualified" nillable="true"
+                        minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="ehdException" type="tns:EhdException" form="qualified" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdCommonAttribute">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="typeId" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="type" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isPrimaryKey" type="xs:boolean" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isEdit" type="xs:boolean" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isReq" type="xs:boolean" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="fieldMask" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="tehName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="maxLength" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="maxLengthDecimal" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="dictId" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="refCatalog" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isDeleted" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isDeletedTmp" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isMulti" type="xs:boolean" form="qualified" nillable="true"/>
+            <xs:element name="isAutocomplete" type="xs:boolean" form="qualified" minOccurs="0"/>
+            <xs:element name="isManual" type="xs:int" form="qualified" minOccurs="0"/>
+            <xs:element name="isManualInputGeo" type="xs:int" form="qualified" minOccurs="0"/>
+            <xs:element name="colname" type="xs:string" form="qualified" minOccurs="0"/>
+            <xs:element name="fillFor" type="xs:string" form="qualified" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getCatalogItemsNew">
+        <xs:sequence>
+            <xs:element name="idCatalog" type="xs:int" minOccurs="0"/>
+            <xs:element name="global_id" type="xs:long" minOccurs="0"/>
+            <xs:element name="system_object_id" type="xs:string" minOccurs="0"/>
+            <xs:element name="getSigned" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getCatalogItemsNewResponse">
+        <xs:sequence>
+            <xs:element name="ehdCatalogItemsset" type="tns:EhdCatalogItems" form="qualified" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getUserBySession">
+        <xs:sequence>
+            <xs:element name="session_id" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getUserBySessionResponse">
+        <xs:sequence>
+            <xs:element name="getUserBySessionResponse" type="tns:ResultUid" form="qualified" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ResultUid">
+        <xs:sequence>
+            <xs:element name="uid" type="xs:int" form="qualified" minOccurs="0"/>
+            <xs:element name="login" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="surname" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="patroname" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getAllDict">
+        <xs:sequence/>
+    </xs:complexType>
+    <xs:complexType name="getAllDictResponse">
+        <xs:sequence>
+            <xs:element ref="tns:ehdDictionaries" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdDictionaries">
+        <xs:sequence>
+            <xs:element name="ehdDictionary" type="tns:EhdDictionary" form="qualified" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdDictionary">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="total" type="xs:int" form="qualified" nillable="true" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getDictItemV2">
+        <xs:sequence>
+            <xs:element name="dictionaryId" type="xs:long" minOccurs="0"/>
+            <xs:element name="start" type="xs:int" minOccurs="0"/>
+            <xs:element name="end" type="xs:int" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="getDictItemV2Response">
+        <xs:sequence>
+            <xs:element ref="tns:ehdDictionaryItemsV2" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdDictionaryItemsV2">
+        <xs:sequence>
+            <xs:element name="ehdDictionaryItemV2" type="tns:EhdDictionaryItemV2" form="qualified" nillable="true"
+                        minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EhdDictionaryItemV2">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="parent_id" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="enName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="isDeleted" type="xs:int" form="qualified" minOccurs="0"/>
+            <xs:element name="dictAttrsV2" type="tns:DictAttrV2" form="qualified" nillable="true" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DictAttrV2">
+        <xs:sequence>
+            <xs:element name="tehName" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+            <xs:element name="value" type="xs:string" form="qualified" nillable="true" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

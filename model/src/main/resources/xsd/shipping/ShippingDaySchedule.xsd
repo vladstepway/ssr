@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ds="http://www.ugd.croc.ru/ssr/daySchedule"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/shipping"
+           targetNamespace="http://www.ugd.croc.ru/ssr/shipping">
+
+  <xs:import namespace="http://www.ugd.croc.ru/ssr/daySchedule" schemaLocation="../daySchedule/BookingSlotType.xsd"/>
+  <xs:import namespace="http://www.ugd.croc.ru/ssr/daySchedule" schemaLocation="../daySchedule/TimeIntervalType.xsd"/>
+
+  <xs:element name="shippingDaySchedule">
+    <xs:annotation>
+      <xs:documentation>Рабочий день помощи в переезде</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+          <xs:annotation>
+            <xs:documentation>Версия XSD схемы</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Идентификатор папки</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="documentID" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Системный идентификатор документа</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="shippingDayScheduleData" type="ShippingDayScheduleType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="ShippingDayScheduleType">
+    <xs:annotation>
+      <xs:documentation>Сведения о рабочем дне помощи в переезде</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="area" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Район</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="shippingDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Дата переезда</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="brigades" type="BrigadeType" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Бригады</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="BrigadeType">
+    <xs:annotation>
+      <xs:documentation>Информация по бригаде</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Наименование бригады</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="workingIntervals" type="ds:TimeIntervalType" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Интервалы работы бригады</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="bookingSlots" type="ds:BookingSlotType" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Интервалы доступные для бронирования</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

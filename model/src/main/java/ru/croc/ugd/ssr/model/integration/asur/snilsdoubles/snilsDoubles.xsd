@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="НЕОДНОЗНАЧНЫЙ_ОТВЕТ_СНИЛС">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ФИО">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Фамилия">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:normalizedString">
+                                        <xsd:maxLength value="40"/>
+                                        <xsd:minLength value="1"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="Имя">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:normalizedString">
+                                        <xsd:maxLength value="40"/>
+                                        <xsd:minLength value="1"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="Отчество" minOccurs="0">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:normalizedString">
+                                        <xsd:maxLength value="40"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Пол">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:enumeration value="МУЖСКОЙ"/>
+                            <xsd:enumeration value="ЖЕНСКИЙ"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:choice>
+                    <xsd:element name="ДатаРождения">
+                        <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="\d{2}\.\d{2}\.\d{4}"/>
+                            </xsd:restriction>
+                        </xsd:simpleType>
+                    </xsd:element>
+                    <xsd:element name="ДатаРожденияОсобая">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="День">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:integer">
+                                            <xsd:minInclusive value="0"/>
+                                            <xsd:maxInclusive value="31"/>
+                                        </xsd:restriction>
+                                    </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="Месяц">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:integer">
+                                            <xsd:minInclusive value="0"/>
+                                            <xsd:maxInclusive value="12"/>
+                                        </xsd:restriction>
+                                    </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="Год">
+                                    <xsd:simpleType>
+                                        <xsd:restriction base="xsd:gYear"/>
+                                    </xsd:simpleType>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+                <xsd:element name="СведенияОдвойнике" minOccurs="2" maxOccurs="99">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="СтраховойНомер">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:pattern value="\d{3}-\d{3}-\d{3} \d{2}"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="МестоРождения">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="ТипМестаРождения" minOccurs="1">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:enumeration value="ОСОБОЕ"/>
+                                                    <xsd:enumeration value="СТАНДАРТНОЕ"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="ГородРождения" minOccurs="0">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:normalizedString">
+                                                    <xsd:maxLength value="200"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="РайонРождения" minOccurs="0">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:normalizedString">
+                                                    <xsd:maxLength value="200"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="РегионРождения" minOccurs="0">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:normalizedString">
+                                                    <xsd:maxLength value="200"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="СтранаРождения" minOccurs="0">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:normalizedString">
+                                                    <xsd:maxLength value="200"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="УдостоверяющийДокумент">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="ТипУдостоверяющего">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:maxLength value="14"/>
+                                                    <xsd:enumeration value="ПАСПОРТ"/>								<xsd:enumeration value="ЗГПАСПОРТ"/>								<xsd:enumeration value="СВИД О РОЖД"/>							<xsd:enumeration value="УДОСТ ОФИЦЕРА"/>							<xsd:enumeration value="СПРАВКА ОБ ОСВ"/>						<xsd:enumeration value="ПАСПОРТ МОРФЛТ"/>							<xsd:enumeration value="ВОЕННЫЙ БИЛЕТ"/>							<xsd:enumeration value="ДИППАСПОРТ РФ"/>							<xsd:enumeration value="ИНПАСПОРТ"/>							<xsd:enumeration value="СВИД БЕЖЕНЦА"/>							<xsd:enumeration value="ВИД НА ЖИТЕЛЬ"/>							<xsd:enumeration value="УДОСТ БЕЖЕНЦА"/>							<xsd:enumeration value="ВРЕМ УДОСТ"/>						<xsd:enumeration value="ПАСПОРТ РОССИИ"/>							<xsd:enumeration value="ЗГПАСПОРТ РФ"/>						<xsd:enumeration value="ПАСПОРТ МОРЯКА"/>							<xsd:enumeration value="ВОЕН БИЛЕТ ОЗ"/>							<xsd:enumeration value="ПРОЧЕЕ"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="Документ">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="НаименованиеУдостоверяющего">
+                                                        <xsd:simpleType>
+                                                            <xsd:restriction base="xsd:normalizedString">
+                                                                <xsd:maxLength value="80"/>
+                                                            </xsd:restriction>
+                                                        </xsd:simpleType>
+                                                    </xsd:element>
+                                                    <xsd:element name="СерияРимскиеЦифры" minOccurs="0">
+                                                        <xsd:simpleType>
+                                                            <xsd:restriction base="xsd:normalizedString">
+                                                                <xsd:maxLength value="8"/>
+                                                            </xsd:restriction>
+                                                        </xsd:simpleType>
+                                                    </xsd:element>
+                                                    <xsd:element name="СерияРусскиеБуквы" minOccurs="0">
+                                                        <xsd:simpleType>
+                                                            <xsd:restriction base="xsd:normalizedString">
+                                                                <xsd:maxLength value="8"/>
+                                                            </xsd:restriction>
+                                                        </xsd:simpleType>
+                                                    </xsd:element>
+                                                    <xsd:element name="НомерУдостоверяющего" minOccurs="0">
+                                                        <xsd:simpleType>
+                                                            <xsd:restriction base="xsd:unsignedLong">
+                                                                <xsd:minInclusive value="0"/>
+                                                                <xsd:maxInclusive value="99999999"/>
+                                                                <xsd:totalDigits value="8"/>
+                                                            </xsd:restriction>
+                                                        </xsd:simpleType>
+                                                    </xsd:element>
+                                                    <xsd:element name="ДатаВыдачи">
+                                                        <xsd:simpleType>
+                                                            <xsd:restriction base="xsd:string">
+                                                                <xsd:pattern value="\d{2}\.\d{2}\.\d{4}"/>
+                                                            </xsd:restriction>
+                                                        </xsd:simpleType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="КоличествоДвойников">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:positiveInteger">
+                            <xsd:minInclusive value="2"/>
+                            <xsd:maxInclusive value="99"/>
+                            <xsd:totalDigits value="2"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="ДатаФормирования">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="\d{2}\.\d{2}\.\d{4}"/>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/feedback"
+           targetNamespace="http://www.ugd.croc.ru/ssr/feedback"
+           elementFormDefault="qualified">
+    <xs:element name="Survey">
+        <xs:annotation>
+            <xs:documentation>Данные для опросов</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="SurveyData" type="SurveyData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="SurveyData">
+        <xs:annotation>
+            <xs:documentation>Данные для опросов</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="category" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Категория опроса
+                        1 - Опрос по завершению этапа переселения
+                        2 - Общий опрос о Программе реновации
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="relocationStage" type="SurveyDictionaryElement">
+                <xs:annotation>
+                    <xs:documentation>Этап переселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="type" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Вид опроса
+                        1 - Работа с электронными сервисами
+                        2 - Работа с ЦИП
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="description" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Вводная часть</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="published" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Флаг публикации опроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="questions" type="SurveyQuestion" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Вопросы опроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SurveyQuestion">
+        <xs:annotation>
+            <xs:documentation>Вопросы опроса</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД вопроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="orderNumber" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Порядковый номер вопроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="type" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Тип вопроса
+                        1 - Оценка
+                        2 - Выбор из справочника
+                        3 - Множественный выбор из справочника
+                        4 - Ответ на вопрос в свободной форме
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="text" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Текст вопроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="options" type="SurveyDictionaryElement" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Варианты ответов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="displayCondition" type="SurveyQuestionDisplayCondition" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SurveyDictionaryElement">
+        <xs:annotation>
+            <xs:documentation>Элемент справочника опросов</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>id</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="value" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Значение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SurveyQuestionDisplayCondition">
+        <xs:annotation>
+            <xs:documentation>Условия отображения</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="relatedQuestionId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД связного вопроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="condition" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Условие для отображения вопроса
+                        lt - меньше
+                        gt - больше
+                        eq - равно
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="value" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Значение для сравнение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

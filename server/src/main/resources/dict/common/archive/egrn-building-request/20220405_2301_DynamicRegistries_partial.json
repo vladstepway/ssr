@@ -1,0 +1,144 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации (dataset)",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Настройка страницы Реестры информации",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "07c3be2c-8ba4-48d7-9471-6c514ee661ec",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "33815d63-7350-4c53-abd8-65bff18c8342",
+          "nickAttr": "code",
+          "value": "UGD_SSR_EGRN-BUILDING-REQUEST",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1358ef7-6c86-420f-86d8-8a72fc408d45",
+          "nickAttr": "description",
+          "value": "Реестр выписок из ЕГРН по зданиям",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6516975f-b460-4acb-9d74-d5cd4c5eb6fe",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_UNKNOWN",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bd3c816f-e72e-4501-8c59-00341289d212",
+          "nickAttr": "name",
+          "value": "Реестр выписок из ЕГРН по зданиям",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "91893bdc-ccbb-4bc5-acd8-598650606ba3",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "8755f9b1-473c-4e2c-870b-c79c0854f518",
+          "orders": 0,
+          "linkCode": "ugd_ssr_egrn_building_request_code"
+        }
+      ]
+    }
+  ]
+}

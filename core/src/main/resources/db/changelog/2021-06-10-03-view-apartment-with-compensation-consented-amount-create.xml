@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-06-10-03-view-apartment-with-compensation-consented-amount-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_apartment_with_compensation_consented_amount">
+            WITH pers AS (
+            -- данные жителя
+                SELECT DISTINCT ON (id)
+                    id,
+                    json_data -> 'Person' -> 'PersonData' ->> 'personID' AS personId,
+                    json_data -> 'Person' -> 'PersonData' ->> 'FIO' AS fio,
+                    json_data -> 'Person' -> 'PersonData' ->> 'affairId' AS affairId,
+                    json_data -> 'Person' -> 'PersonData' ->> 'regType' AS regType,
+                    offer_letters.value ->> 'letterId' AS letterId,
+                    (offer_letters.value ->> 'date')::DATE AS letterDate,
+                    (CASE WHEN contract.value IS NOT NULL THEN true ELSE false END) AS contractExists,
+                    json_data -> 'Person' -> 'PersonData' ->> 'flatNum' AS flatNum
+                FROM
+                    ssr.documents persons
+                LEFT JOIN
+                    jsonb_array_elements(persons.json_data->'Person'->'PersonData'->'offerLetters'->'offerLetter') offer_letters
+                ON
+                    offer_letters ? 'letterId'
+                LEFT JOIN
+                    jsonb_array_elements(persons.json_data->'Person'->'PersonData'->'contracts'->'contract') contract
+                ON
+                    contract.value -> 'contractStatus' @> '"4"'
+                WHERE
+                    doc_type = 'PERSON'
+                ORDER BY
+                    id, offer_letters.value -> 'date' DESC NULLS LAST
+            ),
+            realEstates AS (
+            -- данные дома
+                SELECT
+                    re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'UNOM' AS unom,
+                    re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'Address' AS address
+                FROM ssr.documents re
+                WHERE re.doc_type = 'REAL-ESTATE'
+            ),
+            person_with_trade_addition AS (
+            -- данные жителя из TRADE-ADDITION
+                SELECT
+                    persons->>'personDocumentId' AS personDocumentId,
+                    pers.fio AS fio,
+                    pers.affairId AS affairId,
+                    COALESCE(trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'oldEstate'->>'unom','Без УНОМ') AS unom,
+                    (trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'agreementDate')::DATE AS agreementDate,
+                    re.address,
+                    pers.flatNum AS flatNumber,
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'tradeType' AS tradeType,
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'claimStatus' AS claimStatus,
+                    pers.regType AS registration,
+                    (
+                        CASE
+                            WHEN
+                            (
+                                pers.letterDate IS NOT NULL
+                                AND trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'offerLetterDate' IS NOT NULL
+                                AND pers.letterDate > (trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'offerLetterDate')::DATE
+                            )
+                            OR pers.letterDate IS NULL
+                            THEN pers.letterId
+                            ELSE NULL
+                        END
+                    ) AS letterId,
+                    pers.letterDate AS letterDate,
+                    pers.contractExists AS contractExists,
+                    (trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'contractSignedDate')::DATE AS contractSignedDate,
+                    (trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'offerLetterDate')::DATE AS offerLetterDate
+                FROM
+                    ssr.documents trade_additions
+                JOIN
+                    jsonb_array_elements(trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'personsInfo') persons
+                ON
+                    persons ? 'personId'
+                LEFT JOIN
+                    pers
+                ON
+                    pers.id = persons->>'personDocumentId'
+                LEFT JOIN
+                    realEstates re
+                ON
+                    re.unom = trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'oldEstate'->>'unom'
+                WHERE
+                    doc_type = 'TRADE-ADDITION'
+                    AND (trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'confirmed')::BOOLEAN = TRUE
+                    AND (trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'indexed')::BOOLEAN = TRUE
+            )
+
+            -- жители, связанные с TRADE-ADDITION напрямую
+            SELECT
+                person_with_trade_addition.personDocumentId,
+                fio,
+                unom,
+                agreementDate,
+                address,
+                flatNumber,
+                tradeType,
+                claimStatus,
+                registration,
+                letterId,
+                contractExists,
+                contractSignedDate,
+                offerLetterDate
+            FROM
+                person_with_trade_addition
+
+            UNION
+
+            -- жители, связанные с TRADE-ADDITION через члена семьи
+            SELECT
+                COALESCE(pers.id, person_with_trade_addition.personDocumentId),
+                COALESCE(pers.fio, person_with_trade_addition.fio) AS fio,
+                person_with_trade_addition.unom,
+                person_with_trade_addition.agreementDate,
+                person_with_trade_addition.address,
+                person_with_trade_addition.flatNumber,
+                person_with_trade_addition.tradeType,
+                person_with_trade_addition.claimStatus,
+                pers.regType,
+                person_with_trade_addition.letterId,
+                person_with_trade_addition.contractExists,
+                contractSignedDate,
+                offerLetterDate
+            FROM
+                person_with_trade_addition, pers
+            WHERE
+                pers.affairId = person_with_trade_addition.affairId
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_apartment_with_compensation_consented_amount TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

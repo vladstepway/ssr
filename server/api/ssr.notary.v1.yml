@@ -1,0 +1,367 @@
+swagger: '2.0'
+info:
+  description: |
+    ССР. Сервис по бронированию нотариуса.
+  version: 1.0.0
+  title: SSR Notary
+schemes:
+  - http
+
+paths:
+  /notary/check:
+    get:
+      summary: Выполнение проверок и получение сведений о жильцах для записи к нотариусу
+      operationId: check
+      tags:
+        - Notary
+      produces:
+        - application/json
+      parameters:
+        - name: snils
+          in: query
+          description: СНИЛС, пример 001-198-166 10
+          required: true
+          type: string
+        - name: ssoId
+          in: query
+          description: ssoId, пример cd4b6f7c-81d6-45ea-bf3f-e73c0750f84b
+          required: true
+          type: string
+      responses:
+        200:
+          description: Результат проверки и сведения о жильцах и помещениях
+          schema:
+            $ref: '#/definitions/NotaryPersonCheck'
+        400:
+          description:
+            Данные запроса невалидны /
+            Not valid personId:%s, reason:%s
+  /notary/fetch:
+    get:
+      summary: Получение доступных нотариусов
+      operationId: fetchAll
+      tags:
+        - Notary
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Список нотариусов
+          schema:
+            $ref: '#/definitions/NotaryList'
+        400:
+          description:
+            Данные запроса невалидны /
+            Идентификатор sso должен быть указан /
+            СНИЛС должен быть указан /
+            УНОМ должен быть указан
+  /notary/timetable:
+    get:
+      summary: Получение доступной сетки расписания нотариуса
+      operationId: fetchTimetable
+      tags:
+        - Notary
+      produces:
+        - application/json
+      parameters:
+        - name: notaryId
+          in: query
+          description: Идентификатор нотариуса
+          required: true
+          type: string
+        - name: days
+          in: query
+          description: Количество дней для вывода сетки расписания
+          required: false
+          type: integer
+          default: 7
+        - name: startFrom
+          in: query
+          description: Дата начала диапозона сетки расписания
+          required: false
+          type: string
+          format: date
+      responses:
+        200:
+          description: Сетка расписания
+          schema:
+            $ref: '#/definitions/NotaryTimetable'
+        400:
+          description:
+            Данные запроса невалидны /
+            Идентификатор sso должен быть указан /
+            СНИЛС должен быть указан /
+            УНОМ должен быть указан
+  /notary/prebook:
+    post:
+      summary: Предбронирование интервала времени
+      operationId: prebookSlot
+      tags:
+        - Notary
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Информация о выбранном интервале
+          required: true
+          schema:
+            $ref: '#/definitions/NotaryPrebookSlotRequest'
+      responses:
+        200:
+          description: Результат предбронированния интервала времени
+          schema:
+            $ref: '#/definitions/NotaryPrebookSlotResponse'
+        400:
+          description:
+            Идентификатор слота должен быть указан /
+            Идентификатор sso должен быть указан /
+            Отстутствуют слоты относящиеся к переданному идентификатору /
+            Слот был забронирован /
+            СНИЛС должен быть указан /
+            УНОМ должен быть указан /
+  /notary/book:
+    post:
+      summary: Бронирование интервала времени
+      operationId: bookSlot
+      tags:
+        - Notary
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Информация о предбронированном интервале времени
+          required: true
+          schema:
+            $ref: '#/definitions/NotaryBookSlotRequest'
+        - name: isSsrBooking
+          in: query
+          description: Флаг обозначающий источник бронирования слота
+          required: false
+          default: false
+          type: boolean
+      responses:
+        200:
+          description: Результат бронирования
+        400:
+          description:
+            Идентификатор бронирования должен быть указан /
+            Слоты относящиеся к идентификатору бронирования отсутствуют
+  /notary/application:
+    get:
+      summary: Получение данных по заявлению
+      operationId: fetchNotaryApplication
+      tags:
+        - Notary
+      produces:
+        - application/json
+      parameters:
+        - name: eno
+          in: query
+          description: ЕНО
+          required: true
+          type: string
+      responses:
+        200:
+          description: Данные по заявлению
+          schema:
+            $ref: '#/definitions/NotaryApplication'
+        400:
+          description:
+            Отсутствует заявление по указанному ЕНО
+definitions:
+  NotaryPersonCheck:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина, по которой невозможно предоставить услугу
+      claims:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/NotaryClaim'
+    required: [ isPossible ]
+  NotaryClaim:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина, по которой невозможно предоставить услугу
+      affairId:
+        type: string
+        description: Id семьи
+      invitedApplicants:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/NotaryApplicant'
+      apartmentFrom:
+        $ref: '#/definitions/NotaryApartmentFrom'
+      apartmentsTo:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/NotaryApartmentTo'
+  NotaryApplicant:
+    type: object
+    properties:
+      ssoId:
+        type: string
+        description: SSOID
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      lastName:
+        type: string
+        description: Фамилия
+        example: Иванов
+      firstName:
+        type: string
+        description: Имя
+        example: Иван
+      middleName:
+        type: string
+        description: Отчество
+        example: Иванович
+      dob:
+        type: string
+        format: date
+        description: Дата рождения
+  NotaryApartmentFrom:
+    type: object
+    properties:
+      unom:
+        type: string
+        description: UNOM дома
+      address:
+        type: string
+        description: Адрес
+        example: г.Москва, ул Набережная 12, д.11
+      flatNumber:
+        type: string
+        description: Номер квартиры
+      roomNumbers:
+        type: string
+        description: Номера комнат в квартире
+  NotaryApartmentTo:
+    type: object
+    properties:
+      unom:
+        type: string
+        description: UNOM дома
+      address:
+        type: string
+        description: Адрес
+        example: г.Москва, ул Набережная 12, д.11
+      flatNumber:
+        type: string
+        description: Номер квартиры
+  NotaryList:
+    type: object
+    properties:
+      notaries:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/Notary'
+  Notary:
+    type: object
+    properties:
+      id:
+        type: string
+        description: ID нотариуса
+        example: ee619013-58e8-4c6c-b007-f86dc0666f7d
+      fio:
+        type: string
+        description: ФИО нотариуса
+        example: Панин Василий Иосифович
+      address:
+        type: string
+        description: Адрес нотариуса
+        example: Улица Пушкина, дом Колотушкина.
+      phone:
+        type: string
+        description: Телефон нотариуса
+        example: 007
+      additionalData:
+        type: string
+        description: Доп. информация
+        example: На Мальдивах до мая.
+  NotaryTimetable:
+    type: object
+    properties:
+      timetable:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/NotaryBookingSlot'
+  NotaryBookingSlot:
+    type: object
+    properties:
+      slotId:
+        type: string
+        description: Идентификатор интервала записи
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      timeFrom:
+        type: string
+        format: date-time
+      timeTo:
+        type: string
+        format: date-time
+  NotaryPrebookSlotRequest:
+    type: object
+    properties:
+      slotId:
+        type: string
+        description: Идентификатор интервала записи
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      eno:
+        type: string
+        description: ЕНО заявления
+    required: [ slotId, eno ]
+  NotaryPrebookSlotResponse:
+    type: object
+    properties:
+      bookingId:
+        type: string
+        description: Идентификатор брони интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+  NotaryBookSlotRequest:
+    type: object
+    properties:
+      bookingId:
+        type: string
+        description: Идентификатор брони интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      eno:
+        type: string
+        description: ЕНО заявлени
+    required: [ bookingId, eno ]
+  NotaryApplication:
+    type: object
+    properties:
+      notary:
+        type: object
+        description: Нотаруис
+        $ref: "#/definitions/Notary"
+      bookingId:
+        type: string
+        description: Идентификатор бронии интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      appointmentDateTime:
+        type: string
+        format: date-time
+        description: Дата и время слота
+

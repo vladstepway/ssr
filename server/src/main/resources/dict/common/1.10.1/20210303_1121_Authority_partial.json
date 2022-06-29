@@ -1,0 +1,96 @@
+{
+  "metaDict": {
+    "nick": "Authority",
+    "name": "Полномочия",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "2a6f64c1-4d73-4de9-80db-4071d1680364",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "64264177-2640-4741-93ce-b9af76257853",
+          "nickAttr": "code",
+          "value": "UGD_SSR_OPERATOR_ENRICHMENT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b847ebd6-a2b9-49dc-99ce-8731221e4946",
+          "nickAttr": "group",
+          "value": "UGD_SSR_OPERATOR_ENRICHMENT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "08d33670-c0f0-468b-bc04-00fa4f14c459",
+          "nickAttr": "group",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 1,
+          "linkCode": null
+        },
+        {
+          "attrId": "99a7642c-488b-4426-a085-23759a7f8bc9",
+          "nickAttr": "group",
+          "value": "SYS_LINKS_UGD_VIEW",
+          "orders": 2,
+          "linkCode": null
+        },
+        {
+          "attrId": "cd7677b6-454c-4d0e-a406-f2f4929029f5",
+          "nickAttr": "name",
+          "value": "Инициация обогащения данных отселяемых домов и жителей из ДГИ",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

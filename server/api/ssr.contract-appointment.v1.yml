@@ -1,0 +1,296 @@
+swagger: '2.0'
+info:
+  description: |
+    ССР. Сервис для записи на заключение договора.
+  version: 1.0.0
+  title: SSR Contract Appointment
+schemes:
+  - http
+
+paths:
+  /contract-appointments/check:
+    get:
+      summary: Выполнение проверок и получение сведений о жильцах для записи
+      operationId: checkPerson
+      tags:
+        - ContractAppointment
+      produces:
+        - application/json
+      parameters:
+        - name: snils
+          in: query
+          description: СНИЛС, пример 001-198-166 10
+          required: true
+          type: string
+        - name: ssoId
+          in: query
+          description: ssoId, пример cd4b6f7c-81d6-45ea-bf3f-e73c0750f84b
+          required: true
+          type: string
+      responses:
+        200:
+          description: Результат проверки и сведения о жильцах и помещениях
+          schema:
+            $ref: '#/definitions/ContractAppointmentPersonCheck'
+        400:
+          description: Данные запроса невалидны
+  /contract-appointments/timetable:
+    get:
+      summary: Получение доступной сетки расписания для записи
+      operationId: fetchTimetable
+      tags:
+        - ContractAppointment
+      produces:
+        - application/json
+      parameters:
+        - name: cipId
+          in: query
+          description: Идентификатор ЦИПа
+          required: true
+          type: string
+        - name: days
+          in: query
+          description: Количество дней для вывода сетки расписания
+          required: false
+          type: integer
+          default: 7
+        - name: startFrom
+          in: query
+          description: Дата начала диапозона сетки расписания
+          required: false
+          type: string
+          format: date
+      responses:
+        200:
+          description: Сетка расписания
+          schema:
+            $ref: '#/definitions/ContractAppointmentTimetable'
+        400:
+          description: Данные запроса невалидны
+  /contract-appointments/prebook:
+    post:
+      summary: Предбронирование интервала времени
+      operationId: prebookSlot
+      tags:
+        - ContractAppointment
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Информация о выбранном интервале
+          required: true
+          schema:
+            $ref: '#/definitions/ContractAppointmentPrebookRequest'
+      responses:
+        200:
+          description: Результат предбронированния интервала времени
+          schema:
+            $ref: '#/definitions/ContractAppointmentPrebookResponse'
+        400:
+          description: Данные запроса невалидны
+  /contract-appointments/book:
+    post:
+      summary: Бронирование интервала времени
+      operationId: bookSlot
+      tags:
+        - ContractAppointment
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Информация о предбронированном интервале времени
+          required: true
+          schema:
+            $ref: '#/definitions/ContractAppointmentBookRequest'
+        - name: contactAppointmentDocumentId
+          in: query
+          description: Идентификатор документа, используется для переноса записи на заключение договора внутри ССР
+          required: false
+          type: string
+      responses:
+        200:
+          description: Результат бронирования
+        400:
+          description: Данные запроса невалидны
+  /contract-appointments:
+    get:
+      summary: Получение данных по заявлению
+      operationId: fetchByEno
+      tags:
+        - ContractAppointment
+      produces:
+        - application/json
+      parameters:
+        - name: eno
+          in: query
+          description: ЕНО
+          required: true
+          type: string
+      responses:
+        200:
+          description: Данные по заявлению
+          schema:
+            $ref: '#/definitions/ContractAppointment'
+        400:
+          description: Отсутствует заявление по указанному ЕНО
+definitions:
+  ContractAppointmentPersonCheck:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина по которой невозможно предоставить услугу
+      apartments:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/ContractAppointmentApartment'
+    required: [ isPossible ]
+  ContractAppointmentApartment:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина по которой невозможно предоставить услугу
+      address:
+        type: string
+        description: Адрес
+        example: г.Москва, ул Набережная 12, кв. 15
+      contractOrderId:
+        type: string
+        description: Идентификатор договора
+      personDocumentId:
+        type: string
+        description: Идентификатор документа жителя в системе ССР к которому относится договор на квартиру
+      cip:
+        $ref: '#/definitions/ContractAppointmentCip'
+      invitedApplicants:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/ContractAppointmentApplicant'
+      isElectronicSignPossible:
+        type: boolean
+        description: Возможен электронный способ подписания договора
+        example: true
+    required: [ isPossible, address, isElectronicSignPossible ]
+  ContractAppointmentCip:
+    type: object
+    properties:
+      id:
+        type: string
+        description: id
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      address:
+        type: string
+        description: Адрес
+        example: Мытищи, Шараповский проезд, дом 2, строение 3й
+      phone:
+        type: string
+        description: Телефон
+        example: +7985478532
+    required: [ address ]
+  ContractAppointmentApplicant:
+    type: object
+    properties:
+      ssoId:
+        type: string
+        description: SSOID
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      lastName:
+        type: string
+        description: Фамилия
+        example: Иванов
+      firstName:
+        type: string
+        description: Имя
+        example: Иван
+      middleName:
+        type: string
+        description: Отчество
+        example: Иванович
+      dob:
+        type: string
+        format: date
+        description: Дата рождения
+    required: [ lastName, firstName, dob ]
+  ContractAppointmentTimetable:
+    type: object
+    properties:
+      timetable:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/ContractAppointmentSlot'
+    required: [ timetable ]
+  ContractAppointmentSlot:
+    type: object
+    properties:
+      slotId:
+        type: string
+        description: Идентификатор интервала записи
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      timeFrom:
+        type: string
+        format: date-time
+      timeTo:
+        type: string
+        format: date-time
+    required: [ slotId, timeFrom, timeTo ]
+  ContractAppointmentPrebookRequest:
+    type: object
+    properties:
+      slotId:
+        type: string
+        description: Идентификатор интервала записи
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      contractOrderId:
+        type: string
+        description: Идентификатор договора
+    required: [ slotId, contractOrderId ]
+  ContractAppointmentPrebookResponse:
+    type: object
+    properties:
+      bookingId:
+        type: string
+        description: Идентификатор брони интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+  ContractAppointmentBookRequest:
+    type: object
+    properties:
+      bookingId:
+        type: string
+        description: Идентификатор брони интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+    required: [ bookingId ]
+  ContractAppointment:
+    type: object
+    properties:
+      cip:
+        $ref: '#/definitions/ContractAppointmentCip'
+      address:
+        type: string
+        description: Адрес
+        example: г.Москва, ул Набережная 12, кв. 15
+      bookingId:
+        type: string
+        description: Идентификатор бронии интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      appointmentDateTime:
+        type: string
+        format: date-time
+        description: Дата и время слота

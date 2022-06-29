@@ -1,0 +1,236 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Справочник предназначен для регистрации типов документов (бизнес-объектов) Инструкция по работе со справочником - https://smart.mos.ru/wiki/pages/viewpage.action?pageId=11763769",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Полный код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - КОДСИСТЕМЫ_КРАТКИЙКОДПОДСИСТЕМЫ_КРАТКИЙКОДТИПАДОКУМЕНТА",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Системы\"",
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Подсистемы\"",
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Ядра подсистемы поиска\"",
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Поля документов подсистемы поиска\"",
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "Необходимо установить значение = Да, если документ не предполагается добавлять в подсистему поиска",
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "link",
+        "nickDictLink": "InformationObjectRegister",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Реестр моделей информационных объектов\"",
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "22c83d91-597c-48bf-949d-64e0e2a435b1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "30802ff4-a89e-4615-a7a0-080cd257ad9e",
+          "nickAttr": "code",
+          "value": "UGD_SSR_COMMISSION-INSPECTION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9005ede2-1e0e-43a8-a3d6-a409b5637f90",
+          "nickAttr": "fields",
+          "value": "027968f5-c82f-4c47-ae90-e6c03cd2af4b",
+          "orders": 0,
+          "linkCode": "ugd_ssr_commission_inspection_application_number"
+        },
+        {
+          "attrId": "962dc876-559a-46f0-9796-a9200c32c406",
+          "nickAttr": "fields",
+          "value": "b94cf041-7aa6-4a41-b235-ab7308a44ab5",
+          "orders": 1,
+          "linkCode": "ugd_ssr_commission_inspection_creation_date"
+        },
+        {
+          "attrId": "44cafa49-0c9f-4351-a05f-13ff8c330dda",
+          "nickAttr": "fields",
+          "value": "685c00aa-dc94-49ba-9711-9a94eeda5981",
+          "orders": 2,
+          "linkCode": "ugd_ssr_commission_inspection_fio"
+        },
+        {
+          "attrId": "270678ca-9e53-4964-bf51-a4550ad77561",
+          "nickAttr": "fields",
+          "value": "ff1afdde-c920-4df5-975f-37febdc8c478",
+          "orders": 3,
+          "linkCode": "ugd_ssr_commission_inspection_address_to"
+        },
+        {
+          "attrId": "44e5ae37-3b1a-4aec-846b-c4c3c66dcc13",
+          "nickAttr": "fields",
+          "value": "c25857e3-7215-43b5-b866-0a4621e0a36f",
+          "orders": 4,
+          "linkCode": "ugd_ssr_commission_inspection_flat_to"
+        },
+        {
+          "attrId": "819ccc95-3b4b-4469-99d2-0042b5372879",
+          "nickAttr": "fields",
+          "value": "cd25bb35-4481-41eb-b82a-dab5e3223e9f",
+          "orders": 5,
+          "linkCode": "ugd_ssr_commission_inspection_date"
+        },
+        {
+          "attrId": "b6204994-0d76-43bf-bf48-306428747369",
+          "nickAttr": "fields",
+          "value": "912acbda-7465-4f55-82ef-faf34655a827",
+          "orders": 6,
+          "linkCode": "ugd_ssr_commission_inspection_status"
+        },
+        {
+          "attrId": "794a2825-b4e4-474f-860c-ef42f0e912ff",
+          "nickAttr": "name",
+          "value": "Реестр заявлений на комиссионный осмотр",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "730c8c98-6316-470d-9582-be9bd11c8a87",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "1be3c83d-fc7d-4af3-b69b-ac7af6ab7158",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "d8985cf4-8448-4446-9ab2-6b94994aa4b9",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "a9e4a497-15de-4af5-bac0-f0a3202b71ae",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

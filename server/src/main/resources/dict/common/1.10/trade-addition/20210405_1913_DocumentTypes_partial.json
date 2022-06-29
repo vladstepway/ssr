@@ -1,0 +1,194 @@
+{
+    "elements": [
+        {
+            "deleted": 0,
+            "elementId": "56da29ea-2a5f-4dee-ad6a-e7321d6652ef",
+            "note": null,
+            "parentCode": null,
+            "sortValue": null,
+            "values": [
+                {
+                    "attrId": "9f74a037-11a8-4c11-9e4e-f103826b9637",
+                    "linkCode": null,
+                    "nickAttr": "code",
+                    "orders": 0,
+                    "value": "UGD_SSR_TRADE-DATA-BATCH-STATUS"
+                },
+                {
+                    "attrId": "b8ceaff2-ce43-445c-97b8-797390cb5bbd",
+                    "linkCode": "ugd_ssr_trade_addition_batch_status_file_name",
+                    "nickAttr": "fields",
+                    "orders": 0,
+                    "value": "efc3390d-e646-42a7-901f-2e3ee2dcb1c1"
+                },
+                {
+                    "attrId": "ed0d6989-13e9-46d9-827c-46fb83f36714",
+                    "linkCode": null,
+                    "nickAttr": "name",
+                    "orders": 0,
+                    "value": "Информация о загруженной партии данных о сделках."
+                },
+                {
+                    "attrId": "d3956bb7-bd20-4b10-9924-9af370d1ed02",
+                    "linkCode": "ugd_ssr_core",
+                    "nickAttr": "solrCore",
+                    "orders": 0,
+                    "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce"
+                },
+                {
+                    "attrId": "4635bff4-24b4-4aca-a6df-072230527c3c",
+                    "linkCode": "UGD_SSR",
+                    "nickAttr": "subsystem",
+                    "orders": 0,
+                    "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db"
+                },
+                {
+                    "attrId": "9b197613-c5e8-46be-9f26-d9baf02efbc3",
+                    "linkCode": "UGD",
+                    "nickAttr": "systemCode",
+                    "orders": 0,
+                    "value": "bb62765d-d972-4632-ae4e-ed67963dca6d"
+                },
+                {
+                    "attrId": "143e6f7f-3afa-45b7-a580-2831ef72253d",
+                    "linkCode": null,
+                    "nickAttr": "virtual",
+                    "orders": 0,
+                    "value": "false"
+                }
+            ]
+        }
+    ],
+    "metaDict": {
+        "context": "SYSTEM",
+        "deleted": 0,
+        "hierarchyDict": 0,
+        "metaAttr": [
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Код типа",
+                "nick": "code",
+                "nickDictLink": null,
+                "note": null,
+                "orders": 0,
+                "required": 1,
+                "typeAttr": "string",
+                "unique": 1
+            },
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Название типа",
+                "nick": "name",
+                "nickDictLink": null,
+                "note": null,
+                "orders": 1,
+                "required": 1,
+                "typeAttr": "string",
+                "unique": 1
+            },
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Ядро SOLR",
+                "nick": "solrCore",
+                "nickDictLink": "SearchSolrCores",
+                "note": null,
+                "orders": 2,
+                "required": 0,
+                "typeAttr": "link",
+                "unique": 0
+            },
+            {
+                "arrayAttr": 1,
+                "deleted": 0,
+                "name": "Список полей",
+                "nick": "fields",
+                "nickDictLink": "SearchFields",
+                "note": null,
+                "orders": 3,
+                "required": 0,
+                "typeAttr": "link",
+                "unique": 0
+            },
+            {
+                "arrayAttr": 1,
+                "deleted": 0,
+                "name": "Виртуальные типы документов",
+                "nick": "virtTypes",
+                "nickDictLink": "null",
+                "note": null,
+                "orders": 4,
+                "required": 0,
+                "typeAttr": "string",
+                "unique": 0
+            },
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Виртуальный",
+                "nick": "virtual",
+                "nickDictLink": null,
+                "note": null,
+                "orders": 5,
+                "required": 1,
+                "typeAttr": "boolean",
+                "unique": 0
+            },
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Подсистема",
+                "nick": "subsystem",
+                "nickDictLink": "SubSystems",
+                "note": null,
+                "orders": 6,
+                "required": 1,
+                "typeAttr": "link",
+                "unique": 0
+            },
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Система",
+                "nick": "systemCode",
+                "nickDictLink": "Systems",
+                "note": null,
+                "orders": 7,
+                "required": 1,
+                "typeAttr": "link",
+                "unique": 0
+            },
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Модель ИО",
+                "nick": "informationObject",
+                "nickDictLink": "InformationObjectRegister",
+                "note": null,
+                "orders": 8,
+                "required": 0,
+                "typeAttr": "link",
+                "unique": 0
+            },
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Не индексировать",
+                "nick": "noIndex",
+                "nickDictLink": null,
+                "note": null,
+                "orders": 9,
+                "required": 0,
+                "typeAttr": "boolean",
+                "unique": 0
+            }
+        ],
+        "name": "Типы документов",
+        "nick": "DocumentTypes",
+        "note": null,
+        "sysName": "COMMON",
+        "transfer": 0
+    }
+}

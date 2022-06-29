@@ -1,0 +1,2160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+           xmlns:trade="http://www.ugd.croc.ru/ssr/trade"
+           attributeFormDefault="unqualified">
+
+    <xs:import namespace="http://www.ugd.croc.ru/ssr/trade" schemaLocation="trade/TradeAdditionCommon.xsd"/>
+    <!--ФОРМАТ ДАТЫ ВЕЗДЕ - YYYY-MM-DD-->
+    <!--ДГП запрос по людям по дому - 1 сценарий-->
+    <xs:element name="SuperServiceDGPPersonsRequest">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="p_unom" type="xs:int" minOccurs="1" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>УНОМ</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="p_cadastr" type="xs:string" minOccurs="0" maxOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Кадастровый номер</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+    <!--ДГП ответ на запрос по людям по дому-->
+    <xs:element name="SuperServiceDGPPersonsMessage">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SuperServiceDGPPersonsResult" type="SuperServiceDGPPersonsMessageType" minOccurs="0"
+                            maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>ДГП ответ на запрос по людям по дому</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPPersonsMessageType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--ид человека-->
+            <!--ид семьи-->
+            <xs:element name="actual_date" type="xs:date" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>дата актуализации
+                        YYYY-MM-DD
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--дата актуализации-->
+            <xs:element name="snils" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>СНИЛС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--снилс-->
+            <xs:element name="lastname" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Фамилия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--Фамилия-->
+            <xs:element name="firstname" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Имя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--Имя-->
+            <xs:element name="middlename" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--Отчество-->
+            <xs:element name="birthdate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата рождения
+                        YYYY-MM-DD
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="sex" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>пол
+                        1 – Мужской
+                        2 – Женский
+                        0 - Значение отсутствует
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--пол-->
+            <xs:element name="IsQueue" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Очередник
+                        1 - Да
+                        0 или нет элемента - Нет
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="IsDead" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Умерший собственник
+                        1 - Да
+                        0 или нет элемента - Нет
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ChangeStatus" type="xs:string" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Признак изменения
+                        Начальная загрузка,
+                        Добавлен,
+                        Удален,
+                        Скорректирован
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="delReason" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина удаления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="LinkedFlats" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Связанные квартиры</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Flat" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные по квартире</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="affair_id" type="xs:string" minOccurs="1">
+                                        <xs:annotation>
+                                            <xs:documentation>ид семьи</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="statusLiving" type="xs:string" minOccurs="1">
+                                        <xs:annotation>
+                                            <xs:documentation>Статус проживания
+                                                1 - Собственник (частная собственность),
+                                                2 - Пользователь (частная собственность),
+                                                3 - Наниматель (найм/пользование),
+                                                4 - Проживающий (найм/пользователь)
+                                                5 - Свободная
+                                                0 - Отсутствует
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="encumbrances" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Обременения на квартиру
+                                                1-Да
+                                                2-Нет
+                                                0 или нет элемента - Нет информации
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="snos_unom" type="xs:string" minOccurs="1">
+                                        <xs:annotation>
+                                            <xs:documentation>уном рсселяемого дома</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="snos_cadnum" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>кадастровый номер расселяемого дома</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="snos_flat_num" type="xs:string" minOccurs="1">
+                                        <xs:annotation>
+                                            <xs:documentation>№ квартиры расселяемого дома</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="snos_rooms_num" type="xs:string" minOccurs="0"
+                                                maxOccurs="unbounded">
+                                        <xs:annotation>
+                                            <xs:documentation>№ комнат рсселяемого дома</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="noFlat" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Квартира без предоставления
+                                                1 - Да
+                                                0 или нет элемента - Нет
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="isFederal" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Федеральная собственность
+                                                1 - Да
+                                                0 или нет элемента - Нет
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="inCourt" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>В суде
+                                                1 - Да
+                                                0 или нет элемента - Нет
+                                            </xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--собственник-->
+            <!--уном рсселяемого дома-->
+            <!--кадастровый номер рсселяемого дома-->
+            <!--№ квартирырсселяемого дома-->
+            <!--№ комнат рсселяемого дома-->
+            <!--текст ошибки-->
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сведения о письмах с предложениями из ИС РЕОН - 2 сценарий-->
+    <!--Cведения о письмах с предложениями из ИС РЕОН - запрос (2, 4)-->
+    <xs:complexType name="SuperServiceDGPLetterRequestType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="idCIP" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД ЦИП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pdfProposal" type="xs:base64Binary">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файл с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pdfBlank" type="xs:base64Binary" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>PDF-файл с бланком заявления на согласие/отказ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letter_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Уникальный номер письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="SuperServiceDGPLetterRequest" type="SuperServiceDGPLetterRequestType"/>
+    <!--Сообщение о письме с предложением - 11 и 13-->
+    <xs:element name="SuperServiceDGPLetterMessage" type="SuperServiceDGPLetterMessageType"/>
+    <xs:complexType name="SuperServiceDGPLetterMessageType">
+        <xs:sequence>
+            <xs:element name="SSOID" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>SSOID ЛК пользователя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MessageText" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Сообщение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pdfProposal" type="xs:base64Binary">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файл с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pdfBlank" type="xs:base64Binary">
+                <xs:annotation>
+                    <xs:documentation>PDF-файл с бланком заявления на согласие/отказ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус доставки писем с предложением - 14 и 15-->
+    <xs:element name="SuperServiceDGPLetterSendStatus" type="SuperServiceDGPLetterSendStatusType"/>
+    <xs:complexType name="SuperServiceDGPLetterSendStatusType">
+        <xs:sequence>
+            <xs:element name="SendStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус доставки
+                        1 - Доставлено/Прочитано
+                        0 - не доставлено/не прочитано/нет данных
+                        2 - Ошибка
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус доставки писем с предложением - 16 и 18-->
+    <xs:element name="SuperServiceDGPLetterHandStatus" type="SuperServiceDGPLetterHandStatusType"/>
+    <xs:complexType name="SuperServiceDGPLetterHandStatusType">
+        <xs:sequence>
+            <xs:element name="letter_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Уникальный номер письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="SendStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус доставки
+                        1 - Доставлено
+                        2 - Прочитано
+                        3 - У жителя отсутствует ЛК
+                        4 - СНИЛС не найден
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сведения о начале переселения в ИС РЕОН - 3 сценарий-->
+    <!--Сведения о начале переселения в ИС РЕОН - 1 и 3-->
+    <xs:element name="SuperServiceDGPStartRemoval" type="SuperServiceDGPStartRemovalType"/>
+    <xs:complexType name="SuperServiceDGPStartRemovalType">
+        <xs:sequence>
+            <xs:element name="StartDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата начала отселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Letter">
+                <xs:annotation>
+                    <xs:documentation>Реквизиты письма ДГП на ДГИ</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="LetterNum" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Номер письма</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="LetterDate" type="xs:date">
+                            <xs:annotation>
+                                <xs:documentation>Дата направления письма</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!--ид человека-->
+            <!--ид семьи-->
+            <!--дата актуализации-->
+            <!--снилс-->
+            <!--Фамилия-->
+            <!--Имя-->
+            <!--Отчество-->
+            <!--пол-->
+            <!--собственник-->
+            <!--уном рсселяемого дома-->
+            <!--кадастровый номер рсселяемого дома-->
+            <!--№ квартирырсселяемого дома-->
+            <!--№ комнат рсселяемого дома-->
+            <!--текст ошибки-->
+            <xs:element name="SettlementHouses" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Заселяемые дома</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="SettlementHouse" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Заселяемый дом</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="new_unom" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>уном заселяемого дома</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="new_cadnum" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>кадастровый номер заселяемого дома</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="ResettlementHouses">
+                                        <xs:annotation>
+                                            <xs:documentation>Расселяемые дома</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="ResettlementHouse" maxOccurs="unbounded">
+                                                    <xs:annotation>
+                                                        <xs:documentation>Расселяемый дом</xs:documentation>
+                                                    </xs:annotation>
+                                                    <xs:complexType>
+                                                        <xs:sequence>
+                                                            <xs:element name="snos_unom" type="xs:string">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>уном расселяемого дома
+                                                                    </xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:element>
+                                                            <xs:element name="snos_cadnum" type="xs:string"
+                                                                        minOccurs="0">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>кадастровый номер расселяемого
+                                                                        дома
+                                                                    </xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:element>
+                                                            <xs:element name="ResType" type="xs:string">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>Тип переселения дома
+                                                                        1 - полностью переселяемый
+                                                                        2 - частично расселяемый, в этом случае
+                                                                        указываются квартиры
+                                                                    </xs:documentation>
+                                                                </xs:annotation>
+                                                            </xs:element>
+                                                            <xs:element name="Flats" minOccurs="0">
+                                                                <xs:annotation>
+                                                                    <xs:documentation>Квартиры</xs:documentation>
+                                                                </xs:annotation>
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name="FlatNumber" type="xs:string"
+                                                                                    maxOccurs="unbounded">
+                                                                            <xs:annotation>
+                                                                                <xs:documentation>Номер Квартиры
+                                                                                    расселяемого дома
+                                                                                </xs:documentation>
+                                                                            </xs:annotation>
+                                                                        </xs:element>
+                                                                    </xs:sequence>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                        </xs:sequence>
+                                                    </xs:complexType>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="Cip">
+                                        <xs:annotation>
+                                            <xs:documentation>Данные ЦИП</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="idCIP" type="xs:string">
+                                                    <xs:annotation>
+                                                        <xs:documentation>ID ЦИП</xs:documentation>
+                                                    </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="addressCIP" type="xs:string">
+                                                    <xs:annotation>
+                                                        <xs:documentation>Адрес ЦИП</xs:documentation>
+                                                    </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="phoneCIP" type="xs:string">
+                                                    <xs:annotation>
+                                                        <xs:documentation>Телефон ЦИП</xs:documentation>
+                                                    </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="workCIP" type="xs:string">
+                                                    <xs:annotation>
+                                                        <xs:documentation>Режим работы ЦИП</xs:documentation>
+                                                    </xs:annotation>
+                                                </xs:element>
+                                                <xs:element name="dateCIP" type="xs:date">
+                                                    <xs:annotation>
+                                                        <xs:documentation>Дата открытия ЦИП</xs:documentation>
+                                                    </xs:annotation>
+                                                </xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сведения о статусе переселения квартир в заселяемом доме из ИС РЕОН - 4 сценарий-->
+    <!--Сведения о статусе переселения квартир - 2 и 4-->
+    <xs:element name="SuperServiceDGPRemovalStatus" type="SuperServiceDGPRemovalStatusType"/>
+    <xs:complexType name="SuperServiceDGPRemovalStatusType">
+        <xs:sequence>
+            <xs:element name="new_unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>уном заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="new_cadnum" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>кадастровый номер заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="FlatNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер Квартиры заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="RemovalStatus" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Статус переселения
+                        1 - Не предлагалась
+                        2 - Выдано письмо с предложением
+                        3 - Получено согласие
+                        4 - Получен отказ
+                        5 - Выдан проект договора
+                        6 - Договор подписан
+                        7- В суде
+                        8 - Иное (в работе)
+                        9 - Иное (договор подписан)
+                        10 - Иное в суде
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--ид человека-->
+            <!--ид семьи-->
+            <!--дата актуализации-->
+            <!--снилс-->
+            <!--Фамилия-->
+            <!--Имя-->
+            <!--Отчество-->
+            <!--пол-->
+            <!--собственник-->
+            <!--уном рсселяемого дома-->
+            <!--кадастровый номер рсселяемого дома-->
+            <!--№ квартирырсселяемого дома-->
+            <!--№ комнат рсселяемого дома-->
+            <!--текст ошибки-->
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус просмотра квартиры в заселяемом доме в АИС РСМ - 5 сценарий-->
+    <!--Сведения о статусе просмотра квартиры в заселяемом доме - 1 и 3-->
+    <xs:element name="SuperServiceDGPViewStatus" type="SuperServiceDGPViewStatusType">
+        <xs:annotation>
+            <xs:documentation>Сведения о статусе просмотра квартиры в заселяемом доме</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPViewStatusType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letter_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Уникальный номер письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="viewDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата просмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="annotation" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Примечание</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="TechInfo" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Техническая информация</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="userID" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ID пользователя в LDAP</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="userFIO" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ФИО пользователя</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="actionDateTime" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation>Дата и время внесения данных</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сообщение о статусе просмотра квартиры в заселяемом доме - 11 и 13-->
+    <xs:element name="SuperServiceDGPViewStatusMessage" type="SuperServiceDGPViewStatusMessageType"/>
+    <xs:complexType name="SuperServiceDGPViewStatusMessageType">
+        <xs:sequence>
+            <xs:element name="SSOID" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>SSOID ЛК пользователя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MessageText" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Сообщение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус доставки уведомлений о статусе просмотра квартиры в заселяемом доме - 16 и 18-->
+    <xs:element name="SuperServiceDGPViewSendStatus" type="SuperServiceDGPViewSendStatusType"/>
+    <xs:complexType name="SuperServiceDGPViewSendStatusType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="SendStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус
+                        1 - Доставлено
+                        2 - Прочитано
+                        3 - У жителя отсутствует ЛК
+                        4 - СНИЛС не найден
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус подачи заявления на согласие/отказ в АИС РСМ - 6 сценарий-->
+    <!--Сведения о статусе подачи заявления на согласие/отказ - 1 и 3-->
+    <xs:element name="SuperServiceDGPStatementStatus" type="SuperServiceDGPStatementStatusType">
+        <xs:annotation>
+            <xs:documentation>Сведения о статусе подачи заявления на согласие/отказ</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPStatementStatusType">
+        <xs:sequence>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statementType" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Тип заявления
+                        1 - Согласие
+                        2 - Отказ
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statementDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="declineReason" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина отказа
+                        Справочник
+                        30-Реновация/техническое состояние квартиры
+                        31-Реновация/не устраивает планировка
+                        32-Реновация/требование большего метража
+                        33-Реновация/требование нескольких квартир
+                        34-Реновация/требование другого дома
+                        35-Реновация/требование другого района
+                        36-Реновация/не устраивает этаж
+                        37-Реновация/Иное
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="declineReasonText" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина отказа
+                        расширенная - текстом
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="FileLink" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Ссылка на файл с с заявлением на согласие/отказ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letter_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Уникальный номер письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullDocs" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комплектность документов ( согласия или приема недостающих документов)
+                        1 - Полный комплект
+                        2 - Неполный комплект
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="waitingDocs" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Список недостающих документов ( согласия или приема недостающих документов)
+                    </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="doc" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Недостающий документ</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="docId" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Идентификатор из справочника документов</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="docName" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Наименование из справочника документов</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="waitingNote" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Список недостающих документов - комментарий текстом</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="waitingDocsDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата приема недостающих документов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="TechInfo" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Техническая информация</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="userID" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ID пользователя в LDAP</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="userFIO" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ФИО пользователя</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="actionDateTime" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation>Дата и время внесения данных</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сообщение о статусе подачи заявления на согласие/отказ - 11 и 13-->
+    <xs:element name="SuperServiceDGPStatementSendStatus" type="SuperServiceDGPStatementSendStatusType"/>
+    <xs:complexType name="SuperServiceDGPStatementSendStatusType">
+        <xs:sequence>
+            <xs:element name="SSOID" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>SSOID ЛК пользователя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MessageText" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Сообщение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус доставки уведомлений о статусе подачи заявления на согласие/отказ - 16 и 18-->
+    <xs:element name="SuperServiceDGPStatementHandStatus" type="SuperServiceDGPStatementHandStatusType"/>
+    <xs:complexType name="SuperServiceDGPStatementHandStatusType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="SendStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус
+                        1 - Доставлено
+                        2 - Прочитано
+                        3 - У жителя отсутствует ЛК
+                        4 - СНИЛС не найден
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сведения о готовности договора из АИС РСМ и Статус доставки уведомлений о готовности договора в АИС РСМ - 7 сценарий-->
+    <!--Сведения о готовности договора - 1 и 3-->
+    <xs:element name="SuperServiceDGPContractsReady">
+        <xs:annotation>
+            <xs:documentation>Сведения о готовности проекта договора</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SuperServiceDGPContractReady" type="SuperServiceDGPContractReadyType"
+                            maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPContractReadyType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="order_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="RTFContractToSign" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>RTF-файл - с проектом договора на подпись - ссылка на ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус
+                        1 - Аннулирован
+                        2 - Подготовлен
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractType" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Тип проекта договора
+                        Справочник
+                        1-Социальный найм
+                        39-Переход права собственности на равнозначное жилое помещение
+                        41-Передача равнозначного жилого помещения
+                        43-Краткосрочный найм (реновация)
+                        45-Равноценное возмещение в денежной форме
+                        46-Равноценное возмещение в натуральной форме
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractNumber" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractDateEnd" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата окончания договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="RTFActToSign" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>RTF-файл - с актом приема-передачи жилого помещения на подпись - ссылка на ЦХЭД
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letter_id" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уникальный номер письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сообщение о готовности договора - 11 и 13-->
+    <xs:element name="SuperServiceDGPContractReadyCheck" type="SuperServiceDGPContractReadyCheckType"/>
+    <xs:complexType name="SuperServiceDGPContractReadyCheckType">
+        <xs:sequence>
+            <xs:element name="SSOID" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>SSOID ЛК пользователя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MessageText" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Сообщение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pdfFiles" type="xs:base64Binary" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файлы с проектом договора и Уведомлением с предложением подписать договор
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус доставки уведомлений о готовности договора - 16 и 18-->
+    <xs:element name="SuperServiceDGPContractHandStatus" type="SuperServiceDGPContractHandStatusType"/>
+    <xs:complexType name="SuperServiceDGPContractHandStatusType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="order_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Status" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус
+                        1 - Доставлено
+                        2 - Прочитано
+                        3 - У жителя отсутствует ЛК
+                        4 - СНИЛС не найден
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--8 сценарий-->
+    <!--Сведения о подписании договора и статус доставки уведомлений в АИС РСМ и Сведения о заселяемой квартире, о решении суда и равноценном возмещении и о зарегистрированном договоре из АИС РСМ - 8 сценарий-->
+    <!--Сведения о статусе подписании договора - 1 и 3-->
+    <xs:element name="SuperServiceDGPSignAgreementStatus" type="SuperServiceDGPSignAgreementStatusType">
+        <xs:annotation>
+            <xs:documentation>Сведения о статусе подписании договора</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPSignAgreementStatusType">
+        <xs:sequence>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--ид человека-->
+            <!--ид семьи-->
+            <!--дата актуализации-->
+            <!--снилс-->
+            <!--Фамилия-->
+            <!--Имя-->
+            <!--Отчество-->
+            <!--пол-->
+            <!--собственник-->
+            <!--уном рсселяемого дома-->
+            <!--кадастровый номер рсселяемого дома-->
+            <!--№ квартирырсселяемого дома-->
+            <!--№ комнат рсселяемого дома-->
+            <!--текст ошибки-->
+            <xs:element name="order_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pdfSignedAgr" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файл с подписанным со стороны жителя договором - ссылка на ЦХЭД
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата подписания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="TechInfo" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Техническая информация</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="userID" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ID пользователя в LDAP</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="userFIO" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ФИО пользователя</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="actionDateTime" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation>Дата и время внесения данных</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сведения о заселяемой квартире - 6 и 8-->
+    <xs:element name="SuperServiceDGPSettleFlatInfo" type="SuperServiceDGPSettleFlatInfoType"/>
+    <xs:complexType name="SuperServiceDGPSettleFlatInfoType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="order_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="new_unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>уном заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="new_cadnum" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>кадастровый номер заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--ид человека-->
+            <!--ид семьи-->
+            <!--дата актуализации-->
+            <!--снилс-->
+            <!--Фамилия-->
+            <!--Имя-->
+            <!--Отчество-->
+            <!--пол-->
+            <!--собственник-->
+            <!--уном рсселяемого дома-->
+            <!--кадастровый номер рсселяемого дома-->
+            <!--№ квартирырсселяемого дома-->
+            <!--№ комнат рсселяемого дома-->
+            <!--текст ошибки-->
+            <xs:element name="FlatNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер Квартиры заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сообщение о подписанном договоре - 16 и 18-->
+    <xs:element name="SuperServiceDGPSignAgrMessage" type="SuperServiceDGPSignAgrMessageType"/>
+    <xs:complexType name="SuperServiceDGPSignAgrMessageType">
+        <xs:sequence>
+            <xs:element name="SSOID" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>SSOID ЛК пользователя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MessageText" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Сообщение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус доставки уведомлений о подписанном договоре- 21 и 23-->
+    <xs:element name="SuperServiceDGPSignAgrSendStatus" type="SuperServiceDGPSignAgrSendStatusType"/>
+    <xs:complexType name="SuperServiceDGPSignAgrSendStatusType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="order_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="SendStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус
+                        1 - Доставлено
+                        2 - Прочитано
+                        3 - У жителя отсутствует ЛК
+                        4 - СНИЛС не найден
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сведения о переселении по решению суда и равноценном возмещении   - 26 и 28-->
+    <xs:element name="SuperServiceDGPCourtAndMoney" type="SuperServiceDGPCourtAndMoneyType"/>
+    <xs:complexType name="SuperServiceDGPCourtAndMoneyType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="order_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="new_unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>уном заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="new_cadnum" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>кадастровый номер заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--ид человека-->
+            <!--ид семьи-->
+            <!--дата актуализации-->
+            <!--снилс-->
+            <!--Фамилия-->
+            <!--Имя-->
+            <!--Отчество-->
+            <!--пол-->
+            <!--собственник-->
+            <!--уном рсселяемого дома-->
+            <!--кадастровый номер рсселяемого дома-->
+            <!--№ квартирырсселяемого дома-->
+            <!--№ комнат рсселяемого дома-->
+            <!--текст ошибки-->
+            <xs:element name="FlatNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер Квартиры заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="AgrData" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="AgrType" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Тип договора
+                        Справочник
+                        1-Социальный найм
+                        39-Переход права собственности на равнозначное жилое помещение
+                        41-Передача равнозначного жилого помещения
+                        43-Краткосрочный найм (реновация)
+                        45-Равноценное возмещение в денежной форме
+                        46-Равноценное возмещение в натуральной форме
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="AgrNum" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="AgrEvent" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Событие
+                        1-Договор заключен
+                        2-Без договора.Служба судебных приставов
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="CourtData" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата судебного решения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signedAgrFile" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файл с подписанным со стороны жителя - ccsдоговором - Ссылка на ЦХЭД
+
+                        Для случаев замены ДКН на бессрочный договор найма
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сведения о выдаче ключей от новой квартиры в АИС РСМ - 9 сценарий -->
+    <!--Сведения о выдаче ключей от новой квартиры - 1 и 3-->
+    <xs:element name="SuperServiceDGPKeyIssue" type="SuperServiceDGPKeyIssueType">
+        <xs:annotation>
+            <xs:documentation>Сведения о выдаче ключей от новой квартиры</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPKeyIssueType">
+        <xs:sequence>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="order_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="new_unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>уном заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="new_cadnum" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>кадастровый номер заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--ид человека-->
+            <!--ид семьи-->
+            <!--дата актуализации-->
+            <!--снилс-->
+            <!--Фамилия-->
+            <!--Имя-->
+            <!--Отчество-->
+            <!--пол-->
+            <!--собственник-->
+            <!--уном рсселяемого дома-->
+            <!--кадастровый номер рсселяемого дома-->
+            <!--№ квартирырсселяемого дома-->
+            <!--№ комнат рсселяемого дома-->
+            <!--текст ошибки-->
+            <xs:element name="FlatNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер Квартиры заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ActNumber" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ActDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата подписания акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ActLink" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файл с подписанным актом - ссылка на ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="TechInfo" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Техническая информация</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="userID" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ID пользователя в LDAP</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="userFIO" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ФИО пользователя</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="actionDateTime" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation>Дата и время внесения данных</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сведения об освобождении квартиры в АИС РСМ - 10 сценарий-->
+    <!--Сведения об освобождении квартиры - 1 и 3-->
+    <xs:element name="SuperServiceDGPFlatFree" type="SuperServiceDGPFlatFreeType">
+        <xs:annotation>
+            <xs:documentation>Сведения об освобождении квартиры</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPFlatFreeType">
+        <xs:sequence>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--ид человека-->
+            <!--ид семьи-->
+            <!--дата актуализации-->
+            <!--снилс-->
+            <!--Фамилия-->
+            <!--Имя-->
+            <!--Отчество-->
+            <!--пол-->
+            <!--собственник-->
+            <!--уном рсселяемого дома-->
+            <!--кадастровый номер рсселяемого дома-->
+            <!--№ квартирырсселяемого дома-->
+            <!--№ комнат рсселяемого дома-->
+            <!--текст ошибки-->
+            <xs:element name="ActNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ActData" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата подписания акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сведения о статусе подписания акта - 11 сценарий-->
+    <!--Сведения о статусе подписания акта - 1 и 3-->
+    <xs:element name="SuperServiceDGPSignActStatus" type="SuperServiceDGPSignActStatusType">
+        <xs:annotation>
+            <xs:documentation>Сведения о статусе подписании акта</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPSignActStatusType">
+        <xs:sequence>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <!--ид человека-->
+            <!--ид семьи-->
+            <!--дата актуализации-->
+            <!--снилс-->
+            <!--Фамилия-->
+            <!--Имя-->
+            <!--Отчество-->
+            <!--пол-->
+            <!--собственник-->
+            <!--уном рсселяемого дома-->
+            <!--кадастровый номер рсселяемого дома-->
+            <!--№ квартирырсселяемого дома-->
+            <!--№ комнат рсселяемого дома-->
+            <!--текст ошибки-->
+            <xs:element name="order_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pdfSignedAct" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файл с подписанным со стороны жителя актом приема-передачи жилого помещения -
+                        ссылка на ЦХЭД
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signActDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата подписания акта приема-передачи жилого помещения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="TechInfo" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Техническая информация</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="userID" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ID пользователя в LDAP</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="userFIO" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ФИО пользователя</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="actionDateTime" type="xs:dateTime">
+                            <xs:annotation>
+                                <xs:documentation>Дата и время внесения данных</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сведения о готовности проекта договора - 12 сценарий-->
+    <!--Сведения о готовности проекта договора - 1 и 3-->
+    <xs:element name="SuperServiceDGPContractsPrReady">
+        <xs:annotation>
+            <xs:documentation>Сведения о готовности проекта договора</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SuperServiceDGPContractPrReady" type="SuperServiceDGPContractPrReadyType"
+                            maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPContractPrReadyType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="order_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pdfContract" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файл с проектом договора - ссылка на ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pdfProposal" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файл - Уведомление с предложением подписать договор - ссылка на ЦХЭД
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус
+                        1 - Аннулирован
+                        2 - Подготовлен
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractType" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Тип проекта договора
+                        Справочник
+                        1-Социальный найм
+                        39-Переход права собственности на равнозначное жилое помещение
+                        41-Передача равнозначного жилого помещения
+                        43-Краткосрочный найм (реновация)
+                        45-Равноценное возмещение в денежной форме
+                        46-Равноценное возмещение в натуральной форме
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractNumber" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractDateEnd" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата окончания договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letter_id" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уникальный номер письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сообщение о готовности проекта договора - 11 и 13-->
+    <xs:element name="SuperServiceDGPContractPrReadyCheck" type="SuperServiceDGPContractReadyCheckType"/>
+    <xs:complexType name="SuperServiceDGPContractPrReadyCheckType">
+        <xs:sequence>
+            <xs:element name="SSOID" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>SSOID ЛК пользователя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MessageText" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Сообщение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pdfFiles" type="xs:base64Binary" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файлы с проектом договора и Уведомлением с предложением подписать договор
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус доставки уведомлений о готовности проекта договора - 16 и 18-->
+    <xs:element name="SuperServiceDGPContractPrHandStatus" type="SuperServiceDGPContractHandStatusType"/>
+    <xs:complexType name="SuperServiceDGPContractPrHandStatusType">
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="order_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор договора</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Status" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус
+                        1 - Доставлено
+                        2 - Прочитано
+                        3 - У жителя отсутствует ЛК
+                        4 - СНИЛС не найден
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="SuperServiceDGPAdministrativeDocument" type="SuperServiceDGPAdministrativeDocumentType">
+        <xs:annotation>
+            <xs:documentation>1,2</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPAdministrativeDocumentType">
+        <xs:annotation>
+            <xs:documentation>Тип для 1,2</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letter_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="administrativeDocumentLink" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Pdf-файл с РД - ссылка на ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="newFlats" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Заселяемые квартиры</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="newFlat" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Заселяемая квартира</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="unom" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>уном заселяемого дома</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="cadnum" type="xs:string" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>кадастровый номер заселяемого дома</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="flatNumber" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Номер Квартиры заселяемого дома</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="legalRepresentatives" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Законные представители</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="snils" type="xs:string" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Сообщение о разпорядительном документе-->
+    <xs:element name="SuperServiceDGPAdministrativeDocumentAgrMessage"
+                type="SuperServiceDGPAdministrativeDocumentAgrMessageType">
+        <xs:annotation>
+            <xs:documentation>11, 13</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPAdministrativeDocumentAgrMessageType">
+        <xs:annotation>
+            <xs:documentation>Тип для 11, 13</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="SSOID" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>SSOID ЛК пользователя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="MessageText" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Сообщение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус доставки уведомлений о распорядительном документе-->
+    <xs:element name="SuperServiceDGPAdministrativeDocumentAgrSendStatus"
+                type="SuperServiceDGPAdministrativeDocumentAgrSendStatusType">
+        <xs:annotation>
+            <xs:documentation>15,17</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPAdministrativeDocumentAgrSendStatusType">
+        <xs:annotation>
+            <xs:documentation>Тип для 15, 17</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="person_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ид семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letter_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="SendStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус
+                        1 - Доставлено
+                        2 - Прочитано
+                        3 - У жителя отсутствует ЛК
+                        4 - СНИЛС не найден
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Отправка данных по докупке и компенсации-->
+    <xs:element name="SuperServiceDGPTradeAddition"
+                type="SuperServiceDGPTradeAdditionType">
+        <xs:annotation>
+            <xs:documentation>17</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPTradeAdditionType">
+        <xs:annotation>
+            <xs:documentation>Тип 17</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="TradeAdditionInfo" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Список данных по докупкам и компенсациям</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="TradeAdditionTypeData" type="trade:TradeAdditionType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Данные по актам об устранении дефектов-->
+    <xs:element name="SuperServiceDGPDefectEliminationAct" type="SuperServiceDGPDefectEliminationActType"/>
+    <xs:complexType name="SuperServiceDGPDefectEliminationActType">
+        <xs:sequence>
+            <xs:element name="flatNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер квартиры заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="newUnom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>УНОМ заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="defects" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Список дефектов</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="defect" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Информация по дефекту</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="flatElement" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Элемент квартиры</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element name="description" type="xs:string">
+                                        <xs:annotation>
+                                            <xs:documentation>Описание дефекта</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="signedActChedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID акта первичного осмотра в ЦХЭДе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affairId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letterId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="filingDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время подачи акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД акта по дефектам</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Данные о переносах-->
+    <xs:element name="SuperServiceDGPDefectEliminationTransfer" type="SuperServiceDGPDefectEliminationTransferType"/>
+    <xs:complexType name="SuperServiceDGPDefectEliminationTransferType">
+        <xs:sequence>
+            <xs:element name="oldPlannedDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Предыдущая плановая дата</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="newPlannedDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Новая плановая дата</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affairId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letterId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД акта по дефектам</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Данные по согласиям жителей об устранении дефектов-->
+    <xs:element name="SuperServiceDGPDefectEliminationAgreement" type="SuperServiceDGPDefectEliminationAgreementType"/>
+    <xs:complexType name="SuperServiceDGPDefectEliminationAgreementType">
+        <xs:sequence>
+            <xs:element name="defectsEliminatedNotificationDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата отправления уведомления об устранении дефектов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="acceptedDefectsDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата принятия устранения дефектов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="acceptedDefectsActChedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID акта принятых устранений дефектов в ЦХЭДе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affairId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letterId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер акта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД акта по дефектам</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="consentStatusCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус согласия (1 - Согласен, 2 - Не согласен, 3 - Нет сведений)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="defectsEliminationStatusCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус устранения дефектов (1 - Устранено, 2 - Не устранено)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--    Состав сведений о судах-->
+    <xs:element name="SuperServiceDGPCourtInfo" type="SuperServiceDGPCourtInfoType"/>
+    <xs:complexType name="SuperServiceDGPCourtInfoType">
+        <xs:sequence>
+            <xs:element name="affair_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letter_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="case_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор дела</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="date_last_court" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата назначения судебного заседания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="date_last_act" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата вынесения решения суда</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="date_law" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата вступления суда в законную силу</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="result_delo" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Решение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Статус доставки данных по актам об устранении дефектов-->
+    <xs:element name="SuperServiceDGPDefectEliminationActStatus" type="SuperServiceDGPDefectEliminationStatusType"/>
+    <!--Статус доставки данных о переносах-->
+    <xs:element name="SuperServiceDGPDefectEliminationTransferStatus"
+                type="SuperServiceDGPDefectEliminationStatusType"/>
+    <!--Статус доставки данных по согласиям жителей об устранении дефектов-->
+    <xs:element name="SuperServiceDGPDefectEliminationAgreementStatus"
+                type="SuperServiceDGPDefectEliminationStatusType"/>
+    <xs:complexType name="SuperServiceDGPDefectEliminationStatusType">
+        <xs:sequence>
+            <xs:element name="personId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД человека</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affairId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД акта по дефектам</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="status" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--Состав сведений о маломобильности-->
+    <xs:element name="SuperServiceDGPDisabledPersons">
+        <xs:annotation>
+            <xs:documentation>Состав сведений о маломобильных жителях</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SuperServiceDGPDisabledPerson" type="SuperServiceDGPDisabledPersonType"
+                            maxOccurs="unbounded">
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPDisabledPersonType">
+        <xs:sequence>
+            <xs:element name="lastName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Фамилия жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Имя жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="birthDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата рождения жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="snils" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>СНИЛС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="wheelchair" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Использование кресла-коляски</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес отселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="adm_area" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Округ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="district" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Район</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>УНОМ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="deleted" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Признак удаления сведений о маломобильности</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!--    Сведения о проектной квартирографии (проектных экспликациях) -->
+    <xs:element name="SuperServiceDGPFlatsLayout">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="SuperServiceDGPFlatLayout" type="SuperServiceDGPFlatLayoutType" minOccurs="0"
+                            maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Сведения о проектной квартирографии (проектных экспликациях)
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="SuperServiceDGPFlatLayoutType">
+        <xs:sequence>
+            <xs:element name="uinConstruction" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>УИН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес (строительный)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="adm_area" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Округ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="district" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Район</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flat_type" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Категория (тип планировки)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="entrance" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Секция/подъезд</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="floor" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Этаж</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="floorFlatNumber" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Номер квартиры на этаже</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="roomsCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Количество комнат</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="totalSquare" type="xs:double">
+                <xs:annotation>
+                    <xs:documentation>Общая площадь</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="s_all" type="xs:double">
+                <xs:annotation>
+                    <xs:documentation>Площадь квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="s_gil" type="xs:double">
+                <xs:annotation>
+                    <xs:documentation>Жилая площадь</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="mgn" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Признак "Приспособленность для МГН"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="space_id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор помещения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="SuperServiceDGPAffairCollation" type="SuperServiceDGPAffairCollationType"/>
+    <xs:complexType name="SuperServiceDGPAffairCollationType">
+        <xs:sequence>
+            <xs:element name="requestId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affairId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="unom" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>УНОМ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatNumber" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="SuperServiceDGPAffairCollationReport" type="SuperServiceDGPAffairCollationReportType"/>
+    <xs:complexType name="SuperServiceDGPAffairCollationReportType">
+        <xs:sequence>
+            <xs:element name="requestId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="serviceNumbers" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Принятые S/N</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

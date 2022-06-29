@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           xmlns="http://www.ugd.croc.ru/ssr/model/integration/mfr"
+           targetNamespace="http://www.ugd.croc.ru/ssr/model/integration/mfr">
+    <!--1. Сведения о начале отселения-->
+    <xs:element name="dgpToMfrResettlementInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о начале отселения</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resettlementInfo">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resettlementType" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Тип отселения
+                                        1 - Полное
+                                        2 - Частичное
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="fromUnom" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>УНОМ отселяемого дома</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="fromCadNum" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Кадастровый номер отселяемого дома</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="toUnom" type="xs:string" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>УНОМ заселяемого дома</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="startDate" type="xs:date">
+                                <xs:annotation>
+                                    <xs:documentation>Дата начала отселения</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="fromFlats" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="flatNumber" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Номер квартиры отселяемого дома</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="roomNumbers" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>Номера комнат отселяемого дома (Обязательно в случае с
+                                        коммунальной
+                                        квартирой)
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="roomAmount" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Количество комнат отселяемого помещения</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="floor" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Этаж отселяемого помещения</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="totalSquare" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Общая площадь отселяемого помещения</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="livingSquare" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Жилая площадь отселяемого помещения</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="resettlementDirection" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Направление переселения
+                                        1 - Компенсация
+                                        2 - Вне района
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="affairId" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Уникальный код помещения/семьи
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="statusLiving" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Статус проживания</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="hasDisabledPerson" type="xs:boolean">
+                                <xs:annotation>
+                                    <xs:documentation>Признак наличия в отселяемом помещении инвалида-колясочника
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="hasWaiterPerson" type="xs:boolean">
+                                <xs:annotation>
+                                    <xs:documentation>Признак наличия в отселяемом помещении очередника
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="cip">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="unomCip" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>UNOM ЦИП</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="addressCip" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Адрес ЦИП</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="phoneCip" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Телефон ЦИП</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="workCip" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Режим работы ЦИП</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="dateCip" type="xs:date">
+                                <xs:annotation>
+                                    <xs:documentation>Дата открытия ЦИП</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 2. Сведения о РД при равнозначном переселении-->
+    <xs:element name="dgpToMfrAdministrativeDocumentsInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о РД при равнозначном переселении</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newUnom" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>UNOM заселяемого дома</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newFlatNumber" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Номер квартиры заселяемого дома</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newRoomAmount" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Количество комнат в заселяемой квартире</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newLivingSquare" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Жилая площадь в заселяемой квартире</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newTotalSquare" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Общая площадь в заселяемой квартире</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="unom" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>UNOM отселяемого дома</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="fromFlat">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="flatNumber" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Номер отселяемой квартиры</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="roomNumbers" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>Номера отселяемых комнат (Обязательно в случае с коммунальной
+                                        квартирой)
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="flowReceiveDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата поступления потока в ИАС УГД</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 3. Сведения о проекте договора при равнозначном переселении-->
+    <xs:element name="dgpToMfrContractProjectInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о проекте договора при равнозначном переселении</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="orderId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер договора</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newUnom" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>UNOM заселяемого дома</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newFlatNumber" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Номер квартиры заселяемого дома</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="unom" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>UNOM отселяемого дома</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="fromFlat">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="flatNumber" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Номер отселяемой квартиры</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="roomNumbers" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>Номера отселяемых комнат (Обязательно в случае с коммунальной
+                                        квартирой)
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="contractDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата проекта договора</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="contractStatus" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Статус
+                            1 - Аннулирован
+                            2 - Подготовлен
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 4. Сведения о договоре при равнозначном переселении-->
+    <xs:element name="dgpToMfrContractInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о договоре при равнозначном переселении</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="orderId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер договора</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newUnom" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>UNOM заселяемого дома</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newFlatNumber" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Номер квартиры заселяемого дома</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="contractDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата договора</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="actDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата акта приёма-передачи</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="unom" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>UNOM отселяемого дома</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="fromFlat">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="flatNumber" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Номер отселяемой квартиры</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="roomNumbers" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>Номера отселяемых комнат (Обязательно в случае с коммунальной
+                                        квартирой)
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="contractStatus" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Статус
+                            1 - Аннулирован
+                            2 - Подписан
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 5. Сведения о предложениях компенсации и вне района-->
+    <xs:element name="mfrToDgpCompensationOfferInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о предложениях компенсации и вне района</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="chedFileId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>PDF-файл с предложением (обезличенный) - ссылка на ЦХЭД</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newFlatNumber" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Номер заселяемой квартиры</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="newUnom" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>UNOM заселяемого дома</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="offerLetterDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата письма с предложением</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="offerType" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Тип предложения
+                            1 - Компенсация
+                            2 - Вне района
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 6. Сведения о статусе предложения по компенсации-->
+    <xs:element name="mfrToDgpCompensationOfferStatus">
+        <xs:annotation>
+            <xs:documentation>Сведения о статусе предложения по компенсации</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации (Из потока №5 "Сведения о предложениях
+                            компенсации")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="date" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="offerStatus" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Статус предложения
+                            1 - Согласие
+                            2 - Отказ
+                            3 - Аннулировано
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="unoms" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="unom" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>УНОМ предложенного дома</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="flats" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="flatNumber" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Номер предложенной квартиры</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="cadNum" type="xs:string" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>Кадастровый номер квартиры</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 7. Сведения о заявлении по докупке-->
+    <xs:element name="mfrToDgpBuyInClaimInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о заявлении по докупке</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="claimDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата заявления</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="buyInType" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Вид докупки
+                            1 - Докупка
+                            2 - Докупка с компенсацией
+                            3 - Покупка в течение 2-х лет
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="unoms" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="unom" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>UNOM дома докупки/переселения</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="flats" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="flatNumber" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Номер квартиры</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="cadNum" type="xs:string" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>Кадастровый номер квартиры</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 8. Сведения о жителях-->
+    <xs:element name="dgpToMfrPersonInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о жителях</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="person" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="personId" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>ИД жителя</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="lastName" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Фамилия</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="firstName" type="xs:string">
+                                <xs:annotation>
+                                    <xs:documentation>Имя</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Отчество</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="snils" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>СНИЛС</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 8. Данные по заявлению-->
+    <xs:element name="mfrToDgpClaimInfo">
+        <xs:annotation>
+            <xs:documentation>Данные по заявлению</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="person" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="personId" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>ИД жителя</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="lastName" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Фамилия (Обязателен при отсутствии personId)</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="firstName" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Имя (Обязателен при отсутствии personId)</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Отчество</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="snils" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>СНИЛС</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 9. Сведения о вынесенном решении Комиссией Фонда реновации по докупке-->
+    <xs:element name="mfrToDgpBuyInDecisionResultInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о вынесенном решении Комиссией Фонда реновации по докупке</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации (Из потока №7 "Сведения о заявлении по докупке")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personIds" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>ИД жителей</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="decisionResult" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Решение
+                            1 - Положительное
+                            2 - Отказ
+                            3 - Решение о проведение аукциона
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="statusDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата статуса</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="declineReason" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Причина отказа (При выборе Отказ)</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 10. Сведения о результатах рассмотрения заявок на участие в аукционе-->
+    <xs:element name="mfrToDgpAuctionClaimResultInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о результатах рассмотрения заявок на участие в аукционе</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации (Из потока №7 "Сведения о заявлении по докупке")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personIds" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>ИД жителей</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="isAuctionFailed" type="xs:boolean">
+                    <xs:annotation>
+                        <xs:documentation>Признак несостоявшегося аукциона</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="auctionDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Плановая дата проведения аукциона (Обязателен, если к участию в аукционе
+                            допущено
+                            более 1-го участника)
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 11. Сведения о результатах проведения аукциона-->
+    <xs:element name="mfrToDgpAuctionResultInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о результатах проведения аукциона</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации (Из потока №7 "Сведения о заявлении по докупке")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personIds" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>ИД жителей</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="auctionResult" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Результат
+                            1 - Выигран
+                            2 - Второе место
+                            3 - Проигран
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="chedFileId" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>PDF-файл протокола (обезличенный) - ссылка на ЦХЭД</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="resultDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата результата</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 12. Сведения о готовности договора-->
+    <xs:element name="mfrToDgpContractReadyInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о готовности договора</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="contractReadinessDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата готовности договора к подписанию</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personIds" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>ИД жителей</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 13. Сведения о подписании договора-->
+    <xs:element name="mfrToDgpContractSignInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о подписании договора</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personIds" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>ИД жителей</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="contractSignDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата заключения договора</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="orderId" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Номер договора</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="buyInFunds" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Средства на докупку
+                            1 - Собственные средства
+                            2 - Ипотека
+                            3 - Материнский капитал
+                            4 - Собственные средства + материнский капитал
+                            5 - Компенсация
+                            6 - Субсидии и сертификаты
+                            7 - Без оплаты
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 14. Сведения о регистрации договора-->
+    <xs:element name="mfrToDgpContractRegistrationInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о регистрации договора</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personIds" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>ИД жителей</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="registrationDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата регистрации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="fondReceiveDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата получения Фондом</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 15. Сведения о расторжении договора-->
+    <xs:element name="mfrToDgpContractTerminationInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о расторжении договора</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personIds" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>ИД жителей</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="contractTerminationDate" type="xs:date" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Дата расторжения договора (дата статуса)</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 16. Сведения об аннулировании заявления -->
+    <xs:element name="mfrToDgpClaimCancelInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения об аннулировании заявления</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="claimCancelDate" type="xs:date" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Дата аннулирования заявления</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="reason" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Причины отказа:
+                            1 - Отзыв (ф.л)
+                            2 - Отказ (комиссия)
+                            3 - Отказ первому (аукцион)
+                            4 - Отказ приоритет
+                            5 - Аукцион проигран
+                            6 - Отказ
+                            7 - Отказ от компенсации
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- 17. Сведения о выдаче ключей от новой квартиры-->
+    <xs:element name="mfrToDgpKeyIssuanceInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения о выдаче ключей от новой квартиры</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sellId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный номер реализации</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personIds" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>ИД жителей</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="keyIssuanceDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата выдачи ключей</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!--18. Сведения об освобождении отселяемого помещения-->
+    <xs:element name="dgpToMfrReleaseFlatInfo">
+        <xs:annotation>
+            <xs:documentation>Сведения об освобождении отселяемого помещения</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="affairId" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Уникальный код помещения/семьи (Из потока №1 "Сведения о начале отселения")
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="actNum" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Номер акта</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="actDate" type="xs:date">
+                    <xs:annotation>
+                        <xs:documentation>Дата акта</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

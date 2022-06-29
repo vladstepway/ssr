@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "b6d86b89-7a57-4167-8dbb-e884208773d8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fd0187fa-ee3d-4ca3-9f5d-8106e4e4108d",
+          "nickAttr": "code",
+          "value": "ugd_ssr_affair_collation_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4aa08368-7314-41fa-8492-5910ad7974c0",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_AFFAIR-COLLATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "27dfa9b5-8f79-4c3b-b7e9-2251b4a75193",
+          "nickAttr": "documentName",
+          "value": "Журнал запросов сведений для сверки жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "77d69af4-c6ee-4036-8690-219d7c24d2e1",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Журнал запросов сведений для сверки жителей\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Журнал запросов сведений для сверки жителей</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableFilter\":true,\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по уному, номеру квартиры, ИД семьи\",\"changeNumberOfElementsPerPage\":true,\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_affair_collation_request_date_time\",\"type\":\"date\",\"name\":\"Дата и время запроса\",\"sortable\":true,\"filterable\":true},{\"code\":\"ugd_ssr_affair_collation_real_estate_unom\",\"type\":\"text\",\"name\":\"UNOM отселяемого дома\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_affair_collation_flat_number\",\"type\":\"text\",\"name\":\"Номер квартиры\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_affair_collation_affair_id\",\"type\":\"text\",\"name\":\"Идентификатор семьи(affair_id)\"},{\"code\":\"ugd_ssr_affair_collation_response_date_time\",\"type\":\"date\",\"name\":\"Дата и время ответа на запрос\",\"sortable\":true,\"filterable\":true},{\"code\":\"ugd_ssr_affair_collation_response_service_numbers\",\"type\":\"text\",\"name\":\"Идентификатор ServiceNumber\",\"isArray\":true,\"filterable\":true}],\"tableColumns\":[{\"name\":\"Дата и время запроса\",\"fieldCode\":\"ugd_ssr_affair_collation_request_date_time\",\"template\":\"{{item.ugd_ssr_affair_collation_request_date_time | date:'dd.MM.yyyy, HH:mm'}}\"},{\"name\":\"UNOM отселяемого дома\",\"fieldCode\":\"ugd_ssr_affair_collation_real_estate_unom\",\"template\":\"{{item.ugd_ssr_affair_collation_real_estate_unom}}\"},{\"name\":\"Номер квартиры\",\"fieldCode\":\"ugd_ssr_affair_collation_flat_number\",\"template\":\"{{item.ugd_ssr_affair_collation_flat_number}}\"},{\"name\":\"Идентификатор семьи(affair_id)\",\"fieldCode\":\"ugd_ssr_affair_collation_affair_id\",\"template\":\"{{item.ugd_ssr_affair_collation_affair_id}}\"},{\"name\":\"Дата и время ответа на запрос\",\"fieldCode\":\"ugd_ssr_affair_collation_response_date_time\",\"template\":\"{{item.ugd_ssr_affair_collation_response_date_time | date:'dd.MM.yyyy, HH:mm'}}\"},{\"name\":\"Идентификатор ServiceNumber\",\"fieldCode\":\"ugd_ssr_affair_collation_response_service_numbers\",\"template\":\"{{item.ugd_ssr_affair_collation_response_service_numbers}}\"}],\"filters\":[{\"name\":\"Дата и время запроса\",\"fieldCode\":\"ugd_ssr_affair_collation_request_date_time\",\"placement\":\"bottom\"},{\"name\":\"UNOM отселяемого дома\",\"fieldCode\":\"ugd_ssr_affair_collation_real_estate_unom\",\"placement\":\"bottom\"},{\"name\":\"Номер квартиры\",\"fieldCode\":\"ugd_ssr_affair_collation_flat_number\",\"placement\":\"bottom\"},{\"name\":\"Идентификатор семьи(affair_id)\",\"fieldCode\":\"ugd_ssr_affair_collation_affair_id\",\"placement\":\"bottom\"},{\"name\":\"Дата и время ответа на запрос\",\"fieldCode\":\"ugd_ssr_affair_collation_response_date_time\",\"placement\":\"bottom\"},{\"name\":\"Идентификатор ServiceNumber\",\"fieldCode\":\"ugd_ssr_affair_collation_response_service_numbers\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Дата и время запроса\",\"fieldCode\":\"ugd_ssr_affair_collation_request_date_time\"},{\"name\":\"UNOM отселяемого дома\",\"fieldCode\":\"ugd_ssr_affair_collation_real_estate_unom\"},{\"name\":\"Номер квартиры\",\"fieldCode\":\"ugd_ssr_affair_collation_flat_number\"},{\"name\":\"Идентификатор семьи(affair_id)\",\"fieldCode\":\"ugd_ssr_affair_collation_affair_id\"},{\"name\":\"Дата и время ответа на запрос\",\"fieldCode\":\"ugd_ssr_affair_collation_response_date_time\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0796a20c-bb03-4b9e-a63d-2b3f90c3fd97",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_affair_collation",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8159c018-2c53-4e80-84a3-bc0533f68fb0",
+          "nickAttr": "showcaseName",
+          "value": "Журнал запросов сведений для сверки жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "03e68990-7f8a-41fb-9542-963c9560aa28",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1f2d31dc-f7d1-4b08-a334-c10acb0a4874",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3307004-5131-43f9-ad82-f97c6727c22f",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d9ad1ead-cb0e-46dd-867a-3678b48a7d62",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

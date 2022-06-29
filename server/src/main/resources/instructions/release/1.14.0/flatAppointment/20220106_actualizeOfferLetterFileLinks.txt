@@ -1,0 +1,7 @@
+Актуализация ссылок на файлы писем с предложениями:
+
+ 1) Открыть https://you_domain.ru/app/ugd/ssr/swagger-ui.html#/flat-appointment-controller
+ 2) Выбрать POST /internal/flat-appointments/actualize-offer-letter-file-links
+ 3) Нажать Try it out
+ 4) Нажать Execute
+ 6) Проверить, что статус код 200

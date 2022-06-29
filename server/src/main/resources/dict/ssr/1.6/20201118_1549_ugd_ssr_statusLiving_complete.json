@@ -1,0 +1,132 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_statusLiving",
+    "name": "Статусы проживания жителей",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "14511555-4807-4761-8b0d-6155ed5a1cfe",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7bc7b477-214c-455d-9e19-11679cfa6958",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "52e1f54d-0d4d-409a-9d4e-52be47de3c51",
+          "nickAttr": "name",
+          "value": "Собственник",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e755e2ac-7a66-4d1c-8831-a56250e4f73e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c2abec35-e577-4f53-8109-10097a03f4f5",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ff6a2cb6-daf7-4b99-a4af-4a7de397a106",
+          "nickAttr": "name",
+          "value": "Пользователь",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ca5b101f-407b-4202-81e8-beb77294d847",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d50075da-c6db-45d0-ba32-eb4f1c5039a6",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bd4398fc-eb3a-41de-990a-b438d52f3ac8",
+          "nickAttr": "name",
+          "value": "Наниматель",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3b1a3f81-52f6-4268-a429-373ca13bef3c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2e992b3c-6983-47b5-aaa7-bed8d7948afe",
+          "nickAttr": "code",
+          "value": "4",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6a7cbdf0-145d-4f99-bcb8-c4e3a861b1ce",
+          "nickAttr": "name",
+          "value": "Проживающий",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

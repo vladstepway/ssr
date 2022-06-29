@@ -1,0 +1,23 @@
+1. Открыть https://smart.mos.ru/filestore/swagger-ui.html#/files-controller
+2. Выбрать POST /v1/files/createNew и нажать Try it out
+3. Заполнить поля:
+    - file = приложенный файл(РП пред разрешение реновация Гусаров (1).pdf)
+    - fileType = pdf
+    - folderGuid = 368565f5-743e-4359-94cb-d53eda24c9c3
+    - systemCode = UGD
+4. Нажать Execute
+5. Убедиться, что статус код ответа 200 и сохранить полученный в ответе guid (пример, 8e3c13e8-cfb5-43f7-9727-9d6f521fbb61, будет использоваться на шаге 8)
+6. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+7. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+8. Заполнить поля:
+    - anyDocumentTypeCode = GUARDIANSHIP
+    - id = e116f8ad-5ada-44b3-87e7-6f318a5f9847
+    - jsonPatch =
+[
+    {
+        "op": "replace",
+        "path": "/guardianshipRequest/guardianshipRequestData/decisionFileId",
+        "value": "ЗНАЧЕНИЕ_ИЗ_ШАГА_5"
+    }
+]
+9. Нажать Execute и убедиться, что статус код ответа 200

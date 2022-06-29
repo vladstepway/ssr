@@ -1,0 +1,16 @@
+<jxb:bindings
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+        version="2.1">
+    <jxb:bindings schemaLocation="CommissionInspectionEnums.xsd">
+        <jxb:bindings
+                node="//xs:simpleType[@name='InspectionType']/xs:restriction/xs:enumeration[@value='Комиссионный осмотр']">
+            <jxb:typesafeEnumMember name="PRIMARY"/>
+        </jxb:bindings>
+        <jxb:bindings
+                node="//xs:simpleType[@name='InspectionType']/xs:restriction/xs:enumeration[@value='Повторный комиссионный осмотр']">
+            <jxb:typesafeEnumMember name="SECONDARY"/>
+        </jxb:bindings>
+    </jxb:bindings>
+
+</jxb:bindings>

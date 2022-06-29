@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "c1be6885-40d4-4619-85a2-0a2fa625d796",
+		"name": "[Renovation] Shipping controller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Booking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"snils\": \"snils\",\r\n    \"SSOID\": \"SSOID\",\r\n    \"from\": {\r\n        \"UID\": \"test\",\r\n        \"UNOMOLD\": \"test\",\r\n        \"CADNUMBEROLD\": \"test\",\r\n        \"FLATNUMBEROLD\": \"test\",\r\n        \"ROOMNUMBER\": [\"test\"],\r\n        \"ROOMNUMBEROLD\": 1,\r\n        \"MOVEDATE\": \"2017-09-17T11:45:42.710576Z\"\r\n    },\r\n    \"to\": {\r\n        \"UID\": \"test\",\r\n        \"UNOMNEW\": \"test\",\r\n        \"CADNUMBERNEW\": \"test\",\r\n        \"FLATNUMBERNEW\": \"test\",\r\n        \"ROOMNUMBER\": [\"test\"],\r\n        \"ROOMNUMBERNEW\": 1,\r\n        \"MOVEDATE\": \"2017-09-17T11:45:42.710576Z\"\r\n    },\r\n    \"timetableUid\": \"test\",\r\n    \"dateFrom\": \"2017-09-17T11:45:42.710576Z\",\r\n    \"dateTo\": \"2017-09-17T11:45:42.710576Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{environment}}/ssr/shipping/booking",
+					"host": [
+						"{{environment}}"
+					],
+					"path": [
+						"ssr",
+						"shipping",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{environment}}/ssr/shipping/check?snils={{$guid}}&ssoId={{$guid}}",
+					"host": [
+						"{{environment}}"
+					],
+					"path": [
+						"ssr",
+						"shipping",
+						"check"
+					],
+					"query": [
+						{
+							"key": "snils",
+							"value": "{{$guid}}"
+						},
+						{
+							"key": "ssoId",
+							"value": "{{$guid}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prebooking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"snils\": \"snils\",\r\n    \"SSOID\": \"SSOID\",\r\n    \"from\": {\r\n        \"UID\": \"test\",\r\n        \"UNOMOLD\": \"test\",\r\n        \"CADNUMBEROLD\": \"test\",\r\n        \"FLATNUMBEROLD\": \"test\",\r\n        \"ROOMNUMBER\": [\"test\"],\r\n        \"ROOMNUMBEROLD\": 1,\r\n        \"MOVEDATE\": \"2017-09-17T11:45:42.710576Z\"\r\n    },\r\n    \"to\": {\r\n        \"UID\": \"test\",\r\n        \"UNOMNEW\": \"test\",\r\n        \"CADNUMBERNEW\": \"test\",\r\n        \"FLATNUMBERNEW\": \"test\",\r\n        \"ROOMNUMBER\": [\"test\"],\r\n        \"ROOMNUMBERNEW\": 1,\r\n        \"MOVEDATE\": \"2017-09-17T11:45:42.710576Z\"\r\n    },\r\n    \"timetableUid\": \"test\",\r\n    \"dateFrom\": \"2017-09-17T11:45:42.710576Z\",\r\n    \"dateTo\": \"2017-09-17T11:45:42.710576Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{environment}}/ssr/shipping/prebooking",
+					"host": [
+						"{{environment}}"
+					],
+					"path": [
+						"ssr",
+						"shipping",
+						"prebooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Timetable",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"snils\": \"snils\",\r\n    \"SSOID\": \"SSOID\",\r\n    \"from\": {\r\n        \"UID\": \"test\",\r\n        \"UNOMOLD\": \"test\",\r\n        \"CADNUMBEROLD\": \"test\",\r\n        \"FLATNUMBEROLD\": \"test\",\r\n        \"ROOMNUMBER\": [\"test\"],\r\n        \"ROOMNUMBEROLD\": 1,\r\n        \"MOVEDATE\": \"2017-09-17T11:45:42.710576Z\"\r\n    },\r\n    \"to\": {\r\n        \"UID\": \"test\",\r\n        \"UNOMNEW\": \"test\",\r\n        \"CADNUMBERNEW\": \"test\",\r\n        \"FLATNUMBERNEW\": \"test\",\r\n        \"ROOMNUMBER\": [\"test\"],\r\n        \"ROOMNUMBERNEW\": 1,\r\n        \"MOVEDATE\": \"2017-09-17T11:45:42.710576Z\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{environment}}/ssr/shipping/timetable",
+					"host": [
+						"{{environment}}"
+					],
+					"path": [
+						"ssr",
+						"shipping",
+						"timetable"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "542d8c57-8195-4fdf-a917-cb57e950bd34",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d2d5122d-5f34-4fbc-965e-0f8f09c128da",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "e7642e86-e9dd-4f72-b614-2cfd8f227562",
+			"key": "local",
+			"value": "http://localhost:3000"
+		},
+		{
+			"id": "d8f9e992-5858-4e69-bbb1-83f977453fa4",
+			"key": "environment",
+			"value": "{{local}}"
+		},
+		{
+			"id": "4178d992-f180-4f6e-b440-f0d1adb31ab9",
+			"key": "dev",
+			"value": "http://localhost:8080"
+		},
+		{
+			"id": "bdc40161-695a-4097-832b-ad8f4453eb51",
+			"key": "cookie",
+			"value": "request_uri=L3Nzci9zd2FnZ2VyLXVpLmh0bWw=; OAuth_Token_Request_State=38dc5af9-2ead-47c6-850c-17a7a12b3d22; kc-access=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; kc-state=gUOkyWosLBXb2kCg09uqmRovn6MTOk4AN8Xu5iI4SpBWT1gsc9H2+sYD/SUG9ST6uWoCOvux3vu5X6UcxPDAklrgsSmubUw5rzZVMx1FSTrlzjgAB46M1+/nIT0sLHj8DeEKJnchB+moVtW3JlAlmA/ca+WdZVSDa6RsiU5+3dkxaE6vG0VKvvKXMQw9EwCHu+4hI2qWHphVXUi9ruQk9oNmpntyL3r55UOOrNEYQlnABjfErNDijzofjOT7Fn8yArSOaZnm1Zfk6VS2tqBULox6KIrekyksoGaLi4B5CtnVMBGe3T0nXJuSByCWgYUrcG1WQwpy8uuU9dpd+HVk8PmFGukg+moee1q2P57A1zOJVwhtk2p6UO8ogexslGlD3NoRRfdQsH2URMw8RA/29a28IVNOVNBfjca5PM/JOKC7hzVKH3gyDMkQtKCDof2dBkPGog34cthnDiIwXS5O1Lo2NTuxAZaciKQQTxDXYZ/cduWxtr9FKc5rynIKrDrf2dZOtkMraHJ0guQKghCO2Q/yoYQZo2tk0Bt3N2lq/6zv96Klq0ahSnfLpSV2gO0psTwYWClr208dDzkWYKDJI1fzKQmiXLiIY0gMJL1kgc0+WSRpRZSJZYT25fc5x/KrxQC9htBYDZe/epjEFLrodEDvQ+bmK1o7Z3vqmC+TcoZ2tScCShut/adsZAhuzDm+UGlWFSxbXSaDePrCCLfkcsRHGS5hqDLn6sCUwRAIOLpTtph489XkY5sE64B7v5Yix0UWIRjWmxnutEqAlz0ze4746IvFehgdgTf99Zd8G7W+tU9i6dfCsjQ6hfLbYGIDY+PQVvfp1Jgo3gDql422LdSLFTbkTayoyUGeBA7f"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

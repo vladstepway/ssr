@@ -1,0 +1,452 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "15336d13-4a9f-48cf-8242-f398aca3915b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "dd33a822-52c9-49ff-8579-48cfed75aa9d",
+          "nickAttr": "code",
+          "value": "ugd_ssr_defect_catalog_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fcd048f7-747e-4f80-85a7-076a3b7bea4c",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_DEFECT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "31a5b1a6-a299-4979-b8dc-c53bb4a29c2d",
+          "nickAttr": "documentName",
+          "value": "Дефект",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ba9dec28-72f9-4c81-98d4-29fc173e30ae",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Справочник дефектов\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Дефекты</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"customBtnTemplate\":\"<button type=\\\"button\\\" onclick=\\\"document.location='/ugd/ssr/#/app/defect/new'\\\" style=\\\"margin-right: 1em;\\\" class=\\\"btn btn-primary\\\">\\n    Добавить</button>\",\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по элементу квартиры, описанию дефекта\",\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_defect_flat_element\",\"type\":\"text\",\"name\":\"Элемент квартиры\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_defect_description\",\"type\":\"text\",\"name\":\"Описание дефекта\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true}],\"tableColumns\":[{\"name\":\"Элемент квартиры\",\"fieldCode\":\"ugd_ssr_defect_flat_element\",\"template\":\"{{item.ugd_ssr_defect_flat_element}}\"},{\"name\":\"Описание дефекта\",\"fieldCode\":\"ugd_ssr_defect_description\",\"template\":\"{{item.ugd_ssr_defect_description}}\"}],\"filters\":[{\"name\":\"Элемент квартиры\",\"fieldCode\":\"ugd_ssr_defect_flat_element\",\"placement\":\"bottom\"},{\"name\":\"Описание дефекта\",\"fieldCode\":\"ugd_ssr_defect_description\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Элемент квартиры\",\"fieldCode\":\"ugd_ssr_defect_flat_element\"},{\"name\":\"Описание дефекта\",\"fieldCode\":\"ugd_ssr_defect_description\"}],\"isNewSearch\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "37cc1b36-1bb7-43ea-8674-5436ff1f125c",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_defect_catalog",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4323cb78-bf9c-44ad-a310-4160c5b2fc2e",
+          "nickAttr": "showcaseName",
+          "value": "Справочник дефектов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "941ffb84-9dac-4eeb-9ffa-ff58961d125e",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7dd31d93-aa56-4e17-9556-a90477785207",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8aba3a56-fa9a-4b88-98cb-8d104328201e",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f6a8bb2e-c809-4fb1-b659-03ee031ebff3",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b144820a-2e61-4591-a5e7-781be545603e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2805c83e-2111-40c9-bcb0-a1fb7a6afa60",
+          "nickAttr": "code",
+          "value": "ugd_ssr_shipping_application_catalog_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "541b86bc-e634-4113-ab26-6039da89a3da",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_SHIPPING-APPLICATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "36252447-b560-457f-9dcd-2045907718a2",
+          "nickAttr": "documentName",
+          "value": "Запись на помощь в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "71c0d24e-48f3-408f-a851-f293e70ffe47",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Запись на помощь в переезде\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Запись на помощь в переезде</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по номеру заявления, ФИО, адресу (откуда), адресу (куда), дате и времени переезда, статусу, источнику, району, бригаде, дате подачи\",\"fields\":[{\"code\":\"ugd_ssr_shipping_application_eno\",\"type\":\"DOCNUMBER\",\"name\":\"№ заявления\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_application_full_name\",\"type\":\"text\",\"name\":\"Фамилия, имя, отчество\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_application_address_from\",\"type\":\"text\",\"name\":\"Адрес (откуда)\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_application_address_to\",\"type\":\"text\",\"name\":\"Адрес (куда)\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_application_move_date_time\",\"type\":\"text\",\"name\":\"Дата и время переезда\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_application_status\",\"type\":\"text\",\"name\":\"Статус\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_application_source\",\"type\":\"text\",\"name\":\"Источник\",\"sortable\":true,\"filterable\":true,\"defaultSorting\":\"ASC\",\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_application_created_at\",\"type\":\"date\",\"name\":\"Дата подачи\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_application_district\",\"type\":\"text\",\"name\":\"Район\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_application_brigade\",\"type\":\"text\",\"name\":\"Бригада\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_application_shipping_date\",\"type\":\"date\",\"name\":\"Дата переезда\",\"filterable\":true}],\"tableColumns\":[{\"name\":\"№ заявления\",\"fieldCode\":\"ugd_ssr_shipping_application_eno\",\"template\":\"{{item.ugd_ssr_shipping_application_eno}}\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_shipping_application_full_name\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/shipping-card/{{item.sys_documentId}}?arm\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_shipping_application_full_name}}\\n</a>\"},{\"name\":\"Адрес (откуда)\",\"fieldCode\":\"ugd_ssr_shipping_application_address_from\",\"template\":\"{{item.ugd_ssr_shipping_application_address_from}}\"},{\"name\":\"Адрес (куда)\",\"fieldCode\":\"ugd_ssr_shipping_application_address_to\",\"template\":\"{{item.ugd_ssr_shipping_application_address_to}}\"},{\"name\":\"Дата и время переезда\",\"fieldCode\":\"ugd_ssr_shipping_application_move_date_time\",\"template\":\"{{item.ugd_ssr_shipping_application_move_date_time}}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_shipping_application_status\",\"template\":\"{{item.ugd_ssr_shipping_application_status}}\"},{\"name\":\"Источник\",\"fieldCode\":\"ugd_ssr_shipping_application_source\",\"template\":\"{{item.ugd_ssr_shipping_application_source}}\"},{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_shipping_application_district\",\"template\":\"{{item.ugd_ssr_shipping_application_district}}\",\"sortable\":true,\"filterable\":true},{\"name\":\"Бригада\",\"fieldCode\":\"ugd_ssr_shipping_application_brigade\",\"template\":\"{{item.ugd_ssr_shipping_application_brigade}}\",\"sortable\":true,\"filterable\":true},{\"name\":\"Дата подачи\",\"fieldCode\":\"ugd_ssr_shipping_application_created_at\",\"template\":\"{{item.ugd_ssr_shipping_application_created_at | date:'dd.MM.yyyy'}}\"}],\"filters\":[{\"name\":\"№ заявления\",\"fieldCode\":\"ugd_ssr_shipping_application_eno\",\"placement\":\"bottom\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_shipping_application_full_name\",\"placement\":\"bottom\"},{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_shipping_application_district\",\"placement\":\"bottom\"},{\"name\":\"Адрес (откуда)\",\"fieldCode\":\"ugd_ssr_shipping_application_address_from\",\"placement\":\"bottom\"},{\"name\":\"Адрес (куда)\",\"fieldCode\":\"ugd_ssr_shipping_application_address_to\",\"placement\":\"bottom\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_shipping_application_status\",\"placement\":\"bottom\"},{\"name\":\"Источник\",\"fieldCode\":\"ugd_ssr_shipping_application_source\",\"placement\":\"bottom\"},{\"name\":\"Бригада\",\"fieldCode\":\"ugd_ssr_shipping_application_brigade\",\"placement\":\"bottom\"},{\"name\":\"Дата подачи\",\"fieldCode\":\"ugd_ssr_shipping_application_created_at\",\"placement\":\"bottom\"},{\"name\":\"Дата переезда\",\"fieldCode\":\"ugd_ssr_shipping_application_shipping_date\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"№ заявления\",\"fieldCode\":\"ugd_ssr_shipping_application_eno\"},{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_shipping_application_full_name\"},{\"name\":\"Адрес (откуда)\",\"fieldCode\":\"ugd_ssr_shipping_application_address_from\"},{\"name\":\"Адрес (куда)\",\"fieldCode\":\"ugd_ssr_shipping_application_address_to\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_shipping_application_status\"},{\"name\":\"Источник\",\"fieldCode\":\"ugd_ssr_shipping_application_source\"},{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_shipping_application_district\"},{\"name\":\"Бригада\",\"fieldCode\":\"ugd_ssr_shipping_application_brigade\"},{\"name\":\"Дата подачи\",\"fieldCode\":\"ugd_ssr_shipping_application_created_at\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "095720e1-d9d3-41a4-8b6c-75cdadcbcd56",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_shipping_application_catalog",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "de600bca-0377-4988-8ddd-a1878c50fe27",
+          "nickAttr": "showcaseName",
+          "value": "Запись на помощь в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a97b7842-b834-4b9a-82ab-ed5845f10936",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0fee3a3b-153e-496e-8617-44c114a6221a",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "30e767d6-8aad-4b4e-9d35-c229850de84b",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3b9e7353-c11c-4615-adf9-127f1cdf9e50",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "02e6f7e1-fc6a-42be-a295-dcb811cfd54b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5738f6f4-e608-4d51-95f0-aa8a7851333e",
+          "nickAttr": "code",
+          "value": "ugd_ssr_shipping_day_schedule_catalog_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "068a6c53-8cde-4cf9-b9e0-2aadb76e4be5",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_SHIPPING-DAY-SCHEDULE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c7b337f8-3f52-41d6-ad84-ef594af29e6e",
+          "nickAttr": "documentName",
+          "value": "Рабочий день помощи в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "845de30a-698a-4a98-983f-9b54eb441e71",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Реестр рабочих дней помощи в переезде\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Реестр рабочих дней помощи в переезде</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"customBtnTemplate\":\"<button type=\\\"button\\\" onclick=\\\"document.location='/ugd/ssr/#/app/shipping-day-schedule/new'\\\" style=\\\"margin-right: 1em;\\\" class=\\\"btn btn-primary\\\">\\n    Добавить</button>\",\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по району, дате работы, дню недели, режиму работы, количеству бригад, общему количеству записей\",\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_shipping_day_schedule_area\",\"type\":\"text\",\"name\":\"Район\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_day_schedule_workingdate\",\"type\":\"date\",\"name\":\"Дата работы\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_day_schedule_weekday\",\"type\":\"text\",\"name\":\"День недели\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_day_schedule_schedule\",\"type\":\"text\",\"name\":\"Режим работы\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_day_schedule_brigades_amount\",\"type\":\"text\",\"name\":\"Кол-во бригад\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_shipping_day_schedule_total_applied\",\"type\":\"number\",\"name\":\"Всего записалось\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true}],\"tableColumns\":[{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_area\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/shipping-day-schedule/edit/{{item.sys_documentId}}?arm\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_shipping_day_schedule_area}}\\n</a>\"},{\"name\":\"Дата работы\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_workingdate\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/shipping-day-schedule/edit/{{item.sys_documentId}}?arm\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_shipping_day_schedule_workingdate | date:'dd.MM.yyyy'}}\\n</a>\",\"sortable\":true,\"filterable\":true},{\"name\":\"День недели\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_weekday\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/shipping-day-schedule/edit/{{item.sys_documentId}}?arm\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_shipping_day_schedule_weekday}}\\n</a>\",\"sortable\":true,\"filterable\":true},{\"name\":\"Режим работы\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_schedule\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/shipping-day-schedule/edit/{{item.sys_documentId}}?arm\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_shipping_day_schedule_schedule}}\\n</a>\",\"sortable\":true,\"filterable\":true},{\"name\":\"Кол-во бригад\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_brigades_amount\",\"template\":\"{{item.ugd_ssr_shipping_day_schedule_brigades_amount}}\",\"sortable\":true,\"filterable\":true},{\"name\":\"Всего записалось\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_total_applied\",\"template\":\"{{item.ugd_ssr_shipping_day_schedule_total_applied}}\"}],\"filters\":[{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_area\",\"placement\":\"bottom\"},{\"name\":\"Дата работы\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_workingdate\",\"placement\":\"bottom\"},{\"name\":\"День недели\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_weekday\",\"placement\":\"bottom\"},{\"name\":\"Режим работы\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_schedule\",\"placement\":\"bottom\"},{\"name\":\"Кол-во бригад\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_brigades_amount\",\"placement\":\"bottom\"},{\"name\":\"Всего записалось\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_total_applied\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_area\"},{\"name\":\"Дата работы\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_workingdate\"},{\"name\":\"День недели\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_weekday\"},{\"name\":\"Режим работы\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_schedule\"},{\"name\":\"Кол-во бригад\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_brigades_amount\"},{\"name\":\"Всего записалось\",\"fieldCode\":\"ugd_ssr_shipping_day_schedule_total_applied\"}],\"isNewSearch\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ef2d57f-a0c0-4496-9e1e-ad989146521d",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_shipping_day_schedule_catalog",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "df1af5e1-4037-499e-8677-b6c8c45dade5",
+          "nickAttr": "showcaseName",
+          "value": "Реестр рабочих дней помощи в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1183783c-82ff-4f27-94ec-a6b65e8d1896",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "608464a1-fbff-4071-a0b8-f34cd8e84e38",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "20f80e0a-5f82-4a01-aaea-ff5f2a914d5d",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8b6738c7-266a-4905-948e-8c21f3122d54",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "509a2233-13d3-4c26-8fd4-ef16d38f2560",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fcabd855-f628-40f8-90f9-a18997f356fe",
+          "nickAttr": "code",
+          "value": "ugd_ssr_apartment_inspection_catalog_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "75f8b58e-047d-4918-abf0-524ad6e53018",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_APARTMENT-INSPECTION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fc69d800-4292-409b-ae4f-f467e9068131",
+          "nickAttr": "documentName",
+          "value": " Акт осмотра квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "78873822-fa37-481b-aa55-49675273419b",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Акты по дефектам\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Акты по дефектам</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по адресу расселяемой квартиры, ФИО, адресу заселяемой квартиры, генеральному подрядчику, застройщику\",\"fields\":[{\"code\":\" ugd_ssr_apartment_inspection_address_from\",\"type\":\"text\",\"name\":\"Адрес расселяемой квартиры\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_apartment_inspection_person_fio\",\"type\":\"text\",\"name\":\"ФИО\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_apartment_inspection_address\",\"type\":\"text\",\"name\":\"Заселяемый адрес\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_apartment_inspection_act_creation_date\",\"type\":\"date\",\"name\":\"Дата заведения акта\",\"sortable\":true},{\"code\":\"ugd_ssr_apartment_inspection_planned_fixed_date\",\"type\":\"date\",\"name\":\"Плановая дата устранения\",\"sortable\":true},{\"code\":\"ugd_ssr_apartment_inspection_is_ready\",\"type\":\"boolean\",\"name\":\"Выполнено/не выполнено\",\"sortable\":true},{\"code\":\"ugd_ssr_apartment_inspection_has_consent\",\"type\":\"boolean\",\"name\":\"Согласие гражданина с устранением дефектов\",\"sortable\":true},{\"code\":\"ugd_ssr_apartment_inspection_general_contractor\",\"type\":\"text\",\"name\":\"Генеральный подрядчик\",\"sortable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_apartment_inspection_developer\",\"type\":\"text\",\"name\":\"Застройщик\",\"sortable\":true,\"isSearchable\":true}],\"tableColumns\":[{\"name\":\"Расселяемая квартира\",\"width\":\"1000px; white-space: nowrap;\",\"fieldCode\":\" ugd_ssr_apartment_inspection_address_from\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/apartment-inspection/act/{{item.sys_documentId}}\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_apartment_inspection_address_from}}\\n</a>\"},{\"name\":\"ФИО\",\"fieldCode\":\"ugd_ssr_apartment_inspection_person_fio\",\"template\":\"{{item.ugd_ssr_apartment_inspection_person_fio}}\"},{\"name\":\"Заселяемая квартира\",\"fieldCode\":\"ugd_ssr_apartment_inspection_address\",\"template\":\"{{item.ugd_ssr_apartment_inspection_address}}\"},{\"name\":\"Дата заведения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_act_creation_date\",\"template\":\"{{item.ugd_ssr_apartment_inspection_act_creation_date  | date:'dd.MM.yyyy' }}\"},{\"name\":\"Плановая дата устранения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_planned_fixed_date\",\"template\":\"{{item.ugd_ssr_apartment_inspection_planned_fixed_date  | date:'dd.MM.yyyy' }}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_apartment_inspection_is_ready\",\"template\":\"{{item.ugd_ssr_apartment_inspection_is_ready ? 'Устранено' : 'Не устранено'}}\"},{\"name\":\"Согласие гражданина\",\"fieldCode\":\"ugd_ssr_apartment_inspection_has_consent\",\"template\":\"{{item.ugd_ssr_apartment_inspection_has_consent  ? 'Да' : 'Нет'}}\"},{\"name\":\"Генеральный подрядчик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_general_contractor\",\"template\":\"{{item.ugd_ssr_apartment_inspection_general_contractor}}\"},{\"name\":\"Застройщик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_developer\",\"template\":\"{{item.ugd_ssr_apartment_inspection_developer}}\"}],\"filters\":[{\"name\":\"Адрес расселяемой квартир\",\"fieldCode\":\" ugd_ssr_apartment_inspection_address_from\",\"placement\":\"bottom\"},{\"name\":\"ФИО\",\"fieldCode\":\"ugd_ssr_apartment_inspection_person_fio\",\"placement\":\"bottom\"},{\"name\":\"Адрес заселяемой квартиры\",\"fieldCode\":\"ugd_ssr_apartment_inspection_address\",\"placement\":\"bottom\"},{\"name\":\"Дата заведения дефекта\",\"fieldCode\":\"ugd_ssr_apartment_inspection_act_creation_date\",\"placement\":\"bottom\"},{\"name\":\"Плановая дата устранения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_planned_fixed_date\",\"placement\":\"bottom\"},{\"name\":\"Статус устранения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_is_ready\",\"placement\":\"bottom\"},{\"name\":\"Согласие гражданина с устранением дефектов\",\"fieldCode\":\"ugd_ssr_apartment_inspection_has_consent\",\"placement\":\"bottom\"},{\"name\":\"Генеральный подрядчик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_general_contractor\",\"placement\":\"bottom\"},{\"name\":\"Застройщик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_developer\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Расселяемый адрес\",\"fieldCode\":\" ugd_ssr_apartment_inspection_address_from\"},{\"name\":\"Заселяемый адрес\",\"fieldCode\":\"ugd_ssr_apartment_inspection_address\"},{\"name\":\"ФИО\",\"fieldCode\":\"ugd_ssr_apartment_inspection_person_fio\"},{\"name\":\"Дата заведения дефекта\",\"fieldCode\":\"ugd_ssr_apartment_inspection_act_creation_date\"},{\"name\":\"Плановая дата устранения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_planned_fixed_date\"},{\"name\":\"Статус устранения\",\"fieldCode\":\"ugd_ssr_apartment_inspection_is_ready\"},{\"name\":\"Согласие гражданина с устранением дефектов\",\"fieldCode\":\"ugd_ssr_apartment_inspection_has_consent\"},{\"name\":\"Генеральный подрядчик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_general_contractor\"},{\"name\":\"Застройщик\",\"fieldCode\":\"ugd_ssr_apartment_inspection_developer\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "98f21c14-fd9d-440e-83b8-f33ef9431c8f",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_apartment_inspection_catalog",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "029736dc-33b0-48d2-8e24-102fb18753a3",
+          "nickAttr": "showcaseName",
+          "value": "Реестр актов по дефектам",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cea9fc99-5b96-40e3-9c6a-fc108c34bef2",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d07c4cca-0cb2-4efb-ad40-a10f9202f812",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bfffb653-a16d-4427-bdb5-fe102e6de520",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2225d866-4152-40dc-a46c-93c17ba7a6c0",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

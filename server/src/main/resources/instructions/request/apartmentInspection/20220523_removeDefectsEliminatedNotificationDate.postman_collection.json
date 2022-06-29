@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "804221cd-07bb-42c5-b2ae-7e67be4cf7b0",
+		"name": "removeDefectsEliminatedNotificationDate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "remove defectsEliminatedNotificationDate",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");",
+							"",
+							"if(!documentIds || documentIds.length == 0) {",
+							"    pm.collectionVariables.set(\"cookie\", \"\");",
+							"    pm.collectionVariables.set(\"urlHost\", \"smart.mos.ru\");",
+							"    documentIds = [\"fb2cb5d7-9753-44c4-a95e-d9ba5189d1f6\", \"106ec536-28fa-4ebd-910d-77edafa84449\", \"a4e372f3-dda0-4850-9d60-33def7bcc24d\", \"43d297e4-8edf-40e0-8200-f51f88cea1ae\", \"ef1b81bc-0932-490c-8a7a-83b5734fdbb3\", \"c6c3138d-1bc3-4117-8de7-fb343c503a5a\"];",
+							"}",
+							"",
+							"let currentDocumentId = documentIds.shift();",
+							"",
+							"pm.collectionVariables.set(\"documentIds\", documentIds);",
+							"pm.collectionVariables.set(\"currentDocumentId\", currentDocumentId);",
+							"",
+							"console.log(\"remove defectsEliminatedNotificationDate: currentDocumentId = \" + currentDocumentId);",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");",
+							"if (documentIds && documentIds.length > 0) {",
+							"    postman.setNextRequest(\"remove defectsEliminatedNotificationDate\");",
+							"}",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"op\": \"remove\",\n        \"path\": \"/ApartmentInspection/ApartmentInspectionData/defectsEliminatedNotificationDate\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/ssr/crud/patch/APARTMENT-INSPECTION/{{currentDocumentId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"ssr",
+						"crud",
+						"patch",
+						"APARTMENT-INSPECTION",
+						"{{currentDocumentId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "cookie",
+			"value": ""
+		},
+		{
+			"key": "urlHost",
+			"value": ""
+		},
+		{
+			"key": "documentIds",
+			"value": ""
+		},
+		{
+			"key": "currentDocumentId",
+			"value": ""
+		}
+	]
+}

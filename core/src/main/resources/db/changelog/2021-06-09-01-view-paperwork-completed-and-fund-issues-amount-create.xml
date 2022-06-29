@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-06-09-01-view-paperwork-completed-and-fund-issues-amount-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+
+        <sql dbms="postgresql">DROP VIEW IF EXISTS analytics.v_paperwork_completed_and_fund_issues_amount_grouped</sql>
+
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_paperwork_completed_and_fund_issues_amount">
+            WITH realEstates AS (
+            -- данные расселяемых домов
+                SELECT
+                    re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'UNOM' AS unom,
+                    re.json_data -> 'RealEstate' -> 'RealEstateData' ->> 'Address' AS address
+                FROM ssr.documents re
+                WHERE re.doc_type = 'REAL-ESTATE'
+            ),
+            fully_resettled_houses AS (
+            -- УНОМы полностью расселяемых домов из RESETTLEMENT-REQUEST
+                SELECT DISTINCT
+                    houses_to_resettle->>'realEstateUnom' as unom,
+                    re.address AS address
+                FROM
+                    ssr.documents resettlement_requests
+                JOIN
+                    jsonb_array_elements(resettlement_requests.json_data->'ResettlementRequest'->'main'->'housesToSettle') AS houses_to_settle
+                ON
+                    TRUE
+                JOIN
+                    jsonb_array_elements(houses_to_settle->'housesToResettle') houses_to_resettle
+                ON
+                    houses_to_resettle @> cast('{"resettlementBy": "' || 'full' || '"}' AS jsonb)
+                LEFT JOIN realEstates re ON re.unom = houses_to_resettle->>'realEstateUnom'
+            ),
+            persons_with_last_letter AS (
+            -- все жители этих домов с указанием последнего по хронологии письма
+                WITH persons_with_all_letters AS (
+                -- все жители + все их письма
+                    SELECT
+                        fully_resettled_houses.unom AS unom,
+                        fully_resettled_houses.address AS address,
+                        persons.json_data->'Person'->'PersonData'->>'personID' AS personId,
+                        persons.json_data->'Person'->'PersonData'->>'affairId' AS affairId,
+                        persons.json_data->'Person'->'PersonData'->>'flatNum' AS flatNum,
+                        persons.json_data->'Person'->'PersonData'->>'relocationStatus' AS relocationStatus,
+                        offer_letters->>'letterId' AS letterId,
+                        (offer_letters->>'date')::date AS letterDate
+                    FROM
+                        fully_resettled_houses
+                    JOIN
+                        ssr.documents persons
+                    ON
+                        persons.doc_type = 'PERSON'
+                        AND persons.json_data->'Person'->'PersonData'->>'UNOM' = fully_resettled_houses.unom
+                        AND (persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false' OR persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+                    LEFT JOIN
+                        jsonb_array_elements(persons.json_data->'Person'->'PersonData'->'offerLetters'->'offerLetter') offer_letters
+                    ON
+                        offer_letters ? 'letterId'
+                )
+                SELECT DISTINCT ON (personId)
+                    unom,
+                    address,
+                    affairId,
+                    flatNum,
+                    relocationStatus,
+                    letterId,
+                    letterDate
+                FROM
+                    persons_with_all_letters
+                    WHERE affairId IS NOT NULL
+                ORDER BY
+                    personId, letterDate DESC
+            ),
+            affairs AS (
+            -- семьи жителей, запись с последним по хронологии письмом
+                SELECT DISTINCT ON (affairId)
+                    unom,
+                    address,
+                    flatNum,
+                    affairId,
+                    letterId,
+                    relocationStatus
+                FROM
+                    persons_with_last_letter
+                ORDER BY
+                    affairId,
+                    letterDate DESC,
+                    (
+                        CASE
+                        WHEN letterId IS NOT NULL THEN 1
+                        ELSE 0
+                        END
+                    ) DESC,
+                    relocationStatus::INTEGER DESC
+            ),
+            persons AS (
+            -- жители без привязки к TRADE-ADDITION
+                SELECT
+                    ('PERSON')::TEXT AS type,
+                    affairs.unom,
+                    affairs.address,
+                    (NULL)::BOOLEAN AS confirmed,
+                    (NULL)::DATE AS contractSignedDate,
+                    affairs.flatNum AS flatNum,
+                    affairs.affairId AS affairId,
+                    affairs.letterId AS letterId,
+                    affairs.relocationStatus AS relocationStatus
+                FROM
+                    affairs
+            ),
+            trade_additions AS (
+                SELECT
+                    ('TRADE')::TEXT AS type,
+                    fully_resettled_houses.unom AS unom,
+                    fully_resettled_houses.address AS address,
+                    (trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'confirmed')::BOOLEAN AS confirmed,
+                    (trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'contractSignedDate')::DATE AS contractSingedDate,
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'oldEstate'->>'flatNumber' AS flatNum,
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'affairId' AS affairId,
+                    (NULL)::TEXT AS letterId,
+                    (NULL)::TEXT AS relocationStatus,
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'offerLetterDate' AS offerLetterDate,
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'applicationDate' AS applicationDate,
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'tradeType' AS tradeType
+                FROM
+                    fully_resettled_houses
+                JOIN
+                    ssr.documents trade_additions
+                ON
+                    doc_type = 'TRADE-ADDITION'
+                    AND trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'oldEstate'->>'unom' = fully_resettled_houses.unom
+                WHERE
+                    trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->>'affairId' IS NOT NULL
+                    AND trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'confirmed' @> 'true'
+                    AND trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'indexed' @> 'true'
+                    AND trade_additions.json_data->'tradeAddition'->'tradeAdditionTypeData'->'claimStatus' @> '"1"'
+            )
+
+            -- из реестра жителей c привязкой к TRADE-ADDITION
+            (
+                SELECT DISTINCT ON(persons.affairId)
+                    persons.*,
+                    trade_additions.offerLetterDate AS offerLetterDate,
+                    trade_additions.applicationDate AS applicationDate,
+                    trade_additions.tradeType AS tradeType,
+                    (
+                        CASE
+                            WHEN trade_additions.affairId IS NOT NULL AND trade_additions.contractSingedDate IS NULL THEN '2'
+                            WHEN trade_additions.affairId IS NOT NULL AND trade_additions.contractSingedDate IS NOT NULL THEN '3'
+                            ELSE '1'
+                        END
+                    ) AS isTrade
+                FROM
+                    persons
+                LEFT JOIN
+                    trade_additions
+                ON
+                    persons.affairId = trade_additions.affairId
+            )
+
+            UNION
+
+            -- из реестра TRADE-ADDITION
+            SELECT
+                trade_additions.*,
+                (NULL)::TEXT AS isTrade
+            FROM
+                trade_additions
+        </createView>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_paperwork_completed_and_fund_issues_amount_grouped">
+            WITH personsForTradeFilter AS (
+                SELECT
+                    affairId
+                FROM
+                    analytics.v_paperwork_completed_and_fund_issues_amount
+                WHERE
+                    type = 'PERSON'
+                    AND (
+                        (offerLetterDate IS NOT NULL AND tradeType IN ('4', '5'))
+                        OR (applicationDate IS NOT NULL AND tradeType IN ('1', '2'))
+                    )
+                    AND isTrade = '2'
+            ),
+            filteredTrade AS (
+                SELECT
+                    *
+                FROM
+                    analytics.v_paperwork_completed_and_fund_issues_amount
+                WHERE
+                    type = 'PERSON'
+                    OR (type = 'TRADE' AND affairId IN (SELECT * FROM personsForTradeFilter))
+            )
+            SELECT
+                unom,
+                COUNT(DISTINCT affairId) FILTER (
+                    WHERE type = 'PERSON'
+                    AND cast(relocationStatus as integer) >= 9
+                    AND isTrade = '1'
+                ) AS flatPersonDone,
+                COUNT(DISTINCT affairId) FILTER (
+                    WHERE type = 'PERSON'
+                    AND cast(relocationStatus as integer) BETWEEN 2 AND 8
+                    AND isTrade = '1'
+                ) AS flatPersonProcess,
+                COUNT (DISTINCT affairId) FILTER (
+                    WHERE type = 'TRADE'
+                ) AS flatTrade
+            FROM filteredTrade
+            GROUP BY unom
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_paperwork_completed_and_fund_issues_amount TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

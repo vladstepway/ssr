@@ -1,0 +1,101 @@
+{
+  "metaDict": {
+    "nick": "SearchSolrCores",
+    "name": "Ядра SOLR",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Название ядра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "description",
+        "name": "Описание ядра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальное",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "f8a2a64c-1fb0-4f2d-af3d-dfd39ccaabf8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6e005076-e6eb-4479-b1b3-29edd7159b26",
+          "nickAttr": "code",
+          "value": "ugd_ssr_affair_collation",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "64a2d492-8422-425b-a686-f3961687e91a",
+          "nickAttr": "description",
+          "value": "Поиск сведений для сверки жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a723280-3afb-44fc-b4c0-0da57cbebc3b",
+          "nickAttr": "systemCode",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "d1d1e050-1d68-4c2c-a53c-11bea9a33b63",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

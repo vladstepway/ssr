@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/flowReportedError"
+           targetNamespace="http://www.ugd.croc.ru/ssr/flowReportedError"
+           elementFormDefault="qualified">
+    <xs:element name="flowReportedError">
+        <xs:annotation>
+            <xs:documentation>Отчет об ошибках получения данных из ДГИ</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="flowReportedErrorData" type="FlowReportedErrorData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="FlowReportedErrorData">
+        <xs:annotation>
+            <xs:documentation>Отчет об ошибках получения данных из ДГИ</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="flowType" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Вид полученных сведений (поток)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personFirst" type="PersonInfoType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Информация о жителе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personSecond" type="PersonInfoType" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Информация о жителе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="errorType" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>
+                        Тип ошибки.
+                        1) Найдены два одинаковых жителя
+                        2) Житель отсутствует
+                        3) По жителю не указан номер комнаты/нет признака коммунальной квартиры
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="reportedDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата ошибки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isPublished" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Было ли отправлен отчет с этой ошибкой</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="originalFlowMessage" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Сообщение из потока</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fixed" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Исправилась ли ошибка</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="reportFileId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Filestore id отчета куда попала ошибка</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PersonInfoType">
+        <xs:annotation>
+            <xs:documentation>Информация по жителю</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="affairId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Affair Id жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Person Id жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fio" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>FIO жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="addressFrom" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Расселяемый адрес жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="roomsNumber" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номера комнат</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isCommunal" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Признак коммунальной квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="link" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Ссылка на карточку жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "7b4b8cb2-f02a-4530-b151-7bf1a70e436b",
+		"name": "cleanDefectsEliminationProcesses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "delete tasks",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let processInstanceIdsForDelete = pm.collectionVariables.get(\"processInstanceIdsForDelete\");",
+							"",
+							"if(!processInstanceIdsForDelete || processInstanceIdsForDelete.length == 0) {",
+							"    pm.collectionVariables.set(\"cookie\", \"\");",
+							"    pm.collectionVariables.set(\"urlHost\", \"smart.mos.ru\");",
+							"    processInstanceIdsForDelete = [1760898,1955931,1955724,1955647,1952644,1999338,1849770,1956073,1956008,1955866,1955801,1955582,1997418,1997624,1997505,1997769,1996944,2493611,428643,4307798,4853448,4853542,4852942,738187,869909];",
+							"}",
+							"",
+							"let currentProcessInstanceId = processInstanceIdsForDelete.shift();",
+							"console.log(\"delete tasks: \" + currentProcessInstanceId)",
+							"pm.collectionVariables.set(\"currentProcessInstanceId\", currentProcessInstanceId);",
+							"pm.collectionVariables.set(\"processInstanceIdsForDelete\", processInstanceIdsForDelete);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const processInstanceIdsForDelete = pm.collectionVariables.get(\"processInstanceIdsForDelete\");",
+							"if (processInstanceIdsForDelete && processInstanceIdsForDelete.length > 0) {",
+							"    postman.setNextRequest(\"delete tasks\");",
+							"} else {",
+							"    postman.setNextRequest(null);",
+							"}",
+							"",
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "{{cookie}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{urlHost}}/app/ugd/bpm/runtime/process-instances/{{currentProcessInstanceId}}",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"app",
+						"ugd",
+						"bpm",
+						"runtime",
+						"process-instances",
+						"{{currentProcessInstanceId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "urlHost",
+			"value": ""
+		},
+		{
+			"key": "cookie",
+			"value": ""
+		},
+		{
+			"key": "processInstanceIds",
+			"value": ""
+		},
+		{
+			"key": "currentProcessInstanceId",
+			"value": ""
+		},
+		{
+			"key": "processInstanceIdsForDelete",
+			"value": ""
+		}
+	]
+}

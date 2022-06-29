@@ -1,0 +1,144 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации (dataset)",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Настройка страницы Реестры информации",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "bf437244-8368-4f66-ae0d-17b8f4c5cb75",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "083498b6-082e-4777-adce-885c7651a8de",
+          "nickAttr": "code",
+          "value": "UGD_SSR_NOTARY-COMPENSATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7e8cdf5d-451c-4c23-9f06-1bc034b45ff3",
+          "nickAttr": "description",
+          "value": "Реестр заявлений на возмещение оплаты услуг нотариуса",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "60c4f4ce-7f44-43cd-b40d-b46b56016c83",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_NOTARY_COMPENSATION_READ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5978fd4e-2f19-411b-873e-3a67f10408b5",
+          "nickAttr": "name",
+          "value": "Реестр заявлений на возмещение оплаты услуг нотариуса",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ef65269e-f9d8-41da-8194-0acdea937277",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "e4e39acc-a069-45ff-b4c3-65512450c967",
+          "orders": 0,
+          "linkCode": "ugd_ssr_notary_compensation_code"
+        }
+      ]
+    }
+  ]
+}

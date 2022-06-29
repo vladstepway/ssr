@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-05-28-01-view-new-buildings-total-amount-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_new_buildings_total_amount">
+            WITH object_dates AS (
+                SELECT
+                    houses_to_settle->>'capitalConstructionObjectId' as capitalConstructionObjectId,
+                    (resettlement_request.json_data->'ResettlementRequest'->'main'->>'startResettlementDate')::date as startResettlementDate,
+                    (cip.json_data->'Cip'->'cipData'->>'cipDateStart')::date as dateCIP,
+                    GREATEST(
+                    (resettlement_request.json_data->'ResettlementRequest'->'main'->>'startResettlementDate')::timestamp with time zone,
+                    (cip.json_data->'Cip'->'cipData'->>'cipDateStart')::timestamp with time zone
+                    ) as greatest_date
+                FROM
+                    ssr.documents resettlement_request
+                JOIN
+                    jsonb_array_elements(resettlement_request.json_data->'ResettlementRequest'->'main'->'housesToSettle') AS houses_to_settle
+                ON
+                    resettlement_request.json_data->'ResettlementRequest'->'main'->'housesToSettle' IS NOT NULL
+                JOIN
+                    ssr.documents cip
+                ON
+                    cip.doc_type='CIP'
+                    AND houses_to_settle @> cast('{"informationCenterCode": "' || cip.id || '"}' as jsonb)
+                WHERE
+                    resettlement_request.doc_type = 'RESETTLEMENT-REQUEST'
+                    AND (
+                        resettlement_request.json_data->'ResettlementRequest'->'main' ? 'startResettlementDate'
+                        OR cip.json_data->'Cip'->'cipData' ? 'cipDateStart'
+                    )
+                    AND current_timestamp > GREATEST(
+                        (resettlement_request.json_data->'ResettlementRequest'->'main'->>'startResettlementDate')::timestamp with time zone,
+                        (cip.json_data->'Cip'->'cipData'->>'cipDateStart')::timestamp with time zone
+                    )
+            )
+            SELECT DISTINCT ON (objects.id)
+                objects.id::text as capitalConstructionObjectId,
+                objects.json_data->'capitalConstructionObject'->'capitalConstructionObjectData'->>'unom' as UNOM,
+                objects.json_data->'capitalConstructionObject'->'capitalConstructionObjectData'->>'assignedAddressString' as address,
+                object_dates.startResettlementDate,
+                object_dates.dateCIP
+            FROM
+                ps.documents objects
+            JOIN
+                object_dates
+            ON
+                object_dates.capitalConstructionObjectId = objects.id
+            WHERE
+                objects.doc_type='CAPITAL-CONSTRUCTION-OBJECT'
+            ORDER BY
+                objects.id, object_dates.greatest_date DESC
+
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_new_buildings_total_amount TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/notary"
+           targetNamespace="http://www.ugd.croc.ru/ssr/notary">
+    <xs:include schemaLocation="NotaryEnums.xsd"/>
+    <xs:element name="notaryApplication">
+        <xs:annotation>
+            <xs:documentation>Заявление на посещение нотариуса</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="notaryApplicationData" type="NotaryApplicationType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="NotaryApplicationType">
+        <xs:annotation>
+            <xs:documentation>Сведения о заявлении на посещение нотариуса</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eno" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время подачи заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="completionDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время завершения работы по заявлению</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicant" type="NotaryApplicationApplicant">
+                <xs:annotation>
+                    <xs:documentation>Данные о заявителе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="affairId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID семьи.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartmentFrom" type="Apartment">
+                <xs:annotation>
+                    <xs:documentation>Данные о квартире откуда переезжают</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="apartmentTo" type="Apartments">
+                <xs:annotation>
+                    <xs:documentation>Данные о квартирах куда переезжают</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="notaryId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД нотариуса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicantComment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bookingId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор забронированного слота</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="appointmentDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время приема</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="confirmPay" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation xml:lang="ru">Я уведомлен/а о том, что услуги нотариуса по заключению договора
+                        платные, с последующей компенсацией затрат. Составление доверенности и заключение сделки с
+                        выездом на дом не компенсируются.
+                    </xs:documentation>
+                    <xs:documentation xml:lang="ru">False - Нет, True - Да</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="confirmVisit" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation xml:lang="ru">Я уведомлен/а о том, что после получения подтверждения о готовности
+                        проекта договора от нотариуса, необходимо в течение 7 календарных дней записаться и явиться на
+                        прием к нотариусу для заключения сделки во избежание ожидания повторного заказа документов в
+                        связи с просрочкой
+                    </xs:documentation>
+                    <xs:documentation xml:lang="ru">False - Нет, True - Да</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="confirmOwners" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation xml:lang="ru">Я согласен с перечнем правообладателей</xs:documentation>
+                    <xs:documentation xml:lang="ru">False - Нет, True - Да</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="confirmSign" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation xml:lang="ru">Я подтверждаю, что на приеме у нотариуса все стороны договора смогут
+                        собственноручно подписать договор и ответить на вопросы нотариуса
+                    </xs:documentation>
+                    <xs:documentation xml:lang="ru">False - Нет, True - Да</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicantFiles" type="NotaryApplicantFiles">
+                <xs:annotation>
+                    <xs:documentation>Файлы</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД статуса заявления. NotaryApplicationFlowStatus.id</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processInstanceId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID запущенного процесса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processingComments" type="ProcessingComments" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарии по обработке заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="history" type="NotaryApplicationHistoryEvents">
+                <xs:annotation>
+                    <xs:documentation>История изменений заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="source" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Источник подачи документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="icsFileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID ics файла в FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="icsChedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID ics файла в ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NotaryApplicantFiles">
+        <xs:annotation>
+            <xs:documentation>Файлы</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="files" type="NotaryApplicantFile" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Информация о файле</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NotaryApplicantFile">
+        <xs:annotation>
+            <xs:documentation>Информация о файле</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Название файла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fileStoreId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД файла в filestore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="chedFileId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Id файла в ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="creationDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата создания файла в системе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="confirmed" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation xml:lang="ru">Получение документа подтверждено</xs:documentation>
+                    <xs:documentation xml:lang="ru">False - Нет, True - Да</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ProcessingComments">
+        <xs:annotation>
+            <xs:documentation>Комментарии по обработке заявления</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="processingComment" type="xs:string" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Комментарий по обработке заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NotaryApplicationHistoryEvents">
+        <xs:annotation>
+            <xs:documentation>История работы с заявлением</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="history" type="NotaryApplicationHistoryEvent" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Данные об изменении заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NotaryApplicationHistoryEvent">
+        <xs:annotation>
+            <xs:documentation>Данные об изменении заявления</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eventDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата события</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="appointmentDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время приема</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="comment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Коментарий к действию</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="eventId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД события. NotaryApplicationFlowStatus.id</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="NotaryApplicationApplicant">
+        <xs:annotation>
+            <xs:documentation>Сведения о заявителе</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ssoId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID на портале mos.ru</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="snils" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>СНИЛС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="email" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Электронная почта жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="phone" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер телефона жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="additionalPhone" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дополнительный номер телефона жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Фамилия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Имя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ФИО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Apartments">
+        <xs:annotation>
+            <xs:documentation>Список квартир</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="apartment" type="Apartment" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Информация о квартире</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Apartment">
+        <xs:annotation>
+            <xs:documentation>Информация о квартире</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="address" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>УНОМ дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="roomNum" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Номера комнат</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

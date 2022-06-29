@@ -1,0 +1,129 @@
+<div qv-extension>
+    <table>
+        <caption>
+            <b>СВОДНАЯ ИНФОРМАЦИЯ ПО РЕЗУЛЬТАТАМ РАБОТЫ ЦЕНТРОВ ИНФОРМИРОВАНИЯ ПО ПЕРЕСЕЛЕНИЮ ЖИТЕЛЕЙ</b>
+            <br>
+            ПО СОСТОЯНИЮ НА
+            <b>{{ todayDate }}</b>
+        </caption>
+
+        <thead>
+
+        <tr>
+            <th rowspan="4" style="width: 55px;" class="border-bottom-none">
+                <p class="content-vertical">АО</p>
+            </th>
+            <th rowspan="4" style="white-space: nowrap; width: 4%;" class="border-bottom-none">№ п.п.</th>
+            <th rowspan="4" style="width: 300px;" class="border-bottom-none">Адрес</th>
+            <th style="width: 6%;" rowspan="4" class="border-bottom-none">Дата начала переселения</th>
+            <th style="width: 6%;" rowspan="2" class="border-bottom-none">Единица измерения</th>
+            <th style="width: 30%;" colspan="6" class="border-bottom-none">Департамент городского имущества г. Москвы (ДГИ)</th>
+            <th style="width: 20%;" colspan="4" class="border-bottom-none">Московский фонд реновации жилой застройки</th>
+            <th style="width: 10%;" colspan="2" class="border-bottom-none">Переселение</th>
+        </tr>
+        <tr>
+            <th style="width: 5%;" class="border-dotted border-bottom-none">Всего квартир в доме</th>
+            <th style="width: 5%;" class="border-dotted border-bottom-none">Всего квартир подлежит переселению</th>
+            <th style="width: 5%;" class="border-dotted border-bottom-none border-bottom-non">Свободно квартир</th>
+            <th style="width: 5%;" class="border-dotted border-bottom-none">Дали согласия</th>
+            <th style="width: 5%;" class="border-dotted border-bottom-none">Заключены договора</th>
+            <th style="width: 5%;" class="border-dotted border-right-solid border-bottom-none">Отказы</th>
+
+            <th style="width: 5%;" class="border-dotted border-bottom-none">Заявления на докупку</th>
+            <th style="width: 5%;" class="border-dotted border-bottom-none">Квартир на компенсацию</th>
+            <th style="width: 5%;" class="border-dotted border-bottom-none">Согласия на компенсацию</th>
+            <th style="width: 5%;" class="border-dotted border-right-solid border-bottom-none">Отказ от компенсации</th>
+
+            <th style="width: 5%;" class="border-dotted border-bottom-none">Всего переселено</th>
+            <th style="width: 5%;" class="border-dotted border-right-solid border-bottom-none">Оказано содействие в переезде</th>
+        </tr>
+
+        <tr class="text-blue font-bold">
+            <th class="border-bottom-none bg-white">Колличество</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[0].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[1].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[2].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[3].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[4].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[5].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[6].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[7].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[8].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[9].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[10].qText }}</th>
+            <th class="border-bottom-none bg-white">{{ hc1.qGrandTotalRow[11].qText }}</th>
+        </tr>
+        <tr class="bg-green text-blue font-bold">
+            <th class="border-top-dotted bg-green">Процент</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[12].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[13].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[14].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[15].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[16].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[17].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[18].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[19].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[20].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[21].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[22].qText }}</th>
+            <th class="border-top-dotted bg-green">{{ hc1.qGrandTotalRow[23].qText }}</th>
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr ng-repeat-start="row in hc1.qDataPages[0].qMatrix track by $index"
+            ng-class="{ resettled: isResettled(row) }">
+            <td ng-if="getAOCount(hc1, $index)>0"
+                class="border-bottom-none"
+                rowspan="{{ 2 * getAOCount(hc1, $index) }}">
+                <p class="content-vertical">
+                    {{ row[0].qText }}
+                </p>
+            </td>
+
+            <td rowspan="2" class="border-bottom-none">{{ $index + 1 }}</td>
+            <td rowspan="2" class="border-bottom-none">{{ row[1].qText }}</td>
+            <td rowspan="2" class="border-bottom-none">{{ row[2].qText }}</td>
+            <td class="border-bottom-none">Колличество</td>
+            <td class="border-bottom-none">{{ row[3].qText }}</td>
+            <td class="border-bottom-none">{{ row[4].qText }}</td>
+            <td class="border-bottom-none">{{ row[5].qText }}</td>
+            <td class="border-bottom-none">{{ row[6].qText }}</td>
+            <td class="border-bottom-none">{{ row[7].qText }}</td>
+            <td class="border-bottom-none">{{ row[8].qText }}</td>
+            <td class="border-bottom-none">{{ row[9].qText }}</td>
+            <td class="border-bottom-none">{{ row[10].qText }}</td>
+            <td class="border-bottom-none">{{ row[11].qText }}</td>
+            <td class="border-bottom-none">{{ row[12].qText }}</td>
+            <td class="border-bottom-none">{{ row[13].qText }}</td>
+            <td class="border-bottom-none">{{ row[14].qText }}</td>
+        </tr>
+        <tr ng-repeat-end
+            ng-class="isResettled(row) ? 'resettled' : 'bg-green'">
+            <td class="border-top-dotted">Процент</td>
+            <td class="border-top-dotted">{{ row[15].qText }}</td>
+            <td class="border-top-dotted">{{ row[16].qText }}</td>
+            <td class="border-top-dotted">{{ row[17].qText }}</td>
+            <td class="border-top-dotted">{{ row[18].qText }}</td>
+            <td class="border-top-dotted">{{ row[19].qText }}</td>
+            <td class="border-top-dotted">{{ row[20].qText }}</td>
+            <td class="border-top-dotted">{{ row[21].qText }}</td>
+            <td class="border-top-dotted">{{ row[22].qText }}</td>
+            <td class="border-top-dotted">{{ row[23].qText }}</td>
+            <td class="border-top-dotted">{{ row[24].qText }}</td>
+            <td class="border-top-dotted">{{ row[25].qText }}</td>
+            <td class="border-top-dotted">{{ row[26].qText }}</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="legend">
+    <div class="legend-title">* цветом выделены дома:</div>
+    <ul>
+        <li><span class="square resettled">{{ resettledCount() }}</span> Отселенные</li>
+    </ul>
+</div>

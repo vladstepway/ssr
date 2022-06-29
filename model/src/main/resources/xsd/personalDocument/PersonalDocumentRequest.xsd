@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/personalDocument"
+           targetNamespace="http://www.ugd.croc.ru/ssr/personalDocument"
+           elementFormDefault="qualified">
+    <xs:element name="PersonalDocumentRequest">
+        <xs:annotation>
+            <xs:documentation>Запрос документов</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personalDocumentRequestData" type="PersonalDocumentRequestType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PersonalDocumentRequestType">
+        <xs:annotation>
+            <xs:documentation>Сведения о запросе документов</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="requestDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время формирования запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="addressFrom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес отселяемой квартиры (откуда)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="owners">
+                <xs:annotation>
+                    <xs:documentation>Владельцы запрашиваемых личных документов</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="owner" type="RequestedDocumentOwnerType" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные о владельце и запрашиваемых документах</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="documents">
+                <xs:annotation>
+                    <xs:documentation>Правоустанавливающие документы на объект (квартиру)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="document" type="RequestedDocumentType" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные о правоустанавливающем документе на объект (квартиру)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="applicationDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа заявления на предоставление документов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="initiatorLogin" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Логин инициатора запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RequestedDocumentOwnerType">
+        <xs:annotation>
+            <xs:documentation>Данные о владельце и запрашиваемых документах</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа владельца документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Фамилия владельца документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Имя владельца документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество владельца документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="birthDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата рождения владельца документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="documents">
+                <xs:annotation>
+                    <xs:documentation>Документы личного характера</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="document" type="RequestedDocumentType" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные о документе личного характера</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RequestedDocumentType">
+        <xs:annotation>
+            <xs:documentation>Данные о документе</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="typeCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код типа документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="comment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

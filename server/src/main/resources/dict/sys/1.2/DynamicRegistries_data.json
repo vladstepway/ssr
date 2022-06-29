@@ -1,0 +1,311 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации (dataset)",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Настройка страницы Реестры информации",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "e747230d-8c08-4e88-8177-582431edc7c7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "985a64c8-2ea7-4f77-842a-72282ff5cc56",
+          "nickAttr": "code",
+          "value": "UGD_SSR_PERSONS_ARM",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c40518d6-a77a-4625-aea8-076bf4273b7d",
+          "nickAttr": "description",
+          "value": "АРМ сотрудника Центра информирования по переселению жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b6a53542-bf01-4bd2-8805-42188f6386e6",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_OPERATOR_ARM_CP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f81eb0df-6cfe-477d-9a4b-f9c1121d65a4",
+          "nickAttr": "name",
+          "value": "АРМ сотрудника Центра информирования по переселению жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d244feb-bdda-4ec3-92ac-ee2697a3a28d",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "eba7d579-f49d-4fb9-9ff8-7ec00f90f88b",
+          "orders": 0,
+          "linkCode": "ugd_ssr_person_arm_code"
+        }
+      ]
+    },
+    {
+      "elementId": "59c8f7c2-47d6-4f99-966d-efea98c06d49",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "43ef96ab-2d8d-4eb4-84b4-08d7ae61d729",
+          "nickAttr": "code",
+          "value": "UGD_SSR_DASHBOARD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "665c4fa9-2d66-4bf0-9570-68e2866793ea",
+          "nickAttr": "description",
+          "value": "Статическая информация о переселении",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "17e7653d-172e-468c-bac2-675c00350ed2",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_VIEWONLY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0002778b-e128-4a40-9e5c-29271c4e3266",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGI",
+          "orders": 1,
+          "linkCode": null
+        },
+        {
+          "attrId": "151363ba-9068-4178-a6c5-84f897939a40",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DGP",
+          "orders": 2,
+          "linkCode": null
+        },
+        {
+          "attrId": "02efacc5-9061-40f4-a598-da068a3ba1e4",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_DS",
+          "orders": 3,
+          "linkCode": null
+        },
+        {
+          "attrId": "f4cafbd2-5853-4d8e-8b0c-b8c76761e8f1",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_OPERATOR_DASHBOARD_FOND",
+          "orders": 4,
+          "linkCode": null
+        },
+        {
+          "attrId": "b4ac7ed4-e680-453b-a254-3479c421781f",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_ADMIN_DASHBOARD",
+          "orders": 5,
+          "linkCode": null
+        },
+        {
+          "attrId": "caaf7948-354d-4f74-8d6d-ff9ea44bdf41",
+          "nickAttr": "name",
+          "value": "Статистическая информация о переселении",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "83459071-8b28-4a91-aa2d-212f4d926551",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "af02a5bb-275d-4bfc-bc13-d1e3e0130eac",
+          "orders": 0,
+          "linkCode": "ugd_ssr_dashboard_catalog_code"
+        }
+      ]
+    },
+    {
+      "elementId": "33fbced4-dd32-4389-97d1-5d8dc7805bb4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "88a60cad-5265-4a83-be90-1dc0257d8475",
+          "nickAttr": "code",
+          "value": "UGD_SSR_PERSONS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d1ef3ec9-fcde-46e4-bbe5-f3f715c0b418",
+          "nickAttr": "description",
+          "value": "Реестр жителей ССР",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3bb3110a-6664-4854-a29c-8401a017e6f7",
+          "nickAttr": "groups",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "669de89c-3876-4f2e-99ea-b57ec4ff57c3",
+          "nickAttr": "name",
+          "value": "ССР. Реестр жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e00b4e5a-b4a0-41be-9173-d6e10099fa57",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "f24ae397-6705-4fbb-8bc1-1515f8b1f482",
+          "orders": 0,
+          "linkCode": "ugd_ssr_person_catalog_code"
+        }
+      ]
+    },
+    {
+      "elementId": "11895e04-ca2c-442d-9664-a0c16730c36e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6f96bac9-26ce-49d2-8f42-f5011f2b692d",
+          "nickAttr": "code",
+          "value": "UGD_SSR_REAL_ESTATES",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d3a0f499-19f2-495a-9284-e3f0827e4554",
+          "nickAttr": "description",
+          "value": "Реестр расселяемых домов ССР",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c82b6be7-44a6-4310-8f79-aff2ea443848",
+          "nickAttr": "groups",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1554c551-6664-4015-a82b-dd3ce4e78fad",
+          "nickAttr": "name",
+          "value": "ССР. Реестр расселяемых домов",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9cdd6fb4-1420-4bc0-a118-4279a0ef5182",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "e08dc89b-50e3-4cfc-b653-f772e9d88d32",
+          "orders": 0,
+          "linkCode": "ugd_ssr_real_estate_catalog_code"
+        }
+      ]
+    }
+  ]
+}

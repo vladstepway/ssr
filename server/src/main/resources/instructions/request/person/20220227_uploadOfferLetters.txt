@@ -1,0 +1,7 @@
+Загрузка данных о письмах с предложениями.
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/person-controller
+2. Выбрать POST /person/upload-offer-letter
+3. Нажать Try it out
+4. Загрузить файл "Выгрузка_172066_27_04_2022.xlsx" в file, нажав Choose File и выбрав файл
+5. Нажать Execute и убедиться, что статус код ответа 200

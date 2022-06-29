@@ -1,0 +1,236 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Справочник предназначен для регистрации типов документов (бизнес-объектов) Инструкция по работе со справочником - https://smart.mos.ru/wiki/pages/viewpage.action?pageId=11763769",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Полный код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - КОДСИСТЕМЫ_КРАТКИЙКОДПОДСИСТЕМЫ_КРАТКИЙКОДТИПАДОКУМЕНТА",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Системы\"",
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Подсистемы\"",
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Ядра подсистемы поиска\"",
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Поля документов подсистемы поиска\"",
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "Необходимо установить значение = Да, если документ не предполагается добавлять в подсистему поиска",
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "link",
+        "nickDictLink": "InformationObjectRegister",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Реестр моделей информационных объектов\"",
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "256f1784-e61b-44fe-9bee-8e8f82cb0694",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "cfb85294-5d3d-4c77-b266-9fb299e9205d",
+          "nickAttr": "code",
+          "value": "UGD_SSR_TRADE-ADDITION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0491e89e-10e0-47fd-970f-8d0b5d7a84b3",
+          "nickAttr": "fields",
+          "value": "660ec4b2-e33b-4241-a7e4-65f212bcc2c3",
+          "orders": 0,
+          "linkCode": "ugd_ssr_trade_addition_fio"
+        },
+        {
+          "attrId": "6803eebb-31b0-428e-8599-0b54706476f3",
+          "nickAttr": "fields",
+          "value": "b416b57f-131a-4ac4-88f3-10c764ff887b",
+          "orders": 1,
+          "linkCode": "ugd_ssr_trade_addition_address_from"
+        },
+        {
+          "attrId": "508f48b2-1304-484c-bd3d-45176704c0c8",
+          "nickAttr": "fields",
+          "value": "3bc49d31-5bb6-4081-a1cb-ce46aae8f136",
+          "orders": 2,
+          "linkCode": "ugd_ssr_trade_addition_address_to"
+        },
+        {
+          "attrId": "b6169e3a-4e87-4a7d-bd29-0303cf293d3d",
+          "nickAttr": "fields",
+          "value": "cecc2697-4165-4e52-9c07-53b0858ed194",
+          "orders": 3,
+          "linkCode": "ugd_ssr_trade_addition_type"
+        },
+        {
+          "attrId": "4cd3f38a-34b0-4684-a1a9-00428b93e71b",
+          "nickAttr": "fields",
+          "value": "8ee0662d-7251-4ad8-b59b-1742c327bb62",
+          "orders": 4,
+          "linkCode": "ugd_ssr_trade_addition_status"
+        },
+        {
+          "attrId": "be7d06c8-cd2a-44b2-8473-d901ff81392c",
+          "nickAttr": "fields",
+          "value": "660426be-598b-4c17-9744-974abb893b72",
+          "orders": 5,
+          "linkCode": "ugd_ssr_trade_addition_application_number"
+        },
+        {
+          "attrId": "48effa89-eb3f-4bb6-a6a0-d1f498ee7ede",
+          "nickAttr": "fields",
+          "value": "4e634d59-648a-445f-8c75-eba909c05de5",
+          "orders": 6,
+          "linkCode": "ugd_ssr_trade_addition_indexed"
+        },
+        {
+          "attrId": "7267db29-3559-4b1c-955b-1bbb54344730",
+          "nickAttr": "name",
+          "value": "Реестры по докупке и компенсации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "78789b36-fd11-4b10-9a2b-6b39bee9fda1",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "8b61d12c-b593-42e2-a238-acccb56d6f4a",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "a4180695-94c6-4b5b-9b96-b282fd835539",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "fc61db65-f237-41d7-a870-fe4bc1d76401",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

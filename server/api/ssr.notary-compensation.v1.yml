@@ -1,0 +1,125 @@
+swagger: '2.0'
+info:
+  description: |
+    ССР. Сервис для возмещения оплаты услуг нотариуса.
+  version: 1.0.0
+  title: SSR Notary Compensation
+schemes:
+  - http
+
+paths:
+  /notary-compensations/check:
+    get:
+      summary: Выполнение проверок и получение сведений о жильцах для возмещения оплаты услуг нотариуса
+      operationId: check
+      tags:
+        - NotaryCompensation
+      produces:
+        - application/json
+      parameters:
+        - name: snils
+          in: query
+          description: СНИЛС, пример 001-198-166 10
+          required: true
+          type: string
+        - name: ssoId
+          in: query
+          description: ssoId, пример cd4b6f7c-81d6-45ea-bf3f-e73c0750f84b
+          required: true
+          type: string
+      responses:
+        200:
+          description: Результат проверки и сведения о жильцах
+          schema:
+            $ref: '#/definitions/Check'
+        400:
+          description: Данные запроса невалидны
+definitions:
+  Check:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина, по которой невозможно предоставить услугу
+      affairs:
+        uniqueItems: true
+        type: array
+        items:
+          $ref: '#/definitions/Affair'
+    required: [ isPossible ]
+  Affair:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина, по которой невозможно предоставить услугу
+      affairId:
+        type: string
+        description: Идентификатор семьи
+        example: 123456
+      personDocumentId:
+        type: string
+        description: Идентификатор документа заявителя в системе ССР
+        example: 047d4c24-fae9-43b5-8419-240af84e895e
+      invitedApplicants:
+        uniqueItems: true
+        type: array
+        description: Правообладатели
+        items:
+          $ref: '#/definitions/InvitedApplicant'
+      apartmentFrom:
+        $ref: '#/definitions/ApartmentFrom'
+    required: [ isPossible, personDocumentId ]
+  InvitedApplicant:
+    type: object
+    properties:
+      personDocumentId:
+        type: string
+        description: Идентификатор документа правообладателя в системе ССР
+        example: 047d4c24-fae9-43b5-8419-240af84e895e
+      ssoId:
+        type: string
+        description: SSOID
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      lastName:
+        type: string
+        description: Фамилия
+        example: Иванов
+      firstName:
+        type: string
+        description: Имя
+        example: Иван
+      middleName:
+        type: string
+        description: Отчество
+        example: Иванович
+      dob:
+        type: string
+        format: date
+        description: Дата рождения
+    required: [ personDocumentId, lastName, firstName, dob ]
+  ApartmentFrom:
+    type: object
+    properties:
+      unom:
+        type: string
+        description: UNOM дома
+      address:
+        type: string
+        description: Адрес
+        example: г.Москва, ул Набережная 12, д.11
+      flatNumber:
+        type: string
+        description: Номер квартиры
+      roomNumbers:
+        type: string
+        description: Номера комнат в квартире
+    required: [ unom, address, flatNumber ]

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.cdp.org/demo"
+           targetNamespace="http://www.cdp.org/demo">
+    <xs:element name="demo">
+        <xs:annotation>
+            <xs:documentation>Пример JSON документа с данными процесса</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="main" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Общие сведения</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="regNumber" type="xs:string" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Номер</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="reqDate" type="xs:date" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>Дата, на которую заказан пропуск</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="initiator">
+                                <xs:annotation>
+                                    <xs:documentation>Кто заказывает пропуск</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="fioFull" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>ФИО</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="post" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Должность</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="phone" type="xs:string" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>Телефон</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="PersonData">
+                                <xs:annotation>
+                                    <xs:documentation>Данные о человеке, на которого заказывается пропуск
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="FirstName" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Имя</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="LastName" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Фамилия</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="MiddleName" type="xs:string" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>Отчество</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="Identity" type="xs:string">
+                                            <xs:annotation>
+                                                <xs:documentation>Данные распорта или иного документа, удостоверяющего
+                                                    личность
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="approve">
+                                <xs:annotation>
+                                    <xs:documentation>Информация о согласовании</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="result" type="xs:boolean">
+                                            <xs:annotation>
+                                                <xs:documentation>результат согласования, true - согласовано, false -
+                                                    отказ в согласовании
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="comments" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation>Комментарии по согласованию</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="handout">
+                                <xs:annotation>
+                                    <xs:documentation>Информация о выдаче пропуска</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Date" type="xs:date">
+                                            <xs:annotation>
+                                                <xs:documentation>Дата выдачи</xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="result" type="xs:boolean">
+                                            <xs:annotation>
+                                                <xs:documentation>результат - true-пропуск выдан, false - в выдаче
+                                                    отказано
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DocFolder" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>Папки для документов экземпляра процесса, создаются автоматически при запуске
+                            процесса
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:complexContent>
+                            <xs:extension base="ns1:docFolder"/>
+                        </xs:complexContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="docFolder">
+        <xs:annotation>
+            <xs:documentation>Спецификация хранения документов процесса в папке ХД</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="parentFolder" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Имя родительской папки в ХД, в которой будут создаваться папки для запущенных
+                        экземпляров процесса
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="folderNameTemplate" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Шаблон для генерации имени папки, включая preffix, уникальный номер, дата-время
+                        создания, имя процесса, суффикс
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор папки, заполняется после создания папки при старте процесса
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="FileTypes" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Список допустимых типов, например ppt; doc; xls</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="file" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="fileName">
+                            <xs:annotation>
+                                <xs:documentation>Имя файла с расширением</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="fileGUID">
+                            <xs:annotation>
+                                <xs:documentation>ID файла в ХД</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="fileType">
+                            <xs:annotation>
+                                <xs:documentation>тип файла</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

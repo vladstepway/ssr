@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr"
+           targetNamespace="http://www.ugd.croc.ru/ssr"
+           elementFormDefault="qualified">
+    <xs:include schemaLocation="ApartmentDefectType.xsd"/>
+    <xs:include schemaLocation="ApartmentDefectElimination.xsd"/>
+    <xs:include schemaLocation="WorkConfirmationFile.xsd"/>
+    <xs:element name="ApartmentDefectConfirmation">
+        <xs:annotation>
+            <xs:documentation>Подтверждение сведений об устранении дефектов</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="apartmentDefectConfirmationData" type="ApartmentDefectConfirmationData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ApartmentDefectConfirmationData">
+        <xs:annotation>
+            <xs:documentation>Сведения об устранении дефектов</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="requestDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время запроса подтверждения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="reviewDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время рассмотрения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="generalContractorLogin" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Логин сотрудника Генподрядчика, запросившего подтверждение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ccoData" type="CcoData">
+                <xs:annotation>
+                    <xs:documentation>Данные о заселяемом доме</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="workConfirmationFiles" type="WorkConfirmationFile" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Файлы документов, подтверждающих проделанную работу (об устранении дефектов)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processInstanceId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID запущенного процесса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="defects">
+                <xs:annotation>
+                    <xs:documentation>Дефекты</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="defect" type="DefectData" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные о дефекте</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="rejectionReason" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина отклонения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pending" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>В ожидании события (изменения дефектов)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CcoData">
+        <xs:annotation>
+            <xs:documentation>Данные о заселяемом доме</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="ccoDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа ОКСа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>UNOM заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DefectData">
+        <xs:annotation>
+            <xs:documentation>Данные о дефекте</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="ApartmentDefectType">
+                <xs:sequence>
+                    <xs:element name="id" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>ИД дефекта</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="apartmentInspectionId" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>ИД акта осмотра квартиры</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="isApproved" type="xs:boolean" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Согласован или отклонен</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="flatData" type="FlatData">
+                        <xs:annotation>
+                            <xs:documentation>Данные о квартире</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="affairId" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>ИД семьи</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="isEliminated" type="xs:boolean">
+                        <xs:annotation>
+                            <xs:documentation>Устранен ли дефект</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="eliminationData" type="EliminationData">
+                        <xs:annotation>
+                            <xs:documentation>Данные об устранении дефекта</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element name="isExcluded" type="xs:boolean">
+                        <xs:annotation>
+                            <xs:documentation>Изменения неактуальны (сотрудник Генподрядчика отказался от внесенных
+                                изменений)
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="FlatData">
+        <xs:annotation>
+            <xs:documentation>Данные о квартире</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="flat" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Квартира</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="floor" type="xs:int" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Этаж</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="entrance" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Подъезд</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EliminationData">
+        <xs:annotation>
+            <xs:documentation>Данные о квартире</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="ApartmentDefectElimination">
+                <xs:sequence>
+                    <xs:element name="oldEliminationDate" type="xs:date" minOccurs="0">
+                        <xs:annotation>
+                            <xs:documentation>Текущий плановый срок устранения</xs:documentation>
+                        </xs:annotation>
+                    </xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

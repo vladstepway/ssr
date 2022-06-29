@@ -1,0 +1,339 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_BrRequestStatus",
+    "name": "Статусы запросов БР",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "7c59e015-bfb9-4953-b2cc-8ca95a6a7fe9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d51a35c4-e3ec-4da1-ae46-9af0f55cf85a",
+          "nickAttr": "code",
+          "value": "1002",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "21632247-553c-4e21-8ecc-e67b6f07ad97",
+          "nickAttr": "name",
+          "value": "Ошибка",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8213e2a5-3f45-459a-b252-ef9bd64eb933",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "e89267f0-87e2-45f1-9e9e-56c24d571e0b",
+          "nickAttr": "code",
+          "value": "1003",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d985bf2-8768-4e73-9fdb-3fe328dbe144",
+          "nickAttr": "name",
+          "value": "В обработке",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5e6c14c9-2582-4e05-9ee6-0e003d7e326f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0830c170-af83-457d-9c60-cc3b942c0452",
+          "nickAttr": "code",
+          "value": "1004",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0d25b9d6-e459-451d-83e5-16a6e47874d3",
+          "nickAttr": "name",
+          "value": "Получено",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b68b8d76-2231-4d96-ae50-86e22bc7c4a6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6aadcc62-e6ea-446d-a5af-afad3b6558b5",
+          "nickAttr": "code",
+          "value": "1005",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6e01a4e6-d35a-4178-ae30-f1cfcf60263a",
+          "nickAttr": "name",
+          "value": "Не найдено",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "90a94f5a-815c-4281-a894-ab748b6b0218",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "18d4117e-b49c-4033-b343-8cb6d98dfd1e",
+          "nickAttr": "code",
+          "value": "1006",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9313965d-fc8a-4ddc-b9e7-3d7573cbb163",
+          "nickAttr": "name",
+          "value": "Недостаточно параметров",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "64d6ab9b-a1e8-4afe-92d7-ed74f86e044d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "cf2be7e9-7311-441c-b202-5b1599d3815a",
+          "nickAttr": "code",
+          "value": "1007",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5da36e22-1da0-4f32-b09e-eed48db3906f",
+          "nickAttr": "name",
+          "value": "Сервис недоступен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "bc8f4cb3-024e-44b7-9864-12dbe7f5146c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "25f2b42e-0a4e-4381-89a3-89b30b089f2c",
+          "nickAttr": "code",
+          "value": "ochd_posted",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e1782573-a18d-4043-9fcd-c7b1ba6d74f5",
+          "nickAttr": "name",
+          "value": "Создано дело запроса в ОЦХД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "18fa34ba-aa77-4972-9de1-cf08a6dd4b1c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "053454bc-26a6-4cb9-93b9-51e2595a6b88",
+          "nickAttr": "code",
+          "value": "0",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8f14c0cf-28d4-4687-a8db-3b95fd5b2db3",
+          "nickAttr": "name",
+          "value": "Запрос отправлен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "27b88717-16d1-44d2-89a7-2a5ef4fa1c89",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d6118e28-0dd8-46f4-98e5-8d8bcd621df6",
+          "nickAttr": "code",
+          "value": "-1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c91d154c-aa8e-40e5-bbe8-379c6a5359e7",
+          "nickAttr": "name",
+          "value": "Ошибка отправки",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "cc4a7aba-6ead-43bd-ac5f-aebbb2b4ca58",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4bb4f622-4593-439c-b281-2f4a109dcb0b",
+          "nickAttr": "code",
+          "value": "1000",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0eebe2d9-9c37-4624-aecf-9f95506a60cd",
+          "nickAttr": "name",
+          "value": "Получен запрос в ФОИВ/ОИВ на получение документа",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3043eacf-7733-4047-858a-3d9e4d2692dc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "58dbc561-1dbc-4ac4-8c13-96cce51d6ebd",
+          "nickAttr": "code",
+          "value": "1001",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "17ed1362-267f-46a7-b0be-7726b9f5c9ea",
+          "nickAttr": "name",
+          "value": "Сервис получения документа не реализован",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0cb8641a-21cc-4f81-aff5-ecdf8c86ad69",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fe9ba145-0634-486d-833b-9945cdcf7418",
+          "nickAttr": "code",
+          "value": "1008",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e98d3852-8d9b-4550-8363-f6c4e678e61f",
+          "nickAttr": "name",
+          "value": "Истек регламентный срок предоставления документа. Запрос результатов будет продолжен в установленном порядке",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a39201ab-a824-4794-ba43-83f67aaedcaa",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9bd2553d-3f14-4f36-94ca-84a4860206cc",
+          "nickAttr": "code",
+          "value": "1009",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cefc3dc8-556e-4e59-bfba-612207c83a35",
+          "nickAttr": "name",
+          "value": "Недостаточно прав доступа для запроса документа",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

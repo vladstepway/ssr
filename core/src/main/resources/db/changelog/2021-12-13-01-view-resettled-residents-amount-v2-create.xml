@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet runOnChange="true" id="2021-12-13-01-view-resettled-residents-amount-v2-create" author="ssolodkov" dbms="postgresql">
+        <preConditions>
+            <dbms type="postgresql"/>
+        </preConditions>
+        <createView replaceIfExists="true"
+                    schemaName="analytics"
+                    viewName="v_resettled_residents_amount_v2">
+            WITH houses_with_released_flats AS (
+            -- дома, в которых есть хотя бы один житель с записью releaseFlat.actDate
+                SELECT DISTINCT
+                    persons_who_released_flat.json_data->'Person'->'PersonData'->>'UNOM' as unom
+                FROM
+                    ssr.documents persons_who_released_flat
+                WHERE
+                    persons_who_released_flat.doc_type = 'PERSON'
+                    AND persons_who_released_flat.json_data->'Person'->'PersonData'->'releaseFlat' ? 'actDate'
+                    AND (persons_who_released_flat.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false' OR persons_who_released_flat.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+            ),
+            flats AS (
+            -- все квартиры в таких домах
+                SELECT
+                    real_estate.json_data->'RealEstate'->'RealEstateData'->>'UNOM' as unom,
+                    real_estate.json_data->'RealEstate'->'RealEstateData'->>'Address' as address,
+                    COALESCE(flats->>'apartment_L4_VALUE', flats->>'FlatNumber') as flatnum,
+                    flats->>'flatID' as flatid
+                FROM
+                    ssr.documents real_estate, houses_with_released_flats
+                JOIN
+                    jsonb_array_elements(real_estate.json_data->'RealEstate'->'RealEstateData'->'Flats'->'Flat') flats
+                ON
+                    TRUE
+                WHERE
+                    real_estate.json_data @> cast('{"RealEstate": {"RealEstateData": {"UNOM": ' || houses_with_released_flats.unom || '}}}' as jsonb)
+            ),
+            persons_with_personId AS (
+                SELECT
+                    persons.id AS id,
+                    persons.json_data->'Person'->'PersonData'->>'personID' as personId,
+                    persons.json_data->'Person'->'PersonData'->>'FIO' as fio,
+                    persons.json_data->'Person'->'PersonData'->>'affairId' as affairId,
+                    (persons.json_data->'Person'->'PersonData'->'releaseFlat'->>'actDate')::date AS actDate,
+                    persons.json_data->'Person'->'PersonData'->>'flatID' as flatId
+                FROM
+                    ssr.documents persons
+                WHERE
+                    persons.json_data->'Person'->'PersonData' ? 'personID'
+                    AND (persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' = 'false' OR persons.json_data -> 'Person' -> 'PersonData' ->> 'isArchive' is null)
+            ),
+            persons_in_flats AS (
+            -- все жители таких квартир с заполненным personID
+                SELECT
+                    persons_with_personId.id AS documentID,
+                    flats.unom as UNOM,
+                    flats.address as address,
+                    flats.flatnum as flatNum,
+                    persons_with_personId.affairId,
+                    persons_with_personId.personId,
+                    persons_with_personId.fio,
+                    persons_with_personId.actDate
+                FROM
+                    flats
+                JOIN
+                    persons_with_personId
+                ON
+                    persons_with_personId.flatId = flats.flatid
+            )
+            SELECT DISTINCT ON (personId) * FROM persons_in_flats
+            ORDER BY personId, actDate DESC NULLS LAST
+        </createView>
+        <sql>
+            GRANT SELECT ON analytics.v_resettled_residents_amount_v2 TO qlik_cod;
+        </sql>
+    </changeSet>
+</databaseChangeLog>

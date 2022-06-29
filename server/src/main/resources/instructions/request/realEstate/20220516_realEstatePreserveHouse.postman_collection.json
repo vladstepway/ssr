@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "d7efa476-8460-43d0-8202-bee4678fa7b2",
+		"name": "20220516_realEstatePreserveHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17236311"
+	},
+	"item": [
+		{
+			"name": "preserve-house",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"user\", \"\");\r",
+							"pm.collectionVariables.set(\"pass\", \"\");\r",
+							"pm.collectionVariables.set(\"urlHost\", \"smart.mos.ru\");\r",
+							"\r",
+							"let flagStarted = pm.collectionVariables.get(\"flagStarted\");\r",
+							"if (!flagStarted || flagStarted.length == 0) {\r",
+							"    console.log(\"init\");\r",
+							"    let documentIds = \"01e7ae46-2441-4c46-9950-93b11e787534,0241dc0f-ead2-4230-a865-42301b0db858,03105b55-b421-467f-95bc-85b6845d7008,03462870-dce0-49d9-a0b0-5190d9910eda,04ae049f-49ab-47b0-a83e-9253e55d47bb,088e8cab-7777-4c4a-be45-53d52b5d69e5,0921ff00-614b-40ec-bd79-a3447d7c48eb,0a4136fc-1b99-4acf-bd58-34ddf3af6048,0abe1859-c986-4606-9b3a-cccc15c28e30,0d9f077e-6fbb-4f1f-bf57-aabe56dc987c,0e57d0e4-ae28-4a07-b3af-2d4953062f7f,0eeb0f9a-710c-4b8c-84b9-6a6d9e8f581a,0f7121b6-3efe-4bf5-bc79-f22b371e688d,1102c35a-c70e-435a-8546-0482d9e49587,1265ef01-21ab-4fe0-9d8e-96c270aa958c,1281e29a-f588-469b-9178-bc3709bdf374,13dd599e-3ef5-4eef-b7fb-f3353659a05a,18c49921-bb4d-4f97-b7d7-f28fec93ea87,1906779d-66a5-481b-8f12-b5727744acec,1a6b9cd5-e985-41ac-9a55-211f5a6db4aa,1b3aada0-bafb-4334-9898-7eb9e2467c66,1d4e992d-03b2-47c5-93e8-5fe1366581ef,21e0f8d5-ef6d-4da1-816d-902c25bd11c7,224fc139-83d9-424b-9fc3-0a9ff7c08c88,22c5d265-36dd-47d2-96da-2e655a9c0f77,234a335e-32ce-43e6-9f43-e63830b8b797,23cb3be4-6c74-4489-b10c-4fe760d0999a,2409cc22-7815-4b72-9206-3a13beab8233,24343bf4-5b78-47e9-83ee-e88967330ce0,24c7e118-5867-471e-89e1-42b33092c462,25d7dc90-1ca9-4a8b-9e2a-b980131096fc,265fc74d-98e4-4fb0-b7fa-0558bd8390ee,27f1cfff-d6f7-4782-ba29-3f8d362ef82c,284276fb-2288-4597-b2c2-261658e6cc84,298c75c2-6169-4a80-bc94-29542f651823,2ab4b0f3-add7-47e9-b993-7bb58353abd8,2b3b88e3-335a-4cf2-8327-75060eff297f,2badd697-d554-4338-94c7-9cc1d2abf5ee,2bd1d980-e8b6-4ee3-82cc-70963914fc92,2c39e6ed-2852-4a70-8c54-3c23b66cfbc9,2d4463cd-a46c-4ea8-bf56-4c37239d7944,2d64d558-7357-4102-8a4e-1b4e1b06a286,2fb26245-48d8-498a-b229-08da9d198eed,30428d01-9c42-4954-9ff8-865f1945b164,3053b23c-9860-443b-9a6b-d482e2b0e963,30857bc7-ab4b-4eef-a5c3-616c9d4078d6,31de57c1-feaa-4c50-8123-3e5b09fcddc3,330b2782-3c54-40a2-9576-0e5c5415c0f5,343e7da4-1471-41e2-a587-f3584d5e2e7f,34a37419-73c7-4ea7-8ddd-12e776fe77a8,36feeb06-23c8-473f-ae6e-1322f12c3222,3840d3ca-70c5-4d1c-b68d-38241906bf13,38bcc782-93b7-4611-a7b1-c52371165ce9,3b8ef69c-0895-49ea-b48b-8111a80f3d3c,3db71c5e-2361-4ebf-92ad-dc114dd975a5,3fea589d-b197-4f18-8d64-6fe34d5e5f5d,4028eab1-abd1-43f6-9f85-85c90ac5aa4a,41e1acb3-4d37-42fb-8a20-e52f4d37cda4,433c10e3-cf53-4bd9-808a-498868d682b6,443716cc-c16e-4e54-8381-caa96e5cce27,45ec4578-beb6-4b0a-ba18-c45490d91f06,47765210-0c56-4c7c-822a-3ca90647fbb8,489a5ce3-66a1-419c-847e-4d686947c90d,4a4f6fa7-f921-46cf-97ce-06ef3176113a,4b4dad98-9320-4cc9-81c8-49b9ba60a1f0,4b6a1565-f31c-49e8-86d2-15fe37978b87,4c10401d-1b90-4dc2-9fd4-af66e71255c6,4ce44b3c-5b64-41a8-9c59-ec4d523a8fe7,509ee724-c492-4f36-b024-8aa4f5ebfef2,50a9dd9e-69b9-4d8d-b785-7ddbf6d819c5,50ab6cc5-de98-4df7-ba4e-e27a4adb1adb,50e16693-3aa9-4aec-9e30-3e8f156f2b81,5275780a-1c15-46a2-a685-8dab9268f36e,52bbfd5a-b181-46bb-bf47-60527842196a,54a18d22-9fe6-45c4-a202-d63e501a054a,54db52e1-dc79-4b03-b331-fff7b2a84552,5509cf0b-80e5-4196-84cf-ee254ae1bb01,55fd825d-7037-431d-b1e3-968662fe2fd4,56e6c6da-2a4b-4152-a149-7abcdb15d2d9,597d9d22-7f6b-476f-bb73-93f571d618ca,59a42a0d-d472-4289-9431-eeb0786420bd,5a3a2119-2e5a-45ba-9cf6-8315ae3f3d99,5c119536-5aee-4178-ae60-ac13d2a126ea,5d862e63-a6a1-49f0-ba55-b8d16028943b,5f5c2315-ee50-46bd-a8d8-3fdcd9a9f2ee,5f8b725a-baec-4aa5-b18f-b604f0232305,6154642c-f570-4e8e-84b0-399c08326d37,61eb542f-e96e-4aad-925c-ff790784454b,61fcbe8d-c826-4d8a-9b65-af72d4bdb174,648d8ed8-5c8d-4299-bcc9-603e0221c4e8,6540cae3-e7b1-432f-a62b-7fc02d779e5d,65623d4a-c74d-45e9-a560-6bd1025f359e,65fb6d7e-6778-41e7-8ac4-4ce0f6e2371b,67a58433-d2cc-45ff-905b-a87d040aa7e7,696217d1-fe66-49ab-adf9-d635f1ce384b,699ebb15-4f9c-42ea-a174-cd1cc20883df,6b2dc9d4-ac6f-4f73-8f98-b94e342b7b07,6b7a0d15-89fe-48b9-9ac3-c276369c8065,6ebc451e-d47a-47c1-9039-b692d6df43a2,6fdf3043-9641-40f9-b4b7-07d97745667e,7031e2b7-35b7-4d96-bc0e-1523d61e3710,70a40ac1-89ca-4cf8-b7e8-fbb23bc420b9,73b3bb89-39b5-42bb-8b91-f56f76e977e2,74dd5605-27ef-4151-a834-3c5706d1b6e4,755d58d1-d2bf-4577-8db0-b534b64c406a,759cf7be-6f10-4b96-907e-51dac354cedb,772f8c70-1460-4965-a9de-3ce1325e4be5,777f4f6d-f7c9-420b-988a-c8211bf3c357,788134bb-a3ea-4b96-ab55-486df50844fe,7a870c03-c667-4a87-ba2b-457f6e94abad,7b4e01ab-a580-42db-a389-22d1c9aaa855,7c0cd315-1e1e-4d8d-83ea-3f509654eba8,7cab04ee-4c5f-40b7-b6ce-11785b2985e0,7d75fbf5-0d68-4fe2-832e-7dfd731e0b19,8053c3fc-bf7d-4082-a1b6-42344bb259af,8284b8db-3f14-4d3c-a9ab-3a83574e1bcf,845a68cf-ffaf-4c45-a6fb-a78f5b4c1974,861d717f-ba9d-429b-8bef-b8a888ec815f,8833098e-1704-4fe2-8637-3de72cbbeeb6,88475354-4f96-4f34-a018-09b845269c45,88a7e099-b667-477c-8577-dd9fca82aff9,8ac66a7f-44f5-4e3a-82c6-f9294b98882d,8b8764d7-3669-42bd-88ef-3ce636167ecc,8bbf792d-6b94-4112-be6a-1c52808602d0,8bc6f984-9ba5-43c2-a4a4-31ca71bec8fb,8c73a39b-3643-47a1-874b-2b32eb2a87be,8c749968-0cd2-4b3a-adaa-d1618308f64a,8cb33d46-c6a6-459c-8b01-9036e6998e00,8e1f386b-f15e-4e88-b774-1ea468e19bc5,8e9611d0-59ea-4e89-8b3b-f750e1ff2fe1,8ed7dc78-5747-4461-bffd-98475fbce908,8f921ef5-93a6-4877-afc3-b8dac30d0c21,907b7dd8-a992-4b36-b5d8-6f7bb129aa82,9142d8a7-2129-462d-8ac1-d2b6a45a9c06,91b17809-d06f-4fc8-a723-c0745138d77c,91bd3248-2e97-40e9-ba3a-611528a55fd7,9464f2da-987f-4e88-a3cb-febee055e384,970de4d7-5b55-43f5-9cfb-573db25a626f,99fdd8cd-21c7-4ceb-b40d-c2b9c4da1a60,9eb9e926-f33b-4757-b8d9-22489a233fde,9f21f96e-882e-4aaf-8cb4-69075d0b0cd3,9ff31638-4c53-4e54-ba3b-123529d18577,a0af6e74-734d-4d85-87e6-20d03b6cb0be,a0bcdffb-e6cc-48a8-9411-08ed7fd94f00,a350c553-277a-4c49-9074-f46b6a3fdc94,a35a4cf9-ad25-41f1-b3ad-625efff8bae2,a4e229c2-ae49-4db1-a2e4-e6590438fa43,a7150911-c121-4410-b271-905fe3aac2ce,a8d08ca8-55a3-424b-a99f-531a69bcff57,a93632de-06e1-4d56-9661-9ed7a997883f,acab431a-cc55-4c0c-a668-2e31e302d7f4,acf25342-76a8-4d47-8d8a-d65f9d4eb4a8,aecadb1c-5020-4bbf-887f-28578f02ba3e,aee6fb38-230d-444e-b6dd-c60cc956edf6,b0ddbec2-cb02-4da3-906c-2a1745f5a41b,b270f252-497e-4aa4-920f-75501174bfeb,b2f05aa6-fc97-48b4-9ecf-d8eb0994bc0c,b33abef4-4f7c-425f-ae10-c9e4c297d73c,b4b48896-f804-4287-a4dd-ac49ce7cd6f8,b65303d0-dfa1-4719-97fa-604f474a4b61,b7700909-9f10-4650-a65e-5d31012dfeda,b93cd599-99ff-412f-a5ae-6bc7a0064734,bbb26a79-11dc-47d6-ae15-9f1f5b4022a9,bc8f93d6-9c04-45ba-887f-ea46017b46c2,bd8ac605-e983-4b9b-9104-1b283b1fc057,bdce8de5-c006-431b-8c18-c8ae65b7a552,be6a10ae-bd32-4545-9d5b-c279bfcc26ef,bf9c99d8-fa47-45a6-b0b3-930565a4cd0d,c029f174-7a13-413c-babc-33be89b82c57,c28296a7-1581-4fe7-a1ad-929759885ddf,c2c5bfdb-fc17-47c9-8d73-e402b3424d80,c2d2cdf8-1fce-4afe-85e8-4faef876c3a9,c2e604de-374d-44e6-8e34-601c3f849e89,c411dd53-888e-41be-95bd-9eeeb011dac6,c42d8c84-414e-4ef0-a801-c4526c88856f,c65d7ae5-9498-4603-a540-8b98494fc380,c6e04391-3606-4735-ba6f-b4d95d6b44cf,c812581f-293b-4bb4-ad11-68fc013baf85,c876ab42-9f6e-4ed1-a303-450de672657b,c8eb0d72-3cd1-4a41-888b-8611b5872f67,ca32dec2-dd42-4393-9535-c3108bad2300,cadc16a0-6434-48ca-9b87-5ec5c773dc82,cbf052d3-f8e1-4d30-a26b-ba1b816251f5,cd3a63f2-9f3c-4919-b052-255dc908afbb,cfd48202-f3e0-4e16-aa0b-5a003cc68d70,d000cbcf-f19f-4f11-a7e4-ff1253ec069d,d0941500-5550-493d-ac36-4cc83c7218fa,d47d8814-4692-4bb6-b40c-0d2cf934cbce,d532cb42-cd2c-4bbb-840c-dcf444afbbd4,d5602f29-1741-40b2-9967-132e8ad82896,d57c2890-9a92-451a-b882-0efd6bd6d657,d82c211c-8454-4b79-9789-f705f447162c,dc1c1837-3593-412a-afac-8c7e8b40ae7c,dc540696-a49e-4820-9d42-479b25524374,dcd2e40a-78fb-4dac-8852-5b593786ba20,e0087a1b-9edc-424a-bbfa-6a2f19f5bdbd,e09a08c3-64c5-41ab-9e76-9cf6482e7563,e176ad54-f83f-431a-8fd5-20ac9ab7f8dd,e1e0201e-526a-4786-8172-31d81941c4b3,e6d36035-02ba-434b-bc20-908cab3233cd,e6f208ae-30d4-4dd4-ab4b-96de64191007,e9861070-d2c5-42a5-a72d-0130f86b72d0,ea9867da-812f-4ec1-8350-eb9282ce99a9,eb984fd9-d52b-40d9-8730-297086c23727,ed6d223d-1d48-4816-86b4-595808601872,edfc46b6-d0d3-41d0-b5ae-5acd3208dd84,f08b9085-8568-4964-aed5-0f5bad319a0d,f1654c2f-1a0f-44e1-8420-8ae62f6a2950,f266bc77-80db-4374-b9f7-4c86ad9766cc,f4c51bd0-9372-497b-bfba-947a14cba5de,f9039f44-deea-498d-a57b-a5e871343352,f907520e-dfdc-4021-8fbb-119c44a92fef,fa96b941-4ed4-4f5c-8d7d-c14165336775,fdf63f60-9cc5-4ad7-87ea-b789974e0946,fed1404a-76b6-4b83-8927-ad2552238f41,ff35a632-4fc2-49ec-9348-702380c1392f,ff8d7051-9918-4430-9a19-faa15a267ab3\";\r",
+							"    pm.collectionVariables.set(\"documentIds\", documentIds);\r",
+							"    pm.collectionVariables.set(\"flagStarted\", \"started\");\r",
+							"}\r",
+							"\r",
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");\r",
+							"if (documentIds && typeof(documentIds) == \"string\") {\r",
+							"    documentIds = documentIds.split(',');\r",
+							"}\r",
+							"if (documentIds && Array.isArray(documentIds)) {\r",
+							"    if (documentIds.length > 0) {\r",
+							"        let documentId = documentIds.shift();\r",
+							"        console.log(\"обработка: \" + documentId);\r",
+							"        console.log(\"остаются: \" + documentIds.length);\r",
+							"        pm.collectionVariables.set(\"documentId\", documentId);\r",
+							"        pm.collectionVariables.set(\"documentIds\", documentIds.join(','));\r",
+							"    } else {\r",
+							"        pm.collectionVariables.set(\"documentId\", \"\");\r",
+							"        pm.collectionVariables.set(\"documentIds\", \"\");\r",
+							"        console.log(\"не осталось элементов для обработки\");\r",
+							"    }\r",
+							"} else {\r",
+							"    pm.collectionVariables.set(\"documentId\", \"\");\r",
+							"    pm.collectionVariables.set(\"documentIds\", \"\");\r",
+							"    console.log(\"нет элементов для обработки\");\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let documentIds = pm.collectionVariables.get(\"documentIds\");\r",
+							"if (documentIds && typeof(documentIds) == \"string\") {\r",
+							"    documentIds = documentIds.split(',');\r",
+							"}\r",
+							"if (documentIds && Array.isArray(documentIds)) {\r",
+							"    if (documentIds.length > 0) {\r",
+							"        postman.setNextRequest(\"preserve-house\");\r",
+							"    } else {\r",
+							"        pm.collectionVariables.set(\"flagStarted\", \"\");\r",
+							"        postman.setNextRequest(null);\r",
+							"        console.log(\"не осталось элементов для обработки\");\r",
+							"    }\r",
+							"} else {\r",
+							"    pm.collectionVariables.set(\"flagStarted\", \"\");\r",
+							"    postman.setNextRequest(null);\r",
+							"    console.log(\"нет элементов для обработки\");\r",
+							"}\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isPreserved\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{urlHost}}/sg/app/ugd/ssr/realestate/{{documentId}}/preserve-house",
+					"protocol": "https",
+					"host": [
+						"{{urlHost}}"
+					],
+					"path": [
+						"sg",
+						"app",
+						"ugd",
+						"ssr",
+						"realestate",
+						"{{documentId}}",
+						"preserve-house"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{pass}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{user}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urlHost",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "documentId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "documentIds",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "flagStarted",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "user",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "pass",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

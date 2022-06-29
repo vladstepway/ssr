@@ -1,0 +1,40 @@
+Удалить сведения о согласии из акта:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = APARTMENT-INSPECTION; id = 13a77e96-5a14-44f0-9882-4d70fc704e57; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/ApartmentInspection/ApartmentInspectionData/acceptedDefectsActChedFileId"
+    },
+    {
+        "op": "remove",
+        "path": "/ApartmentInspection/ApartmentInspectionData/acceptedDefectsActFileId"
+    },
+    {
+        "op": "remove",
+        "path": "/ApartmentInspection/ApartmentInspectionData/acceptedDefectsDate"
+    },
+    {
+        "op": "remove",
+        "path": "/ApartmentInspection/ApartmentInspectionData/integrationLog/item/2"
+    },
+    {
+        "op": "replace",
+        "path": "/ApartmentInspection/ApartmentInspectionData/hasConsent",
+        "value": false
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+Удалить сведения о согласии из жителя:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 3e4062c3-6411-4b5e-a8ae-5e284b9fe577; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/14"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

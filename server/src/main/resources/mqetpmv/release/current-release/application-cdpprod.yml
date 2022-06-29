@@ -1,0 +1,40 @@
+mqetpmv:
+  etp-profiles:
+    # Поток ДГИ №19. Сведения об инвалидах
+    UGD_RSM_DISABLED_PERSON_STATUS_INC:
+      message-type: UGD_RSM_DISABLED_PERSON_STATUS_INC
+      inbound: true
+      queue-manager: GU01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.DISABLED_PERSON_DEL
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_RSM_DISABLED_PERSON_TASK_OUT:
+      message-type: UGD_RSM_DISABLED_PERSON_TASK_OUT
+      inbound: false
+      queue-manager: GU01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.ETP.DISABLED_PERSON
+    # Поток ДГИ №20. Сведения о квартирографии
+    UGD_FLAT_LAYOUT_STATUS_INC:
+      message-type: UGD_FLAT_LAYOUT_STATUS_INC
+      inbound: true
+      queue-manager: GU01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.DGP.PROJECT_APARTMENTOGRAPHY_DEL
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_FLAT_LAYOUT_TASK_OUT:
+      message-type: UGD_FLAT_LAYOUT_TASK_OUT
+      inbound: false
+      queue-manager: GU01QM
+      channel: CLIENT.UGD.SVRCONN
+      username: ugd
+      password: ugd
+      queue: RENOVATION.ETP.PROJECT_APARTMENTOGRAPHY

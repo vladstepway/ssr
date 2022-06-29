@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/offerLetterParsing"
+           targetNamespace="http://www.ugd.croc.ru/ssr/offerLetterParsing"
+           elementFormDefault="qualified">
+    <xs:element name="OfferLetterParsing">
+        <xs:annotation>
+            <xs:documentation>Разбор письма с предложением</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="offerLetterParsingData" type="OfferLetterParsingType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="OfferLetterParsingType">
+        <xs:annotation>
+            <xs:documentation>Сведения о разборе письма с предложением</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="affairId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор семьи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letterId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Уникальный номер письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="addressFrom" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Адрес отселяемой квартиры (откуда)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processInstanceId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID запущенного процесса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="completionDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Время завершения разбора письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

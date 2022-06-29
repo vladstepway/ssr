@@ -1,0 +1,76 @@
+.qv-object-repCipVault1 div.qv-object-content-container {
+    overflow: auto;
+}
+
+.qv-object-repCipVault1 caption {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2258b7;
+}
+
+.qv-object-repCipVault1 table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #0C213B;
+    font-size: 13px;
+}
+
+.qv-object-repCipVault1 thead {
+    font-weight: normal;
+    border: 1px solid #4e4e4e !important;
+}
+
+.qv-object-repCipVault1 th {
+    background: #F4F1F8;
+    padding: 2px 5px;
+    border: 1px solid #484848;
+}
+
+.qv-object-repCipVault1 table th {
+    vertical-align: middle;
+}
+
+.qv-object-repCipVault1 td {
+    padding: 2px 5px;
+    border: 1px solid #4e4e4e;
+    text-align: center;
+}
+
+.qv-object-repCipVault1 p.content-vertical {
+    transform: rotateZ(269deg);
+    white-space: nowrap;
+}
+
+.qv-object-repCipVault1 th.border-dotted {
+    border-style: dotted;
+}
+
+.qv-object-repCipVault1 td.border-top-dotted {
+    border-top-style: dotted;
+}
+
+.qv-object-repCipVault1 td.border-bottom-none {
+    border-bottom: none;
+}
+
+.qv-object-repCipVault1 th.border-right-solid {
+    border-right-style: solid;
+}
+
+.qv-object-repCipVault1 tr.bg-green {
+    background-color: #cff2cf !important;
+}
+
+.qv-object-repCipVault1 tr.text-blue {
+    color: #2258b7;
+}
+
+.qv-object-repCipVault1 td.text-black {
+    color: #000000;
+}
+
+.qv-object-repCipVault1 tr.font-bold {
+    font-weight: bold;
+}

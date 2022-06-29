@@ -1,0 +1,156 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Справочник предназначен для вывода витрин в разделе \"Информация\" - \"Реестры\"",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - кодсистемы_краткийкодподсистемы_кодэлементасправочника",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Обладатель информации",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "Полное наименование органа исполнительной власти-владельца реестра",
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Витрина",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Ссылка на элемент справочника \"Настройки витрин\"",
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": "Если указано несколько значений, то разграничение выполняется с условием ИЛИ",
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilder",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": "Использование параметра не рекомендовано. Используйте предустановленный фильтр в конструкторе витрин",
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "6ec1def7-e77a-41d1-a284-711c3a730ef9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "22e362f7-5fa8-4653-9485-a4580eb4688c",
+          "nickAttr": "code",
+          "value": "UGD_SSR_PERSON-UPLOAD-LOG",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f461660e-00cd-4b44-a6bd-17125562348a",
+          "nickAttr": "description",
+          "value": "Журнал загрузки жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "99c96df3-8d70-44f9-b69e-dc1f7f8f3c51",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_PERSON_UPLOAD_LOG_READ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8a730d1a-0080-4789-a41d-8d87dc924c0b",
+          "nickAttr": "name",
+          "value": "Журнал загрузки жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0c0e98ae-e6ac-4a17-a12d-aa258f3c2e72",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "961716ac-04ee-4cec-a2b3-bd85b19431bd",
+          "orders": 0,
+          "linkCode": "ugd_ssr_person_upload_log_code"
+        }
+      ]
+    }
+  ]
+}

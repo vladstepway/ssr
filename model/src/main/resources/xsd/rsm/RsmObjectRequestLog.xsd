@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/rsm"
+           targetNamespace="http://www.ugd.croc.ru/ssr/rsm"
+           elementFormDefault="qualified">
+    <xs:include schemaLocation="RsmObjectRequestLogEnum.xsd"/>
+    <xs:include schemaLocation="RsmObjectRequestAndResponse.xsd"/>
+    <xs:element name="RsmObjectRequestLog">
+        <xs:annotation>
+            <xs:documentation>Журнал запросов ОКС</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="rsmObjectRequestLogData" type="RsmObjectRequestLogData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="RsmObjectRequestLogData">
+        <xs:annotation>
+            <xs:documentation>Тип - запрос ОКС</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="startDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время начала обработки запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="endDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время завершения обработки запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="status" type="RsmObjectRequestLogStatus">
+                <xs:annotation>
+                    <xs:documentation>Статус обработки запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="requestEno" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ЕНО запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="requestEtpmvMessageId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор сообщения в mqetpmv</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="request" type="RsmRequest">
+                <xs:annotation>
+                    <xs:documentation>Запрос ОКС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="responseEno" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ЕНО ответа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="responseEtpmvMessageId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор сообщения в mqetpmv</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="response" type="RsmResponse" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Ответ ОКС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RsmRequest" type="">
+        <xs:annotation>
+            <xs:documentation>Запрос объектов капитального строительства</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="skip" type="xs:int" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Количество страниц, которые требуется пропустить</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="top" type="xs:int" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Максимальное количество записей на странице</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="filters" type="Filter" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Фильтры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RsmResponse">
+        <xs:annotation>
+            <xs:documentation>Ответ на запрос объектов капитально строительства</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="objectResponse" type="ObjectResponseType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

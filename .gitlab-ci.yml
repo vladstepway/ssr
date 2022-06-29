@@ -1,0 +1,32 @@
+stages:
+  - build
+  - deploy
+
+build-always:
+  stage: build
+  tags:
+    - shell
+  variables:
+    GIT_STRATEGY: clone
+  script:
+    - ./mvnw -Dmaven.test.skip=true -Dnsi.rest.url=http://192.168.2.173:5002/mdm clean install -P dev
+  artifacts:
+    when: always
+    paths:
+      - core/target/
+      - model/target/      
+      - server/target/
+      - target/
+
+deploy-stage:
+  stage: deploy
+  only:
+    - stage
+  tags:
+    - shell
+  variables:
+    GIT_STRATEGY: clone
+  script:
+    - scp server/target/ssr.jar root@192.168.2.173:/opt/ssr/ssr.jar
+    - ssh root@192.168.2.173 'systemctl restart ssr'
+

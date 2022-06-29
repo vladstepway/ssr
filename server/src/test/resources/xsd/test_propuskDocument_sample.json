@@ -1,0 +1,11 @@
+{
+  "documentID": "predefined_documentID_36",
+  "main": {
+    "regNumber": "predefined_regNumber_86",
+    "reqDate": "2019-03-20",
+    "initiator": {
+      "fioFull": "predefined_fioFull_108",
+      "phone": "predefined_phone_8"
+    }
+  }
+}

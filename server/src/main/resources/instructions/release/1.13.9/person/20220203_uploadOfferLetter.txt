@@ -1,0 +1,8 @@
+Актуализировать жителей по данным из excel:
+
+ 1) Открыть https://you_domain.ru/app/ugd/ssr/swagger-ui.html#/person-controller
+ 2) Выбрать POST /person/upload-offer-letter
+ 3) Нажать Try it out
+ 4) Указать файл, нажав Choose File
+ 5) Нажать Execute
+ 6) Проверить, что статус код 200

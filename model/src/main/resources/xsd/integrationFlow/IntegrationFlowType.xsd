@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/integrationFlow"
+           targetNamespace="http://www.ugd.croc.ru/ssr/integrationFlow"
+           elementFormDefault="qualified">
+    <xs:simpleType name="IntegrationFlowType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="dgpToMfrResettlementInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №1. Сведения о начале отселения</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToMfrAdministrativeDocumentsInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №2. Сведения о РД при равнозначном переселении</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToMfrContractProjectInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №3. Сведения о проекте договора при равнозначном переселении
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToMfrContractInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №4. Сведения о договоре при равнозначном переселении</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpCompensationOfferInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №5. Сведения о предложениях компенсации и вне района</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpCompensationOfferStatus">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №6. Сведения о статусе предложения по компенсации</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpBuyInClaimInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №7. Сведения о заявлении по докупке</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToMfrPersonInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №8. Сведения о жителях</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpClaimInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №8. Данные по заявлению</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpBuyInDecisionResultInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №9. Сведения о вынесенном решении Комиссией Фонда реновации по докупке
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpAuctionClaimResultInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №10. Сведения о результатах рассмотрения заявок на участие в аукционе
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpAuctionResultInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №11. Сведения о результатах проведения аукциона</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpContractReadyInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №12. Сведения о готовности договора</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpContractSignInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №13. Сведения о подписании договора</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpContractRegistrationInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №14. Сведения о регистрации договора</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpContractTerminationInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №15. Сведения о расторжении договора</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpClaimCancelInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №16. Сведения об аннулировании заявления</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="mfrToDgpKeyIssuanceInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №17. Сведения о выдаче ключей от новой квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToMfrReleaseFlatInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток МФР №18. Сведения об освобождении отселяемого помещения</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpPersonResponse">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №1. Сведения о жителях</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpPersonUpdate">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №1. Сведения об изменениях по жителям</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpOfferLetter">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №2. Сведения о письмах с предложениями</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpStatusRelocation">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №4. Сведения о статусе переселения квартир</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpContractReady">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №7. Сведения о готовности договора</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpContractSigned">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №8. Сведения о переселении по решению суда и равноценном возмещении
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpContractRegister">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №8. Сведения о регистрации договора</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpInfoSettlement">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №8. Сведения о заселяемой квартире</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpContractPrReady">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №12. Сведения о готовности проекта договора</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpAdministrativeDocument">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №13. Сведения о передаче распорядительного документа</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToDgiTradeAdditionInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №17. Сведения по докупке и компенсации</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToDgiAffairCollationInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №18. Сведения для сверки жителей</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpAffairCollationReportInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №18. Отчет о сверке жителей</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToDgiDisabledPersonInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №19. Сведения о маломобильных жителях</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToDgiFlatLayoutInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №20. Сведения о квартирографии</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToDgiCourtInfo">
+                <xs:annotation>
+                    <xs:documentation>Поток ДГИ №21. Сведения о судах</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgiToDgpRsmObjectRequest">
+                <xs:annotation>
+                    <xs:documentation>Запрос объектов капитального строительства</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="dgpToDgiRsmObjectResponse">
+                <xs:annotation>
+                    <xs:documentation>Ответ на запрос объектов капитального строительства</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

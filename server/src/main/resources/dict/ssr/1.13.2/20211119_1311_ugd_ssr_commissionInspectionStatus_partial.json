@@ -1,0 +1,442 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_commissionInspectionStatus",
+    "name": "Статусы заявлений на комиссионный осмотр",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "text",
+        "name": "Текст",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "06865311-f8e7-40f6-87ee-311b20378043",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a9217851-c76a-4e7d-b207-7e1a2f50ec51",
+          "nickAttr": "code",
+          "value": "1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0ed75c1e-65a2-4ee4-a466-42bf71c5583e",
+          "nickAttr": "name",
+          "value": "REGISTERED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cf7eee59-3a01-4499-9f3e-4eaf136fe974",
+          "nickAttr": "text",
+          "value": "Заявление зарегистрировано",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "04a30a1c-0af7-4b1b-ad88-76700010c568",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2acaf01f-f4ec-4a37-8884-331d07a33591",
+          "nickAttr": "code",
+          "value": "2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e9b6637f-1885-43a5-9628-9899f63e2d90",
+          "nickAttr": "name",
+          "value": "DEFECTS_FIXED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f03966c5-301d-4ed5-abce-882c3a4c93de",
+          "nickAttr": "text",
+          "value": "Необходим повторный осмотр",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b9520b9f-0ca1-4106-ae6d-9729122278bc",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "88922bfa-ce35-4b38-a452-aa44e23d27b6",
+          "nickAttr": "code",
+          "value": "3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ad5a62f3-f6a8-458a-9089-24947f516437",
+          "nickAttr": "name",
+          "value": "TIME_CONFIRMED_FIRST_VISIT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6e078fe4-f337-4d55-9d70-edf9c321ce0e",
+          "nickAttr": "text",
+          "value": "Дата и время осмотра согласованы",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c049a505-53b2-41db-bfb9-301e4595ca25",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0a147bfa-22c5-4c19-91fe-4760fbf9a80a",
+          "nickAttr": "code",
+          "value": "12",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "91da296f-1eec-4c88-8be7-e03a77a0d228",
+          "nickAttr": "name",
+          "value": "DEFECTS_FOUND",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6d486c7e-2106-474c-b525-f0a3762ec49d",
+          "nickAttr": "text",
+          "value": "На исполнении",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "492cb479-4615-426e-91c4-fe90c65e3873",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5be3546d-ca75-4b0a-a6c3-c84354c0a41c",
+          "nickAttr": "code",
+          "value": "13",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e846cc35-9dd3-460b-a010-0e42fd3a06dc",
+          "nickAttr": "name",
+          "value": "MOVE_DATE_SECOND_VISIT_ACCEPTED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "405be65c-1c47-4206-aa73-d3777a2236cc",
+          "nickAttr": "text",
+          "value": "Дата и время повторного осмотра согласованы",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b16b2546-0caa-44c4-ab66-771ed559277e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "04d03124-71d8-489a-9c7f-8cfca2cabee0",
+          "nickAttr": "code",
+          "value": "5",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b42465b4-9d91-4c5c-8ff5-b1fd5bbac3db",
+          "nickAttr": "name",
+          "value": "DEFECTS_NOT_FIXED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "93c4feb9-e6d1-4d07-bc69-9602f2292e74",
+          "nickAttr": "text",
+          "value": "Дефекты не устранены",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "29162441-6d4a-40af-934a-30a78745fa07",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "42948acd-e6c2-4951-9c8e-08f79bd0533e",
+          "nickAttr": "code",
+          "value": "6",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b0b1718f-b48c-4091-97f2-c32c5e5179c6",
+          "nickAttr": "name",
+          "value": "FINISHED_NO_DEFECTS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "28d2d0f8-d2fe-47c0-93b0-f2391a795844",
+          "nickAttr": "text",
+          "value": "Услуга оказана. Дефекты не выявлена",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e4d5510b-902d-4431-8d21-349a90875aa3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b6d1effa-3d98-44dd-b301-3cc18c2cf68b",
+          "nickAttr": "code",
+          "value": "7",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a821c90e-4d6c-4346-a78f-54faf7a44588",
+          "nickAttr": "name",
+          "value": "FINISHED_NO_CALL",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0b823280-0369-446b-8ac3-b24d82fc3a9a",
+          "nickAttr": "text",
+          "value": "Услуга оказана. Дефекты устранены",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "14e44774-4812-49ec-a1af-ef56974bb4f6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "18d6cc1b-e5df-475e-99ca-f7451d7ce37a",
+          "nickAttr": "code",
+          "value": "10",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a9ae8e4b-cef3-48c5-a292-760a7975745a",
+          "nickAttr": "name",
+          "value": "WITHDRAW_ACCEPTED",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "17895dc7-e1d7-47c1-a351-c2f3b5c76ee5",
+          "nickAttr": "text",
+          "value": "Заявление отозвано",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c39f9674-216f-4a65-93e9-0e9d8046dedb",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "623c1147-260f-4f83-8b10-9c0f3deb799b",
+          "nickAttr": "code",
+          "value": "9",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c2b035a-95f0-4812-ac88-37493efc5fd6",
+          "nickAttr": "name",
+          "value": "REFUSE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5a08c8be-5e6b-483a-bf22-51664960a117",
+          "nickAttr": "text",
+          "value": "Отказ в предоставлении услуги",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "281ba268-403d-4de5-adb4-3f0a74cca775",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "dddab8b8-c9c5-4269-a3ec-66596ac983d1",
+          "nickAttr": "code",
+          "value": "14",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ce16de13-810f-4074-b591-a70cf6b8b3ff",
+          "nickAttr": "name",
+          "value": "MOVE_DATE_FIRST_VISIT_REQUEST",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8f7e1b50-5168-4227-9da9-bcf57c66f811",
+          "nickAttr": "text",
+          "value": "Запрос на перенос даты и времени осмотра",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f6ecc6a6-14fc-411c-9d8f-b75269c25667",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "013269e0-b397-43ff-8949-0ce7ed79053e",
+          "nickAttr": "code",
+          "value": "15",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e56a6bed-f276-4a43-86b6-23b516784015",
+          "nickAttr": "name",
+          "value": "MOVE_DATE_SECOND_VISIT_REQUEST",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bb28bbfb-1b08-4c79-82e9-e7f9eea51810",
+          "nickAttr": "text",
+          "value": "Запрос на перенос даты и времени повторного осмотра",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "24d92817-549e-469b-b5a2-9ec4e5777a3d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f0e9fe0a-1288-4386-b00b-072c467d5fc4",
+          "nickAttr": "code",
+          "value": "100",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b9524e28-f284-4e4d-a92f-109e042da65b",
+          "nickAttr": "name",
+          "value": "SSR_REFUSE_AFTER_CLOSURE_WITHOUT_CONSENT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "516c9489-6717-4e62-9675-441bc35dca07",
+          "nickAttr": "text",
+          "value": "Отказ в предоставлении услуги, закрытие акта без согласия",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

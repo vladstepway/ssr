@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/daySchedule"
+           targetNamespace="http://www.ugd.croc.ru/ssr/daySchedule">
+  <xs:complexType name="TimeIntervalType">
+    <xs:annotation>
+      <xs:documentation>Интервал времени</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="start" type="xs:time">
+        <xs:annotation>
+          <xs:documentation>Начало временного интервала</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="end" type="xs:time">
+        <xs:annotation>
+          <xs:documentation>Конец временного интервала</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

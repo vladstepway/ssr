@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.some.org/test_include.xsd" targetNamespace="http://www.some.org/test_include.xsd">
+	<xs:include schemaLocation="test_include_2.xsd"/>
+	<xs:include schemaLocation="test_include_3.xsd"/>
+	<xs:complexType name="testIncludeType_1">
+		<xs:sequence>
+			<xs:element name="testField1_str" type="xs:string"/>
+			<xs:element name="testField1_boolean" type="xs:boolean"/>
+			<xs:element name="testField1_include2" type="testIncludeType_2"/>
+			<xs:element name="testField1_include3" type="testIncludeType_3"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,6 @@
+Удалить дубликат объекта капитального строительства в системе ССР:
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать DELETE /crud/delete/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = SSR-CCO; id = 76f7ffbe-490e-45cf-b297-c48ee96906ca
+4. Нажать Execute и убедиться, что статус код ответа 200

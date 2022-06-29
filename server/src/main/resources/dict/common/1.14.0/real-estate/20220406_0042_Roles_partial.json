@@ -1,0 +1,227 @@
+{
+  "metaDict": {
+    "nick": "Roles",
+    "name": "Роли пользователей",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "Плоский",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "organization",
+        "name": "Организация",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "system",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "authority",
+        "name": "Полномочие",
+        "typeAttr": "link",
+        "nickDictLink": "Authority",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "ed8101aa-6139-4231-a109-6fcca2016d8e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3170bdc4-3aae-4a19-8f45-71b438fc8ff9",
+          "nickAttr": "authority",
+          "value": "3cc0adb8-3bf4-4e5b-9b56-803eda8f12e1",
+          "orders": 0,
+          "linkCode": "UGD_SSR_PERSON_CARD_DGP"
+        },
+        {
+          "attrId": "aa9f54ab-6957-44e5-aa55-83db85a5f750",
+          "nickAttr": "authority",
+          "value": "efc01124-33af-4fd0-9869-0d87280439dd",
+          "orders": 1,
+          "linkCode": "UGD_SSR_REAL_DEMOLITION_CHANGE"
+        },
+        {
+          "attrId": "34296a6d-d8bc-4ad8-926f-fab8dbd21964",
+          "nickAttr": "code",
+          "value": "UGD_SSR_DGP_EMPLOYEE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "85f7d121-3cb8-4ddb-a01f-8b77e503c863",
+          "nickAttr": "description",
+          "value": "Роль, обеспечивает возможности:\n- просмотра реестра АРМ сотрудника Центра информирования по переселению жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "22e9797f-af94-4ec8-be6e-95bb024dcc83",
+          "nickAttr": "name",
+          "value": "Сотрудник ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "076db593-75f6-47d9-aa9a-c83cb340630a",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "350aeb40-5564-43ba-8062-a14b3c856215",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2a5cdab4-47dc-42d9-9841-c21dacb41d5d",
+          "nickAttr": "authority",
+          "value": "efc01124-33af-4fd0-9869-0d87280439dd",
+          "orders": 0,
+          "linkCode": "UGD_SSR_REAL_DEMOLITION_CHANGE"
+        },
+        {
+          "attrId": "03432e64-8a15-4bdf-b503-e398a8a587d0",
+          "nickAttr": "code",
+          "value": "UGD_SSR_DS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e4363927-b2be-40b7-8dd8-2bd7d4ef4198",
+          "nickAttr": "description",
+          "value": "Роль обеспечивает сотруднику ДС:\n-ведение учета сведений о расселении, сносе, сохранении дома и документах-основаниях",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "73739c0d-e47a-4182-bd3a-df9d21799ef0",
+          "nickAttr": "name",
+          "value": "Сотрудник ДС",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a05eb0c9-8f2e-41e7-8cfd-785b033ea2e0",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    },
+    {
+      "elementId": "1d4a8416-d417-498d-8470-3fa343fdce64",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7e84e64f-24fc-455f-b0c5-1782382f2b80",
+          "nickAttr": "authority",
+          "value": "794b02aa-4604-43a7-882f-013965bca870",
+          "orders": 0,
+          "linkCode": "UGD_SSR_REAL_NON_RESIDENTIAL"
+        },
+        {
+          "attrId": "508cc5e8-51ef-4ba2-b6bf-0896e7e7ee1f",
+          "nickAttr": "code",
+          "value": "UGD_SSR_REAL_NON_RESIDENTIAL",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8e311206-00bf-461f-9415-b09fe674beb5",
+          "nickAttr": "description",
+          "value": "Роль обеспечивает:\n- доступ к возможности \"Внести информацию о наличии нежилых помещений\"\n- доступ к возможности \"Внести информацию об изъятии нежилых помещений",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "47b28ddf-de12-4022-8aed-af5727773d43",
+          "nickAttr": "name",
+          "value": "Учет сведений о нежилых помещениях",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ce2c0d2e-8def-4897-b7fb-682e9d9e8de4",
+          "nickAttr": "system",
+          "value": "651a8ae2-eb74-4c17-a81a-c9812b21195a",
+          "orders": 0,
+          "linkCode": "UGD"
+        }
+      ]
+    }
+  ]
+}

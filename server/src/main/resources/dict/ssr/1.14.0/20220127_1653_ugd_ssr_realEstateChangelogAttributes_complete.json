@@ -1,0 +1,1081 @@
+{
+  "nick": "ugd_ssr_realEstateChangelogAttributes",
+  "name": "Атрибуты для журнала изменений расселяемых домов",
+  "hierarchyDict": 0,
+  "deleted": 0,
+  "sysName": "UGD_SSR",
+  "note": null,
+  "context": "SYSTEM",
+  "transfer": 0,
+  "metaAttributes": [
+    {
+      "nick": "code",
+      "name": "Код",
+      "typeAttr": "string",
+      "nickDictLink": null,
+      "arrayAttr": 0,
+      "required": 0,
+      "deleted": 0,
+      "note": null,
+      "orders": 0,
+      "unique": 0
+    },
+    {
+      "nick": "name",
+      "name": "Наименование",
+      "typeAttr": "string",
+      "nickDictLink": null,
+      "arrayAttr": 0,
+      "required": 0,
+      "deleted": 0,
+      "note": null,
+      "orders": 1,
+      "unique": 0
+    },
+    {
+      "nick": "title",
+      "name": "Заголовок",
+      "typeAttr": "string",
+      "nickDictLink": null,
+      "arrayAttr": 0,
+      "required": 0,
+      "deleted": 0,
+      "note": null,
+      "orders": 2,
+      "unique": 0
+    },
+    {
+      "nick": "type",
+      "name": "Тип",
+      "typeAttr": "string",
+      "nickDictLink": null,
+      "arrayAttr": 0,
+      "required": 0,
+      "deleted": 0,
+      "note": null,
+      "orders": 3,
+      "unique": 0
+    },
+    {
+      "nick": "beanName",
+      "name": "Наименование бина для обработки",
+      "typeAttr": "string",
+      "nickDictLink": null,
+      "arrayAttr": 0,
+      "required": 0,
+      "deleted": 0,
+      "note": null,
+      "orders": 4,
+      "unique": 0
+    },
+    {
+      "nick": "isComplexPath",
+      "name": "Путь комплексный",
+      "typeAttr": "boolean",
+      "nickDictLink": null,
+      "arrayAttr": 0,
+      "required": 0,
+      "deleted": 0,
+      "note": null,
+      "orders": 5,
+      "unique": 0
+    }
+  ],
+  "elements": [
+    {
+      "id": "aa483ea1-3828-43ab-b76a-9409aeeaef7a",
+      "dateCreate": "2022-01-27T13:42:01.000+00:00",
+      "deleted": 1,
+      "dateDeleted": "2022-01-27T13:42:01.000+00:00",
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "5a362733-8714-459b-8a0e-d0722f4805db",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "2b3c6963-b322-46f3-82fe-e170203a80ed",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/resettlementCompletionData/fileStoreId",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "fedeb4f1-0401-4341-927a-ac4cb565d334",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "fff005da-18aa-44c7-940f-55905890c321",
+          "nick": "name",
+          "valueAttr": "ИД в FileStore файла документа о завершении переселения",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "e3dc9877-aba2-4a38-9025-78210385458e",
+          "nick": "title",
+          "valueAttr": "ИД в FileStore файла документа о завершении переселения",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "361faf31-dc24-4c37-a426-205920f0df5c",
+          "nick": "type",
+          "valueAttr": "string",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "5f4f8e32-4b6f-4825-96d3-7c95ed5b5cd6",
+      "dateCreate": "2021-10-07T20:15:20.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "74b065cd-d251-450d-ac6c-7d021ecedd50",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "9ff05c48-6d4a-41e9-85aa-6132ef672ead",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/demolitionDate",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "f83016a9-91d9-491f-8365-9482cae40d2e",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "52077f2d-b7e2-4e99-8c91-6aacd7854a3c",
+          "nick": "name",
+          "valueAttr": "Дата сноса дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "5145fbab-bff5-4acb-8061-06ab7c3c484f",
+          "nick": "title",
+          "valueAttr": "Дата сноса дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "df931d6c-2185-4564-a5ca-c5cec282df4f",
+          "nick": "type",
+          "valueAttr": "date",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "34ca87e5-0440-46bc-8233-b49cc63d73ce",
+      "dateCreate": "2021-10-07T20:15:20.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "414af7b9-269d-4973-994e-78edac969515",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "3e872347-0445-43f1-89df-ad577aad6874",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/hasNonResidentialSpaces",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "e4a36527-1279-426a-b32c-a9ae4a013204",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "d5d9e477-27dd-44bd-9d2b-424d0bc221b7",
+          "nick": "name",
+          "valueAttr": "Наличие нежилых помещений",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "ac87346f-87fa-44a1-a6e0-34c95e283e2b",
+          "nick": "title",
+          "valueAttr": "Наличие нежилых помещений",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "5564ce7f-5a9e-4d5e-ae8e-7c75897853be",
+          "nick": "type",
+          "valueAttr": "boolean",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "36fdf9c5-a5da-4ab0-af6c-ff063d02fc00",
+      "dateCreate": "2021-10-14T07:56:59.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "c762b25a-88c7-435f-828e-8bb11e4c1bb7",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "cbe76c09-d8fb-4393-82da-0365a0b952b7",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/withdrawnNonResidentialSpaces",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "30c71b49-0e3f-4ca6-84e7-3f107a2fb970",
+          "nick": "name",
+          "valueAttr": "Флаг изъятия нежилых помещений",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "8f315148-b396-44ba-87ec-92c64007d111",
+          "nick": "title",
+          "valueAttr": "Флаг изъятия нежилых помещений",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "9050eb86-21af-4af0-9c16-2dca93abce60",
+          "nick": "type",
+          "valueAttr": "boolean",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "dbcf1101-3435-4f5f-aec3-507d0875390e",
+      "dateCreate": "2022-01-19T13:53:39.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "979e00d3-3c95-4d27-87af-f8877e7ff3ad",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "82b96904-5e5a-47c0-b223-79d3e9525771",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/resettlementStatus",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "39f75499-6b13-4f08-b970-b7b3d72fb941",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "b3c39365-1434-4dbe-8ddd-66d54cc18b4b",
+          "nick": "name",
+          "valueAttr": "Статус",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "2899da3c-cfc6-4160-b275-e4c57e1871a7",
+          "nick": "title",
+          "valueAttr": "Статус",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "0d963417-9c83-4bac-89d7-c21e55ec0ff5",
+          "nick": "type",
+          "valueAttr": "status",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "357eab25-9b30-461d-b40f-97ad3a7e7dea",
+      "dateCreate": "2022-01-21T09:57:17.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "a7a3835c-92a9-4eca-8286-6b0a1ed5bbef",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "682cf823-2997-4a7a-8a44-28b4511d04da",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/resettlementCompletionDate",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "242fd9ad-c268-4456-b2f6-35cab02009fe",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "3b827fc9-3436-4e73-81ef-8d96b5c80afd",
+          "nick": "name",
+          "valueAttr": "Дата завершения переселения",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "7177ddd9-c6d8-4668-9c61-398ad5e7bb42",
+          "nick": "title",
+          "valueAttr": "Дата завершения переселения",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "b811f49b-3c68-44f8-83e2-d33bd6b841a4",
+          "nick": "type",
+          "valueAttr": "date",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "4062cdff-77e4-40c0-b85c-9f2d7c45ace1",
+      "dateCreate": "2022-01-19T14:13:24.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "c743121f-01f7-45e9-9f76-ba0e07963185",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "cd7e4548-3c4e-4164-a68f-6aa9eb35f857",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/resettlementCompletionData/documentNumber",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "30725659-404a-4fec-91f9-6ebe7f001c10",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "6112c622-902f-45ac-adda-84030ca72aea",
+          "nick": "name",
+          "valueAttr": "Номер документа о завершении переселения",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "4ee93341-a6b1-4fbc-b550-e2ab11615abe",
+          "nick": "title",
+          "valueAttr": "Номер документа о завершении переселения",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "8c897e81-5274-40ad-b5f8-a85c14b6ea21",
+          "nick": "type",
+          "valueAttr": "string",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "5fa15dbd-6c29-4692-989b-7f5d25f0d5d2",
+      "dateCreate": "2022-01-19T14:14:59.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "2c9e8c45-80f3-473f-8245-5eb1e057bb45",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "b0e578e9-7366-4e5e-991c-bb8c9443991d",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/resettlementCompletionData/documentDate",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "7da53ffc-9b11-4900-8434-80ab8b098ea0",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "fa8155ad-0454-458a-b51d-d8f42f29c66c",
+          "nick": "name",
+          "valueAttr": "Дата документа о завершении переселения",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "4876247e-a8be-4dcb-b070-73f9b28fb835",
+          "nick": "title",
+          "valueAttr": "Дата документа о завершении переселения",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "28997870-2543-4ea2-84fb-ded459490b80",
+          "nick": "type",
+          "valueAttr": "date",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "78b2d026-de30-4ae8-be4c-f7874deb230c",
+      "dateCreate": "2022-01-27T13:42:58.000+00:00",
+      "deleted": 1,
+      "dateDeleted": "2022-01-27T13:42:58.000+00:00",
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "138827e2-81b5-4113-a641-8a139994757c",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "84ef60f7-01b4-4a33-8d7b-31f74205db96",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/demolitionData/fileStoreId",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "957cf760-4f55-44a8-955a-5102b9048505",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "dd05d2fc-2dd2-42b5-b1c0-5702b68cd68e",
+          "nick": "name",
+          "valueAttr": "ИД в FileStore файла документа о сносе дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "dabfdf99-1edd-4c13-81a3-ffcfded23135",
+          "nick": "title",
+          "valueAttr": "ИД в FileStore файла документа о сносе дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "b23b9c23-6479-4eb7-a965-b641782922c3",
+          "nick": "type",
+          "valueAttr": "string",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "081ecd7b-23db-4dff-a343-79e689f406ec",
+      "dateCreate": "2022-01-19T14:23:47.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "a01bf56e-71ce-40e6-ac00-a42005a45ba6",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "254808e3-586d-45f0-8b0b-e57f40033293",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/demolitionData/documentDate",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "c3921b6a-7af3-4508-91f0-a261e0f4ae3f",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "8b7d3297-ca76-48c1-ac2a-468ae2cb37d4",
+          "nick": "name",
+          "valueAttr": "Дата документа о сносе дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "b62b81c5-4b18-4851-8b87-ce0abcfa8fdd",
+          "nick": "title",
+          "valueAttr": "Дата документа о сносе дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "9bba0c67-b9f9-492f-b787-a47cb83941c4",
+          "nick": "type",
+          "valueAttr": "date",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "af46d928-df20-40a6-a8ad-0711f1497bd3",
+      "dateCreate": "2022-01-19T14:23:56.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "55741cb1-e3a4-47ef-ac75-28abd5862898",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "82259995-4b0a-4b65-8fa2-5171730308f8",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/demolitionData/documentNumber",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "91de4a9f-14cf-48d7-b98e-febcafa74435",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "15bd257a-032d-4c12-bc3e-9c7e8bb3f98b",
+          "nick": "name",
+          "valueAttr": "Номер документа о сносе дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "f2126c41-1ce1-43f8-b1d3-1557992d9813",
+          "nick": "title",
+          "valueAttr": "Номер документа о сносе дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "e061dbef-b7b5-4cdf-8162-ee0a9c30ffb3",
+          "nick": "type",
+          "valueAttr": "string",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "1a41807f-7331-4643-8e11-1f944088b823",
+      "dateCreate": "2022-01-21T09:55:19.000+00:00",
+      "deleted": 1,
+      "dateDeleted": "2022-01-21T09:55:19.000+00:00",
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "e2b629dd-dee0-40be-b3af-6891ad4d7584",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "89d58795-02d6-4f88-85fa-a57de185516d",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/demolitionData/date",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "803bfc9f-a5e6-498f-a254-36279de80b13",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "e20b6f71-0cbb-4d75-bdb1-cd01fecba0ba",
+          "nick": "name",
+          "valueAttr": "Дата сноса дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "991a9ea6-99e9-41f6-9b22-923dfaef0f63",
+          "nick": "title",
+          "valueAttr": "Дата сноса дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "31c99a0a-708f-4758-a243-950dfde59af5",
+          "nick": "type",
+          "valueAttr": "date",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "ee9f5dfb-b8f6-4c2a-82a9-bd0bff87b9df",
+      "dateCreate": "2022-01-19T14:24:10.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "532bcd49-150f-4a11-95cf-5d0430321963",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "2b828bb9-d0cb-4f87-90dd-2b6ca37f2985",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/demolitionData/isDemolished",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "9340eeb5-57df-4277-880c-50b1ab4d34bf",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "85694460-b1dd-4203-8962-0214482d99ff",
+          "nick": "name",
+          "valueAttr": "Признак сноса дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "30948c40-dc81-4d3b-84e4-32fdbe8555de",
+          "nick": "title",
+          "valueAttr": "Признак сноса дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "23c77c78-9cc5-4bbb-8e74-386b2471dc53",
+          "nick": "type",
+          "valueAttr": "boolean",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "ba083173-cb09-414f-bade-f46c1f42ef8e",
+      "dateCreate": "2022-01-21T09:54:18.000+00:00",
+      "deleted": 1,
+      "dateDeleted": "2022-01-21T09:54:18.000+00:00",
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "09c883aa-5b61-494f-bdda-53bec6af2260",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "487eb338-bcf8-4e44-aeae-de19757e9ba7",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/housePreservationData/fileStoreId",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "66da56e0-8514-4880-be10-8a48efabe1af",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "8274eb06-350f-4d62-83af-1122a9ebff32",
+          "nick": "name",
+          "valueAttr": "ИД в FileStore файла документа о сохранении дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "c3939fb0-8377-476b-8e4a-c31cbb81a928",
+          "nick": "title",
+          "valueAttr": "ИД в FileStore файла документа о сохранении дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "f3bed87d-6b21-436a-aa09-7f34da526cdd",
+          "nick": "type",
+          "valueAttr": "string",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "781f8e15-4df2-4723-aac2-af96f4e5bf1c",
+      "dateCreate": "2022-01-21T09:54:52.000+00:00",
+      "deleted": 1,
+      "dateDeleted": "2022-01-21T09:54:52.000+00:00",
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "99c8bde2-07fd-48e5-9db0-90b120024749",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "579fd16c-76b8-4656-b753-52ccdb26ce81",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/housePreservationData/documentDate",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "fc1b9463-ca3b-4d30-a74b-89a7528bcf53",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "60132d9b-d68a-4e3c-962d-c0869cce47d1",
+          "nick": "name",
+          "valueAttr": "Дата документа о сохранении дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "f4fab3a6-e388-4bfb-93bd-a8d5e69f8720",
+          "nick": "title",
+          "valueAttr": "Дата документа о сохранении дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "90cb5555-397a-433b-b986-82025eb90fa8",
+          "nick": "type",
+          "valueAttr": "date",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "97393b38-7ddb-4ac5-845d-47d7800af676",
+      "dateCreate": "2022-01-21T09:54:29.000+00:00",
+      "deleted": 1,
+      "dateDeleted": "2022-01-21T09:54:29.000+00:00",
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "1cbac747-2ba8-4428-b8b0-9c77149978a3",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "08da0fee-a75a-4351-92b0-22efd8f440dc",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/housePreservationData/documentNumber",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "4dfadd21-98d5-4331-9cd8-333b3eb2c7ae",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "22e13578-c7fc-40fe-9a50-2bbf29639f80",
+          "nick": "name",
+          "valueAttr": "Номер документа о сохранении дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "e25d7ff9-e157-4889-9d9f-d2d2e8fbdb0f",
+          "nick": "title",
+          "valueAttr": "Номер документа о сохранении дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "6f632adf-f674-4005-b431-1134f8b613b2",
+          "nick": "type",
+          "valueAttr": "string",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    },
+    {
+      "id": "d8845f00-bec8-4628-8c1d-879a13106400",
+      "dateCreate": "2022-01-19T14:24:38.000+00:00",
+      "deleted": 0,
+      "dateDeleted": null,
+      "note": null,
+      "sortValue": null,
+      "parentId": null,
+      "values": [
+        {
+          "id": "1fc14f98-7c9a-4879-acce-8d5b0aeb79bc",
+          "nick": "beanName",
+          "valueAttr": "realEstateChangelogAttributeProcessor",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "2a79d572-17ee-4fad-8061-bdc1755ccb19",
+          "nick": "code",
+          "valueAttr": "/RealEstate/RealEstateData/housePreservationData/isPreserved",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "293597e8-ce15-45bf-a9ef-354d48837d0b",
+          "nick": "isComplexPath",
+          "valueAttr": false,
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "84fbef47-164d-4a3d-a9cb-2c4b27d24616",
+          "nick": "name",
+          "valueAttr": "Признак сохранения дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "eb1aee44-f1eb-41fe-b146-60f93060c5e7",
+          "nick": "title",
+          "valueAttr": "Признак сохранения дома",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        },
+        {
+          "id": "d2cf7cb9-937e-4571-8b3c-e5d0537ccc37",
+          "nick": "type",
+          "valueAttr": "boolean",
+          "deleted": 0,
+          "dateDelete": null,
+          "orders": 0
+        }
+      ]
+    }
+  ]
+}

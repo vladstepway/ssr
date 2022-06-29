@@ -1,0 +1,220 @@
+{
+  "metaDict": {
+	"nick": "Actions",
+	"name": "Действия - что я могу",
+	"context": "SYSTEM",
+	"hierarchyDict": 0,
+	"deleted": 0,
+	"sysName": "COMMON",
+	"note": null,
+	"transfer": 0,
+	"metaAttr": [
+	  {
+		"nick": "code",
+		"name": "Код действия",
+		"typeAttr": "string",
+		"nickDictLink": null,
+		"arrayAttr": 0,
+		"required": 1,
+		"deleted": 0,
+		"note": null,
+		"orders": 0,
+		"unique": 1
+	  },
+	  {
+		"nick": "name",
+		"name": "Наименование действия",
+		"typeAttr": "string",
+		"nickDictLink": null,
+		"arrayAttr": 0,
+		"required": 1,
+		"deleted": 0,
+		"note": null,
+		"orders": 1,
+		"unique": 0
+	  },
+	  {
+		"nick": "icon",
+		"name": "Иконка",
+		"typeAttr": "string",
+		"nickDictLink": null,
+		"arrayAttr": 0,
+		"required": 1,
+		"deleted": 0,
+		"note": null,
+		"orders": 2,
+		"unique": 0
+	  },
+	  {
+		"nick": "group",
+		"name": "Группа дающая доступ",
+		"typeAttr": "string",
+		"nickDictLink": null,
+		"arrayAttr": 1,
+		"required": 1,
+		"deleted": 0,
+		"note": null,
+		"orders": 3,
+		"unique": 0
+	  },
+	  {
+		"nick": "disabled",
+		"name": "Признак неактивности",
+		"typeAttr": "boolean",
+		"nickDictLink": null,
+		"arrayAttr": 0,
+		"required": 0,
+		"deleted": 0,
+		"note": null,
+		"orders": 4,
+		"unique": 0
+	  },
+	  {
+		"nick": "url",
+		"name": "URL адрес страницы",
+		"typeAttr": "string",
+		"nickDictLink": null,
+		"arrayAttr": 0,
+		"required": 0,
+		"deleted": 0,
+		"note": null,
+		"orders": 5,
+		"unique": 0
+	  }
+	]
+  },
+  "elements": [
+	{
+	  "elementId": "168a86da-84f8-407b-91ef-bc5bdb9befa5",
+	  "deleted": 0,
+	  "sortValue": null,
+	  "note": null,
+	  "parentCode": null,
+	  "values": [
+		{
+		  "attrId": "2fb9e8ce-d054-4632-afe5-c2f65992ac94",
+		  "nickAttr": "code",
+		  "value": "ugd_ssr_addSoonResettlementRequest",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "ca7b1c8b-f953-4ad7-9b8b-48760601a4e4",
+		  "nickAttr": "group",
+		  "value": "UGD_SSR_OPERATOR",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "3f646c7f-d433-406a-854a-33ef3c041501",
+		  "nickAttr": "icon",
+		  "value": "fa fa-user-plus",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "d294cff9-797e-4c65-b864-d0705ce2ad1e",
+		  "nickAttr": "name",
+		  "value": "Запустить процесс обогащения данными расселяемого дома",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "046b51e9-f0c6-48cd-a35c-1aea030910d4",
+		  "nickAttr": "url",
+		  "value": "/ugd/#/app/template/select-soon-resettlement-request",
+		  "orders": 0,
+		  "linkCode": null
+		}
+	  ]
+	},
+	{
+	  "elementId": "1d547400-1103-4e75-9b3c-67b47de7f334",
+	  "deleted": 0,
+	  "sortValue": null,
+	  "note": null,
+	  "parentCode": null,
+	  "values": [
+		{
+		  "attrId": "1fcba4b6-8b1d-4dd3-8058-c0af418102f5",
+		  "nickAttr": "code",
+		  "value": "ugd_ssr_addResettlementRequest",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "aa56d809-3ba1-46d7-960b-5117649f72d9",
+		  "nickAttr": "group",
+		  "value": "UGD_SSR_OPERATOR",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "8799e985-2ea6-4cd4-86b2-5615e7bf41f0",
+		  "nickAttr": "icon",
+		  "value": "fa fa-user-plus",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "e6df47ed-6d4c-43d2-b093-0382bc47ccac",
+		  "nickAttr": "name",
+		  "value": "Запустить процесс начала переселения",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "7ed21718-0182-42f6-ac04-e6f6f9c7299b",
+		  "nickAttr": "url",
+		  "value": "/ugd/#/app/template/select-resettlement-request",
+		  "orders": 0,
+		  "linkCode": null
+		}
+	  ]
+	},
+	{
+	  "elementId": "f2179820-d959-42dc-ae35-b404a27e60b6",
+	  "deleted": 0,
+	  "sortValue": null,
+	  "note": null,
+	  "parentCode": null,
+	  "values": [
+		{
+		  "attrId": "790aff4d-bd03-4db4-b411-6ad290b95fc5",
+		  "nickAttr": "code",
+		  "value": "ugd_ssr_addDashboard",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "caadb8d7-31eb-4eeb-b1ff-59146074acdb",
+		  "nickAttr": "group",
+		  "value": "UGD_SSR_ADMIN_DASHBOARD",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "b706350f-baa6-4bc2-ab71-2d1bb3582044",
+		  "nickAttr": "icon",
+		  "value": "fa fa-user-plus",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "e73d141c-006a-435f-a3a9-d8643a737f51",
+		  "nickAttr": "name",
+		  "value": "Внести статистическую информацию о переселении",
+		  "orders": 0,
+		  "linkCode": null
+		},
+		{
+		  "attrId": "7f175a70-baa3-4860-a4f8-220c9e10c453",
+		  "nickAttr": "url",
+		  "value": "/ugd/#/app/dashboard/new",
+		  "orders": 0,
+		  "linkCode": null
+		}
+	  ]
+	}
+  ]
+}

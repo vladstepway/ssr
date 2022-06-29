@@ -1,0 +1,22 @@
+#read properties: http://localhost:5000/conf/demo/dev
+#refresh properties: POST http://localhost:3034/demo/actuator/refresh
+#--spring.profiles.active=dev / stage / prod
+
+server:
+  port: 3034
+  servlet:
+    contextPath: /ssr
+
+spring:
+  application:
+    name: ssr_ssr
+  cloud:
+    config:
+      enabled: false
+
+filestore:
+  exclude: true
+
+logging:
+  level:
+    root: info

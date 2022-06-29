@@ -1,0 +1,86 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_cipStatuses",
+    "name": "Статусы ЦИП",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "b7e886df-b28d-4b5c-b9c2-1ddd0ad2f012",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ebdabe86-827e-4f20-90fd-6ecdbc549728",
+          "nickAttr": "code",
+          "value": "01",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d13acea7-5c48-4918-8eb0-4f2c76ba7b77",
+          "nickAttr": "name",
+          "value": "Используется",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ef41049f-f0fd-417e-8ef1-5828b57c4b78",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1ab745f1-1cef-4cad-8aff-3c04f8053b6d",
+          "nickAttr": "code",
+          "value": "02",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1c4b186e-36e9-4be0-8da7-06a4ab009ef9",
+          "nickAttr": "name",
+          "value": "Архив",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

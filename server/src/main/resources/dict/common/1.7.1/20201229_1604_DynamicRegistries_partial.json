@@ -1,0 +1,200 @@
+{
+  "metaDict": {
+    "nick": "DynamicRegistries",
+    "name": "Реестры информации",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "SYS",
+    "note": "Настройка страницы Реестры информации",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "description",
+        "name": "Описание реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilderLink",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "icon",
+        "name": "Иконка реестра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseBuilder",
+        "name": "Ссылка на элемент справочника ShowcaseBuilder",
+        "typeAttr": "link",
+        "nickDictLink": "ShowcaseBuilder",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "filters",
+        "name": "Предустановленные фильтры",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": "Использование параметра не рекомендовано. Используйте предустановленный фильтр в конструкторе витрин",
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "groups",
+        "name": "LDAP группы доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "be334b14-82a6-47b6-a8ca-b3d805c9900a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9966a6b8-981f-4f5b-89ae-c580146398c0",
+          "nickAttr": "code",
+          "value": "UGD_SSR_SHIPPING_APPLICATIONS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "048eead3-c11a-47a7-93a0-ccfc72b95fb9",
+          "nickAttr": "description",
+          "value": "Реестр заявлений на помощь в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "96639dbb-9a8e-4e95-b4f4-9c368f84f3cf",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_SHIPPING_APPLICATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a3f506dd-f864-498e-b17d-9f826e5250a0",
+          "nickAttr": "name",
+          "value": "Реестр заявлений на помощь в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6cee188d-79da-4b33-96fb-05156011a17c",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "b144820a-2e61-4591-a5e7-781be545603e",
+          "orders": 0,
+          "linkCode": "ugd_ssr_shipping_application_catalog_code"
+        }
+      ]
+    },
+    {
+      "elementId": "e3250b78-bb4f-4062-87c5-c46d585e3e97",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7e977c1b-b1d3-4774-bc76-867f4a62e93f",
+          "nickAttr": "code",
+          "value": "UGD_SSR_SHIPPING_DAY_SCHEDULE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7d4fd308-000e-4578-8911-777ac7e3dabe",
+          "nickAttr": "description",
+          "value": "Администрирование рабочих дней помощи в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c6d9b788-5fa6-432d-9945-978f5a241598",
+          "nickAttr": "groups",
+          "value": "UGD_SSR_SHIPPING_TIMETABLE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e4c3cbe3-08ca-485b-8520-02e0742121f5",
+          "nickAttr": "name",
+          "value": "Администрирование рабочих дней помощи в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "938d46f0-41bf-4b28-b97c-33de92e03e3b",
+          "nickAttr": "showcaseBuilderLink",
+          "value": "02e6f7e1-fc6a-42be-a295-dcb811cfd54b",
+          "orders": 0,
+          "linkCode": "ugd_ssr_shipping_day_schedule_catalog_code"
+        }
+      ]
+    }
+  ]
+}

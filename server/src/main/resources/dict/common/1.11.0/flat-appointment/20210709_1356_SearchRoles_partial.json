@@ -1,0 +1,164 @@
+{
+  "metaDict": {
+    "nick": "SearchRoles",
+    "name": "Правила разграничения прав доступа к результатам общего поиска",
+    "context": "SYSTEM",
+    "hierarchyDict": 1,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Справочник предназначен для разграничения доступа к типам документов подсистемы поиска Инструкция по работе со справочником - https://wiki.reinform-int.ru/pages/viewpage.action?pageId=225183361",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа (подтипа) документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": "Стандарт заполнения - Код типа документа =  ПОЛНЫЙКОДТИПАДОКУМЕНТА, код подтипа документа, если один ПОЛНЫЙКОДТИПАДОКУМЕНТА_ANY, код подтипа документа, если несколько ПОЛНЫЙКОДТИПАДОКУМЕНТА_КОДПОДТИПА",
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование типа (подтипа) документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "documentType",
+        "name": "Тип документа",
+        "typeAttr": "link",
+        "nickDictLink": "DocumentTypes",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Типы документов\"",
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": "Выбор значения из справочника \"Подсистемы\"",
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "role",
+        "name": "Группа, дающая право доступа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": "Если указано несколько значений, то разграничение выполняется с условием ИЛИ",
+        "orders": 4,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "3b150272-84a5-42b6-a5ed-5d3eb054b59b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "eaf60de4-f5aa-4ff9-9362-50b3ffa7d9b9",
+          "nickAttr": "code",
+          "value": "UGD_SSR_FLAT-APPOINTMENT",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bddb3e90-f29a-4d06-a091-8c91f7f773b1",
+          "nickAttr": "documentType",
+          "value": "c9e205f2-4774-4a24-8728-aed4764c30ef",
+          "orders": 0,
+          "linkCode": "UGD_SSR_FLAT-APPOINTMENT"
+        },
+        {
+          "attrId": "c066d992-c4d6-4b4b-a1ab-77e810083dce",
+          "nickAttr": "name",
+          "value": "Реестр заявлений на осмотр квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a62a1bbd-cb5f-4e48-84d2-b37ca05137e9",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "38719f0d-78e6-4f8a-8b82-b4f272d47ff6",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        }
+      ]
+    },
+    {
+      "elementId": "89d50bc3-e05e-4331-b2e0-149fca4fea31",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "UGD_SSR_FLAT-APPOINTMENT",
+      "values": [
+        {
+          "attrId": "df2e8f96-78c9-496f-92ba-1c24f0db8984",
+          "nickAttr": "code",
+          "value": "UGD_SSR_FLAT-APPOINTMENT_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d641cf1-587d-4196-8012-50c14ea6ca6a",
+          "nickAttr": "documentType",
+          "value": "c9e205f2-4774-4a24-8728-aed4764c30ef",
+          "orders": 0,
+          "linkCode": "UGD_SSR_FLAT-APPOINTMENT"
+        },
+        {
+          "attrId": "0706ebca-2532-445e-b2be-88f989cbc8e1",
+          "nickAttr": "name",
+          "value": "UGD_SSR_FLAT-APPOINTMENT_ANY",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dd75eca1-d83b-46fd-b8e6-53d9b886895e",
+          "nickAttr": "role",
+          "value": "SYS_SYSTEM_UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2e22403b-630e-4a9f-a535-d0d3b3258027",
+          "nickAttr": "subsystem",
+          "value": "f58e37eb-b5f2-4aa6-bd74-9de1bb207bf0",
+          "orders": 0,
+          "linkCode": "SYS_COMMON"
+        }
+      ]
+    }
+  ]
+}

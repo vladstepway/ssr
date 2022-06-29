@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.some.org/test_include.xsd" targetNamespace="http://www.some.org/test_include.xsd">
+	<xs:include schemaLocation="test_include_1.xsd"/>
+	<xs:element name="user">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="testField_str" type="xs:string"/>
+				<!--Namespace prefix can be presented-->
+				<xs:element name="testField_include1" type="testIncludeType_1"/>
+				<!--Namespace prefix can be omit-->
+				<xs:element name="testField_include2" type="testIncludeType_2"/>
+				<xs:element name="testField_include3" type="testIncludeType_3"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,164 @@
+{
+    "elements": [
+        {
+            "deleted": 0,
+            "elementId": "84620ebf-e28b-4066-ad41-a55cbf21b15d",
+            "note": null,
+            "parentCode": null,
+            "sortValue": null,
+            "values": [
+                {
+                    "attrId": "4f4df0f6-32b8-4f15-81c7-b4abb00f168c",
+                    "linkCode": null,
+                    "nickAttr": "code",
+                    "orders": 0,
+                    "value": "UGD_SSR_NOTARY-APPLICATION"
+                },
+                {
+                    "attrId": "dfce0419-d85a-44ab-a3c3-661425712f0d",
+                    "linkCode": "UGD_SSR_NOTARY-APPLICATION",
+                    "nickAttr": "documentType",
+                    "orders": 0,
+                    "value": "7da15c31-2428-4efc-9b8a-fa6ce3bd59a6"
+                },
+                {
+                    "attrId": "398f1d89-cf46-480d-84ad-a13dee6f90b3",
+                    "linkCode": null,
+                    "nickAttr": "name",
+                    "orders": 0,
+                    "value": "Заявления на запись на посещение нотариуса"
+                },
+                {
+                    "attrId": "bb4acced-39fe-4b9f-b101-ad9bf9781f44",
+                    "linkCode": null,
+                    "nickAttr": "role",
+                    "orders": 0,
+                    "value": "SYS_SYSTEM_UGD"
+                },
+                {
+                    "attrId": "b96d9137-510c-4fbf-9e9e-3f46d59116ea",
+                    "linkCode": "UGD_SSR",
+                    "nickAttr": "subsystem",
+                    "orders": 0,
+                    "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db"
+                }
+            ]
+        },
+        {
+            "deleted": 0,
+            "elementId": "2771af80-93a1-4631-be47-6b39db4bd5e0",
+            "note": null,
+            "parentCode": "UGD_SSR_NOTARY-APPLICATION",
+            "sortValue": null,
+            "values": [
+                {
+                    "attrId": "6570b261-e209-4007-af6e-4d0ad014c578",
+                    "linkCode": null,
+                    "nickAttr": "code",
+                    "orders": 0,
+                    "value": "UGD_SSR_NOTARY-APPLICATION_ANY"
+                },
+                {
+                    "attrId": "7bc87d40-6901-495c-a30f-8132ec8406ef",
+                    "linkCode": "UGD_SSR_NOTARY-APPLICATION",
+                    "nickAttr": "documentType",
+                    "orders": 0,
+                    "value": "7da15c31-2428-4efc-9b8a-fa6ce3bd59a6"
+                },
+                {
+                    "attrId": "0384f3c9-7270-4b9e-b632-7e6dbded6373",
+                    "linkCode": null,
+                    "nickAttr": "name",
+                    "orders": 0,
+                    "value": "UGD_SSR_NOTARY-APPLICATION_ANY"
+                },
+                {
+                    "attrId": "f79d9e40-8f27-4eeb-92a7-0addd95eda82",
+                    "linkCode": null,
+                    "nickAttr": "role",
+                    "orders": 0,
+                    "value": "SYS_SYSTEM_UGD"
+                },
+                {
+                    "attrId": "761ee824-39a4-4217-b630-17cbb19fc5ac",
+                    "linkCode": "SYS_COMMON",
+                    "nickAttr": "subsystem",
+                    "orders": 0,
+                    "value": "f58e37eb-b5f2-4aa6-bd74-9de1bb207bf0"
+                }
+            ]
+        }
+    ],
+    "metaDict": {
+        "context": "SYSTEM",
+        "deleted": 0,
+        "hierarchyDict": 1,
+        "metaAttr": [
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Код типа (подтипа) документа",
+                "nick": "code",
+                "nickDictLink": null,
+                "note": "Стандарт заполнения - Код типа документа =  ПОЛНЫЙКОДТИПАДОКУМЕНТА, код подтипа документа, если один ПОЛНЫЙКОДТИПАДОКУМЕНТА_ANY, код подтипа документа, если несколько ПОЛНЫЙКОДТИПАДОКУМЕНТА_КОДПОДТИПА",
+                "orders": 0,
+                "required": 1,
+                "typeAttr": "string",
+                "unique": 1
+            },
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Наименование типа (подтипа) документа",
+                "nick": "name",
+                "nickDictLink": null,
+                "note": null,
+                "orders": 1,
+                "required": 1,
+                "typeAttr": "string",
+                "unique": 0
+            },
+            {
+                "arrayAttr": 1,
+                "deleted": 0,
+                "name": "Тип документа",
+                "nick": "documentType",
+                "nickDictLink": "DocumentTypes",
+                "note": "Выбор значения из справочника \"Типы документов\"",
+                "orders": 2,
+                "required": 0,
+                "typeAttr": "link",
+                "unique": 0
+            },
+            {
+                "arrayAttr": 0,
+                "deleted": 0,
+                "name": "Подсистема",
+                "nick": "subsystem",
+                "nickDictLink": "SubSystems",
+                "note": "Выбор значения из справочника \"Подсистемы\"",
+                "orders": 3,
+                "required": 0,
+                "typeAttr": "link",
+                "unique": 0
+            },
+            {
+                "arrayAttr": 1,
+                "deleted": 0,
+                "name": "Группа, дающая право доступа",
+                "nick": "role",
+                "nickDictLink": null,
+                "note": "Если указано несколько значений, то разграничение выполняется с условием ИЛИ",
+                "orders": 4,
+                "required": 1,
+                "typeAttr": "string",
+                "unique": 0
+            }
+        ],
+        "name": "Правила разграничения прав доступа к результатам общего поиска",
+        "nick": "SearchRoles",
+        "note": "Справочник предназначен для разграничения доступа к типам документов подсистемы поиска Инструкция по работе со справочником - https://wiki.reinform-int.ru/pages/viewpage.action?pageId=225183361",
+        "sysName": "COMMON",
+        "transfer": 0
+    }
+}

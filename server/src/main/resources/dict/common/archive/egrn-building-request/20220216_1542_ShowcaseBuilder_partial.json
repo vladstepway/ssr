@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "8755f9b1-473c-4e2c-870b-c79c0854f518",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7793fa62-98af-435b-81a3-6a999029d2f3",
+          "nickAttr": "code",
+          "value": "ugd_ssr_egrn_building_request_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "61f2c374-8f28-46f8-a504-dc1700a06b47",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_EGRN-BUILDING-REQUEST",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f74bcc94-347b-412c-a7a6-6647577d1a38",
+          "nickAttr": "documentName",
+          "value": "Реестр выписок из ЕГРН по зданиям",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "385d917a-c382-4114-8033-bfa3be026ef1",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Реестр выписок из ЕГРН по зданиям\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Реестр выписок из ЕГРН по зданиям</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"tableFilter\":true,\"changeTableColumns\":true,\"fields\":[{\"code\":\"ugd_ssr_egrn_building_request_service_number\",\"type\":\"text\",\"name\":\"ЕНО\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_egrn_building_request_date_time\",\"type\":\"date\",\"name\":\"Дата запроса\"},{\"code\":\"ugd_ssr_egrn_building_request_status\",\"type\":\"text\",\"name\":\"Статус запроса\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_egrn_building_request_statement_date_time\",\"type\":\"date\",\"name\":\"Дата выписки\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_egrn_building_request_address\",\"type\":\"text\",\"name\":\"Адрес здания\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_egrn_building_request_unom\",\"type\":\"text\",\"name\":\"UNOM\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_egrn_building_request_cadastral_number\",\"type\":\"text\",\"name\":\"Кадастровый номер\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_egrn_building_request_pdf_filestore_id\",\"type\":\"text\",\"name\":\"Выписка\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_egrn_building_request_zip_filestore_id\",\"type\":\"text\",\"name\":\"Пакет ответа\",\"sortable\":true,\"filterable\":true}],\"tableColumns\":[{\"name\":\"ЕНО\",\"fieldCode\":\"ugd_ssr_egrn_building_request_service_number\",\"template\":\"{{item.ugd_ssr_egrn_building_request_service_number}}\"},{\"name\":\"Дата запроса\",\"fieldCode\":\"ugd_ssr_egrn_building_request_date_time\",\"template\":\"{{item.ugd_ssr_egrn_building_request_date_time | date:'dd.MM.yyyy HH:mm' }}\"},{\"name\":\"Статус запроса\",\"fieldCode\":\"ugd_ssr_egrn_building_request_status\",\"template\":\"{{item.ugd_ssr_egrn_building_request_status}}\"},{\"name\":\"Дата выписки\",\"fieldCode\":\"ugd_ssr_egrn_building_request_date_time\",\"template\":\"{{item.ugd_ssr_egrn_building_request_statement_date_time | date:'dd.MM.yyyy HH:mm' }}\"},{\"name\":\"Адрес здания\",\"fieldCode\":\"ugd_ssr_egrn_building_request_address\",\"template\":\"{{item.ugd_ssr_egrn_building_request_address}}\"},{\"name\":\"UNOM\",\"fieldCode\":\"ugd_ssr_egrn_building_request_unom\",\"template\":\"{{item.ugd_ssr_egrn_building_request_unom}}\"},{\"name\":\"Кадастровый номер\",\"fieldCode\":\"ugd_ssr_egrn_building_request_cadastral_number\",\"template\":\"{{item.ugd_ssr_egrn_building_request_cadastral_number}}\"},{\"name\":\"Выписка\",\"fieldCode\":\"ugd_ssr_egrn_building_request_pdf_filestore_id\",\"template\":\"<a style=\\\"color: #5151ff; text-decoration: underline;\\\" \\nhref=\\\"/filestore/v1/files/{{item.ugd_ssr_egrn_building_request_pdf_filestore_id}}?systemCode=ugd\\\" target=\\\"_blank\\\">\\nСкачать\\n</a>\"},{\"name\":\"Пакет ответа\",\"fieldCode\":\"ugd_ssr_egrn_building_request_zip_filestore_id\",\"template\":\"<a style=\\\"color: #5151ff; text-decoration: underline;\\\" \\nhref=\\\"/filestore/v1/files/{{item.ugd_ssr_egrn_building_request_zip_filestore_id}}?systemCode=ugd\\\" target=\\\"_blank\\\">\\nСкачать\\n</a>\"}],\"filters\":[{\"name\":\"ЕНО\",\"fieldCode\":\"ugd_ssr_egrn_building_request_service_number\",\"placement\":\"bottom\"},{\"name\":\"Статус запроса\",\"fieldCode\":\"ugd_ssr_egrn_building_request_status\",\"placement\":\"bottom\"},{\"name\":\"Адрес здания\",\"fieldCode\":\"ugd_ssr_egrn_building_request_address\",\"placement\":\"bottom\"},{\"name\":\"UNOM\",\"fieldCode\":\"ugd_ssr_egrn_building_request_unom\",\"placement\":\"bottom\"},{\"name\":\"Кадастровый номер\",\"fieldCode\":\"ugd_ssr_egrn_building_request_cadastral_number\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"ЕНО\",\"fieldCode\":\"ugd_ssr_egrn_building_request_service_number\"},{\"name\":\"Статус запроса\",\"fieldCode\":\"ugd_ssr_egrn_building_request_status\"},{\"name\":\"Адрес здания\",\"fieldCode\":\"ugd_ssr_egrn_building_request_address\"},{\"name\":\"UNOM\",\"fieldCode\":\"ugd_ssr_egrn_building_request_unom\"},{\"name\":\"Кадастровый номер\",\"fieldCode\":\"ugd_ssr_egrn_building_request_cadastral_number\"}],\"isNewSearch\":true,\"hideSettings\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b56be1e1-e314-4fe8-9624-9b7a50ea2aa4",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_egrn_building_request",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7a633de9-715c-41af-9dc7-b7e38fd7f1e8",
+          "nickAttr": "showcaseName",
+          "value": "Реестр выписок из ЕГРН по зданиям",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3d30ebb-396f-4fb8-ac99-2d6522cce80f",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "83b75560-4254-4cb6-a1c4-ea215180a861",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "53696475-4415-4778-ad97-c3ce4f5729d8",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "caea6bbc-34e2-4973-9d62-0f94348a5a65",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/smevResponse"
+           targetNamespace="http://www.ugd.croc.ru/ssr/smevResponse"
+           elementFormDefault="qualified">
+    <xs:element name="ssrSmevResponse">
+        <xs:annotation>
+            <xs:documentation>Ответ на запрос БР</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="ssrSmevResponseData" type="SsrSmevResponseData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="SsrSmevResponseData">
+        <xs:annotation>
+            <xs:documentation>Ответ на запрос БР</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="messageId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ПСО messageID отправленного запроса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="serviceNumber" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>S/N документа основания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ochdFolderGuid" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>GUID дела запроса в ОЦХД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код статуса ответа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="note" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Описание статуса ответа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resultCode" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Код результата ответа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resultDescription" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>XML содержимое ответа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="creationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время создания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processStartDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время начала обработки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processEndDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время окончания обработки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fileName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Имя файла с ответом</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processingFailure" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Имеются ошибки обработки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

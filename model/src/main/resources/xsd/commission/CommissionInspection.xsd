@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ap="http://www.ugd.croc.ru/ssr/application"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/commission"
+           targetNamespace="http://www.ugd.croc.ru/ssr/commission">
+    <xs:import namespace="http://www.ugd.croc.ru/ssr/application" schemaLocation="Applicant.xsd"/>
+    <xs:include schemaLocation="CommissionInspectionEnums.xsd"/>
+    <xs:include schemaLocation="Defect.xsd"/>
+    <xs:element name="CommissionInspection">
+        <xs:annotation>
+            <xs:documentation>Заявление на комиссионный осмотр</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="commissionInspectionData" type="CommissionInspectionData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="CommissionInspectionData">
+        <xs:annotation>
+            <xs:documentation>Сведения о заявлении на комиссионный осмотр</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eno" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicant" type="ap:Applicant">
+                <xs:annotation>
+                    <xs:documentation>Сведения о заявителе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ccoUnom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Уном заселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatNum" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер заселяемой квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letter" type="LetterType">
+                <xs:annotation>
+                    <xs:documentation>Письмо с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="tradeType" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Вид сделки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="defects" type="DefectList">
+                <xs:annotation>
+                    <xs:documentation>Список дефектов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время подачи заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="useElectronicFormat" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Согласие на подачу заявки в электронном виде</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="kpUgs" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Заселяемый дом относится к КП УГС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationStatusId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор статуса заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cipId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор ЦИП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="organisationId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор организации, осуществляющей запись на ком осмотр</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processInstanceId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID запущенного процесса для текущего документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="currentApartmentInspectionId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Текущий осмотр квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="confirmedInspectionDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата текущего осмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="completionDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата закрытия заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="completionReasonCode" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Код причины закрытия заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="completionReason" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Причина закрытия заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="history" type="CommissionInspectionHistoryEvents">
+                <xs:annotation>
+                    <xs:documentation>История изменений заявления на КО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="CommissionInspectionHistoryEvents">
+        <xs:annotation>
+            <xs:documentation>История изменений КО</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="events" type="CommissionInspectionHistoryEvent" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="CommissionInspectionHistoryEvent">
+        <xs:annotation>
+            <xs:documentation>Изменение КО</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="inspectionId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор осмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="inspectionType" type="InspectionType">
+                <xs:annotation>
+                    <xs:documentation>Тип осмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="eventId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID события, CommissionInspectionFlowStatus.id</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="createdAt" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата создания события</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="LetterType">
+        <xs:annotation>
+            <xs:documentation>Письмо с предложением</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fileLink" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Ссылка на письмо с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

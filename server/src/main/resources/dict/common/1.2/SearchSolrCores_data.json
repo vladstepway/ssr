@@ -1,0 +1,101 @@
+{
+  "metaDict": {
+    "nick": "SearchSolrCores",
+    "name": "Ядра SOLR",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Название ядра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "description",
+        "name": "Описание ядра",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальное",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9360b9e7-8bf6-456b-8c8b-7642e5117f19",
+          "nickAttr": "code",
+          "value": "ugd_ssr_core",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d5ae5d77-9444-447f-a907-da871bbe7b23",
+          "nickAttr": "description",
+          "value": "Поиск Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ac6e94a4-e32c-46bf-bae6-bc38c38d20ad",
+          "nickAttr": "systemCode",
+          "value": "30039ab8-a1f9-4f32-9cde-86385ae690c4",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "7d496a3a-b188-46fd-9eb4-ba1f8cd6e64f",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

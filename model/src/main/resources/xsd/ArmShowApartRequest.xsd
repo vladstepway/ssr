@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr"
+           targetNamespace="http://www.ugd.croc.ru/ssr">
+    <xs:element name="ArmShowApartRequest">
+        <xs:annotation>
+            <xs:documentation>Запрос на показ квартиры</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="main" type="ArmShowApartRequestType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ArmShowApartRequestType">
+        <xs:annotation>
+            <xs:documentation>Сведение о запросе на показ квартиры</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="taskStatus" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус задачи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="taskCreationDate" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время создания задачи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="taskApplicantId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Логин пользователя (на кого назначена задача)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="taskDepartmentCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код департамента (на кого назначена задача)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="taskDepartmentName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Наименование департамента (на кого назначена задача)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fio" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ФИО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="from" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Откуда</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="to" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Куда</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="resettlementType" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Тип переселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="history" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Сведения по ранее проведенным показам квартиры</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="date" type="xs:date">
+                            <xs:annotation>
+                                <xs:documentation>Дата</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="annotation" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Примечание</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="event" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Событие</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="refusalReason" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Причина отказа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="date" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flat" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Квартира (которую показывают)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="annotation" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Примечание</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="remarks" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Недоделки</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="type" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Тип недоделки</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="description" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Описание недоделки</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="personId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,177 @@
+Удалить проект договора из жителя c1e1c487-1c57-4e47-9044-c63bb2fc11ad:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = c1e1c487-1c57-4e47-9044-c63bb2fc11ad; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/5"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/4"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/relocationStatus",
+        "value": "4"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/10"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/9"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/8"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+------------------------------------------------------------------------
+
+Удалить проект договора из жителя b601b0fc-4378-4084-bdb8-b7f76a3c2ada:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = b601b0fc-4378-4084-bdb8-b7f76a3c2ada; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/9"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/8"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/7"
+    },
+    {
+        "op": "replace",
+        "path": "/Person/PersonData/relocationStatus",
+        "value": "4"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/19"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/18"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/17"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/16"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/15"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/14"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/32"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/31"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/30"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/29"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/28"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/27"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/26"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/25"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/24"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/23"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/22"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/21"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/20"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/sendedMessages/Message/19"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200
+
+------------------------------------------------------------------------
+
+Удалить проект договора из жителя 8afe04d4-8314-497f-aaf6-54a96f6ea1c3:
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = PERSON; id = 8afe04d4-8314-497f-aaf6-54a96f6ea1c3; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/contracts"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/2"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/6"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/integrationLog/item/5"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

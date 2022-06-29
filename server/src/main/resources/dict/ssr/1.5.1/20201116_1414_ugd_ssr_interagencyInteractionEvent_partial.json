@@ -1,0 +1,622 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_interagencyInteractionEvent",
+    "name": "События межведомственных взаимодействий",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "initiator",
+        "name": "Инициатор",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "770fae2b-3135-4089-be50-076eda72adf2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d8d91313-0702-4b69-94f7-e48e56fb71d4",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPPersonsRequest",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b762ef8c-3047-4ec9-8f3a-2e79d7a36c7e",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b0c42858-8129-438a-b5b4-ef838761f575",
+          "nickAttr": "name",
+          "value": "ДГП запрос по людям по дому - 1 сценарий",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "168642c2-e083-4135-bcce-dd90965a1a24",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "82784e38-fcae-475a-a41c-1e50184257ec",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPPersonsMessage",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "244651d6-450b-4fb2-aada-0164e9cc708e",
+          "nickAttr": "initiator",
+          "value": "ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d0e5e6c7-bed5-4e4f-b7a8-cd512f2dd595",
+          "nickAttr": "name",
+          "value": "ДГП ответ на запрос по людям по дому",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "27744645-bd44-4e54-9acb-ccb298ee64ee",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b951804a-8e0f-49bb-b3ee-d80500f8e29f",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPLetterHandStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7ba81e42-e8f8-40b5-8b0f-7a2af5a44818",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d1f4a97b-ff24-455a-aa0e-66a068cce764",
+          "nickAttr": "name",
+          "value": "Статус доставки писем с предложением - 16 и 18",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5555089a-3370-419f-a90f-7d3312a09262",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "397ae7ac-c03e-406f-aa11-4e86be884ccf",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPStartRemoval",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7a0ca69e-e5e0-4b0f-91cd-37681749dacd",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c960f096-6de6-476c-8608-7c9f3d284403",
+          "nickAttr": "name",
+          "value": "Сведения о начале переселения в ИС РЕОН - 1 и 3",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3092660b-956a-48d4-a615-53b923e96d90",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "59b17bb2-d2a3-4aa7-a573-c45feab72648",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPRemovalStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6717e6d1-a071-467e-b48e-97172f5d5ece",
+          "nickAttr": "initiator",
+          "value": "ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "861c2cf5-5989-4ac6-af93-3cb875b85eaa",
+          "nickAttr": "name",
+          "value": "Сведения о статусе переселения квартир - 2 и 4",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "efde908c-f228-4b13-8c7b-41583eee9244",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5f024441-5b71-4c66-9e70-4ac1c83d2843",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPViewStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e30043b9-62c3-492d-9ccb-03203266a964",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0aaed3a3-5583-4c00-ae18-3b7149d9df6d",
+          "nickAttr": "name",
+          "value": "Сведения о статусе просмотра квартиры в заселяемом доме - 1 и 3",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "ad65d382-1c75-4b17-9ed8-201bb0181674",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "53781c55-747a-44a5-8ba7-a2cddab2dc13",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPStatementStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a16e1d37-7db1-413b-b9a7-b79a2beb113b",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1dabbf88-ecf7-415d-843f-7b292c02cf8b",
+          "nickAttr": "name",
+          "value": "Сведения о статусе подачи заявления на согласие/отказ  - 1 и 3",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7b90ee00-7ed5-4f5c-bcbf-b594aed66ef2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9e26f445-c8d1-4624-ae36-d9ab8c5b5222",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPStatementHandStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "39d40952-c764-41c3-bd50-40501fa48c37",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "219caae4-3f81-42f7-98fe-50db6e186ea4",
+          "nickAttr": "name",
+          "value": "Статус доставки уведомлений о статусе подачи заявления на согласие/отказ - 16 и 18",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c70d0281-7bdc-45cd-8b88-ceb3f17bda77",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2b7c09e9-8dd1-4e78-9b15-d073c0e8e175",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPContractHandStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d0bbd618-0b76-49c9-8ca2-92847ac71e77",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "927a665b-430f-43b4-8f4c-0bf59add993f",
+          "nickAttr": "name",
+          "value": "Статус доставки уведомлений о готовности проекта договора - 16 и 18",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e532053c-8782-4bdf-a443-6bd7edebd96f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c85bf31d-4577-4c2a-8adf-a864d7b1765a",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPContractIssueStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a6831cd5-e902-4577-9ba1-13d76b2c3146",
+          "nickAttr": "initiator",
+          "value": "ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bd36cf1f-0b87-403f-80be-df96229aeec2",
+          "nickAttr": "name",
+          "value": "Сведения о выдаче проекта договора - 21 и 23",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "fa19e2ce-67ce-4042-a7ae-235a2d63c923",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b3ddca88-4259-4cb4-8d56-7ad13f3c507a",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPSignAgreementStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3356a3f3-46a4-4148-87a8-ba68fdb8d368",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "33e76f06-9f42-4a79-84b0-e4c9a0bf3aa6",
+          "nickAttr": "name",
+          "value": "Сведения о статусе подписании договора   - 1 и 3",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "73f611f1-121e-4f3d-b4d5-f48be167e971",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1a031f3f-6e06-42ad-8a32-e61b9d5dd2a6",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPCourtAndMoney",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "556f51cc-714f-4e6c-98f7-33ea83e11728",
+          "nickAttr": "initiator",
+          "value": "ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d651238a-cad9-4d19-b30d-9dc3cf19b41f",
+          "nickAttr": "name",
+          "value": "Сведения о переселении по решению суда и равноценном возмещении   - 26 и 28",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "89099ce5-0e25-4cf1-91d7-44ebbb5c3180",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "814c7214-44f5-45ed-ab9e-8bd157afa9a1",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPKeyIssue",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "704866c5-8d38-4268-993e-dd7fb1214136",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e9914e1a-b370-468c-85e1-86aa9dc695f8",
+          "nickAttr": "name",
+          "value": "Сведения о выдаче ключей от новой квартиры   - 1 и 3",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "45148852-c69f-432d-80d3-f432dbf999e9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "83a7bb2c-b9b7-4a77-90ba-05b56fbc0245",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPLetterRequest",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a1751241-3e14-4b57-b3b5-1c7606226452",
+          "nickAttr": "initiator",
+          "value": "ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9684c746-44b0-42de-b541-e6e30f2fbd2e",
+          "nickAttr": "name",
+          "value": "Cведения о письмах с предложениями из ИС РЕОН  - запрос (2, 4)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "88cc1e8e-29dc-4d63-98f7-67e2bd7b8723",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3cd7e0d7-c406-451a-9997-d58cbc5af93c",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPViewSendStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9e4728ed-3163-4d76-a581-fc1a7bf992ee",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0aace727-ea5b-44b3-9c4a-04a54c4f361f",
+          "nickAttr": "name",
+          "value": "Статус доставки уведомлений о статусе просмотра квартиры в заселяемом доме - 16 и 18",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0d135eeb-7bb2-4379-afd5-a06518237f81",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "dd2b9aec-5693-4287-8f11-7a01d36fa9f8",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPContractReady",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e4c919e1-8ad5-40f8-8a65-706bdd71fb54",
+          "nickAttr": "initiator",
+          "value": "ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c0dd4568-85b2-48a5-ba20-626998eb8132",
+          "nickAttr": "name",
+          "value": "Сведения о готовности проекта договора  - 1 и 3",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c8feeecd-478d-4605-baf3-57d4bdfb4772",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "33044500-cf3f-4747-973a-54a33e81f3c2",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPSettleFlatInfo",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7f4179ce-3be9-47cd-8bb9-fe9a38095ca3",
+          "nickAttr": "initiator",
+          "value": "ДГИ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "21091af3-2df8-4fd0-91a8-c5a096c9900e",
+          "nickAttr": "name",
+          "value": "Сведения о заселяемой квартире - 6 и 8",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "6f7fb8f6-2a62-417c-8015-1c9b4fc47f66",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9095b164-c5bf-47db-aec1-10c3f9e1601f",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPSignAgrSendStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f2bf6d8b-62b0-446e-8685-03c7b7b7d968",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a35091f-bbb2-4e01-8564-4f8013b9c97e",
+          "nickAttr": "name",
+          "value": "Статус доставки уведомлений о подписанном договоре- 21 и 23",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "97a81f74-2e44-417a-a3ae-c0c16aef74ec",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b3d19d6d-2a4d-4939-bf77-5265f02c9202",
+          "nickAttr": "code",
+          "value": "SuperServiceDGPFlatFree",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c3db788-ad9e-4de7-b319-a93b26780396",
+          "nickAttr": "initiator",
+          "value": "ДГП",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "217cd805-7541-4a26-9086-eaf58e414944",
+          "nickAttr": "name",
+          "value": "Сведения об освобождении квартиры - 1 и 3",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

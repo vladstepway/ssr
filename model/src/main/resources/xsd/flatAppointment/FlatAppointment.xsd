@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/flatAppointment"
+           targetNamespace="http://www.ugd.croc.ru/ssr/flatAppointment"
+           elementFormDefault="qualified">
+    <xs:include schemaLocation="FlatAppointment.xsd"/>
+    <xs:include schemaLocation="Applicant.xsd"/>
+    <xs:element name="FlatAppointment">
+        <xs:annotation>
+            <xs:documentation>Запись на осмотр квартиры</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="flatAppointmentData" type="FlatAppointmentData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="FlatAppointmentData">
+        <xs:annotation>
+            <xs:documentation>Запись на осмотр квартиры</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eno" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время подачи заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicant" type="Applicant" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Информация о заявителе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cipId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор центра переселения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор статуса заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="offerLetterId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="offerLetterFileLink" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Ссылка на письмо с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="appointmentDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время осмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actualDemoDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Фактическая дата осмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="demoId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор осмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="bookingId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор забронированного слота</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cancelDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время отмены записи по инициативе ДГИ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="cancelReason" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Причина отмены записи по инициативе ДГИ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="annotation" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Примечание</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processInstanceId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID запущенного процесса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="icsFileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID ics файла в FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="icsChedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID ics файла в ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="performed" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Произведен ли осмотр</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="participantSummary" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Перечисление всех участников просмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="participants" type="FlatAppointmentParticipants">
+                <xs:annotation>
+                    <xs:documentation>Сведения об участниках осмотра</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="FlatAppointmentParticipants">
+        <xs:annotation>
+            <xs:documentation>Сведения об участниках осмотра</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="participants" type="FlatAppointmentParticipant" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="FlatAppointmentParticipant">
+        <xs:annotation>
+            <xs:documentation>Сведения об участнике осмотра</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Полное имя участника</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="birthDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата рождения участника</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

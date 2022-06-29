@@ -1,0 +1,13 @@
+Актуализировать статус переселения дома, id = a256ee05-3e8e-4493-aebc-3b5c3d875cc2:
+
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Ввести anyDocumentTypeCode = REAL-ESTATE; id = a256ee05-3e8e-4493-aebc-3b5c3d875cc2; jsonPatch =
+[
+    {
+        "op": "add",
+        "path": "/RealEstate/RealEstateData/resettlementStatus",
+        "value": "2"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

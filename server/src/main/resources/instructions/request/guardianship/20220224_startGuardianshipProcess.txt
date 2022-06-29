@@ -1,0 +1,36 @@
+Запуск бизнес процесса по внесению сведения о решении органов опеки:
+
+0. Инструкцию необходимо выполнить для следующих guardianshipRequestDocumentId:
+81377fc8-e4e8-4c19-83c1-040b25e53e10
+696e523c-a7ec-47f8-be8e-b79629af886a
+6d7a2cf3-500b-4b5a-97ac-61f4267f6e95
+a9b86515-7757-443f-b11c-60af0b388aea
+62bbb998-44ff-4a2e-a1dc-1218b650d6e2
+
+1. Открыть https://smart.mos.ru/app/ugd/bpm/swagger-ui.html#/form-data-resource
+2. Выбрать POST /form/form-data
+3. Нажать Try it out
+4. Ввести submitRequest, указав вместо пустой строки в value значение guardianshipRequestDocumentId:
+{
+  "processDefinitionId": "ugdssrGuardianship_enterDetails:5:4603064",
+  "properties": [
+    {
+      "id": "EntityIdVar",
+      "value": ""
+    }
+  ]
+}
+5. Нажать Execute
+6. Убедиться, что статус код ответа 200, и скопировать значение id
+7. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+8. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+9. Ввести anyDocumentTypeCode = GUARDIANSHIP; id = значению guardianshipRequestDocumentId, для которого выполняется инструкция;
+ввести jsonPatch, указав вместо пустой строки в value скопированное на 6-ом шаге значение id
+[
+    {
+        "op": "add",
+        "path": "/guardianshipRequest/guardianshipRequestData/processInstanceId",
+        "value": ""
+    }
+]
+10. Нажать Execute и убедиться, что статус код ответа 200

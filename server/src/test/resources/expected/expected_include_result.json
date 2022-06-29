@@ -1,0 +1,103 @@
+{
+  "name": "user",
+  "isComplex": true,
+  "arity": "1-1",
+  "attributes": [
+    {
+      "name": "testField_str",
+      "isComplex": false,
+      "arity": "1-1",
+      "type": "string"
+    }, {
+      "name": "testField_include1",
+      "isComplex": true,
+      "arity": "1-1",
+      "type": "testIncludeType_1",
+      "attributes": [
+        {
+          "name": "testField1_str",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "string"
+        }, {
+          "name": "testField1_boolean",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "boolean"
+        }, {
+          "name": "testField1_include2",
+          "isComplex": true,
+          "arity": "1-1",
+          "type": "testIncludeType_2",
+          "attributes": [
+            {
+              "name": "testField2_str",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "string"
+            }, {
+              "name": "testField2_boolean",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "boolean"
+            }
+          ]
+        }, {
+          "name": "testField1_include3",
+          "isComplex": true,
+          "arity": "1-1",
+          "type": "testIncludeType_3",
+          "attributes": [
+            {
+              "name": "testField3_str",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "string"
+            }, {
+              "name": "testField3_boolean",
+              "isComplex": false,
+              "arity": "1-1",
+              "type": "boolean"
+            }
+          ]
+        }
+      ]
+    }, {
+      "name": "testField_include2",
+      "isComplex": true,
+      "arity": "1-1",
+      "type": "testIncludeType_2",
+      "attributes": [
+        {
+          "name": "testField2_str",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "string"
+        }, {
+          "name": "testField2_boolean",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "boolean"
+        }
+      ]
+    }, {
+      "name": "testField_include3",
+      "isComplex": true,
+      "arity": "1-1",
+      "type": "testIncludeType_3",
+      "attributes": [
+        {
+          "name": "testField3_str",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "string"
+        }, {
+          "name": "testField3_boolean",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "boolean"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_contract_appointment_statuses",
+    "name": "Статусы реестра заявлений на заключение договора",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "status_name",
+        "name": "Текстовое значение статуса",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "2259e5b2-ea43-4e38-a612-07963b717530",
+      "deleted": 0,
+      "sortValue": "0",
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "09c1f2f5-9b60-467d-8456-f78f34f14058",
+          "nickAttr": "code",
+          "value": "00",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3d51af24-0969-4fd4-914a-a4fc2c1e01b8",
+          "nickAttr": "status_name",
+          "value": "Услуга оказана. Договор заключен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7ccf515c-1b9a-4092-be01-87d6242edfb1",
+      "deleted": 0,
+      "sortValue": "1",
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "87c7154f-dc0d-4109-9129-45507c13444d",
+          "nickAttr": "code",
+          "value": "01",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c0db02bd-74f2-4cec-98a9-29d3b3f006bd",
+          "nickAttr": "status_name",
+          "value": "Отказ в предоставлении услуги. Договор не заключен",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "055cb147-2457-4864-9470-0321b5d4a908",
+      "deleted": 0,
+      "sortValue": "2",
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ccfa74a2-0cf7-4706-82ea-55b64361067b",
+          "nickAttr": "code",
+          "value": "02",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d7b6581-f264-49ad-82f2-c768825d9edf",
+          "nickAttr": "status_name",
+          "value": "Запись отменена по инициативе заявителя",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f5b971d8-08b7-4d7b-a747-7768885a412c",
+      "deleted": 0,
+      "sortValue": "3",
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6eba65fe-c25a-4b49-bc85-91c4c8111124",
+          "nickAttr": "code",
+          "value": "03",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8e452905-7ca5-4c61-b63f-5701acc37b18",
+          "nickAttr": "status_name",
+          "value": "Запись отменена по инициативе ведомства",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "2ce7c460-8e21-48a4-a6e3-b42130cda957",
+      "deleted": 0,
+      "sortValue": "4",
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "10adc9e7-eb7c-4959-bb0f-7b5e477f2631",
+          "nickAttr": "code",
+          "value": "04",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5afbabc9-b828-439b-b1ae-bbbb21dba26f",
+          "nickAttr": "status_name",
+          "value": "Запись произведена",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "bdffb207-d754-451e-8a71-7c61fff45352",
+      "deleted": 0,
+      "sortValue": "5",
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "75c1e7d6-926a-4a90-aef5-9e4769e9f846",
+          "nickAttr": "code",
+          "value": "05",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "35cbf6bc-5675-4202-bee0-a35e4a4fef04",
+          "nickAttr": "status_name",
+          "value": "Сбор подписей",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

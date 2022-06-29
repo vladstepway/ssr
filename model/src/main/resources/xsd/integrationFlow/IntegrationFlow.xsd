@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/integrationFlow"
+           targetNamespace="http://www.ugd.croc.ru/ssr/integrationFlow"
+           elementFormDefault="qualified">
+    <xs:include schemaLocation="MfrFlowData.xsd"/>
+    <xs:include schemaLocation="IntegrationFlowType.xsd"/>
+    <xs:element name="IntegrationFlow">
+        <xs:annotation>
+            <xs:documentation>Сообщение по потоку</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="integrationFlowData" type="IntegrationFlowData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="IntegrationFlowData">
+        <xs:annotation>
+            <xs:documentation>Сведения о сообщении по потоку</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="flowType" type="IntegrationFlowType">
+                <xs:annotation>
+                    <xs:documentation>Тип потока</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flowStatus" type="IntegrationFlowStatus">
+                <xs:annotation>
+                    <xs:documentation>Статус потока</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="createdAt" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время создания документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="eno" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ЕНО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="serviceCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код гос. услуги</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД в FileStore файла сообщения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="etpMessageId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД сообщения в ЕТП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statuses" type="StatusData" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Статусы по сообщению</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="mfrFlowData" type="MfrFlowData" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Данные по МФР-потоку</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="StatusData">
+        <xs:annotation>
+            <xs:documentation>Статусы по сообщению</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="flowStatus" type="IntegrationFlowStatus">
+                <xs:annotation>
+                    <xs:documentation>Статус потока</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="createdAt" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время получения/отправки сообщения со статусом</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код статуса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusTitle" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Наименование статуса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД в FileStore файла сообщения со статусом</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="etpMessageId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД сообщения в ЕТП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="IntegrationFlowStatus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Prepared">
+                <xs:annotation>
+                    <xs:documentation>Подготовлен</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Sent">
+                <xs:annotation>
+                    <xs:documentation>Отправлен</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Processed">
+                <xs:annotation>
+                    <xs:documentation>Обработан (получен ответ)</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Received">
+                <xs:annotation>
+                    <xs:documentation>Получен</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="ProcessingError">
+                <xs:annotation>
+                    <xs:documentation>Ошибка при обработке</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,178 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_contractType",
+    "name": "Типы проектов договоров",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "e584e141-134b-467c-93a6-596df35e6ff5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8c3c7c78-d851-4d1f-b09e-e95d00792c71",
+          "nickAttr": "code",
+          "value": "39",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3897df79-d39d-4671-a204-b002562456b5",
+          "nickAttr": "name",
+          "value": "Переход права собственности на равнозначное жилое помещение",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3918249b-1e5f-4e81-84a9-2dfc7e5a149a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "84228985-33b4-4873-a87a-e35d4a30eb58",
+          "nickAttr": "code",
+          "value": "41",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8c8b2b7c-c10d-4c1a-8e13-a9ed6180b3d7",
+          "nickAttr": "name",
+          "value": "Передача равнозначного жилого помещения",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "671e9902-73b2-404e-8a41-c47cefcf688a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "aa876d24-b9ab-43dc-b47a-17939dcf76ad",
+          "nickAttr": "code",
+          "value": "8",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cfd2c7b1-e8f1-4b85-abc7-2b2892ae9be4",
+          "nickAttr": "name",
+          "value": "Социальный найм",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d02699f8-5f76-43d8-a193-f3a502784935",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3eecef0a-9f61-4574-924a-ff4c455c05b7",
+          "nickAttr": "code",
+          "value": "43",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e1948413-8db4-46b0-aaa5-e0afd107d7cc",
+          "nickAttr": "name",
+          "value": "Краткосрочный найм (реновация)",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a6ba7c6c-da14-445e-8b0c-c8836c305fbd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ce2a8900-bda9-4d98-b606-ea86f23967a8",
+          "nickAttr": "code",
+          "value": "45",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0ff2d109-52e0-4085-b5cb-a0ec78767684",
+          "nickAttr": "name",
+          "value": "Равноценное возмещение в денежной форме",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4929cf27-dbfe-4f0a-b31d-cf1fd7a16418",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d0f4795c-4c71-41a1-aab6-91526186c5fd",
+          "nickAttr": "code",
+          "value": "46",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "72645357-8d1b-4bae-9949-e8507d820628",
+          "nickAttr": "name",
+          "value": "Равноценное возмещение в натуральной форме",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

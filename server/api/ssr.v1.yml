@@ -1,0 +1,1040 @@
+swagger: '2.0'
+info:
+  description: |
+    ССР. Сервис по перевозке жильцов.
+  version: 1.0.0
+  title: SSR Shiping
+schemes:
+  - http
+
+paths:
+  /shipping/check:
+    get:
+      summary: Выполнение проверок и получение сведений о жильцах и помещениях для переезда
+      operationId: check
+      tags:
+        - Shipping
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: snils
+          in: query
+          description: СНИЛС
+          required: false
+          type: string
+        - name: SSOID
+          in: query
+          description: SSOID
+          required: false
+          type: string
+      responses:
+        200:
+          description: Результат проверки и сведения о жильцах и помещениях для переезда
+          schema:
+            $ref: '#/definitions/CheckResponse'
+        400:
+          description:
+            Данные запроса невалидны /
+            Not valid personId:%s, reason:%s
+  /shipping/prod/check:
+    get:
+      summary: Выполнение проверок и получение сведений о жильцах и помещениях для переезда на проде
+      operationId: checkProd
+      tags:
+        - Shipping
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: snils
+          in: query
+          description: СНИЛС
+          required: false
+          type: string
+        - name: SSOID
+          in: query
+          description: SSOID
+          required: false
+          type: string
+      responses:
+        200:
+          description: Результат проверки и сведения о жильцах и помещениях для переезда на проде
+          schema:
+            $ref: '#/definitions/CheckResponse'
+        400:
+          description: Invalid input
+  /shipping/timetable:
+    post:
+      summary: Получение доступной сетки расписания
+      operationId: Timetable
+      tags:
+        - Shipping
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Запрос на сетку расписания
+          required: true
+          schema:
+            $ref: '#/definitions/BookingSlotListRequest'
+      responses:
+        200:
+          description: Сетка расписания
+          schema:
+            $ref: '#/definitions/BookingSlotListResponse'
+        400:
+          description:
+            Данные запроса невалидны /
+            Идентификатор sso должен быть указан /
+            СНИЛС должен быть указан /
+            УНОМ должен быть указан
+  /shipping/prebooking:
+    post:
+      summary: Получение предбронированного интервала времени
+      operationId: Prebooking
+      tags:
+        - Shipping
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Информация о выбранном интервале
+          required: true
+          schema:
+            $ref: '#/definitions/PrebookingRequest'
+      responses:
+        200:
+          description: Результат предбронированния интервала времени
+          schema:
+            $ref: '#/definitions/PrebookingResponse'
+        400:
+          description:
+            Идентификатор слота должен быть указан /
+            Идентификатор sso должен быть указан /
+            Отстутствуют слоты относящиеся к переданному идентификатору /
+            Слот был забронирован /
+            СНИЛС должен быть указан /
+            УНОМ должен быть указан /
+  /shipping/booking:
+    post:
+      summary: Получение забронированного интервала времени
+      operationId: Booking
+      tags:
+        - Shipping
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Забронированный интервал времени
+          required: true
+          schema:
+            $ref: '#/definitions/BookingRequest'
+      responses:
+        200:
+          description: Результат бронирования
+          schema:
+            $ref: '#/definitions/BookingResponse'
+        400:
+          description:
+            Идентификатор бронирования должен быть указан /
+            Слоты относящиеся к идентификатору бронирования отсутствуют
+  /shipping/day-schedules/{id}/copy:
+    post:
+      summary: Копирование рабочего дня
+      operationId: Coping day schedules
+      tags:
+        - Shipping
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: workday ID
+          required: true
+          type: string
+        - in: query
+          name: confirm
+          required: false
+          type: boolean
+        - in: body
+          name: body
+          description: Дата или интервал копирования
+          required: true
+          schema:
+            $ref: '#/definitions/CopingDaySchedulesRequest'
+      responses:
+        200:
+          description: Результат копирования
+        400:
+          description: Invalid data input
+  /shipping/day-schedules/validate:
+    post:
+      summary: Валидирует день или интервал на наличие существующих записей.
+      operationId: Validates day or day intervals schedules
+      tags:
+        - Shipping
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Дата или интервал копирования
+          required: true
+          schema:
+            $ref: '#/definitions/CopingDaySchedulesRequest'
+      responses:
+        200:
+          description: Результат копирования
+          schema:
+            $ref: '#/definitions/DayOrIntervalValidationResponse'
+        400:
+          description: Invalid input
+  /shipping/applications/{id}/decline:
+    post:
+      summary: Отказ от записи на оказание помощи в переезде
+      operationId: declineApplicationById
+      tags:
+        - Shipping
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: Идентификатор заявления
+          required: true
+          type: string
+        - in: body
+          name: body
+          description: Дата и причина отказа
+          required: true
+          schema:
+            $ref: '#/definitions/DeclineShippingApplicationRequest'
+      responses:
+        200:
+          description: Отмена прошла успешно
+        400:
+          description: Invalid input
+        404:
+          description: Заявления с таким идентификатором отсутствует в системе
+  /shipping/applications/{id}/move:
+    post:
+      summary: Перенос даты и времени записи на оказание помощи в переезде
+      operationId: moveShippingDate
+      tags:
+        - Shipping
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: id
+          description: Идентификатор заявления
+          required: true
+          type: string
+        - in: body
+          name: body
+          description: Идентификатор бронирования слота
+          required: true
+          schema:
+            $ref: '#/definitions/MoveShippingDateRequest'
+      responses:
+        200:
+          description: Дата и время записи изменены успешно
+        400:
+          description: Invalid input
+        404:
+          description: Заявления с таким идентификатором отсутствует в системе
+  /apartmentdefect/list/create:
+    post:
+      summary: Загрузка списка дефектов квартиры
+      operationId: createListOfApartmentDefectAct
+      tags:
+        - ApartmentDefect
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Список документов дефектов квартиры в JSON формате
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Список документов с присвоенными ID.
+          schema:
+            type: string
+        405:
+          description: Invalid input
+  /apartmentinspection/act/create:
+    post:
+      summary: Загрузка акта осмотра квартиры
+      operationId: createApartmentInspectionAct
+      tags:
+        - ApartmentInspection
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Документа акта осмотра квартиры
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Результат сохранения акта
+          schema:
+            $ref: '#/definitions/CreateApartmentInspectionActResponse'
+        405:
+          description: Invalid input
+  /apartmentinspection/act/create/startprocess:
+    post:
+      summary: Загрузка акта осмотра квартиры и старт процесс.
+      operationId: createApartmentInspectionActAndStartProcess
+      tags:
+        - ApartmentInspection
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: body
+          description: Документа акта осмотра квартиры
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Результат сохранения акта
+          schema:
+            $ref: '#/definitions/CreateApartmentInspectionActResponse'
+        405:
+          description: Invalid input
+  /apartmentinspection/actualizetaskcandidates:
+    post:
+      summary: Актуализировать кандидатов активных задач.
+      operationId: actualizeTaskCandidates
+      tags:
+        - ApartmentInspection
+      produces:
+        - application/json
+      parameters:
+        - name: documentId
+          in: query
+          description: ID акта.
+          required: true
+          type: string
+      responses:
+        200:
+          description: Результат сохранения акта
+        405:
+          description: Invalid input
+  /apartmentinspection/act/findStartedByPersonId/{personId}:
+    get:
+      summary: Поиск документа по personId у которого запущен процесс
+      operationId: findApartmentInspectionActByPersonId
+      tags:
+        - ApartmentInspection
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: personId
+          in: path
+          description: person ID
+          required: true
+          type: string
+      responses:
+        200:
+          description: Документ
+          schema:
+            $ref: '#/definitions/ApartmentInspectionDocument'
+        404:
+          description: Document not found
+        405:
+          description: Invalid input
+  /apartmentinspection/act/safeDeleteActive/{actId}:
+    delete:
+      summary: Помечает как удаленный созданный акт.
+      operationId: safeDeleteActiveActByActId
+      tags:
+        - ApartmentInspection
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: actId
+          in: path
+          description: act ID
+          required: true
+          type: string
+      responses:
+        200:
+          description: Boolean ответ
+        404:
+          description: Document not found
+        405:
+          description: Invalid input
+  /apartmentinspection/act/forceFinishProcess/{apartmentInspectionId}:
+    post:
+      summary: Принудительно завершить процесс документа.
+      operationId: forceFinishProcessOfApartmentInspectionDocument
+      tags:
+        - ApartmentInspection
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: apartmentInspectionId
+          in: path
+          description: apartmentInspectionId
+          required: true
+          type: string
+        - name: sendDefectsFixedIfNeeded
+          in: query
+          description: sendDefectsFixedIfNeeded
+          required: false
+          type: boolean
+          default: true
+      responses:
+        200:
+          description: Boolean ответ
+        404:
+          description: Document not found
+        405:
+          description: Invalid input
+  /tradeaddition/process:
+    post:
+      summary: Отпроцессить загруженный файл с данными о сделках.
+      operationId: tradeAdditionProcess
+      tags:
+        - TradeAddition
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: uploadedFileId
+          in: query
+          description: uploadedFileId
+          required: true
+          type: string
+        - name: documentId
+          in: query
+          description: Id TradeDataBatchStatusDocument
+          required: true
+          type: string
+      responses:
+        200:
+          description: Ok
+        404:
+          description: Document not found
+        405:
+          description: Invalid input
+  /tradeaddition/deployBatch:
+    post:
+      summary: Индексирует все подтвержденные в батче документы.
+      operationId: tradeAdditionDeployBatch
+      tags:
+        - TradeAddition
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - name: documentId
+          in: query
+          description: Id TradeDataBatchStatusDocument
+          required: true
+          type: string
+      responses:
+        200:
+          description: Ok
+        404:
+          description: Document not found
+        405:
+          description: Invalid input
+  /tradeaddition/areAllBatchesDeployed:
+    get:
+      summary: Проверка все ли партии загружены в реестр.
+      operationId: tradeAdditionAreAllBatchesDeployed
+      tags:
+        - TradeAddition
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: TradeAdditionBatchesDeployedResponse
+          schema:
+            $ref: '#/definitions/TradeAdditionBatchesDeployedResponse'
+        404:
+          description: Document not found
+        405:
+          description: Invalid input
+  /commission-inspection/check:
+    get:
+      summary: Выполнение проверок жильца и получение сведений о помещениях для комиссионного осмотра
+      operationId: commissionInspectionCheck
+      tags:
+        - CommissionInspection
+      produces:
+        - application/json
+      parameters:
+        - name: snils
+          in: query
+          description: СНИЛС
+          required: true
+          type: string
+        - name: ssoId
+          in: query
+          description: ssoId
+          required: false
+          type: string
+      responses:
+        200:
+          description: Результат проверки жильца и сведения о помещениях для комиссионного осмотра
+          schema:
+            $ref: '#/definitions/CommissionInspectionCheckResponse'
+        400:
+          description:
+            Данные запроса невалидны
+  /commission-inspection/defects:
+    get:
+      summary: Возвращает список всех возможных дефектов и помещений
+      operationId: getAllDefects
+      tags:
+        - CommissionInspection
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Список всех возможных дефектов и помещений
+          schema:
+            $ref: '#/definitions/DefectsList'
+definitions:
+  CheckResponse:
+    type: object
+    properties:
+      ISPOSSBLE:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      REASON:
+        type: string
+        description: Причина, по которой невозможно предоставить услугу
+      applicant:
+        type: object
+        properties:
+          SSOID:
+            type: string
+            description: SSOID
+            example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+          SNILS:
+            type: string
+            description: СНИЛС
+            example: 123-456-789 00
+          LASTNAME:
+            type: string
+            description: Фамилия
+            example: Иванов
+          FIRSTNAME:
+            type: string
+            description: Имя
+            example: Иван
+          MIDDLENAME:
+            type: string
+            description: Отчество
+            example: Иванович
+          DOB:
+            type: string
+            format: date-time
+            description: Дата рождения
+          RIGHTTYPE:
+            type: string
+            description: Статус проживания
+            enum:
+              - Owner
+              - Employer
+          ISDISABLE:
+            type: boolean
+            description: Маломобильность
+        required: [ SSOID, SNILS, LASTNAME, FIRSTNAME, DOB, RIGHTTYPE ]
+      from:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/ApartmentFrom'
+      to:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/ApartmentTo'
+    required: [ ISPOSSBLE ]
+  ApartmentFrom:
+    type: object
+    properties:
+      UID:
+        type: string
+        description: Идентификатор квартиры откуда
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      UNOMOLD:
+        type: string
+        description: UNOM расселяемого дома
+      CADNUMBEROLD:
+        type: string
+        description: Кадастровый номер расселяемого дома
+      ADDRESS:
+        type: string
+        description: Адрес
+        example: г.Москва, ул Набережная 12, д.11
+      ENTRANCEOLD:
+        type: string
+        description: Подъезд квартиры расселяемого дома
+      FLOOROLD:
+        type: string
+        description: Этаж квартиры расселяемого дома
+      FLATNUMBEROLD:
+        type: string
+        description: Номер квартиры расселяемого дома
+      ROOMNUMBER:
+        uniqueItems: false
+        type: array
+        items:
+          type: string
+          description: Номер комнаты в расселяемой квартире
+      ROOMNUMBEROLD:
+        type: integer
+        description: Количество комнат расселяемого помещения
+      MOVEDATE:
+        type: string
+        format: date
+        description: Дата освобождения жилого помещения по договору между собственником жилого помещения и уполномоченным органом исполнительной власти города Москвы.
+  BookingSlotListApartmentFrom:
+    type: object
+    properties:
+      UNOMOLD:
+        type: string
+        description: UNOM расселяемого дома
+      MOVEDATE:
+        type: string
+        format: date
+        description: Дата освобождения жилого помещения по договору между собственником жилого помещения и уполномоченным органом исполнительной власти города Москвы.
+    required: [ UNOMOLD, MOVEDATE ]
+  PrebookingApartmentFrom:
+    type: object
+    properties:
+      UNOMOLD:
+        type: string
+        description: UNOM расселяемого дома
+    required: [ UNOMOLD ]
+  ApartmentTo:
+    type: object
+    properties:
+      UID:
+        type: string
+        description: Идентификатор квартиры куда
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      UNOMNEW:
+        type: string
+        description: UNOM заселяемого дома
+      CADNUMBERNEW:
+        type: string
+        description: Кадастровый номер заселяемого дома
+      ADDRESS:
+        type: string
+        description: Адрес
+        example: г.Москва, ул Петровская 1, д.10
+      ENTRANCENEW:
+        type: string
+        description: Подъезд квартиры заселяемого дома
+      FLOORNEW:
+        type: string
+        description: Этаж квартиры заселяемого дома
+      FLATNUMBERNEW:
+        type: string
+        description: Номер квартиры заселяемого дома
+      ROOMNUMBERNEW:
+        type: integer
+        description: Количество комнат заселяемой квартиры
+  BookingSlotListApartmentTo:
+    type: object
+    properties:
+      UNOMNEW:
+        type: string
+        description: UNOM заселяемого дома
+    required: [ UNOMNEW ]
+  BookingSlotListRequest:
+    type: object
+    properties:
+      snils:
+        description: СНИЛС
+        type: string
+      SSOID:
+        description: SSOID
+        type: string
+      slotDuration:
+        description: Время длительности слотa
+        type: integer
+      from:
+        $ref: '#/definitions/BookingSlotListApartmentFrom'
+      to:
+        $ref: '#/definitions/BookingSlotListApartmentTo'
+    required: [ snils, from, to ]
+  InternalBookingSlotListRequest:
+    type: object
+    properties:
+      personDocumentId:
+        description: ID документа person
+        type: string
+      slotDuration:
+        description: Время длительности слотa
+        type: integer
+      from:
+        $ref: '#/definitions/BookingSlotListApartmentFrom'
+      to:
+        $ref: '#/definitions/BookingSlotListApartmentTo'
+    required: [ personDocumentId, from, to ]
+  BookingSlotListResponse:
+    type: object
+    properties:
+      to:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/BookingSlot'
+  BookingSlot:
+    type: object
+    properties:
+      UID:
+        type: string
+        description: Идентификатор интервала записи
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      preBookingId:
+        type: string
+        description: Идентификатор предворительного бронирования слота
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      dateFrom:
+        type: string
+        format: date-time
+      dateTo:
+        type: string
+        format: date-time
+  PrebookingRequest:
+    type: object
+    properties:
+      snils:
+        description: СНИЛС
+        type: string
+      SSOID:
+        description: SSOID
+        type: string
+      slotDuration:
+        description: Время длительности слотa
+        type: integer
+      from:
+        $ref: '#/definitions/PrebookingApartmentFrom'
+      timetableUid:
+        type: string
+        description: Идентификатор интервала записи
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      dateFrom:
+        type: string
+        format: date-time
+      dateTo:
+        type: string
+        format: date-time
+    required: [ snils, from, timetableUid ]
+  InternalPrebookingRequest:
+    type: object
+    properties:
+      personDocumentId:
+        description: ID документа person
+        type: string
+      slotDuration:
+        description: Время длительности слотa
+        type: integer
+      from:
+        $ref: '#/definitions/PrebookingApartmentFrom'
+      timetableUid:
+        type: string
+        description: Идентификатор интервала записи
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      dateFrom:
+        type: string
+        format: date-time
+      dateTo:
+        type: string
+        format: date-time
+    required: [ personDocumentId, from, timetableUid ]
+  PrebookingResponse:
+    type: object
+    properties:
+      bookingUid:
+        type: string
+        description: Идентификатор бронии интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+  BookingRequest:
+    type: object
+    properties:
+      snils:
+        description: СНИЛС
+        type: string
+      SSOID:
+        description: SSOID
+        type: string
+      timetableUid:
+        type: string
+        description: Идентификатор интервала записи
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      dateFrom:
+        type: string
+        format: date-time
+      dateTo:
+        type: string
+        format: date-time
+      bookingUid:
+        type: string
+        description: Идентификатор бронии интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+    required: [ bookingUid ]
+  BookingResponse:
+    type: object
+    properties:
+      bookingUid:
+        type: string
+        description: Идентификатор бронии интервала
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+  CreateApartmentInspectionActResponse:
+    type: object
+    properties:
+      id:
+        type: string
+        description: ID созданного документа
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+  ApartmentInspectionDocument:
+    type: string
+    description: Документ в JSON формате
+    example: { "id": "ee619083-58e8-4c6c-b770-f86dc3253f7d" }
+  CopingDaySchedulesRequest:
+    type: object
+    properties:
+      startDate:
+        description: Дата или начало периода копирования
+        type: string
+        format: date
+      endDate:
+        description: Конец периода копирования
+        type: string
+        format: date
+      district:
+        description: Район
+        type: string
+    required: [ startDate ]
+  DayOrIntervalValidationResponse:
+    type: object
+    properties:
+      isExist:
+        description: Существует ли уже расписание на заданные день или промежуток.
+        type: boolean
+      canBeReplaced:
+        description: Можно ли переписать день или промежуток или бронирование уже произошло.
+        type: boolean
+    required:
+      - startDate
+  TradeAdditionBatchesDeployedResponse:
+    type: object
+    properties:
+      deployed:
+        description: Загружены ли в реестр все партии.
+        type: boolean
+  DeclineShippingApplicationRequest:
+    type: object
+    properties:
+      declineReason:
+        description: Причина отказа
+        type: string
+        required:
+          - declineReason
+      declineDateTime:
+        description: Дата и время отказа
+        type: string
+        format: date-time
+  MoveShippingDateRequest:
+    type: object
+    properties:
+      bookingId:
+        description: Идентификатор бронирования слота
+        type: string
+        required:
+          - bookingId
+      shippingDateStart:
+        description: Дата и время начала переезда
+        type: string
+        format: date-time
+        required:
+          - shippingDateStart
+      shippingDateEnd:
+        description: Дата и время конца переезда
+        type: string
+        format: date-time
+        required:
+          - shippingDateEnd
+  CommissionInspectionCheckResponse:
+    type: object
+    properties:
+      ISPOSSBLE:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      REASON:
+        type: string
+        description: Причина, по которой невозможно предоставить услугу
+      to:
+        uniqueItems: false
+        type: array
+        items:
+          $ref: '#/definitions/CommissionInspectionApartmentTo'
+    required: [ ISPOSSBLE ]
+  CommissionInspectionApartmentTo:
+    type: object
+    properties:
+      address:
+        type: string
+        description: Адрес
+        example: г.Москва, ул Петровская 1, д.10
+      unom:
+        type: string
+        description: УНОМ
+        example: 522333
+      flatNumber:
+        type: string
+        description: Номер квартиры
+        example: 12
+      tradeType:
+        $ref: '#/definitions/CommissionInspectionTradeType'
+        description: Вид сделки
+      flatStatus:
+        $ref: '#/definitions/CommissionInspectionFlatStatus'
+        description: Статус квартиры
+      person:
+        $ref: '#/definitions/CommissionInspectionPersonInfo'
+        description: Информация о жителе
+      letter:
+        $ref: '#/definitions/CommissionInspectionLetter'
+        description: Информация о письме с предложением
+      cipInfo:
+        $ref: '#/definitions/CommissionInspectionCipInfo'
+        description: Информация о ЦИП
+      errorMessage:
+        type: string
+        description: Сообщение об ошибке
+        example: Подать заявку можно только в период действия гарантийного срока.
+  CommissionInspectionPersonInfo:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Идентификатор жителя
+      affairId:
+        type: string
+        description: Идентификатор семьи
+      snils:
+        type: string
+        description: СНИЛС
+      ssoId:
+        type: string
+        description: ssoId
+  CommissionInspectionFlatStatus:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: id статуса
+        example: 1
+      name:
+        type: string
+        description: Статус квартиры
+        example: Заселение
+  CommissionInspectionTradeType:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: id вида сделки
+        example: 1
+      name:
+        type: string
+        description: вид сделки
+        example: Предлагаемая квартира
+  CommissionInspectionLetter:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Идентификатор письма
+        example: 66b168c5-889a-4e78-ae36-670466ae35a7
+      fileId:
+        type: string
+        description: Идентификатор файла с письмом
+        example: DCB76000-F962-46DF-A373-CA263EF64ADC
+  CommissionInspectionCipInfo:
+    type: object
+    properties:
+      address:
+        type: string
+        description: Адрес
+        example: г.Москва, ул Петровская 1, д.10
+      phone:
+        type: string
+        description: Номер телефона
+        example: +7985478532
+  DefectsList:
+    uniqueItems: false
+    type: array
+    items:
+      $ref: '#/definitions/Defect'
+  Defect:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Идентификатор дефекта
+        example: 0076efc9-8abd-4676-b3d7-782003bd2927
+      flatElement:
+        type: string
+        description: Название помещения
+        example: Комната 1
+      description:
+        type: string
+        description: Описание дефекта
+        example: Щель на потолке

@@ -1,0 +1,229 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "link",
+        "nickDictLink": "InformationObjectRegister",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "noIndex",
+        "name": "Не индексировать",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 1,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "7da15c31-2428-4efc-9b8a-fa6ce3bd59a6",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a73d7065-ccec-48b6-8cc6-ecf2532eaae5",
+          "nickAttr": "code",
+          "value": "UGD_SSR_NOTARY-APPLICATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d94cf7e5-58fc-4ae4-8736-18eb0ce582a6",
+          "nickAttr": "fields",
+          "value": "e6ec9b51-812a-4fd1-bbca-85ef5002b13c",
+          "orders": 0,
+          "linkCode": "ugd_ssr_notary_application_number"
+        },
+        {
+          "attrId": "a8e89a9f-3493-4d8a-ac17-e59593552a36",
+          "nickAttr": "fields",
+          "value": "fa43fecc-ea6e-4842-8f1a-6a7caa28781c",
+          "orders": 1,
+          "linkCode": "ugd_ssr_notary_application_appointment_datetime"
+        },
+        {
+          "attrId": "69d4130f-7e82-4b3d-92e2-23081a1250e6",
+          "nickAttr": "fields",
+          "value": "be0be624-4542-437f-ae71-77f6510ec2b5",
+          "orders": 2,
+          "linkCode": "ugd_ssr_notary_application_notary_full_name"
+        },
+        {
+          "attrId": "c34987bf-075f-45a8-95e1-57ec40999600",
+          "nickAttr": "fields",
+          "value": "517d6a49-2eda-4bd2-b3c7-dd84515dcc86",
+          "orders": 3,
+          "linkCode": "ugd_ssr_notary_application_person_full_name"
+        },
+        {
+          "attrId": "c860db48-1879-4058-bcd1-0da17db24de7",
+          "nickAttr": "fields",
+          "value": "285f5cd1-bdc2-4421-861e-b575b1610f32",
+          "orders": 4,
+          "linkCode": "ugd_ssr_notary_application_status"
+        },
+        {
+          "attrId": "8026cf5b-7aea-4f67-b827-39a221d3f6cf",
+          "nickAttr": "fields",
+          "value": "95d4a9f2-4a31-4904-b86f-1c3119795871",
+          "orders": 5,
+          "linkCode": "ugd_ssr_notary_application_employee_logins"
+        },
+        {
+          "attrId": "9990487c-b804-46c7-920b-0a656eb6751c",
+          "nickAttr": "name",
+          "value": "Заявления на запись на посещение нотариуса",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ec6c0184-5b7d-465f-a5ae-7b15840957e8",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "052b33c2-432b-4505-a522-e80b1b5857c0",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "b060242a-1a8f-4ef8-85cb-eaa96b1e93ef",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "63887250-6bfd-44fc-90fd-46a271a2b514",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

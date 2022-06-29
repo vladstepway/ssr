@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/personalDocument"
+           targetNamespace="http://www.ugd.croc.ru/ssr/personalDocument"
+           elementFormDefault="qualified">
+    <xs:element name="PersonalDocument">
+        <xs:annotation>
+            <xs:documentation>Сведения о документах</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="personalDocumentData" type="PersonalDocumentType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PersonalDocumentType">
+        <xs:annotation>
+            <xs:documentation>Сведения о предоставленных документах</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="affairId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор семьи заявителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="acceptanceDateTime" type="xs:dateTime" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата и время принятия документов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="applicationDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа заявления на предоставление документов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="tenants">
+                <xs:annotation>
+                    <xs:documentation>Жильцы</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tenant" type="TenantType" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные о жильце</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="documents">
+                <xs:annotation>
+                    <xs:documentation>Правоустанавливающие документы на объект (квартиру)</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="document" type="DocumentType" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные о правоустанавливающем документе на объект (квартиру)
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="unionFileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД единого файла документов в FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="addressFrom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес отселяемой квартиры (откуда)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="letterId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД письма с предложением</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processInstanceId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID запущенного процесса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TenantType">
+        <xs:annotation>
+            <xs:documentation>Данные о жильце</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор документа жильца</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Фамилия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Имя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="birthDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата рождения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="status" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isSuspicious" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Ненадлежащий</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="suspicionReason" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий с причиной, почему житель является ненадлежащим</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="documents">
+                <xs:annotation>
+                    <xs:documentation>Документы личного характера</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="document" type="DocumentType" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные о документе личного характера</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DocumentType">
+        <xs:annotation>
+            <xs:documentation>Данные о документе</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="typeCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код типа документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="comment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="files">
+                <xs:annotation>
+                    <xs:documentation>Файлы документов</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="file" type="PersonalDocumentFile" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные о файле документа</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PersonalDocumentFile">
+        <xs:annotation>
+            <xs:documentation>Данные о файле документа</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="fileStoreId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД файла в FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="chedFileId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД файла в ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fileType" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Тип файла (pdf, gif, jpeg, jpg, png, zip)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

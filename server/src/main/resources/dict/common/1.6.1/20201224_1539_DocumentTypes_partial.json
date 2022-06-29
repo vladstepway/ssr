@@ -1,0 +1,338 @@
+{
+  "metaDict": {
+    "nick": "DocumentTypes",
+    "name": "Типы документов",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Название типа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "solrCore",
+        "name": "Ядро SOLR",
+        "typeAttr": "link",
+        "nickDictLink": "SearchSolrCores",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "fields",
+        "name": "Список полей",
+        "typeAttr": "link",
+        "nickDictLink": "SearchFields",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "virtTypes",
+        "name": "Виртуальные типы документов",
+        "typeAttr": "string",
+        "nickDictLink": "null",
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "virtual",
+        "name": "Виртуальный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "subsystem",
+        "name": "Подсистема",
+        "typeAttr": "link",
+        "nickDictLink": "SubSystems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Система",
+        "typeAttr": "link",
+        "nickDictLink": "Systems",
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "informationObject",
+        "name": "Модель ИО",
+        "typeAttr": "link",
+        "nickDictLink": "InformationObjectRegister",
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "a676ccc5-88a3-4d43-b4fa-a58d87b206a8",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c1df385c-39e9-4005-bd48-c93e680b9145",
+          "nickAttr": "code",
+          "value": "UGD_SSR_SHIPPING-APPLICATION",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "66d98a12-44d7-4dae-bcf5-9ab90fba3c9c",
+          "nickAttr": "fields",
+          "value": "e20e532d-971a-46c5-90ef-d46d6d5feb73",
+          "orders": 0,
+          "linkCode": "ugd_ssr_shipping_application_eno"
+        },
+        {
+          "attrId": "3a1e0806-6fbf-4d73-bcec-e390fd7672ad",
+          "nickAttr": "fields",
+          "value": "3cfdd092-9b3c-428c-9269-46a24de67ac8",
+          "orders": 1,
+          "linkCode": "ugd_ssr_shipping_application_full_name"
+        },
+        {
+          "attrId": "13fa22fa-f8df-4f06-a3bd-0a39ad3a108a",
+          "nickAttr": "fields",
+          "value": "8dca5e88-172f-48ba-9399-7c7bef75e523",
+          "orders": 2,
+          "linkCode": "ugd_ssr_shipping_application_address_from"
+        },
+        {
+          "attrId": "fbd8a584-13c6-45d7-b96d-61289f473f60",
+          "nickAttr": "fields",
+          "value": "b33e3683-1111-4c88-a2fd-8b96984cff17",
+          "orders": 3,
+          "linkCode": "ugd_ssr_shipping_application_address_to"
+        },
+        {
+          "attrId": "65f75457-f5c9-4945-8613-6316434ff5e0",
+          "nickAttr": "fields",
+          "value": "c4006881-b945-4a68-a23c-9fdca4ebd474",
+          "orders": 4,
+          "linkCode": "ugd_ssr_shipping_application_status"
+        },
+        {
+          "attrId": "65317253-b0cb-4a35-8080-68c9558c3025",
+          "nickAttr": "fields",
+          "value": "d6572cb1-b988-4dff-896a-0e0efe670808",
+          "orders": 5,
+          "linkCode": "ugd_ssr_shipping_application_move_date_time"
+        },
+        {
+          "attrId": "d4f58828-2b93-4ffa-b41b-1a307da5a891",
+          "nickAttr": "fields",
+          "value": "ca4821a3-f181-4e58-852d-dc4f0b9ec8fa",
+          "orders": 6,
+          "linkCode": "ugd_ssr_shipping_application_source"
+        },
+        {
+          "attrId": "30f4594b-8c73-4181-b5c7-d921061fe6c2",
+          "nickAttr": "fields",
+          "value": "29898a70-39d5-40fe-b083-5828edc51859",
+          "orders": 7,
+          "linkCode": "ugd_ssr_shipping_application_district"
+        },
+        {
+          "attrId": "80d25cec-48d0-43aa-8098-db4385504cf8",
+          "nickAttr": "fields",
+          "value": "0c92bcba-52a2-4baa-a958-5c5466f8f98b",
+          "orders": 8,
+          "linkCode": "ugd_ssr_shipping_application_created_at"
+        },
+        {
+          "attrId": "9a8da833-2b53-4357-be3f-563dd346bd7e",
+          "nickAttr": "fields",
+          "value": "30c9a27c-36ff-44c0-b9c9-a4d30e02b55a",
+          "orders": 9,
+          "linkCode": "ugd_ssr_shipping_application_brigade"
+        },
+        {
+          "attrId": "a4e2a728-9caf-45d7-9665-67e07d4894da",
+          "nickAttr": "name",
+          "value": "Заявление на помощь в переезде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8b2115f1-72d9-4c84-9425-b659f7aa745b",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "5e3d6280-1f1f-46fe-b3fa-327c01cb2987",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "fb0f6732-ecd6-41db-8977-68f7bf13cdac",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "70991f58-ada2-4921-a044-e985ece4cffc",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "8145913b-4951-4a56-9795-7f01a49189d7",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "debb883c-e13b-48c6-a4e5-8fb70bd7f841",
+          "nickAttr": "code",
+          "value": "UGD_SSR_SHIPPING-DAY-SCHEDULE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a0f30f46-2329-467b-bd1d-c4740d8d253b",
+          "nickAttr": "fields",
+          "value": "9fe7640b-a446-4808-964d-00797d258f30",
+          "orders": 0,
+          "linkCode": "ugd_ssr_shipping_day_schedule_weekday"
+        },
+        {
+          "attrId": "f2c2be3e-11a2-42d0-ad58-27765a8f9058",
+          "nickAttr": "fields",
+          "value": "c9fb32c1-cf73-4114-8634-0b3bdaa65f64",
+          "orders": 1,
+          "linkCode": "ugd_ssr_shipping_day_schedule_area"
+        },
+        {
+          "attrId": "77d6e546-3763-4ec9-ab8f-628434bbd935",
+          "nickAttr": "fields",
+          "value": "e1b0f2b7-0dd5-4a80-9295-c86e8e3855fe",
+          "orders": 2,
+          "linkCode": "ugd_ssr_shipping_day_schedule_workingdate"
+        },
+        {
+          "attrId": "c88ecccf-09cd-42b2-a68f-a9d4c21c8678",
+          "nickAttr": "fields",
+          "value": "56759931-8a31-4ba8-a34e-33a8015bcaff",
+          "orders": 3,
+          "linkCode": "ugd_ssr_shipping_day_schedule_schedule"
+        },
+        {
+          "attrId": "1ea5298b-fcd7-4ff9-915e-1d5af829b75c",
+          "nickAttr": "fields",
+          "value": "f0724d88-fa21-476d-8edd-fd51a0c493a4",
+          "orders": 4,
+          "linkCode": "ugd_ssr_shipping_day_schedule_brigades_amount"
+        },
+        {
+          "attrId": "dd504f28-bd42-409d-8c00-6e2af6a762c4",
+          "nickAttr": "fields",
+          "value": "80b295c3-84dc-45db-8c62-8b60bb450577",
+          "orders": 5,
+          "linkCode": "ugd_ssr_shipping_day_schedule_total_applied"
+        },
+        {
+          "attrId": "09705ac7-ea2f-4b83-8c50-bbd403112a32",
+          "nickAttr": "name",
+          "value": "Расписание дней для переезда",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e0de5c64-f7bb-484f-935b-01c5e6aa2826",
+          "nickAttr": "solrCore",
+          "value": "887cb9a2-fdd2-476e-9a3e-df22f9ca37ce",
+          "orders": 0,
+          "linkCode": "ugd_ssr_core"
+        },
+        {
+          "attrId": "f6d0882a-05f3-43b7-ab31-7bc925796624",
+          "nickAttr": "subsystem",
+          "value": "c47a1b18-ed88-497f-abc0-ae60c8ffa4db",
+          "orders": 0,
+          "linkCode": "UGD_SSR"
+        },
+        {
+          "attrId": "87cf74b0-dc68-4b40-814b-61d3ed368308",
+          "nickAttr": "systemCode",
+          "value": "bb62765d-d972-4632-ae4e-ed67963dca6d",
+          "orders": 0,
+          "linkCode": "UGD"
+        },
+        {
+          "attrId": "6d2e9a78-6063-4800-9c65-286491eb00a5",
+          "nickAttr": "virtual",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

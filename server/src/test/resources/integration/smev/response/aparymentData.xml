@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SmevResponse>
+    <messageId>2661439</messageId>
+    <serviceNumber>0874-9000155-067801-004109/20</serviceNumber>
+    <statusCode>1004</statusCode>
+    <note>Получен ответ из ФОИВ/ОИВ по запросу документа</note>
+    <resultCode>1</resultCode>
+    <resultDescription>&lt;datalist&gt;&lt;data Flat_type="Отдельная" FlsId="559529" House_prinadl="собственность
+        г.Москвы" Phone="499 767 6479" Room_Count="2" Zayav_man="Бовина Юлия Борисовна" Zayav_man_decl="Бовиной Юлии
+        Борисовны" Zayav_own_noreg="1" adr_tel_company=" адрес: 127204, г. Москва, ул. 9-я Северная линия, дом. 1, кор.
+        1, телефон: 8(499)767-79-81" centr_otopl="есть" cfloor="9" cfls="0" counter_type="индивидуальный" croom_flat="2"
+        curr_doc_zayavitel="0" curr_without_doc="0" currdate="27.01.2020" cw="есть" dezname="Район Северный" dopAttr="9"
+        electr="есть" fd="27.03.2020" firm_name="ГБУ &amp;quot;МФЦ города Москвы&amp;quot; МФЦ района Северный 127495,
+        Москва, Челобитьевское ш., д.12, корп.1,6 тел.: 495-777-77-77" flat="204" floor="7" fls_all_sqr="42,40"
+        fls_gil_sqr="28,20" gas="есть" house="7" house_year="1971" hw="есть" is_dolg="не имеется" is_sobstv="1"
+        is_subs="нет" kanal="есть" korp=" " lift="есть" material_sten="________________" okrug="Северо-Восточный
+        административный округ" oks="Бовина Светлана Семеновна" oks_decl="Бовину Светлану Семеновну" owners="Бовина Юлия
+        Борисовна, Бовина Светлана Семеновна" period="27.01.2020" prefs="Ветераны труда" s_All="42,40" s_AllLet="44,20"
+        s_Gil="28,20" s_Let="1,80" s_Priv="42,40" s_kitchen="5,90" san_type="раздельный" schema_hw="закрытая"
+        seria="П-49 Д" service_company="Государственное бюджетное учреждение города Москвы &amp;quot;Жилищник района
+        Северный&amp;quot; (л/с 2694142000800921)" street="9-я Северная линия," stroen=" " user_name=" " vanna="есть"/&gt;&lt;rooms&gt;&lt;room
+        flsid="559529" nom="1" oks="Бовина Светлана Семеновна" room_plan="изол." s_room="16,50" s_room_all="24,81"/&gt;&lt;room
+        flsid="559529" nom="2" oks="Бовина Светлана Семеновна" room_plan="изол." s_room="11,70" s_room_all="17,59"/&gt;&lt;/rooms&gt;&lt;people&gt;&lt;man
+        arrive_moscow="02.08.1980" birth_date="01.10.1947" birth_location="Воронеж " fio="Бовина Светлана Семеновна"
+        passport="паспорт РФ № 629363 45 01, выдан О/М &amp;quot;СЕВЕРНЫЙ&amp;quot; Г.МОСКВЫ 20.11.2001"
+        passport_prior="паспорт № 710390 XXV-МЮ, выдан 144 О/М Г.МОСКВЫ 15.08.1980" reg_date="02.08.1980" reg_from="ИЗ
+        ЗАГРАНИЦЫ" reg_type="1"/&gt;&lt;man birth_date="03.07.1969" fio="Бовина Юлия Борисовна" out_date="20.02.2008"
+        reg_type="0" rel_type="заявитель"/&gt;&lt;/people&gt;&lt;fls_man&gt;&lt;fls_cman cman_reg="1" fls_id="559529"/&gt;&lt;/fls_man&gt;&lt;docs&gt;&lt;doc
+        name="Свидетельство о приватизации 0706271 от 27.01.1993" who="ДМЖ СВАО"/&gt;&lt;/docs&gt;&lt;part_type_list&gt;&lt;part_type&gt;частная
+        собственность&lt;/part_type&gt;&lt;/part_type_list&gt;&lt;owners&gt;&lt;owner fio="Бовина Светлана Семеновна"
+        one_part="0" own_perc="50,00"/&gt;&lt;owner fio="Бовина Юлия Борисовна" one_part="0" own_perc="50,00"/&gt;&lt;/owners&gt;&lt;pref_list&gt;&lt;pref
+        pref_id="45" pref_owner_fio="Бовина Светлана Семеновна"&gt;&lt;reason_str&gt;Ветераны труда c 09.10.2002.
+        Основание: Пенсионное удостоверение № 3 6911478 от 09.10.2002; Удостоверение № В 938443 от 09.10.2002&lt;/reason_str&gt;&lt;pref_koef_list&gt;&lt;pref_koef_serv&gt;ХВ
+        : 50%&lt;/pref_koef_serv&gt;&lt;pref_koef_serv&gt;ГВ : 50%&lt;/pref_koef_serv&gt;&lt;pref_koef_serv&gt;Отоп.осн.пл.
+        : 50%&lt;/pref_koef_serv&gt;&lt;pref_koef_serv&gt;Сод.жил.пом. : 50%&lt;/pref_koef_serv&gt;&lt;pref_koef_serv&gt;Газ
+        : 50%&lt;/pref_koef_serv&gt;&lt;/pref_koef_list&gt;&lt;people_linked_pref/&gt;&lt;/pref&gt;&lt;/pref_list&gt;&lt;dolg_per&gt;&lt;periods/&gt;&lt;servs&gt;&lt;serv&gt;&lt;period
+        dolg="0,00" period="Итого по услуге"/&gt;&lt;/serv&gt;&lt;/servs&gt;&lt;/dolg_per&gt;&lt;regNo&gt;б/н&lt;/regNo&gt;&lt;/datalist&gt;
+    </resultDescription>
+</SmevResponse>

@@ -1,0 +1,215 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "af02a5bb-275d-4bfc-bc13-d1e3e0130eac",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "54f96da9-4761-4a7f-a785-81f99fb10443",
+          "nickAttr": "code",
+          "value": "ugd_ssr_dashboard_catalog_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cc42fd7b-b00d-4699-8631-300abf21fcde",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_DASHBOARD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "676adc6a-4c14-40ad-ad98-dcf33ceb2f5c",
+          "nickAttr": "documentName",
+          "value": "Статистическая информация о переселении",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fa9e8cb9-050e-4ccf-822a-66053b9bcc3e",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Каталог статистической информации о переселении\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Статистическая информации о переселении</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"separateSorting\":true,\"changeTableColumns\":true,\"fields\":[{\"code\":\"informationDate\",\"type\":\"date\",\"name\":\"Информация на дату\",\"sortable\":true,\"filterable\":true},{\"code\":\"isArchived\",\"type\":\"boolean\",\"name\":\"Архивная запись\",\"sortable\":true,\"filterable\":true},{\"code\":\"totalNewBuildings\",\"type\":\"number\",\"name\":\"Всего новостроек\",\"sortable\":true,\"filterable\":true},{\"code\":\"totalResettlementsBuildings\",\"type\":\"number\",\"name\":\"Всего отселяемых\",\"sortable\":true,\"filterable\":true},{\"code\":\"published\",\"type\":\"boolean\",\"name\":\"Запись опубликована\",\"sortable\":true,\"filterable\":true},{\"code\":\"notAuto\",\"type\":\"boolean\",\"name\":\"Не автоматически сформирована\",\"filterable\":true}],\"tableColumns\":[{\"name\":\"Информация на дату\",\"fieldCode\":\"informationDate\",\"template\":\"<a [href]=\\\"'/ugd/ssr/#/app/dashboard/' + item.sys_documentId\\\">{{item.informationDate | date:'dd.MM.yyyy'}}</a>\"},{\"name\":\"Всего домов стартовых / отселяемых\",\"fieldCode\":\"totalNewBuildings\",\"template\":\"{{item.totalNewBuildings}} / {{item.totalResettlementsBuildings}}\"},{\"name\":\"Архивная запись\",\"fieldCode\":\"isArchived\",\"template\":\"<span *ngIf=\\\"item.isArchived\\\">Да</span>\",\"filterable\":true},{\"name\":\"Запись опубликована\",\"fieldCode\":\"published\",\"template\":\"<span *ngIf=\\\"item.published\\\">Да</span>\\n<span *ngIf=\\\"!item.published\\\">Нет</span>\"}],\"filters\":[{\"name\":\"Отображать только архивные записи\",\"fieldCode\":\"isArchived\",\"placement\":\"bottom\"},{\"name\":\"Отображать только опубликованные записи\",\"fieldCode\":\"published\",\"placement\":\"bottom\"},{\"name\":\"Не автоматически сформирована\",\"fieldCode\":\"notAuto\",\"placement\":\"bottom\",\"notEmpty\":true}],\"sortings\":[{\"name\":\"Информация на дату\",\"fieldCode\":\"informationDate\"},{\"name\":\"Всего стартовых домов\",\"fieldCode\":\"totalNewBuildings\"},{\"name\":\"Всего отселяемых домов\",\"fieldCode\":\"totalResettlementsBuildings\"},{\"name\":\"Архивная запись\",\"fieldCode\":\"isArchived\"},{\"name\":\"Опубликовано\",\"fieldCode\":\"published\"}],\"isNewSearch\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7cbd1db4-cb55-44bb-b639-4ab0566f519b",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_dashboard_catalog",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "af379b55-3e73-429e-ab1d-085f240968d1",
+          "nickAttr": "showcaseName",
+          "value": "Статическая информация о переселении",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9685412d-14ac-49ff-a42e-19cd238dcec8",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e2b642c8-6293-4a1a-ba2c-008997b46ad2",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3729bca1-502f-4031-b2ee-340a1dbc508c",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6b260fd4-ac6b-44eb-9bfb-ea59b46a6017",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

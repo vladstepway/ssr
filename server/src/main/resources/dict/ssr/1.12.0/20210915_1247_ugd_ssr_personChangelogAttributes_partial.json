@@ -1,0 +1,2338 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_personChangelogAttributes",
+    "name": "Атрибуты для журнала изменений жителя",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "title",
+        "name": "Заголовок",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "beanName",
+        "name": "Наименование бина для обработки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "isComplexPath",
+        "name": "Путь комплексный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "60f5c160-7967-4809-a956-e78ecb19bd9c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "54612b3f-9de7-46c8-a730-bb73ec74ebb3",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "05eb958f-f350-464f-ad4e-30a3bf64c23a",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/UNOM",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0edaf3a7-876d-45d0-8cf7-b0223a49dc85",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b19c928b-c32f-4265-a95c-9d520506604c",
+          "nickAttr": "name",
+          "value": "УНОМ отселяемого дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ca6219f9-b4e8-4c38-842c-ae0760739707",
+          "nickAttr": "title",
+          "value": "Уном отселяемого дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d7c8bf5f-10d4-45d1-b7a2-3e3fc51dbf04",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4c7d40d0-66dc-4726-bebc-dba76053ffb4",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "14478422-9614-405c-a123-594ff992cd1a",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f920fc79-e502-46b0-afd7-f2ec538836a0",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/birthDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ca6763ab-b4a2-40e4-a3a1-d16ede9a5844",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fba6f0db-84bf-4766-8ba7-ecaa2f43cca7",
+          "nickAttr": "name",
+          "value": "Дата рождения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ec2f983a-9e68-4a26-a40c-482d46043174",
+          "nickAttr": "title",
+          "value": "Дата рождения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a4535253-446a-40de-a9c2-9aa5804aa7c7",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "accc15b2-3600-4685-b7c9-1e43e85eef83",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "0a7f41fc-dffa-445a-b15a-44b22ee01158",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3d58f2d3-02fd-497c-8bbd-166c159fdbfc",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/regType",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b70407a6-9127-4186-a459-fe650ec6f95a",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c2363b46-5fad-4fb6-a2b2-0800e6f14e50",
+          "nickAttr": "name",
+          "value": "Регистрация",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d7506e5b-8fd6-4e90-bf13-f0170527bac8",
+          "nickAttr": "title",
+          "value": "Регистрация",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f2d0cf96-d78a-428f-9b62-55aee56723cb",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7b70e414-866a-478a-ada6-ba5a4aa4b869",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5a11b0ba-3210-4736-94bf-c53ea645dc61",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a52b5ff8-e316-498d-af3a-df0136806bad",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/regDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "24f4551a-f6b5-4a83-833c-a0683ac0b36e",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a302b0f4-b5b2-4723-a253-295d0225c288",
+          "nickAttr": "name",
+          "value": "Дата регистрации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c6ba3f07-825e-4ff5-8baf-1bf7c225f8dc",
+          "nickAttr": "title",
+          "value": "Дата регистрации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "44fff468-9dd1-4e9c-8c4e-d734a9dc62a2",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "40f737f4-4752-4b34-89d3-a6ba0f2ad62f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6cbc4bf4-1711-4dc7-9b30-d703ce65e29a",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e495fa09-2b77-4d2c-8c78-791a2edafd1b",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/gender",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9710ae96-2e8d-4279-b8da-5e1d515f1640",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0d059668-74e1-444b-9d8f-37d3312f9fd8",
+          "nickAttr": "name",
+          "value": "Пол",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1fe6db25-635f-4746-8564-9f48c546fc05",
+          "nickAttr": "title",
+          "value": "Пол",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "88b558f4-8f4d-458b-84ed-9a4a3df7469f",
+          "nickAttr": "type",
+          "value": "gender",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "a22d7419-f956-4fa8-9b29-8d5ac80994a1",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "64de2610-4898-4d77-b7b7-b8dc04676c3c",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c8cd72c1-2895-4d58-b09d-78cbf083d5b6",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/SsoID",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bb3b3313-54bb-4a84-b4bd-e41627c41c55",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "212c2fe8-891a-4716-a971-7780f349e62a",
+          "nickAttr": "name",
+          "value": "Идентификатор ЛК",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c7d64bb2-7b26-4dd1-837e-0a3260b6c340",
+          "nickAttr": "title",
+          "value": "Идентификатор ЛК",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bb8402c4-9bc2-46ca-9af6-192c6f96a805",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0d68d3f9-3550-4aca-b109-5344d0d97628",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3fb23507-f76f-494a-b599-61a7b701f32e",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e9e177cd-f0c5-4b0b-a973-9cc42500fe1d",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/affairId",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9e93420a-5149-449f-bedd-018271350424",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f4059bf0-0a77-46ce-ae19-98168890284a",
+          "nickAttr": "name",
+          "value": "Идентификатор семьи",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e230040a-0e3c-4075-a9ea-b0013bcb49fd",
+          "nickAttr": "title",
+          "value": "Идентификатор семьи",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "333135b1-e755-462c-87bb-2b1144e58ef6",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "02b323a6-933e-47a1-8c2e-21e72836e266",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "cde36ae7-dba7-4193-85ba-e7bd49e67674",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8b482e1f-c859-4a1b-888d-afad8f553b7a",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/addFlatInfo/inCourt",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2b9c4b7a-5394-41f7-bc90-47ccc2856289",
+          "nickAttr": "isComplexPath",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0c07a8e2-bbe2-473d-b988-00a476dca251",
+          "nickAttr": "name",
+          "value": "В суде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bfadc44b-0779-46d1-b1d4-1f2f345c209e",
+          "nickAttr": "title",
+          "value": "В суде",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9107489a-107e-44d4-8c67-2c87dfc5db50",
+          "nickAttr": "type",
+          "value": "numBoolean",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7808213d-e96d-4df1-b226-6f5477cfd55f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9a711957-6c7e-4a92-ba09-4880d735a35c",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dd2c5af8-043e-45a4-885a-e16196feb338",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/phones/phoneNumber1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6614d22a-8fe5-4007-8328-1f195438c5f5",
+          "nickAttr": "isComplexPath",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "598079c6-6791-4746-a3b6-bea4c91c86aa",
+          "nickAttr": "name",
+          "value": "Номер телефона 1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b4c92ad2-f3ac-43af-be54-44e8f9e00d38",
+          "nickAttr": "title",
+          "value": "Номер телефона 1",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "183787ba-1066-4895-97bf-2d37d3d9ebdd",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "57d5338c-db37-4d76-a6b4-d7f6b3aa0b15",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "cefd3e13-aea7-4ab3-ae66-ef2cdd9e8d6c",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "150065cc-5479-43bf-96db-389b99dfcf0a",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/FIO",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "997d45e9-d9dd-4732-b45e-8536c4dd4db1",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d23ac157-0870-47b2-98fc-7bbd696414bf",
+          "nickAttr": "name",
+          "value": "ФИО жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a5b99910-a9fd-4402-9f66-c5735957e81f",
+          "nickAttr": "title",
+          "value": "ФИО жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5cbcb0d8-aea6-4ce0-ba76-0264d2ca2a5c",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "2e567981-421f-402c-93a0-71f5e837fa6f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "dfa0c3fc-7a9c-40ff-a4b5-056bba6b1766",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "938f9246-cf9b-4220-96e6-f8034d33f2aa",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/addInfo/isDead",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "22d342d3-80e2-42f2-a440-76d42b556bd2",
+          "nickAttr": "isComplexPath",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a60cd531-5ccd-495a-912f-e4a45fb5e521",
+          "nickAttr": "name",
+          "value": "Собственник умер",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2cba0b92-56b8-40be-8463-d725c5620f88",
+          "nickAttr": "title",
+          "value": "Собственник умер",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4574e3e8-3b29-4ed2-bd4c-bd6009a5fbae",
+          "nickAttr": "type",
+          "value": "numBoolean",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "410908c6-f450-4841-a040-3ad0e136adaf",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1c4082cc-4e96-4697-9069-363e74a0d783",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e44b1d70-6dd7-4612-af12-cf0ad651dcad",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/isArchive",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "08f3c593-f553-4f6f-b6a8-8fb67ececef9",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6b5f728d-34e3-4eba-b0c2-f93577b32ca9",
+          "nickAttr": "name",
+          "value": "Архивная запись",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3c918e30-f506-417e-bad5-c160ecee0b2d",
+          "nickAttr": "title",
+          "value": "Архивная запись",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7478ce58-3ad9-4ca8-9276-64bd025e4749",
+          "nickAttr": "type",
+          "value": "boolean",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "111f9e7f-c36e-4f89-82ee-f15557091d45",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "da9aaf89-0cc5-4633-91ca-6187b88cb2fb",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e56a7dbd-76e7-47ab-8a4c-321363bbdde8",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/phones/phoneNumber2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cc038282-bfb9-4988-803d-be0cc1030c60",
+          "nickAttr": "isComplexPath",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7005a069-0f11-4dde-a59d-eb74bf56621b",
+          "nickAttr": "name",
+          "value": "Номер телефона 2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "89bef5b9-f159-49d1-9c29-9bda16f58cb3",
+          "nickAttr": "title",
+          "value": "Номер телефона 2",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "42536bca-34f6-4201-830f-2b2092404d8b",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e6d84edd-e4ed-4839-aeee-43cabca202a2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9ea2b24e-91e3-4fdf-9351-5c90d471805f",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a2fb93ab-d214-4a7c-881b-7b1111abcbb1",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/phones/phoneNumber3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a0a0fc38-31f4-4015-9d03-cfce7c914cef",
+          "nickAttr": "isComplexPath",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f3756c3e-9027-4b3a-b2dd-8b60333852d9",
+          "nickAttr": "name",
+          "value": "Номер телефона 3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3420ad02-52e7-44a0-959d-dd57f3f68237",
+          "nickAttr": "title",
+          "value": "Номер телефона 3",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "705ff265-0787-4304-bb42-40af9b38b982",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b95065a1-d565-4022-a74c-a1abb1541db9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d4274219-808b-4e67-82a3-21e0bf9f5ec4",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "241e9f63-f86f-4d11-aa8c-2efd43119719",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/LastName",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ac62ff00-4daf-42a9-8999-3ccde9adea1f",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "892dca42-315e-4538-82bf-f8d16e6f7c56",
+          "nickAttr": "name",
+          "value": "Фамилия жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3c16daf5-4dc0-4328-84ae-3e5f27377dc4",
+          "nickAttr": "title",
+          "value": "Фамилия жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "da5e4363-4866-47cc-8415-4001df8dbd83",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f66436bf-d236-40a0-9243-ef0810538147",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "980088e6-adb9-4698-a9de-258ee9097678",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "67df0a28-6163-4e01-ac6a-91b5559f7b05",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/FirstName",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b67b2d0e-168e-480a-b389-48a9bd8be259",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "baf129b6-0f8b-41b2-a469-7c16160860a6",
+          "nickAttr": "name",
+          "value": "Имя жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1a9483ad-35c2-4caf-a51f-f645ed58df2e",
+          "nickAttr": "title",
+          "value": "Имя жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1ad81aca-b2d3-43a4-9c3c-07107856672b",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "73cce876-9009-4cfa-8bc3-dcebfbc588ea",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a22b6893-43dc-4714-87d3-c1faebde9109",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0dae2723-b220-41df-969b-8a4e907b8039",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/birthLocation",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6cfb12fc-55bf-4fd5-b8b0-83a960a7f493",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "12bb5a7d-0f9c-4bd2-b9ad-be885f8adf0c",
+          "nickAttr": "name",
+          "value": "Место рождения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c628da2a-46a0-47f1-9d83-06fe0230ec1a",
+          "nickAttr": "title",
+          "value": "Место рождения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cb5f2c4e-11af-437f-b7b8-d5b486f68604",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "37d78918-1d9f-4728-8239-079fb78ccaa9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ed61d2cc-a627-404b-b1e0-ca69dbceafb3",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b4291957-2047-4477-a893-85f6ef7fe6d4",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/arriveMoscow",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "94912d22-eae5-4857-84f5-37615f841da5",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d1e9be7c-dce8-4408-af49-f33085a114c1",
+          "nickAttr": "name",
+          "value": "Начало проживания в Москве",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1a4818b0-7df3-43e3-9205-cb1aa2793bc8",
+          "nickAttr": "title",
+          "value": "Начало проживания в Москве",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f38ca078-53c6-4ac9-83e0-ca916ec2eafc",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b063dc38-17cb-424a-983b-a23e91179ec2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8e46c758-dcb9-4706-a9bb-ddb5b1fef72e",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e596a1e0-f2c9-47a4-ba9a-30bf0859f4cb",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/regFrom",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7277f085-e5ae-40de-b665-2804fdd421c3",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "878237aa-e422-430f-bab6-0cee475d34f0",
+          "nickAttr": "name",
+          "value": "Откуда прибыл",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1b509c92-f6ef-440e-b0ab-fef9fd8173a5",
+          "nickAttr": "title",
+          "value": "Откуда прибыл",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cf77c984-cf28-4684-a81b-8af4a00f691c",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "3905a714-16f6-4a52-88b3-c5e0a889d6ed",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fe3a5ffa-6166-45c7-b2da-be880f18dbef",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1306827f-9564-4b4a-8a4b-7b661ffd25f3",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/relType",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d06ade19-db3e-41fe-9750-64728cb1ac70",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4c744c9a-2478-4795-a5d9-7461df4927c8",
+          "nickAttr": "name",
+          "value": "Родственные отношения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8da6a0a6-a9a6-4a02-bcbe-c9718d2834ab",
+          "nickAttr": "title",
+          "value": "Родственные отношения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "173ed239-e832-48e9-84b9-44f7c1fc3df2",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "1924a753-3b84-488e-acf2-5173282f9624",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "dadcd442-7b07-48e5-a55d-73da89234594",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "762af84a-1aed-4b91-b384-beee08ac7440",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/SNILS",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3304428b-a1d4-4ced-b650-b26ae926c455",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6d4f0f52-a70e-4e47-8c42-81481d64cd07",
+          "nickAttr": "name",
+          "value": "СНИЛС",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c86d067a-b413-43d9-8e08-538345438937",
+          "nickAttr": "title",
+          "value": "СНИЛС",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e9233647-b54c-4891-bdf5-d45d57a23ccb",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "30a1fb72-4a01-497b-b2f8-230b0ab7183b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f2842b5d-c505-4139-96df-c0304a7cc39f",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "857bcef7-867c-4782-bd09-edff0029ec94",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/relocationStatus",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "77bc0ff0-5cce-42f8-b761-a6b47c2bb176",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aae534cb-54b9-4715-8a4d-5ef3e70e3d1d",
+          "nickAttr": "name",
+          "value": "Статус переселения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3a8ee212-f72f-43c4-afb3-5212e0daea4b",
+          "nickAttr": "title",
+          "value": "Статус переселения",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8b9708c3-6e18-4bc2-bbfc-c363625bd1e3",
+          "nickAttr": "type",
+          "value": "relocationStatus",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "2168fdab-7411-4764-969a-d0e2d4d92fbe",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "49046aac-b87e-461c-b25b-a40ed4fd133e",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2e402d92-d094-46bb-aaa2-6267adcbb215",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/encumbrances",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "33a7485d-811e-4a9b-8c71-e2e71db57507",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e86b2298-0f8e-468d-b2c5-00c6d72e69a5",
+          "nickAttr": "name",
+          "value": "Обременения на квартиру",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "57bbd080-c78d-46a8-8358-c7961f15cf67",
+          "nickAttr": "title",
+          "value": "Обременения на квартиру",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a823982b-e291-40f5-9946-e56ce20c3544",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "672036c6-00ff-4ed1-96de-0f1b9bdf868f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6d8e9124-0c2f-4b71-a12c-abfb9eac553e",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "44af3f17-3f98-4217-b559-8da5c2443c1b",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/addInfo/isDisable",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "14a6fa61-af2f-4065-9f0c-3cc43949327b",
+          "nickAttr": "isComplexPath",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "01fa4226-fac5-456b-84fc-4663bd6acae3",
+          "nickAttr": "name",
+          "value": "Собственник инвалид",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9a0c1c38-bfed-4f8c-a02e-4436b66786ff",
+          "nickAttr": "title",
+          "value": "Собственник инвалид",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6bc19da3-cd7a-4b2f-9352-e2ecbc187137",
+          "nickAttr": "type",
+          "value": "numBoolean",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "88c4277e-1b82-4c6a-bda5-cfa6c29e2229",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "ba1858dc-67b6-4128-a727-72608d418020",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "17023771-7fda-4752-bc0a-9653d43edbe4",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/addInfo/delReason",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "61b242ab-2d40-4cab-974d-36590e3f5982",
+          "nickAttr": "isComplexPath",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dbcd43e0-33a0-4b57-b439-481ff76a066f",
+          "nickAttr": "name",
+          "value": "Причина удаления",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "adc06984-c9f9-4763-9511-ad1928cf329b",
+          "nickAttr": "title",
+          "value": "Причина удаления",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "65be9ec9-cffd-45ca-b061-9126d919a6b4",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b55293cc-dc76-4179-96fc-b5b7a8b9823e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4161eafc-3db9-4acb-904f-409bc2cc58a7",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "10ca6e58-c08c-4f7f-84c5-a6b0e8f738a0",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/CadNum",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2502348d-2411-4c6c-9982-be1c96869164",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f1570151-daa5-4f89-aca9-d597cfd44297",
+          "nickAttr": "name",
+          "value": "Кадастровый номер отселяемого дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "87e4b40d-d8e1-48f2-9fea-1618d77cc0cf",
+          "nickAttr": "title",
+          "value": "Кадастровый номер отселяемого дома",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "69b3062f-23e7-4640-be99-19f624eff705",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "9f7b0c6a-e05a-4ad1-a144-51dacfcd5f3a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fae00d77-e33d-4cc0-b08f-a9977a6f6205",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eba8f87b-0f21-4c78-8f21-172d645ca1be",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/idCIP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "679dcb84-e40a-4eb9-a288-4ea61f962dc9",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "127561bd-6e0b-495f-a565-4fb94cf0e637",
+          "nickAttr": "name",
+          "value": "ИД ЦИП (при частичном переселении)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "db695666-2276-45b4-aceb-81891d23933c",
+          "nickAttr": "title",
+          "value": "ИД ЦИП (при частичном переселении)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "59d54fb6-2d97-48ec-b83d-eefb503990cd",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f625330f-864a-4d5a-ba1c-68c7380f3439",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "7d8ce98a-38f4-4eec-b0c9-44061372877b",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c957e826-3f55-4f2c-9f58-3afcb34e033b",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/addFlatInfo/ownFederal",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "63f11428-c909-4fab-baf0-e7f6da2130d3",
+          "nickAttr": "isComplexPath",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f44abd6b-2974-489a-9eaf-f95612d9e196",
+          "nickAttr": "name",
+          "value": "Собственность РФ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "340eed1f-6635-4f55-8d15-d427f387f074",
+          "nickAttr": "title",
+          "value": "Собственность РФ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2a249df4-147e-4837-8cd8-88b873b96fd0",
+          "nickAttr": "type",
+          "value": "numBoolean",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f4e75f22-e3d6-4845-a947-921aa97087d3",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "91a62399-3227-472e-9f27-c56b175d427a",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b9defe37-e81f-4218-9a7b-74e3311e2c04",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/MiddleName",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "175f5a46-a1ed-40e9-8662-ee235fa346cd",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "01320f10-f1af-4401-bd06-5c645c45a7b0",
+          "nickAttr": "name",
+          "value": "Отчество жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f6926cf7-0fd7-4d35-a29a-ac7a502c4798",
+          "nickAttr": "title",
+          "value": "Отчество жителя",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9df4fad2-2813-444f-8cd2-8a96c12f239e",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d2b24cd9-fc20-46ce-81be-1bd9cf3148d9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5b8df6e2-67c2-4b65-9077-ad91e476f55c",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0220a3b2-8e0a-4b50-9455-e8c114291d03",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/passport",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "57dee1cf-978e-4d61-b918-868a81ec39d5",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "407615d7-daea-46e0-81e8-1139d7562417",
+          "nickAttr": "name",
+          "value": "Паспортные данные",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fde7abc5-152e-481c-90fa-a303ddb25f87",
+          "nickAttr": "title",
+          "value": "Паспортные данные",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8a00f67c-4e28-448a-87ef-86ab72dd587f",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "2a147e26-01fb-4df1-9ce4-02469bc78a8b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "2337a03c-4625-4e44-8a18-b858c2ce3e8b",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "96a3d11d-2636-423d-af7a-67df2000af26",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/passport_prior",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "575f2ac0-be3c-4f91-bb8f-e9dda4bf2a7e",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ca0529f9-4512-4216-bc2b-a6fb666fd01a",
+          "nickAttr": "name",
+          "value": "Паспортные данные (предыдущие)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "896503f4-31a3-4453-9a0c-6a791903ee0a",
+          "nickAttr": "title",
+          "value": "Паспортные данные (предыдущие)",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9df0c9ab-c47f-4fbf-b4d1-5fdd663ac848",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e571abbe-b6d7-4ad4-9a2f-fb565826347b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c873cc3f-e1ec-4bca-aa45-cd6fd9d7a456",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6547d8f5-7f6f-4ccd-be21-5ed7bdc6803d",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/resettlementDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "040e4705-a74d-4617-947a-be5a94041703",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "44ba41cd-8a20-4e8c-9ba6-86c9dac251e4",
+          "nickAttr": "name",
+          "value": "Дата переселения квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "26a2d01c-c648-4cc0-a852-0feec54e2bbe",
+          "nickAttr": "title",
+          "value": "Дата переселения квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "973255b7-7257-4c48-8d52-15b4fc9dd2e8",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5ca4f834-2b9b-47ce-ac34-e25014f82065",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "05374cb4-a43b-492b-9b17-564b2bb48f20",
+          "nickAttr": "beanName",
+          "value": "offerLetterChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2adac124-1ced-48d9-b35d-f229cc446e6e",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/offerLetters/offerLetter/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2848bf0f-25ff-4416-8b52-581ff3eaf1fe",
+          "nickAttr": "name",
+          "value": "Письма с предложениями",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6bc69f8e-7992-48bd-9b3e-f8d617293a5b",
+          "nickAttr": "title",
+          "value": "Добавлено письмо с предложением",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4c24f349-918d-44dd-bee8-d8aa59876e1a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "cc34e1fa-17af-4e05-9965-f41a8e92aa43",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "96b39cff-115a-4deb-b18c-1563f16cd2e7",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/waiter",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2d482b30-60e9-45ea-93b7-77443f98ecb3",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "aaf5d726-8a47-4d0c-b48a-090f706beb15",
+          "nickAttr": "name",
+          "value": "Очередник",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8dea9c5d-edc4-4cbd-81d9-efebf10e3cce",
+          "nickAttr": "title",
+          "value": "Очередник",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "11f0df90-1479-4246-942d-319ff4119b8e",
+          "nickAttr": "type",
+          "value": "numBoolean",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "2ca8bb81-1f68-4ae0-bf90-e9e0741f2269",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "04778b75-a809-4eb9-8f7e-970549952ed1",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ab130e0e-ab09-44c6-8abd-ddf6dbdeb220",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/residenceReason",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6faff7ef-8f84-49be-9f1e-c89d8e00d0ac",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "962bf8cb-8556-48fa-a5fb-cd222242c86d",
+          "nickAttr": "name",
+          "value": "Основание проживания",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "835885b0-b318-4232-b379-773784c666dc",
+          "nickAttr": "title",
+          "value": "Основание проживания",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "050eda41-b72b-4339-825d-ca97362c5b13",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e763c54c-a4e8-4854-b722-4a7b682072f5",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "319c140b-2442-4599-9743-d310b83018ed",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "94e97526-530e-4e5b-bf05-8c5a2498fbf2",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/flatNum",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "41575ffc-60ba-4d53-9cad-7b39000062e6",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6802a2e6-8007-45dd-953b-1388afd30ebb",
+          "nickAttr": "name",
+          "value": "Номер квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a4873ddc-9810-4ff8-87ed-1a00df9c1c7a",
+          "nickAttr": "title",
+          "value": "Номер квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ce6a3fff-6597-48ec-8fe6-1064f2d21e87",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f9bcd2fa-a9b4-4114-a528-19228e30bb3a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "742d5f3d-24b0-492b-90d9-ab2f9a2b903a",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "03796df6-ef07-4fd6-8b9b-f6f3a1a15971",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/statusLiving",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3bccd2f8-adc9-45c8-9e68-e22e9a38106c",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1f09b18d-efc0-4b14-869a-b77aaefd85cd",
+          "nickAttr": "name",
+          "value": "Статус проживания",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ed6906ea-b500-40b7-9ae0-b22cc890a153",
+          "nickAttr": "title",
+          "value": "Статус проживания",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8462fa25-0cf6-4fb8-bf1b-9496bd0ea9ca",
+          "nickAttr": "type",
+          "value": "statusLiving",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "68f9f491-bfab-49a1-9f52-fedc2dc9c561",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "21bb5ee0-31ae-40c8-bd11-cdd822dc1ae7",
+          "nickAttr": "beanName",
+          "value": "singleChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "71695c27-557b-4144-965b-80870aac290a",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/addFlatInfo/noFlat",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bd33967e-83b6-4c82-8026-bba9346670dc",
+          "nickAttr": "isComplexPath",
+          "value": "true",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "72065f7a-398d-4482-bb70-a0efbc1dca46",
+          "nickAttr": "name",
+          "value": "Квартира без предоставления",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6abbd8e2-f84f-4865-94e2-c0d7615c1b24",
+          "nickAttr": "title",
+          "value": "Квартира без предоставления",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d565290f-beec-49ab-a8d3-b43033c5c27c",
+          "nickAttr": "type",
+          "value": "numBoolean",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "4f05c79b-e8c0-4c84-aed2-a23472c2519d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "8c3e4bb6-1526-48e0-881f-23929e73c11b",
+          "nickAttr": "beanName",
+          "value": "agreementChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "80394f1b-b5ba-4346-8631-ca7a6ac5fe58",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/agreements/agreement/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "89f12a05-6e45-4602-aa9f-561d47507e38",
+          "nickAttr": "name",
+          "value": "Согласия и отказы",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7e41e262-03a2-43e1-8c3c-4e63899d786f",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "12b6c95d-976b-4fb6-b435-a7ed29eff585",
+          "nickAttr": "beanName",
+          "value": "newFlatChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e1972da0-ff6a-460d-bf33-3e5d3c44ae82",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/newFlatInfo/newFlat/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "69c876e7-622f-4a75-98dd-11b4539f99e6",
+          "nickAttr": "name",
+          "value": "Данные заселяемой квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "dd179788-fd23-42d2-bdfd-29b7245a1036",
+          "nickAttr": "title",
+          "value": "Добавлены данные заселяемой квартиры",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d5084a05-6524-4671-ae1e-e77f392dd83c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "84941229-2a75-4099-acde-4bbab62873ea",
+          "nickAttr": "beanName",
+          "value": "releaseFlatChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e3c760e5-97d5-4d9a-a13c-40dcdeb01c23",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/releaseFlat/actDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a1964b1b-de7e-4def-ab1c-606a671bff24",
+          "nickAttr": "name",
+          "value": "Освобождение квартиры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ce465066-f410-4a95-8d52-8b9e96c7b339",
+          "nickAttr": "title",
+          "value": "Квартира освобождена",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0458e816-c0c3-4077-ba81-390a2c2e043d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "b598542f-1739-4153-8e6a-6bae27cc1222",
+          "nickAttr": "beanName",
+          "value": "keysIssueChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b9c7c9f9-8f0c-43d6-b5b8-d7f984e296b2",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/keysIssue/actDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "47b75a28-0f52-404e-8982-acc5dd30a1f3",
+          "nickAttr": "name",
+          "value": "Выдача ключей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "11aceaff-88e3-4802-a667-5e8e7abaab09",
+          "nickAttr": "title",
+          "value": "Выданы ключи",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "531740b2-0d88-43b7-91ee-982bfe563a0a",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "4c4c0dd7-905e-4a5e-827c-e28d7d22d9c1",
+          "nickAttr": "beanName",
+          "value": "sendedMessagesChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2f221cd5-dc25-4b0b-98e6-6c5216bd19ca",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/sendedMessages/Message/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6a28e4fe-4fda-4fc5-96ba-c321adc4dc1f",
+          "nickAttr": "name",
+          "value": "Отправленные сообщения в ЛК",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d77b60a3-4ac2-473c-b512-70f621b30066",
+          "nickAttr": "title",
+          "value": "Отправлено сообщение в ЛК",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f2697684-c076-4117-9961-763aca35889d",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "172fe104-8c67-47db-9e2a-a361cedd5e52",
+          "nickAttr": "beanName",
+          "value": "snilsDoublesChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3619aebd-9c44-4d9e-bdfe-75be0f384e0a",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/SNILS_Doubles/SNILS_Double/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c1ebf38d-1385-4b82-b417-67e505b91ffa",
+          "nickAttr": "name",
+          "value": "Двойники СНИЛС",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "47e8ee1d-eaca-4f8a-9ebc-974f48f78df7",
+          "nickAttr": "title",
+          "value": "Двойники СНИЛС",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "0c3c954c-0c24-4c06-b3ac-fc9c57da3898",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "f791de17-eb57-48a3-8935-f77ca2d05346",
+          "nickAttr": "beanName",
+          "value": "contractChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "babadfb4-1595-49ab-979d-cd63c0307917",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/contracts/contract/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "03a85846-7295-4110-9f77-68eb1eb168ff",
+          "nickAttr": "name",
+          "value": "Договоры",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f20f9cd7-a33a-45b0-8ed8-4c581d721e11",
+          "nickAttr": "title",
+          "value": "Добавлен договор",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "bcffdb1a-026c-4882-a8ac-425a31926893",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "bf9aa79a-44b2-4485-9b2f-357ab00decf3",
+          "nickAttr": "beanName",
+          "value": "flatDemoChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "920722d2-9508-445c-8139-5789b0086a35",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/flatDemo/flatDemoItem/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "646a912c-69b8-4285-bc6a-21911303b405",
+          "nickAttr": "name",
+          "value": "Просмотры квартир",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2d394589-bee4-44c9-8091-03e6a70934df",
+          "nickAttr": "title",
+          "value": "Внесены данные по просмотру квартиры",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "c69b4ab0-5dde-4c8c-b5e8-a3d3eeab2df2",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "30ed2b10-84c1-4eb5-8e21-fd8393cca5ea",
+          "nickAttr": "beanName",
+          "value": "contractSignChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "35583d81-87d8-4660-a0ff-a8848deee641",
+          "nickAttr": "code",
+          "value": "/Person/PersonData/contracts/contract/-/contractSignDate",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "44fb1c9f-ee54-4e64-9086-9942616d6bba",
+          "nickAttr": "name",
+          "value": "Подписание договоров",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "6cefff08-dfc8-46fd-923c-ff802197f19e",
+          "nickAttr": "title",
+          "value": "Подписан договор",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

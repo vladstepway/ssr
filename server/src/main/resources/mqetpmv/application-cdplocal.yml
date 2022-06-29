@@ -1,0 +1,76 @@
+mqetpmv:
+  etp-profiles:
+    # Запрос объектов капитального строительства из ДГИ
+    UGD_RSM_TASK_INC:
+      message-type: UGD_RSM_TASK_INC
+      artemis: true
+      inbound: true
+      artemis-host: artemis-ext-01.etp.sm-soft.ru:61616
+      username: ugd
+      password: ugd
+      queue: UGD_RSM.UGD.TASK_INC
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_RSM_STATUS_OUT:
+      message-type: UGD_RSM_STATUS_OUT
+      artemis: true
+      inbound: false
+      artemis-host: artemis-ext-01.etp.sm-soft.ru:61616
+      username: ugd
+      password: ugd
+      queue: UGD_RSM.UGD.ETP.STATUS_OUT
+    # Потоки МФР
+    UGD_FR_TASK_OUT:
+      artemis-host: artemis-ext-01.etp.sm-soft.ru:61616
+      artemis: true
+      username: ugd
+      password: ugd
+      queue: UGD_FR.UGD.ETP.TASK_OUT
+      inbound: false
+      message-type: UGD_FR_TASK_OUT
+    UGD_FR_STATUS_OUT:
+      artemis-host: artemis-ext-01.etp.sm-soft.ru:61616
+      artemis: true
+      username: ugd
+      password: ugd
+      queue: UGD_FR.UGD.ETP.STATUS_OUT
+      inbound: false
+      message-type: UGD_FR_STATUS_OUT
+    UGD_FR_TASK_INC:
+      artemis-host: artemis-ext-01.etp.sm-soft.ru:61616
+      username: ugd
+      password: ugd
+      queue: UGD_FR.UGD.TASK_INC
+      message-type: UGD_FR_TASK_INC
+      inbound: true
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_FR_STATUS_INC:
+      artemis-host: artemis-ext-01.etp.sm-soft.ru:61616
+      artemis: true
+      username: ugd
+      password: ugd
+      queue: UGD_FR.UGD.STATUS_INC
+      message-type: UGD_FR_STATUS_INC
+      inbound: true
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    # Заявление на возмещение оплаты услуг нотариуса
+    UGD_NOTARY_COMPENSATION_TASK_INC:
+      username: ugd
+      password: ugd
+      queue: TODO_QUEUE
+      artemis-host: artemis-ext-01.etp.sm-soft.ru:61616
+      artemis: true
+      inbound: true
+      message-type: UGD_NOTARY_COMPENSATION_TASK_INC
+      subscriber: /app/ugd/ssr
+      cron: 0 0/1 * * * *
+    UGD_NOTARY_COMPENSATION_STATUS_OUT:
+      artemis-host: artemis-ext-01.etp.sm-soft.ru:61616
+      artemis: true
+      username: ugd
+      password: ugd
+      queue: TODO_QUEUE
+      inbound: false
+      message-type: UGD_NOTARY_COMPENSATION_STATUS_OUT

@@ -1,0 +1,146 @@
+swagger: '2.0'
+info:
+  description: |
+    ССР. Сервис для загрузки документов.
+  version: 1.0.0
+  title: SSR Personal Documents
+schemes:
+  - http
+
+paths:
+  /personal-documents/check:
+    get:
+      summary: Выполнение проверок и получение сведений о загруженных жителем документах
+      operationId: checkDocuments
+      tags:
+        - PersonalDocument
+      produces:
+        - application/json
+      parameters:
+        - name: snils
+          in: query
+          description: СНИЛС, пример 001-198-166 10
+          required: true
+          type: string
+        - name: ssoId
+          in: query
+          description: ssoId, пример cd4b6f7c-81d6-45ea-bf3f-e73c0750f84b
+          required: true
+          type: string
+      responses:
+        200:
+          description: Результат проверки и сведения о жильцах и помещениях
+          schema:
+            $ref: '#/definitions/Check'
+        400:
+          description: Данные запроса невалидны
+definitions:
+  Check:
+    type: object
+    properties:
+      isPossible:
+        type: boolean
+        description: Возможно ли предоставление услуги
+        example: true
+      reason:
+        type: string
+        description: Причина по которой невозможно предоставить услугу
+      apartments:
+        uniqueItems: true
+        type: array
+        items:
+          $ref: '#/definitions/Apartment'
+    required: [ isPossible ]
+  Apartment:
+    type: object
+    properties:
+      address:
+        type: string
+        description: Адрес
+      flatNumber:
+        type: string
+        description: Номер квартиры
+      roomNumber:
+        type: string
+        description: Номер комнаты
+      status:
+        type: string
+        description: Статус
+        example: Собственность
+      requestDocumentId:
+        type: string
+        description: Идентификатор документа запроса документов
+      documentUploadRequired:
+        type: boolean
+        description: Требуется загрузка документов
+        example: true
+      documents:
+        uniqueItems: true
+        type: array
+        description: Запрашиваемые документы
+        items:
+          $ref: '#/definitions/Document'
+      tenants:
+        uniqueItems: true
+        type: array
+        description: Жильцы квартиры
+        items:
+          $ref: '#/definitions/Tenant'
+    required: [ address, flatNumber, status, documentUploadRequired ]
+  Tenant:
+    type: object
+    properties:
+      personDocumentId:
+        type: string
+        description: Идентификатор документа жильца в системе ССР
+        example: 047d4c24-fae9-43b5-8419-240af84e895e
+      ssoId:
+        type: string
+        description: SSOID
+        example: ee619083-58e8-4c6c-b770-f86dc3253f7d
+      lastName:
+        type: string
+        description: Фамилия
+        example: Иванов
+      firstName:
+        type: string
+        description: Имя
+        example: Иван
+      middleName:
+        type: string
+        description: Отчество
+        example: Иванович
+      dob:
+        type: string
+        format: date
+        description: Дата рождения
+      status:
+        type: string
+        description: Статус
+        example: Зарегистрированный
+      documentUploadRequired:
+        type: boolean
+        description: Требуется загрузка документов
+        example: true
+      documents:
+        uniqueItems: true
+        type: array
+        description: Запрашиваемые документы
+        items:
+          $ref: '#/definitions/Document'
+    required: [ personDocumentId, lastName, firstName, dob, status, documentUploadRequired ]
+  Document:
+    type: object
+    properties:
+      typeName:
+        type: string
+        description: Название типа документа
+        example: Правоустанавливающий документ
+      typeCode:
+        type: string
+        description: Тип документа (от 1-12)
+        example: 1
+      comment:
+        type: string
+        description: Комментарий к запрашиваемому документу
+    required: [ typeName, typeCode ]

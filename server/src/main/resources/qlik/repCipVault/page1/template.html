@@ -1,0 +1,115 @@
+<div qv-extension>
+    <table>
+        <caption>
+            <b>СВОДНАЯ ИНФОРМАЦИЯ ПО РЕЗУЛЬТАТАМ РАБОТЫ ЦЕНТРОВ ИНФОРМИРОВАНИЯ ПО ПЕРЕСЕЛЕНИЮ ЖИТЕЛЕЙ</b>
+            <br>
+            ПО СОСТОЯНИЮ НА
+            <b>{{ todayDate }}</b>
+        </caption>
+
+        <thead>
+
+        <tr>
+            <th rowspan="2" style="white-space: nowrap; width: 6%;">
+                <p class="content-vertical">№ п.п.</p>
+            </th>
+            <th rowspan="2" style="width: 55px;">
+                <p class="content-vertical">АО</p>
+            </th>
+            <th style="width: 6%;" rowspan="2">Количество домов</th>
+            <th rowspan="2">Единица измерения</th>
+            <th style="width: 36%;" colspan="6">Департамент городского имущества г. Москвы (ДГИ)</th>
+            <th style="width: 24%;" colspan="4">Московский фонд реновации жилой застройки</th>
+            <th style="width: 12%;" colspan="2">Переселение</th>
+        </tr>
+        <tr>
+            <th style="width: 6%;" class="border-dotted">Всего квартир в доме</th>
+            <th style="width: 6%;" class="border-dotted">Всего квартир подлежит переселению</th>
+            <th style="width: 6%;" class="border-dotted">Свободно квартир</th>
+            <th style="width: 6%;" class="border-dotted">Дали согласия</th>
+            <th style="width: 6%;" class="border-dotted">Заключены договора</th>
+            <th style="width: 6%;" class="border-dotted border-right-solid">Отказы</th>
+
+            <th style="width: 6%;" class="border-dotted">Заявления на докупку</th>
+            <th style="width: 6%;" class="border-dotted">Квартир на компенсацию</th>
+            <th style="width: 6%;" class="border-dotted">Согласия на компенсацию</th>
+            <th style="width: 6%;" class="border-dotted border-right-solid">Отказ от компенсации</th>
+
+            <th style="width: 6%;" class="border-dotted">Всего переселено</th>
+            <th style="width: 6%;" class="border-dotted border-right-solid">Оказано содействие в переезде</th>
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr ng-repeat-start="row in hc1.qDataPages[0].qMatrix track by $index">
+            <td rowspan="2">{{ $index + 1 }}</td>
+            <td rowspan="2">{{ row[0].qText }}</td>
+            <td rowspan="2">{{ row[1].qText }}</td>
+            <td class="border-bottom-none">Колличество</td>
+            <td class="border-bottom-none">{{ row[2].qText }}</td>
+            <td class="border-bottom-none">{{ row[3].qText }}</td>
+            <td class="border-bottom-none">{{ row[4].qText }}</td>
+            <td class="border-bottom-none">{{ row[5].qText }}</td>
+            <td class="border-bottom-none">{{ row[6].qText }}</td>
+            <td class="border-bottom-none">{{ row[7].qText }}</td>
+            <td class="border-bottom-none">{{ row[8].qText }}</td>
+            <td class="border-bottom-none">{{ row[9].qText }}</td>
+            <td class="border-bottom-none">{{ row[10].qText }}</td>
+            <td class="border-bottom-none">{{ row[11].qText }}</td>
+            <td class="border-bottom-none">{{ row[12].qText }}</td>
+            <td class="border-bottom-none">{{ row[13].qText }}</td>
+        </tr>
+        <tr ng-repeat-end class="bg-green">
+            <td class="border-top-dotted">Процент</td>
+            <td class="border-top-dotted">{{ row[14].qText }}</td>
+            <td class="border-top-dotted">{{ row[15].qText }}</td>
+            <td class="border-top-dotted">{{ row[16].qText }}</td>
+            <td class="border-top-dotted">{{ row[17].qText }}</td>
+            <td class="border-top-dotted">{{ row[18].qText }}</td>
+            <td class="border-top-dotted">{{ row[19].qText }}</td>
+            <td class="border-top-dotted">{{ row[20].qText }}</td>
+            <td class="border-top-dotted">{{ row[21].qText }}</td>
+            <td class="border-top-dotted">{{ row[22].qText }}</td>
+            <td class="border-top-dotted">{{ row[23].qText }}</td>
+            <td class="border-top-dotted">{{ row[24].qText }}</td>
+            <td class="border-top-dotted">{{ row[25].qText }}</td>
+        </tr>
+
+        <tr class="text-blue font-bold">
+            <td rowspan="2" colspan="2" class="text-black">Итого</td>
+            <td rowspan="2">{{ hc1.qGrandTotalRow[0].qText }}</td>
+            <td class="border-bottom-none">Колличество</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[1].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[2].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[3].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[4].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[5].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[6].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[7].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[8].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[9].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[10].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[11].qText }}</td>
+            <td class="border-bottom-none">{{ hc1.qGrandTotalRow[12].qText }}</td>
+        </tr>
+        <tr class="bg-green text-blue font-bold">
+            <td class="border-top-dotted">Процент</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[13].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[14].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[15].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[16].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[17].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[18].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[19].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[20].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[21].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[22].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[23].qText }}</td>
+            <td class="border-top-dotted">{{ hc1.qGrandTotalRow[24].qText }}</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>

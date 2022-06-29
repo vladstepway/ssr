@@ -1,0 +1,649 @@
+{
+  "metaDict": {
+    "nick": "ugd_ssr_cipChangelogAttributes",
+    "name": "Атрибуты для журнала изменений центра информирования о переселении",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "UGD_SSR",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 1
+      },
+      {
+        "nick": "title",
+        "name": "Заголовок",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "type",
+        "name": "Тип",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "beanName",
+        "name": "Наименование бина для обработки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "isComplexPath",
+        "name": "Путь комплексный",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "a4e9afd1-a060-4f2f-a0ae-08bb3d25367c",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "9e1accb3-111c-4fda-903b-7ad26923a735",
+          "nickAttr": "beanName",
+          "value": "cipChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fba1dd7f-72ba-4985-94e0-cc6c732fbc7d",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/WorkTime",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "295cd324-c00b-44b3-b7f5-c1249bd4b598",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "99e96143-bded-442e-a2b3-52c419ec92fb",
+          "nickAttr": "name",
+          "value": "Режим работы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1eac90f9-bc4d-4bef-bf13-7132d524e6ae",
+          "nickAttr": "title",
+          "value": "Режим работы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "90b00e13-68e3-491e-9a01-e88c57ad7d50",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "98bebef0-1fdf-4fbc-8e19-311a09495190",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c81b7e78-588b-4950-a2f4-d9ab21859fa4",
+          "nickAttr": "beanName",
+          "value": "cipChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "433651ae-cb63-4ac2-a1b5-ca5a07475866",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/Area/name",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "036cee99-8db8-452c-939f-5bb3f352a6be",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "52f53402-4504-403f-93c4-75074d513981",
+          "nickAttr": "name",
+          "value": "Район",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8f3b233f-a065-4843-a0c8-290649a2328d",
+          "nickAttr": "title",
+          "value": "Район",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3fc351f9-d4bc-4d15-8112-85f5e9626dfc",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7b815fa2-10fe-4ec6-9c04-b089b18ccb90",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "efb0682e-edb2-485b-9c37-0ae0d7563569",
+          "nickAttr": "beanName",
+          "value": "cipChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "12e9827d-0ae3-4aaa-b070-c30040a17e13",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/Address",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8bb97e4d-92cf-4011-b2a8-391a82e2ebab",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0464f618-d77f-4879-a087-ead4c780a3a0",
+          "nickAttr": "name",
+          "value": "Адрес",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bcf11317-475f-4459-9373-c2a393e76bd1",
+          "nickAttr": "title",
+          "value": "Адрес",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "20411442-e302-4ef0-ae88-07325b8e3947",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "bab247bb-3c60-4011-bc9f-970488c12552",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5ac8f659-b9a2-4de6-8a8e-9908a93896f7",
+          "nickAttr": "beanName",
+          "value": "cipChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b49e3ade-691e-4c31-95f0-54fabb3f38ef",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/cipDateEnd",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2029cf59-7131-4fe3-ab33-be37ed2f876e",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "07ae7527-60a5-4f0d-8c38-48ea66ad7e03",
+          "nickAttr": "name",
+          "value": "Дата окончания работы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "74abbffd-1492-41fd-bcee-9687f6a7671a",
+          "nickAttr": "title",
+          "value": "Дата окончания работы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4d3dd942-203e-4106-8348-08f7c9321e7a",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "024af033-7f8b-4cc6-998b-12823a2f3b8e",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "3028e67b-2001-46d4-911f-52e411115f82",
+          "nickAttr": "beanName",
+          "value": "cipChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4f702d5c-ec01-4d59-a8ef-cfc7e45fc673",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/cipDateStart",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c63df914-e36f-4fc4-887b-578f3a2eb995",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b7293adb-1739-4516-8243-4161a0679fc2",
+          "nickAttr": "name",
+          "value": "Дата начала работы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b2790e54-8065-4fee-87b1-0148beaf3589",
+          "nickAttr": "title",
+          "value": "Дата начала работы",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1febc33f-c293-41eb-823a-f8d68fa63b0f",
+          "nickAttr": "type",
+          "value": "date",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "b9431d24-6ed9-46ae-9db3-c1a45d9b2b42",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a2afb9f1-691a-464a-b4de-227b5959821b",
+          "nickAttr": "beanName",
+          "value": "cipChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c406ab77-f456-40cc-9fe4-480a990c7417",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/District/name",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "90e775a9-13f6-4093-949c-32d0ae9cb1d1",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "223d7970-01ae-43c0-9c7b-fc3fcf89b0d7",
+          "nickAttr": "name",
+          "value": "Округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fd08a5c5-192c-41af-bc6f-14cba80be9b9",
+          "nickAttr": "title",
+          "value": "Округ",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "be8e363e-ed57-4cd6-93bc-a71c80682485",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "89ca22f7-fe73-4d21-8ac1-6666397baaa0",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1c173107-9da1-4f01-8fb5-219185ed8fcf",
+          "nickAttr": "beanName",
+          "value": "cipChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ca922e35-556c-4bbd-9279-223221ae73cd",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/Phone",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1cb677a9-0d72-42e6-b160-098639f176a1",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "cc338f44-4088-4608-938c-ac7328b33a7e",
+          "nickAttr": "name",
+          "value": "Телефон",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "15c891e4-1ff3-49a3-aa7f-838b39ec5278",
+          "nickAttr": "title",
+          "value": "Телефон",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0bfe07bb-0f90-4263-89fd-479a6b8fcb05",
+          "nickAttr": "type",
+          "value": "string",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "7acfbc35-dfba-441c-95cc-8950c5edd797",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "6e8888a2-0346-485c-b036-774c7816adf4",
+          "nickAttr": "beanName",
+          "value": "cipChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "12ba0f04-f28a-4b4f-8faa-87c1c48951fc",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/LinkedHouses/Link/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "edabcd59-95d2-41ac-936c-ae5363b4281a",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "fd3a377f-39e5-4138-ad6b-b99efaff36e9",
+          "nickAttr": "name",
+          "value": "Дом",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2d5aa171-1145-488f-9d57-73816c34624d",
+          "nickAttr": "title",
+          "value": "Дом",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d6d695c1-01c1-400d-9c7e-8ca2ea1945a1",
+          "nickAttr": "type",
+          "value": "house",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "5b7d469f-2fe9-401a-94db-be40300c94da",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "04baf5ce-76fd-4872-bc45-3088e7ac82e1",
+          "nickAttr": "beanName",
+          "value": "cipChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "c2a41d0b-5a86-43a8-a9d4-749ac31b5af6",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/Employees/Employee/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8fc6a962-2850-48be-a346-d42203dd2fd8",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f59eee4a-9381-4385-a5bd-88261f8b2d69",
+          "nickAttr": "name",
+          "value": "Сотрудник",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "df93174c-0e9e-44c0-9c4a-c609be92b43e",
+          "nickAttr": "title",
+          "value": "Сотрудник",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "376e1679-e062-4b4e-a2d8-a42905126d85",
+          "nickAttr": "type",
+          "value": "employee",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "d3661634-2bed-48df-af35-5dae812f6ca9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "033e69be-d57d-41e0-a7a4-db5e61b2f412",
+          "nickAttr": "beanName",
+          "value": "dayScheduleEventChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "34ffa6a7-3e9c-4ae6-8863-164e0bdcb222",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/ContractAppointmentDayScheduleEvents/DayScheduleEvent/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "89e253f8-7c99-4d8e-8756-76a7f1062731",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9e575c6a-f949-4ce4-96f8-8b1cd301362c",
+          "nickAttr": "name",
+          "value": "Событие расписания на заключение договоров",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d032b664-2e2c-4d29-bf4b-ac268a77dd94",
+          "nickAttr": "title",
+          "value": "Произошло событие расписания на заключение договоров",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d8456c72-a5eb-4056-9247-3192d1ef1c46",
+          "nickAttr": "type",
+          "value": "contractAppointmentDayScheduleEvent",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "347bc5c7-f15e-4631-8ccd-95f626de4cb9",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d4ebe6ba-f0d3-4f11-93fa-d8834b863d30",
+          "nickAttr": "beanName",
+          "value": "dayScheduleEventChangelogAttributeProcessor",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f3fd4d45-0ca3-40f0-9f84-546e1c8cc3ed",
+          "nickAttr": "code",
+          "value": "/Cip/cipData/FlatAppointmentDayScheduleEvents/DayScheduleEvent/-",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3e1e0f5a-3187-499c-ac9e-fcc5e5b570a9",
+          "nickAttr": "isComplexPath",
+          "value": "false",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d1a4be49-c6e4-4f66-9bc6-d70d5685ee5e",
+          "nickAttr": "name",
+          "value": "Событие расписания осмотров квартир",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "b5e5a8b0-195f-401e-b56c-60cacbd98c86",
+          "nickAttr": "title",
+          "value": "Произошло событие расписания осмотров квартир",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "19ba4e17-711b-4bc7-8032-292d352e6b98",
+          "nickAttr": "type",
+          "value": "flatAppointmentDayScheduleEvent",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+Удалить документ акта:
+1) Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2) Выбрать "Удаление документа заданного типа" и нажать Try it out
+3) Ввести anyDocumentTypeCode = APARTMENT-INSPECTION ; id = 709e821f-4287-49af-bca9-1303a6a6a06d
+4) Нажать Execute и убедиться, что статус код будет 2xx
+
+Удалить бизнес процесс:
+1) Открыть https://smart.mos.ru/app/ugd/bpm/swagger-ui.html#/process-instance-resource
+2) Выбрать "deleteProcessInstance" и нажать Try it out
+3) Ввести processInstanceId = 4384904
+4) Нажать Execute и убедиться, что статус код будет 2xx
+
+Удалить историю из жителя:
+1) Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2) Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3) Ввести anyDocumentTypeCode = PERSON; id = 0aecc9b1-7f7b-4e09-97c4-61b212b267ac; jsonPatch =
+[
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/12"
+    },
+    {
+        "op": "remove",
+        "path": "/Person/PersonData/resettlementHistory/10"
+    }
+]
+4) Нажать Execute и убедиться, что статус код ответа 200

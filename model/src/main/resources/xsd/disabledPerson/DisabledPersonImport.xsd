@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/disabledPerson"
+           targetNamespace="http://www.ugd.croc.ru/ssr/disabledPerson"
+           elementFormDefault="qualified">
+    <xs:element name="DisabledPersonImport">
+        <xs:annotation>
+            <xs:documentation>Загрузка сведений по маломобильным гражданам</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="disabledPersonImportData" type="DisabledPersonImportData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="DisabledPersonImportData">
+        <xs:annotation>
+            <xs:documentation>Данные о загрузке сведений по маломобильным гражданам</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="creationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время создания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="uploadedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД загруженного файла в FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="status" type="ImportStatus">
+                <xs:annotation>
+                    <xs:documentation>Статус загрузки данных</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="disabledPersonRow" type="DisabledPersonRow" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Сведения о маломобильных гражданах</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="percentageReady" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Процент готовности загрузки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="allRowsNumber" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Общее кол-во строк в документе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="loadedOkRowsNumber" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Обработанное кол-во строк в документе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="loadedNokRowsNumber" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Обработанное с ошибками кол-во строк в документе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processedFileId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД обработанного файла в системе FileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="warnings" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Замечания при обработке файла</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="errorDetails" type="ErrorDescription" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Описание ошибки загрузки данных</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="ImportStatus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1">
+                <xs:annotation>
+                    <xs:documentation>Успешно завершен</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="2">
+                <xs:annotation>
+                    <xs:documentation>В обработке</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="3">
+                <xs:annotation>
+                    <xs:documentation>Завершен с ошибкой</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="ErrorDescription">
+        <xs:annotation>
+            <xs:documentation>Описание ошибки загрузки данных</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="dateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время ошибки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="stacktrace" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Детальный стектрейс ошибки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="description" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Описание ошибки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="DisabledPersonRow">
+        <xs:annotation>
+            <xs:documentation>Сведения о маломобильном гражданине</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="uniqueExcelRecordId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Уникальный идентификатор строки в excel (вычисляемое поле)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="disabledPersonDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД документа сведений о маломобильности жителя (если данные уже были загружены)
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="personDocumentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД документа жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="lastName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Фамилия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="firstName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Имя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="middleName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Отчество</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="birthDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Дата рождения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullAddressFrom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес отселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="addressFrom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес отселяемого дома (без номера квартиры)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatNumber" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер квартиры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="phone" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Номер телефона</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="usingWheelchair" type="xs:boolean">
+                <xs:annotation>
+                    <xs:documentation>Использование кресла-коляски</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>УНОМ дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="area" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Округ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="district" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Район</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="comment" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Комментарий к загрузке</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="pageName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Название страницы</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="rowNumber" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Номер строки</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

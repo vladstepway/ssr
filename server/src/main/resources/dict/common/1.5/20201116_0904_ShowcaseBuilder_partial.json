@@ -1,0 +1,531 @@
+{
+  "metaDict": {
+    "nick": "ShowcaseBuilder",
+    "name": "Настройки витрин",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": "Настройки витрин для конструктора витрин",
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "showcaseCode",
+        "name": "Код витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "showcaseName",
+        "name": "Наименование витрины",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "systemCode",
+        "name": "Код системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      },
+      {
+        "nick": "systemName",
+        "name": "Наименование системы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemCode",
+        "name": "Код подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "subsystemName",
+        "name": "Наименование подсистемы",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "documentCode",
+        "name": "Код документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "documentName",
+        "name": "Наименование документа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "settings",
+        "name": "Настройки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "76f19053-37da-41f8-8c9e-10e85837f690",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "a0bfae30-6e1d-441b-b516-87e3532dc686",
+          "nickAttr": "code",
+          "value": "ugd_ssr_cip_catalog_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "84d982f9-27c5-41c5-ab02-df7260a729e1",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_CIP",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f14e0879-509a-4b67-85aa-45f96418c1bb",
+          "nickAttr": "documentName",
+          "value": "Центр информирования по переселению жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e369f0d5-b34d-4004-b21f-1447dfea7a62",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Каталог центров информирования по переселению\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Центры информирования по переселению</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по адресу ЦИП\",\"fields\":[{\"code\":\"ugd_ssr_cip_address\",\"type\":\"text\",\"name\":\"Адрес\"},{\"code\":\"ugd_ssr_cip_area\",\"type\":\"dictionary\",\"name\":\"Округ\",\"dictionary\":\"Prefect\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"fullName\",\"filterable\":true},{\"code\":\"ugd_ssr_cip_code\",\"type\":\"text\",\"name\":\"Код ЦИП\"},{\"code\":\"ugd_ssr_cip_del_reason\",\"type\":\"text\",\"name\":\"Причина удаления\"},{\"code\":\"ugd_ssr_cip_district\",\"type\":\"dictionary\",\"name\":\"Район\",\"dictionary\":\"District\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"name\",\"filterable\":true},{\"code\":\"ugd_ssr_cip_end_date\",\"type\":\"date\",\"name\":\"Дата окончания работы ЦИП\"},{\"code\":\"ugd_ssr_cip_start_date\",\"type\":\"date\",\"name\":\"Дата начала работы ЦИП\"},{\"code\":\"ugd_ssr_cip_phone\",\"type\":\"text\",\"name\":\"Телефон ЦИП\"},{\"code\":\"ugd_ssr_cip_status\",\"type\":\"dictionary\",\"name\":\"Статус ЦИП\",\"dictionary\":\"ugd_ssr_cipStatuses\",\"dictionaryCode\":\"code\",\"dictionaryText\":\"name\",\"dictionaryAttrs\":[\"name\",\"code\"]},{\"code\":\"ugd_ssr_cip_work_time\",\"type\":\"text\",\"name\":\"Режим работы\"},{\"code\":\"ugd_ssr_cip_settelment_count\",\"type\":\"number\",\"name\":\"Количество заселяемых домов\"},{\"code\":\"ugd_ssr_cip_resettelment_count\",\"type\":\"text\",\"name\":\"Количество расселяемых домов\"},{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"}],\"tableColumns\":[{\"name\":\"Адрес центра переселения (округ, район)\",\"fieldCode\":\"ugd_ssr_cip_address\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/cip/{{ item.sys_documentId }}\\\" target=\\\"_blank\\\">\\n{{ item.ugd_ssr_cip_address }} {{item.ugd_ssr_cip_area ||  item.ugd_ssr_cip_district ?  '(' : ''}}{{ item.ugd_ssr_cip_area?.name }}{{item.ugd_ssr_cip_area &&  item.ugd_ssr_cip_district ?  ', ' : ''}}{{ item.ugd_ssr_cip_district?.name }}{{item.ugd_ssr_cip_area ||  item.ugd_ssr_cip_district ?  ')' : ''}}\\n</a>\"},{\"name\":\"Отселяемых домов\",\"fieldCode\":\"ugd_ssr_cip_resettelment_count\",\"template\":\"{{ item.ugd_ssr_cip_resettelment_count}}\"},{\"name\":\"Заселяемых домов\",\"fieldCode\":\"ugd_ssr_cip_settelment_count\",\"template\":\"{{ item.ugd_ssr_cip_settelment_count}}\"},{\"name\":\"Дата открытия центра\",\"fieldCode\":\"ugd_ssr_cip_start_date\",\"template\":\"{{ item.ugd_ssr_cip_start_date | date:'dd.MM.yyyy' }}\"},{\"name\":\"Дата закрытия центра\",\"fieldCode\":\"ugd_ssr_cip_end_date\",\"template\":\"{{ item.ugd_ssr_cip_end_date | date:'dd.MM.yyyy' }}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_cip_status\",\"template\":\"{{ item.ugd_ssr_cip_status?.name }}\"}],\"filters\":[{\"name\":\"Округ\",\"fieldCode\":\"ugd_ssr_cip_area\",\"multiple\":true,\"template\":\"{{item.code}}\",\"usingDictionaryLinks\":true,\"placement\":\"bottom\"},{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_cip_district\",\"multiple\":true,\"usingDictionaryLinks\":true,\"placement\":\"bottom\"},{\"name\":\"Адрес\",\"fieldCode\":\"ugd_ssr_cip_address\",\"placement\":\"bottom\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_cip_status\",\"placement\":\"bottom\"}],\"dictionaryLinks\":[{\"dictionary\":\"Prefect\",\"linkedDictionary\":\"District\",\"code\":\"perfectId\"}],\"isNewSearch\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d2bae878-27b6-48de-9169-ca3990a98295",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_cip_catalog",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "92d26f31-4398-45ba-8152-5159d56ca415",
+          "nickAttr": "showcaseName",
+          "value": "Каталог центров информирования по переселению жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "7073398e-cb8f-4ba0-8bf7-c1719cac33e5",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3445cece-d0b8-4598-bd76-159b20073fd3",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1ae5bc82-3b39-4524-aed2-0fbf829b83d4",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ce937e46-2c86-481d-ba03-a30a8f740fa2",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "eba7d579-f49d-4fb9-9ff8-7ec00f90f88b",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "dd945954-cbe1-47cb-a60f-bec5fa17ea8a",
+          "nickAttr": "code",
+          "value": "ugd_ssr_person_arm_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5d6301e8-c1ea-4f22-9dcf-4a4631a6fe22",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_PERSON",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9f9f6ad1-57ce-4ada-bf70-c423cd52395d",
+          "nickAttr": "documentName",
+          "value": "Житель",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d670830-584b-4314-b922-37e1b26d145a",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Каталог жителей\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Жители</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"changeTableColumns\":true,\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_person_fio\",\"type\":\"text\",\"name\":\"Фамилия, имя, отчество\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_real_estate_address\",\"type\":\"text\",\"name\":\"Адрес (откуда)\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_settle_address\",\"type\":\"text\",\"name\":\"Адрес (куда)\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_relocation_status\",\"type\":\"text\",\"name\":\"Статус\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_residence_reason\",\"type\":\"dictionary\",\"name\":\"Основание проживания\",\"dictionary\":\"ugd_ssr_residenceReasons\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"name\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_information_center_code\",\"type\":\"dictionary\",\"name\":\"Код центра информирования по переселению\",\"dictionary\":\"ugd_ssr_informationCenters\",\"dictionaryCode\":\"code\",\"dictionaryText\":\"address\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_prefect\",\"type\":\"dictionary\",\"name\":\"Округ проживания\",\"dictionary\":\"Prefect\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"fullName\",\"sortable\":true,\"filterable\":true},{\"code\":\"ugd_ssr_person_district\",\"type\":\"dictionary\",\"name\":\"Район проживания\",\"dictionary\":\"District\",\"dictionaryCode\":\"code\",\"dictionaryText\":\"name\",\"sortable\":true,\"filterable\":true},{\"code\":\"ugd_ssr_person_isNotArchived\",\"type\":\"boolean\",\"name\":\"Актуальный\",\"filterable\":true}],\"tableColumns\":[{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_person_fio\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/person-arm-card/{{item.sys_documentId}}\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_person_fio}}\\n</a>\"},{\"name\":\"Адрес (откуда)\",\"fieldCode\":\"ugd_ssr_person_real_estate_address\",\"template\":\"{{item.ugd_ssr_person_real_estate_address}}\"},{\"name\":\"Адрес (куда)\",\"fieldCode\":\"ugd_ssr_person_settle_address\",\"template\":\"{{item.ugd_ssr_person_settle_address}}\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_person_relocation_status\",\"template\":\"{{item.ugd_ssr_person_relocation_status}}\"},{\"name\":\"Основание проживания\",\"fieldCode\":\"ugd_ssr_person_residence_reason\",\"template\":\"{{item.ugd_ssr_person_residence_reason?.name}}\"}],\"filters\":[{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_person_fio\",\"placement\":\"bottom\"},{\"name\":\"Округ\",\"fieldCode\":\"ugd_ssr_person_prefect\",\"multiple\":true,\"usingDictionaryLinks\":true,\"placement\":\"bottom\"},{\"name\":\"Район\",\"fieldCode\":\"ugd_ssr_person_district\",\"multiple\":true,\"placement\":\"bottom\"},{\"name\":\"Центр информирования по переселению\",\"fieldCode\":\"ugd_ssr_person_information_center_code\",\"multiple\":true,\"placement\":\"bottom\"},{\"name\":\"Адрес (откуда)\",\"fieldCode\":\"ugd_ssr_person_real_estate_address\",\"placement\":\"bottom\"},{\"name\":\"Адрес (куда)\",\"fieldCode\":\"ugd_ssr_person_settle_address\",\"placement\":\"bottom\"},{\"name\":\"Основание проживания\",\"fieldCode\":\"ugd_ssr_person_residence_reason\",\"multiple\":true,\"placement\":\"bottom\"},{\"name\":\"Только актуальные\",\"fieldCode\":\"ugd_ssr_person_isNotArchived\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_person_fio\"},{\"name\":\"Адрес (откуда)\",\"fieldCode\":\"ugd_ssr_person_real_estate_address\"},{\"name\":\"Адрес (куда)\",\"fieldCode\":\"ugd_ssr_person_settle_address\"},{\"name\":\"Статус\",\"fieldCode\":\"ugd_ssr_person_relocation_status\"},{\"name\":\"Основание проживания\",\"fieldCode\":\"ugd_ssr_person_residence_reason\"}],\"dictionaryLinks\":[{\"dictionary\":\"Prefect\",\"linkedDictionary\":\"District\",\"code\":\"perfectId\"}],\"isNewSearch\":true,\"defaultFilters\":{\"ugd_ssr_person_isNotArchived\":true}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "5018f670-b70d-4487-90f3-1c1143a2f9d6",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_person_arm",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "644d4b90-abed-468a-ab0a-64a070a5948b",
+          "nickAttr": "showcaseName",
+          "value": "АРМ сотрудника Центра информирования по переселению жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "66110704-96d6-483d-ab61-03992f19aeec",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4df73365-a806-45af-8b28-4dafb90033b3",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "41d87799-202f-4fc7-be64-69bc06299bd8",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2e65ebaa-2e9a-42fb-bd98-410684e5b1f2",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "af02a5bb-275d-4bfc-bc13-d1e3e0130eac",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "d3ec9878-8cad-40d5-9b1b-e0658cd12a11",
+          "nickAttr": "code",
+          "value": "ugd_ssr_dashboard_catalog_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ad511132-263c-4f98-bd8f-71e73395f6fc",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_DASHBOARD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "10d3a05c-acf8-49d7-a65b-97aacabc8810",
+          "nickAttr": "documentName",
+          "value": "Статистическая информация о переселении",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8d4e7ebd-505b-4699-a208-96ead26936cf",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Каталог статистической информации о переселении\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Статистическая информации о переселении</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"separateSorting\":true,\"changeTableColumns\":true,\"fields\":[{\"code\":\"informationDate\",\"type\":\"date\",\"name\":\"Информация на дату\",\"sortable\":true,\"filterable\":true},{\"code\":\"isArchived\",\"type\":\"boolean\",\"name\":\"Архивная запись\",\"sortable\":true,\"filterable\":true},{\"code\":\"totalNewBuildings\",\"type\":\"number\",\"name\":\"Всего новостроек\",\"sortable\":true,\"filterable\":true},{\"code\":\"totalResettlementsBuildings\",\"type\":\"number\",\"name\":\"Всего отселяемых\",\"sortable\":true,\"filterable\":true},{\"code\":\"published\",\"type\":\"boolean\",\"name\":\"Запись опубликована\",\"sortable\":true,\"filterable\":true}],\"tableColumns\":[{\"name\":\"Информация на дату\",\"fieldCode\":\"informationDate\",\"template\":\"<a [href]=\\\"'/ugd/ssr/#/app/dashboard/' + item.sys_documentId\\\">{{item.informationDate | date:'dd.MM.yyyy'}}</a>\"},{\"name\":\"Всего домов стартовых / отселяемых\",\"fieldCode\":\"totalNewBuildings\",\"template\":\"{{item.totalNewBuildings}} / {{item.totalResettlementsBuildings}}\"},{\"name\":\"Архивная запись\",\"fieldCode\":\"isArchived\",\"template\":\"<span *ngIf=\\\"item.isArchived\\\">Да</span>\",\"filterable\":true},{\"name\":\"Запись опубликована\",\"fieldCode\":\"published\",\"template\":\"<span *ngIf=\\\"item.published\\\">Да</span>\\n<span *ngIf=\\\"!item.published\\\">Нет</span>\"}],\"filters\":[{\"name\":\"Отображать только архивные записи\",\"fieldCode\":\"isArchived\",\"placement\":\"bottom\"},{\"name\":\"Отображать только опубликованные записи\",\"fieldCode\":\"published\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Информация на дату\",\"fieldCode\":\"informationDate\"},{\"name\":\"Всего стартовых домов\",\"fieldCode\":\"totalNewBuildings\"},{\"name\":\"Всего отселяемых домов\",\"fieldCode\":\"totalResettlementsBuildings\"},{\"name\":\"Архивная запись\",\"fieldCode\":\"isArchived\"},{\"name\":\"Опубликовано\",\"fieldCode\":\"published\"}],\"isNewSearch\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e22ce7d8-0273-4af2-9255-2de48668a8e4",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_dashboard_catalog",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f09b092b-3f36-48a0-a62b-8c35c73b9982",
+          "nickAttr": "showcaseName",
+          "value": "Статическая информация о переселении",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "78a98ad8-718e-4f40-b038-17964b0b1bea",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a118733b-8ce5-4211-af4b-95322d65c06d",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "bba77d67-f5ed-458c-8730-aad110d34f21",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8e5dd998-254e-414a-9c8d-c91032ce9416",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "f24ae397-6705-4fbb-8bc1-1515f8b1f482",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "c54da409-0712-42d2-ada8-46bf51ad9f55",
+          "nickAttr": "code",
+          "value": "ugd_ssr_person_catalog_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ab9bf36d-2488-4d3f-84c1-c39e1fe5f715",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_PERSON",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e07145c7-0f81-4790-9a2e-22cff5f3cce3",
+          "nickAttr": "documentName",
+          "value": "Житель",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9d68f644-76ad-46bf-97e4-2895e8695c2d",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Каталог жителей\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Жители</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по ФИО и СНИЛС жителя\",\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_person_fio\",\"type\":\"text\",\"name\":\"Фамилия, имя, отчество\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_birthDate\",\"type\":\"date\",\"name\":\"Дата рождения\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_passport\",\"type\":\"text\",\"name\":\"N, серия паспорта (св. о рождении), кем и когда выдан\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_snils\",\"type\":\"text\",\"name\":\"СНИЛС\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_real_estate_address\",\"type\":\"text\",\"name\":\"Адрес расселяемого дома\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_flat_number\",\"type\":\"text\",\"name\":\"Номер квартиры\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_room_number\",\"type\":\"text\",\"name\":\"Номер комнаты\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_updated_from_elk_date\",\"type\":\"date\",\"name\":\"Дата обогащения из ЕЛК\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_updated_from_elk_status\",\"type\":\"dictionary\",\"name\":\"Статус обогащения из ЕЛК\",\"dictionary\":\"ugd_ssr_integrationStatuses\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"name\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_updated_from_pfr_date\",\"type\":\"date\",\"name\":\"Дата обогащения из ПФР\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_updated_from_pfr_status\",\"type\":\"dictionary\",\"name\":\"Статус обогащения из ПФР\",\"dictionary\":\"ugd_ssr_integrationStatuses\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"name\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_sso_id\",\"type\":\"text\",\"name\":\"SsoId\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_unom\",\"type\":\"number\",\"name\":\"UNOM дома\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_person_isNotArchived\",\"type\":\"boolean\",\"name\":\"Не удален\",\"filterable\":true}],\"tableColumns\":[{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_person_fio\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/template/person-card/{{item.sys_documentId}}\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_person_fio}}\\n</a>\"},{\"name\":\"Дата рождения\",\"fieldCode\":\"ugd_ssr_person_birthDate\",\"template\":\"{{item.ugd_ssr_person_birthDate| date:'dd.MM.yyyy'}}\"},{\"name\":\"Адрес отселяемого дома\",\"fieldCode\":\"ugd_ssr_person_real_estate_address\",\"template\":\"{{item.ugd_ssr_person_real_estate_address}}\"},{\"name\":\"Номер квартиры\",\"fieldCode\":\"ugd_ssr_person_flat_number\",\"template\":\"{{item.ugd_ssr_person_flat_number}}\"},{\"name\":\"Номер комнаты\",\"fieldCode\":\"ugd_ssr_person_room_number\",\"template\":\"{{item.ugd_ssr_person_room_number}}\",\"visible\":false},{\"name\":\"Статус обогащения из ПФР\",\"fieldCode\":\"ugd_ssr_person_updated_from_pfr_status\",\"template\":\"{{item.ugd_ssr_person_updated_from_pfr_status?.name}}\"},{\"name\":\"Дата обогащения из ПФР\",\"fieldCode\":\"ugd_ssr_person_updated_from_pfr_date\",\"template\":\"{{item.ugd_ssr_person_updated_from_pfr_date | date:'dd.MM.yyyy'}}\"},{\"name\":\"Статус обогащения из ЕЛК\",\"fieldCode\":\"ugd_ssr_person_updated_from_elk_status\",\"template\":\"{{item.ugd_ssr_person_updated_from_elk_status?.name}}\"},{\"name\":\"Дата обогащения из ЕЛК\",\"fieldCode\":\"ugd_ssr_person_updated_from_elk_date\",\"template\":\"{{item.ugd_ssr_person_updated_from_elk_date | date:'dd.MM.yyyy'}}\"},{\"name\":\"SsoId\",\"fieldCode\":\"ugd_ssr_person_sso_id\",\"template\":\"{{item.ugd_ssr_person_sso_id}}\",\"visible\":false},{\"name\":\"UNOM дома\",\"fieldCode\":\"ugd_ssr_person_unom\",\"template\":\"{{item.ugd_ssr_person_unom}}\",\"visible\":false}],\"filters\":[{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_person_fio\",\"placement\":\"bottom\"},{\"name\":\"Дата рождения\",\"fieldCode\":\"ugd_ssr_person_birthDate\",\"placement\":\"bottom\"},{\"name\":\"N, серия паспорта (св. о рождении), кем и когда выдан\",\"fieldCode\":\"ugd_ssr_person_passport\",\"placement\":\"bottom\"},{\"name\":\"СНИЛС\",\"fieldCode\":\"ugd_ssr_person_snils\",\"placement\":\"bottom\"},{\"name\":\"Адрес отселяемого дома\",\"fieldCode\":\"ugd_ssr_person_real_estate_address\",\"placement\":\"bottom\"},{\"name\":\"Номер квартиры\",\"fieldCode\":\"ugd_ssr_person_flat_number\",\"placement\":\"bottom\"},{\"name\":\"Номер комнаты\",\"fieldCode\":\"ugd_ssr_person_room_number\",\"placement\":\"bottom\"},{\"name\":\"Статус обогащения из ПФР\",\"fieldCode\":\"ugd_ssr_person_updated_from_pfr_status\",\"placement\":\"bottom\"},{\"name\":\"Дата обогащения из ПФР\",\"fieldCode\":\"ugd_ssr_person_updated_from_pfr_date\",\"placement\":\"bottom\"},{\"name\":\"Статус обогащения из ЕЛК\",\"fieldCode\":\"ugd_ssr_person_updated_from_elk_status\",\"placement\":\"bottom\"},{\"name\":\"Дата обогащения из ЕЛК\",\"fieldCode\":\"ugd_ssr_person_updated_from_elk_date\",\"placement\":\"bottom\"},{\"name\":\"SsoId\",\"fieldCode\":\"ugd_ssr_person_sso_id\",\"placement\":\"bottom\"},{\"name\":\"UNOM дома\",\"fieldCode\":\"ugd_ssr_person_unom\",\"placement\":\"bottom\"},{\"name\":\"Только актуальные\",\"fieldCode\":\"ugd_ssr_person_isNotArchived\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"Фамилия, имя, отчество\",\"fieldCode\":\"ugd_ssr_person_fio\"},{\"name\":\"Дата рождения\",\"fieldCode\":\"ugd_ssr_person_birthDate\"},{\"name\":\"Паспортные данные\",\"fieldCode\":\"ugd_ssr_person_passport\"},{\"name\":\"СНИЛС\",\"fieldCode\":\"ugd_ssr_person_snils\"},{\"name\":\"Адрес расселяемого дома\",\"fieldCode\":\"ugd_ssr_person_real_estate_address\"},{\"name\":\"Номер квартиры\",\"fieldCode\":\"ugd_ssr_person_flat_number\"},{\"name\":\"Номер комнаты\",\"fieldCode\":\"ugd_ssr_person_room_number\"},{\"name\":\"Дата обогащения из ЕЛК\",\"fieldCode\":\"ugd_ssr_person_updated_from_elk_date\"},{\"name\":\"Статус обогащения из ЕЛК\",\"fieldCode\":\"ugd_ssr_person_updated_from_elk_status\"},{\"name\":\"Дата обогащения из ПФР\",\"fieldCode\":\"ugd_ssr_person_updated_from_pfr_date\"},{\"name\":\"Статус обогащения из ПФР\",\"fieldCode\":\"ugd_ssr_person_updated_from_pfr_status\"},{\"name\":\"SsoId\",\"fieldCode\":\"ugd_ssr_person_sso_id\"},{\"name\":\"UNOM дома\",\"fieldCode\":\"ugd_ssr_person_unom\"}],\"isNewSearch\":true,\"defaultFilters\":{\"ugd_ssr_person_isNotArchived\":true}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "f49c824b-790c-4d33-aa24-0576ec675e6b",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_person_catalog",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "eb7e1f1b-b0ad-493d-8074-e8af0bdc299b",
+          "nickAttr": "showcaseName",
+          "value": "Каталог жителей",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a34353c-7101-440b-aa43-bd30c87005b5",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "123720b1-f64b-43f0-b2d1-64e8293cedca",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "10ff52c9-c548-4149-aeb3-b202980fbfc5",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "38811953-d085-418c-985c-7a55c201b792",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "e08dc89b-50e3-4cfc-b653-f772e9d88d32",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "fb6ac0aa-1304-4b39-8865-6817cbf436ac",
+          "nickAttr": "code",
+          "value": "ugd_ssr_real_estate_catalog_code",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "641b8c1b-2fab-4930-b0d2-2344e4400043",
+          "nickAttr": "documentCode",
+          "value": "UGD_SSR_REAL-ESTATE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "ab8a0d44-dd09-49a5-9017-a7c0bdcdd27a",
+          "nickAttr": "documentName",
+          "value": "Объект недвижимости",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d4ae0ce4-a8c3-49e1-a97b-53f4561d6401",
+          "nickAttr": "settings",
+          "value": "{\"theme\":\"green\",\"url\":\"/search/v1/solr/query\",\"title\":\"Каталог объектов недвижимости\",\"titleTemplate\":\"<div class=\\\"clearfix\\\">\\n<h2 class=\\\"font-bold pull-left\\\">Объекты недвижимости</h2>\\n<div class=\\\"pull-right\\\">\\n</div>\\n</div>\",\"changeTableColumns\":true,\"placeholderForCommonSearch\":\"Поиск по УНОМ и адресу отселяемого дома\",\"fields\":[{\"code\":\"sys_documentId\",\"type\":\"text\",\"name\":\"ID\"},{\"code\":\"ugd_ssr_real_estate_unom\",\"type\":\"text\",\"name\":\"UNOM\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_real_estate_address\",\"type\":\"text\",\"name\":\"Полное юридическое написание адреса или описание местоположения\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_real_estate_house_l1_value\",\"type\":\"text\",\"name\":\"Номер дома, владения, участка\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_real_estate_adm_area\",\"type\":\"text\",\"name\":\"Административный округ\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_real_estate_house_year\",\"type\":\"number\",\"name\":\"Год постройки\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_real_estate_resettlement_soon\",\"type\":\"date\",\"name\":\"Скоро начнется переселение дома\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_real_estate_updated_status\",\"type\":\"dictionary\",\"name\":\"Статус обогащения\",\"dictionary\":\"ugd_ssr_integrationStatuses\",\"dictionaryCode\":\"name\",\"dictionaryText\":\"name\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_real_estate_updated_date\",\"type\":\"date\",\"name\":\"Дата обогащения\",\"sortable\":true,\"filterable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_real_estate_ssoid_count\",\"type\":\"text\",\"name\":\"Количество SsoId\",\"sortable\":true,\"isSearchable\":true},{\"code\":\"ugd_ssr_real_estate_flatCount\",\"type\":\"number\",\"name\":\"Количество квартир\",\"sortable\":true,\"isSearchable\":true}],\"tableColumns\":[{\"name\":\"UNOM\",\"fieldCode\":\"ugd_ssr_real_estate_unom\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/template/real-estate-card/{{item.sys_documentId}}\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_real_estate_unom}}\\n</a>\"},{\"name\":\"Адрес\",\"fieldCode\":\"ugd_ssr_real_estate_address\",\"template\":\"<a style=\\\"color: #676a6c;\\\" href=\\\"/ugd/ssr/#/app/template/real-estate-card/{{item.sys_documentId}}\\\" target=\\\"_blank\\\">\\n{{item.ugd_ssr_real_estate_address}}\\n</a>\"},{\"name\":\"Номер дома\",\"fieldCode\":\"ugd_ssr_real_estate_house_l1_value\",\"template\":\"{{item.ugd_ssr_real_estate_house_l1_value}}\"},{\"name\":\"Административный округ\",\"fieldCode\":\"ugd_ssr_real_estate_adm_area\",\"template\":\"{{item.ugd_ssr_real_estate_adm_area}}\"},{\"name\":\"Год постройки\",\"fieldCode\":\"ugd_ssr_real_estate_house_year\",\"template\":\"{{item.ugd_ssr_real_estate_house_year}}\"},{\"name\":\"Скоро начнется переселение дома\",\"fieldCode\":\"ugd_ssr_real_estate_resettlement_soon\",\"template\":\"{{item.ugd_ssr_real_estate_resettlement_soon | date:'dd.MM.yyyy'}}\"},{\"name\":\"Статус обогащения\",\"fieldCode\":\"ugd_ssr_real_estate_updated_status\",\"template\":\"{{item.ugd_ssr_real_estate_updated_status?.name}}\"},{\"name\":\"Дата обогащения\",\"fieldCode\":\"ugd_ssr_real_estate_updated_date\",\"template\":\"{{item.ugd_ssr_real_estate_updated_date | date:'dd.MM.yyyy'}}\"},{\"name\":\"Количество SsoId\",\"fieldCode\":\"ugd_ssr_real_estate_ssoid_count\",\"template\":\"{{item.ugd_ssr_real_estate_ssoid_count}}\"},{\"name\":\"Количество квартир\",\"fieldCode\":\"ugd_ssr_real_estate_flatCount\",\"sortable\":true}],\"filters\":[{\"name\":\"UNOM\",\"fieldCode\":\"ugd_ssr_real_estate_unom\",\"placement\":\"bottom\"},{\"name\":\"Адрес\",\"fieldCode\":\"ugd_ssr_real_estate_address\",\"placement\":\"bottom\"},{\"name\":\"Номер дома\",\"fieldCode\":\"ugd_ssr_real_estate_house_l1_value\",\"placement\":\"bottom\"},{\"name\":\"Административный округ\",\"fieldCode\":\"ugd_ssr_real_estate_adm_area\",\"placement\":\"bottom\"},{\"name\":\"Год постройки\",\"fieldCode\":\"ugd_ssr_real_estate_house_year\",\"placement\":\"bottom\"},{\"name\":\"Скоро начнется переселение дома\",\"fieldCode\":\"ugd_ssr_real_estate_resettlement_soon\",\"placement\":\"bottom\"},{\"name\":\"Статус обогащения\",\"fieldCode\":\"ugd_ssr_real_estate_updated_status\",\"placement\":\"bottom\"},{\"name\":\"Дата обогащения\",\"fieldCode\":\"ugd_ssr_real_estate_updated_date\",\"placement\":\"bottom\"}],\"sortings\":[{\"name\":\"UNOM\",\"fieldCode\":\"ugd_ssr_real_estate_unom\"},{\"name\":\"Адрес\",\"fieldCode\":\"ugd_ssr_real_estate_address\"},{\"name\":\"Номер дома\",\"fieldCode\":\"ugd_ssr_real_estate_house_l1_value\"},{\"name\":\"Административный округ\",\"fieldCode\":\"ugd_ssr_real_estate_adm_area\"},{\"name\":\"Год постройки\",\"fieldCode\":\"ugd_ssr_real_estate_house_year\"},{\"name\":\"Скоро начнется переселение дома\",\"fieldCode\":\"ugd_ssr_real_estate_resettlement_soon\"},{\"name\":\"Статус обогащения\",\"fieldCode\":\"ugd_ssr_real_estate_updated_status\"},{\"name\":\"Дата обогащения\",\"fieldCode\":\"ugd_ssr_real_estate_updated_date\"},{\"name\":\"Количество SsoId\",\"fieldCode\":\"ugd_ssr_real_estate_ssoid_count\"}],\"isNewSearch\":true,\"defaultFilters\":{}}",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "df893c1e-ffde-4cf9-94de-92a712fdb021",
+          "nickAttr": "showcaseCode",
+          "value": "ugd_ssr_real_estate_catalog",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "0a95985d-f923-4203-a4c9-0beb31a5f473",
+          "nickAttr": "showcaseName",
+          "value": "Каталог объектов недвижимости",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "e6282254-41d0-4146-84d0-4db69fb54ed8",
+          "nickAttr": "subsystemCode",
+          "value": "SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "a70caab8-0a85-47e4-82b7-4c8928afab43",
+          "nickAttr": "subsystemName",
+          "value": "Суперсервис Реновации",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "d77d83c2-9707-4df3-aff9-9bee8cdcd793",
+          "nickAttr": "systemCode",
+          "value": "UGD",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8528cc8c-6951-4f78-8f87-63b52ebdec07",
+          "nickAttr": "systemName",
+          "value": "УГД",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

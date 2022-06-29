@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <!--cloner:remove:start-->
+    <include file="2018-08-31-01-documents-create.xml" relativeToChangelogFile="true"/>
+    <include file="2018-08-31-02-documents_log-create.xml" relativeToChangelogFile="true"/>
+    <include file="2018-08-31-04-doc_types-create.xml" relativeToChangelogFile="true"/>
+    <include file="2020-09-28-01-doc_types-rename.xml" relativeToChangelogFile="true"/>
+    <include file="2020-10-05-01-doc_types-drop.xml" relativeToChangelogFile="true"/>
+    <include file="2021-02-03-01-create_jsonpatch_has_function.xml" relativeToChangelogFile="true"/>
+    <include file="2021-05-26-01-view-equivalent-apartment-consented-amount-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-05-27-02-view-resettled-families-amount-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-05-27-03-view-persons-with-relocation-statuses-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-05-27-view-families-amount-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-05-28-01-view-resettled-residents-amount-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-05-28-01-view-new-buildings-total-amount-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-06-07-01-view-resettlement-in-process-amount-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-06-08-01-view-offered-equivalent-apartments-amount-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-06-08-02-view-all-buildings-amount-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-06-09-01-view-paperwork-completed-and-fund-issues-amount-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-06-10-01-view-buy-in-apartments-amount.xml" relativeToChangelogFile="true"/>
+    <include file="2021-06-10-03-view-apartment-with-compensation-consented-amount-create.xml" relativeToChangelogFile="true"/>
+    <include file="2021-12-13-01-view-resettled-residents-amount-v2-create.xml" relativeToChangelogFile="true"/>
+    <include file="2022-04-01-01-view-persons-with-new-flats-create.xml" relativeToChangelogFile="true"/>
+    <include file="2022-06-06-01-view-resettlement-in-process-amount-v2-create.xml" relativeToChangelogFile="true"/>
+    <include file="2022-06-10-01-view-resettlement-in-process-amount-with-trades-create.xml" relativeToChangelogFile="true"/>
+    <include file="2022-06-10-02-view-equivalent-apartments-amount-create.xml" relativeToChangelogFile="true"/>
+    <!--cloner:remove:end-->
+
+</databaseChangeLog>

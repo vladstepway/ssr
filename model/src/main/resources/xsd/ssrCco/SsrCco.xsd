@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/ssrCco"
+           targetNamespace="http://www.ugd.croc.ru/ssr/ssrCco"
+           elementFormDefault="qualified">
+    <xs:element name="ssrCco">
+        <xs:annotation>
+            <xs:documentation>ОКС в системе ССР</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="ssrCcoData" type="SsrCcoData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="SsrCcoData">
+        <xs:annotation>
+            <xs:documentation>ОКС в системе ССР</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="psDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID ОКСа в системе PS</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>УНОМ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="address" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Адрес</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="area" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Округ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="district" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Район</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="updateDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Время обновления документа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="organizations" type="SsrCcoOrganization" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Организации относящиеся к ОКС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="employees" type="SsrCcoEmployee" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Привязанные к ОКС сотрудники</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+
+            <xs:element name="flatCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Количество квартир в доме</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatWithoutOpenActCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Количество заселенных квартир без открытых актов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Всего актов по дому</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="expiredActCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Количество просроченных актов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actInWorkCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Количество актов в работе</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="defectCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Всего поступило дефектов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fixDefectCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Всего устранено дефектов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="expiredDefectCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Количество просроченных дефектов</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatWithAgreementCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Даны согласия</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatWithContractCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Подписаны договоры</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatWithKeyIssueCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Выданы ключи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatToResettleCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Осталось (общее количество - выданы ключи)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatDgiCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Квартиры ДГИ</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="flatMfrCount" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>Квартиры МФР</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SsrCcoOrganization">
+        <xs:annotation>
+            <xs:documentation>Информация об организации</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="externalId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Внешнее ID организации</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Полное название организации</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="type" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>
+                        Тип организации:
+                        1 - подрядчик
+                        2 - застройщик
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SsrCcoEmployee">
+        <xs:annotation>
+            <xs:documentation>Информация о сотруднике организации</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="id" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID сотрудника в рамках ОКСа</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Полное имя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="login" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Логин</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="organisationName" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Название организации</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="post" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Должность</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="email" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Электронная почта</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="periodFrom" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Начало периода назначения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="periodTo" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Конец периода назначения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="type" type="xs:int">
+                <xs:annotation>
+                    <xs:documentation>
+                        Тип сотрудника:
+                        1 - подрядчик
+                        2 - застройщик
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

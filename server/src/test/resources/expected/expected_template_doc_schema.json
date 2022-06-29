@@ -1,0 +1,51 @@
+{
+  "name": "template",
+  "description": "Шаблон документа",
+  "isComplex": true,
+  "arity": "1-1",
+  "attributes": [
+    {
+      "name": "versionXSD",
+      "description": "Версия XSD схемы",
+      "isComplex": false,
+      "arity": "1-1",
+      "type": "string"
+    },
+    {
+      "name": "documentID",
+      "description": "Системный идентификатор документа",
+      "isComplex": false,
+      "arity": "1-1",
+      "type": "string"
+    },
+    {
+      "name": "folderGUID",
+      "description": "Идентификатор папки",
+      "isComplex": false,
+      "arity": "0-1",
+      "type": "string"
+    },
+    {
+      "name": "main",
+      "description": "Общие сведения",
+      "isComplex": true,
+      "arity": "0-1",
+      "attributes": [
+        {
+          "name": "templateNum",
+          "description": "Номер документа",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "string"
+        },
+        {
+          "name": "templateDate",
+          "description": "Дата документа",
+          "isComplex": false,
+          "arity": "1-1",
+          "type": "date"
+        }
+      ]
+    }
+  ]
+}

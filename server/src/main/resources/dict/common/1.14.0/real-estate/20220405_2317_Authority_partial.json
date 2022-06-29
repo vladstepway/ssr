@@ -1,0 +1,112 @@
+{
+  "metaDict": {
+    "nick": "Authority",
+    "name": "Полномочия",
+    "context": "SYSTEM",
+    "hierarchyDict": 0,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "code",
+        "name": "Код",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 0
+      },
+      {
+        "nick": "name",
+        "name": "Наименование",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "group",
+        "name": "Группа",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "794b02aa-4604-43a7-882f-013965bca870",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "5e51f598-5228-49ea-937c-edd3b8fe6e1a",
+          "nickAttr": "code",
+          "value": "UGD_SSR_REAL_NON_RESIDENTIAL",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1b77b9d1-0d3b-405c-ae03-9cff31ddef82",
+          "nickAttr": "group",
+          "value": "UGD_SSR_REAL_NON_RESIDENTIAL",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4131ce03-eca0-4257-9a2d-6d279839862e",
+          "nickAttr": "name",
+          "value": "Учет сведений о нежилых помещениях",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "efc01124-33af-4fd0-9869-0d87280439dd",
+      "deleted": 0,
+      "sortValue": null,
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1d631b6a-fa82-4e27-8eba-111b9d281e76",
+          "nickAttr": "code",
+          "value": "UGD_SSR_REAL_DEMOLITION_CHANGE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "8ccec969-ba2e-480d-8ef2-c19922fdaa7d",
+          "nickAttr": "group",
+          "value": "UGD_SSR_REAL_DEMOLITION_CHANGE",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "1de99fb9-a6aa-4adb-9281-eed59b48ee4c",
+          "nickAttr": "name",
+          "value": "Учет сведений о сносе и сохранении дома",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

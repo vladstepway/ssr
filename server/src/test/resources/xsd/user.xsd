@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--cloner:skipFile-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:usr="http://www.some.org/info.xsd" targetNamespace="http://www.some.org/users.xsd">
+    <xs:import schemaLocation="info.xsd" namespace="http://www.some.org/info.xsd"/>
+    <xs:element name="user">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="userId" type="usr:id"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="nickname" type="xs:string"/>
+                <xs:element name="info" type="usr:info"/>
+            </xs:sequence>
+            <xs:attribute name="userSeqNum" type="xs:int" />
+            <xs:attribute name="userSex" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,14 @@
+1. Открыть https://smart.mos.ru/app/ugd/ssr/swagger-ui.html#/document-create-update-delete-controller
+2. Выбрать PATCH /crud/patch/{anyDocumentTypeCode}/{id}
+3. Заполнить поля:
+    - anyDocumentTypeCode = GUARDIANSHIP
+    - id = e116f8ad-5ada-44b3-87e7-6f318a5f9847
+    - jsonPatch =
+[
+    {
+        "op": "replace",
+        "path": "/guardianshipRequest/guardianshipRequestData/decisionFileId",
+        "value": "8e28f4f1-9a89-4882-8a40-dce848d5c28f"
+    }
+]
+4. Нажать Execute и убедиться, что статус код ответа 200

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr"
+           targetNamespace="http://www.ugd.croc.ru/ssr">
+
+    <xs:element name="firstFlowErrorAnalytics">
+        <xs:annotation>
+            <xs:documentation>Разбор ошибок обновления данных первого потока</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0" nillable="false">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="data" type="FirstFlowErrorAnalyticsData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="FirstFlowErrorAnalyticsData">
+        <xs:annotation>
+            <xs:documentation>Сведение о разборе ошибок обновления данных первого потока</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="unom" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>UNOM расселяемого дома</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="errors" type="FirstFlowError" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Ошибки обновления данных</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="processInstanceId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID запущенного процесса</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="FirstFlowError">
+        <xs:annotation>
+            <xs:documentation>Сведение об ошибке обновления данных</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID жителя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="solution" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Решение</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="result">
+                <xs:annotation>
+                    <xs:documentation>Итоговые значения</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="unom" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>UNOM дома</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="cadastralNumber" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Кадастровый номер</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="affairId" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>affairId</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="flat" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Квартира</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="encumbrances" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Обременения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="roomsNum" type="xs:string" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Номера комнат</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="noFlat" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Квартира без предоставления
+                                    1 - Да
+                                    0 или нет элемента - Нет</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="isFederal" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Федеральная собственность
+                                    1 - Да
+                                    0 или нет элемента - Нет</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="inCourt" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>В суде
+                                    1 - Да
+                                    0 или нет элемента - Нет</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="statusLiving" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Статус проживания
+                                    1 - Собственник (частная собственность),
+                                    2 - Пользователь (частная собственность),
+                                    3 - Наниматель (найм/пользование),
+                                    4 - Проживающий (найм/пользователь)
+                                    5 - Свободная
+                                    0 - Отсутствует</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+
+                        <xs:element name="personId" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>ИД жителя (ДГИ)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="snils" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>СНИЛС</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="lastName" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Фамилия</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="firstName" type="xs:string" >
+                            <xs:annotation>
+                                <xs:documentation>Имя</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="middleName" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Отчество</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="birthDate" type="xs:date">
+                            <xs:annotation>
+                                <xs:documentation>Дата рождения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="sex" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>пол
+                                    1 – Мужской
+                                    2 – Женский
+                                    0 - Значение отсутствует</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="isQueue" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Очередник
+                                    1 - Да
+                                    0 или нет элемента - Нет</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="isDead" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Умерший собственник
+                                    1 - Да
+                                    0 или нет элемента - Нет</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="changeStatus" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Признак изменения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="delReason" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Причина удаления</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="toDelete" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>Удалить запись/Сохранить запись</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="commun" type="xs:boolean">
+                            <xs:annotation>
+                                <xs:documentation>Признак коммунальной квартиры</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="flat">
+                <xs:annotation>
+                    <xs:documentation>Данные по квартире</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="affairId" type="xs:string" minOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>ид семьи</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="statusLiving" type="xs:string" minOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>Статус проживания
+                                    1 - Собственник (частная собственность),
+                                    2 - Пользователь (частная собственность),
+                                    3 - Наниматель (найм/пользование),
+                                    4 - Проживающий (найм/пользователь)
+                                    5 - Свободная
+                                    0 - Отсутствует</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="encumbrances" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Обременения на квартиру</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="snosUnom" type="xs:string" minOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>уном рсселяемого дома</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="snosCadnum" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>кадастровый номер расселяемого дома</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="snosFlatNum" type="xs:string" minOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>№ квартиры расселяемого дома</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="snosRoomsNum" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>№ комнат рсселяемого дома</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="noFlat" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Квартира без предоставления
+                                    1 - Да
+                                    0 или нет элемента - Нет</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="isFederal" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Федеральная собственность
+                                    1 - Да
+                                    0 или нет элемента - Нет</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="inCourt" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>В суде
+                                    1 - Да
+                                    0 или нет элемента - Нет</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="message">
+                <xs:annotation>
+                    <xs:documentation>Данные по человеку</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="personId" type="xs:string" minOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>ид человека</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--ид человека-->
+                        <!--ид семьи-->
+                        <xs:element name="actualDate" type="xs:date" minOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>дата актуализации
+                                    YYYY-MM-DD</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--дата актуализации-->
+                        <xs:element name="snils" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>СНИЛС</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--снилс-->
+                        <xs:element name="lastName" type="xs:string" minOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>Фамилия</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--Фамилия-->
+                        <xs:element name="firstName" type="xs:string" minOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>Имя</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--Имя-->
+                        <xs:element name="middleName" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Отчество</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--Отчество-->
+                        <xs:element name="birthDate" type="xs:date" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Дата рождения
+                                    YYYY-MM-DD</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="sex" type="xs:string">
+                            <xs:annotation>
+                                <xs:documentation>пол
+                                    1 – Мужской
+                                    2 – Женский
+                                    0 - Значение отсутствует</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <!--пол-->
+                        <xs:element name="isQueue" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Очередник
+                                    1 - Да
+                                    0 или нет элемента - Нет</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="isDead" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Умерший собственник
+                                    1 - Да
+                                    0 или нет элемента - Нет</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="changeStatus" type="xs:string" minOccurs="1">
+                            <xs:annotation>
+                                <xs:documentation>Признак изменения</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="delReason" type="xs:string" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Причина удаления</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

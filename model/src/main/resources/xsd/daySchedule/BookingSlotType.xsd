@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+           xmlns="http://www.ugd.croc.ru/ssr/daySchedule"
+           targetNamespace="http://www.ugd.croc.ru/ssr/daySchedule">
+  <xs:include schemaLocation="TimeIntervalType.xsd"/>
+  <xs:complexType name="BookingSlotType">
+    <xs:annotation>
+      <xs:documentation>Интервал доступный для бронирования</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="TimeIntervalType">
+        <xs:sequence>
+          <xs:element name="slotId" type="xs:string">
+            <xs:annotation>
+              <xs:documentation>ID акта записи на переезд</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="preBookingId" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>ID временного бронирования</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="preBookedUntil" type="xs:dateTime" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Время окончания временного бронирования</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="applicationId" type="xs:string" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>ID заявления на переезд закрепленного за слотом</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>
+

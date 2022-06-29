@@ -1,0 +1,217 @@
+{
+  "metaDict": {
+    "nick": "Navigator",
+    "name": "Навигатор",
+    "context": "SYSTEM",
+    "hierarchyDict": 1,
+    "deleted": 0,
+    "sysName": "COMMON",
+    "note": null,
+    "transfer": 0,
+    "metaAttr": [
+      {
+        "nick": "Code",
+        "name": "Код раздела",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 0,
+        "unique": 1
+      },
+      {
+        "nick": "Name",
+        "name": "Наименование раздела",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 1,
+        "unique": 0
+      },
+      {
+        "nick": "Url",
+        "name": "URL ссылки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 2,
+        "unique": 1
+      },
+      {
+        "nick": "System",
+        "name": "Подсистема",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 3,
+        "unique": 0
+      },
+      {
+        "nick": "Icon",
+        "name": "Имя иконки",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 4,
+        "unique": 0
+      },
+      {
+        "nick": "AccessGroup",
+        "name": "Группа дающая доступ",
+        "typeAttr": "string",
+        "nickDictLink": null,
+        "arrayAttr": 1,
+        "required": 1,
+        "deleted": 0,
+        "note": null,
+        "orders": 5,
+        "unique": 0
+      },
+      {
+        "nick": "TargetBlank",
+        "name": "Открытие в новом окне",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 6,
+        "unique": 0
+      },
+      {
+        "nick": "hide",
+        "name": "Не показывать в навигаторе",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 7,
+        "unique": 0
+      },
+      {
+        "nick": "disableHighlight",
+        "name": "Убрать подсветку в навигаторе",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 8,
+        "unique": 0
+      },
+      {
+        "nick": "mobile",
+        "name": "Показывать в адаптивной версии",
+        "typeAttr": "boolean",
+        "nickDictLink": null,
+        "arrayAttr": 0,
+        "required": 0,
+        "deleted": 0,
+        "note": null,
+        "orders": 9,
+        "unique": 0
+      }
+    ]
+  },
+  "elements": [
+    {
+      "elementId": "9ac4be9a-ca47-4464-8980-59c34349f7a2",
+      "deleted": 1,
+      "sortValue": null,
+      "note": null,
+      "parentCode": "ugd_ssr_catalogs",
+      "values": [
+        {
+          "attrId": "dfcfd7c4-73d9-469a-af7b-372064eaf01f",
+          "nickAttr": "AccessGroup",
+          "value": "UGD_SSR_OPERATOR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9d6f2802-aa4b-4582-a1ba-fbcac949895c",
+          "nickAttr": "Code",
+          "value": "ugd_ssr_catalog_objects",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "3b679080-b5f1-40d9-aece-981ad0a5dc2f",
+          "nickAttr": "Name",
+          "value": "Объекты",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "9e976ea0-5ddd-4a85-b470-f22a8848c4b4",
+          "nickAttr": "System",
+          "value": "UGD_SSR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "2a87548f-443e-44bd-81e6-9b894387e917",
+          "nickAttr": "Url",
+          "value": "/ugd/#/app/objects",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    },
+    {
+      "elementId": "06a481dc-a47f-4617-8035-dae3207aa4ea",
+      "deleted": 1,
+      "sortValue": "300",
+      "note": null,
+      "parentCode": null,
+      "values": [
+        {
+          "attrId": "1a8e9b4f-7160-420f-8aba-ef82fc250d86",
+          "nickAttr": "AccessGroup",
+          "value": "UGD_SSR_OPERATOR",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "4e564e72-7f8f-4cfb-88d3-19163fd9a99d",
+          "nickAttr": "Code",
+          "value": "ugd_ssr_catalogs",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "359d2757-b573-4dbe-8c6c-83f90d2b56eb",
+          "nickAttr": "Name",
+          "value": "Суперсервис",
+          "orders": 0,
+          "linkCode": null
+        },
+        {
+          "attrId": "84be2bde-720d-4f60-b182-133e240ca5d2",
+          "nickAttr": "System",
+          "value": "UGD_SSR",
+          "orders": 0,
+          "linkCode": null
+        }
+      ]
+    }
+  ]
+}

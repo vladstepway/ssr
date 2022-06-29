@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.ugd.croc.ru/ssr/contractDigitalSign"
+           targetNamespace="http://www.ugd.croc.ru/ssr/contractDigitalSign"
+           elementFormDefault="qualified">
+    <xs:element name="ContractDigitalSign">
+        <xs:annotation>
+            <xs:documentation>
+                Многостороннее подписание договора с использованием УКЭП
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="versionXSD" type="xs:string" fixed="1.0">
+                    <xs:annotation>
+                        <xs:documentation>Версия XSD схемы</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="folderGUID" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Идентификатор папки</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="documentID" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation>Системный идентификатор документа</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="contractDigitalSignData" type="ContractDigitalSignData"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ContractDigitalSignData">
+        <xs:annotation>
+            <xs:documentation>Многостороннее подписание договора с использованием УКЭП</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="contractAppointmentId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД заявления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="appointmentDate" type="xs:date" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Запланированная дата подписания договора с использованием УКЭП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="owners" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Данные о правообладателях</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="owner" type="Owner" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные о правообладателе</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="employee" type="Employee">
+                <xs:annotation>
+                    <xs:documentation>Данные о сотруднике</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ContractDigitalSignFile">
+        <xs:annotation>
+            <xs:documentation>Документ</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="fileStoreId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ID файла в fileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="chedFileId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ID файла в ЦХЭД</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signData" type="SignData" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Данные о подписи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Owner">
+        <xs:annotation>
+            <xs:documentation>Данные о правообладателе</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="personDocumentId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД документа правообладателя</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="snils" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>СНИЛС</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ssoId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИД на портале mos.ru</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ФИО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="birthDate" type="xs:date">
+                <xs:annotation>
+                    <xs:documentation>Дата рождения</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractFile" type="ContractDigitalSignFile">
+                <xs:annotation>
+                    <xs:documentation>Договор для подписания правообладателем</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actFile" type="ContractDigitalSignFile">
+                <xs:annotation>
+                    <xs:documentation>Акт для подписания правообладателем</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="elkUserNotifications" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Уведомления</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="elkUserNotification" type="ElkUserNotification" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Данные уведомления</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Employee">
+        <xs:annotation>
+            <xs:documentation>Данные о сотруднике</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="login" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Логин сотрудника</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="contractFile" type="ContractDigitalSignFile">
+                <xs:annotation>
+                    <xs:documentation>Договор для подписания УКЭП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="actFile" type="ContractDigitalSignFile">
+                <xs:annotation>
+                    <xs:documentation>Акт для подписания УКЭП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="SignData">
+        <xs:annotation>
+            <xs:documentation>Данные о подписи</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="signId" type="xs:string" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>ИД подписи файла в fileStore</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="isVerified" type="xs:boolean" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Подпись подтверждена</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="number" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Номер электронной подписи</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="fullName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ФИО владельца</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dateTimeFrom" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время выдачи ЭП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dateTimeTo" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время окончания действия ЭП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="signDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время подписания</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ElkUserNotification">
+        <xs:annotation>
+            <xs:documentation>Данные уведомления</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="eno" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ЕНО</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="creationDateTime" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата и время создания уведомления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="eventCode" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Код уведомления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="statusId" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Статус уведомления</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
